@@ -34,7 +34,7 @@ waves_logback.xml
 # Docker
 docker/temp
 
-package
+
 !src/package
 native
 
