@@ -1,0 +1,15 @@
+[Unit]
+Description=Cardium Blockchain Node
+After=network.target
+
+[Service]
+Environment="PATH=/usr/lib/jvm/java-8-oracle/bin:$PATH"
+ExecStart=/usr/lib/jvm/java-8-oracle/bin/java -jar $HOME/CardiumNetwork/node/target/cardium-all.jar $HOME/CardiumNetwork/node/cardium-mainnet.conf
+StandardOutput=file:/var/log/cardium/cardium.log
+StandardError=file:/var/log/cardium/cardium-error.log
+Restart=always
+User=root
+TimeoutSec=300
+
+[Install]
+WantedBy=multi-user.target
