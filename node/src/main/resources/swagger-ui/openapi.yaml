@@ -5,9 +5,9 @@ info:
   description: >-
     The CardiumNetwork node REST API is the main interface for interacting with the
     blockchain. See
-    [documentation](https://docs.cardium.network/en/cardiun-node/node-api/) for more
+    [documentation](https://docs.cardium.network/en/cardium-node/node-api/) for more
     info. If this API lacks data you need, check the [CARDIUM Data Services
-    API](https://docs.cardium.network/en/building-apps/cardiun-api-and-sdk/cardiun-data-service-api).
+    API](https://docs.cardium.network/en/building-apps/cardium-api-and-sdk/cardium-data-service-api).
     [Data service](https://data-service.cardium.network/v0/)
   termsOfService: ''
   license:
@@ -37,7 +37,7 @@ paths:
       summary: Wallet addresses
       description: >-
         Get a list of account addresses in the [node
-        wallet](https://docs.cardium.network/en/cardiun-node/how-to-work-with-node-wallet)
+        wallet](https://docs.cardium.network/en/cardium-node/how-to-work-with-node-wallet)
       operationId: getWalletAddresses
       responses:
         '200':
@@ -54,7 +54,7 @@ paths:
       summary: Create wallet address
       description: >-
         Generate a new account address in the [node
-        wallet](https://docs.cardium.network/en/cardiun-node/how-to-work-with-node-wallet)
+        wallet](https://docs.cardium.network/en/cardium-node/how-to-work-with-node-wallet)
       operationId: createWalletAddress
       responses:
         '200':
@@ -79,7 +79,7 @@ paths:
       summary: Wallet addresses by range
       description: >-
         Get a list addresses in the [node
-        wallet](https://docs.cardium.network/en/cardiun-node/how-to-work-with-node-wallet)
+        wallet](https://docs.cardium.network/en/cardium-node/how-to-work-with-node-wallet)
         by a given range of indices. Max range {from}-{to} is 1000 addresses.
       operationId: getWalletAddressesRange
       parameters:
@@ -492,7 +492,7 @@ paths:
       summary: All types of balances in CARDIUM
       description: >-
         Get the available, regular, generating, and effective balance, see
-        [definitions](https://docs.cardium.network/en/blockchain/account/account-balance#account-balance-in-cardiun)
+        [definitions](https://docs.cardium.network/en/blockchain/account/account-balance#account-balance-in-cardium)
       operationId: getCardiumBalances
       parameters:
         - $ref: '#/components/parameters/address'
@@ -1274,7 +1274,7 @@ paths:
       description: >-
         Sign a transaction with the private key corresponding to the `sender`.
         Sender must exist in the [node's
-        wallet](https://docs.cardium.network/en/cardiun-node/how-to-work-with-node-wallet)
+        wallet](https://docs.cardium.network/en/cardium-node/how-to-work-with-node-wallet)
       operationId: signTx
       requestBody:
         description: >-
@@ -1433,7 +1433,7 @@ paths:
       description: >-
         Sign a transaction with the private key corresponding to a given
         address. The address must exist in the [node's
-        wallet](https://docs.cardium.network/en/cardiun-node/how-to-work-with-node-wallet)
+        wallet](https://docs.cardium.network/en/cardium-node/how-to-work-with-node-wallet)
       operationId: signTxWithAddress
       parameters:
         - name: signerAddress
@@ -1473,7 +1473,7 @@ paths:
       tags:
         - transactions
       summary: Broadcast transaction
-      description: Broadcast a signed transaction.<br>Check out [how to use this endpoint](https://docs.cardium.network/en/cardiun-node/node-api/transactions#step-4-broadcast-transaction)
+      description: Broadcast a signed transaction.<br>Check out [how to use this endpoint](https://docs.cardium.network/en/cardium-node/node-api/transactions#step-4-broadcast-transaction)
       operationId: broadcastSignedTx
       parameters:
         - name: trace
@@ -2312,7 +2312,7 @@ paths:
         {after}. See [fields
         descriptions](https://docs.cardium.network/en/blockchain/token/#custom-token-parameters).<br>Since
         activation of [feature
-        #15](https://docs.cardium.network/en/cardiun-node/features/) this method
+        #15](https://docs.cardium.network/en/cardium-node/features/) this method
         returns only tokens that are issued as NFT (amount: 1, decimal places:
         0, reissuable: false) after activation of feature #13. Before activation
         of feature #15 the method returned all the assets that are issued as
@@ -2459,7 +2459,7 @@ paths:
       summary: Feature activation status
       description: >-
         Activation statuses of [blockchain
-        features](https://docs.cardium.network/en/cardiun-node/features/)
+        features](https://docs.cardium.network/en/cardium-node/features/)
       operationId: getFeatureStatuses
       responses:
         '200':
@@ -3301,7 +3301,7 @@ components:
           nullable: true
           description: >-
             For [sponsored
-            asset](https://docs.cardium.network/en/blockchain/cardiun-protocol/sponsored-fee)
+            asset](https://docs.cardium.network/en/blockchain/cardium-protocol/sponsored-fee)
             only: the equivalent of 0.02 CARDIUM
         sponsorBalance:
           type: integer
@@ -3309,7 +3309,7 @@ components:
           nullable: true
           description: >-
             For [sponsored
-            asset](https://docs.cardium.network/en/blockchain/cardiun-protocol/sponsored-fee)
+            asset](https://docs.cardium.network/en/blockchain/cardium-protocol/sponsored-fee)
             only: the sponsor balance in CARDIUM
         quantity:
           type: integer
