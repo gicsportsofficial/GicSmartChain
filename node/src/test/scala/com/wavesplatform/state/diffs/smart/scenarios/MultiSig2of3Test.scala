@@ -1,22 +1,22 @@
-package com.wavesplatform.state.diffs.smart.scenarios
+package com.gicsports.state.diffs.smart.scenarios
 
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.crypto
-import com.wavesplatform.db.WithState
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.values.{Expression, V1}
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.utils.*
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.state.diffs.smart.*
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.transfer.*
+import com.gicsports.account.PublicKey
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.crypto
+import com.gicsports.db.WithState
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.values.{Expression, V1}
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.utils.*
+import com.gicsports.lang.v1.compiler.ExpressionCompiler
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.state.diffs.smart.*
+import com.gicsports.test.*
+import com.gicsports.transaction.*
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.transfer.*
 
 class MultiSig2of3Test extends PropSpec with WithState {
 

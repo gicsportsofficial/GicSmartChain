@@ -1,12 +1,12 @@
-package com.wavesplatform.common
+package com.gicsports.common
 
 import java.security.{KeyPairGenerator, SecureRandom, Signature => JavaSignature}
 import java.util.concurrent.TimeUnit
 
-import com.wavesplatform.common.RSAVerifyBenchmark._
-import com.wavesplatform.lang.v1.EnvironmentFunctionsBenchmark.randomBytes
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.crypto.RSA
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.crypto.RSA._
+import com.gicsports.common.RSAVerifyBenchmark._
+import com.gicsports.lang.v1.EnvironmentFunctionsBenchmark.randomBytes
+import com.gicsports.lang.v1.evaluator.ctx.impl.crypto.RSA
+import com.gicsports.lang.v1.evaluator.ctx.impl.crypto.RSA._
 import org.bouncycastle.jce.provider.BouncyCastleProvider
 import org.openjdk.jmh.annotations._
 import org.openjdk.jmh.infra.Blackhole

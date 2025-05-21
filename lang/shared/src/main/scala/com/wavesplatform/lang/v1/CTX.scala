@@ -1,16 +1,16 @@
-package com.wavesplatform.lang.v1
+package com.gicsports.lang.v1
 
 import cats.{Id, Monad, Monoid}
-import com.wavesplatform.lang.v1.FunctionHeader.Native
-import com.wavesplatform.lang.v1.compiler.CompilerContext.{FunctionInfo, VariableInfo}
-import com.wavesplatform.lang.v1.compiler.Types.FINAL
-import com.wavesplatform.lang.v1.compiler.{CompilerContext, DecompilerContext}
-import com.wavesplatform.lang.v1.evaluator.Contextful.NoContext
-import com.wavesplatform.lang.v1.evaluator.ctx.{BaseFunction, EvaluationContext, LazyVal}
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext
-import com.wavesplatform.lang.v1.evaluator.{Contextful, ContextfulVal}
-import com.wavesplatform.lang.v1.parser.BinaryOperation
-import com.wavesplatform.lang.v1.parser.Expressions.Pos.AnyPos
+import com.gicsports.lang.v1.FunctionHeader.Native
+import com.gicsports.lang.v1.compiler.CompilerContext.{FunctionInfo, VariableInfo}
+import com.gicsports.lang.v1.compiler.Types.FINAL
+import com.gicsports.lang.v1.compiler.{CompilerContext, DecompilerContext}
+import com.gicsports.lang.v1.evaluator.Contextful.NoContext
+import com.gicsports.lang.v1.evaluator.ctx.{BaseFunction, EvaluationContext, LazyVal}
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext
+import com.gicsports.lang.v1.evaluator.{Contextful, ContextfulVal}
+import com.gicsports.lang.v1.parser.BinaryOperation
+import com.gicsports.lang.v1.parser.Expressions.Pos.AnyPos
 
 import scala.annotation.meta.field
 import scala.scalajs.js.annotation.*

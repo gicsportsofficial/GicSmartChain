@@ -1,6 +1,6 @@
-package com.wavesplatform
+package com.gicsports
 
-import com.wavesplatform.lang.directives.values.{V5, V6}
+import com.gicsports.lang.directives.values.{V5, V6}
 import utest.*
 
 import scala.scalajs.js.{Array, Dictionary, Dynamic, JSON}

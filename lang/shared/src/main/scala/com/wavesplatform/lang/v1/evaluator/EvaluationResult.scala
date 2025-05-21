@@ -1,8 +1,8 @@
-package com.wavesplatform.lang.v1.evaluator
+package com.gicsports.lang.v1.evaluator
 
 import cats.{Monad, StackSafeMonad}
 import cats.syntax.either._
-import com.wavesplatform.lang.{ExecutionError, CommonError}
+import com.gicsports.lang.{ExecutionError, CommonError}
 import monix.eval.Coeval
 
 case class EvaluationResult[+A](value: Coeval[Either[(ExecutionError, Int), A]]) {

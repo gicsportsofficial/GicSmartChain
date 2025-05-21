@@ -1,14 +1,14 @@
-package com.wavesplatform.state.appender
+package com.gicsports.state.appender
 
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.network.{ExtensionBlocks, InvalidBlockStorage, PeerDatabase}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.utils.SystemTime
-import com.wavesplatform.utx.UtxPoolImpl
+import com.gicsports.block.Block
+import com.gicsports.common.utils.*
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.network.{ExtensionBlocks, InvalidBlockStorage, PeerDatabase}
+import com.gicsports.test.*
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.utils.SystemTime
+import com.gicsports.utx.UtxPoolImpl
 import monix.execution.Scheduler.Implicits.global
 
 class ExtensionAppenderSpec extends FlatSpec with WithDomain {

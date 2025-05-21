@@ -1,10 +1,10 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.api.http.TransactionsApiRoute.LeaseStatus
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
+import com.gicsports.api.http.TransactionsApiRoute.LeaseStatus
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.transactions.BaseTransactionSuite
 import org.scalatest.CancelAfterFailure
 import play.api.libs.json.Json
 
@@ -37,9 +37,9 @@ class LeaseStatusTestSuite extends BaseTransactionSuite with CancelAfterFailure 
 
 object LeaseStatusTestSuite {
   private val blockGenerationOffset = "10000ms"
-  import com.wavesplatform.it.NodeConfigs.Default
+  import com.gicsports.it.NodeConfigs.Default
 
-  private val minerConfig = ConfigFactory.parseString(s"""CARDIUM {
+  private val minerConfig = ConfigFactory.parseString(s"""GIC {
        |   miner{
        |      enable = yes
        |      minimal-block-generation-offset = $blockGenerationOffset
@@ -50,7 +50,7 @@ object LeaseStatusTestSuite {
        |}
      """.stripMargin)
 
-  private val notMinerConfig = ConfigFactory.parseString(s"""CARDIUM {
+  private val notMinerConfig = ConfigFactory.parseString(s"""GIC {
        |   miner.enable = no
        |   miner.minimal-block-generation-offset = $blockGenerationOffset
        |}

@@ -1,22 +1,22 @@
-package com.wavesplatform.lang.compiler
+package com.gicsports.lang.compiler
 
 import cats.syntax.semigroup.*
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.Global
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.directives.{Directive, DirectiveParser, DirectiveSet}
-import com.wavesplatform.lang.directives.values.{DApp as DAppType, *}
-import com.wavesplatform.lang.script.{Script, ScriptPreprocessor}
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.v1.compiler.{ContractScriptCompactor, TestCompiler}
-import com.wavesplatform.lang.v1.{CTX, compiler}
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.WavesContext
-import com.wavesplatform.lang.v1.parser.{Expressions, Parser}
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.protobuf.dapp.DAppMeta.CompactNameAndOriginalNamePair
-import com.wavesplatform.test.*
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.Global
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.directives.{Directive, DirectiveParser, DirectiveSet}
+import com.gicsports.lang.directives.values.{DApp as DAppType, *}
+import com.gicsports.lang.script.{Script, ScriptPreprocessor}
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.v1.compiler.{ContractScriptCompactor, TestCompiler}
+import com.gicsports.lang.v1.{CTX, compiler}
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.WavesContext
+import com.gicsports.lang.v1.parser.{Expressions, Parser}
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.protobuf.dapp.DAppMeta.CompactNameAndOriginalNamePair
+import com.gicsports.test.*
 import org.scalatest.Assertion
 
 class ContractCompilerCompactorTest extends PropSpec {

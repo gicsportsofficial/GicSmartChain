@@ -1,24 +1,24 @@
-package com.wavesplatform.state.diffs.smart.predef
+package com.gicsports.state.diffs.smart.predef
 
-import com.wavesplatform.account.{Address, Alias}
-import com.wavesplatform.block.Block.BlockId
-import com.wavesplatform.block.SignedBlockHeader
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_BOOLEAN
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.traits.domain.Recipient
-import com.wavesplatform.settings.BlockchainSettings
-import com.wavesplatform.state.*
-import com.wavesplatform.state.reader.LeaseDetails
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.smart.script.ScriptRunner
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{Asset, ERC20Address, Transaction}
+import com.gicsports.account.{Address, Alias}
+import com.gicsports.block.Block.BlockId
+import com.gicsports.block.SignedBlockHeader
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.v1.compiler.Terms.CONST_BOOLEAN
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.traits.domain.Recipient
+import com.gicsports.settings.BlockchainSettings
+import com.gicsports.state.*
+import com.gicsports.state.reader.LeaseDetails
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.smart.script.ScriptRunner
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{Asset, ERC20Address, Transaction}
 import org.scalamock.scalatest.MockFactory
 import shapeless.Coproduct
 

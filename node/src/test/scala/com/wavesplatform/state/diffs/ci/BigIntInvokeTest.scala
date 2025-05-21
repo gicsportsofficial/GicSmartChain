@@ -1,24 +1,24 @@
-package com.wavesplatform.state.diffs.ci
+package com.gicsports.state.diffs.ci
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.db.{DBCacheSettings, WithDomain, WithState}
-import com.wavesplatform.lang.contract
-import com.wavesplatform.lang.contract.DApp.{CallableAnnotation, CallableFunction}
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V5}
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.FunctionHeader.Native
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.evaluator.FunctionIds
-import com.wavesplatform.lang.v1.evaluator.FunctionIds.TO_BIGINT
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.TxHelpers
+import com.gicsports.account.Address
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.db.{DBCacheSettings, WithDomain, WithState}
+import com.gicsports.lang.contract
+import com.gicsports.lang.contract.DApp.{CallableAnnotation, CallableFunction}
+import com.gicsports.lang.directives.values.{StdLibVersion, V5}
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.FunctionHeader.Native
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.evaluator.FunctionIds
+import com.gicsports.lang.v1.evaluator.FunctionIds.TO_BIGINT
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.test.*
+import com.gicsports.transaction.TxHelpers
 import org.scalatest.{EitherValues, Inside}
 
 class BigIntInvokeTest extends PropSpec with Inside with WithState with DBCacheSettings with WithDomain with EitherValues {

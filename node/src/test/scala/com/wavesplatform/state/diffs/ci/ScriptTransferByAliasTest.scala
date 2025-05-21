@@ -1,17 +1,17 @@
-package com.wavesplatform.state.diffs.ci
+package com.gicsports.state.diffs.ci
 
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.settings.TestFunctionalitySettings
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.transaction.TxHelpers.{invoke, secondSigner, setScript}
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.settings.TestFunctionalitySettings
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.transaction.TxHelpers.{invoke, secondSigner, setScript}
 
 class ScriptTransferByAliasTest extends PropSpec with WithDomain {
 

@@ -1,20 +1,20 @@
-package com.wavesplatform.mining
+package com.gicsports.mining
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.WithDB
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.block.{Block, SignedBlockHeader}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.consensus.PoSSelector
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.settings._
-import com.wavesplatform.state.{BalanceSnapshot, Blockchain, BlockMinerInfo, NG}
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.test.FlatSpec
-import com.wavesplatform.transaction.BlockchainUpdater
-import com.wavesplatform.transaction.TxValidationError.BlockFromFuture
-import com.wavesplatform.utx.UtxPoolImpl
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.WithDB
+import com.gicsports.account.KeyPair
+import com.gicsports.block.{Block, SignedBlockHeader}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.consensus.PoSSelector
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.settings._
+import com.gicsports.state.{BalanceSnapshot, Blockchain, BlockMinerInfo, NG}
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.test.FlatSpec
+import com.gicsports.transaction.BlockchainUpdater
+import com.gicsports.transaction.TxValidationError.BlockFromFuture
+import com.gicsports.utx.UtxPoolImpl
+import com.gicsports.wallet.Wallet
 import io.netty.channel.group.DefaultChannelGroup
 import io.netty.util.concurrent.GlobalEventExecutor
 import monix.eval.Task
@@ -34,12 +34,12 @@ class MiningFailuresSuite extends FlatSpec with PathMockFactory with WithDB {
     val wavesSettings = {
       val config = ConfigFactory
         .parseString("""
-                       |CARDIUM.miner {
+                       |GIC.miner {
                        |  quorum = 0
                        |  interval-after-last-block-then-generation-is-allowed = 0
                        |}
                        |
-                       |CARDIUM.features.supported=[2]
+                       |GIC.features.supported=[2]
                        |""".stripMargin)
         .withFallback(ConfigFactory.load())
 

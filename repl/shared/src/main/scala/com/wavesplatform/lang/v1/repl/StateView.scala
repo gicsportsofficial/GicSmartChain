@@ -1,6 +1,6 @@
-package com.wavesplatform.lang.v1.repl
+package com.gicsports.lang.v1.repl
 
-import com.wavesplatform.lang.v1.compiler.CompilerContext
+import com.gicsports.lang.v1.compiler.CompilerContext
 
 import scala.collection.immutable.ListMap
 

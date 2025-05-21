@@ -1,9 +1,9 @@
-package com.wavesplatform.lang.v1.estimator.v3
+package com.gicsports.lang.v1.estimator.v3
 
 
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.estimator.EstimationError
-import com.wavesplatform.lang.v1.task.TaskM
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.estimator.EstimationError
+import com.gicsports.lang.v1.task.TaskM
 import monix.eval.Coeval
 import shapeless.{Lens, lens}
 

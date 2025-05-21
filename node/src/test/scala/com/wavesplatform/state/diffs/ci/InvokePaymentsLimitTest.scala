@@ -1,17 +1,17 @@
-package com.wavesplatform.state.diffs.ci
+package com.gicsports.state.diffs.ci
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.db.{DBCacheSettings, WithDomain, WithState}
-import com.wavesplatform.lang.directives.DirectiveDictionary
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V4, V5}
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{Transaction, TxHelpers}
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.account.Address
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.db.{DBCacheSettings, WithDomain, WithState}
+import com.gicsports.lang.directives.DirectiveDictionary
+import com.gicsports.lang.directives.values.{StdLibVersion, V4, V5}
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.*
+import com.gicsports.transaction.{Transaction, TxHelpers}
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
 import org.scalatest.{EitherValues, Inside}
 
 class InvokePaymentsLimitTest extends PropSpec with Inside with WithState with DBCacheSettings with WithDomain with EitherValues {

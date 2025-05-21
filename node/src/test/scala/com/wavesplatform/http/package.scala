@@ -1,10 +1,10 @@
-package com.wavesplatform
+package com.gicsports
 
-import com.wavesplatform.account.{AddressOrAlias, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.transaction.transfer._
-import com.wavesplatform.transaction.{Asset, Proofs}
+import com.gicsports.account.{AddressOrAlias, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.transaction.transfer._
+import com.gicsports.transaction.{Asset, Proofs}
 import org.scalatest.enablers.Emptiness
 import org.scalatest.matchers.{HavePropertyMatchResult, HavePropertyMatcher}
 import play.api.libs.functional.syntax._

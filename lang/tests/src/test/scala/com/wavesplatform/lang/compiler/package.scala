@@ -1,19 +1,19 @@
-package com.wavesplatform.lang
+package com.gicsports.lang
 
 import cats.kernel.Monoid
-import com.wavesplatform.common.utils._
-import com.wavesplatform.lang.Common.multiplierFunction
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.lang.v1.CTX
-import com.wavesplatform.lang.v1.compiler.Terms._
-import com.wavesplatform.lang.v1.compiler.Types._
-import com.wavesplatform.lang.v1.evaluator.Contextful.NoContext
-import com.wavesplatform.lang.v1.evaluator.ContextfulVal
-import com.wavesplatform.lang.v1.evaluator.ctx.NativeFunction
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.WavesContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{PureContext, _}
-import com.wavesplatform.lang.v1.traits.Environment
+import com.gicsports.common.utils._
+import com.gicsports.lang.Common.multiplierFunction
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values._
+import com.gicsports.lang.v1.CTX
+import com.gicsports.lang.v1.compiler.Terms._
+import com.gicsports.lang.v1.compiler.Types._
+import com.gicsports.lang.v1.evaluator.Contextful.NoContext
+import com.gicsports.lang.v1.evaluator.ContextfulVal
+import com.gicsports.lang.v1.evaluator.ctx.NativeFunction
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.WavesContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.{PureContext, _}
+import com.gicsports.lang.v1.traits.Environment
 
 package object compiler {
 

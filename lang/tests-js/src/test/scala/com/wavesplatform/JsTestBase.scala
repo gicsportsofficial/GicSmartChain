@@ -1,6 +1,6 @@
-package com.wavesplatform
+package com.gicsports
 
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V6}
+import com.gicsports.lang.directives.values.{StdLibVersion, V6}
 import utest.{TestSuite, assert}
 
 import scala.scalajs.js.{Dictionary, isUndefined}

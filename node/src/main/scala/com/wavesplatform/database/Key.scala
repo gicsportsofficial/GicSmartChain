@@ -1,4 +1,4 @@
-package com.wavesplatform.database
+package com.gicsports.database
 
 import com.google.common.base.CaseFormat
 import com.google.common.io.BaseEncoding

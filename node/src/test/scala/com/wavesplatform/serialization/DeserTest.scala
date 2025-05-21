@@ -1,6 +1,6 @@
-package com.wavesplatform.serialization
+package com.gicsports.serialization
 
-import com.wavesplatform.test.PropSpec
+import com.gicsports.test.PropSpec
 
 class DeserTest extends PropSpec {
   property("correctly serialized arrays") {

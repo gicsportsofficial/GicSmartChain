@@ -1,23 +1,23 @@
-package com.wavesplatform.state.diffs.smart
+package com.gicsports.state.diffs.smart
 
 import cats.syntax.either._
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base64, EitherExt2}
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.lang.utils._
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler
-import com.wavesplatform.lang.v1.compiler.Terms.EVALUATED
-import com.wavesplatform.lang.v1.evaluator.EvaluatorV1
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.transaction.smart.BlockchainContext.In
-import com.wavesplatform.transaction.smart.{BlockchainContext, buildThisValue}
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{Authorized, DataTransaction, EthereumTransaction, Proofs, ProvenTransaction, Transaction, VersionedTransaction}
-import com.wavesplatform.utils.EmptyBlockchain
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base64, EitherExt2}
+import com.gicsports.crypto
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values._
+import com.gicsports.lang.utils._
+import com.gicsports.lang.v1.compiler.ExpressionCompiler
+import com.gicsports.lang.v1.compiler.Terms.EVALUATED
+import com.gicsports.lang.v1.evaluator.EvaluatorV1
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.state.Blockchain
+import com.gicsports.transaction.smart.BlockchainContext.In
+import com.gicsports.transaction.smart.{BlockchainContext, buildThisValue}
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{Authorized, DataTransaction, EthereumTransaction, Proofs, ProvenTransaction, Transaction, VersionedTransaction}
+import com.gicsports.utils.EmptyBlockchain
 import monix.eval.Coeval
 import shapeless.Coproduct
 
@@ -71,7 +71,7 @@ package object predef {
     s"""${dropLastLine(scriptWithV1PureFunctions(tx, t))}
        |${dropLastLine(scriptWithV1WavesFunctions(tx, t))}
        |${dropLastLine(scriptWithCryptoFunctions)}
-       |if rnd then pure && CARDIUM else crypto""".stripMargin
+       |if rnd then pure && GIC else crypto""".stripMargin
 
   def scriptWithV1PureFunctions(tx: DataTransaction, t: TransferTransaction): String =
     s"""
@@ -189,8 +189,8 @@ package object predef {
        |
        | let balances = assetBalance(tx.sender, unit) > 0 && wavesBalance(tx.sender) != 0
        |
-       | let CARDIUM= txById && entries && balances && aFromPK && aFromStrOrRecip && height > 0
-       | CARDIUM""".stripMargin
+       | let GIC= txById && entries && balances && aFromPK && aFromStrOrRecip && height > 0
+       | GIC""".stripMargin
 
   def scriptWithCryptoFunctions: String =
     s"""

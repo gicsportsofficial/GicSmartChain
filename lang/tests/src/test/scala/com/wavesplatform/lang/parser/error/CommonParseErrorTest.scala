@@ -1,7 +1,7 @@
-package com.wavesplatform.lang.parser.error
+package com.gicsports.lang.parser.error
 
-import com.wavesplatform.lang.directives.values.V6
-import com.wavesplatform.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.directives.values.V6
+import com.gicsports.lang.v1.compiler.TestCompiler
 
 class CommonParseErrorTest extends ParseErrorTest {
   property("empty script as expression") {

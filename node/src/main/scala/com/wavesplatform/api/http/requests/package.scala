@@ -1,13 +1,13 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import cats.Applicative
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto.{DigestLength, SignatureLength}
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.{GenericError, Validation}
-import com.wavesplatform.transaction.{Asset, AssetIdStringLength, Proofs, TxValidationError, TxVersion}
-import com.wavesplatform.utils.base58Length
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto.{DigestLength, SignatureLength}
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.{GenericError, Validation}
+import com.gicsports.transaction.{Asset, AssetIdStringLength, Proofs, TxValidationError, TxVersion}
+import com.gicsports.utils.base58Length
 import play.api.libs.json._
 import supertagged.TaggedType
 
@@ -83,7 +83,7 @@ package object requests {
     JsArray(proofs.map(s => JsString(s.toString)))
   }
 
-  implicit val byteStrFormat: Format[ByteStr] = com.wavesplatform.utils.byteStrFormat
+  implicit val byteStrFormat: Format[ByteStr] = com.gicsports.utils.byteStrFormat
 
   object ProofStr extends TaggedType[String]
   type ProofStr = ProofStr.Type

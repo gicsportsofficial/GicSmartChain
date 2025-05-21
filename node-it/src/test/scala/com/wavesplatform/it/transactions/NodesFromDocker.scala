@@ -1,6 +1,6 @@
-package com.wavesplatform.it.transactions
+package com.gicsports.it.transactions
 
-import com.wavesplatform.it.{Docker, DockerBased, Node, Nodes}
+import com.gicsports.it.{Docker, DockerBased, Node, Nodes}
 import monix.eval.Coeval
 import org.scalatest.Suite
 

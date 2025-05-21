@@ -1,7 +1,7 @@
-package com.wavesplatform.transaction.api.http.alias
+package com.gicsports.transaction.api.http.alias
 
-import com.wavesplatform.api.http.requests.{CreateAliasV1Request, SignedCreateAliasV1Request}
-import com.wavesplatform.test.FunSuite
+import com.gicsports.api.http.requests.{CreateAliasV1Request, SignedCreateAliasV1Request}
+import com.gicsports.test.FunSuite
 import play.api.libs.json.Json
 
 class AliasRequestTests extends FunSuite {

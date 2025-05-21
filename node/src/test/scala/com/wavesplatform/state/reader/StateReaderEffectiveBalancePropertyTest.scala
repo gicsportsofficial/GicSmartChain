@@ -1,15 +1,15 @@
-package com.wavesplatform.state.reader
+package com.gicsports.state.reader
 
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.features.BlockchainFeatures.*
-import com.wavesplatform.lagonaki.mocks.TestBlock.create as block
-import com.wavesplatform.settings.TestFunctionalitySettings.Enabled
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.state.diffs.*
-import com.wavesplatform.state.{BalanceSnapshot, LeaseBalance}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.transaction.TxHelpers.{defaultAddress, transfer}
+import com.gicsports.db.WithDomain
+import com.gicsports.features.BlockchainFeatures.*
+import com.gicsports.lagonaki.mocks.TestBlock.create as block
+import com.gicsports.settings.TestFunctionalitySettings.Enabled
+import com.gicsports.settings.WavesSettings
+import com.gicsports.state.diffs.*
+import com.gicsports.state.{BalanceSnapshot, LeaseBalance}
+import com.gicsports.test.*
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.transaction.TxHelpers.{defaultAddress, transfer}
 
 class StateReaderEffectiveBalancePropertyTest extends PropSpec with WithDomain {
   import DomainPresets.*

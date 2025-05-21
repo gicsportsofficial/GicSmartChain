@@ -1,4 +1,4 @@
-package com.wavesplatform.utils
+package com.gicsports.utils
 
 import java.util.concurrent.ThreadPoolExecutor.DiscardOldestPolicy
 import java.util.concurrent.{Future as JavaFuture, *}

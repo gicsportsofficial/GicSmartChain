@@ -1,17 +1,17 @@
-package com.wavesplatform.state.diffs.ci
+package com.gicsports.state.diffs.ci
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures.RideV6
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.*
-import com.wavesplatform.test.DomainPresets.*
-import com.wavesplatform.transaction.TxHelpers
+import com.gicsports.account.Address
+import com.gicsports.common.state.ByteStr
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures.RideV6
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.*
+import com.gicsports.test.DomainPresets.*
+import com.gicsports.transaction.TxHelpers
 
 class InvokeDataEntriesBytesTest extends PropSpec with WithDomain {
   private def data(i: Int, size: Int): String =

@@ -1,6 +1,6 @@
-package com.wavesplatform.it
+package com.gicsports.it
 
-import com.wavesplatform.it.Docker.DockerNode
+import com.gicsports.it.Docker.DockerNode
 import monix.eval.Coeval
 import org.scalatest.{Args, BeforeAndAfterAll, Status, Suite}
 

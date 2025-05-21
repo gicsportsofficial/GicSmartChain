@@ -1,9 +1,9 @@
-package com.wavesplatform.lang.v1.evaluator.ctx
+package com.gicsports.lang.v1.evaluator.ctx
 
 import cats.Id
-import com.wavesplatform.lang.utils.environment
-import com.wavesplatform.lang.v1.CTX
-import com.wavesplatform.lang.v1.traits.Environment
+import com.gicsports.lang.utils.environment
+import com.gicsports.lang.v1.CTX
+import com.gicsports.lang.v1.traits.Environment
 
 case class InvariableContext(private val ctx: CTX[Environment]) {
   private val constants                  = ctx.vars.collect { case (k, v) if v._2.isPure  => k -> LazyVal.fromEval(v._2(environment)) }

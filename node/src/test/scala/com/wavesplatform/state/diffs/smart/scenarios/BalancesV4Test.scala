@@ -1,27 +1,27 @@
-package com.wavesplatform.state.diffs.smart.scenarios
+package com.gicsports.state.diffs.smart.scenarios
 
 import cats.syntax.semigroup.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithState
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.Global
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.{Asset as AssetType, *}
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.{ExpressionCompiler, TestCompiler}
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.WavesContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
-import com.wavesplatform.lang.v1.parser.*
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.settings.{Constants, FunctionalitySettings, TestFunctionalitySettings}
-import com.wavesplatform.state.*
-import com.wavesplatform.state.diffs.*
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.*
-import com.wavesplatform.transaction.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithState
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.Global
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.{Asset as AssetType, *}
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.{ExpressionCompiler, TestCompiler}
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.WavesContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
+import com.gicsports.lang.v1.parser.*
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.settings.{Constants, FunctionalitySettings, TestFunctionalitySettings}
+import com.gicsports.state.*
+import com.gicsports.state.diffs.*
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.*
+import com.gicsports.transaction.*
 
 class BalancesV4Test extends PropSpec with WithState {
 
@@ -94,7 +94,7 @@ class BalancesV4Test extends PropSpec with WithState {
       rideV4Activated
     ) {
       case (d, s) =>
-        val apiBalance = com.wavesplatform.api.common.CommonAccountsApi(() => d, db, s).balanceDetails(acc1.toAddress).explicitGet()
+        val apiBalance = com.gicsports.api.common.CommonAccountsApi(() => d, db, s).balanceDetails(acc1.toAddress).explicitGet()
         val data       = d.accountData(dapp.toAddress)
         data.data("available") shouldBe IntegerDataEntry("available", apiBalance.available)
         apiBalance.available shouldBe 16 * Constants.UnitsInWave

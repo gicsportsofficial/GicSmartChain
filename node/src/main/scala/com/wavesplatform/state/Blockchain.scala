@@ -1,22 +1,22 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
-import com.wavesplatform.account.*
-import com.wavesplatform.block.Block.*
-import com.wavesplatform.block.{Block, BlockHeader, SignedBlockHeader}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.consensus.GeneratingBalanceProvider
-import com.wavesplatform.features.{BlockchainFeature, BlockchainFeatureStatus, BlockchainFeatures}
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.script.ContractScript
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.traits.domain.Issue
-import com.wavesplatform.settings.BlockchainSettings
-import com.wavesplatform.state.reader.LeaseDetails
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.AliasDoesNotExist
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.transfer.TransferTransactionLike
-import com.wavesplatform.transaction.{Asset, ERC20Address, Transaction}
+import com.gicsports.account.*
+import com.gicsports.block.Block.*
+import com.gicsports.block.{Block, BlockHeader, SignedBlockHeader}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.consensus.GeneratingBalanceProvider
+import com.gicsports.features.{BlockchainFeature, BlockchainFeatureStatus, BlockchainFeatures}
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.script.ContractScript
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.traits.domain.Issue
+import com.gicsports.settings.BlockchainSettings
+import com.gicsports.state.reader.LeaseDetails
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.AliasDoesNotExist
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.transfer.TransferTransactionLike
+import com.gicsports.transaction.{Asset, ERC20Address, Transaction}
 
 trait Blockchain {
   def settings: BlockchainSettings

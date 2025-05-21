@@ -1,6 +1,6 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.state.Diff
+import com.gicsports.state.Diff
 import org.scalatest.matchers.{MatchResult, Matcher}
 
 class DiffProduceError(errorMessage: String, requireFailed: Boolean) extends Matcher[Either[_, _]] {

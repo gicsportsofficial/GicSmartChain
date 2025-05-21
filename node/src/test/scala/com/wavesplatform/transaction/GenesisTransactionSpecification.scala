@@ -1,9 +1,9 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.account.{KeyPair, PublicKey}
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.protobuf.transaction.PBTransactions
-import com.wavesplatform.test.PropSpec
+import com.gicsports.account.{KeyPair, PublicKey}
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.protobuf.transaction.PBTransactions
+import com.gicsports.test.PropSpec
 import org.scalacheck.{Arbitrary, Gen}
 
 class GenesisTransactionSpecification extends PropSpec {

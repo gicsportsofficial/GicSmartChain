@@ -1,13 +1,13 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
-import com.wavesplatform.common.utils.{Base64, EitherExt2}
-import com.wavesplatform.it.NTPTime
-import com.wavesplatform.it.api.SyncGrpcApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.protobuf.transaction.PBTransactions
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.assets.IssueTransaction
+import com.gicsports.common.utils.{Base64, EitherExt2}
+import com.gicsports.it.NTPTime
+import com.gicsports.it.api.SyncGrpcApi._
+import com.gicsports.it.sync._
+import com.gicsports.lang.script.Script
+import com.gicsports.protobuf.transaction.PBTransactions
+import com.gicsports.test._
+import com.gicsports.transaction.assets.IssueTransaction
 import io.grpc.Status.Code
 import org.scalatest.prop.TableDrivenPropertyChecks
 

@@ -1,10 +1,10 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.it.api.SyncGrpcApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.protobuf.transaction.{PBRecipients, PBTransactions, Recipient}
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.it.api.SyncGrpcApi._
+import com.gicsports.it.sync._
+import com.gicsports.protobuf.transaction.{PBRecipients, PBTransactions, Recipient}
 
 class GetTransactionGrpcSuite extends GrpcBaseTransactionSuite {
 

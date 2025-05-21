@@ -1,14 +1,14 @@
-package com.wavesplatform.state.diffs.smart.scenarios
+package com.gicsports.state.diffs.smart.scenarios
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithState
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.state.diffs.smart.smartEnabledFS
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{Proofs, TxHelpers}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithState
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.state.diffs.smart.smartEnabledFS
+import com.gicsports.test.*
+import com.gicsports.transaction.{Proofs, TxHelpers}
 
 class OneProofForNonScriptedAccountTest extends PropSpec with WithState {
 

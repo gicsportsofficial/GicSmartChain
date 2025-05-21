@@ -1,4 +1,4 @@
-package com.wavesplatform.it
+package com.gicsports.it
 
 import java.io.{FileOutputStream, IOException}
 import java.net.{InetAddress, InetSocketAddress, URL}
@@ -24,14 +24,14 @@ import com.spotify.docker.client.messages.*
 import com.spotify.docker.client.messages.EndpointConfig.EndpointIpamConfig
 import com.typesafe.config.{Config, ConfigFactory, ConfigRenderOptions}
 import com.typesafe.config.ConfigFactory.*
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.it.api.AsyncHttpApi.*
-import com.wavesplatform.it.util.GlobalTimer.instance as timer
-import com.wavesplatform.settings.*
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.account.AddressScheme
+import com.gicsports.block.Block
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.it.api.AsyncHttpApi.*
+import com.gicsports.it.util.GlobalTimer.instance as timer
+import com.gicsports.settings.*
+import com.gicsports.utils.ScorexLogging
 import monix.eval.Coeval
 import net.ceedubs.ficus.Ficus.*
 import net.ceedubs.ficus.readers.ArbitraryTypeReader.*
@@ -79,7 +79,7 @@ class Docker(
   private val networkPrefix = s"${InetAddress.getByAddress(toByteArray(networkSeed)).getHostAddress}/28"
 
   private val logDir: Coeval[Path] = Coeval.evalOnce {
-    val r = Option(System.getProperty("CARDIUM.it.logging.dir"))
+    val r = Option(System.getProperty("GIC.it.logging.dir"))
       .map(Paths.get(_))
       .getOrElse(Paths.get(System.getProperty("user.dir"), "logs", RunId, tag.replaceAll("""(\w)\w*\.""", "$1.")))
 
@@ -93,7 +93,7 @@ class Docker(
 
   private lazy val wavesNetwork: Network = {
     val id          = Random.nextInt(Int.MaxValue)
-    val networkName = s"CARDIUM-$id"
+    val networkName = s"GIC-$id"
 
     def network: Option[Network] =
       try {
@@ -202,13 +202,13 @@ class Docker(
 
   private def startNodeInternal(nodeConfig: Config, autoConnect: Boolean = true): DockerNode =
     try {
-      val nodeName = nodeConfig.getString("CARDIUM.network.node-name")
+      val nodeName = nodeConfig.getString("GIC.network.node-name")
       val peersOverrides = if (autoConnect) {
         val otherAddrs = peersFor(nodeName)
 
         ConfigFactory
           .parseMap(Map("known-peers" -> otherAddrs.map(addr => s"${addr.getHostString}:${addr.getPort}").asJava).asJava)
-          .atPath("CARDIUM.network")
+          .atPath("GIC.network")
       } else ConfigFactory.empty()
 
       val overrides = peersOverrides
@@ -222,7 +222,7 @@ class Docker(
         .withFallback(defaultReference())
         .resolve()
 
-      val networkPort          = actualConfig.getString("CARDIUM.network.port")
+      val networkPort          = actualConfig.getString("GIC.network.port")
       val internalDebuggerPort = 5005
 
       val nodeNumber = nodeName.replace("node", "").toInt
@@ -368,7 +368,7 @@ class Docker(
 
       // Docker do not allow updating ENV https://github.com/moby/moby/issues/8838 :(
       log.debug("Set new config directly in the entrypoint.sh script")
-      val shPath = "/usr/share/cardium/bin/entrypoint.sh"
+      val shPath = "/usr/share/gic/bin/entrypoint.sh"
       val scriptCmd: Array[String] =
         Array("sh", "-c", s"sed -i 's|$${JAVA_OPTS}|$${JAVA_OPTS} $renderedConfig|' $shPath && cat $shPath")
 
@@ -551,9 +551,9 @@ class Docker(
 }
 
 object Docker {
-  val NodeImageName: String = "cardiumnetwork/node-it:latest"
+  val NodeImageName: String = "GicSmartChain/node-it:latest"
 
-  private val ContainerRoot = Paths.get("/usr/share/cardium")
+  private val ContainerRoot = Paths.get("/usr/share/gic")
   private val ProfilerPort  = 10001
 
   private val RunId = Option(System.getenv("RUN_ID")).getOrElse(DateTimeFormatter.ofPattern("MM-dd--HH_mm_ss").format(LocalDateTime.now()))
@@ -565,28 +565,28 @@ object Docker {
   def genesisOverride(featuresConfig: Option[Config] = None): Config = {
     val genesisTs: Long = System.currentTimeMillis()
 
-    val timestampOverrides = parseString(s"""CARDIUM.blockchain.custom.genesis {
+    val timestampOverrides = parseString(s"""GIC.blockchain.custom.genesis {
                                             |  timestamp = $genesisTs
                                             |  block-timestamp = $genesisTs
                                             |  signature = null # To calculate it in Block.genesis
                                             |}""".stripMargin)
 
     val genesisConfig = timestampOverrides.withFallback(configTemplate)
-    val gs            = genesisConfig.as[GenesisSettings]("CARDIUM.blockchain.custom.genesis")
+    val gs            = genesisConfig.as[GenesisSettings]("GIC.blockchain.custom.genesis")
     val isRideV6Activated = featuresConfig
       .map(_.withFallback(configTemplate))
       .getOrElse(configTemplate)
       .resolve()
-      .getAs[Map[Short, Int]]("CARDIUM.blockchain.custom.functionality.pre-activated-features")
+      .getAs[Map[Short, Int]]("GIC.blockchain.custom.functionality.pre-activated-features")
       .exists(_.get(BlockchainFeatures.RideV6.id).contains(0))
 
     val genesisSignature = Block.genesis(gs, rideV6Activated = isRideV6Activated).explicitGet().id()
 
-    parseString(s"CARDIUM.blockchain.custom.genesis.signature = $genesisSignature").withFallback(timestampOverrides)
+    parseString(s"GIC.blockchain.custom.genesis.signature = $genesisSignature").withFallback(timestampOverrides)
   }
 
   AddressScheme.current = new AddressScheme {
-    override val chainId: Byte = configTemplate.as[String]("CARDIUM.blockchain.custom.address-scheme-character").charAt(0).toByte
+    override val chainId: Byte = configTemplate.as[String]("GIC.blockchain.custom.address-scheme-character").charAt(0).toByte
   }
 
   def apply(owner: Class[?]): Docker = new Docker(tag = owner.getSimpleName)

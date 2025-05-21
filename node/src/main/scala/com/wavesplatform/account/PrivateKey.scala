@@ -1,7 +1,7 @@
-package com.wavesplatform.account
+package com.gicsports.account
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto.KeyLength
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto.KeyLength
 import play.api.libs.json.{Format, Writes}
 import supertagged._
 import supertagged.postfix._
@@ -19,7 +19,7 @@ object PrivateKey extends TaggedType[ByteStr] {
     Some(apply(arg))
 
   implicit lazy val jsonFormat: Format[PrivateKey] = Format[PrivateKey](
-    com.wavesplatform.utils.byteStrFormat.map(this.apply),
-    Writes(pk => com.wavesplatform.utils.byteStrFormat.writes(pk))
+    com.gicsports.utils.byteStrFormat.map(this.apply),
+    Writes(pk => com.gicsports.utils.byteStrFormat.writes(pk))
   )
 }

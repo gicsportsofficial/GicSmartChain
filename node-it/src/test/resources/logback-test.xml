@@ -4,7 +4,7 @@
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>${logback.file.level:-TRACE}</level>
         </filter>
-        <file>${CARDIUM.it.logging.dir:-target/logs}/test.log</file>
+        <file>${GIC.it.logging.dir:-target/logs}/test.log</file>
         <append>false</append>
         <encoder>
             <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{26} - %msg%n</pattern>

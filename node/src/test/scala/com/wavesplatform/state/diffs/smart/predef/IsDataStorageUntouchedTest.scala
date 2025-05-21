@@ -1,13 +1,13 @@
-package com.wavesplatform.state.diffs.smart.predef
+package com.gicsports.state.diffs.smart.predef
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.{BooleanDataEntry, EmptyDataEntry}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{TxHelpers, TxVersion}
+import com.gicsports.account.Address
+import com.gicsports.db.WithDomain
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.{BooleanDataEntry, EmptyDataEntry}
+import com.gicsports.test.*
+import com.gicsports.transaction.{TxHelpers, TxVersion}
 
 class IsDataStorageUntouchedTest extends PropSpec with WithDomain {
 

@@ -1,28 +1,28 @@
-package com.wavesplatform.utx
+package com.gicsports.utx
 
-import com.wavesplatform.ResponsivenessLogs
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.consensus.TransactionsOrdering
-import com.wavesplatform.events.UtxEvent
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.metrics.*
-import com.wavesplatform.mining.MultiDimensionalMiningConstraint
-import com.wavesplatform.settings.UtxSettings
-import com.wavesplatform.state.InvokeScriptResult.ErrorMessage
-import com.wavesplatform.state.diffs.BlockDiffer.CurrentBlockFeePart
-import com.wavesplatform.state.diffs.TransactionDiffer.TransactionValidationError
-import com.wavesplatform.state.diffs.{BlockDiffer, TransactionDiffer}
-import com.wavesplatform.state.reader.CompositeBlockchain
-import com.wavesplatform.state.{Blockchain, Diff, Portfolio}
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.TxValidationError.{AlreadyInTheState, GenericError, SenderIsBlacklisted, WithLog}
-import com.wavesplatform.transaction.assets.exchange.ExchangeTransaction
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.script.trace.TracedResult
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.utils.{LoggerFacade, Schedulers, ScorexLogging, Time}
-import com.wavesplatform.utx.UtxPool.PackStrategy
+import com.gicsports.ResponsivenessLogs
+import com.gicsports.account.Address
+import com.gicsports.common.state.ByteStr
+import com.gicsports.consensus.TransactionsOrdering
+import com.gicsports.events.UtxEvent
+import com.gicsports.lang.ValidationError
+import com.gicsports.metrics.*
+import com.gicsports.mining.MultiDimensionalMiningConstraint
+import com.gicsports.settings.UtxSettings
+import com.gicsports.state.InvokeScriptResult.ErrorMessage
+import com.gicsports.state.diffs.BlockDiffer.CurrentBlockFeePart
+import com.gicsports.state.diffs.TransactionDiffer.TransactionValidationError
+import com.gicsports.state.diffs.{BlockDiffer, TransactionDiffer}
+import com.gicsports.state.reader.CompositeBlockchain
+import com.gicsports.state.{Blockchain, Diff, Portfolio}
+import com.gicsports.transaction.*
+import com.gicsports.transaction.TxValidationError.{AlreadyInTheState, GenericError, SenderIsBlacklisted, WithLog}
+import com.gicsports.transaction.assets.exchange.ExchangeTransaction
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.script.trace.TracedResult
+import com.gicsports.transaction.transfer.*
+import com.gicsports.utils.{LoggerFacade, Schedulers, ScorexLogging, Time}
+import com.gicsports.utx.UtxPool.PackStrategy
 import kamon.Kamon
 import kamon.metric.MeasurementUnit
 import monix.execution.ExecutionModel
@@ -50,7 +50,7 @@ case class UtxPoolImpl(
     with AutoCloseable
     with UtxPool {
 
-  import com.wavesplatform.utx.UtxPoolImpl.*
+  import com.gicsports.utx.UtxPoolImpl.*
 
   // Context
   private[this] val cleanupScheduler: SchedulerService =

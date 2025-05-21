@@ -1,35 +1,35 @@
-package com.wavesplatform.transaction.smart
+package com.gicsports.transaction.smart
 
 import cats.Id
 import cats.syntax.either.*
 import cats.syntax.functor.*
 import com.google.common.base.Throwables
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.EstimatorProvider.EstimatorBlockchainExt
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.directives.values.V6
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.compiler.TermPrinter
-import com.wavesplatform.lang.v1.compiler.Terms.{EVALUATED, FALSE, TRUE}
-import com.wavesplatform.lang.v1.evaluator.Log
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.v1.traits.domain.Recipient
-import com.wavesplatform.metrics.*
-import com.wavesplatform.state.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TxValidationError.{GenericError, ScriptExecutionError, TransactionNotAllowedByScript}
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.assets.exchange.{EthOrders, ExchangeTransaction, Order}
-import com.wavesplatform.transaction.smart.script.ScriptRunner
-import com.wavesplatform.transaction.smart.script.ScriptRunner.TxOrd
-import com.wavesplatform.transaction.smart.script.trace.AssetVerifierTrace.AssetContext
-import com.wavesplatform.transaction.smart.script.trace.{AccountVerifierTrace, AssetVerifierTrace, TraceStep, TracedResult}
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.EstimatorProvider.EstimatorBlockchainExt
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.directives.values.V6
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.compiler.TermPrinter
+import com.gicsports.lang.v1.compiler.Terms.{EVALUATED, FALSE, TRUE}
+import com.gicsports.lang.v1.evaluator.Log
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.v1.traits.domain.Recipient
+import com.gicsports.metrics.*
+import com.gicsports.state.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TxValidationError.{GenericError, ScriptExecutionError, TransactionNotAllowedByScript}
+import com.gicsports.transaction.*
+import com.gicsports.transaction.assets.exchange.{EthOrders, ExchangeTransaction, Order}
+import com.gicsports.transaction.smart.script.ScriptRunner
+import com.gicsports.transaction.smart.script.ScriptRunner.TxOrd
+import com.gicsports.transaction.smart.script.trace.AssetVerifierTrace.AssetContext
+import com.gicsports.transaction.smart.script.trace.{AccountVerifierTrace, AssetVerifierTrace, TraceStep, TracedResult}
+import com.gicsports.utils.ScorexLogging
 import org.msgpack.core.annotations.VisibleForTesting
 import shapeless.Coproduct
 

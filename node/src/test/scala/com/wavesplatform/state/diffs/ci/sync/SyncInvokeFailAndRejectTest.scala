@@ -1,19 +1,19 @@
-package com.wavesplatform.state.diffs.ci.sync
+package com.gicsports.state.diffs.ci.sync
 
-import com.wavesplatform.TestValues.invokeFee
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.v1.ExprScript.ExprScriptImpl
-import com.wavesplatform.lang.v1.compiler.Terms.TRUE
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
-import com.wavesplatform.state.{Portfolio, StringDataEntry}
-import com.wavesplatform.test.{PropSpec, produce}
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TransactionType
-import com.wavesplatform.transaction.TxHelpers.*
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.TestValues.invokeFee
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.v1.ExprScript.ExprScriptImpl
+import com.gicsports.lang.v1.compiler.Terms.TRUE
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
+import com.gicsports.state.{Portfolio, StringDataEntry}
+import com.gicsports.test.{PropSpec, produce}
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TransactionType
+import com.gicsports.transaction.TxHelpers.*
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
 
 class SyncInvokeFailAndRejectTest extends PropSpec with WithDomain {
   import DomainPresets.*
@@ -113,7 +113,7 @@ class SyncInvokeFailAndRejectTest extends PropSpec with WithDomain {
          """.stripMargin
       )
       d.appendBlock(setScript(dApp1Signer, dApp1), setScript(dApp2Signer, dApp2))
-      d.appendBlockE(invoke(dApp1Address, invoker = invoker)) should produce(s"negative CARDIUM balance: ${invoker.toAddress}, old: 0, new: -6000000")
+      d.appendBlockE(invoke(dApp1Address, invoker = invoker)) should produce(s"negative GIC balance: ${invoker.toAddress}, old: 0, new: -6000000")
     }
   }
 }

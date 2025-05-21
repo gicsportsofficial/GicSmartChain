@@ -1,18 +1,18 @@
-package com.wavesplatform.features
+package com.gicsports.features
 
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.mining.MiningConstraints.MaxScriptsComplexityInBlock
-import com.wavesplatform.mining._
-import com.wavesplatform.state.diffs.BlockDiffer
-import com.wavesplatform.test.DomainPresets.SettingsFromDefaultConfig
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.TxHelpers
+import com.gicsports.block.Block
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.directives.values._
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.mining.MiningConstraints.MaxScriptsComplexityInBlock
+import com.gicsports.mining._
+import com.gicsports.state.diffs.BlockDiffer
+import com.gicsports.test.DomainPresets.SettingsFromDefaultConfig
+import com.gicsports.test._
+import com.gicsports.transaction.TxHelpers
 import org.scalamock.scalatest.PathMockFactory
 
 class RideV5LimitsChangeTest extends FlatSpec with WithDomain with PathMockFactory {

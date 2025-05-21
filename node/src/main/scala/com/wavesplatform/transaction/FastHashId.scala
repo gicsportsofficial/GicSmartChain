@@ -1,7 +1,7 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
 import monix.eval.Coeval
 
 trait FastHashId extends Proven {

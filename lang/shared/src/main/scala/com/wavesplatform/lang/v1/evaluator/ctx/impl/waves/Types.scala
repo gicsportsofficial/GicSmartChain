@@ -1,8 +1,8 @@
-package com.wavesplatform.lang.v1.evaluator.ctx.impl.waves
+package com.gicsports.lang.v1.evaluator.ctx.impl.waves
 
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.lang.v1.compiler.Types._
-import com.wavesplatform.lang.v1.traits.domain.AttachedPayments._
+import com.gicsports.lang.directives.values._
+import com.gicsports.lang.v1.compiler.Types._
+import com.gicsports.lang.v1.traits.domain.AttachedPayments._
 
 object Types {
 

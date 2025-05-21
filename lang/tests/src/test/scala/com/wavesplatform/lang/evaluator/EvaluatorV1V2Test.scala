@@ -1,4 +1,4 @@
-package com.wavesplatform.lang.evaluator
+package com.gicsports.lang.evaluator
 
 import java.nio.ByteBuffer
 import cats.Id
@@ -6,31 +6,31 @@ import cats.data.EitherT
 import cats.kernel.Monoid
 import cats.syntax.bifunctor.*
 import com.google.common.io.BaseEncoding
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, Base64, EitherExt2}
-import com.wavesplatform.crypto.*
-import com.wavesplatform.lang.Common.*
-import com.wavesplatform.lang.Testing.*
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.directives.{DirectiveDictionary, DirectiveSet}
-import com.wavesplatform.lang.v1.FunctionHeader.{Native, User}
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.Types.*
-import com.wavesplatform.lang.v1.evaluator.Contextful.NoContext
-import com.wavesplatform.lang.v1.evaluator.ContractEvaluator.LogExtraInfo
-import com.wavesplatform.lang.v1.evaluator.EvaluatorV1.*
-import com.wavesplatform.lang.v1.evaluator.FunctionIds.*
-import com.wavesplatform.lang.v1.evaluator.ctx.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.converters.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.WavesContext
-import com.wavesplatform.lang.v1.evaluator.{Contextful, ContextfulVal, EvaluatorV1, EvaluatorV2, FunctionIds, Log}
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.v1.{CTX, ContractLimits, FunctionHeader}
-import com.wavesplatform.lang.{Common, EvalF, ExecutionError, Global}
-import com.wavesplatform.test.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, Base64, EitherExt2}
+import com.gicsports.crypto.*
+import com.gicsports.lang.Common.*
+import com.gicsports.lang.Testing.*
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.directives.{DirectiveDictionary, DirectiveSet}
+import com.gicsports.lang.v1.FunctionHeader.{Native, User}
+import com.gicsports.lang.v1.compiler.ExpressionCompiler
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.Types.*
+import com.gicsports.lang.v1.evaluator.Contextful.NoContext
+import com.gicsports.lang.v1.evaluator.ContractEvaluator.LogExtraInfo
+import com.gicsports.lang.v1.evaluator.EvaluatorV1.*
+import com.gicsports.lang.v1.evaluator.FunctionIds.*
+import com.gicsports.lang.v1.evaluator.ctx.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.converters.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.WavesContext
+import com.gicsports.lang.v1.evaluator.{Contextful, ContextfulVal, EvaluatorV1, EvaluatorV2, FunctionIds, Log}
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.v1.{CTX, ContractLimits, FunctionHeader}
+import com.gicsports.lang.{Common, EvalF, ExecutionError, Global}
+import com.gicsports.test.*
 import org.scalacheck.{Arbitrary, Gen}
 import org.scalatest.EitherValues
 
@@ -865,7 +865,7 @@ class EvaluatorV1V2Test extends PropSpec with EitherValues {
       )
     )
 
-    com.wavesplatform.lang.v1.parser.Parser.parseExpr(script) match {
+    com.gicsports.lang.v1.parser.Parser.parseExpr(script) match {
       case fastparse.Parsed.Success(xs, _) =>
         evalPure[EVALUATED](
           context.evaluationContext[Id],

@@ -1,20 +1,20 @@
-package com.wavesplatform.state.diffs.smart.scenarios
+package com.gicsports.state.diffs.smart.scenarios
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithState
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.utils.*
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.state.diffs.smart.*
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{GenesisTransaction, TxHelpers}
-import com.wavesplatform.transaction.lease.LeaseTransaction
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.transfer.*
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithState
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.utils.*
+import com.gicsports.lang.v1.compiler.ExpressionCompiler
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.state.diffs.smart.*
+import com.gicsports.test.*
+import com.gicsports.transaction.{GenesisTransaction, TxHelpers}
+import com.gicsports.transaction.lease.LeaseTransaction
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.transfer.*
 
 class TransactionFieldAccessTest extends PropSpec with WithState {
 

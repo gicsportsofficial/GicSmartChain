@@ -1,26 +1,26 @@
-package com.wavesplatform.mining
+package com.gicsports.mining
 
 import java.time.LocalTime
 import cats.syntax.either.*
-import com.wavesplatform.account.{Address, KeyPair}
-import com.wavesplatform.block.Block.*
-import com.wavesplatform.block.{Block, BlockHeader, SignedBlockHeader}
-import com.wavesplatform.consensus.PoSSelector
-import com.wavesplatform.consensus.nxt.NxtLikeConsensusBlockData
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.metrics.{BlockStats, Instrumented, *}
-import com.wavesplatform.mining.Miner.*
-import com.wavesplatform.mining.microblocks.MicroBlockMiner
-import com.wavesplatform.network.*
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.state.*
-import com.wavesplatform.state.appender.BlockAppender
-import com.wavesplatform.transaction.TxValidationError.BlockFromFuture
-import com.wavesplatform.transaction.*
-import com.wavesplatform.utils.{ScorexLogging, Time}
-import com.wavesplatform.utx.UtxPool.PackStrategy
-import com.wavesplatform.utx.UtxPoolImpl
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.account.{Address, KeyPair}
+import com.gicsports.block.Block.*
+import com.gicsports.block.{Block, BlockHeader, SignedBlockHeader}
+import com.gicsports.consensus.PoSSelector
+import com.gicsports.consensus.nxt.NxtLikeConsensusBlockData
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.metrics.{BlockStats, Instrumented, *}
+import com.gicsports.mining.Miner.*
+import com.gicsports.mining.microblocks.MicroBlockMiner
+import com.gicsports.network.*
+import com.gicsports.settings.WavesSettings
+import com.gicsports.state.*
+import com.gicsports.state.appender.BlockAppender
+import com.gicsports.transaction.TxValidationError.BlockFromFuture
+import com.gicsports.transaction.*
+import com.gicsports.utils.{ScorexLogging, Time}
+import com.gicsports.utx.UtxPool.PackStrategy
+import com.gicsports.utx.UtxPoolImpl
+import com.gicsports.wallet.Wallet
 import io.netty.channel.group.ChannelGroup
 import kamon.Kamon
 import monix.eval.Task

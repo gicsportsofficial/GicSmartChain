@@ -1,19 +1,19 @@
-package com.wavesplatform.lang.v1
+package com.gicsports.lang.v1
 
 import cats.implicits.*
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.WavesContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
-import com.wavesplatform.lang.v1.repl.node.ErrorMessageEnvironment
-import com.wavesplatform.lang.v1.repl.node.http.{NodeClient, NodeClientImpl, NodeConnectionSettings, WebEnvironment}
-import com.wavesplatform.lang.v1.traits.Environment
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.WavesContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
+import com.gicsports.lang.v1.repl.node.ErrorMessageEnvironment
+import com.gicsports.lang.v1.repl.node.http.{NodeClient, NodeClientImpl, NodeConnectionSettings, WebEnvironment}
+import com.gicsports.lang.v1.traits.Environment
 
 import scala.concurrent.Future
 
 package object repl {
-  val global: BaseGlobal             = com.wavesplatform.lang.Global
+  val global: BaseGlobal             = com.gicsports.lang.Global
   val internalVarPrefixes: Set[Char] = Set('@', '$')
   val internalFuncPrefix: String     = "_"
 

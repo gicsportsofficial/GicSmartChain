@@ -1,13 +1,13 @@
-package com.wavesplatform.api
+package com.gicsports.api
 
 import com.typesafe.scalalogging.Logger
-import com.wavesplatform.account.{Address, AddressOrAlias}
-import com.wavesplatform.api.http.ApiError
-import com.wavesplatform.block as vb
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.protobuf.block.{PBBlock, PBBlocks}
-import com.wavesplatform.protobuf.transaction.{PBSignedTransaction, PBTransactions, VanillaTransaction}
-import com.wavesplatform.state.Blockchain
+import com.gicsports.account.{Address, AddressOrAlias}
+import com.gicsports.api.http.ApiError
+import com.gicsports.block as vb
+import com.gicsports.lang.ValidationError
+import com.gicsports.protobuf.block.{PBBlock, PBBlocks}
+import com.gicsports.protobuf.transaction.{PBSignedTransaction, PBTransactions, VanillaTransaction}
+import com.gicsports.state.Blockchain
 import io.grpc.stub.{ServerCallStreamObserver, StreamObserver}
 import monix.execution.atomic.AtomicAny
 import monix.execution.{Ack, Scheduler}

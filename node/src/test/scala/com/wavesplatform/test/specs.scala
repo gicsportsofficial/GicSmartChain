@@ -1,6 +1,6 @@
-package com.wavesplatform.test
+package com.gicsports.test
 
-import com.wavesplatform.{EitherMatchers, TransactionGen}
+import com.gicsports.{EitherMatchers, TransactionGen}
 import org.scalacheck.ShrinkLowPriority
 import org.scalatest._
 import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks

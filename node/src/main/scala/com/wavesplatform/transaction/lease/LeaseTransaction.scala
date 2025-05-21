@@ -1,11 +1,11 @@
-package com.wavesplatform.transaction.lease
+package com.gicsports.transaction.lease
 
-import com.wavesplatform.account.{AddressOrAlias, KeyPair, PrivateKey, PublicKey}
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction._
-import com.wavesplatform.transaction.serialization.impl.LeaseTxSerializer
-import com.wavesplatform.transaction.validation.impl.LeaseTxValidator
+import com.gicsports.account.{AddressOrAlias, KeyPair, PrivateKey, PublicKey}
+import com.gicsports.crypto
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction._
+import com.gicsports.transaction.serialization.impl.LeaseTxSerializer
+import com.gicsports.transaction.validation.impl.LeaseTxValidator
 import monix.eval.Coeval
 import play.api.libs.json.JsObject
 
@@ -56,7 +56,7 @@ object LeaseTransaction extends TransactionParser {
   ): Either[ValidationError, TransactionT] = {
     for {
       fee    <- TxPositiveAmount(fee)(TxValidationError.InsufficientFee)
-      amount <- TxPositiveAmount(amount)(TxValidationError.NonPositiveAmount(amount, "CARDIUM"))
+      amount <- TxPositiveAmount(amount)(TxValidationError.NonPositiveAmount(amount, "GIC"))
       tx     <- LeaseTransaction(version, sender, recipient, amount, fee, timestamp, proofs, recipient.chainId).validatedEither
     } yield tx
 

@@ -1,15 +1,15 @@
-package com.wavesplatform.it.sync.smartcontract
+package com.gicsports.it.sync.smartcontract
 
 import com.typesafe.config.Config
-import com.wavesplatform.api.http.ApiError.ScriptExecutionError
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.api.http.ApiError.ScriptExecutionError
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.transaction.smart.script.ScriptCompiler
 
 class SelfPaymentDappToDappSuite extends BaseTransactionSuite {
 

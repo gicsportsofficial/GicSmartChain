@@ -1,32 +1,32 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.BlockchainFeatures.BlockV5
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.utils.*
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_BOOLEAN
-import com.wavesplatform.lang.v1.compiler.{ExpressionCompiler, TestCompiler}
-import com.wavesplatform.lang.v1.estimator.ScriptEstimatorV1
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.settings.{FunctionalitySettings, TestFunctionalitySettings}
-import com.wavesplatform.state.*
-import com.wavesplatform.state.diffs.smart.smartEnabledFS
-import com.wavesplatform.test.*
-import com.wavesplatform.test.DomainPresets.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.assets.*
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.transaction.{GenesisTransaction, Transaction, TxHelpers, TxVersion}
-import com.wavesplatform.{BlocksTransactionsHelpers, TestValues}
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.BlockchainFeatures.BlockV5
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.utils.*
+import com.gicsports.lang.v1.compiler.Terms.CONST_BOOLEAN
+import com.gicsports.lang.v1.compiler.{ExpressionCompiler, TestCompiler}
+import com.gicsports.lang.v1.estimator.ScriptEstimatorV1
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.settings.{FunctionalitySettings, TestFunctionalitySettings}
+import com.gicsports.state.*
+import com.gicsports.state.diffs.smart.smartEnabledFS
+import com.gicsports.test.*
+import com.gicsports.test.DomainPresets.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.assets.*
+import com.gicsports.transaction.transfer.*
+import com.gicsports.transaction.{GenesisTransaction, Transaction, TxHelpers, TxVersion}
+import com.gicsports.{BlocksTransactionsHelpers, TestValues}
 import fastparse.Parsed
 
 class AssetTransactionsDiffTest extends PropSpec with BlocksTransactionsHelpers with WithDomain {

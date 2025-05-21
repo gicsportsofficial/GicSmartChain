@@ -1,4 +1,4 @@
-package com.wavesplatform.utils
+package com.gicsports.utils
 
 import com.typesafe.config.{Config, ConfigFactory, ConfigRenderOptions}
 
@@ -7,14 +7,14 @@ object SystemInformationReporter extends ScorexLogging {
     val resolved = config.resolve()
     val configForLogs = {
       val orig = Seq(
-        "CARDIUM",
+        "GIC",
         "metrics"
       ).foldLeft(ConfigFactory.empty()) { case (r, path) => r.withFallback(resolved.withOnlyPath(path)) }
 
       Seq(
-        "CARDIUM.custom.genesis",
-        "CARDIUM.wallet",
-        "CARDIUM.rest-api.api-key-hash",
+        "GIC.custom.genesis",
+        "GIC.wallet",
+        "GIC.rest-api.api-key-hash",
         "metrics.influx-db"
       ).foldLeft(orig)(_.withoutPath(_))
     }

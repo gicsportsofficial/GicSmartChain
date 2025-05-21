@@ -6,5 +6,5 @@ docker run \
   -v "$PWD":/src \
   -e HOME=/opt/sbt/home \
   -w /src \
-  --rm -it wavesplatform/node-sbt-builder:$WAVES_VERSION \
+  --rm -it gicsports/node-sbt-builder:$WAVES_VERSION \
   /bin/sh -c "sbt --batch --mem 2048 packageAll"

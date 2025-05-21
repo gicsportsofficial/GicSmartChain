@@ -1,26 +1,26 @@
-package com.wavesplatform.lang.v1.evaluator.ctx.impl.waves
+package com.gicsports.lang.v1.evaluator.ctx.impl.waves
 
 import cats.syntax.applicative.*
 import cats.syntax.either.*
 import cats.syntax.functor.*
 import cats.{Id, Monad}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.v1.FunctionHeader.{Native, User}
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.Types.*
-import com.wavesplatform.lang.v1.evaluator.FunctionIds.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.converters.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.Bindings.{scriptTransfer as _, *}
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.Types.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{EnvironmentFunctions, PureContext, notImplemented, unit}
-import com.wavesplatform.lang.v1.evaluator.ctx.{BaseFunction, NativeFunction, UserFunction}
-import com.wavesplatform.lang.v1.evaluator.{ContextfulNativeFunction, ContextfulUserFunction, FunctionIds, Log}
-import com.wavesplatform.lang.v1.traits.domain.{Issue, Lease, Recipient}
-import com.wavesplatform.lang.v1.traits.{DataType, Environment}
-import com.wavesplatform.lang.v1.{BaseGlobal, FunctionHeader}
-import com.wavesplatform.lang.{CoevalF, CommonError, ExecutionError, FailOrRejectError}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.v1.FunctionHeader.{Native, User}
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.Types.*
+import com.gicsports.lang.v1.evaluator.FunctionIds.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.converters.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.Bindings.{scriptTransfer as _, *}
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.Types.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.{EnvironmentFunctions, PureContext, notImplemented, unit}
+import com.gicsports.lang.v1.evaluator.ctx.{BaseFunction, NativeFunction, UserFunction}
+import com.gicsports.lang.v1.evaluator.{ContextfulNativeFunction, ContextfulUserFunction, FunctionIds, Log}
+import com.gicsports.lang.v1.traits.domain.{Issue, Lease, Recipient}
+import com.gicsports.lang.v1.traits.{DataType, Environment}
+import com.gicsports.lang.v1.{BaseGlobal, FunctionHeader}
+import com.gicsports.lang.{CoevalF, CommonError, ExecutionError, FailOrRejectError}
 import monix.eval.Coeval
 import shapeless.Coproduct.unsafeGet
 

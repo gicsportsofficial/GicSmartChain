@@ -124,10 +124,10 @@ lazy val `waves-node` = (project in file("."))
 inScope(Global)(
   Seq(
     scalaVersion         := "2.13.10",
-    organization         := "com.wavesplatform",
-    organizationName     := "Waves Platform",
-    organizationHomepage := Some(url("https://wavesplatform.com")),
-licenses := Seq(("MIT", url("https://github.com/cardiumcoin/CardiumNetwork/blob/master/LICENSE"))),
+    organization         := "com.gicsports",
+    organizationName     := "GIC Sports",
+    organizationHomepage := Some(url("https://gicsports.io/")),
+licenses := Seq(("MIT", url("https://github.com/gicsportsofficial/GicSmartChain/blob/master/LICENSE"))),
     publish / skip       := true,
     scalacOptions ++= Seq(
       "-Xsource:3",
@@ -139,9 +139,9 @@ licenses := Seq(("MIT", url("https://github.com/cardiumcoin/CardiumNetwork/blob/
       "-language:postfixOps",
       "-Ywarn-unused:-implicits",
       "-Xlint",
-      "-Wconf:cat=deprecation&site=com.wavesplatform.api.grpc.*:s",                                // Ignore gRPC warnings
-      "-Wconf:cat=deprecation&site=com.wavesplatform.protobuf.transaction.InvokeScriptResult.*:s", // Ignore deprecated argsBytes
-      "-Wconf:cat=deprecation&site=com.wavesplatform.state.InvokeScriptResult.*:s"
+      "-Wconf:cat=deprecation&site=com.gicsports.api.grpc.*:s",                                // Ignore gRPC warnings
+      "-Wconf:cat=deprecation&site=com.gicsports.protobuf.transaction.InvokeScriptResult.*:s", // Ignore deprecated argsBytes
+      "-Wconf:cat=deprecation&site=com.gicsports.state.InvokeScriptResult.*:s"
     ),
     crossPaths := false,
     cancelable        := true,
@@ -184,8 +184,8 @@ packageAll := {
 
 lazy val buildTarballsForDocker = taskKey[Unit]("Package node and grpc-server tarballs and copy them to docker/target")
 buildTarballsForDocker := {
-  IO.copyFile((node / Universal / packageZipTarball).value, new File(baseDirectory.value, "docker/target/cardium.tgz"))
-  IO.copyFile((`grpc-server` / Universal / packageZipTarball).value, new File(baseDirectory.value, "docker/target/cardium-grpc-server.tgz"))
+  IO.copyFile((node / Universal / packageZipTarball).value, new File(baseDirectory.value, "docker/target/gic.tgz"))
+  IO.copyFile((`grpc-server` / Universal / packageZipTarball).value, new File(baseDirectory.value, "docker/target/gic-grpc-server.tgz"))
 }
 
 lazy val checkPRRaw = taskKey[Unit]("Build a project and run unit tests")

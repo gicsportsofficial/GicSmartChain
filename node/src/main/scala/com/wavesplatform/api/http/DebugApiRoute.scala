@@ -1,4 +1,4 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import akka.http.scaladsl.common.{EntityStreamingSupport, JsonEntityStreamingSupport}
 import akka.http.scaladsl.model.StatusCodes
@@ -6,26 +6,26 @@ import akka.http.scaladsl.model.headers.Accept
 import akka.http.scaladsl.server.Route
 import cats.syntax.either.*
 import com.typesafe.config.{ConfigObject, ConfigRenderOptions}
-import com.wavesplatform.Version
-import com.wavesplatform.account.Address
-import com.wavesplatform.api.common.{CommonAccountsApi, CommonAssetsApi, CommonTransactionsApi, TransactionMeta}
-import com.wavesplatform.api.http.TransactionsApiRoute.TransactionJsonSerializer
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.mining.{Miner, MinerDebugInfo}
-import com.wavesplatform.network.{PeerDatabase, PeerInfo, *}
-import com.wavesplatform.settings.{RestAPISettings, WavesSettings}
-import com.wavesplatform.state.diffs.TransactionDiffer
-import com.wavesplatform.state.reader.CompositeBlockchain
-import com.wavesplatform.state.{Blockchain, Height, LeaseBalance, NG, Portfolio, StateHash}
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TxValidationError.{GenericError, InvalidRequestSignature}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.script.trace.{InvokeScriptTrace, TracedResult}
-import com.wavesplatform.utils.{ScorexLogging, Time}
-import com.wavesplatform.utx.UtxPool
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.Version
+import com.gicsports.account.Address
+import com.gicsports.api.common.{CommonAccountsApi, CommonAssetsApi, CommonTransactionsApi, TransactionMeta}
+import com.gicsports.api.http.TransactionsApiRoute.TransactionJsonSerializer
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.mining.{Miner, MinerDebugInfo}
+import com.gicsports.network.{PeerDatabase, PeerInfo, *}
+import com.gicsports.settings.{RestAPISettings, WavesSettings}
+import com.gicsports.state.diffs.TransactionDiffer
+import com.gicsports.state.reader.CompositeBlockchain
+import com.gicsports.state.{Blockchain, Height, LeaseBalance, NG, Portfolio, StateHash}
+import com.gicsports.transaction.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TxValidationError.{GenericError, InvalidRequestSignature}
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.script.trace.{InvokeScriptTrace, TracedResult}
+import com.gicsports.utils.{ScorexLogging, Time}
+import com.gicsports.utx.UtxPool
+import com.gicsports.wallet.Wallet
 import io.netty.channel.Channel
 import monix.eval.{Coeval, Task}
 import monix.execution.Scheduler
@@ -70,7 +70,7 @@ case class DebugApiRoute(
 
   private lazy val configStr             = configRoot.render(ConfigRenderOptions.concise().setJson(true).setFormatted(true))
   private lazy val fullConfig: JsValue   = Json.parse(configStr)
-  private lazy val wavesConfig: JsObject = Json.obj("CARDIUM" -> (fullConfig \ "CARDIUM").get)
+  private lazy val wavesConfig: JsObject = Json.obj("GIC" -> (fullConfig \ "GIC").get)
 
   override val settings: RestAPISettings = ws.restAPISettings
 
@@ -79,7 +79,7 @@ case class DebugApiRoute(
 
   override lazy val route: Route = pathPrefix("debug") {
     stateChanges ~ balanceHistory ~ stateHash ~ validate ~ withAuth {
-      state ~ info ~ stateCardium ~ rollback ~ rollbackTo ~ blacklist ~ minerInfo ~ configInfo ~ print
+      state ~ info ~ stateGic ~ rollback ~ rollbackTo ~ blacklist ~ minerInfo ~ configInfo ~ print
     }
   }
 
@@ -113,7 +113,7 @@ case class DebugApiRoute(
     distribution(blockchain.height)
   }
 
-  def stateCardium: Route = (path("stateTN" / IntNumber) & get) { height =>
+  def stateGic: Route = (path("stateTN" / IntNumber) & get) { height =>
     distribution(height)
   }
 

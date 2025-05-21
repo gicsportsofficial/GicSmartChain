@@ -1,3 +1,3 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 class StateCheckFailed(m: String) extends Error(m)

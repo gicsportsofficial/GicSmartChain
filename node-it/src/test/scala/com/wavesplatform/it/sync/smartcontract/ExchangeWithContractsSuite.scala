@@ -1,14 +1,14 @@
-package com.wavesplatform.it.sync.smartcontract
+package com.gicsports.it.sync.smartcontract
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.NTPTime
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.state._
-import com.wavesplatform.transaction.assets.exchange._
-import com.wavesplatform.transaction.{DataTransaction, TxVersion}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.NTPTime
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.state._
+import com.gicsports.transaction.assets.exchange._
+import com.gicsports.transaction.{DataTransaction, TxVersion}
 import org.scalatest.CancelAfterFailure
 
 class ExchangeWithContractsSuite extends BaseTransactionSuite with CancelAfterFailure with NTPTime {
@@ -49,7 +49,7 @@ class ExchangeWithContractsSuite extends BaseTransactionSuite with CancelAfterFa
       )
       .id
 
-    pair = AssetPair.createAssetPair(exchAsset, "CARDIUM").get
+    pair = AssetPair.createAssetPair(exchAsset, "GIC").get
 
     val entry1 = IntegerDataEntry("int", 24)
     val entry2 = BooleanDataEntry("bool", value = true)

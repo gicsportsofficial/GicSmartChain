@@ -1,17 +1,17 @@
-package com.wavesplatform.lang.v1
+package com.gicsports.lang.v1
 
 import java.util.concurrent.TimeUnit
 
 import cats.Id
-import com.wavesplatform.lang.Common
-import com.wavesplatform.lang.directives.values.{V1, V3}
-import com.wavesplatform.lang.v1.EvaluatorV2Benchmark.*
-import com.wavesplatform.lang.v1.compiler.Terms.{EXPR, IF, TRUE}
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.evaluator.EvaluatorV2
-import com.wavesplatform.lang.v1.evaluator.ctx.{EvaluationContext, LoggedEvaluationContext}
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext
-import com.wavesplatform.lang.v1.traits.Environment
+import com.gicsports.lang.Common
+import com.gicsports.lang.directives.values.{V1, V3}
+import com.gicsports.lang.v1.EvaluatorV2Benchmark.*
+import com.gicsports.lang.v1.compiler.Terms.{EXPR, IF, TRUE}
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.evaluator.EvaluatorV2
+import com.gicsports.lang.v1.evaluator.ctx.{EvaluationContext, LoggedEvaluationContext}
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext
+import com.gicsports.lang.v1.traits.Environment
 import org.openjdk.jmh.annotations.*
 import org.openjdk.jmh.infra.Blackhole
 

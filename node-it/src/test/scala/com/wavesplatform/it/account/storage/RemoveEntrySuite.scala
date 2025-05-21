@@ -1,17 +1,17 @@
-package com.wavesplatform.it.account.storage
+package com.gicsports.it.account.storage
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.api.http.ApiError.ScriptExecutionError
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.BaseFreeSpec
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_BOOLEAN, CONST_BYTESTR, CONST_LONG, CONST_STRING}
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.state.{BinaryDataEntry, BooleanDataEntry, IntegerDataEntry, StringDataEntry}
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.account.KeyPair
+import com.gicsports.api.http.ApiError.ScriptExecutionError
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.BaseFreeSpec
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync._
+import com.gicsports.lang.v1.compiler.Terms.{CONST_BOOLEAN, CONST_BYTESTR, CONST_LONG, CONST_STRING}
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.state.{BinaryDataEntry, BooleanDataEntry, IntegerDataEntry, StringDataEntry}
+import com.gicsports.test._
+import com.gicsports.transaction.smart.script.ScriptCompiler
 
 case class WriteEntry(ct: String, t: String, v: Any, k: String = "somekey")
 
@@ -62,7 +62,7 @@ class RemoveEntrySuite extends BaseFreeSpec {
       miner.getData(address) should have size 1
       miner.getDataByKey(address, data.k).key shouldBe data.k
       miner.getDataByKey(address, data.k).value shouldBe v
-      miner.getDataByKey(address, data.k).getClass.getCanonicalName shouldBe s"com.wavesplatform.state.${data.ct}DataEntry"
+      miner.getDataByKey(address, data.k).getClass.getCanonicalName shouldBe s"com.gicsports.state.${data.ct}DataEntry"
 
       invokeScript(keyPair, "delete", data.k)
 

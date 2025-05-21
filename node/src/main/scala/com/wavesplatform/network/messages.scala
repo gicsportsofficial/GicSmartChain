@@ -1,11 +1,11 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
-import com.wavesplatform.account.{KeyPair, PublicKey}
-import com.wavesplatform.block.Block.BlockId
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
-import com.wavesplatform.transaction.{Signed, Transaction}
+import com.gicsports.account.{KeyPair, PublicKey}
+import com.gicsports.block.Block.BlockId
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
+import com.gicsports.transaction.{Signed, Transaction}
 import monix.eval.Coeval
 
 import java.net.InetSocketAddress

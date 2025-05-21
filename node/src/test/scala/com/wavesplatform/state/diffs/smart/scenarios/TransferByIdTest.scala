@@ -1,21 +1,21 @@
-package com.wavesplatform.state.diffs.smart.scenarios
+package com.gicsports.state.diffs.smart.scenarios
 
-import com.wavesplatform.common.utils._
-import com.wavesplatform.db.WithState
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.values.{Expression, V3}
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.utils.compilerContext
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler
-import com.wavesplatform.lang.v1.compiler.Terms.EXPR
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.state.BinaryDataEntry
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.state.diffs.smart.smartEnabledFS
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{DataTransaction, GenesisTransaction, TxHelpers, TxVersion}
+import com.gicsports.common.utils._
+import com.gicsports.db.WithState
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.values.{Expression, V3}
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.utils.compilerContext
+import com.gicsports.lang.v1.compiler.ExpressionCompiler
+import com.gicsports.lang.v1.compiler.Terms.EXPR
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.state.BinaryDataEntry
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.state.diffs.smart.smartEnabledFS
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{DataTransaction, GenesisTransaction, TxHelpers, TxVersion}
 
 class TransferByIdTest extends PropSpec with WithState {
 

@@ -1,20 +1,20 @@
-package com.wavesplatform.state.diffs.smart.scenarios
+package com.gicsports.state.diffs.smart.scenarios
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithState
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.settings.TestFunctionalitySettings
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.assets.SponsorFeeTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.{TxHelpers, TxVersion}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithState
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.settings.TestFunctionalitySettings
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.assets.SponsorFeeTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.{TxHelpers, TxVersion}
 
 class ScriptedSponsorTest extends PropSpec with WithState {
 
-  import com.wavesplatform.state.diffs.*
+  import com.gicsports.state.diffs.*
 
   val ENOUGH_FEE: Long  = 100000000000L
   val SPONSOR_FEE: Long = 2000000

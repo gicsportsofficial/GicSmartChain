@@ -1,32 +1,32 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import com.google.common.primitives.Longs
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.TestHelpers.enableNG
-import com.wavesplatform.account.{Address, KeyPair}
-import com.wavesplatform.block.Block
-import com.wavesplatform.block.Block.PlainBlockVersion
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.database.loadActiveLeases
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.db.{DBCacheSettings, WithDomain}
-import com.wavesplatform.events.BlockchainUpdateTriggers
-import com.wavesplatform.history.Domain.BlockchainUpdaterExt
-import com.wavesplatform.history.{Domain, chainBaseAndMicro, randomSig}
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.settings.{WavesSettings, loadConfig}
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.TxHelpers.*
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.utils.Signed
-import com.wavesplatform.transaction.{Asset, Transaction, TxHelpers, TxVersion}
-import com.wavesplatform.utils.Time
-import com.wavesplatform.{EitherMatchers, NTPTime}
+import com.gicsports.TestHelpers.enableNG
+import com.gicsports.account.{Address, KeyPair}
+import com.gicsports.block.Block
+import com.gicsports.block.Block.PlainBlockVersion
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.database.loadActiveLeases
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.db.{DBCacheSettings, WithDomain}
+import com.gicsports.events.BlockchainUpdateTriggers
+import com.gicsports.history.Domain.BlockchainUpdaterExt
+import com.gicsports.history.{Domain, chainBaseAndMicro, randomSig}
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.settings.{WavesSettings, loadConfig}
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.TxHelpers.*
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.utils.Signed
+import com.gicsports.transaction.{Asset, Transaction, TxHelpers, TxVersion}
+import com.gicsports.utils.Time
+import com.gicsports.{EitherMatchers, NTPTime}
 import monix.execution.Scheduler.Implicits.global
 import monix.reactive.subjects.PublishToOneSubject
 import org.scalamock.scalatest.MockFactory

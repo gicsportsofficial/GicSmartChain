@@ -1,7 +1,7 @@
-package com.wavesplatform.settings
+package com.gicsports.settings
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.test.FlatSpec
+import com.gicsports.test.FlatSpec
 import net.ceedubs.ficus.Ficus._
 import net.ceedubs.ficus.readers.ArbitraryTypeReader._
 
@@ -10,7 +10,7 @@ import scala.concurrent.duration._
 class MinerSettingsSpecification extends FlatSpec {
   "MinerSettings" should "read values" in {
     val config = ConfigFactory.parseString("""
-        |CARDIUM {
+        |GIC {
         |  miner {
         |    enable: yes
         |    quorum: 1
@@ -24,7 +24,7 @@ class MinerSettingsSpecification extends FlatSpec {
         |}
       """.stripMargin).resolve()
 
-    val settings = config.as[MinerSettings]("CARDIUM.miner")
+    val settings = config.as[MinerSettings]("GIC.miner")
 
     settings.enable should be(true)
     settings.quorum should be(1)

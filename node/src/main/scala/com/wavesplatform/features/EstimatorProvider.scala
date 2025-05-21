@@ -1,11 +1,11 @@
-package com.wavesplatform.features
+package com.gicsports.features
 
-import com.wavesplatform.features.BlockchainFeatures.*
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.lang.v1.estimator.{ScriptEstimator, ScriptEstimatorV1}
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.state.Blockchain
+import com.gicsports.features.BlockchainFeatures.*
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.lang.v1.estimator.{ScriptEstimator, ScriptEstimatorV1}
+import com.gicsports.settings.WavesSettings
+import com.gicsports.state.Blockchain
 
 object EstimatorProvider {
 

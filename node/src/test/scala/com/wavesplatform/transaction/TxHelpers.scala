@@ -1,34 +1,34 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import com.google.common.primitives.Ints
-import com.wavesplatform.TestValues
-import com.wavesplatform.account.{Address, AddressOrAlias, AddressScheme, KeyPair}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.script.v1.ExprScript.ExprScriptImpl
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.{EXPR, FUNCTION_CALL}
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.state.diffs.FeeValidation.{FeeConstants, FeeUnit, ScriptExtraFee}
-import com.wavesplatform.state.{DataEntry, StringDataEntry}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.*
-import com.wavesplatform.transaction.assets.exchange.*
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.smart.{InvokeExpressionTransaction, InvokeScriptTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.ParsedTransfer
-import com.wavesplatform.transaction.transfer.{MassTransferTransaction, TransferTransaction}
-import com.wavesplatform.transaction.utils.EthConverters.*
-import com.wavesplatform.transaction.utils.Signed
+import com.gicsports.TestValues
+import com.gicsports.account.{Address, AddressOrAlias, AddressScheme, KeyPair}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.*
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.script.v1.ExprScript.ExprScriptImpl
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.{EXPR, FUNCTION_CALL}
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.state.diffs.FeeValidation.{FeeConstants, FeeUnit, ScriptExtraFee}
+import com.gicsports.state.{DataEntry, StringDataEntry}
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.*
+import com.gicsports.transaction.assets.exchange.*
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.smart.{InvokeExpressionTransaction, InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.transaction.transfer.MassTransferTransaction.ParsedTransfer
+import com.gicsports.transaction.transfer.{MassTransferTransaction, TransferTransaction}
+import com.gicsports.transaction.utils.EthConverters.*
+import com.gicsports.transaction.utils.Signed
 import org.web3j.crypto.ECKeyPair
 
 object TxHelpers {

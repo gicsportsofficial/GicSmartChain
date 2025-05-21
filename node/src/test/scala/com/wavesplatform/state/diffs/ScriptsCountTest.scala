@@ -1,30 +1,30 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.db.WithState
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.settings.TestFunctionalitySettings
-import com.wavesplatform.state.*
-import com.wavesplatform.state.reader.CompositeBlockchain
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.assets.exchange.*
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.ParsedTransfer
+import com.gicsports.common.utils.*
+import com.gicsports.db.WithState
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.settings.TestFunctionalitySettings
+import com.gicsports.state.*
+import com.gicsports.state.reader.CompositeBlockchain
+import com.gicsports.test.*
+import com.gicsports.transaction.*
+import com.gicsports.transaction.assets.exchange.*
+import com.gicsports.transaction.transfer.MassTransferTransaction.ParsedTransfer
 import org.scalatest.Inside
 
 object ScriptsCountTest {
   def calculateLegacy(blockchain: Blockchain, tx: Transaction): Int = {
-    import com.wavesplatform.transaction.Asset.IssuedAsset
-    import com.wavesplatform.transaction.assets.exchange.ExchangeTransaction
-    import com.wavesplatform.transaction.assets.{BurnTransaction, ReissueTransaction, SponsorFeeTransaction}
-    import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-    import com.wavesplatform.transaction.transfer.{MassTransferTransaction, TransferTransaction}
-    import com.wavesplatform.transaction.{Authorized, Transaction}
+    import com.gicsports.transaction.Asset.IssuedAsset
+    import com.gicsports.transaction.assets.exchange.ExchangeTransaction
+    import com.gicsports.transaction.assets.{BurnTransaction, ReissueTransaction, SponsorFeeTransaction}
+    import com.gicsports.transaction.smart.InvokeScriptTransaction
+    import com.gicsports.transaction.transfer.{MassTransferTransaction, TransferTransaction}
+    import com.gicsports.transaction.{Authorized, Transaction}
 
     val smartAccountRun = tx match {
       case x: Transaction with Authorized if blockchain.hasAccountScript(x.sender.toAddress) => 1

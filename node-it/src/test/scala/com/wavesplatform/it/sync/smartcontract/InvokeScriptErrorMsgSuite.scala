@@ -1,15 +1,15 @@
-package com.wavesplatform.it.sync.smartcontract
+package com.gicsports.it.sync.smartcontract
 
-import com.wavesplatform.api.http.ApiError.ScriptExecutionError
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.api.http.ApiError.ScriptExecutionError
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.test._
+import com.gicsports.transaction.Asset
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import org.scalatest.CancelAfterFailure
 
 class InvokeScriptErrorMsgSuite extends BaseTransactionSuite with CancelAfterFailure {
@@ -75,7 +75,7 @@ class InvokeScriptErrorMsgSuite extends BaseTransactionSuite with CancelAfterFai
         fee = 1000
       ),
       "State check failed. Reason: Transaction sent from smart account. Requires 4000000 extra fee. Transaction involves 1 scripted assets." +
-        " Requires 4000000 extra fee. Fee for InvokeScriptTransaction (1000 in CARDIUM) does not exceed minimal value of 14000000 CARDIUM."
+        " Requires 4000000 extra fee. Fee for InvokeScriptTransaction (1000 in GIC) does not exceed minimal value of 14000000 GIC."
     )
 
     assertApiError(
@@ -91,7 +91,7 @@ class InvokeScriptErrorMsgSuite extends BaseTransactionSuite with CancelAfterFai
         ),
       AssertiveApiError(
         ScriptExecutionError.Id,
-        "Error while executing dApp: Fee in CARDIUM for InvokeScriptTransaction (14000000 in CARDIUM) with 12 total scripts invoked does not exceed minimal value of 54000000 CARDIUM."
+        "Error while executing dApp: Fee in GIC for InvokeScriptTransaction (14000000 in GIC) with 12 total scripts invoked does not exceed minimal value of 54000000 GIC."
       )
     )
   }

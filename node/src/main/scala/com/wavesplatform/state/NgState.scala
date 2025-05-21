@@ -1,15 +1,15 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import java.util.concurrent.TimeUnit
 
 import com.google.common.cache.CacheBuilder
-import com.wavesplatform.block
-import com.wavesplatform.block.Block.BlockId
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.state.NgState.{CachedMicroDiff, MicroBlockInfo, NgStateCaches}
-import com.wavesplatform.transaction.{DiscardedMicroBlocks, Transaction}
+import com.gicsports.block
+import com.gicsports.block.Block.BlockId
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.state.NgState.{CachedMicroDiff, MicroBlockInfo, NgStateCaches}
+import com.gicsports.transaction.{DiscardedMicroBlocks, Transaction}
 
 object NgState {
   case class MicroBlockInfo(totalBlockId: BlockId, microBlock: MicroBlock) {

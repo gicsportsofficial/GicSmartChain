@@ -1,14 +1,14 @@
-package com.wavesplatform.it
+package com.gicsports.it
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.test.NumericExt
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.transfer._
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.account.KeyPair
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.test.NumericExt
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.transfer._
+import com.gicsports.utils.ScorexLogging
 import org.scalatest._
 import org.scalatest.concurrent.{IntegrationPatience, ScalaFutures}
 

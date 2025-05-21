@@ -1,6 +1,6 @@
-package com.wavesplatform.api.common
+package com.gicsports.api.common
 
-import com.wavesplatform.test.FreeSpec
+import com.gicsports.test.FreeSpec
 
 class CommonTransactionsApiSpec extends FreeSpec {
   "Merkle Tree" - {

@@ -1,21 +1,21 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
 import com.google.common.primitives.Ints
 import com.typesafe.config.Config
-import com.wavesplatform.account.{AddressScheme, KeyPair}
-import com.wavesplatform.api.http.ApiError.{CustomValidationError, TooBigArrayAllocation}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.api.{TransactionInfo, UnexpectedStatusCodeException}
-import com.wavesplatform.it.sync.{calcDataFee, minFee, _}
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.test._
-import com.wavesplatform.lang.v1.estimator.ScriptEstimatorV1
-import com.wavesplatform.state.{BinaryDataEntry, BooleanDataEntry, DataEntry, EmptyDataEntry, IntegerDataEntry, StringDataEntry}
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.{DataTransaction, Proofs, TxVersion}
+import com.gicsports.account.{AddressScheme, KeyPair}
+import com.gicsports.api.http.ApiError.{CustomValidationError, TooBigArrayAllocation}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.api.{TransactionInfo, UnexpectedStatusCodeException}
+import com.gicsports.it.sync.{calcDataFee, minFee, _}
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.test._
+import com.gicsports.lang.v1.estimator.ScriptEstimatorV1
+import com.gicsports.state.{BinaryDataEntry, BooleanDataEntry, DataEntry, EmptyDataEntry, IntegerDataEntry, StringDataEntry}
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.{DataTransaction, Proofs, TxVersion}
 import org.scalatest.{Assertion, Assertions, EitherValues}
 import play.api.libs.json._
 
@@ -26,8 +26,8 @@ class DataTransactionSuite extends BaseTransactionSuite with EitherValues {
   override def nodeConfigs: Seq[Config] =
     NodeConfigs.newBuilder
       .overrideBase(_.quorum(0))
-      .overrideBase(_.raw("CARDIUM.blockchain.custom.functionality.blocks-for-feature-activation = 1"))
-      .overrideBase(_.raw("CARDIUM.blockchain.custom.functionality.feature-check-blocks-period = 1"))
+      .overrideBase(_.raw("GIC.blockchain.custom.functionality.blocks-for-feature-activation = 1"))
+      .overrideBase(_.raw("GIC.blockchain.custom.functionality.feature-check-blocks-period = 1"))
       .overrideBase(_.preactivatedFeatures(15 -> 0))
       .withDefault(1)
       .withSpecial(1, _.nonMiner)

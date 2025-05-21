@@ -1,24 +1,24 @@
-package com.wavesplatform.state.diffs.ci
+package com.gicsports.state.diffs.ci
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.features.BlockchainFeatures.{BlockV5, Ride4DApps, SynchronousCalls, RideV6 as RideV6F}
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.contract.DApp.{CallableAnnotation, CallableFunction}
-import com.wavesplatform.lang.directives.values.{V3, V4}
-import com.wavesplatform.lang.script.{ContractScript, Script}
-import com.wavesplatform.lang.v1.FunctionHeader.User
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_STRING, *}
-import com.wavesplatform.lang.v1.compiler.{TestCompiler, Types}
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.settings.TestFunctionalitySettings
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.utils.Signed
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.*
+import com.gicsports.db.WithDomain
+import com.gicsports.features.BlockchainFeatures.{BlockV5, Ride4DApps, SynchronousCalls, RideV6 as RideV6F}
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.contract.DApp.{CallableAnnotation, CallableFunction}
+import com.gicsports.lang.directives.values.{V3, V4}
+import com.gicsports.lang.script.{ContractScript, Script}
+import com.gicsports.lang.v1.FunctionHeader.User
+import com.gicsports.lang.v1.compiler.Terms.{CONST_STRING, *}
+import com.gicsports.lang.v1.compiler.{TestCompiler, Types}
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.settings.TestFunctionalitySettings
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.utils.Signed
 import org.scalatest.Inside
 
 class DAppListArgTypesTest extends PropSpec with WithDomain with Inside {

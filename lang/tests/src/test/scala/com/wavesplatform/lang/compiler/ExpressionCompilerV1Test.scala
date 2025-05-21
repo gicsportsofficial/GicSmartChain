@@ -1,30 +1,30 @@
-package com.wavesplatform.lang.compiler
+package com.gicsports.lang.compiler
 
 import cats.kernel.Monoid
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.Common.*
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.directives.{DirectiveDictionary, DirectiveSet}
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.FunctionHeader.{Native, User}
-import com.wavesplatform.lang.v1.compiler.CompilerContext.VariableInfo
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.Types.*
-import com.wavesplatform.lang.v1.compiler.{CompilerContext, ExpressionCompiler, Terms, TestCompiler, Types}
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.lang.v1.evaluator.FunctionIds
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.WavesContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
-import com.wavesplatform.lang.v1.parser.BinaryOperation.SUM_OP
-import com.wavesplatform.lang.v1.parser.Expressions.Pos
-import com.wavesplatform.lang.v1.parser.Expressions.Pos.AnyPos
-import com.wavesplatform.lang.v1.parser.{Expressions, Parser}
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.v1.{ContractLimits, FunctionHeader, compiler}
-import com.wavesplatform.lang.{Common, Global}
-import com.wavesplatform.test.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.Common.*
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.directives.{DirectiveDictionary, DirectiveSet}
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.FunctionHeader.{Native, User}
+import com.gicsports.lang.v1.compiler.CompilerContext.VariableInfo
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.Types.*
+import com.gicsports.lang.v1.compiler.{CompilerContext, ExpressionCompiler, Terms, TestCompiler, Types}
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.lang.v1.evaluator.FunctionIds
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.WavesContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
+import com.gicsports.lang.v1.parser.BinaryOperation.SUM_OP
+import com.gicsports.lang.v1.parser.Expressions.Pos
+import com.gicsports.lang.v1.parser.Expressions.Pos.AnyPos
+import com.gicsports.lang.v1.parser.{Expressions, Parser}
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.v1.{ContractLimits, FunctionHeader, compiler}
+import com.gicsports.lang.{Common, Global}
+import com.gicsports.test.*
 
 import scala.util.Try
 
@@ -32,13 +32,13 @@ class ExpressionCompilerV1Test extends PropSpec {
   implicit val offset: Int = 0
 
   property("should infer generic function return type") {
-    import com.wavesplatform.lang.v1.parser.Expressions.*
+    import com.gicsports.lang.v1.parser.Expressions.*
     val v = ExpressionCompiler(compilerContext, FUNCTION_CALL(AnyPos, PART.VALID(AnyPos, idT.name), List(CONST_LONG(AnyPos, 1)))).explicitGet()
     v._2 shouldBe LONG
   }
 
   property("should infer inner types") {
-    import com.wavesplatform.lang.v1.parser.Expressions.*
+    import com.gicsports.lang.v1.parser.Expressions.*
     val v =
       ExpressionCompiler(
         compilerContext,
@@ -310,7 +310,7 @@ class ExpressionCompilerV1Test extends PropSpec {
       .combineAll(
         Seq(
           PureContext.build(V4, useNewPowPrecision = true).withEnvironment[Environment],
-          CryptoContext.build(com.wavesplatform.lang.Global, V4).withEnvironment[Environment],
+          CryptoContext.build(com.gicsports.lang.Global, V4).withEnvironment[Environment],
           WavesContext.build(
             Global,
             DirectiveSet(V4, Account, Expression).explicitGet(),

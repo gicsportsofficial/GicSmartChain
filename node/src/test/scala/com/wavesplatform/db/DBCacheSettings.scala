@@ -1,6 +1,6 @@
-package com.wavesplatform.db
+package com.gicsports.db
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.settings.WavesSettings
+import com.gicsports.settings.WavesSettings
 
 trait DBCacheSettings {
   lazy val dbSettings        = WavesSettings.fromRootConfig(ConfigFactory.load()).dbSettings

@@ -1,29 +1,29 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
 import cats.implicits.{toFoldableOps, toTraverseOps}
 import cats.instances.either.*
 import cats.syntax.either.*
 import cats.syntax.functor.*
-import com.wavesplatform.account.{Address, AddressScheme}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.BlockchainFeatures.{BlockV5, RideV6}
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.metrics.TxProcessingStats
-import com.wavesplatform.metrics.TxProcessingStats.TxTimerExt
-import com.wavesplatform.state.InvokeScriptResult.ErrorMessage
-import com.wavesplatform.state.diffs.invoke.InvokeScriptTransactionDiff
-import com.wavesplatform.state.{Blockchain, Diff, InvokeScriptResult, NewTransactionInfo, Portfolio, Sponsorship}
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.*
-import com.wavesplatform.transaction.assets.*
-import com.wavesplatform.transaction.assets.exchange.{ExchangeTransaction, Order}
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.smart.*
-import com.wavesplatform.transaction.smart.script.trace.{TraceStep, TracedResult}
-import com.wavesplatform.transaction.transfer.{MassTransferTransaction, TransferTransaction}
+import com.gicsports.account.{Address, AddressScheme}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.BlockchainFeatures.{BlockV5, RideV6}
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.metrics.TxProcessingStats
+import com.gicsports.metrics.TxProcessingStats.TxTimerExt
+import com.gicsports.state.InvokeScriptResult.ErrorMessage
+import com.gicsports.state.diffs.invoke.InvokeScriptTransactionDiff
+import com.gicsports.state.{Blockchain, Diff, InvokeScriptResult, NewTransactionInfo, Portfolio, Sponsorship}
+import com.gicsports.transaction.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.*
+import com.gicsports.transaction.assets.*
+import com.gicsports.transaction.assets.exchange.{ExchangeTransaction, Order}
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.smart.*
+import com.gicsports.transaction.smart.script.trace.{TraceStep, TracedResult}
+import com.gicsports.transaction.transfer.{MassTransferTransaction, TransferTransaction}
 import play.api.libs.json.Json
 
 object TransactionDiffer {

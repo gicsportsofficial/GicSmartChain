@@ -1,28 +1,28 @@
-package com.wavesplatform.transaction.smart.script
+package com.gicsports.transaction.smart.script
 
 import cats.Id
 import cats.syntax.either.*
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.features.BlockchainFeatures.*
-import com.wavesplatform.features.EstimatorProvider.*
-import com.wavesplatform.features.EvaluatorFixProvider.*
-import com.wavesplatform.lang.*
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.script.{ContractScript, Script}
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.compiler.Terms.{EVALUATED, EXPR, TRUE}
-import com.wavesplatform.lang.v1.evaluator.*
-import com.wavesplatform.lang.v1.evaluator.ContractEvaluator.LogExtraInfo
-import com.wavesplatform.lang.v1.evaluator.ctx.EvaluationContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.Bindings
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.state.*
-import com.wavesplatform.transaction.smart.{DApp as DAppTarget, *}
-import com.wavesplatform.transaction.{Authorized, Proven}
+import com.gicsports.account.AddressScheme
+import com.gicsports.common.state.ByteStr
+import com.gicsports.features.BlockchainFeatures.*
+import com.gicsports.features.EstimatorProvider.*
+import com.gicsports.features.EvaluatorFixProvider.*
+import com.gicsports.lang.*
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.script.{ContractScript, Script}
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.compiler.Terms.{EVALUATED, EXPR, TRUE}
+import com.gicsports.lang.v1.evaluator.*
+import com.gicsports.lang.v1.evaluator.ContractEvaluator.LogExtraInfo
+import com.gicsports.lang.v1.evaluator.ctx.EvaluationContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.Bindings
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.state.*
+import com.gicsports.transaction.smart.{DApp as DAppTarget, *}
+import com.gicsports.transaction.{Authorized, Proven}
 import monix.eval.Coeval
 
 object ScriptRunner {

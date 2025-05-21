@@ -1,19 +1,19 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures as BF
-import com.wavesplatform.history.settingsWithFeatures
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.DomainPresets._
-import com.wavesplatform.test.{FreeSpec, NumericExt}
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.assets.SponsorFeeTransaction
-import com.wavesplatform.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.transfer.TransferTransaction
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.*
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures as BF
+import com.gicsports.history.settingsWithFeatures
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.DomainPresets._
+import com.gicsports.test.{FreeSpec, NumericExt}
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.assets.SponsorFeeTransaction
+import com.gicsports.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.transaction.transfer.TransferTransaction
 
 class TransactionFeeSpec extends FreeSpec with WithDomain {
   "invoke script" - {

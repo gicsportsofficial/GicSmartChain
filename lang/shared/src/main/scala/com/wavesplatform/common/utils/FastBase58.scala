@@ -1,4 +1,4 @@
-package com.wavesplatform.common.utils
+package com.gicsports.common.utils
 import java.nio.charset.StandardCharsets.US_ASCII
 
 import scala.annotation.tailrec

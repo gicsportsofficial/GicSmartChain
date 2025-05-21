@@ -1,19 +1,19 @@
-package com.wavesplatform.state.diffs.smart
+package com.gicsports.state.diffs.smart
 
-import com.wavesplatform.TransactionGenBase
-import com.wavesplatform.account.{Address, AddressScheme, KeyPair}
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V5, V6}
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.FUNCTION_CALL
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.test.{NumericExt, PropSpec, TestTime}
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.{GenesisTransaction, Proofs, TxVersion}
-import com.wavesplatform.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.TransactionGenBase
+import com.gicsports.account.{Address, AddressScheme, KeyPair}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.lang.directives.values.{StdLibVersion, V5, V6}
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.FUNCTION_CALL
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.test.{NumericExt, PropSpec, TestTime}
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.{GenesisTransaction, Proofs, TxVersion}
+import com.gicsports.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
 
 class MaxCallableComplexityTest extends PropSpec with WithDomain with TransactionGenBase {
 

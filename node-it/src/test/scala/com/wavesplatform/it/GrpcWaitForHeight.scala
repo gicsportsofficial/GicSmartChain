@@ -1,7 +1,7 @@
-package com.wavesplatform.it
+package com.gicsports.it
 
-import com.wavesplatform.utils.ScorexLogging
-import com.wavesplatform.it.api.AsyncGrpcApi._
+import com.gicsports.utils.ScorexLogging
+import com.gicsports.it.api.AsyncGrpcApi._
 import org.scalatest.{BeforeAndAfterAll, Suite}
 
 import scala.concurrent.{Await, Future}

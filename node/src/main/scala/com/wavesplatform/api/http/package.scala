@@ -1,4 +1,4 @@
-package com.wavesplatform.api
+package com.gicsports.api
 
 import java.util.NoSuchElementException
 import java.util.concurrent.ExecutionException
@@ -8,17 +8,17 @@ import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.server.*
 import akka.http.scaladsl.server.Directives.*
 import com.typesafe.scalalogging.Logger
-import com.wavesplatform.account.{Address, PublicKey}
-import com.wavesplatform.api.http.ApiError.{InvalidAssetId, InvalidBlockId, InvalidPublicKey, InvalidSignature, InvalidTransactionId, WrongJson}
-import com.wavesplatform.api.http.requests.*
-import com.wavesplatform.api.http.requests.DataRequest.*
-import com.wavesplatform.api.http.requests.SponsorFeeRequest.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.crypto
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TxValidationError.GenericError
+import com.gicsports.account.{Address, PublicKey}
+import com.gicsports.api.http.ApiError.{InvalidAssetId, InvalidBlockId, InvalidPublicKey, InvalidSignature, InvalidTransactionId, WrongJson}
+import com.gicsports.api.http.requests.*
+import com.gicsports.api.http.requests.DataRequest.*
+import com.gicsports.api.http.requests.SponsorFeeRequest.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.Base58
+import com.gicsports.crypto
+import com.gicsports.transaction.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TxValidationError.GenericError
 import monix.execution.Scheduler
 import org.slf4j.LoggerFactory
 import play.api.libs.json.*

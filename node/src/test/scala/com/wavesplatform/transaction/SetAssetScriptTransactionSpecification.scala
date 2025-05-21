@@ -1,17 +1,17 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.account.{AddressScheme, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base64, EitherExt2}
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.lang.script.{ContractScript, Script}
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.assets.SetAssetScriptTransaction
+import com.gicsports.account.{AddressScheme, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base64, EitherExt2}
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.directives.values._
+import com.gicsports.lang.script.{ContractScript, Script}
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.assets.SetAssetScriptTransaction
 import org.scalacheck.Gen
 import play.api.libs.json._
-import com.wavesplatform.test._
+import com.gicsports.test._
 
 class SetAssetScriptTransactionSpecification extends GenericTransactionSpecification[SetAssetScriptTransaction] {
   property("issuer can`t make SetAssetScript tx when Script is Contract") {

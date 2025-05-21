@@ -1,16 +1,16 @@
-package com.wavesplatform.settings
+package com.gicsports.settings
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.test.FlatSpec
+import com.gicsports.common.state.ByteStr
+import com.gicsports.test.FlatSpec
 
 import scala.concurrent.duration._
 
 class BlockchainSettingsSpecification extends FlatSpec {
   "BlockchainSettings" should "read custom values" in {
-    val config   = loadConfig(ConfigFactory.parseString("""CARDIUM {
-        |  directory = "/cardium"
-        |  data-directory = "/cardium/data"
+    val config   = loadConfig(ConfigFactory.parseString("""GIC {
+        |  directory = "/gic"
+        |  data-directory = "/gic/data"
         |  blockchain {
         |    type = CUSTOM
         |    custom {
@@ -77,9 +77,9 @@ class BlockchainSettingsSpecification extends FlatSpec {
   }
 
   it should "read testnet settings" in {
-    val config   = loadConfig(ConfigFactory.parseString("""CARDIUM {
-        |  directory = "/cardium"
-        |  data-directory = "/cardium/data"
+    val config   = loadConfig(ConfigFactory.parseString("""GIC {
+        |  directory = "/gic"
+        |  data-directory = "/gic/data"
         |  blockchain {
         |    type = TESTNET
         |  }
@@ -110,9 +110,9 @@ class BlockchainSettingsSpecification extends FlatSpec {
   }
 
   it should "read mainnet settings" in {
-    val config   = loadConfig(ConfigFactory.parseString("""CARDIUM {
-        |  directory = "/cardium"
-        |  data-directory = "/cardium/data"
+    val config   = loadConfig(ConfigFactory.parseString("""GIC {
+        |  directory = "/gic"
+        |  data-directory = "/gic/data"
         |  blockchain {
         |    type = MAINNET
         |  }

@@ -1,17 +1,17 @@
-package com.wavesplatform.state.diffs.smart.eth
+package com.gicsports.state.diffs.smart.eth
 
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.EthereumTransaction.Invocation
-import com.wavesplatform.transaction.TxHelpers.*
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.utils.EthConverters.*
-import com.wavesplatform.transaction.utils.EthTxGenerator
-import com.wavesplatform.utils.EthHelpers
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.EthereumTransaction.Invocation
+import com.gicsports.transaction.TxHelpers.*
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.utils.EthConverters.*
+import com.gicsports.transaction.utils.EthTxGenerator
+import com.gicsports.utils.EthHelpers
 
 class EthereumInvokePaymentTest extends PropSpec with WithDomain with EthHelpers {
   import DomainPresets.*

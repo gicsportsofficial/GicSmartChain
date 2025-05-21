@@ -1,4 +1,4 @@
-package com.wavesplatform.curve25519.test
+package com.gicsports.curve25519.test
 
 import java.io._
 import java.util

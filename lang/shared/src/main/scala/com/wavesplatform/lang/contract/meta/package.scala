@@ -1,6 +1,6 @@
-package com.wavesplatform.lang.contract
+package com.gicsports.lang.contract
 
-import com.wavesplatform.lang.v1.compiler.Types.{BOOLEAN, BYTESTR, LONG, STRING}
+import com.gicsports.lang.v1.compiler.Types.{BOOLEAN, BYTESTR, LONG, STRING}
 
 package object meta {
   private val definedTypes =

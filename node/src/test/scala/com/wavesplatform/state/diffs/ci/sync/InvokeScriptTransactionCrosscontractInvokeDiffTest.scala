@@ -1,29 +1,29 @@
-package com.wavesplatform.state.diffs.ci.sync
+package com.gicsports.state.diffs.ci.sync
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.{DBCacheSettings, WithState}
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.{Terms, TestCompiler}
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.settings.TestFunctionalitySettings
-import com.wavesplatform.state.{IntegerDataEntry, StringDataEntry}
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.state.diffs.ci.ciFee
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{DataTransaction, GenesisTransaction, TxVersion}
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.utils.Signed
+import com.gicsports.account.Address
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.{DBCacheSettings, WithState}
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.{Terms, TestCompiler}
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.settings.TestFunctionalitySettings
+import com.gicsports.state.{IntegerDataEntry, StringDataEntry}
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.state.diffs.ci.ciFee
+import com.gicsports.test.*
+import com.gicsports.transaction.{DataTransaction, GenesisTransaction, TxVersion}
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.utils.Signed
 import org.scalatest.EitherValues
 
 class InvokeScriptTransactionCrosscontractInvokeDiffTest

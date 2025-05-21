@@ -1,10 +1,10 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base64, EitherExt2}
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.assets.{IssueTransaction, ReissueTransaction}
+import com.gicsports.account.PublicKey
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base64, EitherExt2}
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.assets.{IssueTransaction, ReissueTransaction}
 import org.scalacheck.Gen
 import play.api.libs.json._
 
@@ -27,7 +27,7 @@ class ReissueTransactionV2Specification extends GenericTransactionSpecification[
     first.bytes() shouldEqual second.bytes()
   }
 
-  def generator: Gen[(Seq[com.wavesplatform.transaction.Transaction], ReissueTransaction)] =
+  def generator: Gen[(Seq[com.gicsports.transaction.Transaction], ReissueTransaction)] =
     for {
       (sender, assetName, description, quantity, decimals, _, iFee, timestamp) <- issueParamGen
       fee                                                                      <- smallFeeGen

@@ -1,14 +1,14 @@
-package com.wavesplatform.it.sync.smartcontract
+package com.gicsports.it.sync.smartcontract
 
 import com.typesafe.config.Config
-import com.wavesplatform.api.http.ApiError._
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.NodeConfigs.Default
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.sync.smartcontract.RideV4ActivationSuite._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
+import com.gicsports.api.http.ApiError._
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.NodeConfigs.Default
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.sync.smartcontract.RideV4ActivationSuite._
+import com.gicsports.it.transactions.BaseTransactionSuite
 import org.scalatest.{Assertion, CancelAfterFailure}
 
 import scala.concurrent.duration.DurationInt

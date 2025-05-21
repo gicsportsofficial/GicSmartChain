@@ -1,9 +1,9 @@
-package com.wavesplatform.lang.evaluator.tuple
+package com.gicsports.lang.evaluator.tuple
 
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V4}
-import com.wavesplatform.lang.evaluator.EvaluatorSpec
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_BOOLEAN
-import com.wavesplatform.test._
+import com.gicsports.lang.directives.values.{StdLibVersion, V4}
+import com.gicsports.lang.evaluator.EvaluatorSpec
+import com.gicsports.lang.v1.compiler.Terms.CONST_BOOLEAN
+import com.gicsports.test._
 
 class StrictWithTupleTest extends EvaluatorSpec {
   private implicit val version: StdLibVersion = V4

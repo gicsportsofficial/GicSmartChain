@@ -1,9 +1,9 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
 import java.util
 
-import com.wavesplatform.crypto
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.crypto
+import com.gicsports.utils.ScorexLogging
 import io.netty.channel.ChannelHandler.Sharable
 import io.netty.channel.ChannelHandlerContext
 import io.netty.handler.codec.MessageToMessageCodec

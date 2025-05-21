@@ -1,15 +1,15 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.it.api.SyncGrpcApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.FUNCTION_CALL
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.protobuf.Amount
-import com.wavesplatform.protobuf.transaction.{PBSignedTransaction, PBTransactions, Recipient}
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.it.api.SyncGrpcApi._
+import com.gicsports.it.sync._
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.FUNCTION_CALL
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.protobuf.Amount
+import com.gicsports.protobuf.transaction.{PBSignedTransaction, PBTransactions, Recipient}
+import com.gicsports.transaction.smart.script.ScriptCompiler
 
 class InvokeScriptPayAndTransferAssetGrpcSuite extends GrpcBaseTransactionSuite {
   private val estimator = ScriptEstimatorV2
@@ -78,7 +78,7 @@ class InvokeScriptPayAndTransferAssetGrpcSuite extends GrpcBaseTransactionSuite 
          |  if (isDefined(i.payment)) then
          |    let pay = extract(i.payment)
          |    TransferSet([ScriptTransfer(receiver, 1, pay.assetId)])
-         |  else throw("need payment in CARDIUM or any Asset")
+         |  else throw("need payment in GIC or any Asset")
          |}
         """.stripMargin,
         estimator
@@ -144,7 +144,7 @@ class InvokeScriptPayAndTransferAssetGrpcSuite extends GrpcBaseTransactionSuite 
     sender.assetsBalance(receiverAddress, Seq(rejAssetId)).getOrElse(rejAssetId, 0L) shouldBe 0L
   }
 
-  test("dApp can transfer payed CARDIUM if its own balance is 0") {
+  test("dApp can transfer payed GIC if its own balance is 0") {
     val dAppInitBalance     = sender.wavesBalance(dAppAddress)
     val callerInitBalance   = sender.wavesBalance(callerAddress)
     val receiverInitBalance = sender.wavesBalance(receiverAddress)
@@ -159,8 +159,8 @@ class InvokeScriptPayAndTransferAssetGrpcSuite extends GrpcBaseTransactionSuite 
     sender.wavesBalance(receiverAddress).regular shouldBe receiverInitBalance.regular + 1
   }
 
-  def invoke(func: String, amount: Long, assetId: String = "CARDIUM", fee: Long = 6000000): PBSignedTransaction = {
-    val assetIdByteSting = if (assetId == "CARDIUM") ByteString.EMPTY else ByteString.copyFrom(Base58.decode(assetId))
+  def invoke(func: String, amount: Long, assetId: String = "GIC", fee: Long = 6000000): PBSignedTransaction = {
+    val assetIdByteSting = if (assetId == "GIC") ByteString.EMPTY else ByteString.copyFrom(Base58.decode(assetId))
     sender.broadcastInvokeScript(
       caller,
       Recipient().withPublicKeyHash(dAppAddress),

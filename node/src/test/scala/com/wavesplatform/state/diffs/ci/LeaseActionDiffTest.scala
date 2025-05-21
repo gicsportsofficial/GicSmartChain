@@ -1,28 +1,28 @@
-package com.wavesplatform.state.diffs.ci
+package com.gicsports.state.diffs.ci
 
-import com.wavesplatform.account.{Address, Alias}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.it.util.AddressOrAliasExt
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.traits.domain.{Lease, Recipient}
-import com.wavesplatform.settings.{FunctionalitySettings, TestFunctionalitySettings}
-import com.wavesplatform.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
-import com.wavesplatform.state.diffs.{ENOUGH_AMT, produceRejectOrFailedDiff}
-import com.wavesplatform.state.{LeaseBalance, Portfolio}
-import com.wavesplatform.test.*
-import com.wavesplatform.test.DomainPresets.*
-import com.wavesplatform.transaction.TxHelpers.{defaultAddress, invoke, lease, secondAddress, secondSigner, setScript}
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.{Authorized, CreateAliasTransaction, Transaction, TransactionType, TxHelpers, TxVersion}
+import com.gicsports.account.{Address, Alias}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.it.util.AddressOrAliasExt
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.traits.domain.{Lease, Recipient}
+import com.gicsports.settings.{FunctionalitySettings, TestFunctionalitySettings}
+import com.gicsports.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
+import com.gicsports.state.diffs.{ENOUGH_AMT, produceRejectOrFailedDiff}
+import com.gicsports.state.{LeaseBalance, Portfolio}
+import com.gicsports.test.*
+import com.gicsports.test.DomainPresets.*
+import com.gicsports.transaction.TxHelpers.{defaultAddress, invoke, lease, secondAddress, secondSigner, setScript}
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.{Authorized, CreateAliasTransaction, Transaction, TransactionType, TxHelpers, TxVersion}
 import org.scalatest.exceptions.TestFailedException
 
 import scala.util.Random
@@ -565,7 +565,7 @@ class LeaseActionDiffTest extends PropSpec with WithDomain {
       TestBlock.create(Seq(invoke)),
       v5Features
     ) { case (diff, _) =>
-      diff.errorMessage(invoke.id()).get.text shouldBe "NonPositiveAmount(0,CARDIUM)"
+      diff.errorMessage(invoke.id()).get.text shouldBe "NonPositiveAmount(0,GIC)"
     }
   }
 

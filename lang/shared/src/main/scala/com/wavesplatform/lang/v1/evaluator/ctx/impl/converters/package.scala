@@ -1,11 +1,11 @@
-package com.wavesplatform.lang.v1.evaluator.ctx.impl
+package com.gicsports.lang.v1.evaluator.ctx.impl
 
 import cats.syntax.applicative._
 import cats.{Eval, Monad}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.ExecutionError
-import com.wavesplatform.lang.v1.compiler.Terms._
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.ExecutionError
+import com.gicsports.lang.v1.compiler.Terms._
 
 package object converters {
 

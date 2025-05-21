@@ -1,15 +1,15 @@
-package com.wavesplatform.transaction.validation.impl
+package com.gicsports.transaction.validation.impl
 
 import scala.util.Try
 
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.state.{BinaryDataEntry, Blockchain, BooleanDataEntry, DataEntry, EmptyDataEntry, IntegerDataEntry, StringDataEntry}
-import com.wavesplatform.transaction.{DataTransaction, TxValidationError, TxVersion}
-import com.wavesplatform.transaction.DataTransaction.MaxEntryCount
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.validation.{TxValidator, ValidatedV}
-import com.wavesplatform.utils.StringBytes
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.state.{BinaryDataEntry, Blockchain, BooleanDataEntry, DataEntry, EmptyDataEntry, IntegerDataEntry, StringDataEntry}
+import com.gicsports.transaction.{DataTransaction, TxValidationError, TxVersion}
+import com.gicsports.transaction.DataTransaction.MaxEntryCount
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.validation.{TxValidator, ValidatedV}
+import com.gicsports.utils.StringBytes
 
 object DataTxValidator extends TxValidator[DataTransaction] {
   override def validate(tx: DataTransaction): ValidatedV[DataTransaction] = {

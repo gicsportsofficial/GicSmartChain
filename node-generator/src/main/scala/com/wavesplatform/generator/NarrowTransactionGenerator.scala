@@ -1,32 +1,32 @@
-package com.wavesplatform.generator
+package com.gicsports.generator
 
 import java.nio.file.{Files, Paths}
 import java.util.UUID
 import java.util.concurrent.ThreadLocalRandom
 
 import cats.Show
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.generator.utils.{Gen, Universe}
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.lang.v1.estimator.ScriptEstimator
-import com.wavesplatform.state.DataEntry.{MaxValueSize, Type}
-import com.wavesplatform.state.{BinaryDataEntry, BooleanDataEntry, IntegerDataEntry, StringDataEntry}
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TransactionType.TransactionType
-import com.wavesplatform.transaction._
-import com.wavesplatform.transaction.assets._
-import com.wavesplatform.transaction.assets.exchange._
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.ParsedTransfer
-import com.wavesplatform.transaction.transfer._
-import com.wavesplatform.transaction.utils.{EthTxGenerator, Signed}
-import com.wavesplatform.utils.{LoggerFacade, NTP}
+import com.gicsports.account.KeyPair
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.generator.utils.{Gen, Universe}
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.lang.v1.estimator.ScriptEstimator
+import com.gicsports.state.DataEntry.{MaxValueSize, Type}
+import com.gicsports.state.{BinaryDataEntry, BooleanDataEntry, IntegerDataEntry, StringDataEntry}
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TransactionType.TransactionType
+import com.gicsports.transaction._
+import com.gicsports.transaction.assets._
+import com.gicsports.transaction.assets.exchange._
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.transaction.transfer.MassTransferTransaction.ParsedTransfer
+import com.gicsports.transaction.transfer._
+import com.gicsports.transaction.utils.{EthTxGenerator, Signed}
+import com.gicsports.utils.{LoggerFacade, NTP}
 import org.slf4j.LoggerFactory
 import org.web3j.crypto.Bip32ECKeyPair
 
@@ -626,7 +626,7 @@ object NarrowTransactionGenerator {
     val leaseRecipient = GeneratorSettings.toKeyPair("lease recipient")
 
     val fundEthereumAddresses = accounts.map { kp =>
-      import com.wavesplatform.transaction.utils.EthConverters._
+      import com.gicsports.transaction.utils.EthConverters._
       val ethAccount = kp.toEthWavesAddress
       TransferTransaction
         .selfSigned(TxVersion.V1, accounts.head, ethAccount, Waves, 100_0000_0000L, Waves, 500000L, ByteStr.empty, System.currentTimeMillis())

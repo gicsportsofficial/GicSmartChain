@@ -1,26 +1,26 @@
-package com.wavesplatform.it.api
+package com.gicsports.it.api
 
 import java.net.InetSocketAddress
 import akka.http.scaladsl.model.StatusCodes.BadRequest
 import akka.http.scaladsl.model.{StatusCode, StatusCodes}
-import com.wavesplatform.account.{AddressOrAlias, KeyPair}
-import com.wavesplatform.api.http.RewardApiRoute.RewardStatus
-import com.wavesplatform.api.http.requests.IssueRequest
-import com.wavesplatform.api.http.{ApiError, DebugMessage}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.api.{ActivationStatus, FeatureActivationStatus}
-import com.wavesplatform.it.Node
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.state.{AssetDistribution, AssetDistributionPage, DataEntry}
-import com.wavesplatform.transaction.assets.exchange.Order
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.Transfer
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{Asset, TxExchangeAmount, TxExchangePrice, TxVersion}
+import com.gicsports.account.{AddressOrAlias, KeyPair}
+import com.gicsports.api.http.RewardApiRoute.RewardStatus
+import com.gicsports.api.http.requests.IssueRequest
+import com.gicsports.api.http.{ApiError, DebugMessage}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.api.{ActivationStatus, FeatureActivationStatus}
+import com.gicsports.it.Node
+import com.gicsports.it.sync.*
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.state.{AssetDistribution, AssetDistributionPage, DataEntry}
+import com.gicsports.transaction.assets.exchange.Order
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.transfer.MassTransferTransaction.Transfer
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{Asset, TxExchangeAmount, TxExchangePrice, TxVersion}
 import io.grpc.Status.Code
 import org.asynchttpclient.Response
 import org.scalactic.source.Position
@@ -153,7 +153,7 @@ object SyncHttpApi extends Assertions with matchers.should.Matchers {
 
   // noinspection ScalaStyle
   implicit class NodeExtSync(n: Node) extends Assertions with matchers.should.Matchers {
-    import com.wavesplatform.it.api.AsyncHttpApi.NodeAsyncHttpApi as async
+    import com.gicsports.it.api.AsyncHttpApi.NodeAsyncHttpApi as async
 
     private def maybeWaitForTransaction(tx: Transaction, wait: Boolean): Transaction = {
       if (wait) waitForTransaction(tx.id)
@@ -752,7 +752,7 @@ object SyncHttpApi extends Assertions with matchers.should.Matchers {
 
   implicit class NodesExtSync(nodes: Seq[Node]) {
 
-    import com.wavesplatform.it.api.AsyncHttpApi.NodesAsyncHttpApi as async
+    import com.gicsports.it.api.AsyncHttpApi.NodesAsyncHttpApi as async
 
     private val TxInBlockchainAwaitTime = 30 * nodes.head.blockDelay
     private val ConditionAwaitTime      = 8.minutes
@@ -792,7 +792,7 @@ object SyncHttpApi extends Assertions with matchers.should.Matchers {
     def rollbackWithoutBlacklisting(height: Int, returnToUTX: Boolean = true): Unit = {
       sync(
         Future.traverse(nodes) { node =>
-          com.wavesplatform.it.api.AsyncHttpApi.NodeAsyncHttpApi(node).rollback(height, returnToUTX)
+          com.gicsports.it.api.AsyncHttpApi.NodeAsyncHttpApi(node).rollback(height, returnToUTX)
         },
         ConditionAwaitTime
       )
@@ -816,7 +816,7 @@ object SyncHttpApi extends Assertions with matchers.should.Matchers {
     def rollbackToBlockId(id: String): Unit = {
       sync(
         Future.traverse(nodes) { node =>
-          com.wavesplatform.it.api.AsyncHttpApi.NodeAsyncHttpApi(node).rollbackToBlockId(id)
+          com.gicsports.it.api.AsyncHttpApi.NodeAsyncHttpApi(node).rollbackToBlockId(id)
         },
         ConditionAwaitTime
       )
@@ -825,7 +825,7 @@ object SyncHttpApi extends Assertions with matchers.should.Matchers {
     def waitForHeight(height: Int): Unit = {
       sync(
         Future.traverse(nodes) { node =>
-          com.wavesplatform.it.api.AsyncHttpApi.NodeAsyncHttpApi(node).waitForHeight(height)
+          com.gicsports.it.api.AsyncHttpApi.NodeAsyncHttpApi(node).waitForHeight(height)
         },
         ConditionAwaitTime
       )

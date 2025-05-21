@@ -1,17 +1,17 @@
-package com.wavesplatform.it.sync.smartcontract
+package com.gicsports.it.sync.smartcontract
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.protobuf.transaction.PBTransactions
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.transfer.TransferTransaction
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.protobuf.transaction.PBTransactions
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.transfer.TransferTransaction
 
 class TransferTxFromProtoSuite extends BaseTransactionSuite {
   private def source    = firstKeyPair
@@ -30,8 +30,8 @@ class TransferTxFromProtoSuite extends BaseTransactionSuite {
       |func foo(txProtoBytes: ByteVector) = {
       |    let transferTx = transferTransactionFromProto(txProtoBytes).value()
       |    let transferTxAttachment = transferTx.attachment.toBase58String()
-      |    let assetId = if (!transferTx.assetId.isDefined()) then {"CARDIUM"} else {transferTx.assetId.value().toBase58String()}
-      |    let feeAssetId = if (!transferTx.feeAssetId.isDefined()) then {"CARDIUM"} else {transferTx.feeAssetId.value().toBase58String()}
+      |    let assetId = if (!transferTx.assetId.isDefined()) then {"GIC"} else {transferTx.assetId.value().toBase58String()}
+      |    let feeAssetId = if (!transferTx.feeAssetId.isDefined()) then {"GIC"} else {transferTx.feeAssetId.value().toBase58String()}
       |[
       |IntegerEntry("amount", transferTx.amount),
       |StringEntry("senderPublicKey", transferTx.senderPublicKey.toBase58String()),
@@ -81,8 +81,8 @@ class TransferTxFromProtoSuite extends BaseTransactionSuite {
     sender.getDataByKey(dAppAddress, "amount").value shouldBe transferTx.amount.value
     sender.getDataByKey(dAppAddress, "fee").value shouldBe transferTx.fee.value
     sender.getDataByKey(dAppAddress, "id").value shouldBe transferTx.id().toString
-    sender.getDataByKey(dAppAddress, "assetId").value shouldBe "CARDIUM"
-    sender.getDataByKey(dAppAddress, "feeAssetId").value shouldBe "CARDIUM"
+    sender.getDataByKey(dAppAddress, "assetId").value shouldBe "GIC"
+    sender.getDataByKey(dAppAddress, "feeAssetId").value shouldBe "GIC"
     sender.getDataByKey(dAppAddress, "attachment").value shouldBe Base58.encode("WAVES transfer".getBytes)
     sender.getDataByKey(dAppAddress, "senderPublicKey").value shouldBe transferTx.sender.toString
     sender.getDataByKey(dAppAddress, "sender").value shouldBe transferTx.sender.toAddress.toString

@@ -1,21 +1,21 @@
-package com.wavesplatform.protobuf.transaction
+package com.gicsports.protobuf.transaction
 
-import com.wavesplatform.transaction as vt
-import com.wavesplatform.account.{AddressScheme, PublicKey}
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.protobuf.*
-import com.wavesplatform.protobuf.order.AssetPair
-import com.wavesplatform.protobuf.order.Order.{PriceMode, Sender}
-import com.wavesplatform.protobuf.order.Order.PriceMode.{ASSET_DECIMALS, FIXED_DECIMALS, DEFAULT as DEFAULT_PRICE_MODE}
-import com.wavesplatform.transaction.assets.exchange.OrderPriceMode.{AssetDecimals, FixedDecimals, Default as DefaultPriceMode}
+import com.gicsports.transaction as vt
+import com.gicsports.account.{AddressScheme, PublicKey}
+import com.gicsports.lang.ValidationError
+import com.gicsports.protobuf.*
+import com.gicsports.protobuf.order.AssetPair
+import com.gicsports.protobuf.order.Order.{PriceMode, Sender}
+import com.gicsports.protobuf.order.Order.PriceMode.{ASSET_DECIMALS, FIXED_DECIMALS, DEFAULT as DEFAULT_PRICE_MODE}
+import com.gicsports.transaction.assets.exchange.OrderPriceMode.{AssetDecimals, FixedDecimals, Default as DefaultPriceMode}
 import vt.assets.exchange.OrderAuthentication
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.assets.exchange.OrderType
-import com.wavesplatform.transaction.{TxExchangeAmount, TxMatcherFee, TxOrderPrice}
-import com.wavesplatform.{transaction => vt}
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.assets.exchange.OrderType
+import com.gicsports.transaction.{TxExchangeAmount, TxMatcherFee, TxOrderPrice}
+import com.gicsports.{transaction => vt}
 
 object PBOrders {
-  import com.wavesplatform.protobuf.utils.PBImplicitConversions.*
+  import com.gicsports.protobuf.utils.PBImplicitConversions.*
 
   def vanilla(order: PBOrder): Either[ValidationError, VanillaOrder] =
     for {
@@ -78,7 +78,7 @@ object PBOrders {
     )
   }
 
-  private def vanillaOrderType(orderSide: com.wavesplatform.protobuf.order.Order.Side): Either[GenericError, OrderType] =
+  private def vanillaOrderType(orderSide: com.gicsports.protobuf.order.Order.Side): Either[GenericError, OrderType] =
     orderSide match {
       case PBOrder.Side.BUY             => Right(vt.assets.exchange.OrderType.BUY)
       case PBOrder.Side.SELL            => Right(vt.assets.exchange.OrderType.SELL)

@@ -1,10 +1,10 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
 import cats.implicits.toBifunctorOps
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.{Blockchain, Diff, Portfolio}
-import com.wavesplatform.transaction.PaymentTransaction
-import com.wavesplatform.transaction.TxValidationError.GenericError
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.{Blockchain, Diff, Portfolio}
+import com.gicsports.transaction.PaymentTransaction
+import com.gicsports.transaction.TxValidationError.GenericError
 
 object PaymentTransactionDiff {
 

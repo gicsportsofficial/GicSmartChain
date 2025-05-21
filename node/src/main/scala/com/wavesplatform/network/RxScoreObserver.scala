@@ -1,4 +1,4 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
 import java.util.concurrent.TimeUnit
 
@@ -6,7 +6,7 @@ import cats._
 import cats.instances.bigInt._
 import cats.instances.tuple._
 import com.google.common.cache.CacheBuilder
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.utils.ScorexLogging
 import io.netty.channel._
 import monix.eval.Coeval
 import monix.execution.Scheduler

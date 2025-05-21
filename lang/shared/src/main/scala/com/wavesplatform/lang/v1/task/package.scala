@@ -1,4 +1,4 @@
-package com.wavesplatform.lang.v1
+package com.gicsports.lang.v1
 
 import cats.Id
 

@@ -1,15 +1,15 @@
-package com.wavesplatform.lang.v1.evaluator.ctx.impl.waves
+package com.gicsports.lang.v1.evaluator.ctx.impl.waves
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V3, V4, V5}
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_BYTESTR.{DataEntrySize, NoLimit}
-import com.wavesplatform.lang.v1.compiler.Types.CASETYPEREF
-import com.wavesplatform.lang.v1.evaluator.ContractEvaluator.Invocation
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{converters, unit}
-import com.wavesplatform.lang.v1.traits.domain.Tx.*
-import com.wavesplatform.lang.v1.traits.domain.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.directives.values.{StdLibVersion, V3, V4, V5}
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.Terms.CONST_BYTESTR.{DataEntrySize, NoLimit}
+import com.gicsports.lang.v1.compiler.Types.CASETYPEREF
+import com.gicsports.lang.v1.evaluator.ContractEvaluator.Invocation
+import com.gicsports.lang.v1.evaluator.ctx.impl.{converters, unit}
+import com.gicsports.lang.v1.traits.domain.Tx.*
+import com.gicsports.lang.v1.traits.domain.*
 
 object Bindings {
 

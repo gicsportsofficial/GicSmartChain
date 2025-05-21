@@ -1,7 +1,7 @@
-package com.wavesplatform.lang.evaluator
+package com.gicsports.lang.evaluator
 
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V3}
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_BOOLEAN, CONST_LONG}
+import com.gicsports.lang.directives.values.{StdLibVersion, V3}
+import com.gicsports.lang.v1.compiler.Terms.{CONST_BOOLEAN, CONST_LONG}
 
 class FoldTest extends EvaluatorSpec {
   implicit val startVersion: StdLibVersion = V3

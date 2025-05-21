@@ -1,6 +1,6 @@
-package com.wavesplatform.metrics
+package com.gicsports.metrics
 
-import com.wavesplatform.utils.LoggerFacade
+import com.gicsports.utils.LoggerFacade
 import kamon.metric.{MeasurementUnit, Metric}
 
 object Instrumented {

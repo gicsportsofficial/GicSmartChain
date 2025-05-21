@@ -1,14 +1,14 @@
-package com.wavesplatform.transaction.assets.exchange
+package com.gicsports.transaction.assets.exchange
 
-import com.wavesplatform.account.{KeyPair, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.exchange.OrderJson.*
-import com.wavesplatform.transaction.smart.Verifier
-import com.wavesplatform.transaction.Proofs
-import com.wavesplatform.utils.{EthEncoding, EthHelpers, JsonMatchers}
+import com.gicsports.account.{KeyPair, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.exchange.OrderJson.*
+import com.gicsports.transaction.smart.Verifier
+import com.gicsports.transaction.Proofs
+import com.gicsports.utils.{EthEncoding, EthHelpers, JsonMatchers}
 import play.api.libs.json.*
 
 class OrderJsonSpecification extends PropSpec with JsonMatchers with EthHelpers {
@@ -256,7 +256,7 @@ class OrderJsonSpecification extends PropSpec with JsonMatchers with EthHelpers 
           "signature": "signature"
         } """
 
-    val jsons = Seq(""" "" """, "null", """ "CARDIUM" """).map { x =>
+    val jsons = Seq(""" "" """, "null", """ "GIC" """).map { x =>
       x -> mkJson(x)
     }
 

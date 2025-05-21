@@ -1,23 +1,23 @@
-package com.wavesplatform.it.api
+package com.gicsports.it.api
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{AddressScheme, KeyPair}
-import com.wavesplatform.api.grpc.BalanceResponse.WavesBalances
-import com.wavesplatform.api.grpc.{TransactionStatus as PBTransactionStatus, *}
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.it.Node
-import com.wavesplatform.it.api.SyncHttpApi.RequestAwaitTime
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.Terms.FUNCTION_CALL
-import com.wavesplatform.protobuf.Amount
-import com.wavesplatform.protobuf.block.Block.Header
-import com.wavesplatform.protobuf.block.{PBBlocks, VanillaBlock}
-import com.wavesplatform.protobuf.transaction.*
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.assets.exchange.Order
-import com.wavesplatform.transaction.{Asset, TxVersion}
+import com.gicsports.account.{AddressScheme, KeyPair}
+import com.gicsports.api.grpc.BalanceResponse.WavesBalances
+import com.gicsports.api.grpc.{TransactionStatus as PBTransactionStatus, *}
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.it.Node
+import com.gicsports.it.api.SyncHttpApi.RequestAwaitTime
+import com.gicsports.it.sync.*
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.Terms.FUNCTION_CALL
+import com.gicsports.protobuf.Amount
+import com.gicsports.protobuf.block.Block.Header
+import com.gicsports.protobuf.block.{PBBlocks, VanillaBlock}
+import com.gicsports.protobuf.transaction.*
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.assets.exchange.Order
+import com.gicsports.transaction.{Asset, TxVersion}
 import io.grpc.Status.Code
 import io.grpc.StatusRuntimeException
 import org.scalatest.{Assertion, Assertions}
@@ -56,8 +56,8 @@ object SyncGrpcApi extends Assertions {
 
   implicit class NodeExtGrpc(n: Node) {
     def grpc: NodeExtGrpc = this
-    import com.wavesplatform.account.Address as Addr
-    import com.wavesplatform.it.api.AsyncGrpcApi.NodeAsyncGrpcApi as async
+    import com.gicsports.account.Address as Addr
+    import com.gicsports.it.api.AsyncGrpcApi.NodeAsyncGrpcApi as async
 
     private[this] lazy val accounts     = AccountsApiGrpc.blockingStub(n.grpcChannel)
     private[this] lazy val assets       = AssetsApiGrpc.blockingStub(n.grpcChannel)
@@ -85,7 +85,7 @@ object SyncGrpcApi extends Assertions {
       sync(async(n).stateChanges(address = address))
     }
 
-    def stateChanges(request: TransactionsRequest): Seq[(com.wavesplatform.transaction.Transaction, StateChangesDetails)] = {
+    def stateChanges(request: TransactionsRequest): Seq[(com.gicsports.transaction.Transaction, StateChangesDetails)] = {
       sync(async(n).stateChanges(request))
     }
 
@@ -100,7 +100,7 @@ object SyncGrpcApi extends Assertions {
         fee: Long,
         timestamp: Long,
         version: Byte,
-        matcherFeeAssetId: String = "CARDIUM",
+        matcherFeeAssetId: String = "GIC",
         waitForTx: Boolean = false
     ): PBSignedTransaction = {
       maybeWaitForTransaction(
@@ -135,8 +135,8 @@ object SyncGrpcApi extends Assertions {
         amount: Long,
         fee: Long,
         version: Int = 2,
-        assetId: String = "CARDIUM",
-        feeAssetId: String = "CARDIUM",
+        assetId: String = "GIC",
+        feeAssetId: String = "GIC",
         attachment: ByteString = ByteString.EMPTY,
         timestamp: Long = System.currentTimeMillis(),
         waitForTx: Boolean = false

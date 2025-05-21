@@ -1,38 +1,38 @@
-package com.wavesplatform.state.diffs.smart.predef
+package com.gicsports.state.diffs.smart.predef
 
 import cats.syntax.either.*
-import com.wavesplatform.account.{Address, Alias, KeyPair}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.crypto
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.Testing.evaluated
-import com.wavesplatform.lang.directives.values.{Asset as AssetType, *}
-import com.wavesplatform.lang.directives.{DirectiveDictionary, DirectiveSet}
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.evaluator.EvaluatorV1
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.{FieldNames, WavesContext}
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.v1.compiler
-import com.wavesplatform.lang.{Common, Global}
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.state.*
-import com.wavesplatform.state.diffs.ci.*
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.exchange.{Order, OrderType}
-import com.wavesplatform.transaction.smart.BlockchainContext.In
-import com.wavesplatform.transaction.smart.{InvokeExpressionTransaction, InvokeScriptTransaction, WavesEnvironment, buildThisValue}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.{Asset, DataTransaction, Proofs, TxHelpers, TxVersion}
-import com.wavesplatform.utils.EmptyBlockchain
+import com.gicsports.account.{Address, Alias, KeyPair}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.crypto
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.Testing.evaluated
+import com.gicsports.lang.directives.values.{Asset as AssetType, *}
+import com.gicsports.lang.directives.{DirectiveDictionary, DirectiveSet}
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.ExpressionCompiler
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.evaluator.EvaluatorV1
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.{FieldNames, WavesContext}
+import com.gicsports.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.v1.compiler
+import com.gicsports.lang.{Common, Global}
+import com.gicsports.settings.WavesSettings
+import com.gicsports.state.*
+import com.gicsports.state.diffs.ci.*
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.exchange.{Order, OrderType}
+import com.gicsports.transaction.smart.BlockchainContext.In
+import com.gicsports.transaction.smart.{InvokeExpressionTransaction, InvokeScriptTransaction, WavesEnvironment, buildThisValue}
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.{Asset, DataTransaction, Proofs, TxHelpers, TxVersion}
+import com.gicsports.utils.EmptyBlockchain
 import monix.eval.Coeval
 import org.scalamock.scalatest.PathMockFactory
 import org.scalatest.EitherValues
@@ -780,7 +780,7 @@ class TransactionBindingsTest extends PropSpec with PathMockFactory with EitherV
 
   def runForAsset(script: String): Either[String, EVALUATED] = {
     import cats.syntax.monoid.*
-    import com.wavesplatform.lang.v1.CTX.*
+    import com.gicsports.lang.v1.CTX.*
 
     val expr       = Parser.parseExpr(script).get.value
     val directives = DirectiveSet(V2, AssetType, Expression).explicitGet()
@@ -807,7 +807,7 @@ class TransactionBindingsTest extends PropSpec with PathMockFactory with EitherV
 
   def runWithSmartTradingActivated(script: String, t: In = null, chainId: Byte = chainId): Either[String, EVALUATED] = {
     import cats.syntax.monoid.*
-    import com.wavesplatform.lang.v1.CTX.*
+    import com.gicsports.lang.v1.CTX.*
 
     val expr = Parser.parseExpr(script).get.value
 

@@ -1,9 +1,9 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import cats.Id
-import com.wavesplatform.account.Address
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.transaction.Asset.Waves
+import com.gicsports.account.Address
+import com.gicsports.transaction.Asset
+import com.gicsports.transaction.Asset.Waves
 
 /**
   * A set of functions that apply diff

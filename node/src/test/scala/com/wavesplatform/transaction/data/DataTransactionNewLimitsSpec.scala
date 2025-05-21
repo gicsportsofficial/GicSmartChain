@@ -1,13 +1,13 @@
-package com.wavesplatform.transaction.data
+package com.gicsports.transaction.data
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.network
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.state.{BinaryDataEntry, BooleanDataEntry, DataEntry, IntegerDataEntry, StringDataEntry}
-import com.wavesplatform.test.{FlatSpec, NumericExt}
-import com.wavesplatform.transaction.{DataTransaction, TxHelpers}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.db.WithDomain
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.network
+import com.gicsports.settings.WavesSettings
+import com.gicsports.state.{BinaryDataEntry, BooleanDataEntry, DataEntry, IntegerDataEntry, StringDataEntry}
+import com.gicsports.test.{FlatSpec, NumericExt}
+import com.gicsports.transaction.{DataTransaction, TxHelpers}
 
 class DataTransactionNewLimitsSpec extends FlatSpec with WithDomain {
   def generateMaxAllowed(limit: Int, overLimit: Boolean = false): (BooleanDataEntry, IntegerDataEntry, StringDataEntry, Seq[BinaryDataEntry]) = {

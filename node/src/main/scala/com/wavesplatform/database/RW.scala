@@ -1,7 +1,7 @@
-package com.wavesplatform.database
+package com.gicsports.database
 
-import com.wavesplatform.metrics.LevelDBStats
-import com.wavesplatform.metrics.LevelDBStats.DbHistogramExt
+import com.gicsports.metrics.LevelDBStats
+import com.gicsports.metrics.LevelDBStats.DbHistogramExt
 import org.iq80.leveldb.{DB, ReadOptions, WriteBatch}
 
 class RW(db: DB, readOptions: ReadOptions, batch: WriteBatch) extends ReadOnlyDB(db, readOptions) {

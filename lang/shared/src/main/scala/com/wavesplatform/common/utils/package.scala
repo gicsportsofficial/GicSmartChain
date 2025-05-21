@@ -1,4 +1,4 @@
-package com.wavesplatform.common
+package com.gicsports.common
 
 import scala.util.{Failure, Success, Try}
 

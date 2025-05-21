@@ -1,16 +1,16 @@
-package com.wavesplatform.lang.v1.evaluator.ctx.impl.waves
+package com.gicsports.lang.v1.evaluator.ctx.impl.waves
 
 import cats.syntax.semigroup.*
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.v1.compiler.Types.FINAL
-import com.wavesplatform.lang.v1.evaluator.ContextfulVal
-import com.wavesplatform.lang.v1.evaluator.ctx.BaseFunction
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.Functions.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.Types.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.Vals.*
-import com.wavesplatform.lang.v1.traits.*
-import com.wavesplatform.lang.v1.{BaseGlobal, CTX}
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.v1.compiler.Types.FINAL
+import com.gicsports.lang.v1.evaluator.ContextfulVal
+import com.gicsports.lang.v1.evaluator.ctx.BaseFunction
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.Functions.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.Types.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.Vals.*
+import com.gicsports.lang.v1.traits.*
+import com.gicsports.lang.v1.{BaseGlobal, CTX}
 
 object WavesContext {
   def build(global: BaseGlobal, ds: DirectiveSet, fixBigScriptField: Boolean): CTX[Environment] =

@@ -1,16 +1,16 @@
-package com.wavesplatform.transaction.smart.script.estimator
+package com.gicsports.transaction.smart.script.estimator
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.contract.DApp._
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.lang.script.ContractScript
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.lang.v1.compiler.Terms._
-import com.wavesplatform.lang.v1.estimator.ScriptEstimator
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext._
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.test.PropSpec
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.contract.DApp._
+import com.gicsports.lang.directives.values._
+import com.gicsports.lang.script.ContractScript
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.lang.v1.compiler.Terms._
+import com.gicsports.lang.v1.estimator.ScriptEstimator
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext._
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.test.PropSpec
 
 class ContractScriptComplexityTest(estimator: ScriptEstimator) extends PropSpec {
 

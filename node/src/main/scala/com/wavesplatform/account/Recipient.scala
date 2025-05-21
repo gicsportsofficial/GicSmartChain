@@ -1,17 +1,17 @@
-package com.wavesplatform.account
+package com.gicsports.account
 
 import java.nio.ByteBuffer
 
 import com.google.common.cache.{Cache, CacheBuilder}
 import com.google.common.primitives.{Bytes, Ints}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.v1.traits.domain.Recipient as RideRecipient
-import com.wavesplatform.serialization.Deser
-import com.wavesplatform.transaction.TxValidationError.{GenericError, InvalidAddress}
-import com.wavesplatform.utils.{EthEncoding, StringBytes, base58Length}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.Base58
+import com.gicsports.crypto
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.v1.traits.domain.Recipient as RideRecipient
+import com.gicsports.serialization.Deser
+import com.gicsports.transaction.TxValidationError.{GenericError, InvalidAddress}
+import com.gicsports.utils.{EthEncoding, StringBytes, base58Length}
 import play.api.libs.json.*
 
 sealed trait AddressOrAlias {
@@ -214,7 +214,7 @@ object Alias {
   private[this] def isValidAliasChar(c: Char): Boolean =
     ('0' <= c && c <= '9') || ('a' <= c && c <= 'z') || c == '_' || c == '@' || c == '-' || c == '.'
 
-  private[wavesplatform] def createWithChainId(name: String, chainId: Byte): Either[ValidationError, Alias] = {
+  private[gicsports] def createWithChainId(name: String, chainId: Byte): Either[ValidationError, Alias] = {
     if (name.length < MinLength || MaxLength < name.length)
       Left(GenericError(s"Alias '$name' length should be between $MinLength and $MaxLength"))
     else if (!name.forall(isValidAliasChar))

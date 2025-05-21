@@ -1,22 +1,22 @@
-package com.wavesplatform.mining.microblocks
+package com.gicsports.mining.microblocks
 
 import cats.syntax.applicativeError.*
 import cats.syntax.bifunctor.*
 import cats.syntax.either.*
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.block.Block.BlockId
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.metrics.*
-import com.wavesplatform.mining.*
-import com.wavesplatform.mining.microblocks.MicroBlockMinerImpl.*
-import com.wavesplatform.network.{MicroBlockInv, *}
-import com.wavesplatform.settings.MinerSettings
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.state.appender.MicroblockAppender
-import com.wavesplatform.transaction.{BlockchainUpdater, Transaction}
-import com.wavesplatform.utils.ScorexLogging
-import com.wavesplatform.utx.UtxPool.PackStrategy
-import com.wavesplatform.utx.UtxPoolImpl
+import com.gicsports.account.KeyPair
+import com.gicsports.block.Block.BlockId
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.metrics.*
+import com.gicsports.mining.*
+import com.gicsports.mining.microblocks.MicroBlockMinerImpl.*
+import com.gicsports.network.{MicroBlockInv, *}
+import com.gicsports.settings.MinerSettings
+import com.gicsports.state.Blockchain
+import com.gicsports.state.appender.MicroblockAppender
+import com.gicsports.transaction.{BlockchainUpdater, Transaction}
+import com.gicsports.utils.ScorexLogging
+import com.gicsports.utx.UtxPool.PackStrategy
+import com.gicsports.utx.UtxPoolImpl
 import io.netty.channel.group.ChannelGroup
 import kamon.Kamon
 import monix.eval.Task

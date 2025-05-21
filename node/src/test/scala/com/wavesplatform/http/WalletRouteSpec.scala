@@ -1,9 +1,9 @@
-package com.wavesplatform.http
+package com.gicsports.http
 
-import com.wavesplatform.TestWallet
-import com.wavesplatform.api.http.ApiError.ApiKeyNotValid
-import com.wavesplatform.api.http.WalletApiRoute
-import com.wavesplatform.common.utils.Base58
+import com.gicsports.TestWallet
+import com.gicsports.api.http.ApiError.ApiKeyNotValid
+import com.gicsports.api.http.WalletApiRoute
+import com.gicsports.common.utils.Base58
 import play.api.libs.json.JsObject
 
 class WalletRouteSpec extends RouteSpec("/wallet") with RestAPISettingsHelper with TestWallet {

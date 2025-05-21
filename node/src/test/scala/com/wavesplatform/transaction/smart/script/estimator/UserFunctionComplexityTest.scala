@@ -1,22 +1,22 @@
-package com.wavesplatform.transaction.smart.script.estimator
+package com.gicsports.transaction.smart.script.estimator
 
 import cats.kernel.Monoid
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.lang.v1.FunctionHeader.User
-import com.wavesplatform.lang.v1.compiler.Terms._
-import com.wavesplatform.lang.v1.estimator.ScriptEstimator
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves._
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.v1.{CTX, FunctionHeader}
-import com.wavesplatform.lang.{Global, utils}
-import com.wavesplatform.state.diffs.smart.predef.chainId
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.smart.WavesEnvironment
-import com.wavesplatform.utils.EmptyBlockchain
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values._
+import com.gicsports.lang.v1.FunctionHeader.User
+import com.gicsports.lang.v1.compiler.Terms._
+import com.gicsports.lang.v1.estimator.ScriptEstimator
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves._
+import com.gicsports.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.v1.{CTX, FunctionHeader}
+import com.gicsports.lang.{Global, utils}
+import com.gicsports.state.diffs.smart.predef.chainId
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.smart.WavesEnvironment
+import com.gicsports.utils.EmptyBlockchain
 import monix.eval.Coeval
 
 class UserFunctionComplexityTest(estimator: ScriptEstimator) extends PropSpec {

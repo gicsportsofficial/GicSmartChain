@@ -1,21 +1,21 @@
-package com.wavesplatform
+package com.gicsports
 
-import com.wavesplatform.account.{AddressOrAlias, KeyPair}
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.history.DefaultBaseTarget
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.Terms.FUNCTION_CALL
-import com.wavesplatform.protobuf.block.PBBlocks
-import com.wavesplatform.state.StringDataEntry
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.utils.Signed
-import com.wavesplatform.transaction.{DataTransaction, Transaction, TxVersion}
+import com.gicsports.account.{AddressOrAlias, KeyPair}
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.*
+import com.gicsports.history.DefaultBaseTarget
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.Terms.FUNCTION_CALL
+import com.gicsports.protobuf.block.PBBlocks
+import com.gicsports.state.StringDataEntry
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.utils.Signed
+import com.gicsports.transaction.{DataTransaction, Transaction, TxVersion}
 import org.scalacheck.Gen
 
 trait BlocksTransactionsHelpers { self: TransactionGen =>
@@ -152,7 +152,7 @@ trait BlocksTransactionsHelpers { self: TransactionGen =>
         timestamp = timestamp,
         reference = reference,
         baseTarget = bTarget,
-        generationSignature = com.wavesplatform.history.generationSignature,
+        generationSignature = com.gicsports.history.generationSignature,
         generator = signer.publicKey,
         featureVotes = Seq.empty,
         rewardVote = -1L,

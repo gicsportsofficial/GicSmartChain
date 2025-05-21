@@ -1,10 +1,10 @@
-package com.wavesplatform
+package com.gicsports
 
-import com.wavesplatform.account.Alias
-import com.wavesplatform.api.http.requests._
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.crypto._
-import com.wavesplatform.transaction.assets._
+import com.gicsports.account.Alias
+import com.gicsports.api.http.requests._
+import com.gicsports.common.utils.Base58
+import com.gicsports.crypto._
+import com.gicsports.transaction.assets._
 import org.scalacheck.Gen.{alphaNumChar, choose, listOfN, oneOf}
 import org.scalacheck.{Arbitrary, Gen => G}
 import org.scalatest.Suite

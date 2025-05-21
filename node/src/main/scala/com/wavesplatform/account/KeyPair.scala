@@ -1,14 +1,14 @@
-package com.wavesplatform.account
+package com.gicsports.account
 
 import java.util
 
 import scala.util.{Failure, Success}
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.crypto.Curve25519
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.utils
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.Base58
+import com.gicsports.crypto.Curve25519
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.utils
 import play.api.libs.json.{Format, Json, Writes}
 
 final class KeyPair(val seed: Array[Byte]) {

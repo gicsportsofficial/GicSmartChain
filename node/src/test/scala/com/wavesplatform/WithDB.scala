@@ -1,11 +1,11 @@
-package com.wavesplatform
+package com.gicsports
 
 import java.nio.file.Files
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.database.LevelDBFactory
-import com.wavesplatform.events.BlockchainUpdateTriggers
-import com.wavesplatform.transaction.Asset
+import com.gicsports.account.Address
+import com.gicsports.database.LevelDBFactory
+import com.gicsports.events.BlockchainUpdateTriggers
+import com.gicsports.transaction.Asset
 import monix.reactive.subjects.{PublishSubject, Subject}
 import org.iq80.leveldb.{DB, Options}
 import org.scalatest.{BeforeAndAfterEach, Suite}

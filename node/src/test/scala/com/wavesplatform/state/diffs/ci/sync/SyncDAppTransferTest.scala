@@ -1,27 +1,27 @@
-package com.wavesplatform.state.diffs.ci.sync
+package com.gicsports.state.diffs.ci.sync
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.contract.DApp.{CallableAnnotation, CallableFunction}
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.FunctionHeader.{Native, User}
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_STRING, FUNC, FUNCTION_CALL, REF}
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.evaluator.FunctionIds.CREATE_LIST
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.state.diffs.produceRejectOrFailedDiff
-import com.wavesplatform.test.*
-import com.wavesplatform.test.DomainPresets.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.{Asset, TxHelpers}
+import com.gicsports.account.Address
+import com.gicsports.block.Block
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.contract.DApp.{CallableAnnotation, CallableFunction}
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.FunctionHeader.{Native, User}
+import com.gicsports.lang.v1.compiler.Terms.{CONST_STRING, FUNC, FUNCTION_CALL, REF}
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.evaluator.FunctionIds.CREATE_LIST
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.state.diffs.produceRejectOrFailedDiff
+import com.gicsports.test.*
+import com.gicsports.test.DomainPresets.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.{Asset, TxHelpers}
 
 class SyncDAppTransferTest extends PropSpec with WithDomain {
 
@@ -92,12 +92,12 @@ class SyncDAppTransferTest extends PropSpec with WithDomain {
       ) { d =>
         d.appendBlock(preparingTxs*)
 
-        d.appendAndCatchError(invoke).toString should include("Negative CARDIUM balance")
+        d.appendAndCatchError(invoke).toString should include("Negative GIC balance")
 
         d.appendBlock()
 
         if (!bigComplexityDApp1 && !bigComplexityDApp2) {
-          d.appendAndCatchError(invoke).toString should include("negative CARDIUM balance")
+          d.appendAndCatchError(invoke).toString should include("negative GIC balance")
         } else {
           d.appendAndAssertFailed(invoke)
         }

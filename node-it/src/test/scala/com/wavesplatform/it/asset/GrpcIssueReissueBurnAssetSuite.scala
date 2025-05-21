@@ -1,21 +1,21 @@
-package com.wavesplatform.it.asset
+package com.gicsports.it.asset
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.api.grpc.AssetInfoResponse
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.it.api.SyncGrpcApi.*
-import com.wavesplatform.it.api.{BurnInfoResponse, IssueInfoResponse, ReissueInfoResponse, StateChangesDetails}
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.it.sync.grpc.GrpcBaseTransactionSuiteLike
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_BOOLEAN, CONST_BYTESTR, CONST_LONG, FUNCTION_CALL}
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.protobuf.transaction.{PBRecipients, PBTransactions}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.account.KeyPair
+import com.gicsports.api.grpc.AssetInfoResponse
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.it.api.SyncGrpcApi.*
+import com.gicsports.it.api.{BurnInfoResponse, IssueInfoResponse, ReissueInfoResponse, StateChangesDetails}
+import com.gicsports.it.sync.*
+import com.gicsports.it.sync.grpc.GrpcBaseTransactionSuiteLike
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.{CONST_BOOLEAN, CONST_BYTESTR, CONST_LONG, FUNCTION_CALL}
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.protobuf.transaction.{PBRecipients, PBTransactions}
+import com.gicsports.test.*
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import org.scalatest.freespec.AnyFreeSpec
 
 import scala.util.Random
@@ -359,7 +359,7 @@ class GrpcIssueReissueBurnAssetSuite extends AnyFreeSpec with GrpcBaseTransactio
   }
 
   def assertGrpcAssetDetails(assetId: String)(f: AssetInfoResponse => Unit): Unit = {
-    import com.wavesplatform.it.api.SyncGrpcApi.*
+    import com.gicsports.it.api.SyncGrpcApi.*
     val assetInfo = sender.grpc.assetInfo(assetId)
     f(assetInfo)
   }

@@ -1,21 +1,21 @@
-package com.wavesplatform.serialization
+package com.gicsports.serialization
 
 import akka.http.scaladsl.server.Route
 import akka.http.scaladsl.testkit.ScalatestRouteTest
-import com.wavesplatform.account.Address
-import com.wavesplatform.api.http.{ApiMarshallers, RouteTimeout, TransactionsApiRoute}
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.history.Domain
-import com.wavesplatform.http.RestAPISettingsHelper
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.script.trace.TracedResult
-import com.wavesplatform.utils.{JsonMatchers, Schedulers}
+import com.gicsports.account.Address
+import com.gicsports.api.http.{ApiMarshallers, RouteTimeout, TransactionsApiRoute}
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.history.Domain
+import com.gicsports.http.RestAPISettingsHelper
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.script.trace.TracedResult
+import com.gicsports.utils.{JsonMatchers, Schedulers}
 import play.api.libs.json.*
 
 import scala.concurrent.duration.*

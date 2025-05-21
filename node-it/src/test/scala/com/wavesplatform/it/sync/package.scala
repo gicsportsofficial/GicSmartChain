@@ -1,16 +1,16 @@
-package com.wavesplatform.it
+package com.gicsports.it
 
-import com.wavesplatform.api.http.ApiError.TransactionNotAllowedByAssetScript
-import com.wavesplatform.api.http.requests.IssueRequest
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncHttpApi.AssertiveApiError
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.protobuf.transaction.{DataTransactionData, PBTransactions}
-import com.wavesplatform.state.DataEntry
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.api.http.ApiError.TransactionNotAllowedByAssetScript
+import com.gicsports.api.http.requests.IssueRequest
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncHttpApi.AssertiveApiError
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.protobuf.transaction.{DataTransactionData, PBTransactions}
+import com.gicsports.state.DataEntry
+import com.gicsports.test._
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
 
 package object sync {
   val smartFee: Long                   = 0.04.waves

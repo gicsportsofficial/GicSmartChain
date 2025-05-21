@@ -1,14 +1,14 @@
-package com.wavesplatform.it.sync.smartcontract
+package com.gicsports.it.sync.smartcontract
 
 import com.typesafe.config.Config
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.NodeConfigs.Default
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.state.BinaryDataEntry
-import com.wavesplatform.test._
+import com.gicsports.common.state.ByteStr
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.NodeConfigs.Default
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.state.BinaryDataEntry
+import com.gicsports.test._
 import org.scalatest.CancelAfterFailure
 
 import scala.concurrent.duration._
@@ -21,7 +21,7 @@ class EstimatorTestSuite extends BaseTransactionSuite with CancelAfterFailure {
       .Builder(Default, 1, Seq.empty)
       .overrideBase(_.quorum(0))
       .overrideBase(_.raw(s"""
-                              | CARDIUM.blockchain.custom.functionality {
+                              | GIC.blockchain.custom.functionality {
                               |   estimator-pre-check-height =  $featureHeight
                               |   estimator-sum-overflow-fix-height = 999999
                               |   pre-activated-features = {14 = 0, 15 = 999999}

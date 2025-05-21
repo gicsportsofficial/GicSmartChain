@@ -1,7 +1,7 @@
-package com.wavesplatform.state.reader
+package com.gicsports.state.reader
 
-import com.wavesplatform.account.{AddressOrAlias, PublicKey}
-import com.wavesplatform.common.state.ByteStr
+import com.gicsports.account.{AddressOrAlias, PublicKey}
+import com.gicsports.common.state.ByteStr
 
 object LeaseDetails {
   sealed trait Status

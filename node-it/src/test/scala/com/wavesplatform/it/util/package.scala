@@ -1,6 +1,6 @@
-package com.wavesplatform.it
+package com.gicsports.it
 
-import com.wavesplatform.state.DataEntry
+import com.gicsports.state.DataEntry
 import io.netty.util.Timer
 
 import scala.concurrent.duration.FiniteDuration

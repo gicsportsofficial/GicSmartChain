@@ -1,42 +1,42 @@
-package com.wavesplatform.state.diffs.invoke
+package com.gicsports.state.diffs.invoke
 
 import cats.Id
 import cats.implicits.toFlatMapOps
 import cats.instances.list.*
 import cats.syntax.either.*
 import cats.syntax.traverseFilter.*
-import com.wavesplatform.account.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.EstimatorProvider.EstimatorBlockchainExt
-import com.wavesplatform.features.EvaluatorFixProvider.*
-import com.wavesplatform.features.FunctionCallPolicyProvider.*
-import com.wavesplatform.lang.*
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.{DApp as DAppType, *}
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.unit
-import com.wavesplatform.lang.v1.evaluator.{ContractEvaluator, IncompleteResult, Log, ScriptResult, ScriptResultV3, ScriptResultV4}
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.v1.traits.domain.Tx.{InvokePseudoTx, ScriptTransfer}
-import com.wavesplatform.lang.v1.traits.domain.{Recipient as RideRecipient, *}
-import com.wavesplatform.metrics.*
-import com.wavesplatform.state.*
-import com.wavesplatform.state.diffs.BalanceDiffValidation
-import com.wavesplatform.state.diffs.invoke.CallArgumentPolicy.*
-import com.wavesplatform.state.reader.CompositeBlockchain
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.*
-import com.wavesplatform.transaction.smart.script.ScriptRunner
-import com.wavesplatform.transaction.smart.script.ScriptRunner.TxOrd
-import com.wavesplatform.transaction.smart.script.trace.CoevalR.traced
-import com.wavesplatform.transaction.smart.script.trace.{AssetVerifierTrace, CoevalR, TracedResult}
-import com.wavesplatform.transaction.smart.{DApp as DAppTarget, *}
-import com.wavesplatform.transaction.validation.impl.DataTxValidator
-import com.wavesplatform.transaction.{TransactionType, TxValidationError}
+import com.gicsports.account.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.EstimatorProvider.EstimatorBlockchainExt
+import com.gicsports.features.EvaluatorFixProvider.*
+import com.gicsports.features.FunctionCallPolicyProvider.*
+import com.gicsports.lang.*
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.{DApp as DAppType, *}
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.unit
+import com.gicsports.lang.v1.evaluator.{ContractEvaluator, IncompleteResult, Log, ScriptResult, ScriptResultV3, ScriptResultV4}
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.v1.traits.domain.Tx.{InvokePseudoTx, ScriptTransfer}
+import com.gicsports.lang.v1.traits.domain.{Recipient as RideRecipient, *}
+import com.gicsports.metrics.*
+import com.gicsports.state.*
+import com.gicsports.state.diffs.BalanceDiffValidation
+import com.gicsports.state.diffs.invoke.CallArgumentPolicy.*
+import com.gicsports.state.reader.CompositeBlockchain
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.*
+import com.gicsports.transaction.smart.script.ScriptRunner
+import com.gicsports.transaction.smart.script.ScriptRunner.TxOrd
+import com.gicsports.transaction.smart.script.trace.CoevalR.traced
+import com.gicsports.transaction.smart.script.trace.{AssetVerifierTrace, CoevalR, TracedResult}
+import com.gicsports.transaction.smart.{DApp as DAppTarget, *}
+import com.gicsports.transaction.validation.impl.DataTxValidator
+import com.gicsports.transaction.{TransactionType, TxValidationError}
 import monix.eval.Coeval
 import shapeless.Coproduct
 
@@ -468,7 +468,7 @@ object InvokeScriptDiff {
         .headOption
         .fold[Either[ValidationError, Unit]](Right(())) { case (address, asset) =>
           val msg = asset match {
-            case Waves => s"$address: Negative CARDIUM balance: old = ${blockchain.balance(address)}, new = ${compositeBlockchain.balance(address)}"
+            case Waves => s"$address: Negative GIC balance: old = ${blockchain.balance(address)}, new = ${compositeBlockchain.balance(address)}"
             case ia: IssuedAsset =>
               s"$address: Negative asset $ia balance: old = ${blockchain.balance(address, ia)}, new = ${compositeBlockchain.balance(address, ia)}"
           }
@@ -481,7 +481,7 @@ object InvokeScriptDiff {
   private def ensurePaymentsAreNotNegative(blockchain: Blockchain, tx: InvokeScript, invoker: Address, dAppAddress: Address) = traced {
     tx.payments.collectFirst {
       case p if p.amount < 0 =>
-        s"DApp $invoker invoked DApp $dAppAddress with attached ${p.assetId.fold("CARDIUM")(a => s"token $a")} amount = ${p.amount}"
+        s"DApp $invoker invoked DApp $dAppAddress with attached ${p.assetId.fold("GIC")(a => s"token $a")} amount = ${p.amount}"
     } match {
       case Some(e) if blockchain.isFeatureActivated(BlockchainFeatures.RideV6) =>
         Left(GenericError(e))

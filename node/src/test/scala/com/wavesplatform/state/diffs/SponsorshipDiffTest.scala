@@ -1,15 +1,15 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.db.WithState
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.BlockchainFeatures.BlockV5
-import com.wavesplatform.lagonaki.mocks.TestBlock.create as block
-import com.wavesplatform.settings.{Constants, FunctionalitySettings, TestFunctionalitySettings}
-import com.wavesplatform.state.*
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.{TxHelpers, TxVersion}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.db.WithState
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.BlockchainFeatures.BlockV5
+import com.gicsports.lagonaki.mocks.TestBlock.create as block
+import com.gicsports.settings.{Constants, FunctionalitySettings, TestFunctionalitySettings}
+import com.gicsports.state.*
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.{TxHelpers, TxVersion}
 
 class SponsorshipDiffTest extends PropSpec with WithState {
 
@@ -142,7 +142,7 @@ class SponsorshipDiffTest extends PropSpec with WithState {
 
       val expectedError =
         s"Fee for TransferTransaction (${insufficientFee.fee} in ${issue.assetId.toString})" ++
-          s" does not exceed minimal value of 2000000 CARDIUM or $minFee ${issue.assetId.toString}"
+          s" does not exceed minimal value of 2000000 GIC or $minFee ${issue.assetId.toString}"
 
       blockDiffEi should produce(expectedError)
     }
@@ -150,11 +150,11 @@ class SponsorshipDiffTest extends PropSpec with WithState {
       if (wavesOverspend.fee.value > issue.quantity.value)
         blockDiffEi should produce("unavailable funds")
       else
-        blockDiffEi should produce("negative CARDIUM balance")
+        blockDiffEi should produce("negative GIC balance")
     }
   }
 
-  property("not enough CARDIUM to pay fee after leasing") {
+  property("not enough GIC to pay fee after leasing") {
     val s = settings(0)
     val setup = {
       val master = TxHelpers.signer(1)
@@ -218,7 +218,7 @@ class SponsorshipDiffTest extends PropSpec with WithState {
       blockDiffEi should produce("Asset was issued by other address")
     }
     assertDiffEi(setupBlocks, block(Seq(insufficientReducedFee)), s) { blockDiffEi =>
-      blockDiffEi should produce("(99999 in CARDIUM) does not exceed minimal value of 2000000 CARDIUM")
+      blockDiffEi should produce("(99999 in GIC) does not exceed minimal value of 2000000 GIC")
     }
   }
 
@@ -246,11 +246,11 @@ class SponsorshipDiffTest extends PropSpec with WithState {
       blockDiffEi should produce("Asset was issued by other address")
     }
     assertDiffEi(setupBlocks, block(Seq(insufficientFee)), s) { blockDiffEi =>
-      blockDiffEi should produce("(99999 in CARDIUM) does not exceed minimal value of 2000000 CARDIUM")
+      blockDiffEi should produce("(99999 in GIC) does not exceed minimal value of 2000000 GIC")
     }
   }
 
-  property(s"sponsor has no CARDIUM but receives them just in time before $BlockV5 activation") {
+  property(s"sponsor has no GIC but receives them just in time before $BlockV5 activation") {
     val s = settings(0)
     val setup = {
       val master    = TxHelpers.signer(1)
@@ -282,7 +282,7 @@ class SponsorshipDiffTest extends PropSpec with WithState {
       block(Seq(backWavesTransfer)),
       s
     ) { ei =>
-      ei should produce("negative CARDIUM balance")
+      ei should produce("negative GIC balance")
     }
   }
 }

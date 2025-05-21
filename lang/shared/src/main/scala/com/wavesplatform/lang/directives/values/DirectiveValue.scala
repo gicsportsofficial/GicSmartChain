@@ -1,6 +1,6 @@
-package com.wavesplatform.lang.directives.values
+package com.gicsports.lang.directives.values
 
-import com.wavesplatform.lang.directives._
+import com.gicsports.lang.directives._
 
 abstract class DirectiveValue(val text: String, val id: Int) {
   protected def resolveKey[V](implicit k: DirectiveKey { type Value = V }) = k

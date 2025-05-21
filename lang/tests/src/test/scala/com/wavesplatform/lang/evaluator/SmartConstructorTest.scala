@@ -1,9 +1,9 @@
-package com.wavesplatform.lang.evaluator
+package com.gicsports.lang.evaluator
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_BYTESTR, CONST_STRING}
-import com.wavesplatform.test.PropSpec
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.lang.v1.compiler.Terms.{CONST_BYTESTR, CONST_STRING}
+import com.gicsports.test.PropSpec
 import org.scalatest.Inside
 
 class SmartConstructorTest extends PropSpec with Inside {

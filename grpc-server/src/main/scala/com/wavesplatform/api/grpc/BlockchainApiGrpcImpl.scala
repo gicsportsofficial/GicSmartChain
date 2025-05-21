@@ -1,10 +1,10 @@
-package com.wavesplatform.api.grpc
+package com.gicsports.api.grpc
 
 import com.google.protobuf.ByteString
 import com.google.protobuf.empty.Empty
-import com.wavesplatform.features.{BlockchainFeatureStatus, BlockchainFeatures}
-import com.wavesplatform.settings.FeaturesSettings
-import com.wavesplatform.state.Blockchain
+import com.gicsports.features.{BlockchainFeatureStatus, BlockchainFeatures}
+import com.gicsports.settings.FeaturesSettings
+import com.gicsports.state.Blockchain
 import monix.execution.Scheduler
 
 import scala.concurrent.Future

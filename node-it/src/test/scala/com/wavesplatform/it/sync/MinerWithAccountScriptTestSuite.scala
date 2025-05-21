@@ -1,16 +1,16 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
 import com.typesafe.config.Config
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.it.{BaseFunSuite, NodeConfigs}
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.lang.directives.values.V6
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_STRING
-import com.wavesplatform.lang.v1.compiler.TestCompiler
+import com.gicsports.account.KeyPair
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.it.{BaseFunSuite, NodeConfigs}
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.lang.directives.values.V6
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.Terms.CONST_STRING
+import com.gicsports.lang.v1.compiler.TestCompiler
 
 class MinerWithAccountScriptTestSuite extends BaseFunSuite {
   override protected def nodeConfigs: Seq[Config] =

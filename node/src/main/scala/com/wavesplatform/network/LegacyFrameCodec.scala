@@ -1,14 +1,14 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
 import java.util
 
 import com.google.common.cache.CacheBuilder
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.utils.Base64
-import com.wavesplatform.crypto
-import com.wavesplatform.network.message.Message._
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.block.Block
+import com.gicsports.common.utils.Base64
+import com.gicsports.crypto
+import com.gicsports.network.message.Message._
+import com.gicsports.transaction.Transaction
+import com.gicsports.utils.ScorexLogging
 import io.netty.buffer.ByteBuf
 import io.netty.buffer.Unpooled._
 import io.netty.channel.ChannelHandlerContext

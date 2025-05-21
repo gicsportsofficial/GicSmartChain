@@ -1,4 +1,4 @@
-package com.wavesplatform.generator
+package com.gicsports.generator
 
 import java.net.{InetSocketAddress, URL}
 import java.nio.charset.StandardCharsets
@@ -6,8 +6,8 @@ import java.nio.charset.StandardCharsets
 import cats.Show
 import cats.implicits.showInterpolator
 import com.google.common.primitives.{Bytes, Ints}
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.generator.GeneratorSettings.NodeAddress
+import com.gicsports.account.KeyPair
+import com.gicsports.generator.GeneratorSettings.NodeAddress
 
 case class GeneratorSettings(
     chainId: String,
@@ -54,6 +54,6 @@ object GeneratorSettings {
   }
 
   def toKeyPair(seedText: String): KeyPair = {
-    KeyPair(com.wavesplatform.crypto.secureHash(Bytes.concat(Ints.toByteArray(0), seedText.getBytes(StandardCharsets.UTF_8))))
+    KeyPair(com.gicsports.crypto.secureHash(Bytes.concat(Ints.toByteArray(0), seedText.getBytes(StandardCharsets.UTF_8))))
   }
 }

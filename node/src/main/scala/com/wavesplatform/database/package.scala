@@ -1,4 +1,4 @@
-package com.wavesplatform
+package com.gicsports
 
 import java.io.File
 import java.nio.ByteBuffer
@@ -10,27 +10,27 @@ import com.google.common.io.{ByteArrayDataInput, ByteArrayDataOutput}
 import com.google.common.primitives.{Bytes, Ints, Longs}
 import com.google.protobuf.ByteString
 import com.typesafe.scalalogging.Logger
-import com.wavesplatform.account.{AddressScheme, PublicKey}
-import com.wavesplatform.api.BlockMeta
-import com.wavesplatform.block.validation.Validators
-import com.wavesplatform.block.{Block, BlockHeader}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.crypto.*
-import com.wavesplatform.database.protobuf as pb
-import com.wavesplatform.database.protobuf.DataEntry.Value
-import com.wavesplatform.database.protobuf.TransactionData.Transaction as TD
-import com.wavesplatform.lang.script.{Script, ScriptReader}
-import com.wavesplatform.protobuf.ByteStringExt
-import com.wavesplatform.protobuf.block.PBBlocks
-import com.wavesplatform.protobuf.transaction.{PBRecipients, PBTransactions}
-import com.wavesplatform.state.*
-import com.wavesplatform.state.StateHash.SectionId
-import com.wavesplatform.state.reader.LeaseDetails
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.lease.LeaseTransaction
-import com.wavesplatform.transaction.{EthereumTransaction, GenesisTransaction, PBSince, PaymentTransaction, Transaction, TransactionParsers, TxValidationError}
-import com.wavesplatform.utils.*
+import com.gicsports.account.{AddressScheme, PublicKey}
+import com.gicsports.api.BlockMeta
+import com.gicsports.block.validation.Validators
+import com.gicsports.block.{Block, BlockHeader}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.crypto.*
+import com.gicsports.database.protobuf as pb
+import com.gicsports.database.protobuf.DataEntry.Value
+import com.gicsports.database.protobuf.TransactionData.Transaction as TD
+import com.gicsports.lang.script.{Script, ScriptReader}
+import com.gicsports.protobuf.ByteStringExt
+import com.gicsports.protobuf.block.PBBlocks
+import com.gicsports.protobuf.transaction.{PBRecipients, PBTransactions}
+import com.gicsports.state.*
+import com.gicsports.state.StateHash.SectionId
+import com.gicsports.state.reader.LeaseDetails
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.lease.LeaseTransaction
+import com.gicsports.transaction.{EthereumTransaction, GenesisTransaction, PBSince, PaymentTransaction, Transaction, TransactionParsers, TxValidationError}
+import com.gicsports.utils.*
 import monix.eval.Task
 import monix.reactive.Observable
 import org.iq80.leveldb.*
@@ -449,7 +449,7 @@ package object database {
       .toByteArray
 
   implicit class EntryExt(val e: JMap.Entry[Array[Byte], Array[Byte]]) extends AnyVal {
-    import com.wavesplatform.crypto.DigestLength
+    import com.gicsports.crypto.DigestLength
     def extractId(offset: Int = 2, length: Int = DigestLength): ByteStr = {
       val id = ByteStr(new Array[Byte](length))
       Array.copy(e.getKey, offset, id.arr, 0, length)

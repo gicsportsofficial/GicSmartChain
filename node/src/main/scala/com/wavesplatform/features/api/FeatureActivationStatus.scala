@@ -1,6 +1,6 @@
-package com.wavesplatform.features.api
+package com.gicsports.features.api
 
-import com.wavesplatform.features.BlockchainFeatureStatus
+import com.gicsports.features.BlockchainFeatureStatus
 
 case class FeatureActivationStatus(
     id: Short,

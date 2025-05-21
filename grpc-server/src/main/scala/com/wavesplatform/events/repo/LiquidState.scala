@@ -1,8 +1,8 @@
-package com.wavesplatform.events.repo
+package com.gicsports.events.repo
 
 import cats.syntax.monoid._
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.events.{BlockAppended, BlockchainUpdated, MicroBlockAppended}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.events.{BlockAppended, BlockchainUpdated, MicroBlockAppended}
 
 case class LiquidState(
     keyBlock: BlockAppended,

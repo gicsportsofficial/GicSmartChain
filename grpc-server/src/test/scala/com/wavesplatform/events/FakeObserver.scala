@@ -1,12 +1,12 @@
-package com.wavesplatform.events
+package com.gicsports.events
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.events.api.grpc.protobuf.{SubscribeEvent, SubscribeRequest}
-import com.wavesplatform.events.protobuf.BlockchainUpdated as PBBlockchainUpdated
-import com.wavesplatform.events.protobuf.BlockchainUpdated.Rollback.RollbackType
-import com.wavesplatform.events.protobuf.serde.BlockchainUpdatedVanilla
-import com.wavesplatform.protobuf.ByteStringExt
-import com.wavesplatform.state.Blockchain
+import com.gicsports.common.state.ByteStr
+import com.gicsports.events.api.grpc.protobuf.{SubscribeEvent, SubscribeRequest}
+import com.gicsports.events.protobuf.BlockchainUpdated as PBBlockchainUpdated
+import com.gicsports.events.protobuf.BlockchainUpdated.Rollback.RollbackType
+import com.gicsports.events.protobuf.serde.BlockchainUpdatedVanilla
+import com.gicsports.protobuf.ByteStringExt
+import com.gicsports.state.Blockchain
 import io.grpc.stub.{CallStreamObserver, StreamObserver}
 import monix.eval.Task
 import monix.execution.Scheduler.Implicits.global

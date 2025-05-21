@@ -1,13 +1,13 @@
-package com.wavesplatform.transaction.smart
+package com.gicsports.transaction.smart
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.features.MultiPaymentPolicyProvider.*
-import com.wavesplatform.lang.directives.values.StdLibVersion
-import com.wavesplatform.lang.v1.traits.domain.AttachedPayments
-import com.wavesplatform.lang.v1.traits.domain.AttachedPayments.*
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.state.diffs.invoke.InvokeScriptLike
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.common.state.ByteStr
+import com.gicsports.features.MultiPaymentPolicyProvider.*
+import com.gicsports.lang.directives.values.StdLibVersion
+import com.gicsports.lang.v1.traits.domain.AttachedPayments
+import com.gicsports.lang.v1.traits.domain.AttachedPayments.*
+import com.gicsports.state.Blockchain
+import com.gicsports.state.diffs.invoke.InvokeScriptLike
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
 
 object AttachedPaymentExtractor {
   def extractPayments(

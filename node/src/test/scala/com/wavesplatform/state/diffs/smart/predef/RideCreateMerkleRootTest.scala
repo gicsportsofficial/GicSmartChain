@@ -1,17 +1,17 @@
-package com.wavesplatform.state.diffs.smart.predef
+package com.gicsports.state.diffs.smart.predef
 
-import com.wavesplatform.block.Block.*
-import com.wavesplatform.common.merkle.Merkle
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.directives.values.V4
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.TxHelpers.*
-import com.wavesplatform.transaction.TxVersion.V3
+import com.gicsports.block.Block.*
+import com.gicsports.common.merkle.Merkle
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.directives.values.V4
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.*
+import com.gicsports.transaction.TxHelpers.*
+import com.gicsports.transaction.TxVersion.V3
 
 class RideCreateMerkleRootTest extends PropSpec with WithDomain {
   import DomainPresets.*

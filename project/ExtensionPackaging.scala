@@ -66,9 +66,9 @@ object ExtensionPackaging extends AutoPlugin {
              |set -e
              |chown -R ${nodePackageName.value}:${nodePackageName.value} /usr/share/${nodePackageName.value}""".stripMargin
       ),
-      Linux / maintainer := "cardium.network",
-      Linux / packageSummary := s"CARDIUM node ${name.value}${network.value.packageSuffix} extension",
-      Linux / packageDescription := s"CARDIUM node ${name.value}${network.value.packageSuffix} extension",
+      Linux / maintainer := "gic.network",
+      Linux / packageSummary := s"GIC node ${name.value}${network.value.packageSuffix} extension",
+      Linux / packageDescription := s"GIC node ${name.value}${network.value.packageSuffix} extension",
       Debian / normalizedName := s"${name.value}${network.value.packageSuffix}",
       Debian / packageName := s"${name.value}${network.value.packageSuffix}",
       libraryDependencies ++= Dependencies.logDeps,

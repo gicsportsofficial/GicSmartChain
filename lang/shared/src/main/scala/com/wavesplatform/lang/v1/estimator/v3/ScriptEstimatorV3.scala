@@ -1,13 +1,13 @@
-package com.wavesplatform.lang.v1.estimator.v3
+package com.gicsports.lang.v1.estimator.v3
 
 import cats.implicits.*
 import cats.{Id, Monad}
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.estimator.v3.EstimatorContext.EvalM
-import com.wavesplatform.lang.v1.estimator.v3.EstimatorContext.Lenses.*
-import com.wavesplatform.lang.v1.estimator.{EstimationError, ScriptEstimator}
-import com.wavesplatform.lang.v1.task.imports.*
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.estimator.v3.EstimatorContext.EvalM
+import com.gicsports.lang.v1.estimator.v3.EstimatorContext.Lenses.*
+import com.gicsports.lang.v1.estimator.{EstimationError, ScriptEstimator}
+import com.gicsports.lang.v1.task.imports.*
 import monix.eval.Coeval
 
 import scala.util.Try

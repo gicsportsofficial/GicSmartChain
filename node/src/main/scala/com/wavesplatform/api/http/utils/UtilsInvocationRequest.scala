@@ -1,20 +1,20 @@
-package com.wavesplatform.api.http.utils
+package com.gicsports.api.http.utils
 
 import cats.implicits.{toBifunctorOps, toTraverseOps}
-import com.wavesplatform.account.{Address, PublicKey}
-import com.wavesplatform.api.http.requests.InvokeScriptRequest
-import com.wavesplatform.api.http.requests.InvokeScriptRequest.FunctionCallPart
-import com.wavesplatform.api.http.utils.UtilsInvocationRequest.empty32Bytes
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.directives.values.V6
-import com.wavesplatform.lang.v1.evaluator.ContractEvaluator.Invocation
-import com.wavesplatform.lang.v1.traits.domain.Recipient.Address as RideAddress
-import com.wavesplatform.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.smart.AttachedPaymentExtractor
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.{TransactionType, smart}
+import com.gicsports.account.{Address, PublicKey}
+import com.gicsports.api.http.requests.InvokeScriptRequest
+import com.gicsports.api.http.requests.InvokeScriptRequest.FunctionCallPart
+import com.gicsports.api.http.utils.UtilsInvocationRequest.empty32Bytes
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.directives.values.V6
+import com.gicsports.lang.v1.evaluator.ContractEvaluator.Invocation
+import com.gicsports.lang.v1.traits.domain.Recipient.Address as RideAddress
+import com.gicsports.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.smart.AttachedPaymentExtractor
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.{TransactionType, smart}
 import play.api.libs.json.{Json, Reads}
 
 case class UtilsInvocationRequest(

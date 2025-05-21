@@ -1,6 +1,6 @@
-package com.wavesplatform.it.transactions
+package com.gicsports.it.transactions
 
-import com.wavesplatform.it.*
+import com.gicsports.it.*
 import org.scalatest.*
 
 trait BaseTransactionSuiteLike extends WaitForHeight2 with IntegrationSuiteWithThreeAddresses with BeforeAndAfterAll with NodesFromDocker {

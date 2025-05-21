@@ -1,12 +1,12 @@
-package com.wavesplatform.lang.v1.traits
+package com.gicsports.lang.v1.traits
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.Terms.EVALUATED
-import com.wavesplatform.lang.v1.evaluator.Log
-import com.wavesplatform.lang.v1.traits.domain.Recipient.Address
-import com.wavesplatform.lang.v1.traits.domain.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.Terms.EVALUATED
+import com.gicsports.lang.v1.evaluator.Log
+import com.gicsports.lang.v1.traits.domain.Recipient.Address
+import com.gicsports.lang.v1.traits.domain.*
 import monix.eval.Coeval
 import shapeless.*
 

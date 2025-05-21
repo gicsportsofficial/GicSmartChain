@@ -1,7 +1,7 @@
-package com.wavesplatform.network.message
+package com.gicsports.network.message
 
 import com.google.common.primitives.{Bytes, Ints}
-import com.wavesplatform.crypto
+import com.gicsports.crypto
 import monix.eval.Coeval
 
 import scala.util.{Success, Try}

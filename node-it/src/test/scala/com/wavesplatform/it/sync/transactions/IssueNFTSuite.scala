@@ -1,11 +1,11 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
 import com.typesafe.config.Config
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.it.{Node, NodeConfigs}
-import com.wavesplatform.test._
+import com.gicsports.account.KeyPair
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.it.{Node, NodeConfigs}
+import com.gicsports.test._
 import org.scalatest.prop.TableDrivenPropertyChecks
 
 class IssueNFTSuite extends BaseTransactionSuite with TableDrivenPropertyChecks {
@@ -18,7 +18,7 @@ class IssueNFTSuite extends BaseTransactionSuite with TableDrivenPropertyChecks 
 
   override def nodeConfigs: Seq[Config] =
     NodeConfigs.newBuilder
-      .overrideBase(_.raw("""CARDIUM {
+      .overrideBase(_.raw("""GIC {
           |  miner.quorum = 0
           |  blockchain.custom.functionality.pre-activated-features.13 = 10
           |}""".stripMargin))

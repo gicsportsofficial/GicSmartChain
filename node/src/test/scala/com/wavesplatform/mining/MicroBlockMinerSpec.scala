@@ -1,20 +1,20 @@
-package com.wavesplatform.mining
+package com.gicsports.mining
 
 import scala.concurrent.duration._
 import scala.util.Random
 
-import com.wavesplatform.TestValues
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.utils._
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.mining.microblocks.MicroBlockMinerImpl
-import com.wavesplatform.settings.TestFunctionalitySettings
-import com.wavesplatform.test.FlatSpec
-import com.wavesplatform.transaction.{CreateAliasTransaction, TxVersion}
-import com.wavesplatform.utils.Schedulers
-import com.wavesplatform.utx.UtxPoolImpl
+import com.gicsports.TestValues
+import com.gicsports.block.Block
+import com.gicsports.common.utils._
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.mining.microblocks.MicroBlockMinerImpl
+import com.gicsports.settings.TestFunctionalitySettings
+import com.gicsports.test.FlatSpec
+import com.gicsports.transaction.{CreateAliasTransaction, TxVersion}
+import com.gicsports.utils.Schedulers
+import com.gicsports.utx.UtxPoolImpl
 import monix.execution.Scheduler
 import monix.reactive.Observable
 import org.scalamock.scalatest.PathMockFactory

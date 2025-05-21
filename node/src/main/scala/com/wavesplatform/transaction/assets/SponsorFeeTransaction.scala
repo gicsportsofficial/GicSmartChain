@@ -1,15 +1,15 @@
-package com.wavesplatform.transaction.assets
+package com.gicsports.transaction.assets
 
 import cats.syntax.traverse._
-import com.wavesplatform.account.{AddressScheme, KeyPair, PrivateKey, PublicKey}
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TxValidationError.NegativeMinFee
-import com.wavesplatform.transaction._
-import com.wavesplatform.transaction.serialization.impl.SponsorFeeTxSerializer
-import com.wavesplatform.transaction.validation.TxValidator
-import com.wavesplatform.transaction.validation.impl.SponsorFeeTxValidator
+import com.gicsports.account.{AddressScheme, KeyPair, PrivateKey, PublicKey}
+import com.gicsports.crypto
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TxValidationError.NegativeMinFee
+import com.gicsports.transaction._
+import com.gicsports.transaction.serialization.impl.SponsorFeeTxSerializer
+import com.gicsports.transaction.validation.TxValidator
+import com.gicsports.transaction.validation.impl.SponsorFeeTxValidator
 import monix.eval.Coeval
 import play.api.libs.json.JsObject
 

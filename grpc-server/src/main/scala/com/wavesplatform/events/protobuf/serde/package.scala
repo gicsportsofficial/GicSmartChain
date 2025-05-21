@@ -1,14 +1,14 @@
-package com.wavesplatform.events.protobuf
+package com.gicsports.events.protobuf
 
 import cats.Monoid
 import com.google.protobuf.ByteString
-import com.wavesplatform.events.StateUpdate.AssetInfo
-import com.wavesplatform.events.protobuf.BlockchainUpdated.Append.Body
-import com.wavesplatform.events.protobuf.BlockchainUpdated.{Append, Rollback, Update}
-import com.wavesplatform.protobuf._
-import com.wavesplatform.protobuf.block.{PBBlocks, PBMicroBlocks}
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.{events => ve}
+import com.gicsports.events.StateUpdate.AssetInfo
+import com.gicsports.events.protobuf.BlockchainUpdated.Append.Body
+import com.gicsports.events.protobuf.BlockchainUpdated.{Append, Rollback, Update}
+import com.gicsports.protobuf._
+import com.gicsports.protobuf.block.{PBBlocks, PBMicroBlocks}
+import com.gicsports.transaction.Transaction
+import com.gicsports.{events => ve}
 
 import scala.util.{Failure, Try}
 

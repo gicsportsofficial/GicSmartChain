@@ -1,19 +1,19 @@
-package com.wavesplatform.lang.v1.evaluator
+package com.gicsports.lang.v1.evaluator
 
 import cats.Id
 import cats.implicits._
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.{ExecutionError, CommonError}
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V3, V4, V5}
-import com.wavesplatform.lang.v1.compiler.ScriptResultSource.CallableFunction
-import com.wavesplatform.lang.v1.compiler.Terms._
-import com.wavesplatform.lang.v1.compiler.Types.CASETYPEREF
-import com.wavesplatform.lang.v1.evaluator.ctx.EvaluationContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl._
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.{FieldNames, Types}
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.v1.traits.domain.Recipient.{Address, Alias}
-import com.wavesplatform.lang.v1.traits.domain._
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.{ExecutionError, CommonError}
+import com.gicsports.lang.directives.values.{StdLibVersion, V3, V4, V5}
+import com.gicsports.lang.v1.compiler.ScriptResultSource.CallableFunction
+import com.gicsports.lang.v1.compiler.Terms._
+import com.gicsports.lang.v1.compiler.Types.CASETYPEREF
+import com.gicsports.lang.v1.evaluator.ctx.EvaluationContext
+import com.gicsports.lang.v1.evaluator.ctx.impl._
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.{FieldNames, Types}
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.v1.traits.domain.Recipient.{Address, Alias}
+import com.gicsports.lang.v1.traits.domain._
 
 sealed trait ScriptResult {
   def returnedValue: EVALUATED                                                    = unit

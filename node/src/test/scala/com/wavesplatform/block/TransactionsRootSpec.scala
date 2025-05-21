@@ -1,15 +1,15 @@
-package com.wavesplatform.block
+package com.gicsports.block
 
-import com.wavesplatform.BlockGen
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.block.Block.TransactionProof
-import com.wavesplatform.common.merkle.Merkle.*
-import com.wavesplatform.crypto.Blake2b256
-import com.wavesplatform.protobuf.transaction.PBTransactions
-import com.wavesplatform.test.FreeSpec
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.transaction.transfer.TransferTransaction
+import com.gicsports.BlockGen
+import com.gicsports.account.KeyPair
+import com.gicsports.block.Block.TransactionProof
+import com.gicsports.common.merkle.Merkle.*
+import com.gicsports.crypto.Blake2b256
+import com.gicsports.protobuf.transaction.PBTransactions
+import com.gicsports.test.FreeSpec
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.Transaction
+import com.gicsports.transaction.transfer.TransferTransaction
 import org.scalacheck.Gen
 import org.scalatest.OptionValues
 

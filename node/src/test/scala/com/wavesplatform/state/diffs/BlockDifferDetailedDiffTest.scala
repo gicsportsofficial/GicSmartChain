@@ -1,17 +1,17 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithState
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.mining.MiningConstraint
-import com.wavesplatform.settings.{FunctionalitySettings, TestFunctionalitySettings as TFS}
-import com.wavesplatform.state.diffs.BlockDiffer.DetailedDiff
-import com.wavesplatform.state.{Blockchain, Diff}
-import com.wavesplatform.transaction.{TxHelpers, TxVersion}
-import com.wavesplatform.test.*
+import com.gicsports.account.Address
+import com.gicsports.block.Block
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithState
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.mining.MiningConstraint
+import com.gicsports.settings.{FunctionalitySettings, TestFunctionalitySettings as TFS}
+import com.gicsports.state.diffs.BlockDiffer.DetailedDiff
+import com.gicsports.state.{Blockchain, Diff}
+import com.gicsports.transaction.{TxHelpers, TxVersion}
+import com.gicsports.test.*
 
 class BlockDifferDetailedDiffTest extends FreeSpec with WithState {
 

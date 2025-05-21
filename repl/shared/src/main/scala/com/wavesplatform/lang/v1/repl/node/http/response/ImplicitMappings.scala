@@ -1,9 +1,9 @@
-package com.wavesplatform.lang.v1.repl.node.http.response
+package com.gicsports.lang.v1.repl.node.http.response
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.v1.repl.node.http.response.model._
-import com.wavesplatform.lang.v1.traits.domain.Recipient.Address
-import com.wavesplatform.lang.v1.traits.domain.{BlockInfo, ScriptAssetInfo, Tx}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.v1.repl.node.http.response.model._
+import com.gicsports.lang.v1.traits.domain.Recipient.Address
+import com.gicsports.lang.v1.traits.domain.{BlockInfo, ScriptAssetInfo, Tx}
 
 case class ImplicitMappings(chainId: Byte) {
   private val chainDependentMapper = new ChainDependentMapper(chainId)

@@ -1,6 +1,6 @@
-package com.wavesplatform.settings
+package com.gicsports.settings
 
-import com.wavesplatform.mining.Miner
+import com.gicsports.mining.Miner
 
 import scala.concurrent.duration.FiniteDuration
 

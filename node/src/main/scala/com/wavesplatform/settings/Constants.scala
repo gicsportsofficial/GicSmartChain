@@ -1,13 +1,13 @@
-package com.wavesplatform.settings
+package com.gicsports.settings
 
-import com.wavesplatform.Version
+import com.gicsports.Version
 
 /**
   * System constants here.
   */
 object Constants {
-  val ApplicationName = "CARDIUM"
-  val AgentName       = s"CARDIUM v${Version.VersionString}"
+  val ApplicationName = "GIC"
+  val AgentName       = s"GIC v${Version.VersionString}"
 
   val UnitsInWave = 100000000L
   val TotalWaves  = 100000000L

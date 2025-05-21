@@ -1,12 +1,12 @@
-package com.wavesplatform
+package com.gicsports
 
 import java.lang.reflect.Constructor
 
-import com.wavesplatform.account.{PrivateKey, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.utils.*
+import com.gicsports.account.{PrivateKey, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.utils.*
 import org.whispersystems.curve25519.OpportunisticCurve25519Provider
 
 import scala.util.Try

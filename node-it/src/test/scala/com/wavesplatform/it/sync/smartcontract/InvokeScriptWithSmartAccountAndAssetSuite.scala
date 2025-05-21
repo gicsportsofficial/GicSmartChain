@@ -1,16 +1,16 @@
-package com.wavesplatform.it.sync.smartcontract
+package com.gicsports.it.sync.smartcontract
 
-import com.wavesplatform.api.http.ApiError.{ScriptExecutionError, TransactionNotAllowedByAssetScript}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync.{issueFee, minFee, smartFee, smartMinFee}
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.api.http.ApiError.{ScriptExecutionError, TransactionNotAllowedByAssetScript}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync.{issueFee, minFee, smartFee, smartMinFee}
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.test._
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import org.scalatest.CancelAfterFailure
 
 class InvokeScriptWithSmartAccountAndAssetSuite extends BaseTransactionSuite with CancelAfterFailure {
@@ -36,11 +36,11 @@ class InvokeScriptWithSmartAccountAndAssetSuite extends BaseTransactionSuite wit
         Some("justWriteData"),
         fee = 0.09999999.waves
       ),
-      s"does not exceed minimal value of 10000000 CARDIUM"
+      s"does not exceed minimal value of 10000000 GIC"
     )
   }
 
-  test("max fee is 0.54 CARDIUM (0.005 + extraFee(1 smart caller + 1 payment + 10 transfers))") {
+  test("max fee is 0.54 GIC (0.005 + extraFee(1 smart caller + 1 payment + 10 transfers))") {
     val paymentAmount = 20
 
     assertApiError(
@@ -54,7 +54,7 @@ class InvokeScriptWithSmartAccountAndAssetSuite extends BaseTransactionSuite wit
         ),
       AssertiveApiError(
         ScriptExecutionError.Id,
-        "Error while executing dApp: Fee in CARDIUM for InvokeScriptTransaction (14999999 in CARDIUM) with 12 total scripts invoked does not exceed minimal value of 54000000 CARDIUM."
+        "Error while executing dApp: Fee in GIC for InvokeScriptTransaction (14999999 in GIC) with 12 total scripts invoked does not exceed minimal value of 54000000 GIC."
       )
     )
 
@@ -105,7 +105,7 @@ class InvokeScriptWithSmartAccountAndAssetSuite extends BaseTransactionSuite wit
         )
         ._1
         .id,
-      "does not exceed minimal value of 10000000 CARDIUM"
+      "does not exceed minimal value of 10000000 GIC"
     )
   }
 
@@ -123,7 +123,7 @@ class InvokeScriptWithSmartAccountAndAssetSuite extends BaseTransactionSuite wit
         ),
       AssertiveApiError(
         ScriptExecutionError.Id,
-        "Error while executing dApp: Fee in CARDIUM for InvokeScriptTransaction (10000000 in CARDIUM) with 2 total scripts invoked does not exceed minimal value of 14000000 CARDIUM."
+        "Error while executing dApp: Fee in GIC for InvokeScriptTransaction (10000000 in GIC) with 2 total scripts invoked does not exceed minimal value of 14000000 GIC."
       )
     )
   }

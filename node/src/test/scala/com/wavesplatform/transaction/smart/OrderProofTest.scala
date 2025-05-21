@@ -1,10 +1,10 @@
-package com.wavesplatform.transaction.smart
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.directives.values.{V1, V2, V3}
-import com.wavesplatform.lang.v1.compiler.Terms.{ARR, CaseObj}
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.Bindings
-import com.wavesplatform.lang.v1.traits.domain.{APair, Ord, OrdType, Recipient}
-import com.wavesplatform.test.FreeSpec
+package com.gicsports.transaction.smart
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.directives.values.{V1, V2, V3}
+import com.gicsports.lang.v1.compiler.Terms.{ARR, CaseObj}
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.Bindings
+import com.gicsports.lang.v1.traits.domain.{APair, Ord, OrdType, Recipient}
+import com.gicsports.test.FreeSpec
 
 class OrderProofTest extends FreeSpec {
 

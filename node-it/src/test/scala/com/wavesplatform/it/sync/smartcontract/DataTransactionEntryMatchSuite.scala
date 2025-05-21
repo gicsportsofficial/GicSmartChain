@@ -1,18 +1,18 @@
-package com.wavesplatform.it.sync.smartcontract
+package com.gicsports.it.sync.smartcontract
 
 import com.typesafe.config.Config
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.api.TransactionInfo
-import com.wavesplatform.it.sync.{setScriptFee, _}
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.state.StringDataEntry
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.account.KeyPair
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.api.TransactionInfo
+import com.gicsports.it.sync.{setScriptFee, _}
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.state.StringDataEntry
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.smart.script.ScriptCompiler
 
 class DataTransactionEntryMatchSuite extends BaseTransactionSuite {
   private val activationHeight = 5

@@ -1,4 +1,4 @@
-package com.wavesplatform.db
+package com.gicsports.db
 import org.iq80.leveldb
 import org.iq80.leveldb.*
 

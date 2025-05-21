@@ -1,7 +1,7 @@
-package com.wavesplatform.lang.v1.repl
+package com.gicsports.lang.v1.repl
 
-import com.wavesplatform.lang.v1.compiler.Types.FINAL
-import com.wavesplatform.lang.v1.evaluator.ctx.FunctionTypeSignature
+import com.gicsports.lang.v1.compiler.Types.FINAL
+import com.gicsports.lang.v1.evaluator.ctx.FunctionTypeSignature
 
 object DeclPrinter {
   def overloadFuncStr(name: String, signatures: List[FunctionTypeSignature]): String =

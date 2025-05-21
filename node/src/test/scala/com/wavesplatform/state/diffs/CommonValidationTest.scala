@@ -1,22 +1,22 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.account.{AddressScheme, Alias}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithState
-import com.wavesplatform.features.{BlockchainFeature, BlockchainFeatures}
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.mining.MiningConstraint
-import com.wavesplatform.settings.{Constants, FunctionalitySettings, TestFunctionalitySettings}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.exchange.OrderType
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.ParsedTransfer
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.transaction.{GenesisTransaction, Transaction, TxHelpers, TxNonNegativeAmount, TxVersion}
+import com.gicsports.account.{AddressScheme, Alias}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithState
+import com.gicsports.features.{BlockchainFeature, BlockchainFeatures}
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.mining.MiningConstraint
+import com.gicsports.settings.{Constants, FunctionalitySettings, TestFunctionalitySettings}
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.exchange.OrderType
+import com.gicsports.transaction.transfer.MassTransferTransaction.ParsedTransfer
+import com.gicsports.transaction.transfer.*
+import com.gicsports.transaction.{GenesisTransaction, Transaction, TxHelpers, TxNonNegativeAmount, TxVersion}
 
 class CommonValidationTest extends PropSpec with WithState {
 

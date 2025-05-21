@@ -1,12 +1,12 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import com.google.common.primitives.Bytes
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.serialization.Deser
-import com.wavesplatform.transaction.TxValidationError.{GenericError, ToBigProof, TooManyProofs, UsupportedProofVersion}
-import com.wavesplatform.utils.base58Length
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.Base58
+import com.gicsports.lang.ValidationError
+import com.gicsports.serialization.Deser
+import com.gicsports.transaction.TxValidationError.{GenericError, ToBigProof, TooManyProofs, UsupportedProofVersion}
+import com.gicsports.utils.base58Length
 import monix.eval.Coeval
 
 import scala.util.Try

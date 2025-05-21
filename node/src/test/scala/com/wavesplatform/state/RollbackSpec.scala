@@ -1,31 +1,31 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
-import com.wavesplatform.account.{Address, Alias, KeyPair, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.*
-import com.wavesplatform.features.BlockchainFeatures.*
-import com.wavesplatform.history
-import com.wavesplatform.history.Domain
-import com.wavesplatform.it.util.AddressOrAliasExt
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.TRUE
-import com.wavesplatform.lang.v1.compiler.{Terms, TestCompiler}
-import com.wavesplatform.lang.v1.traits.domain.Lease
-import com.wavesplatform.settings.{TestFunctionalitySettings, WavesSettings}
-import com.wavesplatform.state.reader.LeaseDetails
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.AliasDoesNotExist
-import com.wavesplatform.transaction.lease.LeaseTransaction
-import com.wavesplatform.transaction.smart.{InvokeTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.transaction.{Transaction, TxHelpers, TxNonNegativeAmount, TxVersion}
+import com.gicsports.account.{Address, Alias, KeyPair, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.*
+import com.gicsports.features.BlockchainFeatures.*
+import com.gicsports.history
+import com.gicsports.history.Domain
+import com.gicsports.it.util.AddressOrAliasExt
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.TRUE
+import com.gicsports.lang.v1.compiler.{Terms, TestCompiler}
+import com.gicsports.lang.v1.traits.domain.Lease
+import com.gicsports.settings.{TestFunctionalitySettings, WavesSettings}
+import com.gicsports.state.reader.LeaseDetails
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.AliasDoesNotExist
+import com.gicsports.transaction.lease.LeaseTransaction
+import com.gicsports.transaction.smart.{InvokeTransaction, SetScriptTransaction}
+import com.gicsports.transaction.transfer.*
+import com.gicsports.transaction.{Transaction, TxHelpers, TxNonNegativeAmount, TxVersion}
 import org.scalatest.{Assertion, Assertions}
 
 class RollbackSpec extends FreeSpec with WithDomain {
@@ -33,7 +33,7 @@ class RollbackSpec extends FreeSpec with WithDomain {
   private def nextTs = time.getTimestamp()
 
   private def randomOp(sender: KeyPair, recipient: Address, amount: Long, op: Int, nextTs: => Long = nextTs) = {
-    import com.wavesplatform.transaction.transfer.MassTransferTransaction.ParsedTransfer
+    import com.gicsports.transaction.transfer.MassTransferTransaction.ParsedTransfer
     op match {
       case 1 =>
         val lease       = TxHelpers.lease(sender, recipient, amount, fee = 2000000L, timestamp = nextTs, version = TxVersion.V1)

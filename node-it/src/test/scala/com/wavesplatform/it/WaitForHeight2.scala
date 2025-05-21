@@ -1,6 +1,6 @@
-package com.wavesplatform.it
+package com.gicsports.it
 
-import com.wavesplatform.it.api.AsyncHttpApi._
+import com.gicsports.it.api.AsyncHttpApi._
 import org.scalatest._
 
 import scala.concurrent.ExecutionContext.Implicits.global

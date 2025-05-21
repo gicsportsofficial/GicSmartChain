@@ -1,10 +1,10 @@
-package com.wavesplatform.consensus
+package com.gicsports.consensus
 
-import com.wavesplatform.account.{PrivateKey, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.consensus.PoSCalculator.HitSize
-import com.wavesplatform.crypto
-import com.wavesplatform.settings.FunctionalitySettings
+import com.gicsports.account.{PrivateKey, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.consensus.PoSCalculator.HitSize
+import com.gicsports.crypto
+import com.gicsports.settings.FunctionalitySettings
 
 sealed trait PoSCalculator {
   def calculateBaseTarget(

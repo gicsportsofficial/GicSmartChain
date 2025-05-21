@@ -1,14 +1,14 @@
-package com.wavesplatform.state.diffs.smart
+package com.gicsports.state.diffs.smart
 
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures.{BlockV5, SynchronousCalls}
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.settings.TestFunctionalitySettings
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TxHelpers
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures.{BlockV5, SynchronousCalls}
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.settings.TestFunctionalitySettings
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TxHelpers
 import org.scalatest.EitherValues
 
 class VerifierComplexityLimitTest extends PropSpec with WithDomain with EitherValues {

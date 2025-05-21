@@ -1,15 +1,15 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.NodeConfigs.Default
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.test._
-import com.wavesplatform.state.Sponsorship
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.assets.IssueTransaction
+import com.gicsports.account.KeyPair
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.NodeConfigs.Default
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.test._
+import com.gicsports.state.Sponsorship
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.assets.IssueTransaction
 import org.scalatest.CancelAfterFailure
 
 class CustomFeeTransactionSuite extends BaseTransactionSuite with CancelAfterFailure {
@@ -93,14 +93,14 @@ object CustomFeeTransactionSuite {
 
   private val assetId = assetTx.id()
 
-  private val minerConfig = ConfigFactory.parseString(s"""CARDIUM.fees.transfer.$assetId = 2000000
-                                                         |CARDIUM.blockchain.custom.functionality {
+  private val minerConfig = ConfigFactory.parseString(s"""GIC.fees.transfer.$assetId = 2000000
+                                                         |GIC.blockchain.custom.functionality {
                                                          |  feature-check-blocks-period = $featureCheckBlocksPeriod
                                                          |  blocks-for-feature-activation = $featureCheckBlocksPeriod
                                                          |  pre-activated-features = { 7 = 0, 14 = 1000000 }
                                                          |}""".stripMargin)
 
-  private val notMinerConfig = ConfigFactory.parseString("CARDIUM.miner.enable=no").withFallback(minerConfig)
+  private val notMinerConfig = ConfigFactory.parseString("GIC.miner.enable=no").withFallback(minerConfig)
 
   val Configs: Seq[Config] = Seq(
     minerConfig.withFallback(Default.head),

@@ -1,16 +1,16 @@
-package com.wavesplatform.state.diffs.invoke
+package com.gicsports.state.diffs.invoke
 
 import cats.syntax.semigroup.*
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.BlockchainFeatures.{ConsensusImprovements, SynchronousCalls}
-import com.wavesplatform.lang.Global
-import com.wavesplatform.lang.directives.values.{Account, DApp, StdLibVersion, V3}
-import com.wavesplatform.lang.directives.{DirectiveDictionary, DirectiveSet}
-import com.wavesplatform.lang.v1.evaluator.ctx.InvariableContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.WavesContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.state.Blockchain
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.BlockchainFeatures.{ConsensusImprovements, SynchronousCalls}
+import com.gicsports.lang.Global
+import com.gicsports.lang.directives.values.{Account, DApp, StdLibVersion, V3}
+import com.gicsports.lang.directives.{DirectiveDictionary, DirectiveSet}
+import com.gicsports.lang.v1.evaluator.ctx.InvariableContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.WavesContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.state.Blockchain
 
 object CachedDAppCTX {
   private val cache: Map[(StdLibVersion, Boolean, Boolean), InvariableContext] =

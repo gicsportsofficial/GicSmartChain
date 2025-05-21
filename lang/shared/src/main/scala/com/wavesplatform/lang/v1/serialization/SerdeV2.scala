@@ -1,16 +1,16 @@
-package com.wavesplatform.lang.v1.serialization
+package com.gicsports.lang.v1.serialization
 
 import cats.instances.lazyList.*
 import cats.instances.list.*
 import cats.syntax.apply.*
 import cats.syntax.traverse.*
 import com.google.protobuf.{CodedInputStream, CodedOutputStream}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.Types.CASETYPEREF
-import com.wavesplatform.lang.v1.serialization.Serde.*
-import com.wavesplatform.lang.utils.Serialize.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.Types.CASETYPEREF
+import com.gicsports.lang.v1.serialization.Serde.*
+import com.gicsports.lang.utils.Serialize.*
 import monix.eval.Coeval
 
 import java.io.ByteArrayOutputStream

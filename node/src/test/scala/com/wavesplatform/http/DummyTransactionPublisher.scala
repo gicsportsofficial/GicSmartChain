@@ -1,9 +1,9 @@
-package com.wavesplatform.http
+package com.gicsports.http
 
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.network.TransactionPublisher
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.transaction.smart.script.trace.TracedResult
+import com.gicsports.lang.ValidationError
+import com.gicsports.network.TransactionPublisher
+import com.gicsports.transaction.Transaction
+import com.gicsports.transaction.smart.script.trace.TracedResult
 
 import scala.concurrent.Future
 

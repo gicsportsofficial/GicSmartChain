@@ -1,10 +1,10 @@
-package com.wavesplatform.state.patch
+package com.gicsports.state.patch
 
 import scala.io.Source
 
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.features.BlockchainFeature
-import com.wavesplatform.state.{Blockchain, Diff}
+import com.gicsports.account.AddressScheme
+import com.gicsports.features.BlockchainFeature
+import com.gicsports.state.{Blockchain, Diff}
 import play.api.libs.json.{Json, Reads}
 
 trait PatchDataLoader {

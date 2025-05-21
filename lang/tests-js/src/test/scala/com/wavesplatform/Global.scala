@@ -1,4 +1,4 @@
-package com.wavesplatform
+package com.gicsports
 
 import scala.scalajs.js.annotation.JSExportTopLevel
 import scala.scalajs.js.typedarray.ArrayBuffer

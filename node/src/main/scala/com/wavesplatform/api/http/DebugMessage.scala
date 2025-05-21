@@ -1,4 +1,4 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import play.api.libs.json.{Format, Json}
 

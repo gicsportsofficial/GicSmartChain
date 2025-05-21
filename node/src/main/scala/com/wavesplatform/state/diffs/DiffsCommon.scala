@@ -1,25 +1,25 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
 import cats.instances.option.*
 import cats.syntax.apply.*
 import cats.syntax.either.*
 import cats.syntax.ior.*
 import cats.syntax.traverse.*
-import com.wavesplatform.account.{Address, AddressOrAlias, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.ComplexityCheckPolicyProvider.*
-import com.wavesplatform.features.EstimatorProvider.*
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.estimator.ScriptEstimatorV1
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.lang.v1.traits.domain.*
-import com.wavesplatform.state.reader.LeaseDetails
-import com.wavesplatform.state.{AssetVolumeInfo, Blockchain, Diff, LeaseBalance, Portfolio, SponsorshipValue}
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.{Authorized, Transaction}
+import com.gicsports.account.{Address, AddressOrAlias, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.ComplexityCheckPolicyProvider.*
+import com.gicsports.features.EstimatorProvider.*
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.estimator.ScriptEstimatorV1
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.lang.v1.traits.domain.*
+import com.gicsports.state.reader.LeaseDetails
+import com.gicsports.state.{AssetVolumeInfo, Blockchain, Diff, LeaseBalance, Portfolio, SponsorshipValue}
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.{Authorized, Transaction}
 
 object DiffsCommon {
   def countScriptRuns(blockchain: Blockchain, tx: Transaction & Authorized): Int =

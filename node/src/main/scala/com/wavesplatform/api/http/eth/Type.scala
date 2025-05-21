@@ -1,4 +1,4 @@
-package com.wavesplatform.api.http.eth
+package com.gicsports.api.http.eth
 
 import org.web3j.abi.datatypes.{Utf8String, Type => EthType}
 

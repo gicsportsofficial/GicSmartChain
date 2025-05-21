@@ -1,9 +1,9 @@
-package com.wavesplatform.lang.parser
+package com.gicsports.lang.parser
 
-import com.wavesplatform.lang.directives.DirectiveKey.*
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.directives.{Directive, DirectiveParser}
-import com.wavesplatform.test.*
+import com.gicsports.lang.directives.DirectiveKey.*
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.directives.{Directive, DirectiveParser}
+import com.gicsports.test.*
 
 class DirectiveParserTest extends PropSpec {
 

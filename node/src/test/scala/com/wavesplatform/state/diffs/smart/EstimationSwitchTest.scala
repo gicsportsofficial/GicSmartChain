@@ -1,19 +1,19 @@
-package com.wavesplatform.state.diffs.smart
+package com.gicsports.state.diffs.smart
 
-import com.wavesplatform.TransactionGenBase
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.features.BlockchainFeatures._
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.settings.TestFunctionalitySettings
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.state.diffs.ci.ciFee
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.utils.Signed
-import com.wavesplatform.transaction.{GenesisTransaction, TxVersion}
+import com.gicsports.TransactionGenBase
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.features.BlockchainFeatures._
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.settings.TestFunctionalitySettings
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.state.diffs.ci.ciFee
+import com.gicsports.test._
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.utils.Signed
+import com.gicsports.transaction.{GenesisTransaction, TxVersion}
 
 class EstimationSwitchTest extends PropSpec with WithDomain with TransactionGenBase {
   private val time = new TestTime

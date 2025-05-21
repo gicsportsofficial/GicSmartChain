@@ -1,20 +1,20 @@
-package com.wavesplatform.state.diffs.ci
+package com.gicsports.state.diffs.ci
 
-import com.wavesplatform.TestValues
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.db.{DBCacheSettings, WithDomain, WithState}
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.BlockchainFeatures.{BlockV5, SynchronousCalls}
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_LONG, CONST_STRING}
-import com.wavesplatform.state.{IntegerDataEntry, StringDataEntry}
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{DataTransaction, Transaction, TxHelpers, TxVersion}
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.TestValues
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.db.{DBCacheSettings, WithDomain, WithState}
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.BlockchainFeatures.{BlockV5, SynchronousCalls}
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.Terms.{CONST_LONG, CONST_STRING}
+import com.gicsports.state.{IntegerDataEntry, StringDataEntry}
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.test.*
+import com.gicsports.transaction.{DataTransaction, Transaction, TxHelpers, TxVersion}
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
 import org.scalatest.EitherValues
 
 class InvokeFeeMultiplierTest extends PropSpec with WithState with DBCacheSettings with WithDomain with EitherValues {
@@ -82,7 +82,7 @@ class InvokeFeeMultiplierTest extends PropSpec with WithState with DBCacheSettin
       d.appendBlock(data2)
       d.blockchainUpdater.height shouldBe estimatorV3ActivationHeight
       d.appendBlockE(invoke2) should produce(
-        s"Fee in CARDIUM for InvokeScriptTransaction (${invoke2.fee} in CARDIUM) with 3 invocation steps does not exceed minimal value of 18000000 CARDIUM"
+        s"Fee in GIC for InvokeScriptTransaction (${invoke2.fee} in GIC) with 3 invocation steps does not exceed minimal value of 18000000 GIC"
       )
 
       d.appendBlock()

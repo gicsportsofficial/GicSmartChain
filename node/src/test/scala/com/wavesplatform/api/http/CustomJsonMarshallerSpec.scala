@@ -1,25 +1,25 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import akka.http.scaladsl.model.HttpRequest
 import akka.http.scaladsl.model.MediaTypes.`application/json`
 import akka.http.scaladsl.model.headers.Accept
 import akka.http.scaladsl.server.Route
 import akka.http.scaladsl.testkit.ScalatestRouteTest
-import com.wavesplatform.api.common.{CommonAccountsApi, CommonAssetsApi, CommonTransactionsApi, TransactionMeta}
-import com.wavesplatform.api.http.assets.AssetsApiRoute
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.DefaultBlockchainSettings
-import com.wavesplatform.http.{ApiErrorMatchers, RestAPISettingsHelper}
-import com.wavesplatform.network.TransactionPublisher
-import com.wavesplatform.state.reader.LeaseDetails
-import com.wavesplatform.state.{Blockchain, Height}
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.utils.Schedulers
-import com.wavesplatform.utx.UtxPool
-import com.wavesplatform.{NTPTime, TestWallet}
+import com.gicsports.api.common.{CommonAccountsApi, CommonAssetsApi, CommonTransactionsApi, TransactionMeta}
+import com.gicsports.api.http.assets.AssetsApiRoute
+import com.gicsports.common.state.ByteStr
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.DefaultBlockchainSettings
+import com.gicsports.http.{ApiErrorMatchers, RestAPISettingsHelper}
+import com.gicsports.network.TransactionPublisher
+import com.gicsports.state.reader.LeaseDetails
+import com.gicsports.state.{Blockchain, Height}
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.Asset
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.utils.Schedulers
+import com.gicsports.utx.UtxPool
+import com.gicsports.{NTPTime, TestWallet}
 import org.scalactic.source.Position
 import org.scalamock.scalatest.PathMockFactory
 import play.api.libs.json.*
@@ -103,7 +103,7 @@ class CustomJsonMarshallerSpec
     (blockchain.wavesAmount _).expects(*).returning(BigInt(10000000)).twice()
     (blockchain.blockRewardVotes _).expects(1000).returning(Seq(100L)).twice()
 
-    checkRoute(Get("/blockchain/rewards/1000"), rewardRoute, "totalCardiumAmount", "currentReward", "minIncrement")
+    checkRoute(Get("/blockchain/rewards/1000"), rewardRoute, "totalGicAmount", "currentReward", "minIncrement")
   }
 
   property("/debug/stateTN") {

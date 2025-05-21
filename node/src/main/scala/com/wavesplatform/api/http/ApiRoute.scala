@@ -1,11 +1,11 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import akka.http.scaladsl.server.*
-import com.wavesplatform.api.http.ApiError.ApiKeyNotValid
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.crypto
-import com.wavesplatform.settings.RestAPISettings
-import com.wavesplatform.utils.*
+import com.gicsports.api.http.ApiError.ApiKeyNotValid
+import com.gicsports.common.utils.Base58
+import com.gicsports.crypto
+import com.gicsports.settings.RestAPISettings
+import com.gicsports.utils.*
 
 trait ApiRoute extends Directives with CustomDirectives with ApiMarshallers with ScorexLogging {
   def route: Route

@@ -1,19 +1,19 @@
-package com.wavesplatform.lang.v1.repl
+package com.gicsports.lang.v1.repl
 
 import cats.Monad
 import cats.data.EitherT
 import cats.implicits.*
-import com.wavesplatform.lang.v1.compiler.CompilerContext.VariableInfo
-import com.wavesplatform.lang.v1.compiler.Terms.EVALUATED
-import com.wavesplatform.lang.v1.compiler.Types.{FINAL, UNIT}
-import com.wavesplatform.lang.v1.compiler.{CompilerContext, ExpressionCompiler, TermPrinter}
-import com.wavesplatform.lang.v1.evaluator.EvaluatorV1
-import com.wavesplatform.lang.v1.evaluator.ctx.{EvaluationContext, FunctionTypeSignature, LazyVal}
-import com.wavesplatform.lang.v1.parser.Expressions.EXPR
-import com.wavesplatform.lang.v1.parser.Expressions.Pos.AnyPos
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.lang.v1.repl.Implicits.*
-import com.wavesplatform.lang.v1.traits.Environment
+import com.gicsports.lang.v1.compiler.CompilerContext.VariableInfo
+import com.gicsports.lang.v1.compiler.Terms.EVALUATED
+import com.gicsports.lang.v1.compiler.Types.{FINAL, UNIT}
+import com.gicsports.lang.v1.compiler.{CompilerContext, ExpressionCompiler, TermPrinter}
+import com.gicsports.lang.v1.evaluator.EvaluatorV1
+import com.gicsports.lang.v1.evaluator.ctx.{EvaluationContext, FunctionTypeSignature, LazyVal}
+import com.gicsports.lang.v1.parser.Expressions.EXPR
+import com.gicsports.lang.v1.parser.Expressions.Pos.AnyPos
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.lang.v1.repl.Implicits.*
+import com.gicsports.lang.v1.traits.Environment
 
 class ReplEngine[F[_]: Monad] {
   val evaluator = new EvaluatorV1[F, Environment]

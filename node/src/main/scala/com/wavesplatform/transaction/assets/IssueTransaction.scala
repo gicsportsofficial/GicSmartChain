@@ -1,16 +1,16 @@
-package com.wavesplatform.transaction.assets
+package com.gicsports.transaction.assets
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{AddressScheme, KeyPair, PrivateKey, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction._
-import com.wavesplatform.transaction.serialization.impl.IssueTxSerializer
-import com.wavesplatform.transaction.validation.TxValidator
-import com.wavesplatform.transaction.validation.impl.IssueTxValidator
+import com.gicsports.account.{AddressScheme, KeyPair, PrivateKey, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.script.Script
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction._
+import com.gicsports.transaction.serialization.impl.IssueTxSerializer
+import com.gicsports.transaction.validation.TxValidator
+import com.gicsports.transaction.validation.impl.IssueTxValidator
 import monix.eval.Coeval
 import play.api.libs.json.JsObject
 

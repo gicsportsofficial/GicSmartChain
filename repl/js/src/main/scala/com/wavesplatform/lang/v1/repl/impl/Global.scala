@@ -1,4 +1,4 @@
-package com.wavesplatform.lang.v1.repl.impl
+package com.gicsports.lang.v1.repl.impl
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSGlobalScope

@@ -1,12 +1,12 @@
-package com.wavesplatform.it
+package com.gicsports.it
 
 import java.nio.charset.StandardCharsets
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.state._
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.transaction.assets.exchange.AssetPair
-import com.wavesplatform.utils.{Paged, ScorexLogging}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.state._
+import com.gicsports.transaction.Asset
+import com.gicsports.transaction.assets.exchange.AssetPair
+import com.gicsports.utils.{Paged, ScorexLogging}
 import org.asynchttpclient.Response
 import play.api.libs.functional.syntax._
 import play.api.libs.json.Json.parse
@@ -53,7 +53,7 @@ package object api {
           "sponsorBalance",
           "totalAmount",
           "totalFee",
-          "totalCardiumAmount",
+          "totalGicAmount",
           "value"
         )
         jsv match {
@@ -90,19 +90,19 @@ package object api {
     }
   }
 
-  implicit val addressReads: Reads[com.wavesplatform.account.Address] = Reads {
+  implicit val addressReads: Reads[com.gicsports.account.Address] = Reads {
     case JsString(addrStr) =>
-      com.wavesplatform.account.Address
+      com.gicsports.account.Address
         .fromString(addrStr)
         .fold(err => JsError(err.toString), addr => JsSuccess(addr))
     case _ => JsError("Expected base58 encoded address")
   }
 
-  implicit val dstMapReads: Reads[Map[com.wavesplatform.account.Address, Long]] = Reads { json =>
+  implicit val dstMapReads: Reads[Map[com.gicsports.account.Address, Long]] = Reads { json =>
     json.validate[Map[String, Long]].map { dst =>
       dst.map {
         case (addrStr, balance) =>
-          com.wavesplatform.account.Address.fromString(addrStr).explicitGet() -> balance
+          com.gicsports.account.Address.fromString(addrStr).explicitGet() -> balance
       }
     }
   }
@@ -115,7 +115,7 @@ package object api {
 
   implicit val distributionReads: Reads[AssetDistribution] = Reads { json =>
     json
-      .validate[Map[com.wavesplatform.account.Address, Long]]
+      .validate[Map[com.gicsports.account.Address, Long]]
       .map(dst => AssetDistribution(dst))
   }
 
@@ -127,6 +127,6 @@ package object api {
     )(Paged.apply[C, R] _)
 
   implicit val distributionPageReads: Reads[AssetDistributionPage] = Reads { json =>
-    json.validate[Paged[com.wavesplatform.account.Address, AssetDistribution]].map(pg => AssetDistributionPage(pg))
+    json.validate[Paged[com.gicsports.account.Address, AssetDistribution]].map(pg => AssetDistributionPage(pg))
   }
 }

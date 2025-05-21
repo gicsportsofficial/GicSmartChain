@@ -1,20 +1,20 @@
-package com.wavesplatform.lang.evaluator
+package com.gicsports.lang.evaluator
 
 import cats.Id
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.directives.values.V3
-import com.wavesplatform.lang.utils
-import com.wavesplatform.lang.v1.compiler.Terms._
-import com.wavesplatform.lang.v1.compiler.Types.{CASETYPEREF, FINAL}
-import com.wavesplatform.lang.v1.evaluator.ctx.EvaluationContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.FieldNames
-import com.wavesplatform.lang.v1.evaluator.{ScriptResult, ScriptResultV3}
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.v1.traits.domain.Recipient.Address
-import com.wavesplatform.lang.v1.traits.domain.{AssetTransfer, DataItem}
-import com.wavesplatform.test._
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.directives.values.V3
+import com.gicsports.lang.utils
+import com.gicsports.lang.v1.compiler.Terms._
+import com.gicsports.lang.v1.compiler.Types.{CASETYPEREF, FINAL}
+import com.gicsports.lang.v1.evaluator.ctx.EvaluationContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.FieldNames
+import com.gicsports.lang.v1.evaluator.{ScriptResult, ScriptResultV3}
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.v1.traits.domain.Recipient.Address
+import com.gicsports.lang.v1.traits.domain.{AssetTransfer, DataItem}
+import com.gicsports.test._
 
 class ScriptResultTest extends PropSpec {
 
@@ -25,7 +25,7 @@ class ScriptResultTest extends PropSpec {
   val address1 = ByteStr.fromBytes(19: Byte)
   val address2 = ByteStr.fromBytes(20: Byte)
   val asset    = ByteStr.fromBytes(21: Byte)
-  val noAsset  = com.wavesplatform.lang.v1.evaluator.ctx.impl.unit
+  val noAsset  = com.gicsports.lang.v1.evaluator.ctx.impl.unit
 
   val writeSetObj = CaseObj(
     CASETYPEREF("WriteSet", el),

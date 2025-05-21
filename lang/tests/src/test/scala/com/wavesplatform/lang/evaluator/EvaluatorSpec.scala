@@ -1,19 +1,19 @@
-package com.wavesplatform.lang.evaluator
+package com.gicsports.lang.evaluator
 
 import cats.implicits.*
 import cats.Id
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.{Common, ExecutionError}
-import com.wavesplatform.lang.directives.{DirectiveDictionary, DirectiveSet}
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.utils.lazyContexts
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler
-import com.wavesplatform.lang.v1.compiler.Terms.{EVALUATED, EXPR}
-import com.wavesplatform.lang.v1.evaluator.ContractEvaluator.LogExtraInfo
-import com.wavesplatform.lang.v1.evaluator.{EvaluatorV2, Log}
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.lang.v1.testing.ScriptGen
-import com.wavesplatform.test.PropSpec
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.{Common, ExecutionError}
+import com.gicsports.lang.directives.{DirectiveDictionary, DirectiveSet}
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.utils.lazyContexts
+import com.gicsports.lang.v1.compiler.ExpressionCompiler
+import com.gicsports.lang.v1.compiler.Terms.{EVALUATED, EXPR}
+import com.gicsports.lang.v1.evaluator.ContractEvaluator.LogExtraInfo
+import com.gicsports.lang.v1.evaluator.{EvaluatorV2, Log}
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.lang.v1.testing.ScriptGen
+import com.gicsports.test.PropSpec
 import org.scalatest.Inside
 import org.scalatest.exceptions.TestFailedException
 

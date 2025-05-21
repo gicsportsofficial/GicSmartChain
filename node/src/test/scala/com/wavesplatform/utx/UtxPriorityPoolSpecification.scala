@@ -1,15 +1,15 @@
-package com.wavesplatform.utx
+package com.gicsports.utx
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.db.WithState
-import com.wavesplatform.lang.directives.values.V3
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.mining.MultiDimensionalMiningConstraint
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.utx.UtxPool.PackStrategy
+import com.gicsports.account.KeyPair
+import com.gicsports.db.WithState
+import com.gicsports.lang.directives.values.V3
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.mining.MultiDimensionalMiningConstraint
+import com.gicsports.settings.WavesSettings
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.utx.UtxPool.PackStrategy
 
 class UtxPriorityPoolSpecification extends FreeSpec with SharedDomain {
   private val alice = TxHelpers.signer(100)

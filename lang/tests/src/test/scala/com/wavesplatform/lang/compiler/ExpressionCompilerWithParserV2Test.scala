@@ -1,15 +1,15 @@
-package com.wavesplatform.lang.compiler
+package com.gicsports.lang.compiler
 
 import cats.implicits.toBifunctorOps
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.directives.{Directive, DirectiveParser}
-import com.wavesplatform.lang.utils
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler
-import com.wavesplatform.lang.v1.compiler.Types.*
-import com.wavesplatform.lang.v1.parser.Expressions
-import com.wavesplatform.lang.v1.parser.Expressions.*
-import com.wavesplatform.lang.v1.parser.Expressions.Pos.AnyPos
-import com.wavesplatform.test.PropSpec
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.directives.{Directive, DirectiveParser}
+import com.gicsports.lang.utils
+import com.gicsports.lang.v1.compiler.ExpressionCompiler
+import com.gicsports.lang.v1.compiler.Types.*
+import com.gicsports.lang.v1.parser.Expressions
+import com.gicsports.lang.v1.parser.Expressions.*
+import com.gicsports.lang.v1.parser.Expressions.Pos.AnyPos
+import com.gicsports.test.PropSpec
 
 class ExpressionCompilerWithParserV2Test extends PropSpec {
 

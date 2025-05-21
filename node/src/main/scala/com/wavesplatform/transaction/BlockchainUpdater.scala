@@ -1,9 +1,9 @@
-package com.wavesplatform.transaction
-import com.wavesplatform.block.Block.BlockId
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.Diff
+package com.gicsports.transaction
+import com.gicsports.block.Block.BlockId
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.Diff
 import monix.reactive.Observable
 
 trait BlockchainUpdater {

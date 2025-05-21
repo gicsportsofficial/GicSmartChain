@@ -1,9 +1,9 @@
-package com.wavesplatform.api.http.requests
+package com.gicsports.api.http.requests
 
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.DataEntry
-import com.wavesplatform.transaction.{DataTransaction, Proofs}
+import com.gicsports.account.PublicKey
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.DataEntry
+import com.gicsports.transaction.{DataTransaction, Proofs}
 import play.api.libs.json.{Format, Json}
 
 object DataRequest {

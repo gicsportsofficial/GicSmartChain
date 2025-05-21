@@ -1,25 +1,25 @@
-package com.wavesplatform.state.diffs.freecall
+package com.gicsports.state.diffs.freecall
 
-import com.wavesplatform.account.{Address, KeyPair}
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.directives.DirectiveDictionary
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V3, V5, V6}
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
-import com.wavesplatform.state.diffs.ci.ciFee
-import com.wavesplatform.state.diffs.{ENOUGH_AMT, FeeValidation}
-import com.wavesplatform.state.{BinaryDataEntry, BooleanDataEntry, NewAssetInfo}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.{IssueTransaction, SponsorFeeTransaction}
-import com.wavesplatform.transaction.smart.{InvokeExpressionTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.{GenesisTransaction, Transaction, TxHelpers, TxVersion}
-import com.wavesplatform.utils.JsonMatchers
+import com.gicsports.account.{Address, KeyPair}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.directives.DirectiveDictionary
+import com.gicsports.lang.directives.values.{StdLibVersion, V3, V5, V6}
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
+import com.gicsports.state.diffs.ci.ciFee
+import com.gicsports.state.diffs.{ENOUGH_AMT, FeeValidation}
+import com.gicsports.state.{BinaryDataEntry, BooleanDataEntry, NewAssetInfo}
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.{IssueTransaction, SponsorFeeTransaction}
+import com.gicsports.transaction.smart.{InvokeExpressionTransaction, SetScriptTransaction}
+import com.gicsports.transaction.{GenesisTransaction, Transaction, TxHelpers, TxVersion}
+import com.gicsports.utils.JsonMatchers
 import org.scalatest.{Assertion, EitherValues}
 import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks
 import play.api.libs.json.Json
@@ -418,7 +418,7 @@ private object InvokeExpressionTest {
     val expectingFee =
       FeeConstants(invoke.tpe) * FeeUnit + (if (issue) 1 else 0) * 1000_0000_0000L + (if (verifier) 1 else 0) * FeeValidation.ScriptExtraFee
     val issueErr = if (issue) " with 1 assets issued" else ""
-    s"for InvokeExpressionTransaction (${invoke.fee} in CARDIUM)$issueErr does not exceed minimal value of $expectingFee CARDIUM."
+    s"for InvokeExpressionTransaction (${invoke.fee} in GIC)$issueErr does not exceed minimal value of $expectingFee GIC."
   }
 
   def verifier(version: StdLibVersion): Script =

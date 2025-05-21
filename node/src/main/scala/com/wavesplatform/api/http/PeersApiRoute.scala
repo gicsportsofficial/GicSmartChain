@@ -1,12 +1,12 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import java.net.{InetAddress, InetSocketAddress}
 import java.util.concurrent.ConcurrentMap
 import java.util.stream.Collectors
 
 import akka.http.scaladsl.server.Route
-import com.wavesplatform.network.{PeerDatabase, PeerInfo}
-import com.wavesplatform.settings.RestAPISettings
+import com.gicsports.network.{PeerDatabase, PeerInfo}
+import com.gicsports.settings.RestAPISettings
 import io.netty.channel.Channel
 import play.api.libs.json._
 

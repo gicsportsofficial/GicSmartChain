@@ -1,13 +1,13 @@
-package com.wavesplatform.transaction.lease
+package com.gicsports.transaction.lease
 
-import com.wavesplatform.account.{AddressScheme, KeyPair, PrivateKey, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction._
-import com.wavesplatform.transaction.serialization.impl.LeaseCancelTxSerializer
-import com.wavesplatform.transaction.validation.TxValidator
-import com.wavesplatform.transaction.validation.impl.LeaseCancelTxValidator
+import com.gicsports.account.{AddressScheme, KeyPair, PrivateKey, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction._
+import com.gicsports.transaction.serialization.impl.LeaseCancelTxSerializer
+import com.gicsports.transaction.validation.TxValidator
+import com.gicsports.transaction.validation.impl.LeaseCancelTxValidator
 import monix.eval.Coeval
 import play.api.libs.json.JsObject
 

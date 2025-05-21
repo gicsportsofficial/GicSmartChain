@@ -1,5 +1,5 @@
-package com.wavesplatform.code
-import com.wavesplatform.test.FlatSpec
+package com.gicsports.code
+import com.gicsports.test.FlatSpec
 
 // See http://eed3si9n.com/herding-cats/partial-unification.html
 class PartialUnificationTests extends FlatSpec {

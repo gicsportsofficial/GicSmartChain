@@ -1,19 +1,19 @@
-package com.wavesplatform.state.diffs.smart.predef
+package com.gicsports.state.diffs.smart.predef
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.contract.DApp.{VerifierAnnotation, VerifierFunction}
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.script.{ContractScript, Script}
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.{BLOCK, CONST_BOOLEAN, DECLARATION, EXPR, FUNC, FUNCTION_CALL, LET, REF}
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.TxHelpers
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.contract.DApp.{VerifierAnnotation, VerifierFunction}
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.script.{ContractScript, Script}
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.{BLOCK, CONST_BOOLEAN, DECLARATION, EXPR, FUNC, FUNCTION_CALL, LET, REF}
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.test.*
+import com.gicsports.transaction.TxHelpers
 import org.scalatest.EitherValues
 
 class DAppVerifierRestrictionsTest extends PropSpec with WithDomain with EitherValues {

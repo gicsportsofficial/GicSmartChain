@@ -1,4 +1,4 @@
-package com.wavesplatform
+package com.gicsports
 
 import cats.{Eval, Id, Monad, StackSafeMonad}
 import cats.data.EitherT

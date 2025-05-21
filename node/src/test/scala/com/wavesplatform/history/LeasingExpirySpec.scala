@@ -1,18 +1,18 @@
-package com.wavesplatform.history
+package com.gicsports.history
 
-import com.wavesplatform.account.{AddressOrAlias, Alias, KeyPair}
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.Domain.BlockchainUpdaterExt
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.settings.{Constants, FunctionalitySettings}
-import com.wavesplatform.state.{Blockchain, LeaseBalance}
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.GenesisTransaction
-import com.wavesplatform.transaction.lease.LeaseTransaction
+import com.gicsports.account.{AddressOrAlias, Alias, KeyPair}
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.Domain.BlockchainUpdaterExt
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.settings.{Constants, FunctionalitySettings}
+import com.gicsports.state.{Blockchain, LeaseBalance}
+import com.gicsports.test._
+import com.gicsports.transaction.GenesisTransaction
+import com.gicsports.transaction.lease.LeaseTransaction
 import org.scalacheck.Gen
 import org.scalactic.source.Position
 

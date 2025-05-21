@@ -1,12 +1,12 @@
-package com.wavesplatform.lang.v1
+package com.gicsports.lang.v1
 
 import java.util.concurrent.TimeUnit
 
-import com.wavesplatform.lang.Common
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.{Account, Expression, V5}
-import com.wavesplatform.lang.utils.lazyContexts
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext
+import com.gicsports.lang.Common
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.{Account, Expression, V5}
+import com.gicsports.lang.utils.lazyContexts
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext
 import org.openjdk.jmh.annotations.{State, _}
 import org.openjdk.jmh.infra.Blackhole
 

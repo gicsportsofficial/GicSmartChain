@@ -1,11 +1,11 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TxHelpers
+import com.gicsports.common.state.ByteStr
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TxHelpers
 
 class CommonSpec extends FreeSpec with WithDomain {
 

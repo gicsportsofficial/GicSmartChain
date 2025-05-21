@@ -1,18 +1,18 @@
-package com.wavesplatform.it
+package com.gicsports.it
 
 import java.net.{InetSocketAddress, URL}
 
 import scala.concurrent.duration.FiniteDuration
 
 import com.typesafe.config.Config
-import com.wavesplatform.account.{KeyPair, PublicKey}
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.util.GlobalTimer
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.state.diffs.FeeValidation
-import com.wavesplatform.transaction.TransactionType
-import com.wavesplatform.utils.LoggerFacade
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.account.{KeyPair, PublicKey}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.util.GlobalTimer
+import com.gicsports.settings.WavesSettings
+import com.gicsports.state.diffs.FeeValidation
+import com.gicsports.transaction.TransactionType
+import com.gicsports.utils.LoggerFacade
+import com.gicsports.wallet.Wallet
 import io.grpc.{ManagedChannel, ManagedChannelBuilder}
 import org.asynchttpclient._
 import org.asynchttpclient.Dsl.{config => clientConfig, _}

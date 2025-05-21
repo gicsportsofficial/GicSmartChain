@@ -1,22 +1,22 @@
-package com.wavesplatform.events
+package com.gicsports.events
 
 import java.nio.{ByteBuffer, ByteOrder}
 import cats.syntax.semigroup._
 import com.google.common.primitives.Ints
-import com.wavesplatform.api.common.CommonBlocksApi
-import com.wavesplatform.api.grpc._
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.database.DBExt
-import com.wavesplatform.events.Repo.keyForHeight
-import com.wavesplatform.events.api.grpc.protobuf.BlockchainUpdatesApiGrpc.BlockchainUpdatesApi
-import com.wavesplatform.events.api.grpc.protobuf._
-import com.wavesplatform.events.protobuf.serde._
-import com.wavesplatform.events.protobuf.{BlockchainUpdated => PBBlockchainUpdated}
-import com.wavesplatform.events.repo.LiquidState
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.state.diffs.BlockDiffer
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.api.common.CommonBlocksApi
+import com.gicsports.api.grpc._
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.database.DBExt
+import com.gicsports.events.Repo.keyForHeight
+import com.gicsports.events.api.grpc.protobuf.BlockchainUpdatesApiGrpc.BlockchainUpdatesApi
+import com.gicsports.events.api.grpc.protobuf._
+import com.gicsports.events.protobuf.serde._
+import com.gicsports.events.protobuf.{BlockchainUpdated => PBBlockchainUpdated}
+import com.gicsports.events.repo.LiquidState
+import com.gicsports.state.Blockchain
+import com.gicsports.state.diffs.BlockDiffer
+import com.gicsports.utils.ScorexLogging
 import io.grpc.stub.StreamObserver
 import monix.eval.Task
 import monix.execution.Scheduler

@@ -1,6 +1,6 @@
-package com.wavesplatform.lang.directives.values
+package com.gicsports.lang.directives.values
 
-import com.wavesplatform.lang.directives._
+import com.gicsports.lang.directives._
 
 case class Imports(fileNames: List[String] = Nil) extends DirectiveValue(fileNames.mkString(", "), 0) {
   override def key: DirectiveKey = resolveKey[Imports]

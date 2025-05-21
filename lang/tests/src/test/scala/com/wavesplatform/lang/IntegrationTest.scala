@@ -1,31 +1,31 @@
-package com.wavesplatform.lang
+package com.gicsports.lang
 
 import cats.Id
 import cats.kernel.Monoid
 import cats.syntax.either.*
 import com.google.common.io.BaseEncoding
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.crypto.Keccak256
-import com.wavesplatform.lang.Common.*
-import com.wavesplatform.lang.Testing.*
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.Types.{BYTESTR, FINAL, LONG}
-import com.wavesplatform.lang.v1.compiler.{ExpressionCompiler, Terms}
-import com.wavesplatform.lang.v1.evaluator.Contextful.NoContext
-import com.wavesplatform.lang.v1.evaluator.ContractEvaluator.LogExtraInfo
-import com.wavesplatform.lang.v1.evaluator.ctx.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext.MaxListLengthV4
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.WavesContext
-import com.wavesplatform.lang.v1.evaluator.{Contextful, ContextfulVal, EvaluatorV2}
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.v1.traits.domain.Recipient.{Address, Alias}
-import com.wavesplatform.lang.v1.traits.domain.{Issue, Lease}
-import com.wavesplatform.lang.v1.{CTX, ContractLimits}
-import com.wavesplatform.test.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.crypto.Keccak256
+import com.gicsports.lang.Common.*
+import com.gicsports.lang.Testing.*
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.Types.{BYTESTR, FINAL, LONG}
+import com.gicsports.lang.v1.compiler.{ExpressionCompiler, Terms}
+import com.gicsports.lang.v1.evaluator.Contextful.NoContext
+import com.gicsports.lang.v1.evaluator.ContractEvaluator.LogExtraInfo
+import com.gicsports.lang.v1.evaluator.ctx.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext.MaxListLengthV4
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.WavesContext
+import com.gicsports.lang.v1.evaluator.{Contextful, ContextfulVal, EvaluatorV2}
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.v1.traits.domain.Recipient.{Address, Alias}
+import com.gicsports.lang.v1.traits.domain.{Issue, Lease}
+import com.gicsports.lang.v1.{CTX, ContractLimits}
+import com.gicsports.test.*
 import org.scalatest.Inside
 import org.web3j.crypto.Keys
 

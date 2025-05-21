@@ -1,12 +1,12 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.network.RxScoreObserver.ChannelClosedAndSyncWith
-import com.wavesplatform.test.FreeSpec
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.{BlockGen, RxScheduler}
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.network.RxScoreObserver.ChannelClosedAndSyncWith
+import com.gicsports.test.FreeSpec
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.{BlockGen, RxScheduler}
 import io.netty.channel.Channel
 import io.netty.channel.embedded.EmbeddedChannel
 import io.netty.channel.local.LocalChannel

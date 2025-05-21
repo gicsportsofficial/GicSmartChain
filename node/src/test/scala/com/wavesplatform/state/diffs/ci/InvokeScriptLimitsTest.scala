@@ -1,23 +1,23 @@
-package com.wavesplatform.state.diffs.ci
+package com.gicsports.state.diffs.ci
 
-import com.wavesplatform.account.*
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.{DBCacheSettings, WithState}
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.settings.{FunctionalitySettings, TestFunctionalitySettings}
-import com.wavesplatform.state.*
-import com.wavesplatform.state.diffs.produceRejectOrFailedDiff
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{utils as _, *}
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.account.*
+import com.gicsports.block.Block
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.{DBCacheSettings, WithState}
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.settings.{FunctionalitySettings, TestFunctionalitySettings}
+import com.gicsports.state.*
+import com.gicsports.state.diffs.produceRejectOrFailedDiff
+import com.gicsports.test.*
+import com.gicsports.transaction.{utils as _, *}
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
 import org.scalatest.EitherValues
 
 class InvokeScriptLimitsTest extends PropSpec with WithState with DBCacheSettings with EitherValues {

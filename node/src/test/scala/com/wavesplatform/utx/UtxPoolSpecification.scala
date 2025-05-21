@@ -1,44 +1,44 @@
-package com.wavesplatform.utx
+package com.gicsports.utx
 
 import cats.data.NonEmptyList
-import com.wavesplatform
-import com.wavesplatform.*
-import com.wavesplatform.account.{Address, KeyPair, PublicKey}
-import com.wavesplatform.block.{Block, SignedBlockHeader}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.consensus.TransactionsOrdering
-import com.wavesplatform.database.{LevelDBWriter, TestStorageFactory, openDB}
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.events.UtxEvent
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.Domain.BlockchainUpdaterExt
-import com.wavesplatform.history.{DefaultWavesSettings, randomSig, settingsWithFeatures}
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_LONG
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.estimator.ScriptEstimatorV1
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.mining.*
-import com.wavesplatform.settings.*
-import com.wavesplatform.state.*
-import com.wavesplatform.state.diffs.{invoke as _, *}
-import com.wavesplatform.state.utils.TestLevelDB
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.TxHelpers.*
-import com.wavesplatform.transaction.TxValidationError.{GenericError, SenderIsBlacklisted}
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.ParsedTransfer
-import com.wavesplatform.transaction.utils.Signed
-import com.wavesplatform.transaction.{Asset, Transaction, *}
-import com.wavesplatform.utils.Time
-import com.wavesplatform.utx.UtxPool.PackStrategy
+import com.gicsports
+import com.gicsports.*
+import com.gicsports.account.{Address, KeyPair, PublicKey}
+import com.gicsports.block.{Block, SignedBlockHeader}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.consensus.TransactionsOrdering
+import com.gicsports.database.{LevelDBWriter, TestStorageFactory, openDB}
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.events.UtxEvent
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.Domain.BlockchainUpdaterExt
+import com.gicsports.history.{DefaultWavesSettings, randomSig, settingsWithFeatures}
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.Terms.CONST_LONG
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.estimator.ScriptEstimatorV1
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.mining.*
+import com.gicsports.settings.*
+import com.gicsports.state.*
+import com.gicsports.state.diffs.{invoke as _, *}
+import com.gicsports.state.utils.TestLevelDB
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.TxHelpers.*
+import com.gicsports.transaction.TxValidationError.{GenericError, SenderIsBlacklisted}
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.transfer.*
+import com.gicsports.transaction.transfer.MassTransferTransaction.ParsedTransfer
+import com.gicsports.transaction.utils.Signed
+import com.gicsports.transaction.{Asset, Transaction, *}
+import com.gicsports.utils.Time
+import com.gicsports.utx.UtxPool.PackStrategy
 import monix.reactive.subjects.PublishSubject
 import org.iq80.leveldb.DB
 import org.scalacheck.Gen.*
@@ -610,7 +610,7 @@ class UtxPoolSpecification extends FreeSpec with MockFactory with BlocksTransact
     }
 
     "correctly process constraints in packUnconfirmed" in {
-      withDomain(wavesplatform.history.TransfersV2ActivatedAt0WavesSettings) { d =>
+      withDomain(gicsports.history.TransfersV2ActivatedAt0WavesSettings) { d =>
         val generateBlock: Gen[(KeyPair, Block, Seq[Transaction], Seq[Transaction])] =
           for {
             richAccount   <- accountGen

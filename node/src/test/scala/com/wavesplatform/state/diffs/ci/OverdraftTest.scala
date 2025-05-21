@@ -1,24 +1,24 @@
-package com.wavesplatform.state.diffs.ci
+package com.gicsports.state.diffs.ci
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.DirectiveDictionary
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V3, V4}
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.settings.FunctionalitySettings
-import com.wavesplatform.state.diffs.FeeValidation
-import com.wavesplatform.state.diffs.FeeValidation.FeeConstants
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{GenesisTransaction, TransactionType, TxHelpers, TxVersion}
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.DirectiveDictionary
+import com.gicsports.lang.directives.values.{StdLibVersion, V3, V4}
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.settings.FunctionalitySettings
+import com.gicsports.state.diffs.FeeValidation
+import com.gicsports.state.diffs.FeeValidation.FeeConstants
+import com.gicsports.test.*
+import com.gicsports.transaction.{GenesisTransaction, TransactionType, TxHelpers, TxVersion}
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
 
 class OverdraftTest extends PropSpec with WithDomain {
   import DomainPresets.*
@@ -47,7 +47,7 @@ class OverdraftTest extends PropSpec with WithDomain {
 
         assertDiffEi(Seq(TestBlock.create(genesis :+ setDApp)), TestBlock.create(Seq(ci)), settings) { r =>
             r should produce(
-            s"Fee for InvokeScriptTransaction (1 in CARDIUM) does not exceed minimal value of $InvokeFee CARDIUM"
+            s"Fee for InvokeScriptTransaction (1 in GIC) does not exceed minimal value of $InvokeFee GIC"
           )
       }
     }
@@ -72,7 +72,7 @@ class OverdraftTest extends PropSpec with WithDomain {
       case (_, settings) =>
         val (genesis, setDApp, ci, issue) = paymentPreconditions(withEnoughFee = true, withPayment = true, payingDApp(V3))
         assertDiffEi(Seq(TestBlock.create(genesis ++ List(setDApp, issue))), TestBlock.create(Seq(ci)), settings) {
-          _ should produce("leads to negative CARDIUM balance to (at least) temporary negative state")
+          _ should produce("leads to negative GIC balance to (at least) temporary negative state")
         }
     }
   }

@@ -1,10 +1,10 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
 import java.nio.charset.StandardCharsets
 
-import com.wavesplatform.test.FreeSpec
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.{ProvenTransaction, Transaction}
+import com.gicsports.test.FreeSpec
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.{ProvenTransaction, Transaction}
 import io.netty.channel.ChannelHandlerContext
 import io.netty.channel.embedded.EmbeddedChannel
 

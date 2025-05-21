@@ -1,7 +1,7 @@
-package com.wavesplatform.features
+package com.gicsports.features
 
-import com.wavesplatform.features.BlockchainFeatureStatus.{Activated, Approved, Undefined}
-import com.wavesplatform.features.api.NodeFeatureStatus.{Implemented, NotImplemented, Voted}
+import com.gicsports.features.BlockchainFeatureStatus.{Activated, Approved, Undefined}
+import com.gicsports.features.api.NodeFeatureStatus.{Implemented, NotImplemented, Voted}
 import play.api.libs.json._
 
 package object api {

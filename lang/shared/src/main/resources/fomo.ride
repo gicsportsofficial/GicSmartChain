@@ -11,7 +11,7 @@ func fearmissing() = {
    let payment = match i.payment {
 	   case p:AttachedPayment =>
 	   		match p.asset {
-				   case asset: ByteVector => throw("fomo CARDIUM only")
+				   case asset: ByteVector => throw("fomo GIC only")
 				   case _ => p.amount
 			   }
 

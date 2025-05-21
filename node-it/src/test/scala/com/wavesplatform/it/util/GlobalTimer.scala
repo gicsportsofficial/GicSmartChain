@@ -1,4 +1,4 @@
-package com.wavesplatform.it.util
+package com.gicsports.it.util
 
 import io.netty.util.{HashedWheelTimer, Timer}
 

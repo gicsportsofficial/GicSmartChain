@@ -1,9 +1,9 @@
-package com.wavesplatform.it.sync.activation
+package com.gicsports.it.sync.activation
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.features.api.NodeFeatureStatus
-import com.wavesplatform.features.{BlockchainFeatureStatus, BlockchainFeatures}
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.{BaseFreeSpec, Docker}
+import com.gicsports.features.api.NodeFeatureStatus
+import com.gicsports.features.{BlockchainFeatureStatus, BlockchainFeatures}
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.{BaseFreeSpec, Docker}
 
 class PreActivatedFeaturesTestSuite extends BaseFreeSpec with ActivationStatusRequest {
   override protected def nodeConfigs: Seq[Config] = PreActivatedFeaturesTestSuite.Configs
@@ -62,11 +62,11 @@ class PreActivatedFeaturesTestSuite extends BaseFreeSpec with ActivationStatusRe
 }
 
 object PreActivatedFeaturesTestSuite {
-  import com.wavesplatform.it.NodeConfigs._
+  import com.gicsports.it.NodeConfigs._
   val votingInterval             = 10
   val featureNum: Short          = BlockchainFeatures.SmallerMinimalGeneratingBalance.id
   val featureDescr               = BlockchainFeatures.SmallerMinimalGeneratingBalance.description
-  private val supportedConfig    = ConfigFactory.parseString(s"""CARDIUM {
+  private val supportedConfig    = ConfigFactory.parseString(s"""GIC {
                                                              |  blockchain.custom.functionality {
                                                              |    pre-activated-features = {}
                                                              |    feature-check-blocks-period = $votingInterval
@@ -75,7 +75,7 @@ object PreActivatedFeaturesTestSuite {
                                                              |  features.supported = [$featureNum]
                                                              |  miner.quorum = 1
                                                              |}""".stripMargin)
-  private val preactivatedConfig = ConfigFactory.parseString(s"""CARDIUM {
+  private val preactivatedConfig = ConfigFactory.parseString(s"""GIC {
                                                                 |  blockchain.custom.functionality {
                                                                 |  feature-check-blocks-period = $votingInterval
                                                                 |  pre-activated-features {

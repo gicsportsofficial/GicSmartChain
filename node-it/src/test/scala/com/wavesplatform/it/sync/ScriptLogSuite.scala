@@ -1,15 +1,15 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
-import com.wavesplatform.api.http.ApiError.TransactionNotAllowedByAccountScript
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils._
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.state.BinaryDataEntry
-import com.wavesplatform.transaction.DataTransaction
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.api.http.ApiError.TransactionNotAllowedByAccountScript
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils._
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.state.BinaryDataEntry
+import com.gicsports.transaction.DataTransaction
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import org.scalatest.CancelAfterFailure
 
 import scala.concurrent.duration._
@@ -95,7 +95,7 @@ class ScriptLogSuite extends BaseTransactionSuite with CancelAfterFailure {
 
     assertApiErrorRaised(sender.signedBroadcast(mkInvData().json()))
 
-    def async = com.wavesplatform.it.api.AsyncHttpApi.NodeAsyncHttpApi _
+    def async = com.gicsports.it.api.AsyncHttpApi.NodeAsyncHttpApi _
 
     val requests =
       (0 to 100)

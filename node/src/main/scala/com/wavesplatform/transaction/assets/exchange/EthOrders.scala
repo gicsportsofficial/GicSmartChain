@@ -1,13 +1,13 @@
-package com.wavesplatform.transaction.assets.exchange
+package com.gicsports.transaction.assets.exchange
 
 import java.math.BigInteger
 import java.nio.ByteBuffer
 import com.google.common.base.CaseFormat
-import com.wavesplatform.account.{AddressScheme, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto.EthereumKeyLength
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.account.{AddressScheme, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto.EthereumKeyLength
+import com.gicsports.transaction.Asset
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
 import org.web3j.crypto.Sign.SignatureData
 import org.web3j.crypto.{ECDSASignature, ECKeyPair, Sign, StructuredDataEncoder}
 import play.api.libs.json.{JsObject, Json}

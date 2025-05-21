@@ -1,21 +1,21 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.account._
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.protobuf.transaction.{PBTransactions, SignedTransaction => PBSignedTransaction}
-import com.wavesplatform.state.StringDataEntry
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.assets._
-import com.wavesplatform.transaction.assets.exchange.{AssetPair, ExchangeTransaction, Order}
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction, Verifier}
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.ParsedTransfer
-import com.wavesplatform.transaction.transfer.{MassTransferTransaction, TransferTransaction}
-import com.wavesplatform.crypto
-import com.wavesplatform.test.PropSpec
+import com.gicsports.account._
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.protobuf.transaction.{PBTransactions, SignedTransaction => PBSignedTransaction}
+import com.gicsports.state.StringDataEntry
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.assets._
+import com.gicsports.transaction.assets.exchange.{AssetPair, ExchangeTransaction, Order}
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction, Verifier}
+import com.gicsports.transaction.transfer.MassTransferTransaction.ParsedTransfer
+import com.gicsports.transaction.transfer.{MassTransferTransaction, TransferTransaction}
+import com.gicsports.crypto
+import com.gicsports.test.PropSpec
 import org.scalacheck.Gen
 
 class ChainIdSpecification extends PropSpec {

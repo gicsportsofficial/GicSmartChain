@@ -1,14 +1,14 @@
-package com.wavesplatform.test
+package com.gicsports.test
 
 import java.nio.file.Files
 
-import com.wavesplatform.{NTPTime, TestHelpers}
-import com.wavesplatform.database.{LevelDBFactory, TestStorageFactory}
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.events.BlockchainUpdateTriggers
-import com.wavesplatform.history.Domain
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.transaction.TxHelpers
+import com.gicsports.{NTPTime, TestHelpers}
+import com.gicsports.database.{LevelDBFactory, TestStorageFactory}
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.events.BlockchainUpdateTriggers
+import com.gicsports.history.Domain
+import com.gicsports.settings.WavesSettings
+import com.gicsports.transaction.TxHelpers
 import monix.reactive.Observer
 import org.iq80.leveldb.{DB, Options}
 import org.scalatest.{BeforeAndAfterAll, Suite}

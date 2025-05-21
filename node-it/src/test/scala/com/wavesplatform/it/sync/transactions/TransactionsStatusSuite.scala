@@ -1,16 +1,16 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
-import com.wavesplatform.api.http.ApiError.InvalidIds
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.NTPTime
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.it.api.{TransactionInfo, TransactionStatus}
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{ProvenTransaction, Transaction}
+import com.gicsports.api.http.ApiError.InvalidIds
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.NTPTime
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.it.api.{TransactionInfo, TransactionStatus}
+import com.gicsports.it.sync.*
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{ProvenTransaction, Transaction}
 import play.api.libs.json.*
 
 import scala.util.Random

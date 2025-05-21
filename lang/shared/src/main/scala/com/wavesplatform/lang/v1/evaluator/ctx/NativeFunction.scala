@@ -1,14 +1,14 @@
-package com.wavesplatform.lang.v1.evaluator.ctx
+package com.gicsports.lang.v1.evaluator.ctx
 
 import cats.Monad
 import cats.syntax.applicative._
-import com.wavesplatform.lang.ExecutionError
-import com.wavesplatform.lang.directives.DirectiveDictionary
-import com.wavesplatform.lang.directives.values.StdLibVersion
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.{EVALUATED, EXPR}
-import com.wavesplatform.lang.v1.compiler.Types._
-import com.wavesplatform.lang.v1.evaluator.{ContextfulNativeFunction, ContextfulUserFunction}
+import com.gicsports.lang.ExecutionError
+import com.gicsports.lang.directives.DirectiveDictionary
+import com.gicsports.lang.directives.values.StdLibVersion
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.{EVALUATED, EXPR}
+import com.gicsports.lang.v1.compiler.Types._
+import com.gicsports.lang.v1.evaluator.{ContextfulNativeFunction, ContextfulUserFunction}
 
 import scala.annotation.meta.field
 import scala.scalajs.js.annotation._

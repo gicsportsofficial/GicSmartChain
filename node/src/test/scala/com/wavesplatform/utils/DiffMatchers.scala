@@ -1,7 +1,7 @@
-package com.wavesplatform.utils
+package com.gicsports.utils
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.state.Diff
+import com.gicsports.common.state.ByteStr
+import com.gicsports.state.Diff
 import org.scalatest.matchers.{Matcher, MatchResult}
 
 trait DiffMatchers {

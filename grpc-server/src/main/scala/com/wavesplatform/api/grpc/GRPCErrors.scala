@@ -1,7 +1,7 @@
-package com.wavesplatform.api.grpc
+package com.gicsports.api.grpc
 
-import com.wavesplatform.api.http.ApiError
-import com.wavesplatform.api.http.ApiError._
+import com.gicsports.api.http.ApiError
+import com.gicsports.api.http.ApiError._
 import io.grpc.Metadata.AsciiMarshaller
 import io.grpc.{Metadata, Status, StatusException}
 

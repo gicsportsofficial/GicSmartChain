@@ -1,16 +1,16 @@
-package com.wavesplatform
+package com.gicsports
 
 import cats.data.ValidatedNel
-import com.wavesplatform.account.PrivateKey
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.Diff
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.assets.exchange.Order
-import com.wavesplatform.transaction.validation.TxValidator
-import com.wavesplatform.utils.{EthEncoding, base58Length}
+import com.gicsports.account.PrivateKey
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.Diff
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.assets.exchange.Order
+import com.gicsports.transaction.validation.TxValidator
+import com.gicsports.utils.{EthEncoding, base58Length}
 import eu.timepit.refined.api.Refined
 import eu.timepit.refined.numeric.{Interval, NonNegative, Positive}
 import play.api.libs.json.{Format, Reads, Writes}
@@ -18,7 +18,7 @@ import supertagged.*
 import supertagged.postfix.*
 
 package object transaction {
-  val AssetIdLength: Int       = com.wavesplatform.crypto.DigestLength
+  val AssetIdLength: Int       = com.gicsports.crypto.DigestLength
   val AssetIdStringLength: Int = base58Length(AssetIdLength)
 
   type DiscardedBlocks       = Seq[(Block, ByteStr)]

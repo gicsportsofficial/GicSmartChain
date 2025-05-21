@@ -1,18 +1,18 @@
-package com.wavesplatform.it.util
+package com.gicsports.it.util
 
 import com.google.common.primitives.{Bytes, Longs, Shorts}
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{AddressScheme, KeyPair}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.crypto
-import com.wavesplatform.protobuf.Amount
-import com.wavesplatform.protobuf.transaction.{MassTransferTransactionData, PBTransaction}
-import com.wavesplatform.protobuf.utils.PBImplicitConversions.*
-import com.wavesplatform.protobuf.utils.PBUtils
-import com.wavesplatform.serialization.Deser
-import com.wavesplatform.transaction.transfer.MassTransferTransaction
-import com.wavesplatform.transaction.{Asset, TxVersion}
+import com.gicsports.account.{AddressScheme, KeyPair}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.*
+import com.gicsports.crypto
+import com.gicsports.protobuf.Amount
+import com.gicsports.protobuf.transaction.{MassTransferTransactionData, PBTransaction}
+import com.gicsports.protobuf.utils.PBImplicitConversions.*
+import com.gicsports.protobuf.utils.PBUtils
+import com.gicsports.serialization.Deser
+import com.gicsports.transaction.transfer.MassTransferTransaction
+import com.gicsports.transaction.{Asset, TxVersion}
 
 object TxHelpers {
   def massTransferBodyBytes(

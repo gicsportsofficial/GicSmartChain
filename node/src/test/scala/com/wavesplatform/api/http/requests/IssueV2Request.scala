@@ -1,6 +1,6 @@
-package com.wavesplatform.api.http.requests
+package com.gicsports.api.http.requests
 
-import com.wavesplatform.transaction.assets.IssueTransaction
+import com.gicsports.transaction.assets.IssueTransaction
 import play.api.libs.json.{Format, JsNumber, JsObject, Json}
 
 case class IssueV2Request(

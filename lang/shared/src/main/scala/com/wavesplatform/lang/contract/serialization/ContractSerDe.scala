@@ -1,7 +1,7 @@
-package com.wavesplatform.lang.contract.serialization
+package com.gicsports.lang.contract.serialization
 
 import cats.syntax.either._
-import com.wavesplatform.lang.contract.DApp
+import com.gicsports.lang.contract.DApp
 
 import scala.util.Try
 

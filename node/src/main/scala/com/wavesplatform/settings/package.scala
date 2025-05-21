@@ -1,11 +1,11 @@
-package com.wavesplatform
+package com.gicsports
 
 import java.io.File
 import java.net.{InetSocketAddress, URI}
 
 import cats.data.NonEmptyList
 import com.typesafe.config.{Config, ConfigException, ConfigFactory, ConfigValueType}
-import com.wavesplatform.common.state.ByteStr
+import com.gicsports.common.state.ByteStr
 import net.ceedubs.ficus.Ficus.traversableReader
 import net.ceedubs.ficus.readers.namemappers.HyphenNameMapper
 import net.ceedubs.ficus.readers.{NameMapper, ValueReader}
@@ -61,21 +61,21 @@ package object settings {
     val external = maybeUserConfig.fold(sysProps)(sysProps.withFallback)
 
     val cmdDefaults =
-      Try(external.getConfig("CARDIUM.defaults"))
+      Try(external.getConfig("GIC.defaults"))
         .getOrElse(ConfigFactory.empty())
-        .atPath("CARDIUM")
+        .atPath("GIC")
 
     val withApp = external.withFallback(cmdDefaults).withFallback(ConfigFactory.defaultApplication())
 
     val networkDefaults = {
-      val network = withApp.getString("CARDIUM.blockchain.type").toLowerCase
-      withApp.getConfig(s"CARDIUM.defaults.$network")
+      val network = withApp.getString("GIC.blockchain.type").toLowerCase
+      withApp.getConfig(s"GIC.defaults.$network")
     }
 
     external
       .withFallback(cmdDefaults)
-      .withFallback(networkDefaults.atKey("CARDIUM"))
-      .withFallback(ConfigFactory.parseString(s"CARDIUM.directory = ${defaultDirectory(withApp)}"))
+      .withFallback(networkDefaults.atKey("GIC"))
+      .withFallback(ConfigFactory.parseString(s"GIC.directory = ${defaultDirectory(withApp)}"))
       .withFallback(ConfigFactory.defaultApplication())
       .withFallback(ConfigFactory.defaultReference())
       .resolve()
@@ -98,15 +98,15 @@ package object settings {
     }
 
     def withNetwork(config: Config): String = {
-      val bc = config.getString("CARDIUM.blockchain.type")
+      val bc = config.getString("GIC.blockchain.type")
       val suffix =
         if (bc == "CUSTOM") {
-          val char = config.getString("CARDIUM.blockchain.custom.address-scheme-character").headOption.getOrElse(0.toChar)
+          val char = config.getString("GIC.blockchain.custom.address-scheme-character").headOption.getOrElse(0.toChar)
           s"custom-${Integer.toHexString(char)}"
         } else
           bc.toLowerCase
 
-      s"cardium-$suffix"
+      s"gic-$suffix"
     }
 
     val parent =

@@ -1,9 +1,9 @@
-package com.wavesplatform.transaction.smart
-import com.wavesplatform.lang.v1.FunctionHeader.User
-import com.wavesplatform.lang.v1.compiler.Terms.FUNCTION_CALL
-import com.wavesplatform.lang.v1.evaluator.ContractEvaluator
-import com.wavesplatform.state.diffs.invoke.InvokeScriptTransactionLike
-import com.wavesplatform.transaction.{Asset, FastHashId, ProvenTransaction, Transaction, TxWithFee, VersionedTransaction}
+package com.gicsports.transaction.smart
+import com.gicsports.lang.v1.FunctionHeader.User
+import com.gicsports.lang.v1.compiler.Terms.FUNCTION_CALL
+import com.gicsports.lang.v1.evaluator.ContractEvaluator
+import com.gicsports.state.diffs.invoke.InvokeScriptTransactionLike
+import com.gicsports.transaction.{Asset, FastHashId, ProvenTransaction, Transaction, TxWithFee, VersionedTransaction}
 
 trait InvokeTransaction
     extends Transaction

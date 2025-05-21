@@ -1,10 +1,10 @@
-package com.wavesplatform.lang.v1
+package com.gicsports.lang.v1
 
 import cats.Id
 import cats.syntax.applicative.*
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.task.TaskM
-import com.wavesplatform.lang.v1.task.imports.*
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.task.TaskM
+import com.gicsports.lang.v1.task.imports.*
 
 import scala.annotation.tailrec
 import scala.collection.mutable.Queue

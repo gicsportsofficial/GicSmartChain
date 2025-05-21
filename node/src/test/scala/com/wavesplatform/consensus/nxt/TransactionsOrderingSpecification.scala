@@ -1,13 +1,13 @@
-package com.wavesplatform.consensus.nxt
+package com.gicsports.consensus.nxt
 
-import com.wavesplatform.account.{Address, KeyPair}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.consensus.TransactionsOrdering
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.transfer._
+import com.gicsports.account.{Address, KeyPair}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.consensus.TransactionsOrdering
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.Asset
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.transfer._
 
 import scala.util.Random
 

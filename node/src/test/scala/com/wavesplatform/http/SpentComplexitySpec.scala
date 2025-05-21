@@ -1,21 +1,21 @@
-package com.wavesplatform.http
+package com.gicsports.http
 
-import com.wavesplatform.api.http.{ApiMarshallers, RouteTimeout, TransactionsApiRoute}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.history.Domain
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.utils.Signed
-import com.wavesplatform.utils.Schedulers
-import com.wavesplatform.{BlockGen, TestWallet}
+import com.gicsports.api.http.{ApiMarshallers, RouteTimeout, TransactionsApiRoute}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.history.Domain
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.transaction.Asset
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.utils.Signed
+import com.gicsports.utils.Schedulers
+import com.gicsports.{BlockGen, TestWallet}
 import org.scalamock.scalatest.MockFactory
 import org.scalatest.OptionValues
 import play.api.libs.json.JsObject

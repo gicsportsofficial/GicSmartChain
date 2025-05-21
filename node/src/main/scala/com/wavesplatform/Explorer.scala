@@ -1,22 +1,22 @@
-package com.wavesplatform
+package com.gicsports
 
 import java.io.File
 import java.nio.ByteBuffer
 import java.util
 
 import com.google.common.primitives.Longs
-import com.wavesplatform.account.Address
-import com.wavesplatform.api.common.AddressPortfolio
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, Base64, EitherExt2}
-import com.wavesplatform.database.*
-import com.wavesplatform.lang.script.ContractScript
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.settings.Constants
-import com.wavesplatform.state.diffs.{DiffsCommon, SetScriptTransactionDiff}
-import com.wavesplatform.state.{Blockchain, Diff, Height, Portfolio}
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.account.Address
+import com.gicsports.api.common.AddressPortfolio
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, Base64, EitherExt2}
+import com.gicsports.database.*
+import com.gicsports.lang.script.ContractScript
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.settings.Constants
+import com.gicsports.state.diffs.{DiffsCommon, SetScriptTransactionDiff}
+import com.gicsports.state.{Blockchain, Diff, Height, Portfolio}
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.utils.ScorexLogging
 import org.iq80.leveldb.DB
 
 import scala.annotation.tailrec
@@ -36,7 +36,7 @@ object Explorer extends ScorexLogging {
 
   def main(argsRaw: Array[String]): Unit = {
     if (argsRaw.isEmpty || Seq("-h", "--help").exists(argsRaw.contains)) {
-      System.err.println("Usage: CARDIUM explore <command> [args] [--config|-c <cfg file>]")
+      System.err.println("Usage: GIC explore <command> [args] [--config|-c <cfg file>]")
       return
     }
 
@@ -90,11 +90,11 @@ object Explorer extends ScorexLogging {
 
           if (actualTotalBalance != expectedTotalBalance || expectedTotalBalance != byKeyTotalBalance)
             log.error(
-              s"Something wrong, actual total CARDIUM balance: $actualTotalBalance," +
-                s" expected total CARDIUM balance: $expectedTotalBalance, total CARDIUM balance by key: $byKeyTotalBalance"
+              s"Something wrong, actual total GIC balance: $actualTotalBalance," +
+                s" expected total GIC balance: $expectedTotalBalance, total GIC balance by key: $byKeyTotalBalance"
             )
           else
-            log.info(s"Correct total CARDIUM balance: $actualTotalBalance WAVELETS")
+            log.info(s"Correct total GIC balance: $actualTotalBalance WAVELETS")
 
         case "DA" =>
           val addressIds = mutable.Seq[(BigInt, Address)]()

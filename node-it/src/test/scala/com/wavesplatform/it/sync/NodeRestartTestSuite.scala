@@ -1,15 +1,15 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.account.AddressOrAlias
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.api.TransactionInfo
-import com.wavesplatform.it.{BaseFreeSpec, WaitForHeight2}
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.transfer.TransferTransaction
+import com.gicsports.account.AddressOrAlias
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.api.TransactionInfo
+import com.gicsports.it.{BaseFreeSpec, WaitForHeight2}
+import com.gicsports.test._
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.transfer.TransferTransaction
 
 class NodeRestartTestSuite extends BaseFreeSpec with WaitForHeight2 {
   import NodeRestartTestSuite._
@@ -69,9 +69,9 @@ class NodeRestartTestSuite extends BaseFreeSpec with WaitForHeight2 {
 }
 
 object NodeRestartTestSuite {
-  import com.wavesplatform.it.NodeConfigs._
+  import com.gicsports.it.NodeConfigs._
   private val FirstNode = ConfigFactory.parseString(s"""
-                                                         |CARDIUM {
+                                                         |GIC {
                                                          |  synchronization.synchronization-timeout = 10s
                                                          |  blockchain.custom.functionality {
                                                          |    pre-activated-features.1 = 0
@@ -85,7 +85,7 @@ object NodeRestartTestSuite {
                                                          |}""".stripMargin)
 
   private val SecondNode = ConfigFactory.parseString(s"""
-                                                            |CARDIUM {
+                                                            |GIC {
                                                             |  synchronization.synchronization-timeout = 10s
                                                             |  blockchain.custom.functionality {
                                                             |    pre-activated-features.1 = 0

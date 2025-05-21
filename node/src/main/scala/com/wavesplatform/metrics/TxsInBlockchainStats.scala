@@ -1,4 +1,4 @@
-package com.wavesplatform.metrics
+package com.gicsports.metrics
 
 import org.influxdb.dto.Point
 

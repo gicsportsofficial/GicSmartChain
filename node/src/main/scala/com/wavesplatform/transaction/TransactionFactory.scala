@@ -1,24 +1,24 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.account.*
-import com.wavesplatform.api.http.requests.*
-import com.wavesplatform.api.http.requests.DataRequest.*
-import com.wavesplatform.api.http.requests.InvokeExpressionRequest.*
-import com.wavesplatform.api.http.requests.SponsorFeeRequest.*
-import com.wavesplatform.api.http.versionReads
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TxValidationError.{GenericError, UnsupportedTransactionType, UnsupportedTypeAndVersion, WrongChain}
-import com.wavesplatform.transaction.assets.*
-import com.wavesplatform.transaction.assets.exchange.*
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.smart.{InvokeExpressionTransaction, InvokeScriptTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.utils.Time
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.account.*
+import com.gicsports.api.http.requests.*
+import com.gicsports.api.http.requests.DataRequest.*
+import com.gicsports.api.http.requests.InvokeExpressionRequest.*
+import com.gicsports.api.http.requests.SponsorFeeRequest.*
+import com.gicsports.api.http.versionReads
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TxValidationError.{GenericError, UnsupportedTransactionType, UnsupportedTypeAndVersion, WrongChain}
+import com.gicsports.transaction.assets.*
+import com.gicsports.transaction.assets.exchange.*
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.smart.{InvokeExpressionTransaction, InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.transaction.transfer.*
+import com.gicsports.utils.Time
+import com.gicsports.wallet.Wallet
 import play.api.libs.json.{JsObject, JsValue}
 
 object TransactionFactory {

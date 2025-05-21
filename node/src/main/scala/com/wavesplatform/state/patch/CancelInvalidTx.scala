@@ -1,8 +1,8 @@
-package com.wavesplatform.state.patch
+package com.gicsports.state.patch
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.state.{Blockchain, Diff, LeaseBalance, Portfolio}
+import com.gicsports.account.Address
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.state.{Blockchain, Diff, LeaseBalance, Portfolio}
 
 object CancelInvalidTx extends PatchAtHeight('L' -> 450000)  {
 

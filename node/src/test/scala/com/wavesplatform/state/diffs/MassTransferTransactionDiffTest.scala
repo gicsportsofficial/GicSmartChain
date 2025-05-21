@@ -1,16 +1,16 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.account.{Address, Alias, KeyPair}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithState
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lagonaki.mocks.TestBlock.create as block
-import com.wavesplatform.settings.{FunctionalitySettings, TestFunctionalitySettings}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.ParsedTransfer
-import com.wavesplatform.transaction.{Asset, GenesisTransaction, TxHelpers, TxNonNegativeAmount, TxVersion}
+import com.gicsports.account.{Address, Alias, KeyPair}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithState
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lagonaki.mocks.TestBlock.create as block
+import com.gicsports.settings.{FunctionalitySettings, TestFunctionalitySettings}
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.transfer.MassTransferTransaction.ParsedTransfer
+import com.gicsports.transaction.{Asset, GenesisTransaction, TxHelpers, TxNonNegativeAmount, TxVersion}
 
 class MassTransferTransactionDiffTest extends PropSpec with WithState {
 
@@ -70,7 +70,7 @@ class MassTransferTransactionDiffTest extends PropSpec with WithState {
       }
     }
 
-    import com.wavesplatform.transaction.transfer.MassTransferTransaction.{MaxTransferCount => Max}
+    import com.gicsports.transaction.transfer.MassTransferTransaction.{MaxTransferCount => Max}
     Seq(0, 1, Max) foreach testDiff // test edge cases
     testDiff(5)
   }

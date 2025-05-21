@@ -1,4 +1,4 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import akka.http.scaladsl.model.headers._
 

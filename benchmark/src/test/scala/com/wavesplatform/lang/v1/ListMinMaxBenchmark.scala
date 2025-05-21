@@ -1,9 +1,9 @@
-package com.wavesplatform.lang.v1
+package com.gicsports.lang.v1
 
 import java.util.concurrent.TimeUnit
 
-import com.wavesplatform.lang.v1.ListMinMaxBenchmark.ListMinMaxSt
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext
+import com.gicsports.lang.v1.ListMinMaxBenchmark.ListMinMaxSt
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext
 import org.openjdk.jmh.annotations._
 import org.openjdk.jmh.infra.Blackhole
 

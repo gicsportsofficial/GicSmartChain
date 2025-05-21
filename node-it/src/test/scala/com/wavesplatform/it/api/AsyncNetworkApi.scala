@@ -1,7 +1,7 @@
-package com.wavesplatform.it.api
+package com.gicsports.it.api
 
-import com.wavesplatform.it.Node
-import com.wavesplatform.network.client.NetworkSender
+import com.gicsports.it.Node
+import com.gicsports.network.client.NetworkSender
 
 import scala.concurrent.Future
 

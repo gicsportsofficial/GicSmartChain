@@ -1,4 +1,4 @@
-package com.wavesplatform
+package com.gicsports
 
 import java.io._
 import java.net.{MalformedURLException, URL}
@@ -10,29 +10,29 @@ import scala.util.{Failure, Success, Try}
 import akka.actor.ActorSystem
 import com.google.common.io.ByteStreams
 import com.google.common.primitives.Ints
-import com.wavesplatform.Exporter.Formats
-import com.wavesplatform.account.Address
-import com.wavesplatform.api.common.{CommonAccountsApi, CommonAssetsApi, CommonBlocksApi, CommonTransactionsApi}
-import com.wavesplatform.block.{Block, BlockHeader}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.consensus.PoSSelector
-import com.wavesplatform.database.{openDB, DBExt, KeyTags}
-import com.wavesplatform.events.{BlockchainUpdateTriggers, UtxEvent}
-import com.wavesplatform.extensions.{Context, Extension}
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.StorageFactory
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.mining.Miner
-import com.wavesplatform.protobuf.block.PBBlocks
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.state.{Blockchain, BlockchainUpdaterImpl, Diff, Height}
-import com.wavesplatform.state.appender.BlockAppender
-import com.wavesplatform.transaction.{Asset, DiscardedBlocks, Transaction}
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.smart.script.trace.TracedResult
-import com.wavesplatform.utils._
-import com.wavesplatform.utx.{UtxPool, UtxPoolImpl}
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.Exporter.Formats
+import com.gicsports.account.Address
+import com.gicsports.api.common.{CommonAccountsApi, CommonAssetsApi, CommonBlocksApi, CommonTransactionsApi}
+import com.gicsports.block.{Block, BlockHeader}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.consensus.PoSSelector
+import com.gicsports.database.{openDB, DBExt, KeyTags}
+import com.gicsports.events.{BlockchainUpdateTriggers, UtxEvent}
+import com.gicsports.extensions.{Context, Extension}
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.StorageFactory
+import com.gicsports.lang.ValidationError
+import com.gicsports.mining.Miner
+import com.gicsports.protobuf.block.PBBlocks
+import com.gicsports.settings.WavesSettings
+import com.gicsports.state.{Blockchain, BlockchainUpdaterImpl, Diff, Height}
+import com.gicsports.state.appender.BlockAppender
+import com.gicsports.transaction.{Asset, DiscardedBlocks, Transaction}
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.smart.script.trace.TracedResult
+import com.gicsports.utils._
+import com.gicsports.utx.{UtxPool, UtxPoolImpl}
+import com.gicsports.wallet.Wallet
 import kamon.Kamon
 import monix.eval.Task
 import monix.execution.Scheduler
@@ -274,7 +274,7 @@ object Importer extends ScorexLogging {
     val scheduler = Schedulers.singleThread("appender")
     val time      = new NTP(settings.ntpServer)
 
-    val actorSystem = ActorSystem("wavesplatform-import")
+    val actorSystem = ActorSystem("gicsports-import")
     val db          = openDB(settings.dbSettings.directory)
     val (blockchainUpdater, levelDb) =
       StorageFactory(settings, db, time, Observer.empty, BlockchainUpdateTriggers.combined(triggers))
@@ -295,7 +295,7 @@ object Importer extends ScorexLogging {
               e.getKey match {
                 case Array(_, _, 0, 0, 0, 1) => // Skip genesis
                 case _ =>
-                  val meta = com.wavesplatform.database.readBlockMeta(e.getValue)
+                  val meta = com.gicsports.database.readBlockMeta(e.getValue)
                   result += meta.size + 4
               }
             }

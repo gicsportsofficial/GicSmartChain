@@ -1,18 +1,18 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
 import com.typesafe.config.Config
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.api.TransactionInfo
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.{BaseFreeSpec, IntegrationSuiteWithThreeAddresses, NodeConfigs}
-import com.wavesplatform.state.diffs.FeeValidation
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.assets.SponsorFeeTransaction
+import com.gicsports.account.AddressScheme
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.api.TransactionInfo
+import com.gicsports.it.sync._
+import com.gicsports.it.{BaseFreeSpec, IntegrationSuiteWithThreeAddresses, NodeConfigs}
+import com.gicsports.state.diffs.FeeValidation
+import com.gicsports.test._
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.assets.SponsorFeeTransaction
 import org.scalatest.Assertion
 
 import scala.concurrent.duration._
@@ -23,8 +23,8 @@ class SponsorshipSuite extends BaseFreeSpec with IntegrationSuiteWithThreeAddres
     NodeConfigs.newBuilder
       .overrideBase(_.quorum(0))
       .overrideBase(_.preactivatedFeatures((14, 1000000)))
-      .overrideBase(_.raw("CARDIUM.blockchain.custom.functionality.blocks-for-feature-activation=1"))
-      .overrideBase(_.raw("CARDIUM.blockchain.custom.functionality.feature-check-blocks-period=1"))
+      .overrideBase(_.raw("GIC.blockchain.custom.functionality.blocks-for-feature-activation=1"))
+      .overrideBase(_.raw("GIC.blockchain.custom.functionality.feature-check-blocks-period=1"))
       .withDefault(1)
       .withSpecial(1, _.nonMiner)
       .buildNonConflicting()
@@ -120,7 +120,7 @@ class SponsorshipSuite extends BaseFreeSpec with IntegrationSuiteWithThreeAddres
       assertMinAssetFee(secondSponsorTxId, 1 * Token)
     }
 
-    "miner CARDIUM balance should be changed before using sponsored asset" in {
+    "miner GIC balance should be changed before using sponsored asset" in {
       miner.assertBalances(miner.address, minerWavesBalance + 2 * issueFee + 2 * sponsorReducedFee + 2 * minFee)
     }
 
@@ -212,7 +212,7 @@ class SponsorshipSuite extends BaseFreeSpec with IntegrationSuiteWithThreeAddres
         miner.assertBalances(sponsorAddress, sponsorWavesBalanceAfterFirstXferTest)
       }
 
-      "miner CARDIUM balance should be changed" in {
+      "miner GIC balance should be changed" in {
         miner.assertBalances(miner.address, minerWavesBalanceAfterFirstXferTest)
       }
     }
@@ -374,7 +374,7 @@ class SponsorshipSuite extends BaseFreeSpec with IntegrationSuiteWithThreeAddres
           sender
             .transfer(sponsor, aliceAddress, 11 * Token, fee = SmallFee, assetId = Some(firstSponsorAssetId), feeAssetId = Some(firstSponsorAssetId))
             .id,
-          s"Fee for TransferTransaction \\($SmallFee in ${Some(firstSponsorAssetId).get}\\) does not exceed minimal value of 2000000 CARDIUM or $LargeFee ${Some(firstSponsorAssetId).get}"
+          s"Fee for TransferTransaction \\($SmallFee in ${Some(firstSponsorAssetId).get}\\) does not exceed minimal value of 2000000 GIC or $LargeFee ${Some(firstSponsorAssetId).get}"
         )
         assertBadRequestAndResponse(
           sender
@@ -387,7 +387,7 @@ class SponsorshipSuite extends BaseFreeSpec with IntegrationSuiteWithThreeAddres
               feeAssetId = Some(secondSponsorAssetId)
             )
             .id,
-          s"Fee for TransferTransaction \\($SmallFee in ${Some(secondSponsorAssetId).get}\\) does not exceed minimal value of 2000000 CARDIUM or $LargeFee ${Some(secondSponsorAssetId).get}"
+          s"Fee for TransferTransaction \\($SmallFee in ${Some(secondSponsorAssetId).get}\\) does not exceed minimal value of 2000000 GIC or $LargeFee ${Some(secondSponsorAssetId).get}"
         )
       }
 

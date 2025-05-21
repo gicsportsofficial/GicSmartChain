@@ -1,28 +1,28 @@
-package com.wavesplatform.state.diffs.smart.eth
+package com.gicsports.state.diffs.smart.eth
 
 import com.esaulpaugh.headlong.abi.{Function, Tuple}
 import com.esaulpaugh.headlong.util.FastHex
-import com.wavesplatform.account.{Address, KeyPair, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.lang.directives.DirectiveDictionary
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V3, V5}
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.{Terms, TestCompiler}
-import com.wavesplatform.lang.v1.traits.domain.AttachedPayments.*
-import com.wavesplatform.state.Portfolio
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.state.diffs.ci.ciFee
-import com.wavesplatform.state.diffs.smart.predef.{assertProvenPart, provenPart}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.{IssueTransaction, SetAssetScriptTransaction}
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{ABIConverter, Asset, EthereumTransaction, GenesisTransaction}
-import com.wavesplatform.utils.EthHelpers
+import com.gicsports.account.{Address, KeyPair, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.lang.directives.DirectiveDictionary
+import com.gicsports.lang.directives.values.{StdLibVersion, V3, V5}
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.{Terms, TestCompiler}
+import com.gicsports.lang.v1.traits.domain.AttachedPayments.*
+import com.gicsports.state.Portfolio
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.state.diffs.ci.ciFee
+import com.gicsports.state.diffs.smart.predef.{assertProvenPart, provenPart}
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.{IssueTransaction, SetAssetScriptTransaction}
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{ABIConverter, Asset, EthereumTransaction, GenesisTransaction}
+import com.gicsports.utils.EthHelpers
 
 class EthereumInvokeTest extends PropSpec with WithDomain with EthHelpers {
   import DomainPresets.*

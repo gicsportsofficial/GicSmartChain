@@ -1,42 +1,42 @@
-package com.wavesplatform.state.diffs.invoke
+package com.gicsports.state.diffs.invoke
 
 import cats.Id
 import cats.implicits.*
 import com.google.common.base.Throwables
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{Address, AddressOrAlias, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.BlockchainFeatures.{BlockV5, RideV6, SynchronousCalls}
-import com.wavesplatform.features.EstimatorProvider.*
-import com.wavesplatform.features.InvokeScriptSelfPaymentPolicyProvider.*
-import com.wavesplatform.features.ScriptTransferValidationProvider.*
-import com.wavesplatform.lang.*
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.compiler.Terms.{FUNCTION_CALL, *}
-import com.wavesplatform.lang.v1.evaluator.{Log, ScriptResult, ScriptResultV4}
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.v1.traits.domain.*
-import com.wavesplatform.lang.v1.traits.domain.Tx.{BurnPseudoTx, ReissuePseudoTx, ScriptTransfer, SponsorFeePseudoTx}
-import com.wavesplatform.state.*
-import com.wavesplatform.state.diffs.FeeValidation.*
-import com.wavesplatform.state.diffs.{BalanceDiffValidation, DiffsCommon}
-import com.wavesplatform.state.reader.CompositeBlockchain
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.*
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.smart.*
-import com.wavesplatform.transaction.smart.script.ScriptRunner
-import com.wavesplatform.transaction.smart.script.ScriptRunner.TxOrd
-import com.wavesplatform.transaction.smart.script.trace.AssetVerifierTrace.AssetContext
-import com.wavesplatform.transaction.smart.script.trace.TracedResult.Attribute
-import com.wavesplatform.transaction.smart.script.trace.{AssetVerifierTrace, TracedResult}
-import com.wavesplatform.transaction.validation.impl.{DataTxValidator, LeaseCancelTxValidator, LeaseTxValidator, SponsorFeeTxValidator}
-import com.wavesplatform.transaction.{Asset, AssetIdLength, ERC20Address, PBSince, TransactionType}
-import com.wavesplatform.utils.*
+import com.gicsports.account.{Address, AddressOrAlias, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.BlockchainFeatures.{BlockV5, RideV6, SynchronousCalls}
+import com.gicsports.features.EstimatorProvider.*
+import com.gicsports.features.InvokeScriptSelfPaymentPolicyProvider.*
+import com.gicsports.features.ScriptTransferValidationProvider.*
+import com.gicsports.lang.*
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.compiler.Terms.{FUNCTION_CALL, *}
+import com.gicsports.lang.v1.evaluator.{Log, ScriptResult, ScriptResultV4}
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.v1.traits.domain.*
+import com.gicsports.lang.v1.traits.domain.Tx.{BurnPseudoTx, ReissuePseudoTx, ScriptTransfer, SponsorFeePseudoTx}
+import com.gicsports.state.*
+import com.gicsports.state.diffs.FeeValidation.*
+import com.gicsports.state.diffs.{BalanceDiffValidation, DiffsCommon}
+import com.gicsports.state.reader.CompositeBlockchain
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.*
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.smart.*
+import com.gicsports.transaction.smart.script.ScriptRunner
+import com.gicsports.transaction.smart.script.ScriptRunner.TxOrd
+import com.gicsports.transaction.smart.script.trace.AssetVerifierTrace.AssetContext
+import com.gicsports.transaction.smart.script.trace.TracedResult.Attribute
+import com.gicsports.transaction.smart.script.trace.{AssetVerifierTrace, TracedResult}
+import com.gicsports.transaction.validation.impl.{DataTxValidator, LeaseCancelTxValidator, LeaseTxValidator, SponsorFeeTxValidator}
+import com.gicsports.transaction.{Asset, AssetIdLength, ERC20Address, PBSince, TransactionType}
+import com.gicsports.utils.*
 import shapeless.Coproduct
 
 import scala.util.{Failure, Right, Success, Try}
@@ -121,12 +121,12 @@ object InvokeDiffsCommon {
             else
               ""
 
-          val assetName = tx.assetFee._1.fold("CARDIUM")(_.id.toString)
+          val assetName = tx.assetFee._1.fold("GIC")(_.id.toString)
           val txName    = tx.tpe.transactionName
 
           s"Fee in $assetName for $txName (${tx.assetFee._2} in $assetName)" +
             s"$stepsInfo$totalScriptsInvokedInfo$issuesInfo " +
-            s"does not exceed minimal value of $minFee CARDIUM."
+            s"does not exceed minimal value of $minFee GIC."
         }
 
         Either.cond(

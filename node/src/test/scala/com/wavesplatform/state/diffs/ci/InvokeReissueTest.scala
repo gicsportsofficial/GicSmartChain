@@ -1,12 +1,12 @@
-package com.wavesplatform.state.diffs.ci
-import com.wavesplatform.TestValues.invokeFee
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TxHelpers._
+package com.gicsports.state.diffs.ci
+import com.gicsports.TestValues.invokeFee
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.directives.values._
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TxHelpers._
 
 class InvokeReissueTest extends PropSpec with WithDomain {
   import DomainPresets._

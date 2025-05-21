@@ -1,44 +1,44 @@
-package com.wavesplatform.http
+package com.gicsports.http
 
 import akka.http.scaladsl.model.headers.Location
 import akka.http.scaladsl.model.{ContentTypes, HttpEntity, StatusCodes}
 import com.typesafe.config.ConfigObject
-import com.wavesplatform.*
-import com.wavesplatform.account.Alias
-import com.wavesplatform.api.common.CommonTransactionsApi
-import com.wavesplatform.api.http.ApiError.ApiKeyNotValid
-import com.wavesplatform.api.http.{DebugApiRoute, RouteTimeout}
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.crypto.DigestLength
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.Domain
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.values.V6
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.Terms.TRUE
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext
-import com.wavesplatform.lang.v1.traits.domain.{Issue, Lease, Recipient}
-import com.wavesplatform.network.PeerDatabase
-import com.wavesplatform.settings.{TestFunctionalitySettings, WavesSettings}
-import com.wavesplatform.state.StateHash.SectionId
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.state.reader.LeaseDetails
-import com.wavesplatform.state.{AccountScriptInfo, AssetDescription, AssetScriptInfo, Blockchain, Height, NG, StateHash, TxMeta}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.assets.exchange.OrderType
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{ERC20Address, TxHelpers, TxVersion}
-import com.wavesplatform.utils.Schedulers
-import com.wavesplatform.{BlockchainStubHelpers, NTPTime, TestValues, TestWallet}
+import com.gicsports.*
+import com.gicsports.account.Alias
+import com.gicsports.api.common.CommonTransactionsApi
+import com.gicsports.api.http.ApiError.ApiKeyNotValid
+import com.gicsports.api.http.{DebugApiRoute, RouteTimeout}
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.*
+import com.gicsports.crypto.DigestLength
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.Domain
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.values.V6
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.Terms.TRUE
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext
+import com.gicsports.lang.v1.traits.domain.{Issue, Lease, Recipient}
+import com.gicsports.network.PeerDatabase
+import com.gicsports.settings.{TestFunctionalitySettings, WavesSettings}
+import com.gicsports.state.StateHash.SectionId
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.state.reader.LeaseDetails
+import com.gicsports.state.{AccountScriptInfo, AssetDescription, AssetScriptInfo, Blockchain, Height, NG, StateHash, TxMeta}
+import com.gicsports.test.*
+import com.gicsports.transaction.assets.exchange.OrderType
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{ERC20Address, TxHelpers, TxVersion}
+import com.gicsports.utils.Schedulers
+import com.gicsports.{BlockchainStubHelpers, NTPTime, TestValues, TestWallet}
 import monix.eval.Task
 import org.scalamock.scalatest.PathMockFactory
 import org.scalatest.{Assertion, OptionValues}

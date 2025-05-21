@@ -1,8 +1,8 @@
-package com.wavesplatform.transaction.utils
+package com.gicsports.transaction.utils
 
-import com.wavesplatform.account.{Address, KeyPair}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.utils.EthEncoding
+import com.gicsports.account.{Address, KeyPair}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.utils.EthEncoding
 import org.web3j.crypto.{Bip32ECKeyPair, ECKeyPair, Keys}
 
 object EthConverters {

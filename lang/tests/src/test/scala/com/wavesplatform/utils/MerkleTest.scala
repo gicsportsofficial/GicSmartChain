@@ -1,22 +1,22 @@
-package com.wavesplatform.utils
+package com.gicsports.utils
 
 import cats.Id
 import cats.implicits.*
 import com.google.common.primitives.Ints
-import com.wavesplatform.common.merkle.*
-import com.wavesplatform.common.merkle.Merkle.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base64, EitherExt2}
-import com.wavesplatform.lang.Common
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.utils.lazyContexts
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.evaluator.ContractEvaluator.LogExtraInfo
-import com.wavesplatform.lang.v1.evaluator.EvaluatorV2
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.test.*
+import com.gicsports.common.merkle.*
+import com.gicsports.common.merkle.Merkle.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base64, EitherExt2}
+import com.gicsports.lang.Common
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.utils.lazyContexts
+import com.gicsports.lang.v1.compiler.ExpressionCompiler
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.evaluator.ContractEvaluator.LogExtraInfo
+import com.gicsports.lang.v1.evaluator.EvaluatorV2
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.test.*
 import org.scalacheck.{Arbitrary, Gen}
 
 import scala.annotation.tailrec

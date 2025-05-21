@@ -1,17 +1,17 @@
-package com.wavesplatform.lang.v1.evaluator
+package com.gicsports.lang.v1.evaluator
 
 import cats.data.EitherT
 import cats.implicits.*
 import cats.{Eval, Id, Monad, StackSafeMonad}
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.Types.{CASETYPEREF, NOTHING}
-import com.wavesplatform.lang.v1.evaluator.ContextfulNativeFunction.{Extended, Simple}
-import com.wavesplatform.lang.v1.evaluator.ctx.*
-import com.wavesplatform.lang.v1.evaluator.ctx.LoggedEvaluationContext.Lenses
-import com.wavesplatform.lang.v1.task.imports.*
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.{CoevalF, CommonError, EvalF, ExecutionError}
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.Types.{CASETYPEREF, NOTHING}
+import com.gicsports.lang.v1.evaluator.ContextfulNativeFunction.{Extended, Simple}
+import com.gicsports.lang.v1.evaluator.ctx.*
+import com.gicsports.lang.v1.evaluator.ctx.LoggedEvaluationContext.Lenses
+import com.gicsports.lang.v1.task.imports.*
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.{CoevalF, CommonError, EvalF, ExecutionError}
 
 import scala.collection.mutable.ListBuffer
 import scala.util.Try

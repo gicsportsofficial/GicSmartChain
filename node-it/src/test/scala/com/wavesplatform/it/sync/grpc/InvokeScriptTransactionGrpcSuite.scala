@@ -1,30 +1,30 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
 import com.google.protobuf.ByteString
 import com.typesafe.config.Config
-import com.wavesplatform.account.{Address, KeyPair}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncGrpcApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.sync.smartcontract.invokeScrTxSupportedVersions
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_BYTESTR, FUNCTION_CALL}
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.protobuf.transaction.{PBRecipients, PBTransactions, Recipient}
-import com.wavesplatform.protobuf.transaction.DataTransactionData.DataEntry
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.account.{Address, KeyPair}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncGrpcApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.sync.smartcontract.invokeScrTxSupportedVersions
+import com.gicsports.it.NodeConfigs
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.{CONST_BYTESTR, FUNCTION_CALL}
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.protobuf.transaction.{PBRecipients, PBTransactions, Recipient}
+import com.gicsports.protobuf.transaction.DataTransactionData.DataEntry
+import com.gicsports.test._
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import io.grpc.Status.Code
 
 class InvokeScriptTransactionGrpcSuite extends GrpcBaseTransactionSuite {
   override protected def nodeConfigs: Seq[Config] =
     NodeConfigs.newBuilder
       .overrideBase(_.quorum(0))
-      .overrideBase(_ => """CARDIUM.blockchain.custom.functionality.pre-activated-features.16 = 0""")
+      .overrideBase(_ => """GIC.blockchain.custom.functionality.pre-activated-features.16 = 0""")
       .withDefault(1)
       .withSpecial(_.nonMiner)
       .buildNonConflicting()

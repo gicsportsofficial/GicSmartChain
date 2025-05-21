@@ -1,6 +1,6 @@
-package com.wavesplatform.settings
+package com.gicsports.settings
 
-import com.wavesplatform.features.{BlockchainFeature, BlockchainFeatures}
+import com.gicsports.features.{BlockchainFeature, BlockchainFeatures}
 
 object TestFunctionalitySettings {
   val Enabled = FunctionalitySettings(featureCheckBlocksPeriod = 10000, blocksForFeatureActivation = 9000, preActivatedFeatures = Map(

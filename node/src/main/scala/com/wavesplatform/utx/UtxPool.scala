@@ -1,13 +1,13 @@
-package com.wavesplatform.utx
+package com.gicsports.utx
 
 import scala.concurrent.duration.FiniteDuration
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.mining.MultiDimensionalMiningConstraint
-import com.wavesplatform.transaction._
-import com.wavesplatform.transaction.smart.script.trace.TracedResult
-import com.wavesplatform.utx.UtxPool.PackStrategy
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.mining.MultiDimensionalMiningConstraint
+import com.gicsports.transaction._
+import com.gicsports.transaction.smart.script.trace.TracedResult
+import com.gicsports.utx.UtxPool.PackStrategy
 
 trait UtxPool extends AutoCloseable {
   def putIfNew(tx: Transaction, forceValidate: Boolean = false): TracedResult[ValidationError, Boolean]

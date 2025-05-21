@@ -1,14 +1,14 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.db.WithState
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lagonaki.mocks.TestBlock.create as block
-import com.wavesplatform.settings.TestFunctionalitySettings
-import com.wavesplatform.state.{BinaryDataEntry, BooleanDataEntry, IntegerDataEntry}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{GenesisTransaction, TxHelpers}
+import com.gicsports.account.KeyPair
+import com.gicsports.common.state.ByteStr
+import com.gicsports.db.WithState
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lagonaki.mocks.TestBlock.create as block
+import com.gicsports.settings.TestFunctionalitySettings
+import com.gicsports.state.{BinaryDataEntry, BooleanDataEntry, IntegerDataEntry}
+import com.gicsports.test.*
+import com.gicsports.transaction.{GenesisTransaction, TxHelpers}
 
 class DataTransactionDiffTest extends PropSpec with WithState {
 
@@ -81,7 +81,7 @@ class DataTransactionDiffTest extends PropSpec with WithState {
 
     val (genesis, dataTx) = setup
     assertDiffEi(Seq(block(Seq(genesis))), block(Seq(dataTx)), fs) { blockDiffEi =>
-      blockDiffEi should produce("negative CARDIUM balance")
+      blockDiffEi should produce("negative GIC balance")
     }
   }
 

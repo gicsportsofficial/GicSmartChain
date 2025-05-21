@@ -1,4 +1,4 @@
-package com.wavesplatform.mining
+package com.gicsports.mining
 
 import java.security.Permission
 import java.util.concurrent.{Semaphore, TimeUnit}
@@ -7,25 +7,25 @@ import scala.concurrent.Await
 import scala.concurrent.duration._
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.WithDB
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.consensus.PoSSelector
-import com.wavesplatform.db.DBCacheSettings
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.mining.BlockWithMaxBaseTargetTest.Env
-import com.wavesplatform.settings.{WavesSettings, _}
-import com.wavesplatform.state._
-import com.wavesplatform.state.appender.BlockAppender
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.state.utils.TestLevelDB
-import com.wavesplatform.test.FreeSpec
-import com.wavesplatform.transaction.{BlockchainUpdater, GenesisTransaction}
-import com.wavesplatform.utils.BaseTargetReachedMaximum
-import com.wavesplatform.utx.UtxPoolImpl
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.WithDB
+import com.gicsports.account.KeyPair
+import com.gicsports.block.Block
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.consensus.PoSSelector
+import com.gicsports.db.DBCacheSettings
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.mining.BlockWithMaxBaseTargetTest.Env
+import com.gicsports.settings.{WavesSettings, _}
+import com.gicsports.state._
+import com.gicsports.state.appender.BlockAppender
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.state.utils.TestLevelDB
+import com.gicsports.test.FreeSpec
+import com.gicsports.transaction.{BlockchainUpdater, GenesisTransaction}
+import com.gicsports.utils.BaseTargetReachedMaximum
+import com.gicsports.utx.UtxPoolImpl
+import com.gicsports.wallet.Wallet
 import io.netty.channel.group.DefaultChannelGroup
 import io.netty.util.concurrent.GlobalEventExecutor
 import monix.eval.Task

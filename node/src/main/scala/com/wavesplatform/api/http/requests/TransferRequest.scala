@@ -1,10 +1,10 @@
-package com.wavesplatform.api.http.requests
+package com.gicsports.api.http.requests
 
-import com.wavesplatform.account.{AddressOrAlias, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{Asset, Proofs}
+import com.gicsports.account.{AddressOrAlias, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{Asset, Proofs}
 import play.api.libs.json.*
 
 case class TransferRequest(

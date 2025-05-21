@@ -1,9 +1,9 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import akka.http.scaladsl.common.{EntityStreamingSupport, JsonEntityStreamingSupport}
 import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.testkit.{RouteTestTimeout, ScalatestRouteTest}
-import com.wavesplatform.test.PropSpec
+import com.gicsports.test.PropSpec
 import monix.eval.Task
 import monix.execution.Scheduler
 import monix.execution.atomic.AtomicBoolean

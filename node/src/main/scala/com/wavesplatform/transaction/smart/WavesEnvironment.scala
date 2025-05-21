@@ -1,34 +1,34 @@
-package com.wavesplatform.transaction.smart
+package com.gicsports.transaction.smart
 
 import cats.syntax.either.*
-import com.wavesplatform.account
-import com.wavesplatform.account.{AddressOrAlias, PublicKey}
-import com.wavesplatform.block.BlockHeader
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.MultiPaymentPolicyProvider.*
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.FunctionHeader.User
-import com.wavesplatform.lang.v1.compiler.Terms.{EVALUATED, FUNCTION_CALL}
-import com.wavesplatform.lang.v1.evaluator.{Log, ScriptResult}
-import com.wavesplatform.lang.v1.traits.*
-import com.wavesplatform.lang.v1.traits.domain.*
-import com.wavesplatform.lang.v1.traits.domain.Recipient.*
-import com.wavesplatform.state.*
-import com.wavesplatform.state.diffs.invoke.{InvokeScript, InvokeScriptDiff, InvokeScriptTransactionLike}
-import com.wavesplatform.state.reader.CompositeBlockchain
-import com.wavesplatform.transaction.Asset.*
-import com.wavesplatform.transaction.TxValidationError.{FailedTransactionError, GenericError}
-import com.wavesplatform.transaction.assets.exchange.Order
-import com.wavesplatform.transaction.serialization.impl.PBTransactionSerializer
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.smart.script.trace.CoevalR.traced
-import com.wavesplatform.transaction.smart.script.trace.InvokeScriptTrace
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{Asset, DiffToLogConverter, TransactionBase, TransactionType}
+import com.gicsports.account
+import com.gicsports.account.{AddressOrAlias, PublicKey}
+import com.gicsports.block.BlockHeader
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.MultiPaymentPolicyProvider.*
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.FunctionHeader.User
+import com.gicsports.lang.v1.compiler.Terms.{EVALUATED, FUNCTION_CALL}
+import com.gicsports.lang.v1.evaluator.{Log, ScriptResult}
+import com.gicsports.lang.v1.traits.*
+import com.gicsports.lang.v1.traits.domain.*
+import com.gicsports.lang.v1.traits.domain.Recipient.*
+import com.gicsports.state.*
+import com.gicsports.state.diffs.invoke.{InvokeScript, InvokeScriptDiff, InvokeScriptTransactionLike}
+import com.gicsports.state.reader.CompositeBlockchain
+import com.gicsports.transaction.Asset.*
+import com.gicsports.transaction.TxValidationError.{FailedTransactionError, GenericError}
+import com.gicsports.transaction.assets.exchange.Order
+import com.gicsports.transaction.serialization.impl.PBTransactionSerializer
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.smart.script.trace.CoevalR.traced
+import com.gicsports.transaction.smart.script.trace.InvokeScriptTrace
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{Asset, DiffToLogConverter, TransactionBase, TransactionType}
 import monix.eval.Coeval
 import shapeless.*
 
@@ -47,7 +47,7 @@ class WavesEnvironment(
     ds: DirectiveSet,
     override val txId: ByteStr
 ) extends Environment[Id] {
-  import com.wavesplatform.lang.v1.traits.Environment.*
+  import com.gicsports.lang.v1.traits.Environment.*
 
   def currentBlockchain(): Blockchain = blockchain
 
@@ -71,14 +71,14 @@ class WavesEnvironment(
       .transferById(ByteStr(id))
       .map(t => RealTransactionWrapper.mapTransferTx(t._2))
 
-  def toAddress(recipient: Recipient): Option[com.wavesplatform.account.Address] = {
+  def toAddress(recipient: Recipient): Option[com.gicsports.account.Address] = {
     recipient match {
       case Address(bytes) =>
-        com.wavesplatform.account.Address
+        com.gicsports.account.Address
           .fromBytes(bytes.arr)
           .toOption
       case Alias(name) =>
-        com.wavesplatform.account.Alias
+        com.gicsports.account.Alias
           .create(name)
           .flatMap(blockchain.resolveAlias)
           .toOption
@@ -105,11 +105,11 @@ class WavesEnvironment(
     (for {
       address <- recipient match {
         case Address(bytes) =>
-          com.wavesplatform.account.Address
+          com.gicsports.account.Address
             .fromBytes(bytes.arr, chainId)
             .toOption
         case Alias(name) =>
-          com.wavesplatform.account.Alias
+          com.gicsports.account.Alias
             .create(name)
             .flatMap(blockchain.resolveAlias)
             .toOption
@@ -121,7 +121,7 @@ class WavesEnvironment(
   override def resolveAlias(name: String): Either[String, Recipient.Address] =
     // There are no new aliases in currentBlockchain
     blockchain
-      .resolveAlias(com.wavesplatform.account.Alias.create(name).explicitGet())
+      .resolveAlias(com.gicsports.account.Alias.create(name).explicitGet())
       .map(a => Recipient.Address(ByteStr(a.bytes)))
       .left
       .map(_.toString)
@@ -132,7 +132,7 @@ class WavesEnvironment(
     (for {
       aoa <- addressOrAlias match {
         case Address(bytes) => AddressOrAlias.fromBytes(bytes.arr)
-        case Alias(name)    => com.wavesplatform.account.Alias.create(name)
+        case Alias(name)    => com.gicsports.account.Alias.create(name)
       }
       address <- blockchain.resolveAlias(aoa)
       balance = currentBlockchain().balance(address, Asset.fromCompatId(maybeAssetId.map(ByteStr(_))))
@@ -301,7 +301,7 @@ object DAppEnvironment {
   }
 
   final case class DAppInvocation(
-      dAppAddress: com.wavesplatform.account.Address,
+      dAppAddress: com.gicsports.account.Address,
       call: FUNCTION_CALL,
       payments: Seq[InvokeScriptTransaction.Payment]
   )
@@ -316,9 +316,9 @@ class DAppEnvironment(
     tthis: Environment.Tthis,
     ds: DirectiveSet,
     tx: InvokeScriptTransactionLike,
-    currentDApp: com.wavesplatform.account.Address,
-    currentDAppPk: com.wavesplatform.account.PublicKey,
-    calledAddresses: Set[com.wavesplatform.account.Address],
+    currentDApp: com.gicsports.account.Address,
+    currentDAppPk: com.gicsports.account.PublicKey,
+    calledAddresses: Set[com.gicsports.account.Address],
     limitedExecution: Boolean,
     totalComplexityLimit: Int,
     var remainingCalls: Int,

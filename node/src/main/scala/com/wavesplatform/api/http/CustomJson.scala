@@ -1,4 +1,4 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import java.io.IOException
 
@@ -36,7 +36,7 @@ object NumberAsStringSerializer extends JsonSerializer[JsValue] {
     "sponsorBalance",
     "totalAmount",
     "totalFee",
-    "totalCardiumAmount",
+    "totalGicAmount",
     "value"
   )
 

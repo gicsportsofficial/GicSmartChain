@@ -1,20 +1,20 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import scala.annotation.tailrec
 import scala.util.Try
 import akka.http.scaladsl.server.{Route, StandardRoute}
 import cats.syntax.either.*
-import com.wavesplatform.api.BlockMeta
-import com.wavesplatform.api.common.CommonBlocksApi
-import com.wavesplatform.api.http.ApiError.{BlockDoesNotExist, TooBigArrayAllocation}
-import com.wavesplatform.api.http.TransactionsApiRoute.TransactionJsonSerializer
-import com.wavesplatform.block.Block
-import com.wavesplatform.settings.RestAPISettings
-import com.wavesplatform.state.TxMeta
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.utils.Time
+import com.gicsports.api.BlockMeta
+import com.gicsports.api.common.CommonBlocksApi
+import com.gicsports.api.http.ApiError.{BlockDoesNotExist, TooBigArrayAllocation}
+import com.gicsports.api.http.TransactionsApiRoute.TransactionJsonSerializer
+import com.gicsports.block.Block
+import com.gicsports.settings.RestAPISettings
+import com.gicsports.state.TxMeta
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.Transaction
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.utils.Time
 import play.api.libs.json.*
 
 case class BlocksApiRoute(settings: RestAPISettings, commonApi: CommonBlocksApi, time: Time, routeTimeout: RouteTimeout) extends ApiRoute {

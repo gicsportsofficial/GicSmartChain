@@ -1,9 +1,9 @@
-package com.wavesplatform.it.sync.network
+package com.gicsports.it.sync.network
 
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync.{issueAmount, issueFee, minFee}
-import com.wavesplatform.it.{BaseFreeSpec, Node, WaitForHeight2}
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync.{issueAmount, issueFee, minFee}
+import com.gicsports.it.{BaseFreeSpec, Node, WaitForHeight2}
 
 import scala.concurrent.Await
 import scala.concurrent.duration._
@@ -68,9 +68,9 @@ class NetworkSeparationTestSuite extends BaseFreeSpec with WaitForHeight2 {
 }
 
 object NetworkSeparationTestSuite {
-  import com.wavesplatform.it.NodeConfigs._
+  import com.gicsports.it.NodeConfigs._
   private val woFeatureConfig = ConfigFactory.parseString(s"""
-                                                            |CARDIUM {
+                                                            |GIC {
                                                             |  synchronization.synchronization-timeout = 10s
                                                             |  blockchain.custom.functionality {
                                                             |    pre-activated-features = {
@@ -82,7 +82,7 @@ object NetworkSeparationTestSuite {
                                                             |}""".stripMargin)
 
   private val withFeatureConfig = ConfigFactory.parseString(s"""
-                                                               |CARDIUM {
+                                                               |GIC {
                                                                |  synchronization.synchronization-timeout = 10s
                                                                |  blockchain.custom.functionality {
                                                                |    pre-activated-features = {

@@ -1,29 +1,29 @@
-package com.wavesplatform.lang.v1
+package com.gicsports.lang.v1
 
 import java.nio.charset.StandardCharsets
 import java.util.concurrent.{ThreadLocalRandom, TimeUnit}
 
 import cats.Id
 import cats.syntax.bifunctor.*
-import com.wavesplatform.account
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.crypto.Curve25519
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.{Account, DApp, V4}
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.EnvironmentFunctionsBenchmark.*
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_STRING, EVALUATED, EXPR, FUNCTION_CALL}
-import com.wavesplatform.lang.v1.evaluator.Log
-import com.wavesplatform.lang.v1.evaluator.ctx.EvaluationContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.EnvironmentFunctions
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.{Functions, WavesContext}
-import com.wavesplatform.lang.v1.traits.*
-import com.wavesplatform.lang.v1.traits.domain.Recipient.Address
-import com.wavesplatform.lang.v1.traits.domain.{BlockInfo, Recipient, ScriptAssetInfo, Tx}
-import com.wavesplatform.lang.{Common, Global, ValidationError}
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.account
+import com.gicsports.account.PublicKey
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.crypto.Curve25519
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.{Account, DApp, V4}
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.EnvironmentFunctionsBenchmark.*
+import com.gicsports.lang.v1.compiler.Terms.{CONST_STRING, EVALUATED, EXPR, FUNCTION_CALL}
+import com.gicsports.lang.v1.evaluator.Log
+import com.gicsports.lang.v1.evaluator.ctx.EvaluationContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.EnvironmentFunctions
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.{Functions, WavesContext}
+import com.gicsports.lang.v1.traits.*
+import com.gicsports.lang.v1.traits.domain.Recipient.Address
+import com.gicsports.lang.v1.traits.domain.{BlockInfo, Recipient, ScriptAssetInfo, Tx}
+import com.gicsports.lang.{Common, Global, ValidationError}
+import com.gicsports.wallet.Wallet
 import monix.eval.Coeval
 import org.openjdk.jmh.annotations.*
 import org.openjdk.jmh.infra.Blackhole

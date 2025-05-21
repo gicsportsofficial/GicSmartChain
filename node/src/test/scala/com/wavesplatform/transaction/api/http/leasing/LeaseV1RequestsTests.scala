@@ -1,7 +1,7 @@
-package com.wavesplatform.transaction.api.http.leasing
+package com.gicsports.transaction.api.http.leasing
 
-import com.wavesplatform.api.http.requests.{LeaseCancelV1Request, LeaseV1Request, SignedLeaseCancelV1Request, SignedLeaseV1Request}
-import com.wavesplatform.test.FunSuite
+import com.gicsports.api.http.requests.{LeaseCancelV1Request, LeaseV1Request, SignedLeaseCancelV1Request, SignedLeaseV1Request}
+import com.gicsports.test.FunSuite
 import play.api.libs.json.Json
 
 class LeaseV1RequestsTests extends FunSuite {

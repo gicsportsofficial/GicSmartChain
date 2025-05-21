@@ -1,14 +1,14 @@
-package com.wavesplatform.transaction.assets.exchange
+package com.gicsports.transaction.assets.exchange
 
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.test.{FlatSpec, TestTime}
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.BlockchainStubHelpers
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.state.diffs.TransactionDiffer
-import com.wavesplatform.transaction.{TxExchangeAmount, TxHelpers, TxMatcherFee, TxOrderPrice, TxVersion}
-import com.wavesplatform.utils.{DiffMatchers, EthEncoding, EthHelpers, JsonMatchers}
+import com.gicsports.account.PublicKey
+import com.gicsports.common.state.ByteStr
+import com.gicsports.test.{FlatSpec, TestTime}
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.BlockchainStubHelpers
+import com.gicsports.common.utils.*
+import com.gicsports.state.diffs.TransactionDiffer
+import com.gicsports.transaction.{TxExchangeAmount, TxHelpers, TxMatcherFee, TxOrderPrice, TxVersion}
+import com.gicsports.utils.{DiffMatchers, EthEncoding, EthHelpers, JsonMatchers}
 import org.scalamock.scalatest.PathMockFactory
 import org.scalatest.BeforeAndAfterAll
 import play.api.libs.json.{JsObject, Json}
@@ -297,7 +297,7 @@ class EthOrderSpec
       )
 
     differ(transaction).resultE should matchPattern {
-      case Left(err) if err.toString.contains("negative CARDIUM balance") =>
+      case Left(err) if err.toString.contains("negative GIC balance") =>
     }
   }
 

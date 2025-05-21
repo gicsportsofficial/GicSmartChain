@@ -1,14 +1,14 @@
-package com.wavesplatform.state.diffs.ci.sync
+package com.gicsports.state.diffs.ci.sync
 
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
-import com.wavesplatform.state.reader.LeaseDetails.Status.{Active, Cancelled}
-import com.wavesplatform.test.{PropSpec, produce}
-import com.wavesplatform.transaction.TransactionType
-import com.wavesplatform.transaction.TxHelpers.*
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
+import com.gicsports.state.reader.LeaseDetails.Status.{Active, Cancelled}
+import com.gicsports.test.{PropSpec, produce}
+import com.gicsports.transaction.TransactionType
+import com.gicsports.transaction.TxHelpers.*
 
 class SyncInvokeLeaseTest extends PropSpec with WithDomain {
   import DomainPresets.*

@@ -1,21 +1,21 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import java.io.File
 import java.util.concurrent.{ThreadLocalRandom, TimeUnit}
 
 import cats.Id
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.account.{AddressOrAlias, AddressScheme, Alias}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.database.{LevelDBFactory, LevelDBWriter}
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.v1.traits.domain.Recipient
-import com.wavesplatform.settings.{WavesSettings, loadConfig}
-import com.wavesplatform.state.WavesEnvironmentBenchmark._
-import com.wavesplatform.state.bench.DataTestData
-import com.wavesplatform.transaction.smart.WavesEnvironment
+import com.gicsports.account.{AddressOrAlias, AddressScheme, Alias}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.database.{LevelDBFactory, LevelDBWriter}
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.v1.traits.domain.Recipient
+import com.gicsports.settings.{WavesSettings, loadConfig}
+import com.gicsports.state.WavesEnvironmentBenchmark._
+import com.gicsports.state.bench.DataTestData
+import com.gicsports.transaction.smart.WavesEnvironment
 import monix.eval.Coeval
 import org.iq80.leveldb.{DB, Options}
 import org.openjdk.jmh.annotations._
@@ -27,7 +27,7 @@ import scala.io.Codec
 /**
   * Tests over real database. How to test:
   * 1. Download a database
-  * 2. Import it: https://github.com/wavesplatform/Waves/wiki/Export-and-import-of-the-blockchain#import-blocks-from-the-binary-file
+  * 2. Import it: https://github.com/gicsports/Waves/wiki/Export-and-import-of-the-blockchain#import-blocks-from-the-binary-file
   * 3. Run ExtractInfo to collect queries for tests
   * 4. Make Caches.MaxSize = 1
   * 5. Run this test

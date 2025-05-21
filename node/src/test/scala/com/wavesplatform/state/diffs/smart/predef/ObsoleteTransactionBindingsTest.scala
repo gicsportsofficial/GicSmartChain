@@ -1,20 +1,20 @@
-package com.wavesplatform.state.diffs.smart.predef
+package com.gicsports.state.diffs.smart.predef
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithState
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.values.{Expression, V1}
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.utils._
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.settings.{FunctionalitySettings, TestFunctionalitySettings}
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{GenesisTransaction, PaymentTransaction, TxHelpers}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithState
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.values.{Expression, V1}
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.utils._
+import com.gicsports.lang.v1.compiler.ExpressionCompiler
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.settings.{FunctionalitySettings, TestFunctionalitySettings}
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{GenesisTransaction, PaymentTransaction, TxHelpers}
 
 class ObsoleteTransactionBindingsTest extends PropSpec with WithState {
 

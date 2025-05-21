@@ -1,10 +1,10 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.it.BaseFunSuite
-import com.wavesplatform.it.api.State
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.test._
+import com.gicsports.it.BaseFunSuite
+import com.gicsports.it.api.State
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.test._
 
 import scala.concurrent.duration._
 
@@ -63,9 +63,9 @@ class MinerStateTestSuite extends BaseFunSuite {
 }
 
 object MinerStateTestSuite {
-  import com.wavesplatform.it.NodeConfigs._
+  import com.gicsports.it.NodeConfigs._
   private val minerConfig = ConfigFactory.parseString(s"""
-    |CARDIUM {
+    |GIC {
     |  synchronization.synchronization-timeout = 10s
     |  blockchain.custom.functionality {
     |    pre-activated-features.1 = 0

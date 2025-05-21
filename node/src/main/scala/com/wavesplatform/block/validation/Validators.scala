@@ -1,14 +1,14 @@
-package com.wavesplatform.block.validation
+package com.gicsports.block.validation
 
 import cats.syntax.either._
-import com.wavesplatform.block.Block.{GenerationSignatureLength, GenerationVRFSignatureLength, MaxFeaturesInBlock, ProtoBlockVersion}
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.crypto
-import com.wavesplatform.crypto.KeyLength
-import com.wavesplatform.mining.Miner.MaxTransactionsPerMicroblock
-import com.wavesplatform.settings.GenesisSettings
-import com.wavesplatform.transaction.GenesisTransaction
-import com.wavesplatform.transaction.TxValidationError.GenericError
+import com.gicsports.block.Block.{GenerationSignatureLength, GenerationVRFSignatureLength, MaxFeaturesInBlock, ProtoBlockVersion}
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.crypto
+import com.gicsports.crypto.KeyLength
+import com.gicsports.mining.Miner.MaxTransactionsPerMicroblock
+import com.gicsports.settings.GenesisSettings
+import com.gicsports.transaction.GenesisTransaction
+import com.gicsports.transaction.TxValidationError.GenericError
 
 object Validators {
   type Validation[A] = Either[GenericError, A]

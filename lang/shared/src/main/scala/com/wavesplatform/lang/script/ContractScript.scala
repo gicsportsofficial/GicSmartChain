@@ -1,4 +1,4 @@
-package com.wavesplatform.lang.script
+package com.gicsports.lang.script
 
 import cats.instances.either.*
 import cats.instances.list.*
@@ -7,22 +7,22 @@ import cats.syntax.either.*
 import cats.syntax.flatMap.*
 import cats.syntax.foldable.*
 import cats.syntax.traverse.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.contract.DApp.VerifierFunction
-import com.wavesplatform.lang.contract.meta.MetaMapper
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V6, DApp as DAppType}
-import com.wavesplatform.lang.utils.*
-import com.wavesplatform.lang.v1.ContractLimits.*
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.estimator.ScriptEstimator
-import com.wavesplatform.lang.v1.{BaseGlobal, FunctionHeader}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.contract.DApp.VerifierFunction
+import com.gicsports.lang.contract.meta.MetaMapper
+import com.gicsports.lang.directives.values.{StdLibVersion, V6, DApp as DAppType}
+import com.gicsports.lang.utils.*
+import com.gicsports.lang.v1.ContractLimits.*
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.estimator.ScriptEstimator
+import com.gicsports.lang.v1.{BaseGlobal, FunctionHeader}
 import monix.eval.Coeval
 
 object ContractScript {
 
-  private val Global: BaseGlobal = com.wavesplatform.lang.Global // Hack for IDEA
+  private val Global: BaseGlobal = com.gicsports.lang.Global // Hack for IDEA
 
   def validateBytes(bs: Array[Byte]): Either[String, Unit] =
     Either.cond(
@@ -57,7 +57,7 @@ object ContractScript {
       val verifierExpr  = expr.verifierFuncOpt.map(_.u.body).toList
 
       (verifierExpr ::: declExprs ::: callableExprs)
-        .exists(com.wavesplatform.lang.v1.compiler.containsArray)
+        .exists(com.gicsports.lang.v1.compiler.containsArray)
     }
 
     def isUnionInCallableAllowed: Either[String, Boolean] =

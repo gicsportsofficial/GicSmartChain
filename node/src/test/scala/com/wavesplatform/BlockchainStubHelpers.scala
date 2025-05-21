@@ -1,25 +1,25 @@
-package com.wavesplatform
+package com.gicsports
 
 import scala.concurrent.Future
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{Address, PublicKey}
-import com.wavesplatform.block.SignedBlockHeader
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.features.{BlockchainFeature, BlockchainFeatures}
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.network.TransactionPublisher
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.state.{AccountScriptInfo, AssetDescription, AssetScriptInfo, Blockchain, Diff, Height, LeaseBalance, NG, TxMeta, VolumeAndFee}
-import com.wavesplatform.state.diffs.TransactionDiffer
-import com.wavesplatform.transaction.{Asset, ERC20Address, Transaction, TxHelpers}
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.smart.script.trace.TracedResult
-import com.wavesplatform.utils.{SystemTime, Time}
+import com.gicsports.account.{Address, PublicKey}
+import com.gicsports.block.SignedBlockHeader
+import com.gicsports.common.state.ByteStr
+import com.gicsports.features.{BlockchainFeature, BlockchainFeatures}
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.ValidationError
+import com.gicsports.network.TransactionPublisher
+import com.gicsports.settings.WavesSettings
+import com.gicsports.state.{AccountScriptInfo, AssetDescription, AssetScriptInfo, Blockchain, Diff, Height, LeaseBalance, NG, TxMeta, VolumeAndFee}
+import com.gicsports.state.diffs.TransactionDiffer
+import com.gicsports.transaction.{Asset, ERC20Address, Transaction, TxHelpers}
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.smart.script.trace.TracedResult
+import com.gicsports.utils.{SystemTime, Time}
 import io.netty.channel.Channel
-import com.wavesplatform.common.utils._
+import com.gicsports.common.utils._
 import org.scalamock.MockFactoryBase
 import org.scalamock.matchers.MockParameter
 

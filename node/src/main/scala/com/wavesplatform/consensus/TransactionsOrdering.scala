@@ -1,9 +1,9 @@
-package com.wavesplatform.consensus
+package com.gicsports.consensus
 
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.assets.exchange.ExchangeTransaction
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.{Authorized, Transaction}
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.assets.exchange.ExchangeTransaction
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.{Authorized, Transaction}
 
 object TransactionsOrdering {
   trait WavesOrdering extends Ordering[Transaction] {

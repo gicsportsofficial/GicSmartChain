@@ -1,14 +1,14 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
 import scala.concurrent.{ExecutionException, Future}
 import scala.util.Success
 
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.smart.script.trace.TracedResult
-import com.wavesplatform.utils.Schedulers.ExecutorExt
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.Transaction
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.smart.script.trace.TracedResult
+import com.gicsports.utils.Schedulers.ExecutorExt
+import com.gicsports.utils.ScorexLogging
 import io.netty.channel.Channel
 import monix.execution.Scheduler
 

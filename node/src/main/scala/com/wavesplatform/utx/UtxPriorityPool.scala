@@ -1,14 +1,14 @@
-package com.wavesplatform.utx
+package com.gicsports.utx
 
 import java.time.Duration
 import java.time.temporal.ChronoUnit
 
-import com.wavesplatform.ResponsivenessLogs
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.state.reader.CompositeBlockchain
-import com.wavesplatform.state.{Blockchain, Diff}
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.utils.{OptimisticLockable, ScorexLogging}
+import com.gicsports.ResponsivenessLogs
+import com.gicsports.common.state.ByteStr
+import com.gicsports.state.reader.CompositeBlockchain
+import com.gicsports.state.{Blockchain, Diff}
+import com.gicsports.transaction.Transaction
+import com.gicsports.utils.{OptimisticLockable, ScorexLogging}
 import kamon.Kamon
 import kamon.metric.MeasurementUnit
 

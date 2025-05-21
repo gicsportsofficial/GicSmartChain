@@ -1,19 +1,19 @@
-package com.wavesplatform.it.sync.smartcontract.smartasset
+package com.gicsports.it.sync.smartcontract.smartasset
 
-import com.wavesplatform.api.http.ApiError.TransactionNotAllowedByAssetScript
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.NTPTime
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.sync.smartcontract.{cryptoContextScript, pureContextScript, wavesContextScript, _}
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.state._
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.DataTransaction
-import com.wavesplatform.transaction.assets.exchange._
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.api.http.ApiError.TransactionNotAllowedByAssetScript
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.NTPTime
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.sync.smartcontract.{cryptoContextScript, pureContextScript, wavesContextScript, _}
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.state._
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.DataTransaction
+import com.gicsports.transaction.assets.exchange._
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import org.scalatest.CancelAfterFailure
 
 class ExchangeSmartAssetsSuite extends BaseTransactionSuite with CancelAfterFailure with NTPTime {
@@ -134,12 +134,12 @@ class ExchangeSmartAssetsSuite extends BaseTransactionSuite with CancelAfterFail
       waitForTx = true
     )
 
-    withClue("check fee for smart accounts and smart AssetPair - extx.fee == 0.16.CARDIUM") {
+    withClue("check fee for smart accounts and smart AssetPair - extx.fee == 0.16.GIC") {
       setContracts((sc1, acc0), (sc1, acc1), (sc1, acc2))
 
       assertBadRequestAndMessage(
         sender.signedBroadcast(exchangeTx(smartAssetPair, smartMatcherFee + smartFee, smartMatcherFee + smartFee, ntpTime, 2, 2, acc1, acc0, acc2)),
-        "does not exceed minimal value of 16000000 CARDIUM"
+        "does not exceed minimal value of 16000000 GIC"
       )
 
       sender.signedBroadcast(

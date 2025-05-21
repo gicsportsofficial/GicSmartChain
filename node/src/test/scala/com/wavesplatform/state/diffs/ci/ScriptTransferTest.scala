@@ -1,22 +1,22 @@
-package com.wavesplatform.state.diffs.ci
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.contract.DApp.{CallableAnnotation, CallableFunction}
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.v1.FunctionHeader.{Native, User}
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_STRING, FUNC, FUNCTION_CALL, REF}
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.evaluator.FunctionIds.CREATE_LIST
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TransactionType
-import com.wavesplatform.transaction.TxHelpers.{defaultSigner, invoke, issue, secondAddress, secondSigner, setScript}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
+package com.gicsports.state.diffs.ci
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.contract.DApp.{CallableAnnotation, CallableFunction}
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.v1.FunctionHeader.{Native, User}
+import com.gicsports.lang.v1.compiler.Terms.{CONST_STRING, FUNC, FUNCTION_CALL, REF}
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.evaluator.FunctionIds.CREATE_LIST
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TransactionType
+import com.gicsports.transaction.TxHelpers.{defaultSigner, invoke, issue, secondAddress, secondSigner, setScript}
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
 
 class ScriptTransferTest extends PropSpec with WithDomain {
   import DomainPresets.*

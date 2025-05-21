@@ -1,23 +1,23 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{Address, AddressScheme, Alias}
-import com.wavesplatform.api.http.requests.{MassTransferRequest, SignedMassTransferRequest}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.crypto
-import com.wavesplatform.it.api.MassTransferTransactionInfo
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.it.util.TxHelpers
-import com.wavesplatform.protobuf.transaction.{MassTransferTransactionData, PBRecipients, Recipient}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.{MaxTransferCount, Transfer}
-import com.wavesplatform.transaction.transfer.TransferTransaction.MaxAttachmentSize
-import com.wavesplatform.transaction.{Proofs, TxVersion}
+import com.gicsports.account.{Address, AddressScheme, Alias}
+import com.gicsports.api.http.requests.{MassTransferRequest, SignedMassTransferRequest}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.crypto
+import com.gicsports.it.api.MassTransferTransactionInfo
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.it.sync.*
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.it.util.TxHelpers
+import com.gicsports.protobuf.transaction.{MassTransferTransactionData, PBRecipients, Recipient}
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.transfer.*
+import com.gicsports.transaction.transfer.MassTransferTransaction.{MaxTransferCount, Transfer}
+import com.gicsports.transaction.transfer.TransferTransaction.MaxAttachmentSize
+import com.gicsports.transaction.{Proofs, TxVersion}
 import play.api.libs.json.*
 
 import scala.concurrent.duration.*
@@ -57,7 +57,7 @@ class MassTransferTransactionSuite extends BaseTransactionSuite {
     }
   }
 
-  test("CARDIUM mass transfer changes CARDIUM balances") {
+  test("GIC mass transfer changes GIC balances") {
     for (v <- massTransferTxSupportedVersions) {
       val (balance1, eff1) = miner.accountBalances(firstAddress)
       val (balance2, eff2) = miner.accountBalances(secondAddress)
@@ -133,7 +133,7 @@ class MassTransferTransactionSuite extends BaseTransactionSuite {
   }
 
   test("invalid transfer should not be in UTX or blockchain") {
-    import com.wavesplatform.transaction.transfer.*
+    import com.gicsports.transaction.transfer.*
 
     for (_ <- massTransferTxSupportedVersions) {
       def request(

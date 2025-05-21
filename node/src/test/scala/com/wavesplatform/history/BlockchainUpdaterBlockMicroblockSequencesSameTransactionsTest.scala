@@ -1,14 +1,14 @@
-package com.wavesplatform.history
+package com.gicsports.history
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.history.Domain.BlockchainUpdaterExt
-import com.wavesplatform.state.diffs._
-import com.wavesplatform.test._
-import com.wavesplatform.transaction._
-import com.wavesplatform.transaction.transfer._
+import com.gicsports.account.KeyPair
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.history.Domain.BlockchainUpdaterExt
+import com.gicsports.state.diffs._
+import com.gicsports.test._
+import com.gicsports.transaction._
+import com.gicsports.transaction.transfer._
 import org.scalacheck.Gen
 
 class BlockchainUpdaterBlockMicroblockSequencesSameTransactionsTest extends PropSpec with DomainScenarioDrivenPropertyCheck {

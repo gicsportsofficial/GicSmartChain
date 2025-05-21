@@ -1,18 +1,18 @@
-package com.wavesplatform.state.diffs.ci
+package com.gicsports.state.diffs.ci
 
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.db.{DBCacheSettings, WithDomain, WithState}
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.BlockchainFeatures.SynchronousCalls
-import com.wavesplatform.lang.directives.values.V4
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.{Transaction, TransactionType, TxHelpers}
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.db.{DBCacheSettings, WithDomain, WithState}
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.BlockchainFeatures.SynchronousCalls
+import com.gicsports.lang.directives.values.V4
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.{Transaction, TransactionType, TxHelpers}
 import org.scalatest.{EitherValues, Inside}
 
 class InvokeActionsFeeTest extends PropSpec with Inside with WithState with DBCacheSettings with WithDomain with EitherValues {
@@ -74,13 +74,13 @@ class InvokeActionsFeeTest extends PropSpec with Inside with WithState with DBCa
       d.appendBlockE(invokeFromScripted1) should produce(
         s"Transaction sent from smart account. Requires $ScriptExtraFee extra fee. " +
           s"Transaction involves 2 scripted assets. Requires ${2 * ScriptExtraFee} extra fee. " +
-          s"Fee for InvokeScriptTransaction (${invokeFromScripted1.fee} in CARDIUM) " +
-          s"does not exceed minimal value of ${FeeConstants(TransactionType.InvokeScript) * FeeUnit + 3 * ScriptExtraFee} CARDIUM"
+          s"Fee for InvokeScriptTransaction (${invokeFromScripted1.fee} in GIC) " +
+          s"does not exceed minimal value of ${FeeConstants(TransactionType.InvokeScript) * FeeUnit + 3 * ScriptExtraFee} GIC"
       )
       d.appendBlockE(invokeFromNonScripted1) should produce(
         s"Transaction involves 2 scripted assets. Requires ${2 * ScriptExtraFee} extra fee. " +
-            s"Fee for InvokeScriptTransaction (${invokeFromScripted1.fee} in CARDIUM) " +
-          s"does not exceed minimal value of ${FeeConstants(TransactionType.InvokeScript) * FeeUnit + 2 * ScriptExtraFee} CARDIUM"
+            s"Fee for InvokeScriptTransaction (${invokeFromScripted1.fee} in GIC) " +
+          s"does not exceed minimal value of ${FeeConstants(TransactionType.InvokeScript) * FeeUnit + 2 * ScriptExtraFee} GIC"
       )
 
       d.appendBlock()
@@ -93,8 +93,8 @@ class InvokeActionsFeeTest extends PropSpec with Inside with WithState with DBCa
       d.appendBlock(invokeFromNonScripted2)
       d.appendBlockE(invokeFromScripted2) should produce(
         s"Transaction sent from smart account. Requires $ScriptExtraFee extra fee. " +
-          s"Fee for InvokeScriptTransaction (${invokeFromScripted1.fee} in CARDIUM) " +
-          s"does not exceed minimal value of ${FeeConstants(TransactionType.InvokeScript) * FeeUnit + ScriptExtraFee} CARDIUM"
+          s"Fee for InvokeScriptTransaction (${invokeFromScripted1.fee} in GIC) " +
+          s"does not exceed minimal value of ${FeeConstants(TransactionType.InvokeScript) * FeeUnit + ScriptExtraFee} GIC"
       )
     }
   }

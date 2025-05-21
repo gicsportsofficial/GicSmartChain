@@ -1,20 +1,20 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.Domain.*
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.settings.TestFunctionalitySettings
-import com.wavesplatform.state.*
-import com.wavesplatform.test.*
-import com.wavesplatform.test.DomainPresets.*
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.transaction.{GenesisTransaction, TxHelpers, TxVersion}
+import com.gicsports.account.Address
+import com.gicsports.block.Block
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.Domain.*
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.settings.TestFunctionalitySettings
+import com.gicsports.state.*
+import com.gicsports.test.*
+import com.gicsports.test.DomainPresets.*
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.transfer.*
+import com.gicsports.transaction.{GenesisTransaction, TxHelpers, TxVersion}
 
 class LeaseTransactionsDiffTest extends PropSpec with WithDomain {
 
@@ -24,7 +24,7 @@ class LeaseTransactionsDiffTest extends PropSpec with WithDomain {
 
   def total(l: LeaseBalance): Long = l.in - l.out
 
-  property("can lease/cancel lease preserving CARDIUM invariant") {
+  property("can lease/cancel lease preserving GIC invariant") {
 
     val sunnyDayLeaseLeaseCancel: Seq[(GenesisTransaction, LeaseTransaction, LeaseCancelTransaction)] = {
       val master    = TxHelpers.signer(1)

@@ -1,10 +1,10 @@
-package com.wavesplatform.lang.v1
+package com.gicsports.lang.v1
 
 import cats.Eval
 import cats.data.EitherT
-import com.wavesplatform.lang.v1.evaluator.ctx.LoggedEvaluationContext
-import com.wavesplatform.lang.v1.task.TaskMT
-import com.wavesplatform.lang.{EvalF, ExecutionError, TrampolinedExecResult}
+import com.gicsports.lang.v1.evaluator.ctx.LoggedEvaluationContext
+import com.gicsports.lang.v1.task.TaskMT
+import com.gicsports.lang.{EvalF, ExecutionError, TrampolinedExecResult}
 
 package object evaluator {
   type EvalM[F[_], C[_[_]], A] = TaskMT[F, LoggedEvaluationContext[C, F], ExecutionError, A]

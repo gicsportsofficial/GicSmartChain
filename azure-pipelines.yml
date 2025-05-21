@@ -15,13 +15,13 @@ trigger:
 #  always: true
 
 pool:
-  name: Cardium
+  name: Gic
 
 steps:
 - task: CmdLine@2
   inputs:
     script: |
-      rawTag=$(curl -fsSL https://api.github.com/repos/cardiumcoin/CardiumNetwork/releases/latest | tac | grep -m 1 ''tag_name.:'' | tr -cd ''[0-9\.]''
+      rawTag=$(curl -fsSL https://api.github.com/repos/gicsportsofficial/GicSmartChain/releases/latest | tac | grep -m 1 ''tag_name.:'' | tr -cd ''[0-9\.]''
         )
       echo "##vso[task.setvariable variable=tag]$rawTag-$(Build.SourceVersion)"  
       echo "##vso[task.setvariable variable=rawTag]$rawTag"  
@@ -34,8 +34,8 @@ steps:
   
 - task: Docker@2
   inputs:
-    containerRegistry: 'Cardium docker'
-    repository: 'cardiumcoin/CardiumNetwork'
+    containerRegistry: 'Gic docker'
+    repository: 'gicsportsofficial/GicSmartChain'
     command: 'buildAndPush'
     Dockerfile: './docker/Dockerfile'
     addPipelineData: false

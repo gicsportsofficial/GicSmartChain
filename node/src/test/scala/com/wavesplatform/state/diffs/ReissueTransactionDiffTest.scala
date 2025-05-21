@@ -1,18 +1,18 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithState
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.mining.MiningConstraint
-import com.wavesplatform.settings.{Constants, FunctionalitySettings, TestFunctionalitySettings}
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.{GenesisTransaction, TxHelpers, TxVersion}
-import com.wavesplatform.transaction.assets.ReissueTransaction
+import com.gicsports.account.KeyPair
+import com.gicsports.block.Block
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithState
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.ValidationError
+import com.gicsports.mining.MiningConstraint
+import com.gicsports.settings.{Constants, FunctionalitySettings, TestFunctionalitySettings}
+import com.gicsports.test._
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.{GenesisTransaction, TxHelpers, TxVersion}
+import com.gicsports.transaction.assets.ReissueTransaction
 import org.scalatest.EitherValues
 
 class ReissueTransactionDiffTest extends PropSpec with WithState with EitherValues {

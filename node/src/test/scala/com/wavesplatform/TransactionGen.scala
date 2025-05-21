@@ -1,27 +1,27 @@
-package com.wavesplatform
+package com.gicsports
 
-import com.wavesplatform.account.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.directives.values.V3
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.script.{ContractScript, Script}
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.testing.{ScriptGen, TypedScriptGen}
-import com.wavesplatform.lang.v1.{ContractLimits, FunctionHeader}
-import com.wavesplatform.settings.Constants
-import com.wavesplatform.state.*
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.*
-import com.wavesplatform.transaction.assets.exchange.*
-import com.wavesplatform.transaction.lease.*
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.smart.{InvokeExpressionTransaction, InvokeScriptTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.transaction.utils.EthConverters.*
-import com.wavesplatform.transaction.utils.Signed
+import com.gicsports.account.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.directives.values.V3
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.script.{ContractScript, Script}
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.testing.{ScriptGen, TypedScriptGen}
+import com.gicsports.lang.v1.{ContractLimits, FunctionHeader}
+import com.gicsports.settings.Constants
+import com.gicsports.state.*
+import com.gicsports.transaction.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.*
+import com.gicsports.transaction.assets.exchange.*
+import com.gicsports.transaction.lease.*
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.smart.{InvokeExpressionTransaction, InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.transaction.transfer.*
+import com.gicsports.transaction.utils.EthConverters.*
+import com.gicsports.transaction.utils.Signed
 import org.scalacheck.Gen.{alphaLowerChar, alphaUpperChar, frequency, numChar}
 import org.scalacheck.{Arbitrary, Gen}
 import org.scalatest.Suite

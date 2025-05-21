@@ -1,12 +1,12 @@
-package com.wavesplatform.state.diffs.invoke
+package com.gicsports.state.diffs.invoke
 
-import com.wavesplatform.account.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.{Authorized, TransactionBase, TxTimestamp}
+import com.gicsports.account.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.{Authorized, TransactionBase, TxTimestamp}
 
 trait InvokeScriptLike {
   def dApp: AddressOrAlias

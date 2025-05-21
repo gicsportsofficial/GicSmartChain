@@ -1,15 +1,15 @@
-package com.wavesplatform.lang.v1.compiler
+package com.gicsports.lang.v1.compiler
 
 import cats.instances.vector.*
 import cats.syntax.traverse.*
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.contract.DApp.{CallableFunction, VerifierFunction}
-import com.wavesplatform.lang.directives.values.StdLibVersion
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.FunctionHeader.{Native, User}
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.evaluator.FunctionIds
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.{ExtractedFuncPostfix, ExtractedFuncPrefix}
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.contract.DApp.{CallableFunction, VerifierFunction}
+import com.gicsports.lang.directives.values.StdLibVersion
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.FunctionHeader.{Native, User}
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.evaluator.FunctionIds
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.{ExtractedFuncPostfix, ExtractedFuncPrefix}
 import monix.eval.Coeval
 
 import scala.util.Try

@@ -1,26 +1,26 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.*
-import com.wavesplatform.api.http.requests.{InvokeScriptRequest, SignedInvokeScriptRequest}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base64, *}
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.lang.v1.compiler.Terms.{ARR, CONST_BIGINT, CONST_BYTESTR, CONST_LONG, CONST_STRING, CaseObj}
-import com.wavesplatform.lang.v1.compiler.Types.CASETYPEREF
-import com.wavesplatform.lang.v1.serialization.SerdeV1
-import com.wavesplatform.lang.v1.{ContractLimits, FunctionHeader}
-import com.wavesplatform.protobuf.transaction.*
-import com.wavesplatform.protobuf.{Amount, transaction}
-import com.wavesplatform.serialization.Deser
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxHelpers.defaultAddress
-import com.wavesplatform.transaction.TxValidationError.NonPositiveAmount
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.smart.{InvokeScriptTransaction, Verifier}
-import com.wavesplatform.transaction.utils.Signed
+import com.gicsports.account.*
+import com.gicsports.api.http.requests.{InvokeScriptRequest, SignedInvokeScriptRequest}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base64, *}
+import com.gicsports.crypto
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.lang.v1.compiler.Terms.{ARR, CONST_BIGINT, CONST_BYTESTR, CONST_LONG, CONST_STRING, CaseObj}
+import com.gicsports.lang.v1.compiler.Types.CASETYPEREF
+import com.gicsports.lang.v1.serialization.SerdeV1
+import com.gicsports.lang.v1.{ContractLimits, FunctionHeader}
+import com.gicsports.protobuf.transaction.*
+import com.gicsports.protobuf.{Amount, transaction}
+import com.gicsports.serialization.Deser
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxHelpers.defaultAddress
+import com.gicsports.transaction.TxValidationError.NonPositiveAmount
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.smart.{InvokeScriptTransaction, Verifier}
+import com.gicsports.transaction.utils.Signed
 import play.api.libs.json.{JsArray, JsObject, JsString, Json}
 
 class InvokeScriptTransactionSpecification extends PropSpec {
@@ -331,7 +331,7 @@ class InvokeScriptTransactionSpecification extends PropSpec {
       proofs =
         Proofs(List("CC1jQ4qkuVfMvB2Kpg2Go6QKXJxUFC8UUswUxBsxwisrR8N5s3Yc8zA6dhjTwfWKfdouSTAnRXCxTXb3T6pJq3T").map(s => ByteStr.decodeBase58(s).get))
     )
-    req.toTx shouldBe Left(NonPositiveAmount(0, "CARDIUM"))
+    req.toTx shouldBe Left(NonPositiveAmount(0, "GIC"))
   }
 
   property("can't have negative amount") {
@@ -353,7 +353,7 @@ class InvokeScriptTransactionSpecification extends PropSpec {
       proofs =
         Proofs(List("CC1jQ4qkuVfMvB2Kpg2Go6QKXJxUFC8UUswUxBsxwisrR8N5s3Yc8zA6dhjTwfWKfdouSTAnRXCxTXb3T6pJq3T").map(s => ByteStr.decodeBase58(s).get))
     )
-    req.toTx shouldBe Left(NonPositiveAmount(-1, "CARDIUM"))
+    req.toTx shouldBe Left(NonPositiveAmount(-1, "GIC"))
   }
 
   private def createInvoke(func: Option[String] = Some("test")): InvokeScriptTransaction =

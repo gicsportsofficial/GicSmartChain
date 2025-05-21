@@ -1,4 +1,4 @@
-package com.wavesplatform.common.utils
+package com.gicsports.common.utils
 
 object Base64 extends BaseXXEncDec {
   val Prefix                           = "base64:"

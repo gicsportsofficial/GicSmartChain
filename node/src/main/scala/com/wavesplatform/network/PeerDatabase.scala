@@ -1,4 +1,4 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
 import java.net.{InetAddress, InetSocketAddress}
 

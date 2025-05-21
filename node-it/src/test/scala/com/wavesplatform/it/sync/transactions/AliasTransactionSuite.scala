@@ -1,21 +1,21 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
 import com.google.common.primitives.Longs
 import com.typesafe.config.Config
 
 import scala.util.{Random, Try}
-import com.wavesplatform.account.{AddressScheme, KeyPair}
-import com.wavesplatform.features.BlockchainFeatures.RideV6
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.NodeConfigs.Default
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.it.api.TransactionInfo
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.directives.values.V6
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{CreateAliasTransaction, Proofs, TxPositiveAmount}
+import com.gicsports.account.{AddressScheme, KeyPair}
+import com.gicsports.features.BlockchainFeatures.RideV6
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.NodeConfigs.Default
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.it.api.TransactionInfo
+import com.gicsports.it.sync.*
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.directives.values.V6
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.*
+import com.gicsports.transaction.{CreateAliasTransaction, Proofs, TxPositiveAmount}
 import org.scalatest.prop.TableDrivenPropertyChecks
 import play.api.libs.json.Json
 
@@ -206,7 +206,7 @@ class AliasTransactionSuite extends BaseTransactionSuite with TableDrivenPropert
   }
 
   private def createAliasFromJson(target: KeyPair, alias: String, fee: Long, version: Byte) = {
-    import com.wavesplatform.common.utils.*
+    import com.gicsports.common.utils.*
     val transactionJson = Try(
       CreateAliasTransaction
         .selfSigned(version, target, alias, fee, System.currentTimeMillis())

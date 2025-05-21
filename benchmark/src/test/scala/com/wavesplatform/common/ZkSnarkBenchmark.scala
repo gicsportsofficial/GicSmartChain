@@ -1,10 +1,10 @@
-package com.wavesplatform.common
+package com.gicsports.common
 
 import java.util.Base64
 import java.util.concurrent.TimeUnit
 
-import com.wavesplatform.common.ZkSnarkBenchmark.Groth16St
-import com.wavesplatform.zwaves.bls12.Groth16
+import com.gicsports.common.ZkSnarkBenchmark.Groth16St
+import com.gicsports.zwaves.bls12.Groth16
 import org.openjdk.jmh.annotations._
 import org.openjdk.jmh.infra.Blackhole
 

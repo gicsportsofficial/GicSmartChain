@@ -189,7 +189,7 @@
   }, {
     "name" : "wavesBalance",
     "params" : [ "Address|Alias" ],
-    "doc" : "get CARDIUM balance for account",
+    "doc" : "get GIC balance for account",
     "paramsDoc" : [ "account" ],
     "complexity": 109
   }, {

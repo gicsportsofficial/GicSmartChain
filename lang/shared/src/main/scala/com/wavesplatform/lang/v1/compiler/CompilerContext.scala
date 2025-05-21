@@ -1,12 +1,12 @@
-package com.wavesplatform.lang.v1.compiler
+package com.gicsports.lang.v1.compiler
 
 import cats.Semigroup
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.CompilerContext.*
-import com.wavesplatform.lang.v1.compiler.Types.*
-import com.wavesplatform.lang.v1.evaluator.ctx.FunctionTypeSignature
-import com.wavesplatform.lang.v1.parser.Expressions.Pos
-import com.wavesplatform.lang.v1.parser.Expressions.Pos.AnyPos
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.CompilerContext.*
+import com.gicsports.lang.v1.compiler.Types.*
+import com.gicsports.lang.v1.evaluator.ctx.FunctionTypeSignature
+import com.gicsports.lang.v1.parser.Expressions.Pos
+import com.gicsports.lang.v1.parser.Expressions.Pos.AnyPos
 import shapeless.*
 
 case class CompilerContext(

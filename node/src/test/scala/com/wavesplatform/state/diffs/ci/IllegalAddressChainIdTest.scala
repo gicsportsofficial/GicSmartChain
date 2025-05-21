@@ -1,15 +1,15 @@
-package com.wavesplatform.state.diffs.ci
+package com.gicsports.state.diffs.ci
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.utils.Signed
-import com.wavesplatform.transaction.{TxHelpers, TxVersion}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.utils.Signed
+import com.gicsports.transaction.{TxHelpers, TxVersion}
 
 class IllegalAddressChainIdTest extends PropSpec with WithDomain {
   import DomainPresets.*

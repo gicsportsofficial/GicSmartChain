@@ -1,18 +1,18 @@
-package com.wavesplatform.lang
+package com.gicsports.lang
 
 import cats.implicits.toBifunctorOps
-import com.wavesplatform.lang.contract.meta.FunctionSignatures
-import com.wavesplatform.lang.directives.Directive.extractDirectives
-import com.wavesplatform.lang.directives.values.{Call, Expression, Library, StdLibVersion, DApp as DAppType}
-import com.wavesplatform.lang.directives.{DirectiveParser, DirectiveSet}
-import com.wavesplatform.lang.script.ScriptPreprocessor
-import com.wavesplatform.lang.v1.BaseGlobal
-import com.wavesplatform.lang.v1.BaseGlobal.DAppInfo
-import com.wavesplatform.lang.v1.compiler.Terms.EXPR
-import com.wavesplatform.lang.v1.compiler.{CompilationError, Types, UtilityFunctionPrefix}
-import com.wavesplatform.lang.v1.estimator.ScriptEstimator
-import com.wavesplatform.lang.v1.evaluator.ctx.FunctionTypeSignature
-import com.wavesplatform.lang.v1.parser.Expressions
+import com.gicsports.lang.contract.meta.FunctionSignatures
+import com.gicsports.lang.directives.Directive.extractDirectives
+import com.gicsports.lang.directives.values.{Call, Expression, Library, StdLibVersion, DApp as DAppType}
+import com.gicsports.lang.directives.{DirectiveParser, DirectiveSet}
+import com.gicsports.lang.script.ScriptPreprocessor
+import com.gicsports.lang.v1.BaseGlobal
+import com.gicsports.lang.v1.BaseGlobal.DAppInfo
+import com.gicsports.lang.v1.compiler.Terms.EXPR
+import com.gicsports.lang.v1.compiler.{CompilationError, Types, UtilityFunctionPrefix}
+import com.gicsports.lang.v1.estimator.ScriptEstimator
+import com.gicsports.lang.v1.evaluator.ctx.FunctionTypeSignature
+import com.gicsports.lang.v1.parser.Expressions
 
 sealed trait CompileAndParseResult
 

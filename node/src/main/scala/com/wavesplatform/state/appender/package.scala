@@ -1,17 +1,17 @@
-package com.wavesplatform.state
+package com.gicsports.state
 import cats.syntax.either.*
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.block.Block
-import com.wavesplatform.block.Block.BlockId
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.consensus.PoSSelector
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.metrics.*
-import com.wavesplatform.mining.Miner
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.TxValidationError.{BlockAppendError, BlockFromFuture, GenericError}
-import com.wavesplatform.utils.Time
-import com.wavesplatform.utx.UtxPoolImpl
+import com.gicsports.account.AddressScheme
+import com.gicsports.block.Block
+import com.gicsports.block.Block.BlockId
+import com.gicsports.common.state.ByteStr
+import com.gicsports.consensus.PoSSelector
+import com.gicsports.lang.ValidationError
+import com.gicsports.metrics.*
+import com.gicsports.mining.Miner
+import com.gicsports.transaction.*
+import com.gicsports.transaction.TxValidationError.{BlockAppendError, BlockFromFuture, GenericError}
+import com.gicsports.utils.Time
+import com.gicsports.utx.UtxPoolImpl
 import kamon.Kamon
 
 package object appender {

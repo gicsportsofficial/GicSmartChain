@@ -1,21 +1,21 @@
-package com.wavesplatform.generator
+package com.gicsports.generator
 
 import java.nio.file.{Files, Paths}
 
 import com.typesafe.config.Config
-import com.wavesplatform.account.{Address, KeyPair}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.estimator.ScriptEstimator
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.lease.LeaseTransaction
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{Transaction, TxVersion}
-import com.wavesplatform.utils.Time
+import com.gicsports.account.{Address, KeyPair}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.estimator.ScriptEstimator
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.lease.LeaseTransaction
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{Transaction, TxVersion}
+import com.gicsports.utils.Time
 import net.ceedubs.ficus.Ficus._
 import net.ceedubs.ficus.readers.ValueReader
 

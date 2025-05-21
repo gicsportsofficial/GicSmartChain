@@ -1,19 +1,19 @@
-package com.wavesplatform.api.common
+package com.gicsports.api.common
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.api.{BlockMeta, common}
-import com.wavesplatform.block
-import com.wavesplatform.block.Block
-import com.wavesplatform.block.Block.TransactionProof
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.diffs.FeeValidation
-import com.wavesplatform.state.diffs.FeeValidation.FeeDetails
-import com.wavesplatform.state.{Blockchain, Diff, Height, TxMeta}
-import com.wavesplatform.transaction.TransactionType.TransactionType
-import com.wavesplatform.transaction.smart.script.trace.TracedResult
-import com.wavesplatform.transaction.{Asset, CreateAliasTransaction, Transaction}
-import com.wavesplatform.utx.UtxPool
+import com.gicsports.account.Address
+import com.gicsports.api.{BlockMeta, common}
+import com.gicsports.block
+import com.gicsports.block.Block
+import com.gicsports.block.Block.TransactionProof
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.diffs.FeeValidation
+import com.gicsports.state.diffs.FeeValidation.FeeDetails
+import com.gicsports.state.{Blockchain, Diff, Height, TxMeta}
+import com.gicsports.transaction.TransactionType.TransactionType
+import com.gicsports.transaction.smart.script.trace.TracedResult
+import com.gicsports.transaction.{Asset, CreateAliasTransaction, Transaction}
+import com.gicsports.utx.UtxPool
 import monix.reactive.Observable
 import org.iq80.leveldb.DB
 

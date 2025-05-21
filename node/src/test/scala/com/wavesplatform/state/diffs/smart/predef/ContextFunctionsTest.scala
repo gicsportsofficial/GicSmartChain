@@ -1,36 +1,36 @@
-package com.wavesplatform.state.diffs.smart.predef
+package com.gicsports.state.diffs.smart.predef
 
 import cats.syntax.semigroup.*
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, Base64, EitherExt2}
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.BlockchainFeatures.BlockV5
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.Global
-import com.wavesplatform.lang.Testing.*
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.directives.{DirectiveDictionary, DirectiveSet}
-import com.wavesplatform.lang.script.ContractScript
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.utils.*
-import com.wavesplatform.lang.v1.compiler.{ContractCompiler, ExpressionCompiler, TestCompiler}
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.WavesContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.state.*
-import com.wavesplatform.state.diffs.smart.smartEnabledFS
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.TxHelpers.*
-import com.wavesplatform.transaction.serialization.impl.PBTransactionSerializer
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.{TxHelpers, TxVersion}
-import com.wavesplatform.utils.*
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, Base64, EitherExt2}
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.BlockchainFeatures.BlockV5
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.Global
+import com.gicsports.lang.Testing.*
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.directives.{DirectiveDictionary, DirectiveSet}
+import com.gicsports.lang.script.ContractScript
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.utils.*
+import com.gicsports.lang.v1.compiler.{ContractCompiler, ExpressionCompiler, TestCompiler}
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.WavesContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.state.*
+import com.gicsports.state.diffs.smart.smartEnabledFS
+import com.gicsports.test.*
+import com.gicsports.transaction.TxHelpers.*
+import com.gicsports.transaction.serialization.impl.PBTransactionSerializer
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.{TxHelpers, TxVersion}
+import com.gicsports.utils.*
 import shapeless.Coproduct
 
 class ContextFunctionsTest extends PropSpec with WithDomain with EthHelpers {

@@ -1,22 +1,22 @@
-package com.wavesplatform.state.diffs.ci
-import com.wavesplatform.TestValues.invokeFee
-import com.wavesplatform.account.Alias
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.v1.compiler.Terms.{ARR, CONST_LONG}
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.protobuf.transaction.PBTransactions
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.state.diffs.FeeValidation.FeeUnit
-import com.wavesplatform.test.{PropSpec, produce}
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.Proofs
-import com.wavesplatform.transaction.TxHelpers.*
-import com.wavesplatform.transaction.TxVersion.{V1, V2}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
+package com.gicsports.state.diffs.ci
+import com.gicsports.TestValues.invokeFee
+import com.gicsports.account.Alias
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.v1.compiler.Terms.{ARR, CONST_LONG}
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.protobuf.transaction.PBTransactions
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.state.diffs.FeeValidation.FeeUnit
+import com.gicsports.test.{PropSpec, produce}
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.Proofs
+import com.gicsports.transaction.TxHelpers.*
+import com.gicsports.transaction.TxVersion.{V1, V2}
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
 
 class InvokeValidationTest extends PropSpec with WithDomain {
   import DomainPresets.*
@@ -88,7 +88,7 @@ class InvokeValidationTest extends PropSpec with WithDomain {
       )
       d.appendBlockE(invoke(invoker = signer(2), payments = Seq(Payment(invokeFee + 1, Waves)))) should produce(
         "Attempt to transfer unavailable funds: " +
-          "Transaction application leads to negative CARDIUM balance to (at least) temporary negative state, " +
+          "Transaction application leads to negative GIC balance to (at least) temporary negative state, " +
           "current balance equals 6000000, spends equals -12000001, result is -6000001"
       )
 

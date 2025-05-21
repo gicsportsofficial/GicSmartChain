@@ -1,11 +1,11 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.reader.CompositeBlockchain
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.TxHelpers
+import com.gicsports.db.WithDomain
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.reader.CompositeBlockchain
+import com.gicsports.test.*
+import com.gicsports.transaction.TxHelpers
 
 class CompositeBlockchainSpec extends FreeSpec with WithDomain {
   "correctly combines asset info" in withDomain(DomainPresets.RideV5) { d =>

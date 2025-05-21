@@ -1,12 +1,12 @@
-package com.wavesplatform
+package com.gicsports
 
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.v1.FunctionHeader.{Native, User}
-import com.wavesplatform.lang.v1.compiler.CompilationError
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.Types.{CASETYPEREF, FINAL, LIST, NOTHING, TYPE, UNION}
-import com.wavesplatform.lang.v1.parser.Expressions
-import com.wavesplatform.lang.v1.parser.Expressions.{PART, Pos, Type}
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.v1.FunctionHeader.{Native, User}
+import com.gicsports.lang.v1.compiler.CompilationError
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.Types.{CASETYPEREF, FINAL, LIST, NOTHING, TYPE, UNION}
+import com.gicsports.lang.v1.parser.Expressions
+import com.gicsports.lang.v1.parser.Expressions.{PART, Pos, Type}
 
 import scala.scalajs.js
 import scala.scalajs.js.Any

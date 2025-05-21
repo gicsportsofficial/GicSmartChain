@@ -1,15 +1,15 @@
-package com.wavesplatform.protobuf.block
+package com.gicsports.protobuf.block
 
 import scala.util.Try
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.block.BlockHeader
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.protobuf.ByteStringExt
-import com.wavesplatform.protobuf.block.Block.{Header => PBHeader}
-import com.wavesplatform.protobuf.transaction.PBTransactions
-import com.wavesplatform.protobuf.transaction.SignedTransaction.Transaction
+import com.gicsports.account.AddressScheme
+import com.gicsports.block.BlockHeader
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.protobuf.ByteStringExt
+import com.gicsports.protobuf.block.Block.{Header => PBHeader}
+import com.gicsports.protobuf.transaction.PBTransactions
+import com.gicsports.protobuf.transaction.SignedTransaction.Transaction
 
 object PBBlocks {
   def vanilla(header: PBBlock.Header): BlockHeader =

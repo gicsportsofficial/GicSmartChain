@@ -1,23 +1,23 @@
-package com.wavesplatform.lang.script.v1
+package com.gicsports.lang.script.v1
 
 import cats.instances.either._
 import cats.syntax.either._
 import cats.syntax.flatMap._
 import com.google.common.annotations.VisibleForTesting
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.utils._
-import com.wavesplatform.lang.v1.BaseGlobal
-import com.wavesplatform.lang.v1.ContractLimits._
-import com.wavesplatform.lang.v1.compiler.ContractCompiler
-import com.wavesplatform.lang.v1.compiler.Terms._
-import com.wavesplatform.lang.v1.estimator.ScriptEstimator
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.directives.values._
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.utils._
+import com.gicsports.lang.v1.BaseGlobal
+import com.gicsports.lang.v1.ContractLimits._
+import com.gicsports.lang.v1.compiler.ContractCompiler
+import com.gicsports.lang.v1.compiler.Terms._
+import com.gicsports.lang.v1.estimator.ScriptEstimator
 import monix.eval.Coeval
 
 object ExprScript {
 
-  private val Global: BaseGlobal = com.wavesplatform.lang.Global // Hack for IDEA
+  private val Global: BaseGlobal = com.gicsports.lang.Global // Hack for IDEA
 
   val checksumLength = 4
 
@@ -89,8 +89,8 @@ object ExprScript {
   final case class ExprScriptImpl(stdLibVersion: StdLibVersion, isFreeCall: Boolean, expr: EXPR) extends ExprScript {
     override type Expr = EXPR
     override val bytes: Coeval[ByteStr]           = Coeval.evalOnce(ByteStr(Global.serializeExpression(expr, stdLibVersion)))
-    override val containsBlockV2: Coeval[Boolean] = Coeval.evalOnce(com.wavesplatform.lang.v1.compiler.containsBlockV2(expr))
-    override val containsArray: Boolean           = com.wavesplatform.lang.v1.compiler.containsArray(expr)
+    override val containsBlockV2: Coeval[Boolean] = Coeval.evalOnce(com.gicsports.lang.v1.compiler.containsBlockV2(expr))
+    override val containsArray: Boolean           = com.gicsports.lang.v1.compiler.containsArray(expr)
   }
 }
 

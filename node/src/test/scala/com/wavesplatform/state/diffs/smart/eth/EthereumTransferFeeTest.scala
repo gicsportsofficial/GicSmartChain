@@ -1,19 +1,19 @@
-package com.wavesplatform.state.diffs.smart.eth
+package com.gicsports.state.diffs.smart.eth
 
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.history.Domain
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TransactionType.Transfer
-import com.wavesplatform.transaction.TxHelpers.*
-import com.wavesplatform.transaction.utils.EthConverters.*
-import com.wavesplatform.transaction.utils.EthTxGenerator
-import com.wavesplatform.utils.EthHelpers
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.history.Domain
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TransactionType.Transfer
+import com.gicsports.transaction.TxHelpers.*
+import com.gicsports.transaction.utils.EthConverters.*
+import com.gicsports.transaction.utils.EthTxGenerator
+import com.gicsports.utils.EthHelpers
 
 class EthereumTransferFeeTest extends PropSpec with WithDomain with EthHelpers {
   import DomainPresets.*
@@ -51,7 +51,7 @@ class EthereumTransferFeeTest extends PropSpec with WithDomain with EthHelpers {
   private def assertMinFee(d: Domain, asset: Asset, fee: Long) = {
     val notEnoughFeeTx = EthTxGenerator.generateEthTransfer(defaultSigner.toEthKeyPair, secondAddress, 1, asset, fee = fee - 1)
     val enoughFeeTx    = EthTxGenerator.generateEthTransfer(defaultSigner.toEthKeyPair, secondAddress, 1, asset, fee = fee)
-    d.appendBlockE(notEnoughFeeTx) should produce(s"does not exceed minimal value of $fee CARDIUM")
+    d.appendBlockE(notEnoughFeeTx) should produce(s"does not exceed minimal value of $fee GIC")
     d.appendAndAssertSucceed(enoughFeeTx)
   }
 }

@@ -1,14 +1,14 @@
-package com.wavesplatform.protobuf.utils
+package com.gicsports.protobuf.utils
 
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.protobuf.{Amount, _}
-import com.wavesplatform.protobuf.transaction._
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.lang.ValidationError
+import com.gicsports.protobuf.{Amount, _}
+import com.gicsports.protobuf.transaction._
+import com.gicsports.transaction.Asset
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
 
 object PBImplicitConversions {
   import com.google.protobuf.{ByteString => PBByteString}
-  import com.wavesplatform.{account => va}
+  import com.gicsports.{account => va}
 
   implicit class AddressOrAliasToPBExt(val r: va.AddressOrAlias) extends AnyVal {
     def toPB: Recipient = r match {

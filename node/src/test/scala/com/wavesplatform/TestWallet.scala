@@ -1,9 +1,9 @@
-package com.wavesplatform
+package com.gicsports
 
 import com.google.common.primitives.Longs
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.settings.WalletSettings
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.common.state.ByteStr
+import com.gicsports.settings.WalletSettings
+import com.gicsports.wallet.Wallet
 
 trait TestWallet {
   protected val testWallet: Wallet = TestWallet.instance

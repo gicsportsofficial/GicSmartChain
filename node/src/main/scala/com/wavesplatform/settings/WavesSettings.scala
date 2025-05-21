@@ -1,7 +1,7 @@
-package com.wavesplatform.settings
+package com.gicsports.settings
 
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.metrics.Metrics
+import com.gicsports.metrics.Metrics
 import net.ceedubs.ficus.Ficus._
 import net.ceedubs.ficus.readers.ArbitraryTypeReader._
 
@@ -29,7 +29,7 @@ case class WavesSettings(
 
 object WavesSettings extends CustomValueReaders {
   def fromRootConfig(rootConfig: Config): WavesSettings = {
-    val waves = rootConfig.getConfig("CARDIUM")
+    val waves = rootConfig.getConfig("GIC")
 
     val directory                 = waves.as[String]("directory")
     val ntpServer                 = waves.as[String]("ntp-server")

@@ -1,14 +1,14 @@
-package com.wavesplatform.state.diffs.smart.predef
+package com.gicsports.state.diffs.smart.predef
 
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.Domain
-import com.wavesplatform.lang.directives.DirectiveDictionary
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
+import com.gicsports.db.WithDomain
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.Domain
+import com.gicsports.lang.directives.DirectiveDictionary
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.*
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.transaction.smart.InvokeScriptTransaction
 import org.scalatest.EitherValues
 
 class BrokenUnicodeTest extends PropSpec with WithDomain with EitherValues {

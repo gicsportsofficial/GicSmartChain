@@ -1,4 +1,4 @@
-package com.wavesplatform
+package com.gicsports
 
 sealed trait PublicKey
 

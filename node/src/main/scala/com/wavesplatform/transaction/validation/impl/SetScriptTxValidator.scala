@@ -1,9 +1,9 @@
-package com.wavesplatform.transaction.validation.impl
+package com.gicsports.transaction.validation.impl
 
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.validation.{TxValidator, *}
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.validation.{TxValidator, *}
 
 object SetScriptTxValidator extends TxValidator[SetScriptTransaction] {
   override def validate(tx: SetScriptTransaction): ValidatedV[SetScriptTransaction] = {

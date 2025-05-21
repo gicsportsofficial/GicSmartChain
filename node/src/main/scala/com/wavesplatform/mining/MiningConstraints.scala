@@ -1,10 +1,10 @@
-package com.wavesplatform.mining
+package com.gicsports.mining
 
 import cats.data.NonEmptyList
-import com.wavesplatform.block.Block
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.settings.MinerSettings
-import com.wavesplatform.state.Blockchain
+import com.gicsports.block.Block
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.settings.MinerSettings
+import com.gicsports.state.Blockchain
 
 case class MiningConstraints(total: MiningConstraint, keyBlock: MiningConstraint, micro: MiningConstraint)
 

@@ -1,7 +1,7 @@
-package com.wavesplatform.metrics
+package com.gicsports.metrics
 
 import com.google.common.base.CaseFormat
-import com.wavesplatform.transaction.{Transaction, TransactionType}
+import com.gicsports.transaction.{Transaction, TransactionType}
 import kamon.Kamon
 import kamon.metric.Metric
 import supertagged._

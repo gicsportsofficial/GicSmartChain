@@ -1,25 +1,25 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
 import cats.implicits.toBifunctorOps
-import com.wavesplatform.account.{Address, AddressScheme}
-import com.wavesplatform.features.OverdraftValidationProvider.*
-import com.wavesplatform.features.{BlockchainFeature, BlockchainFeatures, RideVersionProvider}
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.script.{ContractScript, Script}
-import com.wavesplatform.settings.FunctionalitySettings
-import com.wavesplatform.state.*
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.*
-import com.wavesplatform.transaction.assets.*
-import com.wavesplatform.transaction.assets.exchange.*
-import com.wavesplatform.transaction.lease.*
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.smart.{InvokeExpressionTransaction, InvokeScriptTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.transfer.*
+import com.gicsports.account.{Address, AddressScheme}
+import com.gicsports.features.OverdraftValidationProvider.*
+import com.gicsports.features.{BlockchainFeature, BlockchainFeatures, RideVersionProvider}
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.script.{ContractScript, Script}
+import com.gicsports.settings.FunctionalitySettings
+import com.gicsports.state.*
+import com.gicsports.transaction.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.*
+import com.gicsports.transaction.assets.*
+import com.gicsports.transaction.assets.exchange.*
+import com.gicsports.transaction.lease.*
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.smart.{InvokeExpressionTransaction, InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.transaction.transfer.*
 
 import scala.util.{Left, Right}
 
@@ -60,7 +60,7 @@ object CommonValidation {
             overdraftFilter || newWavesBalance >= 0,
             (),
             "Attempt to transfer unavailable funds: Transaction application leads to " +
-              s"negative CARDIUM balance to (at least) temporary negative state, current balance equals $oldWavesBalance, " +
+              s"negative GIC balance to (at least) temporary negative state, current balance equals $oldWavesBalance, " +
               s"spends equals ${spendings.balance}, result is $newWavesBalance"
           )
           _ <- spendings.assets

@@ -1,7 +1,7 @@
-package com.wavesplatform.lang.impl
+package com.gicsports.lang.impl
 
-import com.wavesplatform.lang.v1.traits.DataType
-import com.wavesplatform.lang.v1.traits.domain.{Recipient, Tx}
+import com.gicsports.lang.v1.traits.DataType
+import com.gicsports.lang.v1.traits.domain.{Recipient, Tx}
 
 import scala.scalajs.js.annotation.JSGlobalScope
 import scala.scalajs.{js => platform}
@@ -9,7 +9,7 @@ import scala.scalajs.{js => platform}
 @platform.native
 @JSGlobalScope
 object Environment extends scalajs.js.Object {
-  type InputEntity = com.wavesplatform.lang.v1.traits.Environment.InputEntity
+  type InputEntity = com.gicsports.lang.v1.traits.Environment.InputEntity
   def height: Long             = platform.native
   def chainId: Byte            = platform.native
   def tthis: Recipient.Address = platform.native

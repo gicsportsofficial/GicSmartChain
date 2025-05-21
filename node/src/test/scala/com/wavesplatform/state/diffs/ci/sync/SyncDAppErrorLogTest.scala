@@ -1,21 +1,21 @@
-package com.wavesplatform.state.diffs.ci.sync
+package com.gicsports.state.diffs.ci.sync
 
-import com.wavesplatform.account.{Address, KeyPair}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.values.V6
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_BOOLEAN, EXPR}
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.traits.domain.{Issue, Lease, Recipient}
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.TxValidationError.WithLog
-import com.wavesplatform.transaction.{TxHelpers, TxVersion}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.script.trace.InvokeScriptTrace
+import com.gicsports.account.{Address, KeyPair}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.values.V6
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.Terms.{CONST_BOOLEAN, EXPR}
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.traits.domain.{Issue, Lease, Recipient}
+import com.gicsports.settings.WavesSettings
+import com.gicsports.test.*
+import com.gicsports.transaction.TxValidationError.WithLog
+import com.gicsports.transaction.{TxHelpers, TxVersion}
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.script.trace.InvokeScriptTrace
 import org.scalatest.OptionValues
 
 class SyncDAppErrorLogTest extends PropSpec with WithDomain with OptionValues {
@@ -39,7 +39,7 @@ class SyncDAppErrorLogTest extends PropSpec with WithDomain with OptionValues {
       "testCase",
       Seq(CONST_BOOLEAN(true))
     )((tx, leaseId, assetId) =>
-      s"""FailedTransactionError(code = 1, error = AccountBalanceError(Map(3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM -> negative CARDIUM balance: 3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM, old: 89900000010, new: -9999999990)), log = 
+      s"""FailedTransactionError(code = 1, error = AccountBalanceError(Map(3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM -> negative GIC balance: 3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM, old: 89900000010, new: -9999999990)), log = 
          |	@invokedDApp = Address(
          |		bytes = base58'3MsY23LPQnvPZnBKpvs6YcnCvGjLVD42pSy'
          |	)
@@ -241,7 +241,7 @@ class SyncDAppErrorLogTest extends PropSpec with WithDomain with OptionValues {
          |	]
          |	invoke.@complexity = 75
          |	@complexityLimit = 51102
-         |	inv = FailedTransactionError(code = 1, error = AccountBalanceError(Map(3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM -> negative CARDIUM balance: 3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM, old: 89900000010, new: -9999999990)), log = 
+         |	inv = FailedTransactionError(code = 1, error = AccountBalanceError(Map(3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM -> negative GIC balance: 3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM, old: 89900000010, new: -9999999990)), log = 
          |		@invokedDApp = Address(
          |			bytes = base58'3N4DiVEiZHzcjEhoBx2kmoKKCH7GBZMim3L'
          |		)
@@ -364,7 +364,7 @@ class SyncDAppErrorLogTest extends PropSpec with WithDomain with OptionValues {
          |		]
          |		invoke.@complexity = 75
          |		@complexityLimit = 50901
-         |		inv = FailedTransactionError(code = 1, error = AccountBalanceError(Map(3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM -> negative CARDIUM balance: 3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM, old: 89900000010, new: -9999999990)), log = 
+         |		inv = FailedTransactionError(code = 1, error = AccountBalanceError(Map(3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM -> negative GIC balance: 3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM, old: 89900000010, new: -9999999990)), log = 
          |			@invokedDApp = Address(
          |				bytes = base58'3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM'
          |			)
@@ -473,7 +473,7 @@ class SyncDAppErrorLogTest extends PropSpec with WithDomain with OptionValues {
       "testCase",
       Seq(CONST_BOOLEAN(false))
     )((tx, leaseId, assetId) =>
-      s"""InvokeRejectError(error = AccountBalanceError(Map(3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM -> negative CARDIUM balance: 3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM, old: 89900000010, new: -9999999990)), log = 
+      s"""InvokeRejectError(error = AccountBalanceError(Map(3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM -> negative GIC balance: 3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM, old: 89900000010, new: -9999999990)), log = 
          |	@invokedDApp = Address(
          |		bytes = base58'3MsY23LPQnvPZnBKpvs6YcnCvGjLVD42pSy'
          |	)
@@ -637,7 +637,7 @@ class SyncDAppErrorLogTest extends PropSpec with WithDomain with OptionValues {
          |	]
          |	invoke.@complexity = 75
          |	@complexityLimit = 51736
-         |	inv = FailedTransactionError(code = 1, error = AccountBalanceError(Map(3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM -> negative CARDIUM balance: 3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM, old: 89900000010, new: -9999999990)), log = 
+         |	inv = FailedTransactionError(code = 1, error = AccountBalanceError(Map(3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM -> negative GIC balance: 3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM, old: 89900000010, new: -9999999990)), log = 
          |		@invokedDApp = Address(
          |			bytes = base58'3N4DiVEiZHzcjEhoBx2kmoKKCH7GBZMim3L'
          |		)
@@ -749,7 +749,7 @@ class SyncDAppErrorLogTest extends PropSpec with WithDomain with OptionValues {
          |		]
          |		invoke.@complexity = 75
          |		@complexityLimit = 51578
-         |		inv = FailedTransactionError(code = 1, error = AccountBalanceError(Map(3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM -> negative CARDIUM balance: 3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM, old: 89900000010, new: -9999999990)), log = 
+         |		inv = FailedTransactionError(code = 1, error = AccountBalanceError(Map(3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM -> negative GIC balance: 3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM, old: 89900000010, new: -9999999990)), log = 
          |			@invokedDApp = Address(
          |				bytes = base58'3N87Qja7rNj8z6H7nG9EYtjCXQtZLawaxyM'
          |			)

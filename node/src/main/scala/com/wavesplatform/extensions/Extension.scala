@@ -1,4 +1,4 @@
-package com.wavesplatform.extensions
+package com.gicsports.extensions
 
 import scala.concurrent.Future
 

@@ -1,15 +1,15 @@
-package com.wavesplatform.history
+package com.gicsports.history
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.crypto._
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.Domain.BlockchainUpdaterExt
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.state.diffs._
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.GenesisTransaction
-import com.wavesplatform.transaction.transfer._
+import com.gicsports.account.KeyPair
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.crypto._
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.Domain.BlockchainUpdaterExt
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.state.diffs._
+import com.gicsports.test._
+import com.gicsports.transaction.GenesisTransaction
+import com.gicsports.transaction.transfer._
 import org.scalacheck.Gen
 import org.scalatestplus.scalacheck.{ScalaCheckPropertyChecks => PropertyChecks}
 

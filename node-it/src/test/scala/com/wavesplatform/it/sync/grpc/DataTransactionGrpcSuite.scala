@@ -1,17 +1,17 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{Address, KeyPair}
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncGrpcApi._
-import com.wavesplatform.it.sync.{dataTxSupportedVersions, minFee}
-import com.wavesplatform.test._
-import com.wavesplatform.lang.v1.estimator.ScriptEstimatorV1
-import com.wavesplatform.protobuf.transaction.DataTransactionData.DataEntry
-import com.wavesplatform.protobuf.transaction.{DataTransactionData, PBRecipients, PBTransactions, Recipient}
-import com.wavesplatform.state.StringDataEntry
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.{DataTransaction, TxVersion}
+import com.gicsports.account.{Address, KeyPair}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncGrpcApi._
+import com.gicsports.it.sync.{dataTxSupportedVersions, minFee}
+import com.gicsports.test._
+import com.gicsports.lang.v1.estimator.ScriptEstimatorV1
+import com.gicsports.protobuf.transaction.DataTransactionData.DataEntry
+import com.gicsports.protobuf.transaction.{DataTransactionData, PBRecipients, PBTransactions, Recipient}
+import com.gicsports.state.StringDataEntry
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.{DataTransaction, TxVersion}
 import io.grpc.Status.Code
 
 import scala.concurrent.duration._

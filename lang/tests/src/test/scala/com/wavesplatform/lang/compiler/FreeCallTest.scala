@@ -1,7 +1,7 @@
-package com.wavesplatform.lang.compiler
-import com.wavesplatform.lang.directives.values.V6
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.PropSpec
+package com.gicsports.lang.compiler
+import com.gicsports.lang.directives.values.V6
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.PropSpec
 
 class FreeCallTest extends PropSpec {
   property("incorrect result type") {

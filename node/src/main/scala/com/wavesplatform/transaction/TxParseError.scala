@@ -1,4 +1,4 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import scala.util.control.NoStackTrace
 

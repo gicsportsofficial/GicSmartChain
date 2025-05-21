@@ -1,19 +1,19 @@
-package com.wavesplatform.it.repl
+package com.gicsports.it.repl
 
 import com.typesafe.config.Config
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils._
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync.transactions.{FailedTransactionSuiteLike, OverflowBlock}
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.test._
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.lang.v1.repl.Repl
-import com.wavesplatform.lang.v1.repl.node.http.NodeConnectionSettings
-import com.wavesplatform.state._
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils._
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync.transactions.{FailedTransactionSuiteLike, OverflowBlock}
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.test._
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.lang.v1.repl.Repl
+import com.gicsports.lang.v1.repl.node.http.NodeConnectionSettings
+import com.gicsports.state._
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.smart.script.ScriptCompiler
 
 import scala.concurrent.duration._
 import scala.concurrent.{Await, Future}
@@ -23,7 +23,7 @@ class ReplTest extends BaseTransactionSuite with FailedTransactionSuiteLike[Stri
     nodes.waitForHeightArise()
 
   override def nodeConfigs: Seq[Config] =
-    com.wavesplatform.it.NodeConfigs.newBuilder
+    com.gicsports.it.NodeConfigs.newBuilder
       .overrideBase(_.quorum(0))
       .overrideBase(_.preactivatedFeatures(BlockchainFeatures.BlockV5.id.toInt -> 0))
       .withDefault(1)

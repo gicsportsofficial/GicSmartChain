@@ -1,16 +1,16 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import com.google.common.primitives.Shorts
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.api.http.requests.SignedDataRequest
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, Base64, EitherExt2}
-import com.wavesplatform.crypto
-import com.wavesplatform.state.{BinaryDataEntry, BooleanDataEntry, DataEntry, EmptyDataEntry, IntegerDataEntry}
-import com.wavesplatform.state.DataEntry._
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.serialization.impl.DataTxSerializer
+import com.gicsports.account.PublicKey
+import com.gicsports.api.http.requests.SignedDataRequest
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, Base64, EitherExt2}
+import com.gicsports.crypto
+import com.gicsports.state.{BinaryDataEntry, BooleanDataEntry, DataEntry, EmptyDataEntry, IntegerDataEntry}
+import com.gicsports.state.DataEntry._
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.serialization.impl.DataTxSerializer
 import org.scalacheck.{Arbitrary, Gen}
 import org.scalatest._
 import play.api.libs.json.Json
@@ -127,7 +127,7 @@ class DataTransactionSpecification extends PropSpec {
 
   property("positive validation cases") {
     import DataTransaction.MaxEntryCount
-    import com.wavesplatform.state._
+    import com.gicsports.state._
     forAll(dataTransactionGen, dataEntryGen(500)) {
       case (DataTransaction(version, sender, _, fee, timestamp, proofs, chainId), _) =>
         def check(data: List[DataEntry[_]]): Assertion = {

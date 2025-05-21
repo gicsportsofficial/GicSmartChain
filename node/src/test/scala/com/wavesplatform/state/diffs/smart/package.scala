@@ -1,7 +1,7 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.settings.{FunctionalitySettings, TestFunctionalitySettings}
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.settings.{FunctionalitySettings, TestFunctionalitySettings}
 
 package object smart {
   val smartEnabledFS: FunctionalitySettings =

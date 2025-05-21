@@ -1,12 +1,12 @@
-package com.wavesplatform.api.http.requests
+package com.gicsports.api.http.requests
 
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.transaction.Proofs
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.smart.InvokeExpressionTransaction
+import com.gicsports.account.PublicKey
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.transaction.Proofs
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.smart.InvokeExpressionTransaction
 import play.api.libs.json.*
 
 case class InvokeExpressionRequest(

@@ -1,15 +1,15 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
-import com.wavesplatform.block.Block
-import com.wavesplatform.block.Block.BlockId
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.metrics.BlockStats
-import com.wavesplatform.network.RxExtensionLoader.ApplierState.Buffer
-import com.wavesplatform.network.RxExtensionLoader.LoaderState.WithPeer
-import com.wavesplatform.network.RxScoreObserver.{ChannelClosedAndSyncWith, SyncWith}
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.block.Block
+import com.gicsports.block.Block.BlockId
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.metrics.BlockStats
+import com.gicsports.network.RxExtensionLoader.ApplierState.Buffer
+import com.gicsports.network.RxExtensionLoader.LoaderState.WithPeer
+import com.gicsports.network.RxScoreObserver.{ChannelClosedAndSyncWith, SyncWith}
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.utils.ScorexLogging
 import io.netty.channel._
 import monix.eval.{Coeval, Task}
 import monix.execution.CancelableFuture

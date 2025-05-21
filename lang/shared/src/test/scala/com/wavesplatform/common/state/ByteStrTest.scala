@@ -1,6 +1,6 @@
-package com.wavesplatform.common.state
+package com.gicsports.common.state
 
-import com.wavesplatform.common.utils.{Base58, Base64}
+import com.gicsports.common.utils.{Base58, Base64}
 import org.scalatest._
 
 class ByteStrTest extends wordspec.AnyWordSpec with matchers.should.Matchers {

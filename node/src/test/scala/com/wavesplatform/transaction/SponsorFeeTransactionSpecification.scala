@@ -1,21 +1,21 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base64, EitherExt2}
-import com.wavesplatform.crypto
-import com.wavesplatform.db.WithState
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.BlockchainFeatures._
-import com.wavesplatform.lagonaki.mocks.TestBlock.{create => block}
-import com.wavesplatform.settings.{Constants, FunctionalitySettings, TestFunctionalitySettings}
-import com.wavesplatform.state.diffs._
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.{IssueTransaction, SponsorFeeTransaction}
-import com.wavesplatform.transaction.serialization.impl.SponsorFeeTxSerializer
-import com.wavesplatform.transaction.transfer.TransferTransaction
+import com.gicsports.account.PublicKey
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base64, EitherExt2}
+import com.gicsports.crypto
+import com.gicsports.db.WithState
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.BlockchainFeatures._
+import com.gicsports.lagonaki.mocks.TestBlock.{create => block}
+import com.gicsports.settings.{Constants, FunctionalitySettings, TestFunctionalitySettings}
+import com.gicsports.state.diffs._
+import com.gicsports.test._
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.{IssueTransaction, SponsorFeeTransaction}
+import com.gicsports.transaction.serialization.impl.SponsorFeeTxSerializer
+import com.gicsports.transaction.transfer.TransferTransaction
 import org.scalacheck.Gen
 import play.api.libs.json.Json
 
@@ -305,7 +305,7 @@ class SponsorFeeTransactionSpecification extends PropSpec with WithState {
         val b2 = block(Seq(sponsor), Block.ProtoBlockVersion)
 
         assertDiffEi(Seq(b0), b1, NgAndSponsorshipSettings) { ei =>
-          ei should produce(s"Fee for SponsorFeeTransaction ($actualFee in CARDIUM) does not exceed minimal value of $One CARDIUM.")
+          ei should produce(s"Fee for SponsorFeeTransaction ($actualFee in GIC) does not exceed minimal value of $One GIC.")
         }
 
         assertDiffEi(Seq(b0), b2, BlockV5Settings) { ei =>

@@ -1,15 +1,15 @@
-package com.wavesplatform.it.sync.smartcontract
+package com.gicsports.it.sync.smartcontract
 
 import com.typesafe.config.Config
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.sync.smartcontract.RideV4ActivationSuite._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.Transfer
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.sync.smartcontract.RideV4ActivationSuite._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.test._
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.transfer.MassTransferTransaction.Transfer
 import org.scalatest.CancelAfterFailure
 
 class InvokeScriptTransactionRideV5Suite extends BaseTransactionSuite with CancelAfterFailure {

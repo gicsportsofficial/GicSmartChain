@@ -1,10 +1,10 @@
-package com.wavesplatform.test
+package com.gicsports.test
 
-import com.wavesplatform.account.{AddressOrAlias, KeyPair}
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.{Asset, Proofs, TxTimestamp}
+import com.gicsports.account.{AddressOrAlias, KeyPair}
+import com.gicsports.common.utils.*
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.{Asset, Proofs, TxTimestamp}
 
 object Signed {
   def invokeScript(

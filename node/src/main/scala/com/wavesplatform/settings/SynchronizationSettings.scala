@@ -1,7 +1,7 @@
-package com.wavesplatform.settings
+package com.gicsports.settings
 
-import com.wavesplatform.network.InvalidBlockStorageImpl.InvalidBlockStorageSettings
-import com.wavesplatform.settings.SynchronizationSettings._
+import com.gicsports.network.InvalidBlockStorageImpl.InvalidBlockStorageSettings
+import com.gicsports.settings.SynchronizationSettings._
 
 import scala.concurrent.duration.FiniteDuration
 

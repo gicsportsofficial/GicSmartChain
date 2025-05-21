@@ -1,15 +1,15 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.crypto
-import com.wavesplatform.test.PropSpec
+import com.gicsports.crypto
+import com.gicsports.test.PropSpec
 import org.scalacheck.Gen
 import play.api.libs.json._
 
 abstract class GenericTransactionSpecification[T <: Transaction] extends PropSpec {
 
-  def transactionParser: com.wavesplatform.transaction.TransactionParser
+  def transactionParser: com.gicsports.transaction.TransactionParser
   def updateProofs(tx: T, p: Proofs): T
-  def generator: Gen[(Seq[com.wavesplatform.transaction.Transaction], T)]
+  def generator: Gen[(Seq[com.gicsports.transaction.Transaction], T)]
   def assertTxs(first: T, second: T): Unit
   def jsonRepr: Seq[(JsValue, T)]
   def transactionName: String

@@ -1,7 +1,7 @@
-package com.wavesplatform.lang.v1.compiler
+package com.gicsports.lang.v1.compiler
 
-import com.wavesplatform.common.utils.{Base58, Base64}
-import com.wavesplatform.lang.v1.compiler.Terms.{ARR, CONST_BYTESTR, CONST_STRING, CaseObj, EVALUATED}
+import com.gicsports.common.utils.{Base58, Base64}
+import com.gicsports.lang.v1.compiler.Terms.{ARR, CONST_BYTESTR, CONST_STRING, CaseObj, EVALUATED}
 
 case class TermPrinter(fixArrIndentation: Boolean = false) {
   def prettyString(e: EVALUATED, depth: Int): String = {

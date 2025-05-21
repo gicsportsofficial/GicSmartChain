@@ -1,22 +1,22 @@
-package com.wavesplatform.state.reader
+package com.gicsports.state.reader
 
 import cats.Id
 import cats.data.Ior
 import cats.syntax.option.*
 import cats.syntax.semigroup.*
-import com.wavesplatform.account.{Address, Alias}
-import com.wavesplatform.block.Block.BlockId
-import com.wavesplatform.block.{Block, SignedBlockHeader}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.BlockchainFeatures.RideV6
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.settings.BlockchainSettings
-import com.wavesplatform.state.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.{AliasDoesNotExist, AliasIsDisabled}
-import com.wavesplatform.transaction.transfer.{TransferTransaction, TransferTransactionLike}
-import com.wavesplatform.transaction.{Asset, ERC20Address, Transaction}
+import com.gicsports.account.{Address, Alias}
+import com.gicsports.block.Block.BlockId
+import com.gicsports.block.{Block, SignedBlockHeader}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.BlockchainFeatures.RideV6
+import com.gicsports.lang.ValidationError
+import com.gicsports.settings.BlockchainSettings
+import com.gicsports.state.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.{AliasDoesNotExist, AliasIsDisabled}
+import com.gicsports.transaction.transfer.{TransferTransaction, TransferTransactionLike}
+import com.gicsports.transaction.{Asset, ERC20Address, Transaction}
 
 final class CompositeBlockchain private (
     inner: Blockchain,

@@ -1,6 +1,6 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.transaction.assets.exchange.Validation
+import com.gicsports.transaction.assets.exchange.Validation
 import org.scalatest.enablers.Containing
 import org.scalatest.matchers.{BeMatcher, MatchResult}
 

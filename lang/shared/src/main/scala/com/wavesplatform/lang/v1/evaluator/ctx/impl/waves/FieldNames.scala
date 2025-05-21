@@ -1,4 +1,4 @@
-package com.wavesplatform.lang.v1.evaluator.ctx.impl.waves
+package com.gicsports.lang.v1.evaluator.ctx.impl.waves
 
 object FieldNames {
   val WriteSet          = "WriteSet"

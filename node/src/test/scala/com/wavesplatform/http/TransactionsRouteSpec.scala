@@ -1,40 +1,40 @@
-package com.wavesplatform.http
+package com.gicsports.http
 
 import akka.http.scaladsl.model.*
 import akka.http.scaladsl.server.Route
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.api.common.{CommonTransactionsApi, TransactionMeta}
-import com.wavesplatform.api.http.ApiError.{InvalidIds, *}
-import com.wavesplatform.api.http.{RouteTimeout, TransactionsApiRoute}
-import com.wavesplatform.block.Block
-import com.wavesplatform.block.Block.TransactionProof
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, *}
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures as BF
-import com.wavesplatform.history.{Domain, defaultSigner, settingsWithFeatures}
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_BOOLEAN, CONST_LONG, FUNCTION_CALL}
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.traits.domain.LeaseCancel
-import com.wavesplatform.network.TransactionPublisher
-import com.wavesplatform.state.reader.LeaseDetails
-import com.wavesplatform.state.{Blockchain, Height, InvokeScriptResult, TxMeta}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.serialization.impl.InvokeScriptTxSerializer
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.smart.script.trace.{AccountVerifierTrace, TracedResult}
-import com.wavesplatform.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.utils.{EthTxGenerator, Signed}
-import com.wavesplatform.transaction.{Asset, AssetIdLength, CreateAliasTransaction, TxHelpers, TxVersion}
-import com.wavesplatform.utils.{EthEncoding, EthHelpers, Schedulers}
-import com.wavesplatform.{BlockGen, BlockchainStubHelpers, TestValues, TestWallet}
+import com.gicsports.account.KeyPair
+import com.gicsports.api.common.{CommonTransactionsApi, TransactionMeta}
+import com.gicsports.api.http.ApiError.{InvalidIds, *}
+import com.gicsports.api.http.{RouteTimeout, TransactionsApiRoute}
+import com.gicsports.block.Block
+import com.gicsports.block.Block.TransactionProof
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, *}
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures as BF
+import com.gicsports.history.{Domain, defaultSigner, settingsWithFeatures}
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.{CONST_BOOLEAN, CONST_LONG, FUNCTION_CALL}
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.traits.domain.LeaseCancel
+import com.gicsports.network.TransactionPublisher
+import com.gicsports.state.reader.LeaseDetails
+import com.gicsports.state.{Blockchain, Height, InvokeScriptResult, TxMeta}
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.serialization.impl.InvokeScriptTxSerializer
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.smart.script.trace.{AccountVerifierTrace, TracedResult}
+import com.gicsports.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.utils.{EthTxGenerator, Signed}
+import com.gicsports.transaction.{Asset, AssetIdLength, CreateAliasTransaction, TxHelpers, TxVersion}
+import com.gicsports.utils.{EthEncoding, EthHelpers, Schedulers}
+import com.gicsports.{BlockGen, BlockchainStubHelpers, TestValues, TestWallet}
 import monix.reactive.Observable
 import org.scalacheck.Gen.*
 import org.scalacheck.{Arbitrary, Gen}
@@ -80,7 +80,7 @@ class TransactionsRouteSpec
   private val invalidBase58Gen = alphaNumStr.map(_ + "0")
 
   routePath("/calculateFee") - {
-    "CARDIUM" in {
+    "GIC" in {
       val transferTx = Json.obj(
         "type"            -> 4,
         "version"         -> 1,

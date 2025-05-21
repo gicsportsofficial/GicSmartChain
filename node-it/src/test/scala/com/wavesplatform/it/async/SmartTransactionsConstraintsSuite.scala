@@ -1,17 +1,17 @@
-package com.wavesplatform.it.async
+package com.gicsports.it.async
 
 import com.typesafe.config.Config
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.api.http.requests.SignedSetScriptRequest
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.AsyncHttpApi.*
-import com.wavesplatform.it.{BaseFreeSpec, NodeConfigs, TransferSending}
-import com.wavesplatform.lang.directives.values.V1
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.mining.MiningConstraints.MaxScriptRunsInBlock
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.smart.SetScriptTransaction
+import com.gicsports.account.KeyPair
+import com.gicsports.api.http.requests.SignedSetScriptRequest
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.AsyncHttpApi.*
+import com.gicsports.it.{BaseFreeSpec, NodeConfigs, TransferSending}
+import com.gicsports.lang.directives.values.V1
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.mining.MiningConstraints.MaxScriptRunsInBlock
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.smart.SetScriptTransaction
 import play.api.libs.json.{JsNumber, Json}
 
 import scala.concurrent.Await.result
@@ -27,7 +27,7 @@ class SmartTransactionsConstraintsSuite extends BaseFreeSpec with TransferSendin
            |  request-timeout = 60s
            |}
            |
-           |CARDIUM {
+           |GIC {
            |  miner.quorum = 0
            |
            |  blockchain.custom {

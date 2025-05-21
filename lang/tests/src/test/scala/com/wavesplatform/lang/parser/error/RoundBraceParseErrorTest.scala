@@ -1,4 +1,4 @@
-package com.wavesplatform.lang.parser.error
+package com.gicsports.lang.parser.error
 
 class RoundBraceParseErrorTest extends ParseErrorTest {
   property("missing closing round brace of expression") {

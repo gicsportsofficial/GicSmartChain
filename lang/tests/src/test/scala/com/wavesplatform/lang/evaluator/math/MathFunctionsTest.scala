@@ -1,9 +1,9 @@
-package com.wavesplatform.lang.evaluator.math
+package com.gicsports.lang.evaluator.math
 
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V3, V5, V6}
-import com.wavesplatform.lang.evaluator.EvaluatorSpec
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_LONG
-import com.wavesplatform.test.produce
+import com.gicsports.lang.directives.values.{StdLibVersion, V3, V5, V6}
+import com.gicsports.lang.evaluator.EvaluatorSpec
+import com.gicsports.lang.v1.compiler.Terms.CONST_LONG
+import com.gicsports.test.produce
 
 class MathFunctionsTest extends EvaluatorSpec {
   private implicit val startVersion: StdLibVersion = V3

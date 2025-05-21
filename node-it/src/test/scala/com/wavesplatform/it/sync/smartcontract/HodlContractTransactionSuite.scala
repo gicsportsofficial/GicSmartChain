@@ -1,17 +1,17 @@
-package com.wavesplatform.it.sync.smartcontract
+package com.gicsports.it.sync.smartcontract
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.api.{PutDataResponse, TransactionInfo}
-import com.wavesplatform.it.sync.{minFee, setScriptFee}
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_LONG
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.state._
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.api.{PutDataResponse, TransactionInfo}
+import com.gicsports.it.sync.{minFee, setScriptFee}
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.compiler.Terms.CONST_LONG
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.state._
+import com.gicsports.test._
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import org.scalatest.CancelAfterFailure
 
 class HodlContractTransactionSuite extends BaseTransactionSuite with CancelAfterFailure {
@@ -22,7 +22,7 @@ class HodlContractTransactionSuite extends BaseTransactionSuite with CancelAfter
   private lazy val contractAddress: String = contract.toAddress.toString
   private lazy val callerAddress: String   = caller.toAddress.toString
 
-  test("setup contract account with CARDIUM") {
+  test("setup contract account with GIC") {
     sender
       .transfer(
         sender.keyPair,
@@ -35,7 +35,7 @@ class HodlContractTransactionSuite extends BaseTransactionSuite with CancelAfter
       .id
   }
 
-  test("setup caller account with CARDIUM") {
+  test("setup caller account with GIC") {
     sender
       .transfer(
         sender.keyPair,
@@ -57,7 +57,7 @@ class HodlContractTransactionSuite extends BaseTransactionSuite with CancelAfter
         |	@Callable(i)
         |	func deposit() = {
         |   let pmt = extract(i.payment)
-        |   if (isDefined(pmt.assetId)) then throw("can hodl CARDIUM only at the moment")
+        |   if (isDefined(pmt.assetId)) then throw("can hodl GIC only at the moment")
         |   else {
         |	  	let currentKey = toBase58String(i.caller.bytes)
         |	  	let currentAmount = match getInteger(this, currentKey) {
@@ -101,7 +101,7 @@ class HodlContractTransactionSuite extends BaseTransactionSuite with CancelAfter
     sender.transactionInfo[TransactionInfo](setScriptId).script.get.startsWith("base64:") shouldBe true
   }
 
-  test("caller deposits CARDIUM") {
+  test("caller deposits GIC") {
     val balanceBefore = sender.accountBalances(contractAddress)._1
     val invokeScriptId = sender
       .invokeScript(

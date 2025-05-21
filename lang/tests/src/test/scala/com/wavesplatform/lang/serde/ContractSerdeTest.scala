@@ -1,15 +1,15 @@
-package com.wavesplatform.lang.serde
+package com.gicsports.lang.serde
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.contract.DApp.*
-import com.wavesplatform.lang.contract.serialization.{ContractSerDe, ContractSerDeV1, ContractSerDeV2}
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.protobuf.dapp.DAppMeta.CallableFuncSignature
-import com.wavesplatform.test.*
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.contract.DApp.*
+import com.gicsports.lang.contract.serialization.{ContractSerDe, ContractSerDeV1, ContractSerDeV2}
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.protobuf.dapp.DAppMeta.CallableFuncSignature
+import com.gicsports.test.*
 import org.scalatest.Assertion
 
 class ContractSerdeTest extends FreeSpec {

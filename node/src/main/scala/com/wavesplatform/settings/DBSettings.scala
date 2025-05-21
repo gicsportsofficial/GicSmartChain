@@ -1,4 +1,4 @@
-package com.wavesplatform.settings
+package com.gicsports.settings
 import scala.concurrent.duration.FiniteDuration
 
 case class DBSettings(

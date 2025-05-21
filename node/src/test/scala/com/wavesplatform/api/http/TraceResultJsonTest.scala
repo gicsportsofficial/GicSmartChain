@@ -1,20 +1,20 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
-import com.wavesplatform.account.{Address, PublicKey}
-import com.wavesplatform.api.http.ApiError.ScriptExecutionError
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.v1.FunctionHeader.User
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_LONG, CONST_STRING, FUNCTION_CALL}
-import com.wavesplatform.lang.v1.evaluator.ScriptResultV3
-import com.wavesplatform.lang.v1.traits.domain.DataItem.Lng
-import com.wavesplatform.lang.v1.traits.domain.{AssetTransfer, Recipient}
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.script.trace.{InvokeScriptTrace, TracedResult}
-import com.wavesplatform.transaction.{Proofs, TxValidationError}
-import com.wavesplatform.utils.JsonMatchers
+import com.gicsports.account.{Address, PublicKey}
+import com.gicsports.api.http.ApiError.ScriptExecutionError
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.v1.FunctionHeader.User
+import com.gicsports.lang.v1.compiler.Terms.{CONST_LONG, CONST_STRING, FUNCTION_CALL}
+import com.gicsports.lang.v1.evaluator.ScriptResultV3
+import com.gicsports.lang.v1.traits.domain.DataItem.Lng
+import com.gicsports.lang.v1.traits.domain.{AssetTransfer, Recipient}
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.script.trace.{InvokeScriptTrace, TracedResult}
+import com.gicsports.transaction.{Proofs, TxValidationError}
+import com.gicsports.utils.JsonMatchers
 
 class TraceResultJsonTest extends PropSpec with JsonMatchers {
   private val tx = (

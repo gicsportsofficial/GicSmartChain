@@ -1,9 +1,9 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import com.google.common.base.CaseFormat
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
-import com.wavesplatform.state.StateHash.SectionId
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
+import com.gicsports.state.StateHash.SectionId
 import org.bouncycastle.util.encoders.Hex
 import play.api.libs.json.Json.JsValueWrapper
 import play.api.libs.json.{Json, OWrites}

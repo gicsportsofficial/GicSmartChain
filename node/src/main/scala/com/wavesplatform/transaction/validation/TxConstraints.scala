@@ -1,16 +1,16 @@
-package com.wavesplatform.transaction.validation
+package com.gicsports.transaction.validation
 
 import cats.data.Validated
 import cats.data.Validated.{Invalid, Valid}
 import cats.syntax.validated.*
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.AddressOrAlias
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{Asset, TxValidationError, TxVersion, VersionedTransaction}
+import com.gicsports.account.AddressOrAlias
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{Asset, TxValidationError, TxVersion, VersionedTransaction}
 
 import scala.util.Try
 
@@ -104,7 +104,7 @@ object TxConstraints {
     asset.fold(Validated.validNel[ValidationError, A](asset)) { ia =>
       Validated
         .condNel(
-          ia.id.arr.length == com.wavesplatform.crypto.DigestLength,
+          ia.id.arr.length == com.gicsports.crypto.DigestLength,
           asset,
           TxValidationError.InvalidAssetId
         )

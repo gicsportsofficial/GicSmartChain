@@ -1,6 +1,6 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.transaction.validation.TxValidator
+import com.gicsports.transaction.validation.TxValidator
 
 import scala.util.Try
 

@@ -1,23 +1,23 @@
-package com.wavesplatform.http
+package com.gicsports.http
 
-import com.wavesplatform.BlockchainStubHelpers
-import com.wavesplatform.account.{AddressScheme, KeyPair}
-import com.wavesplatform.api.common.CommonTransactionsApi
-import com.wavesplatform.api.http.{RouteTimeout, TransactionsApiRoute}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.lang.v1.traits.domain.{Lease, Recipient}
-import com.wavesplatform.network.TransactionPublisher
-import com.wavesplatform.state.{AccountScriptInfo, Blockchain}
-import com.wavesplatform.test.TestTime
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.smart.script.trace.{AccountVerifierTrace, TracedResult}
-import com.wavesplatform.transaction.{Asset, Proofs, TxHelpers, TxPositiveAmount, TxVersion}
-import com.wavesplatform.utils.{EthEncoding, EthHelpers, Schedulers}
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.BlockchainStubHelpers
+import com.gicsports.account.{AddressScheme, KeyPair}
+import com.gicsports.api.common.CommonTransactionsApi
+import com.gicsports.api.http.{RouteTimeout, TransactionsApiRoute}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.*
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.lang.v1.traits.domain.{Lease, Recipient}
+import com.gicsports.network.TransactionPublisher
+import com.gicsports.state.{AccountScriptInfo, Blockchain}
+import com.gicsports.test.TestTime
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.smart.script.trace.{AccountVerifierTrace, TracedResult}
+import com.gicsports.transaction.{Asset, Proofs, TxHelpers, TxPositiveAmount, TxVersion}
+import com.gicsports.utils.{EthEncoding, EthHelpers, Schedulers}
+import com.gicsports.wallet.Wallet
 import org.scalamock.scalatest.PathMockFactory
 import play.api.libs.json.{JsObject, JsValue, Json}
 
@@ -50,7 +50,7 @@ class TransactionBroadcastSpec
 
   "exchange" - {
     "accepted with ETH signed orders" in {
-      import com.wavesplatform.transaction.assets.exchange.EthOrderSpec.{ethBuyOrder, ethSellOrder}
+      import com.gicsports.transaction.assets.exchange.EthOrderSpec.{ethBuyOrder, ethSellOrder}
 
       val blockchain = createBlockchainStub { blockchain =>
         val sh = StubHelpers(blockchain)

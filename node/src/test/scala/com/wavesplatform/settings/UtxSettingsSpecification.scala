@@ -1,13 +1,13 @@
-package com.wavesplatform.settings
+package com.gicsports.settings
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.test.FlatSpec
+import com.gicsports.test.FlatSpec
 import net.ceedubs.ficus.Ficus._
 import net.ceedubs.ficus.readers.ArbitraryTypeReader._
 
 class UtxSettingsSpecification extends FlatSpec {
   "UTXSettings" should "read values" in {
-    val config   = ConfigFactory.parseString("""CARDIUM {
+    val config   = ConfigFactory.parseString("""GIC {
         |  utx {
         |    max-size = 100
         |    max-bytes-size = 100
@@ -21,7 +21,7 @@ class UtxSettingsSpecification extends FlatSpec {
         |    always-unlimited-execution = true
         |  }
         |}""".stripMargin).resolve()
-    val settings = config.as[UtxSettings]("CARDIUM.utx")
+    val settings = config.as[UtxSettings]("GIC.utx")
     settings.maxSize shouldBe 100
     settings.maxBytesSize shouldBe 100L
     settings.maxScriptedSize shouldBe 100

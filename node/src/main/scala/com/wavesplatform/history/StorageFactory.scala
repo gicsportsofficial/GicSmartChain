@@ -1,13 +1,13 @@
-package com.wavesplatform.history
+package com.gicsports.history
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.database.{DBExt, Keys, LevelDBWriter, loadActiveLeases}
-import com.wavesplatform.events.BlockchainUpdateTriggers
-import com.wavesplatform.mining.Miner
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.state.BlockchainUpdaterImpl
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.utils.{ScorexLogging, Time, UnsupportedFeature, forceStopApplication}
+import com.gicsports.account.Address
+import com.gicsports.database.{DBExt, Keys, LevelDBWriter, loadActiveLeases}
+import com.gicsports.events.BlockchainUpdateTriggers
+import com.gicsports.mining.Miner
+import com.gicsports.settings.WavesSettings
+import com.gicsports.state.BlockchainUpdaterImpl
+import com.gicsports.transaction.Asset
+import com.gicsports.utils.{ScorexLogging, Time, UnsupportedFeature, forceStopApplication}
 import monix.reactive.Observer
 import org.iq80.leveldb.DB
 

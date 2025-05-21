@@ -1,6 +1,6 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
-import com.wavesplatform.utils.{Schedulers, ScorexLogging}
+import com.gicsports.utils.{Schedulers, ScorexLogging}
 import io.netty.channel.ChannelHandler.Sharable
 import io.netty.channel.{ChannelDuplexHandler, ChannelHandlerContext}
 import monix.execution.schedulers.SchedulerService

@@ -1,12 +1,12 @@
-package com.wavesplatform.network.client
+package com.gicsports.network.client
 
 import java.io.IOException
 import java.net.InetSocketAddress
 
-import com.wavesplatform.Version
-import com.wavesplatform.network.{Handshake, TrafficLogger}
-import com.wavesplatform.settings._
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.Version
+import com.gicsports.network.{Handshake, TrafficLogger}
+import com.gicsports.settings._
+import com.gicsports.utils.ScorexLogging
 import io.netty.bootstrap.Bootstrap
 import io.netty.channel._
 import io.netty.channel.group.ChannelGroup

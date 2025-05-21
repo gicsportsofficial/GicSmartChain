@@ -1,14 +1,14 @@
-package com.wavesplatform.state.diffs.ci.sync
+package com.gicsports.state.diffs.ci.sync
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.db.{DBCacheSettings, WithDomain, WithState}
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V3, V4, V5}
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.diffs.ci
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{TxHelpers, TxVersion}
+import com.gicsports.account.Address
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.db.{DBCacheSettings, WithDomain, WithState}
+import com.gicsports.lang.directives.values.{StdLibVersion, V3, V4, V5}
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.diffs.ci
+import com.gicsports.test.*
+import com.gicsports.transaction.{TxHelpers, TxVersion}
 import org.scalatest.{EitherValues, Inside}
 import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks
 

@@ -1,4 +1,4 @@
-package com.wavesplatform.transaction.smart.script.trace
+package com.gicsports.transaction.smart.script.trace
 
 import cats.instances.either.*
 import cats.instances.list.*
@@ -6,8 +6,8 @@ import cats.kernel.Semigroup
 import cats.syntax.either.*
 import cats.syntax.semigroup.*
 import cats.{Monad, StackSafeMonad}
-import com.wavesplatform.api.http.ApiError
-import com.wavesplatform.transaction.Transaction
+import com.gicsports.api.http.ApiError
+import com.gicsports.transaction.Transaction
 import play.api.libs.json.{JsObject, Json}
 
 final case class TracedResult[+E, +A](

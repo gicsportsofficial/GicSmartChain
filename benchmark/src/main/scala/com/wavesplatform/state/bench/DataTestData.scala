@@ -1,9 +1,9 @@
-package com.wavesplatform.state.bench
+package com.gicsports.state.bench
 
 import java.nio.charset.StandardCharsets
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.v1.traits.DataType
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.v1.traits.DataType
 import scodec.Codec
 import scodec.bits.*
 import scodec.codecs.*

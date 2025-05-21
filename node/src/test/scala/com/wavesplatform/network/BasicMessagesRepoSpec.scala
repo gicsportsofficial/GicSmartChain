@@ -1,17 +1,17 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
 import java.io.ByteArrayOutputStream
 
 import com.google.protobuf.{ByteString, CodedOutputStream, WireFormat}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.mining.MiningConstraints
-import com.wavesplatform.protobuf.block._
-import com.wavesplatform.protobuf.transaction._
-import com.wavesplatform.test.FreeSpec
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.{DataTransaction, Proofs, TxVersion}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.mining.MiningConstraints
+import com.gicsports.protobuf.block._
+import com.gicsports.protobuf.transaction._
+import com.gicsports.test.FreeSpec
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.{DataTransaction, Proofs, TxVersion}
 
 class BasicMessagesRepoSpec extends FreeSpec {
   "PBBlockSpec max length" in {

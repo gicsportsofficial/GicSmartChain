@@ -1,16 +1,16 @@
-package com.wavesplatform.lang.script
+package com.gicsports.lang.script
 
-import com.wavesplatform.lang.ValidationError.ScriptParseError
-import com.wavesplatform.lang.contract.serialization.{ContractSerDeV1, ContractSerDeV2}
-import com.wavesplatform.lang.directives.DirectiveDictionary
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.BaseGlobal
-import com.wavesplatform.lang.v1.serialization.{SerdeV1, SerdeV2}
+import com.gicsports.lang.ValidationError.ScriptParseError
+import com.gicsports.lang.contract.serialization.{ContractSerDeV1, ContractSerDeV2}
+import com.gicsports.lang.directives.DirectiveDictionary
+import com.gicsports.lang.directives.values._
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.BaseGlobal
+import com.gicsports.lang.v1.serialization.{SerdeV1, SerdeV2}
 
 object ScriptReader {
 
-  private val Global: BaseGlobal = com.wavesplatform.lang.Global // Hack for IDEA
+  private val Global: BaseGlobal = com.gicsports.lang.Global // Hack for IDEA
   private val checksumLength = 4
 
   def fromBytes(bytes: Array[Byte]): Either[ScriptParseError, Script] = {

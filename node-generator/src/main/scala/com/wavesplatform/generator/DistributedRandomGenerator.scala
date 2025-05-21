@@ -1,4 +1,4 @@
-package com.wavesplatform.generator
+package com.gicsports.generator
 
 import scala.collection.immutable.TreeMap
 import scala.util.Random

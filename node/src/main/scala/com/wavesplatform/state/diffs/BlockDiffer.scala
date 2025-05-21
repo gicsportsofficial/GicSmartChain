@@ -1,19 +1,19 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
 import cats.implicits.{toBifunctorOps, toFoldableOps}
 import cats.syntax.either.catsSyntaxEitherId
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.mining.MiningConstraint
-import com.wavesplatform.state.*
-import com.wavesplatform.state.patch.{*}
-import com.wavesplatform.state.reader.CompositeBlockchain
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.*
-import com.wavesplatform.transaction.smart.script.trace.TracedResult
-import com.wavesplatform.transaction.{Asset, Transaction}
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.ValidationError
+import com.gicsports.mining.MiningConstraint
+import com.gicsports.state.*
+import com.gicsports.state.patch.{*}
+import com.gicsports.state.reader.CompositeBlockchain
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.*
+import com.gicsports.transaction.smart.script.trace.TracedResult
+import com.gicsports.transaction.{Asset, Transaction}
 
 object BlockDiffer {
   final case class DetailedDiff(parentDiff: Diff, transactionDiffs: List[Diff])

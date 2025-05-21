@@ -1,7 +1,7 @@
-package com.wavesplatform.mining.microblocks
+package com.gicsports.mining.microblocks
 
-import com.wavesplatform.block.MicroBlock
-import com.wavesplatform.lang.ValidationError
+import com.gicsports.block.MicroBlock
+import com.gicsports.lang.ValidationError
 
 import scala.util.control.NoStackTrace
 

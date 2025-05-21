@@ -1,18 +1,18 @@
-package com.wavesplatform.lang.v1.evaluator.ctx.impl.waves
+package com.gicsports.lang.v1.evaluator.ctx.impl.waves
 
 import cats.syntax.either.*
 import cats.syntax.functor.*
 import cats.{Eval, Monad}
-import com.wavesplatform.lang.{CommonError, ExecutionError}
-import com.wavesplatform.lang.directives.values.StdLibVersion
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.Types.*
-import com.wavesplatform.lang.v1.evaluator.ContextfulVal
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.Bindings.{buildAssetInfo, ordType, orderObject, transactionObject}
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.Types.*
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.v1.traits.domain.OrdType
-import com.wavesplatform.lang.v1.traits.domain.Tx.{BurnPseudoTx, InvokePseudoTx, ReissuePseudoTx, ScriptTransfer, SponsorFeePseudoTx}
+import com.gicsports.lang.{CommonError, ExecutionError}
+import com.gicsports.lang.directives.values.StdLibVersion
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.Types.*
+import com.gicsports.lang.v1.evaluator.ContextfulVal
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.Bindings.{buildAssetInfo, ordType, orderObject, transactionObject}
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.Types.*
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.v1.traits.domain.OrdType
+import com.gicsports.lang.v1.traits.domain.Tx.{BurnPseudoTx, InvokePseudoTx, ReissuePseudoTx, ScriptTransfer, SponsorFeePseudoTx}
 
 object Vals {
   def tx(

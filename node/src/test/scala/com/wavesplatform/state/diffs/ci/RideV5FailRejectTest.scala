@@ -1,20 +1,20 @@
-package com.wavesplatform.state.diffs.ci
+package com.gicsports.state.diffs.ci
 
-import com.wavesplatform.TestValues.invokeFee
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.history.Domain
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.v1.ExprScript.ExprScriptImpl
-import com.wavesplatform.lang.v1.compiler.Terms.TRUE
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
-import com.wavesplatform.state.{Portfolio, StringDataEntry}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TxHelpers.*
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.{TransactionType, TxHelpers}
+import com.gicsports.TestValues.invokeFee
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.history.Domain
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.v1.ExprScript.ExprScriptImpl
+import com.gicsports.lang.v1.compiler.Terms.TRUE
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
+import com.gicsports.state.{Portfolio, StringDataEntry}
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TxHelpers.*
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.{TransactionType, TxHelpers}
 
 class RideV5FailRejectTest extends PropSpec with WithDomain {
   import DomainPresets.*

@@ -1,11 +1,11 @@
-package com.wavesplatform.lagonaki.mocks
+package com.gicsports.lagonaki.mocks
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.block._
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.crypto._
-import com.wavesplatform.transaction.Transaction
+import com.gicsports.account.KeyPair
+import com.gicsports.block._
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.crypto._
+import com.gicsports.transaction.Transaction
 
 import scala.util.{Random, Try}
 

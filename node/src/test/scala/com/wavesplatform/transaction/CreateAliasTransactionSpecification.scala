@@ -1,18 +1,18 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import com.google.common.primitives.Longs
-import com.wavesplatform.account.{Alias, KeyPair, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.diffs.produceRejectOrFailedDiff
-import com.wavesplatform.test.*
-import com.wavesplatform.test.DomainPresets.*
-import com.wavesplatform.transaction.serialization.impl.{CreateAliasTxSerializer, PBTransactionSerializer}
+import com.gicsports.account.{Alias, KeyPair, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.diffs.produceRejectOrFailedDiff
+import com.gicsports.test.*
+import com.gicsports.test.DomainPresets.*
+import com.gicsports.transaction.serialization.impl.{CreateAliasTxSerializer, PBTransactionSerializer}
 import play.api.libs.json.Json
 
 import scala.util.{Failure, Random, Success}

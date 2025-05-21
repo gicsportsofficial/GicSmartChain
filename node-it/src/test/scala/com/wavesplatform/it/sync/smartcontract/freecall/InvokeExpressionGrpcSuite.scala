@@ -1,21 +1,21 @@
-package com.wavesplatform.it.sync.smartcontract.freecall
+package com.gicsports.it.sync.smartcontract.freecall
 
 import com.google.protobuf.ByteString
 import com.typesafe.config.Config
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.features.BlockchainFeatures.ContinuationTransaction
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.NodeConfigs.Default
-import com.wavesplatform.it.api.SyncGrpcApi.*
-import com.wavesplatform.it.api.{PutDataResponse, StateChangesDetails}
-import com.wavesplatform.it.sync.grpc.GrpcBaseTransactionSuite
-import com.wavesplatform.it.sync.invokeExpressionFee
-import com.wavesplatform.lang.directives.values.V6
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.protobuf.block.VanillaBlock
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.smart.InvokeExpressionTransaction
+import com.gicsports.account.AddressScheme
+import com.gicsports.features.BlockchainFeatures.ContinuationTransaction
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.NodeConfigs.Default
+import com.gicsports.it.api.SyncGrpcApi.*
+import com.gicsports.it.api.{PutDataResponse, StateChangesDetails}
+import com.gicsports.it.sync.grpc.GrpcBaseTransactionSuite
+import com.gicsports.it.sync.invokeExpressionFee
+import com.gicsports.lang.directives.values.V6
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.protobuf.block.VanillaBlock
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.smart.InvokeExpressionTransaction
 import org.scalatest.{Assertion, CancelAfterFailure}
 
 class InvokeExpressionGrpcSuite extends GrpcBaseTransactionSuite with CancelAfterFailure {

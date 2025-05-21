@@ -1,21 +1,21 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.api.http.ApiError.ScriptExecutionError
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.NTPTime
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.api.Transaction
-import com.wavesplatform.it.sync.{calcMassTransferFee, setScriptFee, _}
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.transaction.assets.exchange.{AssetPair, ExchangeTransaction, Order}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.Transfer
+import com.gicsports.account.KeyPair
+import com.gicsports.api.http.ApiError.ScriptExecutionError
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.NTPTime
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.api.Transaction
+import com.gicsports.it.sync.{calcMassTransferFee, setScriptFee, _}
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.test._
+import com.gicsports.transaction.Asset
+import com.gicsports.transaction.assets.exchange.{AssetPair, ExchangeTransaction, Order}
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.transfer.MassTransferTransaction.Transfer
 
 class TransferNFTSuite extends BaseTransactionSuite with NTPTime {
   val assetName        = "NFTAsset"
@@ -151,7 +151,7 @@ class TransferNFTSuite extends BaseTransactionSuite with NTPTime {
 
     val nftAsset =
       sender.broadcastIssue(seller, assetName, assetDescription, 1, 0, reissuable = false, 0.1.waves, waitForTx = true, script = None).id
-    val pair = AssetPair.createAssetPair(nftAsset, "CARDIUM")
+    val pair = AssetPair.createAssetPair(nftAsset, "GIC")
     val ts   = ntpTime.correctedTime()
     val buy = Order
       .buy(

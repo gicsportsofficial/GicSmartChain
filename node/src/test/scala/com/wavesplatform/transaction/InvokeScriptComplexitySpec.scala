@@ -1,16 +1,16 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.NTPTime
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.directives.values.{V4, V5}
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_BYTESTR, CONST_STRING}
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.*
-import com.wavesplatform.test.DomainPresets.*
+import com.gicsports.NTPTime
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.directives.values.{V4, V5}
+import com.gicsports.lang.v1.compiler.Terms.{CONST_BYTESTR, CONST_STRING}
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.*
+import com.gicsports.test.DomainPresets.*
 
 class InvokeScriptComplexitySpec extends FreeSpec with WithDomain with NTPTime {
   private[this] val dApp1 = TestCompiler(V5).compileContract("""

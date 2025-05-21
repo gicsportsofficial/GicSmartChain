@@ -1,7 +1,7 @@
-package com.wavesplatform.history
+package com.gicsports.history
 
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.settings.WavesSettings
+import com.gicsports.db.WithDomain
+import com.gicsports.settings.WavesSettings
 import org.scalacheck.Gen
 import org.scalatest.Suite
 import org.scalatestplus.scalacheck.{ScalaCheckDrivenPropertyChecks => GeneratorDrivenPropertyChecks}

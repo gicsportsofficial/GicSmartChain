@@ -1,4 +1,4 @@
-package com.wavesplatform.it;
+package com.gicsports.it;
 
 import org.scalatest.TagAnnotation;
 

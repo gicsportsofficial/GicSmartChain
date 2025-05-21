@@ -1,15 +1,15 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import cats.Id
-import com.wavesplatform.account.{Address, Alias}
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.v1.ContractLimits.FailFreeInvokeComplexity
-import com.wavesplatform.lang.v1.evaluator.Log
-import com.wavesplatform.state.InvokeScriptResult
-import com.wavesplatform.transaction.TxValidationError.FailedTransactionError.Cause
-import com.wavesplatform.transaction.assets.exchange.Order
+import com.gicsports.account.{Address, Alias}
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.v1.ContractLimits.FailFreeInvokeComplexity
+import com.gicsports.lang.v1.evaluator.Log
+import com.gicsports.state.InvokeScriptResult
+import com.gicsports.transaction.TxValidationError.FailedTransactionError.Cause
+import com.gicsports.transaction.assets.exchange.Order
 
 object TxValidationError {
   type Validation[T] = Either[ValidationError, T]

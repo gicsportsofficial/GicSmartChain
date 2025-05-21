@@ -1,9 +1,9 @@
-package com.wavesplatform.state.patch
+package com.gicsports.state.patch
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.utils._
-import com.wavesplatform.state.patch.CancelAllLeases.CancelledLeases
-import com.wavesplatform.state.{Blockchain, Diff, Portfolio}
+import com.gicsports.account.Address
+import com.gicsports.common.utils._
+import com.gicsports.state.patch.CancelAllLeases.CancelledLeases
+import com.gicsports.state.{Blockchain, Diff, Portfolio}
 
 case object CancelLeaseOverflow extends PatchAtHeight('L' -> 930000) {
   def apply(blockchain: Blockchain): Diff = {

@@ -1,26 +1,26 @@
-package com.wavesplatform.utils
+package com.gicsports.utils
 
 import java.security.{KeyPair, KeyPairGenerator, SecureRandom, Signature}
 
 import cats.Id
 import cats.implicits._
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base64, EitherExt2}
-import com.wavesplatform.lang.Global
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.lang.v1.CTX
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler
-import com.wavesplatform.lang.v1.compiler.Terms._
-import com.wavesplatform.lang.v1.compiler.Types._
-import com.wavesplatform.lang.v1.evaluator.Contextful.NoContext
-import com.wavesplatform.lang.v1.evaluator.EvaluatorV1._
-import com.wavesplatform.lang.v1.evaluator.ctx.BaseFunction
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.crypto.RSA
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.crypto.RSA._
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
-import com.wavesplatform.lang.v1.evaluator.{ContextfulVal, EvaluatorV1}
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.test._
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base64, EitherExt2}
+import com.gicsports.lang.Global
+import com.gicsports.lang.directives.values._
+import com.gicsports.lang.v1.CTX
+import com.gicsports.lang.v1.compiler.ExpressionCompiler
+import com.gicsports.lang.v1.compiler.Terms._
+import com.gicsports.lang.v1.compiler.Types._
+import com.gicsports.lang.v1.evaluator.Contextful.NoContext
+import com.gicsports.lang.v1.evaluator.EvaluatorV1._
+import com.gicsports.lang.v1.evaluator.ctx.BaseFunction
+import com.gicsports.lang.v1.evaluator.ctx.impl.crypto.RSA
+import com.gicsports.lang.v1.evaluator.ctx.impl.crypto.RSA._
+import com.gicsports.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
+import com.gicsports.lang.v1.evaluator.{ContextfulVal, EvaluatorV1}
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.test._
 import org.bouncycastle.jce.provider.BouncyCastleProvider
 import org.scalacheck.{Arbitrary, Gen}
 import org.scalatest._

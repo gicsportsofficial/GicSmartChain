@@ -1,17 +1,17 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.crypto
-import com.wavesplatform.it.api.SyncGrpcApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.sync.smartcontract.setScrTxSupportedVersions
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.protobuf.Amount
-import com.wavesplatform.protobuf.transaction.{
+import com.gicsports.account.AddressScheme
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.crypto
+import com.gicsports.it.api.SyncGrpcApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.sync.smartcontract.setScrTxSupportedVersions
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.protobuf.Amount
+import com.gicsports.protobuf.transaction.{
   PBTransactions,
   Recipient,
   SetScriptTransactionData,
@@ -19,7 +19,7 @@ import com.wavesplatform.protobuf.transaction.{
   TransferTransactionData,
   Transaction => PBTransaction
 }
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import io.grpc.Status.Code
 
 class SetScriptTransactionGrpcSuite extends GrpcBaseTransactionSuite {

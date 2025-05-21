@@ -1,4 +1,4 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import akka.NotUsed
 import akka.http.scaladsl.common.EntityStreamingSupport
@@ -9,9 +9,9 @@ import akka.http.scaladsl.unmarshalling.{FromEntityUnmarshaller, PredefinedFromE
 import akka.http.scaladsl.util.FastFuture
 import akka.stream.scaladsl.{Flow, Source}
 import akka.util.ByteString
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.smart.script.trace.TracedResult
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.smart.script.trace.TracedResult
 import play.api.libs.json._
 
 import scala.util.control.Exception.nonFatalCatch

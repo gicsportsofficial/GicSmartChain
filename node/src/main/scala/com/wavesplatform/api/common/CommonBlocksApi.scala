@@ -1,11 +1,11 @@
-package com.wavesplatform.api.common
+package com.gicsports.api.common
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.api.BlockMeta
-import com.wavesplatform.block.Block.BlockId
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.state.{Blockchain, TxMeta}
-import com.wavesplatform.transaction.Transaction
+import com.gicsports.account.Address
+import com.gicsports.api.BlockMeta
+import com.gicsports.block.Block.BlockId
+import com.gicsports.common.state.ByteStr
+import com.gicsports.state.{Blockchain, TxMeta}
+import com.gicsports.transaction.Transaction
 import monix.reactive.Observable
 
 trait CommonBlocksApi {

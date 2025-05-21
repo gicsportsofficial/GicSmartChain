@@ -1,8 +1,8 @@
-package com.wavesplatform.generator.utils
+package com.gicsports.generator.utils
 
 import java.util.concurrent.ThreadLocalRandom
 
-import com.wavesplatform.settings.Constants
+import com.gicsports.settings.Constants
 
 object Implicits {
   final implicit class IteratorUtilsOps(val self: Iterator.type) extends AnyVal {

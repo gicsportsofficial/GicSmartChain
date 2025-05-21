@@ -1,4 +1,4 @@
-package com.wavesplatform.lang.parser.error
+package com.gicsports.lang.parser.error
 
 class SquareBraceParseErrorTest extends ParseErrorTest {
   property("missing closing square brace of list definition") {

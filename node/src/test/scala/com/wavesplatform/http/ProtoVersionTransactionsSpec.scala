@@ -1,27 +1,27 @@
-package com.wavesplatform.http
+package com.gicsports.http
 
 import akka.http.scaladsl.model.{HttpResponse, StatusCodes}
 import akka.http.scaladsl.server.Route
-import com.wavesplatform.TestWallet
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.api.common.CommonTransactionsApi
-import com.wavesplatform.api.http.{RouteTimeout, TransactionsApiRoute}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base64, EitherExt2}
-import com.wavesplatform.lang.v1.FunctionHeader.User
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_LONG, FUNCTION_CALL}
-import com.wavesplatform.protobuf.transaction.{PBSignedTransaction, PBTransactions}
-import com.wavesplatform.protobuf.utils.PBUtils
-import com.wavesplatform.settings.Constants
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.assets.*
-import com.wavesplatform.transaction.assets.exchange.{ExchangeTransaction, Order}
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.ParsedTransfer
-import com.wavesplatform.transaction.transfer.{MassTransferTransaction, TransferTransaction}
-import com.wavesplatform.transaction.{
+import com.gicsports.TestWallet
+import com.gicsports.account.KeyPair
+import com.gicsports.api.common.CommonTransactionsApi
+import com.gicsports.api.http.{RouteTimeout, TransactionsApiRoute}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base64, EitherExt2}
+import com.gicsports.lang.v1.FunctionHeader.User
+import com.gicsports.lang.v1.compiler.Terms.{CONST_LONG, FUNCTION_CALL}
+import com.gicsports.protobuf.transaction.{PBSignedTransaction, PBTransactions}
+import com.gicsports.protobuf.utils.PBUtils
+import com.gicsports.settings.Constants
+import com.gicsports.state.Blockchain
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.assets.*
+import com.gicsports.transaction.assets.exchange.{ExchangeTransaction, Order}
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.transaction.transfer.MassTransferTransaction.ParsedTransfer
+import com.gicsports.transaction.transfer.{MassTransferTransaction, TransferTransaction}
+import com.gicsports.transaction.{
   Asset,
   CreateAliasTransaction,
   DataTransaction,
@@ -31,8 +31,8 @@ import com.wavesplatform.transaction.{
   TxVersion,
   VersionedTransaction
 }
-import com.wavesplatform.utils.Schedulers
-import com.wavesplatform.utx.UtxPool
+import com.gicsports.utils.Schedulers
+import com.gicsports.utx.UtxPool
 import org.scalacheck.Gen
 import org.scalamock.scalatest.MockFactory
 import org.scalatest.OptionValues

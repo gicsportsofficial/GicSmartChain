@@ -1,9 +1,9 @@
-package com.wavesplatform.lang.estimator
+package com.gicsports.lang.estimator
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.directives.values.V3
-import com.wavesplatform.lang.utils.*
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.directives.values.V3
+import com.gicsports.lang.utils.*
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
 
 class ScriptEstimatorV2Test extends ScriptEstimatorTestBase(ScriptEstimatorV2) {
   property("transitive ref usage") {

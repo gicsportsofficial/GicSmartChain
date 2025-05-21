@@ -1,6 +1,6 @@
-package com.wavesplatform.test
+package com.gicsports.test
 
-import com.wavesplatform.lang.v1.testing.ScriptGen
+import com.gicsports.lang.v1.testing.ScriptGen
 import org.scalacheck.ShrinkLowPriority
 import org.scalatest._
 import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks

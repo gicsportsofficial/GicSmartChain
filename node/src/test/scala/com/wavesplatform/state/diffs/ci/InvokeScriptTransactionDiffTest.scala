@@ -1,48 +1,48 @@
-package com.wavesplatform.state.diffs.ci
+package com.gicsports.state.diffs.ci
 
 import scala.collection.immutable
 import com.google.protobuf.ByteString
-import com.wavesplatform.TestValues
-import com.wavesplatform.TestValues.invokeFee
-import com.wavesplatform.account.*
-import com.wavesplatform.block.{Block, BlockHeader, SignedBlockHeader}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.{DBCacheSettings, WithDomain}
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.Domain
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.contract.DApp.{CallableAnnotation, CallableFunction}
-import com.wavesplatform.lang.directives.DirectiveDictionary
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.FunctionHeader.{Native, User}
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.{Terms, TestCompiler}
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.lang.v1.evaluator.FunctionIds.CREATE_LIST
-import com.wavesplatform.lang.v1.evaluator.ScriptResultV3
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.FieldNames
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.settings.TestSettings
-import com.wavesplatform.state.*
-import com.wavesplatform.state.diffs.FeeValidation.FeeConstants
-import com.wavesplatform.state.diffs.TransactionDiffer.TransactionValidationError
-import com.wavesplatform.state.diffs.invoke.InvokeScriptTransactionDiff
-import com.wavesplatform.state.diffs.{ENOUGH_AMT, FeeValidation, produceRejectOrFailedDiff}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.*
-import com.wavesplatform.transaction.assets.*
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.smart.script.trace.{AssetVerifierTrace, InvokeScriptTrace, TracedResult}
-import com.wavesplatform.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.{Asset, utils as _, *}
+import com.gicsports.TestValues
+import com.gicsports.TestValues.invokeFee
+import com.gicsports.account.*
+import com.gicsports.block.{Block, BlockHeader, SignedBlockHeader}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.{DBCacheSettings, WithDomain}
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.Domain
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.contract.DApp.{CallableAnnotation, CallableFunction}
+import com.gicsports.lang.directives.DirectiveDictionary
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.FunctionHeader.{Native, User}
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.{Terms, TestCompiler}
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.lang.v1.evaluator.FunctionIds.CREATE_LIST
+import com.gicsports.lang.v1.evaluator.ScriptResultV3
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.FieldNames
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.settings.TestSettings
+import com.gicsports.state.*
+import com.gicsports.state.diffs.FeeValidation.FeeConstants
+import com.gicsports.state.diffs.TransactionDiffer.TransactionValidationError
+import com.gicsports.state.diffs.invoke.InvokeScriptTransactionDiff
+import com.gicsports.state.diffs.{ENOUGH_AMT, FeeValidation, produceRejectOrFailedDiff}
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.*
+import com.gicsports.transaction.assets.*
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.smart.script.trace.{AssetVerifierTrace, InvokeScriptTrace, TracedResult}
+import com.gicsports.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.transaction.{Asset, utils as _, *}
 import org.scalamock.scalatest.MockFactory
 import org.scalatest.{EitherValues, Inside}
 
@@ -1531,7 +1531,7 @@ class InvokeScriptTransactionDiffTest extends PropSpec with WithDomain with DBCa
     testDiffAndState(Seq(TestBlock.create(Seq(gTx1, gTx2, alias, ssTx))), TestBlock.create(Seq(invoke), Block.ProtoBlockVersion), from = V5) {
       case (diff, bc) =>
         diff.errorMessage(invoke.id()) shouldBe None
-        val hash = ByteStr(com.wavesplatform.lang.Global.blake2b256(script.bytes().arr))
+        val hash = ByteStr(com.gicsports.lang.Global.blake2b256(script.bytes().arr))
         bc.accountData(dAppAddress, "hash1").get.value shouldBe hash
         bc.accountData(dAppAddress, "hash2").get.value shouldBe hash
     }

@@ -1,6 +1,6 @@
-package com.wavesplatform.lang.estimator
+package com.gicsports.lang.estimator
 
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
 
 class FoldEstimationTest extends ScriptEstimatorTestBase(ScriptEstimatorV3(fixOverflow = true, overhead = true)) {
   property("unique names are used for different folds") {

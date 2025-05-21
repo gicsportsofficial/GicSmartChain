@@ -1,9 +1,9 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
-import com.wavesplatform.history.*
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{GenesisTransaction, TxHelpers}
-import com.wavesplatform.transaction.transfer.*
+import com.gicsports.history.*
+import com.gicsports.test.*
+import com.gicsports.transaction.{GenesisTransaction, TxHelpers}
+import com.gicsports.transaction.transfer.*
 
 class NgStateTest extends PropSpec {
 

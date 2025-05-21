@@ -1,6 +1,6 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.transaction.Asset.Waves
+import com.gicsports.transaction.Asset.Waves
 
 sealed trait TxWithFee {
   def fee: TxPositiveAmount

@@ -1,4 +1,4 @@
-package com.wavesplatform.account
+package com.gicsports.account
 
 abstract class AddressScheme {
   val chainId: Byte

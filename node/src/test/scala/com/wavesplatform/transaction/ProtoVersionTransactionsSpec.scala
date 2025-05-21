@@ -1,23 +1,23 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base64, EitherExt2}
-import com.wavesplatform.lang.v1.FunctionHeader.User
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_LONG, FUNCTION_CALL}
-import com.wavesplatform.protobuf.transaction.{PBSignedTransaction, PBTransactions}
-import com.wavesplatform.protobuf.utils.PBUtils
-import com.wavesplatform.settings.Constants
-import com.wavesplatform.test.FreeSpec
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.assets.*
-import com.wavesplatform.transaction.assets.exchange.{ExchangeTransaction, Order}
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.ParsedTransfer
-import com.wavesplatform.transaction.transfer.{MassTransferTransaction, TransferTransaction}
-import com.wavesplatform.transaction.utils.Signed
+import com.gicsports.account.KeyPair
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base64, EitherExt2}
+import com.gicsports.lang.v1.FunctionHeader.User
+import com.gicsports.lang.v1.compiler.Terms.{CONST_LONG, FUNCTION_CALL}
+import com.gicsports.protobuf.transaction.{PBSignedTransaction, PBTransactions}
+import com.gicsports.protobuf.utils.PBUtils
+import com.gicsports.settings.Constants
+import com.gicsports.test.FreeSpec
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.assets.*
+import com.gicsports.transaction.assets.exchange.{ExchangeTransaction, Order}
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.transfer.MassTransferTransaction.ParsedTransfer
+import com.gicsports.transaction.transfer.{MassTransferTransaction, TransferTransaction}
+import com.gicsports.transaction.utils.Signed
 import org.scalacheck.Gen
 
 class ProtoVersionTransactionsSpec extends FreeSpec {

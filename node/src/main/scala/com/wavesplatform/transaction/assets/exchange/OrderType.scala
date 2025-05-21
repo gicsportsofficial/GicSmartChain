@@ -1,4 +1,4 @@
-package com.wavesplatform.transaction.assets.exchange
+package com.gicsports.transaction.assets.exchange
 
 sealed trait OrderType {
   def bytes: Array[Byte]

@@ -1,15 +1,15 @@
-package com.wavesplatform.transaction.transfer
+package com.gicsports.transaction.transfer
 
-import com.wavesplatform.account._
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction._
-import com.wavesplatform.transaction.serialization.impl.TransferTxSerializer
-import com.wavesplatform.transaction.validation._
-import com.wavesplatform.transaction.validation.impl.TransferTxValidator
-import com.wavesplatform.utils.base58Length
+import com.gicsports.account._
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction._
+import com.gicsports.transaction.serialization.impl.TransferTxSerializer
+import com.gicsports.transaction.validation._
+import com.gicsports.transaction.validation.impl.TransferTxValidator
+import com.gicsports.utils.base58Length
 import monix.eval.Coeval
 import play.api.libs.json.JsObject
 

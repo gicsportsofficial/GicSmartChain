@@ -1,6 +1,6 @@
-package com.wavesplatform.common
+package com.gicsports.common
 
-import com.wavesplatform.common.state.ByteStr
+import com.gicsports.common.state.ByteStr
 
 object ByteStrComparator {
   def compare(bs1: ByteStr, bs2: ByteStr): Int = {

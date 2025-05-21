@@ -1,4 +1,4 @@
-package com.wavesplatform.lang.parser.error
+package com.gicsports.lang.parser.error
 
 class FuncDefParseErrorTest extends ParseErrorTest {
   property("missing opening brace of function arguments definition") {

@@ -1,7 +1,7 @@
-package com.wavesplatform.lang.v1.parser
+package com.gicsports.lang.v1.parser
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.v1.compiler.Types.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.v1.compiler.Types.*
 
 object Expressions {
 

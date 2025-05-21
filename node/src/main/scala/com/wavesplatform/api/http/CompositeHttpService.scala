@@ -1,4 +1,4 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import akka.http.scaladsl.model.*
 import akka.http.scaladsl.model.HttpMethods.*
@@ -7,8 +7,8 @@ import akka.http.scaladsl.server.*
 import akka.http.scaladsl.server.Directives.*
 import akka.http.scaladsl.server.RouteResult.Complete
 import akka.http.scaladsl.server.directives.{DebuggingDirectives, LoggingMagnet}
-import com.wavesplatform.settings.RestAPISettings
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.settings.RestAPISettings
+import com.gicsports.utils.ScorexLogging
 import kamon.Kamon
 
 import scala.io.Source
@@ -81,8 +81,8 @@ case class CompositeHttpService(routes: Seq[ApiRoute], settings: RestAPISettings
   }
 
   private[this] lazy val patchedSwaggerJson = {
-    import com.wavesplatform.Version
-    import com.wavesplatform.account.AddressScheme
+    import com.gicsports.Version
+    import com.gicsports.account.AddressScheme
 
     def chainIdString: String =
       if (Character.isAlphabetic(AddressScheme.current.chainId)) AddressScheme.current.chainId.toChar.toString

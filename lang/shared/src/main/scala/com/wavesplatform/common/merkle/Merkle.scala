@@ -1,4 +1,4 @@
-package com.wavesplatform.common.merkle
+package com.gicsports.common.merkle
 
 import scala.annotation.tailrec
 
@@ -9,7 +9,7 @@ object Merkle {
   @inline private def isLeft(i: Int): Boolean = i % 2 == 0
 
   /** Hash function */
-  def hash(input: Message): Digest = com.wavesplatform.lang.Global.blake2b256(input)
+  def hash(input: Message): Digest = com.gicsports.lang.Global.blake2b256(input)
 
   /** Makes levels of merkle tree (from top to bottom) */
   def mkLevels(data: Seq[Message]): Seq[Level] = {

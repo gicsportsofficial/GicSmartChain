@@ -1,15 +1,15 @@
-package com.wavesplatform.lang.v1.repl.node.http.response
+package com.gicsports.lang.v1.repl.node.http.response
 
 import java.nio.ByteBuffer
 import java.nio.charset.StandardCharsets
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.EnvironmentFunctions
-import com.wavesplatform.lang.v1.traits.domain.Recipient.{Address, Alias}
-import com.wavesplatform.lang.v1.traits.domain.{Recipient => LangRecipient}
-import com.wavesplatform.protobuf.Amount
-import com.wavesplatform.protobuf.transaction._
-import com.wavesplatform.protobuf.transaction.Transaction.Data
+import com.gicsports.lang.v1.evaluator.ctx.impl.EnvironmentFunctions
+import com.gicsports.lang.v1.traits.domain.Recipient.{Address, Alias}
+import com.gicsports.lang.v1.traits.domain.{Recipient => LangRecipient}
+import com.gicsports.protobuf.Amount
+import com.gicsports.protobuf.transaction._
+import com.gicsports.protobuf.transaction.Transaction.Data
 
 object TransferTxSerializer {
   import ByteString.{copyFrom => bs}

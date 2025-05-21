@@ -1,17 +1,17 @@
-package com.wavesplatform.transaction.smart
+package com.gicsports.transaction.smart
 
 import cats.Id
 import cats.syntax.semigroup.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.Global
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.{ContentType, ScriptType, StdLibVersion}
-import com.wavesplatform.lang.v1.CTX
-import com.wavesplatform.lang.v1.evaluator.ctx.EvaluationContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.WavesContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.state.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.Global
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.{ContentType, ScriptType, StdLibVersion}
+import com.gicsports.lang.v1.CTX
+import com.gicsports.lang.v1.evaluator.ctx.EvaluationContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.WavesContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.state.*
 import monix.eval.Coeval
 
 import java.util

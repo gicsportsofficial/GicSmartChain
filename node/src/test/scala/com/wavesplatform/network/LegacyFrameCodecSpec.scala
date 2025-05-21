@@ -1,13 +1,13 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
 import java.net.InetSocketAddress
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.network.message.{MessageSpec, Message => ScorexMessage}
-import com.wavesplatform.test.FreeSpec
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.assets.UpdateAssetInfoTransaction
-import com.wavesplatform.{TestValues, crypto}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.network.message.{MessageSpec, Message => ScorexMessage}
+import com.gicsports.test.FreeSpec
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.assets.UpdateAssetInfoTransaction
+import com.gicsports.{TestValues, crypto}
 import io.netty.buffer.Unpooled.wrappedBuffer
 import io.netty.buffer.{ByteBuf, Unpooled}
 import io.netty.channel.embedded.EmbeddedChannel

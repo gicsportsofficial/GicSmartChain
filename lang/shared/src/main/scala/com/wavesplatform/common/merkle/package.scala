@@ -1,4 +1,4 @@
-package com.wavesplatform.common
+package com.gicsports.common
 
 package object merkle {
   type LeafData = Array[Byte]

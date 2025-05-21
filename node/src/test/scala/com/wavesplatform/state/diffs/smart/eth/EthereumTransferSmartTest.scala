@@ -1,22 +1,22 @@
-package com.wavesplatform.state.diffs.smart.eth
+package com.gicsports.state.diffs.smart.eth
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.lang.directives.DirectiveDictionary
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V3, V6}
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.Portfolio
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.state.diffs.smart.predef.{assertProvenPart, provenPart}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{ERC20Address, EthereumTransaction, GenesisTransaction, TxHelpers}
-import com.wavesplatform.utils.EthHelpers
+import com.gicsports.account.Address
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.lang.directives.DirectiveDictionary
+import com.gicsports.lang.directives.values.{StdLibVersion, V3, V6}
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.Portfolio
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.state.diffs.smart.predef.{assertProvenPart, provenPart}
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{ERC20Address, EthereumTransaction, GenesisTransaction, TxHelpers}
+import com.gicsports.utils.EthHelpers
 
 class EthereumTransferSmartTest extends PropSpec with WithDomain with EthHelpers {
   import DomainPresets.*

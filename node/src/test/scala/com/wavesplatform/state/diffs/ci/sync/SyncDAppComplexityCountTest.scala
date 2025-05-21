@@ -1,26 +1,26 @@
-package com.wavesplatform.state.diffs.ci.sync
+package com.gicsports.state.diffs.ci.sync
 
 import cats.instances.list.*
 import cats.syntax.traverse.*
-import com.wavesplatform.account.Address
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.settings.FunctionalitySettings
-import com.wavesplatform.state.diffs.BlockDiffer.CurrentBlockFeePart
-import com.wavesplatform.state.diffs.{ENOUGH_AMT, ci}
-import com.wavesplatform.state.{Diff, Portfolio}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.smart.{InvokeTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.{Transaction, TxHelpers}
+import com.gicsports.account.Address
+import com.gicsports.block.Block
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.settings.FunctionalitySettings
+import com.gicsports.state.diffs.BlockDiffer.CurrentBlockFeePart
+import com.gicsports.state.diffs.{ENOUGH_AMT, ci}
+import com.gicsports.state.{Diff, Portfolio}
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.smart.{InvokeTransaction, SetScriptTransaction}
+import com.gicsports.transaction.{Transaction, TxHelpers}
 
 class SyncDAppComplexityCountTest extends PropSpec with WithDomain {
   import DomainPresets.*

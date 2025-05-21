@@ -1,15 +1,15 @@
-package com.wavesplatform.lang.contract
+package com.gicsports.lang.contract
 
-import com.wavesplatform.lang.contract.DApp.{CallableFunction, ExprWithCtx, VerifierFunction}
-import com.wavesplatform.lang.directives.values.StdLibVersion
-import com.wavesplatform.lang.v1.FunctionHeader.Native
-import com.wavesplatform.lang.v1.compiler.CompilationError.Generic
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.Types.*
-import com.wavesplatform.lang.v1.compiler.{CompilationError, Terms}
-import com.wavesplatform.lang.v1.evaluator.FunctionIds.{CALLDAPP, CALLDAPPREENTRANT}
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.Types
-import com.wavesplatform.protobuf.dapp.DAppMeta
+import com.gicsports.lang.contract.DApp.{CallableFunction, ExprWithCtx, VerifierFunction}
+import com.gicsports.lang.directives.values.StdLibVersion
+import com.gicsports.lang.v1.FunctionHeader.Native
+import com.gicsports.lang.v1.compiler.CompilationError.Generic
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.Types.*
+import com.gicsports.lang.v1.compiler.{CompilationError, Terms}
+import com.gicsports.lang.v1.evaluator.FunctionIds.{CALLDAPP, CALLDAPPREENTRANT}
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.Types
+import com.gicsports.protobuf.dapp.DAppMeta
 
 import scala.annotation.tailrec
 

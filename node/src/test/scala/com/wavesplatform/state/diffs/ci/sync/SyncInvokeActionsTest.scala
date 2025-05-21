@@ -1,12 +1,12 @@
-package com.wavesplatform.state.diffs.ci.sync
+package com.gicsports.state.diffs.ci.sync
 
-import com.wavesplatform.TestValues.invokeFee
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.{PropSpec, produce}
-import com.wavesplatform.transaction.TxHelpers._
+import com.gicsports.TestValues.invokeFee
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.directives.values._
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.{PropSpec, produce}
+import com.gicsports.transaction.TxHelpers._
 
 class SyncInvokeActionsTest extends PropSpec with WithDomain {
   import DomainPresets._

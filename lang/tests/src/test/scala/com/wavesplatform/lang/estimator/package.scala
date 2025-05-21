@@ -1,17 +1,17 @@
-package com.wavesplatform.lang
+package com.gicsports.lang
 
 import cats.syntax.semigroup.*
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.V3
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.lang.v1.compiler.Terms.EXPR
-import com.wavesplatform.lang.v1.estimator.ScriptEstimator
-import com.wavesplatform.lang.v1.evaluator.ContractEvaluator.LogExtraInfo
-import com.wavesplatform.lang.v1.evaluator.EvaluatorV2
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.WavesContext
-import com.wavesplatform.lang.v1.traits.Environment
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.V3
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.lang.v1.compiler.Terms.EXPR
+import com.gicsports.lang.v1.estimator.ScriptEstimator
+import com.gicsports.lang.v1.evaluator.ContractEvaluator.LogExtraInfo
+import com.gicsports.lang.v1.evaluator.EvaluatorV2
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.WavesContext
+import com.gicsports.lang.v1.traits.Environment
 import monix.eval.Coeval
 
 package object estimator {

@@ -1,20 +1,20 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
 import com.typesafe.config.Config
-import com.wavesplatform.api.http.ApiError.TransactionNotAllowedByAssetScript
-import com.wavesplatform.api.http.DebugMessage
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.it.api.{StateChanges, TransactionStatus}
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.state.{BooleanDataEntry, StringDataEntry}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.assets.exchange.AssetPair
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.api.http.ApiError.TransactionNotAllowedByAssetScript
+import com.gicsports.api.http.DebugMessage
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.it.api.{StateChanges, TransactionStatus}
+import com.gicsports.it.sync.*
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.state.{BooleanDataEntry, StringDataEntry}
+import com.gicsports.test.*
+import com.gicsports.transaction.assets.exchange.AssetPair
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import org.scalatest.CancelAfterFailure
 
 import scala.concurrent.duration.*
@@ -152,8 +152,8 @@ class FailedTransactionSuite extends BaseTransactionSuite with CancelAfterFailur
             (" with 1 total scripts invoked", "")
 
         val minFee = if (typeName == "issue") invokeFee + issueFee else invokeFee + smartFee
-        val text = s"Fee in CARDIUM for InvokeScriptTransaction ($invokeFee in CARDIUM)" +
-          s"$scriptInvokedInfo$issuedInfo does not exceed minimal value of $minFee CARDIUM."
+        val text = s"Fee in GIC for InvokeScriptTransaction ($invokeFee in GIC)" +
+          s"$scriptInvokedInfo$issuedInfo does not exceed minimal value of $minFee GIC."
 
         failed.foreach { s =>
           checkStateChange(sender.stateChanges(s.id), 2, text)

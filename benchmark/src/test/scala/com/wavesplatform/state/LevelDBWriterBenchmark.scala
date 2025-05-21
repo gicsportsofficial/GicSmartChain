@@ -1,19 +1,19 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import java.io.File
 import java.util.concurrent.{ThreadLocalRandom, TimeUnit}
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.account._
-import com.wavesplatform.api.BlockMeta
-import com.wavesplatform.api.common.CommonBlocksApi
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.database
-import com.wavesplatform.database.{DBExt, Keys, LevelDBFactory, LevelDBWriter}
-import com.wavesplatform.settings.{WavesSettings, loadConfig}
-import com.wavesplatform.state.LevelDBWriterBenchmark._
-import com.wavesplatform.transaction.Transaction
+import com.gicsports.account._
+import com.gicsports.api.BlockMeta
+import com.gicsports.api.common.CommonBlocksApi
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.database
+import com.gicsports.database.{DBExt, Keys, LevelDBFactory, LevelDBWriter}
+import com.gicsports.settings.{WavesSettings, loadConfig}
+import com.gicsports.state.LevelDBWriterBenchmark._
+import com.gicsports.transaction.Transaction
 import org.iq80.leveldb.{DB, Options}
 import org.openjdk.jmh.annotations._
 import org.openjdk.jmh.infra.Blackhole
@@ -23,7 +23,7 @@ import scala.io.Codec
 /**
   * Tests over real database. How to test:
   * 1. Download a database
-  * 2. Import it: https://github.com/wavesplatform/Waves/wiki/Export-and-import-of-the-blockchain#import-blocks-from-the-binary-file
+  * 2. Import it: https://github.com/gicsports/Waves/wiki/Export-and-import-of-the-blockchain#import-blocks-from-the-binary-file
   * 3. Run ExtractInfo to collect queries for tests
   * 4. Make Caches.MaxSize = 1
   * 5. Run this test

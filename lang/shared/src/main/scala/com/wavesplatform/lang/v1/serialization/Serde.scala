@@ -1,6 +1,6 @@
-package com.wavesplatform.lang.v1.serialization
+package com.gicsports.lang.v1.serialization
 
-import com.wavesplatform.lang.v1.compiler.Terms._
+import com.gicsports.lang.v1.compiler.Terms._
 import monix.eval.Coeval
 
 trait Serde[In, Out] {

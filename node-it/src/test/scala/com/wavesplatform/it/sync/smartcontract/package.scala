@@ -1,11 +1,11 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.transaction.DataTransaction
-import com.wavesplatform.transaction.assets.exchange.{AssetPair, ExchangeTransaction, Order}
-import com.wavesplatform.utils.Time
+import com.gicsports.account.KeyPair
+import com.gicsports.transaction.DataTransaction
+import com.gicsports.transaction.assets.exchange.{AssetPair, ExchangeTransaction, Order}
+import com.gicsports.utils.Time
 import play.api.libs.json.JsObject
-import com.wavesplatform.common.utils.EitherExt2
+import com.gicsports.common.utils.EitherExt2
 
 package object smartcontract {
   val invokeScrTxSupportedVersions: List[Byte] = List(1, 2)
@@ -72,7 +72,7 @@ package object smartcontract {
        |{-# STDLIB_VERSION 2 #-}
        | match tx {
        |  case ext : ExchangeTransaction =>
-       |    # CARDIUM context
+       |    # GIC context
        |    let dtx = extract(transactionById(base58'${dtx.id().toString}'))
        |    let entries = match dtx {
        |       case d: DataTransaction =>

@@ -1,9 +1,9 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.settings.SynchronizationSettings.MicroblockSynchronizerSettings
-import com.wavesplatform.test.FreeSpec
-import com.wavesplatform.{BlockGen, RxScheduler}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.settings.SynchronizationSettings.MicroblockSynchronizerSettings
+import com.gicsports.test.FreeSpec
+import com.gicsports.{BlockGen, RxScheduler}
 import io.netty.channel.Channel
 import io.netty.channel.embedded.EmbeddedChannel
 import monix.reactive.Observable

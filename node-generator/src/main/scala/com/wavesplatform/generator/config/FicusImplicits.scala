@@ -1,13 +1,13 @@
-package com.wavesplatform.generator.config
+package com.gicsports.generator.config
 
 import scala.concurrent.duration.{Duration, FiniteDuration}
 
 import com.google.common.base.CaseFormat
 import com.typesafe.config.{Config, ConfigRenderOptions}
-import com.wavesplatform.generator.Worker
-import com.wavesplatform.state.DataEntry
-import com.wavesplatform.transaction.{TransactionParser, TransactionParsers, TransactionType}
-import com.wavesplatform.transaction.TransactionType.TransactionType
+import com.gicsports.generator.Worker
+import com.gicsports.state.DataEntry
+import com.gicsports.transaction.{TransactionParser, TransactionParsers, TransactionType}
+import com.gicsports.transaction.TransactionType.TransactionType
 import net.ceedubs.ficus.Ficus._
 import net.ceedubs.ficus.readers.{CollectionReaders, ValueReader}
 import play.api.libs.json._

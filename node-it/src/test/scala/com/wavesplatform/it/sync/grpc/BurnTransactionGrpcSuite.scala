@@ -1,9 +1,9 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncGrpcApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.protobuf.transaction.{PBTransactions, Recipient}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncGrpcApi._
+import com.gicsports.it.sync._
+import com.gicsports.protobuf.transaction.{PBTransactions, Recipient}
 import io.grpc.Status.Code
 
 class BurnTransactionGrpcSuite extends GrpcBaseTransactionSuite {

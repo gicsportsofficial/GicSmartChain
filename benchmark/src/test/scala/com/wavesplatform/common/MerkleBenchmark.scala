@@ -1,10 +1,10 @@
-package com.wavesplatform.common
+package com.gicsports.common
 
 import java.util.concurrent.TimeUnit
 
 import com.google.common.primitives.Ints
-import com.wavesplatform.common.merkle._
-import com.wavesplatform.common.merkle.Merkle._
+import com.gicsports.common.merkle._
+import com.gicsports.common.merkle.Merkle._
 import org.openjdk.jmh.annotations.{Level => _, _}
 import org.openjdk.jmh.infra.Blackhole
 

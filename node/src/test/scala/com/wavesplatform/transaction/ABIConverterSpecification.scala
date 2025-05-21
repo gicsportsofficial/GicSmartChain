@@ -1,9 +1,9 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.utils.JsonMatchers
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.PropSpec
+import com.gicsports.utils.JsonMatchers
 
 class ABIConverterSpecification extends PropSpec with JsonMatchers {
 

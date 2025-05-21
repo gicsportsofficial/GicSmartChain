@@ -1,15 +1,15 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import java.io.File
 
-import com.wavesplatform.Application
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.database.{LevelDBWriter, openDB}
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.transaction.smart.WavesEnvironment
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.Application
+import com.gicsports.account.AddressScheme
+import com.gicsports.common.state.ByteStr
+import com.gicsports.database.{LevelDBWriter, openDB}
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.settings.WavesSettings
+import com.gicsports.transaction.smart.WavesEnvironment
+import com.gicsports.utils.ScorexLogging
 import monix.eval.Coeval
 import org.iq80.leveldb.DB
 import org.openjdk.jmh.annotations.{Param, Scope, State, TearDown}

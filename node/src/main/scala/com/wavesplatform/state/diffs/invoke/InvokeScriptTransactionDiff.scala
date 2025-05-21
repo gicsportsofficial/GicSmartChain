@@ -1,43 +1,43 @@
-package com.wavesplatform.state.diffs.invoke
+package com.gicsports.state.diffs.invoke
 
 import cats.Id
 import cats.syntax.either.*
 import cats.syntax.flatMap.*
-import com.wavesplatform.account.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.BlockchainFeatures.RideV6
-import com.wavesplatform.features.EstimatorProvider.*
-import com.wavesplatform.features.EvaluatorFixProvider.*
-import com.wavesplatform.features.FunctionCallPolicyProvider.*
-import com.wavesplatform.lang.*
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.contract.DApp.{CallableAnnotation, CallableFunction}
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.{DApp as DAppType, *}
-import com.wavesplatform.lang.script.ContractScript
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.compiler.ContractCompiler
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.lang.v1.evaluator.*
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.v1.traits.domain.{Recipient as RideRecipient, *}
-import com.wavesplatform.metrics.TxProcessingStats as Stats
-import com.wavesplatform.metrics.TxProcessingStats.TxTimerExt
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.state.*
-import com.wavesplatform.state.diffs.invoke.CallArgumentPolicy.*
-import com.wavesplatform.state.reader.CompositeBlockchain
-import com.wavesplatform.transaction.TransactionBase
-import com.wavesplatform.transaction.TxValidationError.*
-import com.wavesplatform.transaction.smart.InvokeTransaction.DefaultCall
-import com.wavesplatform.transaction.smart.script.ScriptRunner.TxOrd
-import com.wavesplatform.transaction.smart.script.trace.{InvokeScriptTrace, TracedResult}
-import com.wavesplatform.transaction.smart.{DApp as DAppTarget, *}
-import com.wavesplatform.transaction.validation.impl.DataTxValidator
+import com.gicsports.account.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.BlockchainFeatures.RideV6
+import com.gicsports.features.EstimatorProvider.*
+import com.gicsports.features.EvaluatorFixProvider.*
+import com.gicsports.features.FunctionCallPolicyProvider.*
+import com.gicsports.lang.*
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.contract.DApp.{CallableAnnotation, CallableFunction}
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.{DApp as DAppType, *}
+import com.gicsports.lang.script.ContractScript
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.compiler.ContractCompiler
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.lang.v1.evaluator.*
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.v1.traits.domain.{Recipient as RideRecipient, *}
+import com.gicsports.metrics.TxProcessingStats as Stats
+import com.gicsports.metrics.TxProcessingStats.TxTimerExt
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.state.*
+import com.gicsports.state.diffs.invoke.CallArgumentPolicy.*
+import com.gicsports.state.reader.CompositeBlockchain
+import com.gicsports.transaction.TransactionBase
+import com.gicsports.transaction.TxValidationError.*
+import com.gicsports.transaction.smart.InvokeTransaction.DefaultCall
+import com.gicsports.transaction.smart.script.ScriptRunner.TxOrd
+import com.gicsports.transaction.smart.script.trace.{InvokeScriptTrace, TracedResult}
+import com.gicsports.transaction.smart.{DApp as DAppTarget, *}
+import com.gicsports.transaction.validation.impl.DataTxValidator
 import monix.eval.Coeval
 import shapeless.Coproduct
 

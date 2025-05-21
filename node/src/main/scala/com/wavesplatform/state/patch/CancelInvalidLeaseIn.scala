@@ -1,8 +1,8 @@
-package com.wavesplatform.state.patch
+package com.gicsports.state.patch
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.state._
+import com.gicsports.account.Address
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.state._
 
 case object CancelInvalidLeaseIn extends PatchAtHeight('W' -> 1060000) {
   def apply(blockchain: Blockchain): Diff = {

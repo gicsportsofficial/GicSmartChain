@@ -1,9 +1,9 @@
-package com.wavesplatform.transaction.validation.impl
+package com.gicsports.transaction.validation.impl
 
 import cats.data.ValidatedNel
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.validation.TxValidator
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.validation.TxValidator
 
 object TransferTxValidator extends TxValidator[TransferTransaction] {
   override def validate(transaction: TransferTransaction): ValidatedNel[ValidationError, TransferTransaction] = {

@@ -1,10 +1,10 @@
-package com.wavesplatform.common
+package com.gicsports.common
 
 import java.util.concurrent.TimeUnit
 
-import com.wavesplatform.account.{Address, PublicKey}
-import com.wavesplatform.common.AddressBenchmark.{CachedAddress, PublicKeySt, UncachedAddress}
-import com.wavesplatform.crypto.Curve25519
+import com.gicsports.account.{Address, PublicKey}
+import com.gicsports.common.AddressBenchmark.{CachedAddress, PublicKeySt, UncachedAddress}
+import com.gicsports.crypto.Curve25519
 import org.openjdk.jmh.annotations._
 import org.openjdk.jmh.infra.Blackhole
 

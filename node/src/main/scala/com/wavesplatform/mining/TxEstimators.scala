@@ -1,8 +1,8 @@
-package com.wavesplatform.mining
+package com.gicsports.mining
 
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.state.{Blockchain, Diff}
-import com.wavesplatform.transaction.Transaction
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.state.{Blockchain, Diff}
+import com.gicsports.transaction.Transaction
 
 //noinspection ScalaStyle
 object TxEstimators {

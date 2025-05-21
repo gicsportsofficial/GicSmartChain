@@ -1,24 +1,24 @@
-package com.wavesplatform.state.diffs.ci
+package com.gicsports.state.diffs.ci
 
-import com.wavesplatform.TestValues.invokeFee
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.db.{DBCacheSettings, WithDomain, WithState}
-import com.wavesplatform.lang.directives.values.{V4, V5}
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.InvokeScriptResult.ErrorMessage
-import com.wavesplatform.state.{Diff, InvokeScriptResult, NewTransactionInfo, Portfolio}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.transaction.TxHelpers.{defaultSigner, invoke, secondSigner, setScript}
+import com.gicsports.TestValues.invokeFee
+import com.gicsports.account.Address
+import com.gicsports.common.state.ByteStr
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.db.{DBCacheSettings, WithDomain, WithState}
+import com.gicsports.lang.directives.values.{V4, V5}
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.InvokeScriptResult.ErrorMessage
+import com.gicsports.state.{Diff, InvokeScriptResult, NewTransactionInfo, Portfolio}
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.transaction.TxHelpers.{defaultSigner, invoke, secondSigner, setScript}
 import org.scalatest.{EitherValues, Inside}
 
 class InvokeAssetChecksTest extends PropSpec with Inside with WithState with DBCacheSettings with WithDomain with EitherValues {
   import DomainPresets.*
-  private val invalidLengthAsset = IssuedAsset(ByteStr.decodeBase58("CARDIUM").get)
+  private val invalidLengthAsset = IssuedAsset(ByteStr.decodeBase58("GIC").get)
   private val nonExistentAsset    = IssuedAsset(ByteStr.decodeBase58("WAVESwavesWAVESwavesWAVESwavesWAVESwaves123").get)
 
   private val lengthError     = s"Transfer error: invalid asset ID '$invalidLengthAsset' length = 2 bytes, must be 32"

@@ -1,22 +1,22 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
 import scala.concurrent.duration.*
 
 import com.google.protobuf.ByteString
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.api.grpc.{ApplicationStatus, TransactionsByIdRequest, TransactionStatus as PBTransactionStatus}
-import com.wavesplatform.api.http.ApiError.TransactionDoesNotExist
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.{Node, NodeConfigs}
-import com.wavesplatform.it.api.TransactionStatus
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.protobuf.transaction.{PBSignedTransaction, PBTransactions}
-import com.wavesplatform.transaction.{Asset, TxVersion}
-import com.wavesplatform.transaction.assets.exchange.{AssetPair, ExchangeTransaction, Order}
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.account.KeyPair
+import com.gicsports.api.grpc.{ApplicationStatus, TransactionsByIdRequest, TransactionStatus as PBTransactionStatus}
+import com.gicsports.api.http.ApiError.TransactionDoesNotExist
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.{Node, NodeConfigs}
+import com.gicsports.it.api.TransactionStatus
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.protobuf.transaction.{PBSignedTransaction, PBTransactions}
+import com.gicsports.transaction.{Asset, TxVersion}
+import com.gicsports.transaction.assets.exchange.{AssetPair, ExchangeTransaction, Order}
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.utils.ScorexLogging
 import org.scalatest.matchers.should.Matchers
 import play.api.libs.json.JsObject
 
@@ -35,7 +35,7 @@ trait FailedTransactionSuiteLike[T] extends ScorexLogging { _: Matchers =>
   def sendTxsAndThenPriorityTx[S](t: Int => T, pt: () => T)(
       checker: (Seq[T], T) => Seq[S]
   ): Seq[S] = {
-    val maxTxsInMicroBlock = sender.config.getInt("CARDIUM.miner.max-transactions-in-micro-block")
+    val maxTxsInMicroBlock = sender.config.getInt("GIC.miner.max-transactions-in-micro-block")
     val txs                = (1 to maxTxsInMicroBlock * 2).map(i => t(i))
     val priorityTx         = pt()
     waitForEmptyUtx()
@@ -45,7 +45,7 @@ trait FailedTransactionSuiteLike[T] extends ScorexLogging { _: Matchers =>
   }
 
   object restApi {
-    import com.wavesplatform.it.api.SyncHttpApi.{assertApiError, NodeExtSync}
+    import com.gicsports.it.api.SyncHttpApi.{assertApiError, NodeExtSync}
 
     /** Checks that transactions contain failed and returns them.
       */
@@ -162,7 +162,7 @@ trait FailedTransactionSuiteLike[T] extends ScorexLogging { _: Matchers =>
   }
 
   object grpcApi {
-    import com.wavesplatform.it.api.SyncGrpcApi.*
+    import com.gicsports.it.api.SyncGrpcApi.*
 
     /** Checks that transactions contain failed and returns them.
       */
@@ -261,7 +261,7 @@ trait FailedTransactionSuiteLike[T] extends ScorexLogging { _: Matchers =>
   }
 
   def waitForEmptyUtx(): Unit = {
-    import com.wavesplatform.it.api.SyncHttpApi.*
+    import com.gicsports.it.api.SyncHttpApi.*
 
     sender.waitFor("empty utx")(n => n.utxSize, (utxSize: Int) => utxSize == 0, 100.millis)
   }
@@ -321,14 +321,14 @@ object FailedTransactionSuiteLike {
   }
 
   val configForMinMicroblockAge: Config = ConfigFactory.parseString(s"""
-                                                                       |CARDIUM.miner.min-micro-block-age = 7
-                                                                       |CARDIUM.miner.max-transactions-in-micro-block = 1
+                                                                       |GIC.miner.min-micro-block-age = 7
+                                                                       |GIC.miner.max-transactions-in-micro-block = 1
                                                                        |""".stripMargin)
 
   val Configs: Seq[Config] =
     NodeConfigs.newBuilder
       .overrideBase(_.quorum(0))
-      .overrideBase(_.raw(s"CARDIUM.miner.max-transactions-in-micro-block = 50"))
+      .overrideBase(_.raw(s"GIC.miner.max-transactions-in-micro-block = 50"))
       .withDefault(1)
       .withSpecial(_.nonMiner)
       .buildNonConflicting()

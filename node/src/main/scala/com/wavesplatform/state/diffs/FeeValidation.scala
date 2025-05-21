@@ -1,21 +1,21 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
 import cats.data.Chain
 import cats.syntax.foldable.*
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.*
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.EthereumTransaction.Transfer
-import com.wavesplatform.transaction.TxValidationError.*
-import com.wavesplatform.transaction.assets.*
-import com.wavesplatform.transaction.assets.exchange.*
-import com.wavesplatform.transaction.smart.*
-import com.wavesplatform.transaction.smart.script.trace.TracedResult.Attribute
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.transaction.validation.impl.DataTxValidator
+import com.gicsports.account.AddressScheme
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.*
+import com.gicsports.transaction.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.EthereumTransaction.Transfer
+import com.gicsports.transaction.TxValidationError.*
+import com.gicsports.transaction.assets.*
+import com.gicsports.transaction.assets.exchange.*
+import com.gicsports.transaction.smart.*
+import com.gicsports.transaction.smart.script.trace.TracedResult.Attribute
+import com.gicsports.transaction.transfer.*
+import com.gicsports.transaction.validation.impl.DataTxValidator
 
 object FeeValidation {
 
@@ -67,8 +67,8 @@ object FeeValidation {
   }
 
   private def notEnoughFeeError(txType: TransactionType.TransactionType, feeDetails: FeeDetails, feeAmount: Long): ValidationError = {
-    val actualFee   = s"$feeAmount in ${feeDetails.asset.fold("CARDIUM")(_.id.toString)}"
-    val requiredFee = s"${feeDetails.minFeeInWaves} CARDIUM${feeDetails.asset.fold("")(id => s" or ${feeDetails.minFeeInAsset} ${id.id.toString}")}"
+    val actualFee   = s"$feeAmount in ${feeDetails.asset.fold("GIC")(_.id.toString)}"
+    val requiredFee = s"${feeDetails.minFeeInWaves} GIC${feeDetails.asset.fold("")(id => s" or ${feeDetails.minFeeInAsset} ${id.id.toString}")}"
 
     val errorMessage = s"Fee for ${txType.transactionName} ($actualFee) does not exceed minimal value of $requiredFee."
 

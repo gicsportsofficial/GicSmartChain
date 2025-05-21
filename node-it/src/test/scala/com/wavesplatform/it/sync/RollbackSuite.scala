@@ -1,10 +1,10 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
 import com.typesafe.config.Config
-import com.wavesplatform.it.*
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.state.{BooleanDataEntry, IntegerDataEntry}
-import com.wavesplatform.transaction.TxVersion
+import com.gicsports.it.*
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.state.{BooleanDataEntry, IntegerDataEntry}
+import com.gicsports.transaction.TxVersion
 import org.scalatest.prop.TableDrivenPropertyChecks
 
 import scala.concurrent.Await

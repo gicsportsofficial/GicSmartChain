@@ -1,10 +1,10 @@
-package com.wavesplatform.api.http.requests
+package com.gicsports.api.http.requests
 
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.assets.SponsorFeeTransaction
-import com.wavesplatform.transaction.{AssetIdStringLength, Proofs}
+import com.gicsports.account.PublicKey
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.assets.SponsorFeeTransaction
+import com.gicsports.transaction.{AssetIdStringLength, Proofs}
 import play.api.libs.json.{Format, Json}
 
 object SponsorFeeRequest {

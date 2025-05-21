@@ -1,8 +1,8 @@
-package com.wavesplatform.lang.v1.compiler
+package com.gicsports.lang.v1.compiler
 
 import cats.implicits._
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.v1.compiler.Types._
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.v1.compiler.Types._
 
 object TypeInferrer {
 

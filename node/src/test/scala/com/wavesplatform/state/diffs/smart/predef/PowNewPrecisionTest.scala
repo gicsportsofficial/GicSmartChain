@@ -1,12 +1,12 @@
-package com.wavesplatform.state.diffs.smart.predef
+package com.gicsports.state.diffs.smart.predef
 
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.directives.values.V4
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.DomainPresets.*
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.{TxHelpers, TxVersion}
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.directives.values.V4
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.DomainPresets.*
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.{TxHelpers, TxVersion}
 
 class PowNewPrecisionTest extends PropSpec with WithDomain {
 

@@ -1,15 +1,15 @@
-package com.wavesplatform.transaction.smart.script
+package com.gicsports.transaction.smart.script
 
-import com.wavesplatform.common.utils._
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.directives.DirectiveDictionary
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.lang.script.{ContractScript, ScriptReader}
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.lang.v1.serialization.SerdeV1
-import com.wavesplatform.lang.v1.testing.TypedScriptGen
-import com.wavesplatform.test._
-import com.wavesplatform.test.PropSpec
+import com.gicsports.common.utils._
+import com.gicsports.crypto
+import com.gicsports.lang.directives.DirectiveDictionary
+import com.gicsports.lang.directives.values._
+import com.gicsports.lang.script.{ContractScript, ScriptReader}
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.lang.v1.serialization.SerdeV1
+import com.gicsports.lang.v1.testing.TypedScriptGen
+import com.gicsports.test._
+import com.gicsports.test.PropSpec
 import org.scalacheck.{Arbitrary, Gen}
 import org.scalatest.{EitherValues, Inside}
 

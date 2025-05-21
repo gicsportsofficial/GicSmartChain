@@ -1,16 +1,16 @@
-package com.wavesplatform.transaction.validation.impl
+package com.gicsports.transaction.validation.impl
 
 import cats.data.NonEmptyList
 import cats.data.Validated.{Invalid, Valid}
 import cats.syntax.either._
-import com.wavesplatform.lang.v1.compiler.Terms.FUNCTION_CALL
-import com.wavesplatform.lang.v1.{ContractLimits, FunctionHeader}
-import com.wavesplatform.protobuf.transaction.PBTransactions
-import com.wavesplatform.transaction.TxValidationError.{GenericError, NonPositiveAmount}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.validation.{TxValidator, ValidatedNV, ValidatedV}
-import com.wavesplatform.utils._
+import com.gicsports.lang.v1.compiler.Terms.FUNCTION_CALL
+import com.gicsports.lang.v1.{ContractLimits, FunctionHeader}
+import com.gicsports.protobuf.transaction.PBTransactions
+import com.gicsports.transaction.TxValidationError.{GenericError, NonPositiveAmount}
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.validation.{TxValidator, ValidatedNV, ValidatedV}
+import com.gicsports.utils._
 
 import scala.util.Try
 
@@ -18,7 +18,7 @@ object InvokeScriptTxValidator extends TxValidator[InvokeScriptTransaction] {
   def checkAmounts(payments: Seq[Payment]): ValidatedNV = {
     val invalid = payments.filter(_.amount <= 0)
     if (invalid.nonEmpty)
-      Invalid(NonEmptyList.fromListUnsafe(invalid.toList).map(p => NonPositiveAmount(p.amount, p.assetId.fold("CARDIUM")(_.toString))))
+      Invalid(NonEmptyList.fromListUnsafe(invalid.toList).map(p => NonPositiveAmount(p.amount, p.assetId.fold("GIC")(_.toString))))
     else Valid(())
   }
 

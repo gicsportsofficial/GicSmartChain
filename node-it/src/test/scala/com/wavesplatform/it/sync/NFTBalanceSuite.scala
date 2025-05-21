@@ -1,17 +1,17 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
 import com.typesafe.config.Config
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils._
-import com.wavesplatform.it._
-import com.wavesplatform.it.api.AsyncHttpApi._
-import com.wavesplatform.it.api._
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.transfer.TransferTransaction
+import com.gicsports.account.KeyPair
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils._
+import com.gicsports.it._
+import com.gicsports.it.api.AsyncHttpApi._
+import com.gicsports.it.api._
+import com.gicsports.test._
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.transfer.TransferTransaction
 import play.api.libs.json._
 
 import scala.concurrent.Future.traverse
@@ -194,7 +194,7 @@ object NFTBalanceSuite {
   }
 
   def fundAddresses(faucet: Node, addrs: String*): Unit = {
-    import com.wavesplatform.it.api.AsyncHttpApi._
+    import com.gicsports.it.api.AsyncHttpApi._
 
     val transactions =
       Future.sequence(addrs map { addr =>

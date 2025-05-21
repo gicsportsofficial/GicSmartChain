@@ -1,13 +1,13 @@
-package com.wavesplatform.state.diffs.ci.sync
+package com.gicsports.state.diffs.ci.sync
 
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V5, V6}
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_LONG
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.transaction.smart.SetScriptTransaction
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.directives.values.{StdLibVersion, V5, V6}
+import com.gicsports.lang.v1.compiler.Terms.CONST_LONG
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.*
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.transaction.smart.SetScriptTransaction
 import org.scalatest.{EitherValues, OptionValues}
 
 import scala.annotation.tailrec

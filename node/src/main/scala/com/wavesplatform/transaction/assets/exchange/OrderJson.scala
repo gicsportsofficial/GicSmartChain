@@ -1,13 +1,13 @@
-package com.wavesplatform.transaction.assets.exchange
+package com.gicsports.transaction.assets.exchange
 
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.crypto.SignatureLength
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.assets.exchange.OrderPriceMode.{AssetDecimals, FixedDecimals}
-import com.wavesplatform.transaction.{Asset, Proofs, TxExchangeAmount, TxMatcherFee, TxOrderPrice, TxVersion}
-import com.wavesplatform.utils.EthEncoding
+import com.gicsports.account.PublicKey
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.Base58
+import com.gicsports.crypto.SignatureLength
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.assets.exchange.OrderPriceMode.{AssetDecimals, FixedDecimals}
+import com.gicsports.transaction.{Asset, Proofs, TxExchangeAmount, TxMatcherFee, TxOrderPrice, TxVersion}
+import com.gicsports.utils.EthEncoding
 import play.api.libs.json.*
 
 import scala.util.{Failure, Success}

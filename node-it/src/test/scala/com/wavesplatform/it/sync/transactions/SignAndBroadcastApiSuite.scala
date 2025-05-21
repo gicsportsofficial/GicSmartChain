@@ -1,27 +1,27 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
 import com.typesafe.config.Config
-import com.wavesplatform.account.{AddressScheme, PublicKey}
-import com.wavesplatform.api.http.requests.TransferRequest
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.crypto
-import com.wavesplatform.it.{NTPTime, NodeConfigs}
-import com.wavesplatform.it.NodeConfigs.Default
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.state.*
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.assets.exchange.AssetPair.extractAssetId
-import com.wavesplatform.transaction.assets.exchange.*
-import com.wavesplatform.transaction.assets.{BurnTransaction, IssueTransaction, ReissueTransaction, SponsorFeeTransaction}
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.Transfer
-import com.wavesplatform.transaction.transfer.{MassTransferTransaction, TransferTransaction}
+import com.gicsports.account.{AddressScheme, PublicKey}
+import com.gicsports.api.http.requests.TransferRequest
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.crypto
+import com.gicsports.it.{NTPTime, NodeConfigs}
+import com.gicsports.it.NodeConfigs.Default
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.it.sync.*
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.state.*
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.*
+import com.gicsports.transaction.assets.exchange.AssetPair.extractAssetId
+import com.gicsports.transaction.assets.exchange.*
+import com.gicsports.transaction.assets.{BurnTransaction, IssueTransaction, ReissueTransaction, SponsorFeeTransaction}
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.transfer.MassTransferTransaction.Transfer
+import com.gicsports.transaction.transfer.{MassTransferTransaction, TransferTransaction}
 import org.asynchttpclient.util.HttpConstants
 import org.scalatest
 import org.scalatest.BeforeAndAfterAll
@@ -431,7 +431,7 @@ class SignAndBroadcastApiSuite extends BaseTransactionSuite with NTPTime with Be
       val mf                  = 4000000L
       val buyAmount           = 2
       val sellAmount          = 3
-      val assetPair           = AssetPair.createAssetPair("CARDIUM", issueTx).get
+      val assetPair           = AssetPair.createAssetPair("GIC", issueTx).get
       val buy =
         Order.buy(o1ver, buyer, matcher.publicKey, assetPair, buyAmount, buyPrice, ts, expirationTimestamp, mf, matcherFeeOrder1).explicitGet()
       val sell =

@@ -1,16 +1,16 @@
-package com.wavesplatform.state.patch
+package com.gicsports.state.patch
 
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils._
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.Domain
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.test._
-import com.wavesplatform.test.DomainPresets._
-import com.wavesplatform.transaction.TxHelpers
+import com.gicsports.account.PublicKey
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils._
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.Domain
+import com.gicsports.settings.WavesSettings
+import com.gicsports.test._
+import com.gicsports.test.DomainPresets._
+import com.gicsports.transaction.TxHelpers
 import org.scalamock.scalatest.PathMockFactory
 import org.scalatest.BeforeAndAfterAll
 

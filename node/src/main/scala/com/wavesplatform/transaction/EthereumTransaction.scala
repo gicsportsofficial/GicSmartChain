@@ -1,22 +1,22 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import cats.implicits.toBifunctorOps
-import com.wavesplatform.account.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto.EthereumKeyLength
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.state.diffs.invoke.InvokeScriptTransactionLike
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TransactionType.TransactionType
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.serialization.impl.BaseTxJson
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.transfer.TransferTransactionLike
-import com.wavesplatform.transaction.validation.impl.InvokeScriptTxValidator
-import com.wavesplatform.transaction.validation.{TxConstraints, TxValidator, ValidatedV}
-import com.wavesplatform.utils.EthEncoding
+import com.gicsports.account.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto.EthereumKeyLength
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.state.Blockchain
+import com.gicsports.state.diffs.invoke.InvokeScriptTransactionLike
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TransactionType.TransactionType
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.serialization.impl.BaseTxJson
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.transfer.TransferTransactionLike
+import com.gicsports.transaction.validation.impl.InvokeScriptTxValidator
+import com.gicsports.transaction.validation.{TxConstraints, TxValidator, ValidatedV}
+import com.gicsports.utils.EthEncoding
 import monix.eval.Coeval
 import org.web3j.abi.TypeDecoder
 import org.web3j.abi.datatypes.Address as EthAddress
@@ -108,7 +108,7 @@ object EthereumTransaction {
     def toTransferLike(tx: EthereumTransaction, blockchain: Blockchain): Either[ValidationError, TransferTransactionLike] =
       for {
         asset  <- tryResolveAsset(blockchain)
-        amount <- TxPositiveAmount(amount)(TxValidationError.NonPositiveAmount(amount, asset.maybeBase58Repr.getOrElse("CARDIUM")))
+        amount <- TxPositiveAmount(amount)(TxValidationError.NonPositiveAmount(amount, asset.maybeBase58Repr.getOrElse("GIC")))
       } yield tx.toTransferLike(amount, recipient, asset)
   }
 
@@ -147,7 +147,7 @@ object EthereumTransaction {
         .cond(tx.signatureData.getV.isEmpty || BigInt(1, tx.signatureData.getV) > 28, GenericError("Legacy transactions are not supported")),
       TxConstraints.fee(tx.underlying.getGasLimit.longValueExact()),
       TxConstraints
-        .positiveOrZeroAmount((BigInt(tx.underlying.getValue) / AmountMultiplier).bigInteger.longValueExact(), "CARDIUM"),
+        .positiveOrZeroAmount((BigInt(tx.underlying.getValue) / AmountMultiplier).bigInteger.longValueExact(), "GIC"),
       TxConstraints.cond(tx.underlying.getGasPrice == GasPrice, GenericError("Gas price must be 10 Gwei")),
       TxConstraints.cond(
         tx.underlying.getValue != BigInteger.ZERO || EthEncoding.cleanHexPrefix(tx.underlying.getData).nonEmpty,

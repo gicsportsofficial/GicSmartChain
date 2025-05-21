@@ -1,8 +1,8 @@
-package com.wavesplatform.lang.evaluator
+package com.gicsports.lang.evaluator
 
-import com.wavesplatform.lang.directives.values.{V3, V5, V6}
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_BOOLEAN
-import com.wavesplatform.test._
+import com.gicsports.lang.directives.values.{V3, V5, V6}
+import com.gicsports.lang.v1.compiler.Terms.CONST_BOOLEAN
+import com.gicsports.test._
 
 class TypeCastTest extends EvaluatorSpec {
   property("as") {

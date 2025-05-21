@@ -1,8 +1,8 @@
-package com.wavesplatform.lang
+package com.gicsports.lang
 
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.Types
-import com.wavesplatform.test.FreeSpec
+import com.gicsports.lang.directives.values._
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.Types
+import com.gicsports.test.FreeSpec
 
 class ContextVersionTest extends FreeSpec {
 

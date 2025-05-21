@@ -1,6 +1,6 @@
-package com.wavesplatform.api.http.requests
+package com.gicsports.api.http.requests
 
-import com.wavesplatform.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.smart.SetScriptTransaction
 import play.api.libs.json.{Format, JsNumber, JsObject, Json}
 
 case class SetScriptRequest(version: Option[Byte], sender: String, script: Option[String], fee: Long, timestamp: Option[Long] = None) {}

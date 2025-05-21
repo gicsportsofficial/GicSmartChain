@@ -1,10 +1,10 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import cats.Monoid
 import cats.implicits.*
-import com.wavesplatform.state.diffs.BlockDiffer.Fraction
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.transaction.Asset.*
+import com.gicsports.state.diffs.BlockDiffer.Fraction
+import com.gicsports.transaction.Asset
+import com.gicsports.transaction.Asset.*
 
 case class Portfolio(balance: Long = 0L, lease: LeaseBalance = LeaseBalance.empty, assets: Map[IssuedAsset, Long] = Map.empty) {
   import Portfolio.*
@@ -18,7 +18,7 @@ case class Portfolio(balance: Long = 0L, lease: LeaseBalance = LeaseBalance.empt
 
   def combine(that: Portfolio): Either[String, Portfolio] =
     for {
-      balance  <- sum(this.balance, that.balance, "CARDIUM balance sum overflow")
+      balance  <- sum(this.balance, that.balance, "GIC balance sum overflow")
       assets   <- combineAssets(this.assets, that.assets)
       leaseIn  <- sum(this.lease.in, that.lease.in, "Lease in sum overflow")
       leaseOut <- sum(this.lease.out, that.lease.out, "Lease out sum overflow")

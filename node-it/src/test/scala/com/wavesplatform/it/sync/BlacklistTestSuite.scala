@@ -1,9 +1,9 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
 import com.typesafe.config.Config
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.api._
-import com.wavesplatform.it.{BaseFreeSpec, NodeConfigs}
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.api._
+import com.gicsports.it.{BaseFreeSpec, NodeConfigs}
 
 import scala.concurrent.duration._
 

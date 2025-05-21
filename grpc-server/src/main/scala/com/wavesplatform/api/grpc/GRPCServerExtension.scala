@@ -1,12 +1,12 @@
-package com.wavesplatform.api.grpc
+package com.gicsports.api.grpc
 
 import java.net.InetSocketAddress
 
 import scala.concurrent.Future
 
-import com.wavesplatform.extensions.{Extension, Context => ExtensionContext}
-import com.wavesplatform.settings.GRPCSettings
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.extensions.{Extension, Context => ExtensionContext}
+import com.gicsports.settings.GRPCSettings
+import com.gicsports.utils.ScorexLogging
 import io.grpc.Server
 import io.grpc.netty.NettyServerBuilder
 import monix.execution.Scheduler
@@ -15,7 +15,7 @@ import net.ceedubs.ficus.readers.ArbitraryTypeReader._
 
 class GRPCServerExtension(context: ExtensionContext) extends Extension with ScorexLogging {
   private implicit val apiScheduler: Scheduler = Scheduler(context.actorSystem.dispatcher)
-  private val settings                         = context.settings.config.as[GRPCSettings]("CARDIUM.grpc")
+  private val settings                         = context.settings.config.as[GRPCSettings]("GIC.grpc")
   private val bindAddress                      = new InetSocketAddress(settings.host, settings.port)
   private val server: Server = NettyServerBuilder
     .forAddress(bindAddress)

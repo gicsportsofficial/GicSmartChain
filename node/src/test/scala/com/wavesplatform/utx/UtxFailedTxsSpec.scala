@@ -1,24 +1,24 @@
-package com.wavesplatform.utx
+package com.gicsports.utx
 
 import scala.concurrent.duration.*
-import com.wavesplatform.TestValues
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.Domain
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.mining.MultiDimensionalMiningConstraint
-import com.wavesplatform.settings.{FunctionalitySettings, TestFunctionalitySettings}
-import com.wavesplatform.state.{Height, TxMeta}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.transaction.assets.exchange.OrderType
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.TestValues
+import com.gicsports.account.KeyPair
+import com.gicsports.common.utils.*
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.Domain
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.mining.MultiDimensionalMiningConstraint
+import com.gicsports.settings.{FunctionalitySettings, TestFunctionalitySettings}
+import com.gicsports.state.{Height, TxMeta}
+import com.gicsports.test.*
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.transaction.assets.exchange.OrderType
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import org.scalatest.concurrent.Eventually
 
 //noinspection RedundantDefaultArgument

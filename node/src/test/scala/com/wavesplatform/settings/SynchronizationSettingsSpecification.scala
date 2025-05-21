@@ -1,9 +1,9 @@
-package com.wavesplatform.settings
+package com.gicsports.settings
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.network.InvalidBlockStorageImpl.InvalidBlockStorageSettings
-import com.wavesplatform.settings.SynchronizationSettings.{HistoryReplierSettings, MicroblockSynchronizerSettings, UtxSynchronizerSettings}
-import com.wavesplatform.test.FlatSpec
+import com.gicsports.network.InvalidBlockStorageImpl.InvalidBlockStorageSettings
+import com.gicsports.settings.SynchronizationSettings.{HistoryReplierSettings, MicroblockSynchronizerSettings, UtxSynchronizerSettings}
+import com.gicsports.test.FlatSpec
 import net.ceedubs.ficus.Ficus._
 import net.ceedubs.ficus.readers.ArbitraryTypeReader._
 
@@ -13,7 +13,7 @@ class SynchronizationSettingsSpecification extends FlatSpec {
   "SynchronizationSettings" should "read values" in {
 
     val config = ConfigFactory.parseString("""
-        |CARDIUM {
+        |GIC {
         |  synchronization {
         |    max-rollback = 100
         |    max-chain-length = 101
@@ -48,7 +48,7 @@ class SynchronizationSettingsSpecification extends FlatSpec {
         |}
       """.stripMargin).resolve()
 
-    val settings = config.as[SynchronizationSettings]("CARDIUM.synchronization")
+    val settings = config.as[SynchronizationSettings]("GIC.synchronization")
     settings.maxRollback should be(100)
     settings.synchronizationTimeout should be(30.seconds)
     settings.scoreTTL should be(90.seconds)

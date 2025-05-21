@@ -1,13 +1,13 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import com.google.common.primitives.{Bytes, Ints, Longs}
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.serialization.impl.GenesisTxSerializer
-import com.wavesplatform.transaction.validation.{TxConstraints, TxValidator}
+import com.gicsports.account.Address
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.serialization.impl.GenesisTxSerializer
+import com.gicsports.transaction.validation.{TxConstraints, TxValidator}
 import monix.eval.Coeval
 import play.api.libs.json.JsObject
 
@@ -48,7 +48,7 @@ object GenesisTransaction extends TransactionParser {
     val signature = ByteStr(GenesisTransaction.generateSignature(recipient, amount, timestamp))
 
     for {
-      amount <- TxNonNegativeAmount(amount)(TxValidationError.NegativeAmount(amount, "CARDIUM"))
+      amount <- TxNonNegativeAmount(amount)(TxValidationError.NegativeAmount(amount, "GIC"))
       tx     <- GenesisTransaction(recipient, amount, timestamp, signature, recipient.chainId).validatedEither
     } yield tx
   }

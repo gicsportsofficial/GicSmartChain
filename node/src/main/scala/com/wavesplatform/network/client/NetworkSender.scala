@@ -1,11 +1,11 @@
-package com.wavesplatform.network.client
+package com.gicsports.network.client
 
 import java.io.IOException
 import java.net.InetSocketAddress
 import java.nio.channels.ClosedChannelException
 
-import com.wavesplatform.network.TrafficLogger
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.network.TrafficLogger
+import com.gicsports.utils.ScorexLogging
 import io.netty.channel.Channel
 import io.netty.channel.group.DefaultChannelGroup
 import io.netty.util.concurrent.GlobalEventExecutor

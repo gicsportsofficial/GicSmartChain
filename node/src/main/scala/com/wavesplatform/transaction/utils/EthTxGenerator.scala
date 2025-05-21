@@ -1,13 +1,13 @@
-package com.wavesplatform.transaction.utils
+package com.gicsports.transaction.utils
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
-import com.wavesplatform.transaction.TransactionType.Transfer
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.{ABIConverter, Asset, EthereumTransaction}
-import com.wavesplatform.utils.EthEncoding
+import com.gicsports.account.Address
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.*
+import com.gicsports.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
+import com.gicsports.transaction.TransactionType.Transfer
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.{ABIConverter, Asset, EthereumTransaction}
+import com.gicsports.utils.EthEncoding
 import org.web3j.abi.FunctionEncoder
 import org.web3j.abi.datatypes.{AbiTypes, StructType}
 import org.web3j.crypto.*

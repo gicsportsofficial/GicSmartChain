@@ -1,17 +1,17 @@
-package com.wavesplatform.http
+package com.gicsports.http
 
-import com.wavesplatform.RequestGen
-import com.wavesplatform.api.common.CommonAccountsApi
-import com.wavesplatform.api.http.ApiError.*
-import com.wavesplatform.api.http.RouteTimeout
-import com.wavesplatform.api.http.leasing.LeaseApiRoute
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.state.diffs.TransactionDiffer.TransactionValidationError
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.lease.LeaseCancelTransaction
-import com.wavesplatform.utils.{Schedulers, Time}
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.RequestGen
+import com.gicsports.api.common.CommonAccountsApi
+import com.gicsports.api.http.ApiError.*
+import com.gicsports.api.http.RouteTimeout
+import com.gicsports.api.http.leasing.LeaseApiRoute
+import com.gicsports.state.Blockchain
+import com.gicsports.state.diffs.TransactionDiffer.TransactionValidationError
+import com.gicsports.transaction.Transaction
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.lease.LeaseCancelTransaction
+import com.gicsports.utils.{Schedulers, Time}
+import com.gicsports.wallet.Wallet
 import org.scalacheck.Gen as G
 import org.scalacheck.Gen.posNum
 import org.scalamock.scalatest.PathMockFactory
@@ -63,7 +63,7 @@ class LeaseBroadcastRouteSpec extends RouteSpec("/leasing/broadcast/") with Requ
       def posting[A: Writes](v: A): RouteTestResult = Post(routePath("lease"), v) ~> route
 
       forAll(nonPositiveLong) { q =>
-        posting(lease.copy(amount = q)) should produce(NonPositiveAmount(s"$q of CARDIUM"))
+        posting(lease.copy(amount = q)) should produce(NonPositiveAmount(s"$q of GIC"))
       }
       forAll(invalidBase58) { pk =>
         posting(lease.copy(senderPublicKey = pk)) should produce(InvalidAddress)

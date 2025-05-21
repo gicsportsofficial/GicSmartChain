@@ -1,14 +1,14 @@
-package com.wavesplatform.events
+package com.gicsports.events
 
 import com.google.common.util.concurrent.MoreExecutors
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.events.FakeObserver.*
-import com.wavesplatform.events.api.grpc.protobuf.SubscribeRequest
-import com.wavesplatform.events.protobuf.BlockchainUpdated as PBBlockchainUpdated
-import com.wavesplatform.events.repo.LiquidState
-import com.wavesplatform.history.Domain
-import com.wavesplatform.settings.{Constants, WavesSettings}
-import com.wavesplatform.transaction.TxHelpers
+import com.gicsports.db.WithDomain
+import com.gicsports.events.FakeObserver.*
+import com.gicsports.events.api.grpc.protobuf.SubscribeRequest
+import com.gicsports.events.protobuf.BlockchainUpdated as PBBlockchainUpdated
+import com.gicsports.events.repo.LiquidState
+import com.gicsports.history.Domain
+import com.gicsports.settings.{Constants, WavesSettings}
+import com.gicsports.transaction.TxHelpers
 import monix.execution.Scheduler
 import monix.execution.Scheduler.Implicits.global
 import monix.reactive.subjects.PublishToOneSubject

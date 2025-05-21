@@ -1,4 +1,4 @@
-package com.wavesplatform.metrics
+package com.gicsports.metrics
 
 import java.time.{Duration, Instant, LocalDateTime, ZoneId}
 import akka.http.scaladsl.model.StatusCodes

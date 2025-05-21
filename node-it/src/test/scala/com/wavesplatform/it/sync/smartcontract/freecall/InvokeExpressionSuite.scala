@@ -1,18 +1,18 @@
-package com.wavesplatform.it.sync.smartcontract.freecall
+package com.gicsports.it.sync.smartcontract.freecall
 import com.typesafe.config.Config
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.api.http.ApiError.StateCheckFailed
-import com.wavesplatform.features.BlockchainFeatures.ContinuationTransaction
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.NodeConfigs.Default
-import com.wavesplatform.it.api.{PutDataResponse, StateChangesDetails, Transaction, TransactionInfo}
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.it.sync.invokeExpressionFee
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.directives.values.V6
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.transaction.smart.InvokeExpressionTransaction
+import com.gicsports.account.AddressScheme
+import com.gicsports.api.http.ApiError.StateCheckFailed
+import com.gicsports.features.BlockchainFeatures.ContinuationTransaction
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.NodeConfigs.Default
+import com.gicsports.it.api.{PutDataResponse, StateChangesDetails, Transaction, TransactionInfo}
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.it.sync.invokeExpressionFee
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.directives.values.V6
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.transaction.smart.InvokeExpressionTransaction
 import org.scalatest.{Assertion, CancelAfterFailure}
 
 class InvokeExpressionSuite extends BaseTransactionSuite with CancelAfterFailure {

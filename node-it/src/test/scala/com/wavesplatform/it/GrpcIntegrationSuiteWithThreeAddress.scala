@@ -1,13 +1,13 @@
-package com.wavesplatform.it
+package com.gicsports.it
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{Address, KeyPair}
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncGrpcApi._
-import com.wavesplatform.protobuf.transaction.{PBRecipients, PBTransactions, Recipient}
-import com.wavesplatform.test.NumericExt
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.account.{Address, KeyPair}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncGrpcApi._
+import com.gicsports.protobuf.transaction.{PBRecipients, PBTransactions, Recipient}
+import com.gicsports.test.NumericExt
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.utils.ScorexLogging
 import org.scalatest._
 import org.scalatest.concurrent.{IntegrationPatience, ScalaFutures}
 

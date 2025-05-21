@@ -1,12 +1,12 @@
-package com.wavesplatform.it.sync.smartcontract
+package com.gicsports.it.sync.smartcontract
 
-import com.wavesplatform.api.http.ApiError.ScriptExecutionError
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync.{issueFee, smartMinFee}
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.api.http.ApiError.ScriptExecutionError
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync.{issueFee, smartMinFee}
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.transaction.smart.script.ScriptCompiler
 
 class TypeEntrySuite extends BaseTransactionSuite {
   private def firstDApp = firstKeyPair

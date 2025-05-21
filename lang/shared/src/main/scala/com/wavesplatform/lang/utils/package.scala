@@ -1,25 +1,25 @@
-package com.wavesplatform.lang
+package com.gicsports.lang
 
 import cats.{Id, Monoid}
 import cats.syntax.traverse.*
 import cats.implicits.catsSyntaxSemigroup
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.directives.{DirectiveDictionary, DirectiveSet}
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.FunctionHeader.Native
-import com.wavesplatform.lang.v1.compiler.Terms.EVALUATED
-import com.wavesplatform.lang.v1.compiler.Types.CASETYPEREF
-import com.wavesplatform.lang.v1.compiler.{CompilerContext, DecompilerContext}
-import com.wavesplatform.lang.v1.evaluator.{FunctionIds, Log}
-import com.wavesplatform.lang.v1.evaluator.ctx.EvaluationContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.WavesContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
-import com.wavesplatform.lang.v1.traits.domain.Recipient.Address
-import com.wavesplatform.lang.v1.traits.domain.{BlockInfo, Recipient, ScriptAssetInfo, Tx}
-import com.wavesplatform.lang.v1.traits.{DataType, Environment}
-import com.wavesplatform.lang.v1.{BaseGlobal, CTX, FunctionHeader}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.directives.{DirectiveDictionary, DirectiveSet}
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.FunctionHeader.Native
+import com.gicsports.lang.v1.compiler.Terms.EVALUATED
+import com.gicsports.lang.v1.compiler.Types.CASETYPEREF
+import com.gicsports.lang.v1.compiler.{CompilerContext, DecompilerContext}
+import com.gicsports.lang.v1.evaluator.{FunctionIds, Log}
+import com.gicsports.lang.v1.evaluator.ctx.EvaluationContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.WavesContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
+import com.gicsports.lang.v1.traits.domain.Recipient.Address
+import com.gicsports.lang.v1.traits.domain.{BlockInfo, Recipient, ScriptAssetInfo, Tx}
+import com.gicsports.lang.v1.traits.{DataType, Environment}
+import com.gicsports.lang.v1.{BaseGlobal, CTX, FunctionHeader}
 import monix.eval.Coeval
 import shapeless.Coproduct
 
@@ -27,7 +27,7 @@ import scala.collection.mutable
 
 package object utils {
 
-  private val Global: BaseGlobal = com.wavesplatform.lang.Global // Hack for IDEA
+  private val Global: BaseGlobal = com.gicsports.lang.Global // Hack for IDEA
 
   val environment: Environment[Id] = buildEnvironment(ByteStr.empty)
 

@@ -1,19 +1,19 @@
-package com.wavesplatform.it.sync.network
+package com.gicsports.it.sync.network
 
 import java.nio.charset.StandardCharsets
 
 import com.typesafe.config.Config
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.api.AsyncNetworkApi._
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.network.{RawBytes, TransactionSpec}
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.transfer._
+import com.gicsports.account.Address
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.api.AsyncNetworkApi._
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.network.{RawBytes, TransactionSpec}
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.transfer._
 
 import scala.concurrent.duration._
 

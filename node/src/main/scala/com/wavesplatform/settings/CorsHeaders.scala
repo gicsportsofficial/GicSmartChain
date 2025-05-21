@@ -1,4 +1,4 @@
-package com.wavesplatform.settings
+package com.gicsports.settings
 
 case class CorsHeaders(
     accessControlAllowHeaders: Seq[String],

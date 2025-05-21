@@ -1,14 +1,14 @@
-package com.wavesplatform.transaction.assets
+package com.gicsports.transaction.assets
 
-import com.wavesplatform.account._
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction._
-import com.wavesplatform.transaction.serialization.impl.SetAssetScriptTxSerializer
-import com.wavesplatform.transaction.validation.TxValidator
-import com.wavesplatform.transaction.validation.impl.SetAssetScriptTxValidator
+import com.gicsports.account._
+import com.gicsports.crypto
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.script.Script
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction._
+import com.gicsports.transaction.serialization.impl.SetAssetScriptTxSerializer
+import com.gicsports.transaction.validation.TxValidator
+import com.gicsports.transaction.validation.impl.SetAssetScriptTxValidator
 import monix.eval.Coeval
 import play.api.libs.json.JsObject
 

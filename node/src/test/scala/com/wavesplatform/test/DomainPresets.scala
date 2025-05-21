@@ -1,8 +1,8 @@
-package com.wavesplatform.test
+package com.gicsports.test
 
-import com.wavesplatform.features.{BlockchainFeature, BlockchainFeatures}
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.settings.{FunctionalitySettings, WavesSettings, loadConfig}
+import com.gicsports.features.{BlockchainFeature, BlockchainFeatures}
+import com.gicsports.lang.directives.values.*
+import com.gicsports.settings.{FunctionalitySettings, WavesSettings, loadConfig}
 
 
 object DomainPresets {

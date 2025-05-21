@@ -1,34 +1,34 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
 import scala.util.Try
 import com.google.common.primitives.Ints
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.BlockchainFeatures.*
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.contract.DApp.{CallableAnnotation, CallableFunction, VerifierAnnotation, VerifierFunction}
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.{ContractScript, Script}
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.utils.compilerContext
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.FunctionHeader.Native
-import com.wavesplatform.lang.v1.compiler.{ExpressionCompiler, Terms, TestCompiler}
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.evaluator.FunctionIds
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.settings.{FunctionalitySettings, TestFunctionalitySettings}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{GenesisTransaction, TxHelpers, TxVersion}
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.smart.SetScriptTransaction
+import com.gicsports.account.KeyPair
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.BlockchainFeatures.*
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.contract.DApp.{CallableAnnotation, CallableFunction, VerifierAnnotation, VerifierFunction}
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.{ContractScript, Script}
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.utils.compilerContext
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.FunctionHeader.Native
+import com.gicsports.lang.v1.compiler.{ExpressionCompiler, Terms, TestCompiler}
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.evaluator.FunctionIds
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.settings.{FunctionalitySettings, TestFunctionalitySettings}
+import com.gicsports.test.*
+import com.gicsports.transaction.{GenesisTransaction, TxHelpers, TxVersion}
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.smart.SetScriptTransaction
 import monix.eval.Coeval
 import org.scalatest.Assertion
 
@@ -234,7 +234,7 @@ class SetScriptTransactionDiffTest extends PropSpec with WithDomain {
   }
 
   property("Script with BlockV2 only works after Ride4DApps feature activation") {
-    import com.wavesplatform.lagonaki.mocks.TestBlock.create as block
+    import com.gicsports.lagonaki.mocks.TestBlock.create as block
 
     val settingsUnactivated = TestFunctionalitySettings.Enabled.copy(preActivatedFeatures =
       Map(

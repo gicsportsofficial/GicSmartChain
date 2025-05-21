@@ -1,24 +1,24 @@
-package com.wavesplatform.state.diffs.ci.sync
+package com.gicsports.state.diffs.ci.sync
 
-import com.wavesplatform.TestValues
-import com.wavesplatform.account.Address
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.{DBCacheSettings, WithDomain}
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.state.diffs.produceRejectOrFailedDiff
-import com.wavesplatform.state.{IntegerDataEntry, StringDataEntry}
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.transaction.TxValidationError.FailedTransactionError
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.TestValues
+import com.gicsports.account.Address
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.{DBCacheSettings, WithDomain}
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.state.diffs.produceRejectOrFailedDiff
+import com.gicsports.state.{IntegerDataEntry, StringDataEntry}
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.transaction.TxValidationError.FailedTransactionError
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import org.scalatest.EitherValues
 
 class SyncInvokeDiffTest extends PropSpec with WithDomain with DBCacheSettings with EitherValues {

@@ -1,21 +1,21 @@
-package com.wavesplatform.generator.utils
+package com.gicsports.generator.utils
 
 import java.util.concurrent.ThreadLocalRandom
 
-import com.wavesplatform.account.{Address, KeyPair, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.crypto.Curve25519.KeyLength
-import com.wavesplatform.generator.utils.Implicits._
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.estimator.ScriptEstimator
-import com.wavesplatform.state.{BinaryDataEntry, BooleanDataEntry, DataEntry, EmptyDataEntry, IntegerDataEntry, StringDataEntry}
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.ParsedTransfer
-import com.wavesplatform.transaction.transfer._
-import com.wavesplatform.utils.LoggerFacade
+import com.gicsports.account.{Address, KeyPair, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.crypto.Curve25519.KeyLength
+import com.gicsports.generator.utils.Implicits._
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.estimator.ScriptEstimator
+import com.gicsports.state.{BinaryDataEntry, BooleanDataEntry, DataEntry, EmptyDataEntry, IntegerDataEntry, StringDataEntry}
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.Transaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.transfer.MassTransferTransaction.ParsedTransfer
+import com.gicsports.transaction.transfer._
+import com.gicsports.utils.LoggerFacade
 import org.slf4j.LoggerFactory
 
 object Gen {

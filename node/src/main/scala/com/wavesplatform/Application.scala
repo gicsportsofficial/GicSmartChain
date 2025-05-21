@@ -1,4 +1,4 @@
-package com.wavesplatform
+package com.gicsports
 
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
@@ -7,38 +7,38 @@ import cats.instances.bigInt.*
 import cats.instances.int.*
 import cats.syntax.option.*
 import com.typesafe.config.*
-import com.wavesplatform.account.{Address, AddressScheme}
-import com.wavesplatform.actor.RootActorSystem
-import com.wavesplatform.api.BlockMeta
-import com.wavesplatform.api.common.*
-import com.wavesplatform.api.http.*
-import com.wavesplatform.api.http.alias.AliasApiRoute
-import com.wavesplatform.api.http.assets.AssetsApiRoute
-import com.wavesplatform.api.http.eth.EthRpcRoute
-import com.wavesplatform.api.http.leasing.LeaseApiRoute
-import com.wavesplatform.api.http.utils.UtilsApiRoute
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.consensus.PoSSelector
-import com.wavesplatform.database.{DBExt, Keys, openDB}
-import com.wavesplatform.events.{BlockchainUpdateTriggers, UtxEvent}
-import com.wavesplatform.extensions.{Context, Extension}
-import com.wavesplatform.features.EstimatorProvider.*
-import com.wavesplatform.features.api.ActivationApiRoute
-import com.wavesplatform.history.{History, StorageFactory}
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.metrics.Metrics
-import com.wavesplatform.mining.{Miner, MinerDebugInfo, MinerImpl}
-import com.wavesplatform.network.*
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.state.appender.{BlockAppender, ExtensionAppender, MicroblockAppender}
-import com.wavesplatform.state.{Blockchain, BlockchainUpdaterImpl, Diff, Height, TxMeta}
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.smart.script.trace.TracedResult
-import com.wavesplatform.transaction.{Asset, DiscardedBlocks, Transaction}
-import com.wavesplatform.utils.*
-import com.wavesplatform.utils.Schedulers.*
-import com.wavesplatform.utx.{UtxPool, UtxPoolImpl}
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.account.{Address, AddressScheme}
+import com.gicsports.actor.RootActorSystem
+import com.gicsports.api.BlockMeta
+import com.gicsports.api.common.*
+import com.gicsports.api.http.*
+import com.gicsports.api.http.alias.AliasApiRoute
+import com.gicsports.api.http.assets.AssetsApiRoute
+import com.gicsports.api.http.eth.EthRpcRoute
+import com.gicsports.api.http.leasing.LeaseApiRoute
+import com.gicsports.api.http.utils.UtilsApiRoute
+import com.gicsports.common.state.ByteStr
+import com.gicsports.consensus.PoSSelector
+import com.gicsports.database.{DBExt, Keys, openDB}
+import com.gicsports.events.{BlockchainUpdateTriggers, UtxEvent}
+import com.gicsports.extensions.{Context, Extension}
+import com.gicsports.features.EstimatorProvider.*
+import com.gicsports.features.api.ActivationApiRoute
+import com.gicsports.history.{History, StorageFactory}
+import com.gicsports.lang.ValidationError
+import com.gicsports.metrics.Metrics
+import com.gicsports.mining.{Miner, MinerDebugInfo, MinerImpl}
+import com.gicsports.network.*
+import com.gicsports.settings.WavesSettings
+import com.gicsports.state.appender.{BlockAppender, ExtensionAppender, MicroblockAppender}
+import com.gicsports.state.{Blockchain, BlockchainUpdaterImpl, Diff, Height, TxMeta}
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.smart.script.trace.TracedResult
+import com.gicsports.transaction.{Asset, DiscardedBlocks, Transaction}
+import com.gicsports.utils.*
+import com.gicsports.utils.Schedulers.*
+import com.gicsports.utx.{UtxPool, UtxPoolImpl}
+import com.gicsports.wallet.Wallet
 import io.netty.channel.Channel
 import io.netty.channel.group.DefaultChannelGroup
 import io.netty.util.HashedWheelTimer
@@ -529,20 +529,20 @@ class Application(val actorSystem: ActorSystem, val settings: WavesSettings, con
 }
 
 object Application extends ScorexLogging {
-  private[wavesplatform] def loadApplicationConfig(external: Option[File] = None): WavesSettings = {
-    import com.wavesplatform.settings.*
+  private[gicsports] def loadApplicationConfig(external: Option[File] = None): WavesSettings = {
+    import com.gicsports.settings.*
 
     val maybeExternalConfig = Try(external.map(f => ConfigFactory.parseFile(f.getAbsoluteFile, ConfigParseOptions.defaults().setAllowMissing(false))))
     val config              = loadConfig(maybeExternalConfig.getOrElse(None))
 
     // DO NOT LOG BEFORE THIS LINE, THIS PROPERTY IS USED IN logback.xml
-    System.setProperty("CARDIUM.directory", config.getString("CARDIUM.directory"))
-    if (config.hasPath("CARDIUM.config.directory")) System.setProperty("CARDIUM.config.directory", config.getString("CARDIUM.config.directory"))
+    System.setProperty("GIC.directory", config.getString("GIC.directory"))
+    if (config.hasPath("GIC.config.directory")) System.setProperty("GIC.config.directory", config.getString("GIC.config.directory"))
 
     maybeExternalConfig match {
       case Success(None) =>
-        val currentBlockchainType = Try(ConfigFactory.defaultOverrides().getString("CARDIUM.blockchain.type"))
-          .orElse(Try(ConfigFactory.defaultOverrides().getString("CARDIUM.defaults.blockchain.type")))
+        val currentBlockchainType = Try(ConfigFactory.defaultOverrides().getString("GIC.blockchain.type"))
+          .orElse(Try(ConfigFactory.defaultOverrides().getString("GIC.defaults.blockchain.type")))
           .map(_.toUpperCase)
           .getOrElse("TESTNET")
 
@@ -575,19 +575,19 @@ object Application extends ScorexLogging {
 
     val DisabledHash = "H6nsiifwYKYEx6YzYD7woP1XCn72RVvx6tC1zjjLXqsu"
     if (settings.restAPISettings.enable && settings.restAPISettings.apiKeyHash == DisabledHash) {
-      log.error(s"Usage of the default api key hash ($DisabledHash) is prohibited, please change it in the CARDIUM.conf")
+      log.error(s"Usage of the default api key hash ($DisabledHash) is prohibited, please change it in the GIC.conf")
       forceStopApplication(Misconfiguration)
     }
 
     settings
   }
 
-  private[wavesplatform] def loadBlockAt(db: DB, blockchainUpdater: BlockchainUpdaterImpl)(
+  private[gicsports] def loadBlockAt(db: DB, blockchainUpdater: BlockchainUpdaterImpl)(
       height: Int
   ): Option[(BlockMeta, Seq[(TxMeta, Transaction)])] =
     loadBlockInfoAt(db, blockchainUpdater)(height)
 
-  private[wavesplatform] def loadBlockInfoAt(db: DB, blockchainUpdater: BlockchainUpdaterImpl)(
+  private[gicsports] def loadBlockInfoAt(db: DB, blockchainUpdater: BlockchainUpdaterImpl)(
       height: Int
   ): Option[(BlockMeta, Seq[(TxMeta, Transaction)])] =
     loadBlockMetaAt(db, blockchainUpdater)(height).map { meta =>
@@ -596,7 +596,7 @@ object Application extends ScorexLogging {
         .getOrElse(db.readOnly(ro => database.loadTransactions(Height(height), ro)))
     }
 
-  private[wavesplatform] def loadBlockMetaAt(db: DB, blockchainUpdater: BlockchainUpdaterImpl)(height: Int): Option[BlockMeta] = {
+  private[gicsports] def loadBlockMetaAt(db: DB, blockchainUpdater: BlockchainUpdaterImpl)(height: Int): Option[BlockMeta] = {
     val result = blockchainUpdater.liquidBlockMeta
       .filter(_ => blockchainUpdater.height == height)
       .orElse(db.get(Keys.blockMetaAt(Height(height))))
@@ -617,13 +617,13 @@ object Application extends ScorexLogging {
       case "import"                 => Importer.main(args.tail)
       case "explore"                => Explorer.main(args.tail)
       case "util"                   => UtilApp.main(args.tail)
-      case "help" | "--help" | "-h" => println("Usage: CARDIUM <config> | export | import | explore | util")
+      case "help" | "--help" | "-h" => println("Usage: GIC <config> | export | import | explore | util")
       case _                        => startNode(args.headOption) // TODO: Consider adding option to specify network-name
     }
   }
 
   private[this] def startNode(configFile: Option[String]): Unit = {
-    import com.wavesplatform.settings.Constants
+    import com.gicsports.settings.Constants
     val settings = loadApplicationConfig(configFile.map(new File(_)))
 
     val log = LoggerFacade(LoggerFactory.getLogger(getClass))
@@ -649,7 +649,7 @@ object Application extends ScorexLogging {
       )
     }
 
-    RootActorSystem.start("wavesplatform", settings.config) { actorSystem =>
+    RootActorSystem.start("gicsports", settings.config) { actorSystem =>
       dumpMinerConfig()
       log.info(s"${Constants.AgentName} Blockchain Id: ${settings.blockchainSettings.addressSchemeCharacter}")
       new Application(actorSystem, settings, settings.config.root(), time).run()

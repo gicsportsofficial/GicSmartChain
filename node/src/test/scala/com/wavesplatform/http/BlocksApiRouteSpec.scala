@@ -1,19 +1,19 @@
-package com.wavesplatform.http
+package com.gicsports.http
 
 import akka.http.scaladsl.model.StatusCodes
-import com.wavesplatform.TestWallet
-import com.wavesplatform.api.BlockMeta
-import com.wavesplatform.api.common.CommonBlocksApi
-import com.wavesplatform.api.http.{BlocksApiRoute, RouteTimeout}
-import com.wavesplatform.api.http.ApiError.TooBigArrayAllocation
-import com.wavesplatform.block.serialization.BlockHeaderSerializer
-import com.wavesplatform.block.{Block, BlockHeader}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.utils.{Schedulers, SystemTime}
+import com.gicsports.TestWallet
+import com.gicsports.api.BlockMeta
+import com.gicsports.api.common.CommonBlocksApi
+import com.gicsports.api.http.{BlocksApiRoute, RouteTimeout}
+import com.gicsports.api.http.ApiError.TooBigArrayAllocation
+import com.gicsports.block.serialization.BlockHeaderSerializer
+import com.gicsports.block.{Block, BlockHeader}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.db.WithDomain
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.state.Blockchain
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.utils.{Schedulers, SystemTime}
 import monix.reactive.Observable
 import org.scalamock.scalatest.PathMockFactory
 import play.api.libs.json.*

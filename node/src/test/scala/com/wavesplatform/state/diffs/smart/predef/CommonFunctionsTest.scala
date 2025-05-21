@@ -1,18 +1,18 @@
-package com.wavesplatform.state.diffs.smart.predef
+package com.gicsports.state.diffs.smart.predef
 
-import com.wavesplatform.account.{Address, Alias}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.Testing.*
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_BYTESTR
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.*
-import com.wavesplatform.test.*
-import com.wavesplatform.state.IntegerDataEntry
-import com.wavesplatform.test.{NumericExt, PropSpec}
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.transfer.MassTransferTransaction
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.ParsedTransfer
-import com.wavesplatform.transaction.{TxHelpers, TxNonNegativeAmount, TxVersion}
+import com.gicsports.account.{Address, Alias}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.Testing.*
+import com.gicsports.lang.v1.compiler.Terms.CONST_BYTESTR
+import com.gicsports.lang.v1.evaluator.ctx.impl.*
+import com.gicsports.test.*
+import com.gicsports.state.IntegerDataEntry
+import com.gicsports.test.{NumericExt, PropSpec}
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.transfer.MassTransferTransaction
+import com.gicsports.transaction.transfer.MassTransferTransaction.ParsedTransfer
+import com.gicsports.transaction.{TxHelpers, TxNonNegativeAmount, TxVersion}
 import org.scalatest.Assertions
 import shapeless.Coproduct
 

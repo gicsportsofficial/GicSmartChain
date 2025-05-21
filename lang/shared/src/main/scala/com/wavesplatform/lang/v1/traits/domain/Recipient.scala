@@ -1,6 +1,6 @@
-package com.wavesplatform.lang.v1.traits.domain
+package com.gicsports.lang.v1.traits.domain
 
-import com.wavesplatform.common.state.ByteStr
+import com.gicsports.common.state.ByteStr
 
 sealed trait Recipient
 object Recipient {

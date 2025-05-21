@@ -1,8 +1,8 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
-import com.wavesplatform.network.RxScoreObserver.SyncWith
-import com.wavesplatform.RxScheduler
-import com.wavesplatform.test.FreeSpec
+import com.gicsports.network.RxScoreObserver.SyncWith
+import com.gicsports.RxScheduler
+import com.gicsports.test.FreeSpec
 import io.netty.channel.Channel
 import io.netty.channel.local.LocalChannel
 import monix.eval.Coeval

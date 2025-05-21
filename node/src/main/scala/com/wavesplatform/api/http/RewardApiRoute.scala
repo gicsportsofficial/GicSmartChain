@@ -1,10 +1,10 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import akka.http.scaladsl.server.Route
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.transaction.TxValidationError.GenericError
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.Blockchain
+import com.gicsports.transaction.TxValidationError.GenericError
 import play.api.libs.json.{Format, Json}
 
 case class RewardApiRoute(blockchain: Blockchain) extends ApiRoute {
@@ -53,7 +53,7 @@ case class RewardApiRoute(blockchain: Blockchain) extends ApiRoute {
 object RewardApiRoute {
   final case class RewardStatus(
       height: Int,
-      totalCardiumAmount: BigInt,
+      totalGicAmount: BigInt,
       currentReward: Long,
       minIncrement: Long,
       term: Int,

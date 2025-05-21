@@ -1,14 +1,14 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
 import java.net.URLDecoder
 
 import com.typesafe.config.Config
-import com.wavesplatform.api.http.ApiError.{CustomValidationError, TooBigArrayAllocation}
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.it.{NTPTime, NodeConfigs}
-import com.wavesplatform.state.StringDataEntry
-import com.wavesplatform.transaction.TxVersion
+import com.gicsports.api.http.ApiError.{CustomValidationError, TooBigArrayAllocation}
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.it.{NTPTime, NodeConfigs}
+import com.gicsports.state.StringDataEntry
+import com.gicsports.transaction.TxVersion
 import play.api.libs.json._
 
 import scala.util.Random
@@ -72,7 +72,7 @@ class AddressApiSuite extends BaseTransactionSuite with NTPTime {
   }
 
   test("limit violation requests should be handled correctly") {
-    val limit     = miner.config.getInt("CARDIUM.rest-api.transactions-by-address-limit")
+    val limit     = miner.config.getInt("GIC.rest-api.transactions-by-address-limit")
     val addresses = List.fill(limit + 1)(firstAddress)
     assertApiError(
       miner.get(s"/addresses/balance?${addresses.map(a => s"address=$a").mkString("&")}"),
@@ -153,7 +153,7 @@ class AddressApiSuite extends BaseTransactionSuite with NTPTime {
   override protected def nodeConfigs: Seq[Config] =
     NodeConfigs.newBuilder
       .overrideBase(_.quorum(0))
-      .overrideBase(_.raw("CARDIUM.rest-api.transactions-by-address-limit = 20"))
+      .overrideBase(_.raw("GIC.rest-api.transactions-by-address-limit = 20"))
       .withDefault(1)
       .withSpecial(_.nonMiner)
       .buildNonConflicting()

@@ -1,9 +1,9 @@
-package com.wavesplatform.lang.v1.compiler
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.FunctionHeader.{Native, User}
-import com.wavesplatform.lang.v1.compiler.Terms._
-import com.wavesplatform.lang.v1.evaluator.FunctionIds._
+package com.gicsports.lang.v1.compiler
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.FunctionHeader.{Native, User}
+import com.gicsports.lang.v1.compiler.Terms._
+import com.gicsports.lang.v1.evaluator.FunctionIds._
 
 object CompilerMacro {
   def unwrapFold(index: Int, limit: Int, list: EXPR, acc: EXPR, func: FunctionHeader): EXPR = {

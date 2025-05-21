@@ -1,11 +1,11 @@
-package com.wavesplatform.lang.v1.traits.domain
+package com.gicsports.lang.v1.traits.domain
 
 import java.io.ByteArrayOutputStream
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.hacks.Global
-import com.wavesplatform.lang.utils.Serialize._
-import com.wavesplatform.lang.v1.traits.domain.Recipient.{Address, Alias}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.hacks.Global
+import com.gicsports.lang.utils.Serialize._
+import com.gicsports.lang.v1.traits.domain.Recipient.{Address, Alias}
 
 sealed trait CallableAction
 

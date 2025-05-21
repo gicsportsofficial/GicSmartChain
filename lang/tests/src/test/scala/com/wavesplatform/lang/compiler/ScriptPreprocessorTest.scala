@@ -1,21 +1,21 @@
-package com.wavesplatform.lang.compiler
+package com.gicsports.lang.compiler
 
 import cats.Id
 import cats.implicits.*
 import cats.kernel.Monoid
-import com.wavesplatform.lang.directives.values.V3
-import com.wavesplatform.lang.directives.{Directive, DirectiveParser}
-import com.wavesplatform.lang.script.ScriptPreprocessor
-import com.wavesplatform.lang.v1.CTX
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_BOOLEAN, EVALUATED}
-import com.wavesplatform.lang.v1.evaluator.Contextful.NoContext
-import com.wavesplatform.lang.v1.evaluator.EvaluatorV1
-import com.wavesplatform.lang.v1.evaluator.EvaluatorV1.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.lang.v1.testing.ScriptGenParser
-import com.wavesplatform.test.*
+import com.gicsports.lang.directives.values.V3
+import com.gicsports.lang.directives.{Directive, DirectiveParser}
+import com.gicsports.lang.script.ScriptPreprocessor
+import com.gicsports.lang.v1.CTX
+import com.gicsports.lang.v1.compiler.ExpressionCompiler
+import com.gicsports.lang.v1.compiler.Terms.{CONST_BOOLEAN, EVALUATED}
+import com.gicsports.lang.v1.evaluator.Contextful.NoContext
+import com.gicsports.lang.v1.evaluator.EvaluatorV1
+import com.gicsports.lang.v1.evaluator.EvaluatorV1.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.lang.v1.testing.ScriptGenParser
+import com.gicsports.test.*
 
 class ScriptPreprocessorTest extends PropSpec with ScriptGenParser {
   private val evaluator = new EvaluatorV1[Id, NoContext]()

@@ -1,10 +1,10 @@
-package com.wavesplatform.history
+package com.gicsports.history
 
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.database
-import com.wavesplatform.database.DBExt
-import com.wavesplatform.state.{Blockchain, Height}
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.database
+import com.gicsports.database.DBExt
+import com.gicsports.state.{Blockchain, Height}
 import org.iq80.leveldb.DB
 
 trait History {

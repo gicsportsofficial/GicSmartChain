@@ -1,11 +1,11 @@
-package com.wavesplatform.it.sync.smartcontract.smartasset
+package com.gicsports.it.sync.smartcontract.smartasset
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync.{someAssetAmount, _}
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync.{someAssetAmount, _}
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import org.scalatest.prop.TableDrivenPropertyChecks
 
 class AssetUnsupportedTransactionsSuite extends BaseTransactionSuite with TableDrivenPropertyChecks {

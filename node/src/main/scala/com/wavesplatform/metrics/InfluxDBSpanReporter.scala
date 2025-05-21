@@ -1,7 +1,7 @@
-package com.wavesplatform.metrics
+package com.gicsports.metrics
 
 import com.typesafe.config.Config
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.utils.ScorexLogging
 import kamon.module.{ModuleFactory, SpanReporter}
 import kamon.tag.Tag
 import kamon.trace.Span

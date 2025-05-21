@@ -1,11 +1,11 @@
-package com.wavesplatform.state.rollback
+package com.gicsports.state.rollback
 
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.test.FlatSpec
-import com.wavesplatform.transaction.utils.EthTxGenerator
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.utils.EthHelpers
+import com.gicsports.db.WithDomain
+import com.gicsports.test.FlatSpec
+import com.gicsports.transaction.utils.EthTxGenerator
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.utils.EthHelpers
 
 class EthereumTransactionRollbackSpec extends FlatSpec with WithDomain with EthHelpers {
   "Ethereum transfer" should "rollback" in withDomain(DomainPresets.RideV6) { d =>

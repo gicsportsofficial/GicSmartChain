@@ -1,16 +1,16 @@
-package com.wavesplatform.lang.v1.compiler
+package com.gicsports.lang.v1.compiler
 
 import java.nio.charset.StandardCharsets
 
 import cats.Eval
 import cats.instances.list.*
 import cats.syntax.traverse.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.{ExecutionError, CommonError}
-import com.wavesplatform.lang.v1.ContractLimits.*
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Types.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext.MaxListLengthV4
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.{ExecutionError, CommonError}
+import com.gicsports.lang.v1.ContractLimits.*
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Types.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext.MaxListLengthV4
 import monix.eval.Coeval
 
 object Terms {

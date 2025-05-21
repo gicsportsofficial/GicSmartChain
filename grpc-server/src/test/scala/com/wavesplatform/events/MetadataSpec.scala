@@ -1,17 +1,17 @@
-package com.wavesplatform.events
+package com.gicsports.events
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.events.FakeObserver.*
-import com.wavesplatform.events.api.grpc.protobuf.SubscribeRequest
-import com.wavesplatform.events.protobuf.TransactionMetadata
-import com.wavesplatform.protobuf.*
-import com.wavesplatform.test.*
-import com.wavesplatform.test.DomainPresets.RideV6
-import com.wavesplatform.transaction.assets.exchange.*
-import com.wavesplatform.transaction.transfer.MassTransferTransaction
-import com.wavesplatform.transaction.utils.EthConverters.*
-import com.wavesplatform.transaction.utils.EthTxGenerator
-import com.wavesplatform.transaction.{Asset, TxExchangeAmount, TxHelpers, TxMatcherFee, TxNonNegativeAmount, TxOrderPrice}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.events.FakeObserver.*
+import com.gicsports.events.api.grpc.protobuf.SubscribeRequest
+import com.gicsports.events.protobuf.TransactionMetadata
+import com.gicsports.protobuf.*
+import com.gicsports.test.*
+import com.gicsports.test.DomainPresets.RideV6
+import com.gicsports.transaction.assets.exchange.*
+import com.gicsports.transaction.transfer.MassTransferTransaction
+import com.gicsports.transaction.utils.EthConverters.*
+import com.gicsports.transaction.utils.EthTxGenerator
+import com.gicsports.transaction.{Asset, TxExchangeAmount, TxHelpers, TxMatcherFee, TxNonNegativeAmount, TxOrderPrice}
 
 class MetadataSpec extends FreeSpec with WithBUDomain {
   "BlockchainUpdates returns correct metadata for supported transaction types" in withDomainAndRepo(RideV6){ (d, r) =>

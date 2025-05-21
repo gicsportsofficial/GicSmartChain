@@ -1,14 +1,14 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.api.common.AddressTransactions
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.database.{LevelDBWriter, TestStorageFactory}
-import com.wavesplatform.events.BlockchainUpdateTriggers
-import com.wavesplatform.settings.TestSettings._
-import com.wavesplatform.settings.{BlockchainSettings, FunctionalitySettings, GenesisSettings, RewardsSettings, TestSettings}
-import com.wavesplatform.transaction.{Asset, Transaction}
-import com.wavesplatform.utils.SystemTime
+import com.gicsports.account.Address
+import com.gicsports.api.common.AddressTransactions
+import com.gicsports.common.state.ByteStr
+import com.gicsports.database.{LevelDBWriter, TestStorageFactory}
+import com.gicsports.events.BlockchainUpdateTriggers
+import com.gicsports.settings.TestSettings._
+import com.gicsports.settings.{BlockchainSettings, FunctionalitySettings, GenesisSettings, RewardsSettings, TestSettings}
+import com.gicsports.transaction.{Asset, Transaction}
+import com.gicsports.utils.SystemTime
 import monix.reactive.Observer
 import org.iq80.leveldb.DB
 

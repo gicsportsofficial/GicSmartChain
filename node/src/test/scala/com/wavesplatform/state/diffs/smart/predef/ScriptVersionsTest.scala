@@ -1,24 +1,24 @@
-package com.wavesplatform.state.diffs.smart.predef
+package com.gicsports.state.diffs.smart.predef
 
 import cats.syntax.either._
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.Testing
-import com.wavesplatform.lang.directives.DirectiveDictionary
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.utils.*
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler
-import com.wavesplatform.lang.v1.compiler.Terms.EVALUATED
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.state.{BinaryDataEntry, Blockchain, BooleanDataEntry, EmptyDataEntry, IntegerDataEntry, StringDataEntry}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{Transaction, TxHelpers}
-import com.wavesplatform.transaction.smart.script.{ScriptCompiler, ScriptRunner}
-import com.wavesplatform.utils.EmptyBlockchain
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.Testing
+import com.gicsports.lang.directives.DirectiveDictionary
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.utils.*
+import com.gicsports.lang.v1.compiler.ExpressionCompiler
+import com.gicsports.lang.v1.compiler.Terms.EVALUATED
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.state.{BinaryDataEntry, Blockchain, BooleanDataEntry, EmptyDataEntry, IntegerDataEntry, StringDataEntry}
+import com.gicsports.test.*
+import com.gicsports.transaction.{Transaction, TxHelpers}
+import com.gicsports.transaction.smart.script.{ScriptCompiler, ScriptRunner}
+import com.gicsports.utils.EmptyBlockchain
 import shapeless.Coproduct
 
 class ScriptVersionsTest extends FreeSpec {

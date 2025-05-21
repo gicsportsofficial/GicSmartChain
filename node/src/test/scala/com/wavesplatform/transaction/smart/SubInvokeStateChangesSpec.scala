@@ -1,14 +1,14 @@
-package com.wavesplatform.transaction.smart
+package com.gicsports.transaction.smart
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.utils.JsonMatchers
+import com.gicsports.account.Address
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.*
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.utils.JsonMatchers
 import play.api.libs.json.Json
 
 class SubInvokeStateChangesSpec extends FlatSpec with WithDomain with JsonMatchers {

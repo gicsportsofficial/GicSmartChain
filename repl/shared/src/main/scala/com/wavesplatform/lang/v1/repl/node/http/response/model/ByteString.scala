@@ -1,7 +1,7 @@
-package com.wavesplatform.lang.v1.repl.node.http.response.model
+package com.gicsports.lang.v1.repl.node.http.response.model
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, Base64}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, Base64}
 import io.circe.{Decoder, HCursor}
 
 private[node] case class ByteString(bytes: Array[Byte] = Array(0)) {

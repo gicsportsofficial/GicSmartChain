@@ -1,4 +1,4 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import cats.Monad
 import cats.data.Ior
@@ -7,18 +7,18 @@ import cats.kernel.{Monoid, Semigroup}
 import cats.syntax.either.*
 import com.google.common.hash.{BloomFilter, Funnels}
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{Address, Alias, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.database.protobuf.EthereumTransactionMeta
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.state.diffs.FeeValidation
-import com.wavesplatform.state.reader.LeaseDetails
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.smart.InvokeTransaction
-import com.wavesplatform.transaction.{Asset, EthereumTransaction, Transaction}
+import com.gicsports.account.{Address, Alias, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.database.protobuf.EthereumTransactionMeta
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.script.Script
+import com.gicsports.state.diffs.FeeValidation
+import com.gicsports.state.reader.LeaseDetails
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.smart.InvokeTransaction
+import com.gicsports.transaction.{Asset, EthereumTransaction, Transaction}
 
 import scala.util.chaining.*
 

@@ -1,9 +1,9 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
 import java.net.InetAddress
 
-import com.wavesplatform.settings.UPnPSettings
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.settings.UPnPSettings
+import com.gicsports.utils.ScorexLogging
 import org.bitlet.weupnp.{GatewayDevice, GatewayDiscover}
 
 import scala.jdk.CollectionConverters._

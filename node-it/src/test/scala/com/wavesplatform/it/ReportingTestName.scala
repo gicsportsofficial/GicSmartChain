@@ -1,8 +1,8 @@
-package com.wavesplatform.it
+package com.gicsports.it
 
-import com.wavesplatform.api.http.DebugMessage
-import com.wavesplatform.it.api.AsyncHttpApi._
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.api.http.DebugMessage
+import com.gicsports.it.api.AsyncHttpApi._
+import com.gicsports.utils.ScorexLogging
 import org.scalatest.{Args, Status, Suite, SuiteMixin}
 
 import scala.concurrent.duration._

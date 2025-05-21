@@ -1,13 +1,13 @@
-package com.wavesplatform.lang.v1.compiler
+package com.gicsports.lang.v1.compiler
 
 import java.nio.charset.StandardCharsets
 
 import cats.Show
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.compiler.Types.*
-import com.wavesplatform.lang.v1.evaluator.ctx.FunctionTypeSignature
-import com.wavesplatform.lang.v1.parser.Expressions
-import com.wavesplatform.lang.v1.parser.Expressions.{Declaration, PART}
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.compiler.Types.*
+import com.gicsports.lang.v1.evaluator.ctx.FunctionTypeSignature
+import com.gicsports.lang.v1.parser.Expressions
+import com.gicsports.lang.v1.parser.Expressions.{Declaration, PART}
 
 sealed trait CompilationError {
   def start: Int

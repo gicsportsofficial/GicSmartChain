@@ -1,15 +1,15 @@
-package com.wavesplatform.wallet
+package com.gicsports.wallet
 
 import java.io.File
 
 import com.google.common.primitives.{Bytes, Ints}
-import com.wavesplatform.account.{Address, KeyPair}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.settings.WalletSettings
-import com.wavesplatform.transaction.TxValidationError.MissingSenderPrivateKey
-import com.wavesplatform.utils.*
+import com.gicsports.account.{Address, KeyPair}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
+import com.gicsports.lang.ValidationError
+import com.gicsports.settings.WalletSettings
+import com.gicsports.transaction.TxValidationError.MissingSenderPrivateKey
+import com.gicsports.utils.*
 import play.api.libs.json.*
 
 import scala.collection.concurrent.TrieMap

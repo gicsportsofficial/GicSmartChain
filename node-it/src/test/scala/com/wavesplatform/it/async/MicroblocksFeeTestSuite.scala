@@ -1,10 +1,10 @@
-package com.wavesplatform.it.async
+package com.gicsports.it.async
 
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.it.BaseFreeSpec
-import com.wavesplatform.it.NodeConfigs.Default
-import com.wavesplatform.it.api.AsyncHttpApi._
-import com.wavesplatform.test._
+import com.gicsports.it.BaseFreeSpec
+import com.gicsports.it.NodeConfigs.Default
+import com.gicsports.it.api.AsyncHttpApi._
+import com.gicsports.test._
 
 import scala.concurrent.Future.traverse
 import scala.concurrent.duration._
@@ -80,7 +80,7 @@ class MicroblocksFeeTestSuite extends BaseFreeSpec {
 
   private val microblockActivationHeight = 10
   private val minerConfig = ConfigFactory.parseString(
-    s"""CARDIUM {
+    s"""GIC {
        |  blockchain.custom.functionality.pre-activated-features.2 = $microblockActivationHeight
        |  miner.quorum = 3
        |}
@@ -88,7 +88,7 @@ class MicroblocksFeeTestSuite extends BaseFreeSpec {
   )
 
   private val notMinerConfig = ConfigFactory.parseString(
-    s"""CARDIUM {
+    s"""GIC {
        |  blockchain.custom.functionality.pre-activated-features.2 = $microblockActivationHeight
        |  miner.enable = no
        |}

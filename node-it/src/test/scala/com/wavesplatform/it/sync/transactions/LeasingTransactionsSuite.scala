@@ -1,20 +1,20 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.api.http.TransactionsApiRoute
-import com.wavesplatform.api.http.TransactionsApiRoute.LeaseStatus
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.api.TransactionInfo
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.test._
+import com.gicsports.account.AddressScheme
+import com.gicsports.api.http.TransactionsApiRoute
+import com.gicsports.api.http.TransactionsApiRoute.LeaseStatus
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.api.TransactionInfo
+import com.gicsports.it.sync._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.test._
 import org.scalatest.CancelAfterFailure
 import play.api.libs.json.Json
 
 class LeasingTransactionsSuite extends BaseTransactionSuite with CancelAfterFailure {
   private val errorMessage = "Reason: Cannot lease more than own"
 
-  test("leasing CARDIUM decreases lessor's eff.b. and increases lessee's eff.b.; lessor pays fee") {
+  test("leasing GIC decreases lessor's eff.b. and increases lessee's eff.b.; lessor pays fee") {
     for (v <- leaseTxSupportedVersions) {
       val (balance1, eff1) = miner.accountBalances(firstAddress)
       val (balance2, eff2) = miner.accountBalances(secondAddress)
@@ -31,7 +31,7 @@ class LeasingTransactionsSuite extends BaseTransactionSuite with CancelAfterFail
     }
   }
 
-  test("cannot lease non-own CARDIUM") {
+  test("cannot lease non-own GIC") {
     for (v <- leaseTxSupportedVersions) {
       val createdLeaseTxId = sender.lease(firstKeyPair, secondAddress, leasingAmount, leasingFee = minFee, version = v).id
       nodes.waitForHeightAriseAndTxPresent(createdLeaseTxId)

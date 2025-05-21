@@ -1,21 +1,21 @@
-package com.wavesplatform.state.diffs.ci
+package com.gicsports.state.diffs.ci
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.db.{DBCacheSettings, WithDomain, WithState}
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.contract
-import com.wavesplatform.lang.contract.DApp.{CallableAnnotation, CallableFunction}
-import com.wavesplatform.lang.directives.values.V4
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_BOOLEAN, CONST_LONG, CONST_STRING, FUNC, FUNCTION_CALL, REF}
-import com.wavesplatform.lang.v1.evaluator.FunctionIds
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.settings.TestFunctionalitySettings
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.TxHelpers
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.db.{DBCacheSettings, WithDomain, WithState}
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.contract
+import com.gicsports.lang.contract.DApp.{CallableAnnotation, CallableFunction}
+import com.gicsports.lang.directives.values.V4
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.{CONST_BOOLEAN, CONST_LONG, CONST_STRING, FUNC, FUNCTION_CALL, REF}
+import com.gicsports.lang.v1.evaluator.FunctionIds
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.settings.TestFunctionalitySettings
+import com.gicsports.test.*
+import com.gicsports.transaction.TxHelpers
 import org.scalatest.{EitherValues, Inside}
 import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks
 

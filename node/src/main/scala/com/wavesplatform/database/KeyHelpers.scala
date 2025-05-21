@@ -1,9 +1,9 @@
-package com.wavesplatform.database
+package com.gicsports.database
 
 import java.nio.ByteBuffer
 
 import com.google.common.primitives.{Bytes, Ints, Longs, Shorts}
-import com.wavesplatform.state.TxNum
+import com.gicsports.state.TxNum
 
 object KeyHelpers {
   def h(height: Int): Array[Byte] = Ints.toByteArray(height)

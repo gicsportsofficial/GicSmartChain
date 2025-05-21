@@ -1,16 +1,16 @@
-package com.wavesplatform
+package com.gicsports
 
 import java.io.{BufferedOutputStream, File, FileOutputStream, OutputStream}
 
 import com.google.common.primitives.Ints
-import com.wavesplatform.block.Block
-import com.wavesplatform.database.{DBExt, openDB}
-import com.wavesplatform.events.BlockchainUpdateTriggers
-import com.wavesplatform.history.StorageFactory
-import com.wavesplatform.metrics.Metrics
-import com.wavesplatform.protobuf.block.PBBlocks
-import com.wavesplatform.state.Height
-import com.wavesplatform.utils._
+import com.gicsports.block.Block
+import com.gicsports.database.{DBExt, openDB}
+import com.gicsports.events.BlockchainUpdateTriggers
+import com.gicsports.history.StorageFactory
+import com.gicsports.metrics.Metrics
+import com.gicsports.protobuf.block.PBBlocks
+import com.gicsports.state.Height
+import com.gicsports.utils._
 import kamon.Kamon
 import monix.execution.UncaughtExceptionReporter
 import monix.reactive.Observer
@@ -22,7 +22,7 @@ import scala.concurrent.duration._
 import scala.util.{Failure, Success, Try}
 
 object Exporter extends ScorexLogging {
-  private[wavesplatform] object Formats {
+  private[gicsports] object Formats {
     val Binary   = "BINARY"
     val Protobuf = "PROTOBUF"
     val Json     = "JSON"

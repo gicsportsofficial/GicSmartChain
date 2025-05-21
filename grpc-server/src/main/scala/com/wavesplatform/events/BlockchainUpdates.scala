@@ -1,17 +1,17 @@
-package com.wavesplatform.events
+package com.gicsports.events
 
 import java.net.InetSocketAddress
 import java.util.concurrent.TimeUnit
 
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.database.openDB
-import com.wavesplatform.events.api.grpc.protobuf.BlockchainUpdatesApiGrpc
-import com.wavesplatform.events.settings.BlockchainUpdatesSettings
-import com.wavesplatform.extensions.{Context, Extension}
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.state.diffs.BlockDiffer
-import com.wavesplatform.utils.{Schedulers, ScorexLogging}
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.database.openDB
+import com.gicsports.events.api.grpc.protobuf.BlockchainUpdatesApiGrpc
+import com.gicsports.events.settings.BlockchainUpdatesSettings
+import com.gicsports.extensions.{Context, Extension}
+import com.gicsports.state.Blockchain
+import com.gicsports.state.diffs.BlockDiffer
+import com.gicsports.utils.{Schedulers, ScorexLogging}
 import io.grpc.netty.NettyServerBuilder
 import io.grpc.{Metadata, Server, ServerStreamTracer, Status}
 import monix.execution.schedulers.SchedulerService
@@ -31,7 +31,7 @@ class BlockchainUpdates(private val context: Context) extends Extension with Sco
     rejectedExecutionHandler = new akka.dispatch.SaneRejectedExecutionHandler
   )
 
-  private[this] val settings = context.settings.config.as[BlockchainUpdatesSettings]("CARDIUM.blockchain-updates")
+  private[this] val settings = context.settings.config.as[BlockchainUpdatesSettings]("GIC.blockchain-updates")
   private[this] val db       = openDB(context.settings.directory + "/blockchain-updates")
   private[this] val repo     = new Repo(db, context.blocksApi)
 

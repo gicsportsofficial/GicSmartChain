@@ -1,10 +1,10 @@
-package com.wavesplatform.lang.v1.task
+package com.gicsports.lang.v1.task
 
 import cats.data.Kleisli
 import cats.syntax.either._
 import cats.syntax.functor._
 import cats.{Eval, Functor, Monad}
-import com.wavesplatform.lang.EvalF
+import com.gicsports.lang.EvalF
 import monix.execution.atomic.{Atomic, AtomicBuilder}
 
 /**

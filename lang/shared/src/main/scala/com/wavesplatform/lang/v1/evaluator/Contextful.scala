@@ -1,11 +1,11 @@
-package com.wavesplatform.lang.v1.evaluator
+package com.gicsports.lang.v1.evaluator
 
 import cats.syntax.applicative._
 import cats.syntax.either._
 import cats.{Eval, Monad}
-import com.wavesplatform.lang.v1.compiler.Terms.{EVALUATED, EXPR}
-import com.wavesplatform.lang.v1.compiler.Types.TYPE
-import com.wavesplatform.lang.{CoevalF, ExecutionError}
+import com.gicsports.lang.v1.compiler.Terms.{EVALUATED, EXPR}
+import com.gicsports.lang.v1.compiler.Types.TYPE
+import com.gicsports.lang.{CoevalF, ExecutionError}
 import monix.eval.Coeval
 
 sealed trait ContextfulNativeFunction[C[_[_]]] {

@@ -1,8 +1,8 @@
-package com.wavesplatform.lang.v1.evaluator.ctx.impl
-import com.wavesplatform.lang.v1.compiler.Terms.{CaseObj, EVALUATED}
-import com.wavesplatform.lang.v1.compiler.Types.CASETYPEREF
-import com.wavesplatform.lang.v1.evaluator.Contextful.NoContext
-import com.wavesplatform.lang.v1.evaluator.ContextfulVal
+package com.gicsports.lang.v1.evaluator.ctx.impl
+import com.gicsports.lang.v1.compiler.Terms.{CaseObj, EVALUATED}
+import com.gicsports.lang.v1.compiler.Types.CASETYPEREF
+import com.gicsports.lang.v1.evaluator.Contextful.NoContext
+import com.gicsports.lang.v1.evaluator.ContextfulVal
 
 import java.math.RoundingMode
 import java.math.RoundingMode._

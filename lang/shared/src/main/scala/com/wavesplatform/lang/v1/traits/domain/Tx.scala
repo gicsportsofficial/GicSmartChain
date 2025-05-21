@@ -1,8 +1,8 @@
-package com.wavesplatform.lang.v1.traits.domain
+package com.gicsports.lang.v1.traits.domain
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.v1.compiler.Terms.EVALUATED
-import com.wavesplatform.lang.v1.traits.domain.{Burn => BurnAction}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.v1.compiler.Terms.EVALUATED
+import com.gicsports.lang.v1.traits.domain.{Burn => BurnAction}
 
 case class TransferItem(recipient: Recipient, amount: Long)
 

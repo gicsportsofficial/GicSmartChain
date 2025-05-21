@@ -1,17 +1,17 @@
-package com.wavesplatform.lang.v1.repl
+package com.gicsports.lang.v1.repl
 
 import cats.arrow.FunctionK
 import cats.implicits.*
 
 import scala.concurrent.Future
 import cats.{Functor, Id, Monoid}
-import com.wavesplatform.lang.v1.CTX
-import com.wavesplatform.lang.v1.compiler.CompilerContext
-import com.wavesplatform.lang.v1.evaluator.ctx.EvaluationContext
-import com.wavesplatform.lang.v1.repl.node.ErrorMessageEnvironment
-import com.wavesplatform.lang.v1.repl.node.http.{NodeClient, NodeConnectionSettings}
-import com.wavesplatform.lang.v1.repl.node.http.WebEnvironment.executionContext
-import com.wavesplatform.lang.v1.traits.Environment
+import com.gicsports.lang.v1.CTX
+import com.gicsports.lang.v1.compiler.CompilerContext
+import com.gicsports.lang.v1.evaluator.ctx.EvaluationContext
+import com.gicsports.lang.v1.repl.node.ErrorMessageEnvironment
+import com.gicsports.lang.v1.repl.node.http.{NodeClient, NodeConnectionSettings}
+import com.gicsports.lang.v1.repl.node.http.WebEnvironment.executionContext
+import com.gicsports.lang.v1.traits.Environment
 import monix.execution.atomic.Atomic
 
 case class Repl(

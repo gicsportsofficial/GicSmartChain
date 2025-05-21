@@ -1,10 +1,10 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import cats.Id
-import com.wavesplatform.lang.CommonError
-import com.wavesplatform.lang.v1.compiler.TermPrinter
-import com.wavesplatform.lang.v1.evaluator.Log
-import com.wavesplatform.transaction.TxValidationError.FailedTransactionError
+import com.gicsports.lang.CommonError
+import com.gicsports.lang.v1.compiler.TermPrinter
+import com.gicsports.lang.v1.evaluator.Log
+import com.gicsports.transaction.TxValidationError.FailedTransactionError
 
 import scala.annotation.tailrec
 

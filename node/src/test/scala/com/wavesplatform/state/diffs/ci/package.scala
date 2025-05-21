@@ -1,15 +1,15 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.Terms.{BLOCK, FUNCTION_CALL, LET}
-import com.wavesplatform.state.diffs.FeeValidation.*
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.{TransactionType, TxVersion}
-import com.wavesplatform.transaction.smart.{InvokeExpressionTransaction, SetScriptTransaction}
+import com.gicsports.account.KeyPair
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.Terms.{BLOCK, FUNCTION_CALL, LET}
+import com.gicsports.state.diffs.FeeValidation.*
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.{TransactionType, TxVersion}
+import com.gicsports.transaction.smart.{InvokeExpressionTransaction, SetScriptTransaction}
 import org.scalacheck.Gen
 
 package object ci {

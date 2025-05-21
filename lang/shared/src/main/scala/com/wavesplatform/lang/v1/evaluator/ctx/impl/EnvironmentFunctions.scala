@@ -1,13 +1,13 @@
-package com.wavesplatform.lang.v1.evaluator.ctx.impl
+package com.gicsports.lang.v1.evaluator.ctx.impl
 
 import cats.Monad
 import cats.implicits._
-import com.wavesplatform.lang.{ExecutionError, CommonError}
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_BYTESTR, CONST_STRING, CaseObj}
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.Types
-import com.wavesplatform.lang.v1.traits.domain.Recipient
-import com.wavesplatform.lang.v1.traits.domain.Recipient.{Address, Alias}
-import com.wavesplatform.lang.v1.traits.{DataType, Environment}
+import com.gicsports.lang.{ExecutionError, CommonError}
+import com.gicsports.lang.v1.compiler.Terms.{CONST_BYTESTR, CONST_STRING, CaseObj}
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.Types
+import com.gicsports.lang.v1.traits.domain.Recipient
+import com.gicsports.lang.v1.traits.domain.Recipient.{Address, Alias}
+import com.gicsports.lang.v1.traits.{DataType, Environment}
 
 class EnvironmentFunctions[F[_]: Monad](environment: Environment[F]) {
 

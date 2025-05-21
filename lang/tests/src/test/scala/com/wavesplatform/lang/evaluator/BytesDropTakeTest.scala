@@ -1,13 +1,13 @@
-package com.wavesplatform.lang.evaluator
+package com.gicsports.lang.evaluator
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.directives.values.{V1, V5, V6}
-import com.wavesplatform.lang.v1.FunctionHeader.Native
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_BYTESTR, CONST_LONG, FUNCTION_CALL}
-import com.wavesplatform.lang.v1.evaluator.FunctionIds._
-import com.wavesplatform.test._
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_BYTESTR.NoLimit
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.directives.values.{V1, V5, V6}
+import com.gicsports.lang.v1.FunctionHeader.Native
+import com.gicsports.lang.v1.compiler.Terms.{CONST_BYTESTR, CONST_LONG, FUNCTION_CALL}
+import com.gicsports.lang.v1.evaluator.FunctionIds._
+import com.gicsports.test._
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.v1.compiler.Terms.CONST_BYTESTR.NoLimit
 
 class BytesDropTakeTest extends EvaluatorSpec {
   private val min   = Long.MinValue

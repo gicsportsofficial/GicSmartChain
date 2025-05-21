@@ -1,9 +1,9 @@
-package com.wavesplatform.api.http.requests
+package com.gicsports.api.http.requests
 
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.transaction.TxValidationError.GenericError
+import com.gicsports.account.PublicKey
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.Transaction
+import com.gicsports.transaction.TxValidationError.GenericError
 
 trait TxBroadcastRequest {
   def sender: Option[String]

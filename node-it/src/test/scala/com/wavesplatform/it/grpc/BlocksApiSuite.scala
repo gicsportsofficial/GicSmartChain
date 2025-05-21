@@ -1,21 +1,21 @@
-package com.wavesplatform.it.grpc
+package com.gicsports.it.grpc
 
 import com.google.common.primitives.Ints
 import com.typesafe.config.Config
-import com.wavesplatform.account.{AddressScheme, PublicKey}
-import com.wavesplatform.api.grpc.{BlockRangeRequest, BlockRequest, BlocksApiGrpc}
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.api.SyncGrpcApi._
-import com.wavesplatform.it.sync.grpc.GrpcBaseTransactionSuite
-import com.wavesplatform.protobuf.block._
-import com.wavesplatform.protobuf.transaction.PBRecipients
+import com.gicsports.account.{AddressScheme, PublicKey}
+import com.gicsports.api.grpc.{BlockRangeRequest, BlockRequest, BlocksApiGrpc}
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.api.SyncGrpcApi._
+import com.gicsports.it.sync.grpc.GrpcBaseTransactionSuite
+import com.gicsports.protobuf.block._
+import com.gicsports.protobuf.transaction.PBRecipients
 
 class BlocksApiSuite extends GrpcBaseTransactionSuite {
   private val BlockV4Height = 3
   private val BlockV5Height = 5
   override protected def nodeConfigs: Seq[Config] =
     NodeConfigs.newBuilder
-      .overrideBase(_.raw(s"""CARDIUM {
+      .overrideBase(_.raw(s"""GIC {
           |  miner { 
           |    quorum = 0
           |    max-transactions-in-micro-block = 1

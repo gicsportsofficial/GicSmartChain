@@ -1,7 +1,7 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.lang.script.Script
+import com.gicsports.account.PublicKey
+import com.gicsports.lang.script.Script
 
 case class AccountScriptInfo(
     publicKey: PublicKey,

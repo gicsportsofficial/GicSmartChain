@@ -1,24 +1,24 @@
-package com.wavesplatform.history
+package com.gicsports.history
 
-import com.wavesplatform._
-import com.wavesplatform.account.Address
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.database.{KeyTags, Keys}
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.Domain.BlockchainUpdaterExt
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.FUNCTION_CALL
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.state.diffs
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.GenesisTransaction
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports._
+import com.gicsports.account.Address
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.database.{KeyTags, Keys}
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.Domain.BlockchainUpdaterExt
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.FUNCTION_CALL
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.state.diffs
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.GenesisTransaction
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import org.scalacheck.Gen
 import org.scalatest._
 
@@ -79,7 +79,7 @@ class BlockchainUpdaterNFTTest extends PropSpec with DomainScenarioDrivenPropert
     forAll(Preconditions.nftList) {
       case (issue, (firstAccount, secondAccount), (genesisBlock, firstBlock, secondBlock, postBlock)) =>
         def assert(d: Domain): Assertion = {
-          import com.wavesplatform.database.DBExt
+          import com.gicsports.database.DBExt
 
           d.blockchainUpdater.processBlock(genesisBlock) should beRight
           d.blockchainUpdater.processBlock(firstBlock) should beRight

@@ -1,11 +1,11 @@
-package com.wavesplatform.consensus
+package com.gicsports.consensus
 
 import cats.data.NonEmptyList
-import com.wavesplatform.account.{KeyPair, PrivateKey, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.crypto
-import com.wavesplatform.test.PropSpec
+import com.gicsports.account.{KeyPair, PrivateKey, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.crypto
+import com.gicsports.test.PropSpec
 
 import scala.io.Source
 import scala.util.Random

@@ -1,6 +1,6 @@
-package com.wavesplatform
+package com.gicsports
 
-import com.wavesplatform.utils.{SystemTime, Time}
+import com.gicsports.utils.{SystemTime, Time}
 import org.scalatest.Suite
 
 trait NTPTime { _: Suite =>

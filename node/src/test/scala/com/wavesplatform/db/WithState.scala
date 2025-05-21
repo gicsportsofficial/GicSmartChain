@@ -1,29 +1,29 @@
-package com.wavesplatform.db
+package com.gicsports.db
 
 import java.nio.file.Files
 
-import com.wavesplatform.account.{Address, KeyPair}
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.database.{LevelDBFactory, LevelDBWriter, TestStorageFactory, loadActiveLeases}
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.events.BlockchainUpdateTriggers
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.Domain
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.directives.DirectiveDictionary
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.mining.MiningConstraint
-import com.wavesplatform.settings.{TestFunctionalitySettings as TFS, *}
-import com.wavesplatform.state.diffs.{BlockDiffer, ENOUGH_AMT}
-import com.wavesplatform.state.reader.CompositeBlockchain
-import com.wavesplatform.state.utils.TestLevelDB
-import com.wavesplatform.state.{Blockchain, BlockchainUpdaterImpl, Diff, Portfolio}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.smart.script.trace.TracedResult
-import com.wavesplatform.transaction.{Asset, Transaction, TxHelpers}
-import com.wavesplatform.{NTPTime, TestHelpers}
+import com.gicsports.account.{Address, KeyPair}
+import com.gicsports.block.Block
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.database.{LevelDBFactory, LevelDBWriter, TestStorageFactory, loadActiveLeases}
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.events.BlockchainUpdateTriggers
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.Domain
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.directives.DirectiveDictionary
+import com.gicsports.lang.directives.values.*
+import com.gicsports.mining.MiningConstraint
+import com.gicsports.settings.{TestFunctionalitySettings as TFS, *}
+import com.gicsports.state.diffs.{BlockDiffer, ENOUGH_AMT}
+import com.gicsports.state.reader.CompositeBlockchain
+import com.gicsports.state.utils.TestLevelDB
+import com.gicsports.state.{Blockchain, BlockchainUpdaterImpl, Diff, Portfolio}
+import com.gicsports.test.*
+import com.gicsports.transaction.smart.script.trace.TracedResult
+import com.gicsports.transaction.{Asset, Transaction, TxHelpers}
+import com.gicsports.{NTPTime, TestHelpers}
 import monix.reactive.Observer
 import monix.reactive.subjects.{PublishSubject, Subject}
 import org.iq80.leveldb.{DB, Options}
@@ -159,7 +159,7 @@ trait WithState extends DBCacheSettings with Matchers with NTPTime { _: Suite =>
 }
 
 trait WithDomain extends WithState { _: Suite =>
-  val DomainPresets = com.wavesplatform.test.DomainPresets
+  val DomainPresets = com.gicsports.test.DomainPresets
   import DomainPresets.*
 
   def domainSettingsWithFS(fs: FunctionalitySettings): WavesSettings =

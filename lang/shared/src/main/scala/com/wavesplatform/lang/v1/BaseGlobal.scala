@@ -1,32 +1,32 @@
-package com.wavesplatform.lang.v1
+package com.gicsports.lang.v1
 
 import scala.annotation.tailrec
 import scala.util.Random
 
 import cats.syntax.either.*
-import com.wavesplatform.lang.ValidationError.ScriptParseError
-import com.wavesplatform.lang.contract.meta.{FunctionSignatures, MetaMapper, ParsedMeta}
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.contract.serialization.{ContractSerDeV1, ContractSerDeV2}
-import com.wavesplatform.lang.directives.values.{Account, Call, Expression, ScriptType, StdLibVersion, V1, V2, V6, DApp as DAppType}
-import com.wavesplatform.lang.script.{ContractScript, Script}
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.utils
-import com.wavesplatform.lang.v1.BaseGlobal.{ArrayView, DAppInfo}
-import com.wavesplatform.lang.v1.compiler.{CompilationError, CompilerContext, ContractCompiler, ExpressionCompiler}
-import com.wavesplatform.lang.v1.compiler.CompilationError.Generic
-import com.wavesplatform.lang.v1.compiler.ScriptResultSource.CallableFunction
-import com.wavesplatform.lang.v1.compiler.Terms.EXPR
-import com.wavesplatform.lang.v1.compiler.Types.FINAL
-import com.wavesplatform.lang.v1.estimator.{ScriptEstimator, ScriptEstimatorV1}
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.Rounding
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.crypto.RSA.DigestAlgorithm
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.Rounding.*
-import com.wavesplatform.lang.v1.parser.Expressions
-import com.wavesplatform.lang.v1.parser.Expressions.Pos.AnyPos
-import com.wavesplatform.lang.v1.serialization.{SerdeV1, SerdeV2}
+import com.gicsports.lang.ValidationError.ScriptParseError
+import com.gicsports.lang.contract.meta.{FunctionSignatures, MetaMapper, ParsedMeta}
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.contract.serialization.{ContractSerDeV1, ContractSerDeV2}
+import com.gicsports.lang.directives.values.{Account, Call, Expression, ScriptType, StdLibVersion, V1, V2, V6, DApp as DAppType}
+import com.gicsports.lang.script.{ContractScript, Script}
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.utils
+import com.gicsports.lang.v1.BaseGlobal.{ArrayView, DAppInfo}
+import com.gicsports.lang.v1.compiler.{CompilationError, CompilerContext, ContractCompiler, ExpressionCompiler}
+import com.gicsports.lang.v1.compiler.CompilationError.Generic
+import com.gicsports.lang.v1.compiler.ScriptResultSource.CallableFunction
+import com.gicsports.lang.v1.compiler.Terms.EXPR
+import com.gicsports.lang.v1.compiler.Types.FINAL
+import com.gicsports.lang.v1.estimator.{ScriptEstimator, ScriptEstimatorV1}
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.lang.v1.evaluator.ctx.impl.Rounding
+import com.gicsports.lang.v1.evaluator.ctx.impl.crypto.RSA.DigestAlgorithm
+import com.gicsports.lang.v1.evaluator.ctx.impl.Rounding.*
+import com.gicsports.lang.v1.parser.Expressions
+import com.gicsports.lang.v1.parser.Expressions.Pos.AnyPos
+import com.gicsports.lang.v1.serialization.{SerdeV1, SerdeV2}
 
 /** This is a hack class for IDEA. The Global class is in JS/JVM modules. And IDEA can't find the Global class in the "shared" module, but it should!
   */
@@ -112,7 +112,7 @@ trait BaseGlobal {
     (for {
       compRes <- ExpressionCompiler.compileWithParseResult(input, offset, context)
       (compExpr, exprScript, compErrorList) = compRes
-      illegalBlockVersionUsage              = letBlockOnly && com.wavesplatform.lang.v1.compiler.containsBlockV2(compExpr)
+      illegalBlockVersionUsage              = letBlockOnly && com.gicsports.lang.v1.compiler.containsBlockV2(compExpr)
       _ <- Either.cond(!illegalBlockVersionUsage, (), "UserFunctions are only enabled in STDLIB_VERSION >= 3").leftMap((_, 0, 0))
       bytes = if (compErrorList.isEmpty) serializeExpression(compExpr, stdLibVersion) else Array.empty[Byte]
 
@@ -192,7 +192,7 @@ trait BaseGlobal {
           Right(())
       _ <- ExprScript.checkComplexity(version, complexity, scriptType == Account, scriptType == Call)
       illegalBlockVersionUsage = LetBlockVersions.contains(version) &&
-        com.wavesplatform.lang.v1.compiler.containsBlockV2(expr)
+        com.gicsports.lang.v1.compiler.containsBlockV2(expr)
       _ <- Either.cond(
         !illegalBlockVersionUsage,
         (),

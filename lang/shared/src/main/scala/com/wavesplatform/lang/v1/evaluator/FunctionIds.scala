@@ -1,4 +1,4 @@
-package com.wavesplatform.lang.v1.evaluator
+package com.gicsports.lang.v1.evaluator
 
 object FunctionIds {
 

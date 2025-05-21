@@ -1,8 +1,8 @@
-package com.wavesplatform.lang.parser
-import com.wavesplatform.lang.directives.values.{Expression, V6}
-import com.wavesplatform.lang.utils.*
-import com.wavesplatform.lang.v1.compiler.{Decompiler, TestCompiler}
-import com.wavesplatform.test.PropSpec
+package com.gicsports.lang.parser
+import com.gicsports.lang.directives.values.{Expression, V6}
+import com.gicsports.lang.utils.*
+import com.gicsports.lang.v1.compiler.{Decompiler, TestCompiler}
+import com.gicsports.test.PropSpec
 
 class DeclarationSpacesTest extends PropSpec {
   property("absence of spaces between declaration syntax symbols should not be significant") {

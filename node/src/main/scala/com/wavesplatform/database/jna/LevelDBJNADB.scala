@@ -1,8 +1,8 @@
-package com.wavesplatform.database.jna
+package com.gicsports.database.jna
 
 import com.google.common.collect.AbstractIterator
 import com.protonail.leveldb.jna._
-import com.wavesplatform.database.jna.LevelDBJNADB.{JNADBIterator, JNASnapshot, JNAWriteBatch}
+import com.gicsports.database.jna.LevelDBJNADB.{JNADBIterator, JNASnapshot, JNAWriteBatch}
 import org.iq80.leveldb._
 
 private[jna] class LevelDBJNADB(levelDB: LevelDB) extends DB {

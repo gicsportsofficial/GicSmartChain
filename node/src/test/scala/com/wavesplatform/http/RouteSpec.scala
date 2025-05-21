@@ -1,12 +1,12 @@
-package com.wavesplatform.http
+package com.gicsports.http
 
 import akka.http.scaladsl.model.{ContentTypes, FormData, HttpEntity}
 import akka.http.scaladsl.server.{ExceptionHandler, Route}
 import akka.http.scaladsl.testkit.*
-import com.wavesplatform.api.http
-import com.wavesplatform.api.http.ApiMarshallers
-import com.wavesplatform.test.*
-import com.wavesplatform.utils.JsonMatchers
+import com.gicsports.api.http
+import com.gicsports.api.http.ApiMarshallers
+import com.gicsports.test.*
+import com.gicsports.utils.JsonMatchers
 import play.api.libs.json.Json
 
 abstract class RouteSpec(basePath: String) extends FreeSpec with ScalatestRouteTest with ApiErrorMatchers with JsonMatchers with ApiMarshallers {
@@ -18,7 +18,7 @@ abstract class RouteSpec(basePath: String) extends FreeSpec with ScalatestRouteT
   implicit class RouteTestingOps(route: Route) {
 
     /**
-      * Convenient utility for testing multi-routes created with the [[com.wavesplatform.api.http.CustomDirectives#anyParam(java.lang.String)]] directive
+      * Convenient utility for testing multi-routes created with the [[com.gicsports.api.http.CustomDirectives#anyParam(java.lang.String)]] directive
       * @param baseUrl Base route URL
       * @param paramName Parameter name
       * @param values Values passed to routes

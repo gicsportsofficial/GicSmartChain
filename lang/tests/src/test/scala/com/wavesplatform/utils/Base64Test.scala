@@ -1,7 +1,7 @@
-package com.wavesplatform.utils
+package com.gicsports.utils
 
-import com.wavesplatform.common.utils.Base64
-import com.wavesplatform.test.PropSpec
+import com.gicsports.common.utils.Base64
+import com.gicsports.test.PropSpec
 import org.scalacheck.Gen
 
 class Base64Test extends PropSpec {

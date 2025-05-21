@@ -1,4 +1,4 @@
-package com.wavesplatform.lang
+package com.gicsports.lang
 
 import java.math.{BigInteger, MathContext, BigDecimal => BD}
 import java.security.spec.InvalidKeySpecException
@@ -7,15 +7,15 @@ import cats.syntax.either._
 import ch.obermuhlner.math.big.BigDecimalMath
 import com.google.common.base.Utf8
 import com.google.common.io.BaseEncoding
-import com.wavesplatform.common.merkle.Merkle
-import com.wavesplatform.common.utils.{Base58, Base64}
-import com.wavesplatform.crypto.{Blake2b256, Curve25519, Keccak256, Sha256}
-import com.wavesplatform.lang.v1.BaseGlobal
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.Rounding
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.crypto.RSA
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.crypto.RSA.DigestAlgorithm
-import com.wavesplatform.zwaves.bls12.{Groth16 => Bls12Groth16}
-import com.wavesplatform.zwaves.bn256.{Groth16 => Bn256Groth16}
+import com.gicsports.common.merkle.Merkle
+import com.gicsports.common.utils.{Base58, Base64}
+import com.gicsports.crypto.{Blake2b256, Curve25519, Keccak256, Sha256}
+import com.gicsports.lang.v1.BaseGlobal
+import com.gicsports.lang.v1.evaluator.ctx.impl.Rounding
+import com.gicsports.lang.v1.evaluator.ctx.impl.crypto.RSA
+import com.gicsports.lang.v1.evaluator.ctx.impl.crypto.RSA.DigestAlgorithm
+import com.gicsports.zwaves.bls12.{Groth16 => Bls12Groth16}
+import com.gicsports.zwaves.bn256.{Groth16 => Bn256Groth16}
 import org.web3j.crypto.Sign
 import org.web3j.crypto.Sign.SignatureData
 

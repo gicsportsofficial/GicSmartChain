@@ -1,6 +1,6 @@
-package com.wavesplatform.lang.impl
+package com.gicsports.lang.impl
 
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.crypto.RSA.DigestAlgorithm
+import com.gicsports.lang.v1.evaluator.ctx.impl.crypto.RSA.DigestAlgorithm
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSGlobalScope

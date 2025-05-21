@@ -1,14 +1,14 @@
-package com.wavesplatform.transaction.assets.exchange
+package com.gicsports.transaction.assets.exchange
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.TestValues
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.protobuf.order.AssetPair as PBAssetPair
-import com.wavesplatform.protobuf.transaction.{PBAmounts, PBOrder, PBOrders}
-import com.wavesplatform.test.FlatSpec
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.smart.Verifier
+import com.gicsports.TestValues
+import com.gicsports.account.AddressScheme
+import com.gicsports.common.utils.*
+import com.gicsports.protobuf.order.AssetPair as PBAssetPair
+import com.gicsports.protobuf.transaction.{PBAmounts, PBOrder, PBOrders}
+import com.gicsports.test.FlatSpec
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.smart.Verifier
 
 class PBOrdersSpecification extends FlatSpec {
   private[this] val protoOrder = PBOrder(

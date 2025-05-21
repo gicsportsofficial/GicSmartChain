@@ -1,19 +1,19 @@
-package com.wavesplatform.it.sync.activation
+package com.gicsports.it.sync.activation
 
 import com.typesafe.config.Config
-import com.wavesplatform.api.http.ApiError.{CustomValidationError, StateCheckFailed}
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.crypto
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.NodeConfigs.Default
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.api.TransactionInfo
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.transaction.{TxExchangePrice, TxVersion}
-import com.wavesplatform.transaction.assets.exchange.{AssetPair, Order}
+import com.gicsports.api.http.ApiError.{CustomValidationError, StateCheckFailed}
+import com.gicsports.block.Block
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.crypto
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.NodeConfigs.Default
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.api.TransactionInfo
+import com.gicsports.it.sync._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.transaction.{TxExchangePrice, TxVersion}
+import com.gicsports.transaction.assets.exchange.{AssetPair, Order}
 
 import scala.concurrent.duration._
 
@@ -25,7 +25,7 @@ class VRFProtobufActivationSuite extends BaseTransactionSuite {
       .Builder(Default, 1, Seq.empty)
       .overrideBase(_.quorum(0))
       .overrideBase(_.preactivatedFeatures((BlockchainFeatures.BlockV5.id, activationHeight)))
-      .overrideBase(_.raw(s"CARDIUM.blockchain.custom.functionality.min-asset-info-update-interval = $updateInterval"))
+      .overrideBase(_.raw(s"GIC.blockchain.custom.functionality.min-asset-info-update-interval = $updateInterval"))
       .buildNonConflicting()
 
   private def senderAcc             = firstKeyPair
@@ -219,7 +219,7 @@ class VRFProtobufActivationSuite extends BaseTransactionSuite {
         version = TxVersion.V2,
         sender.keyPair,
         sender.publicKey,
-        AssetPair.createAssetPair("CARDIUM", assetId).get,
+        AssetPair.createAssetPair("GIC", assetId).get,
         amount,
         price,
         ts,
@@ -232,7 +232,7 @@ class VRFProtobufActivationSuite extends BaseTransactionSuite {
         version = TxVersion.V2,
         sender.keyPair,
         sender.publicKey,
-        AssetPair.createAssetPair("CARDIUM", assetId).get,
+        AssetPair.createAssetPair("GIC", assetId).get,
         amount,
         price,
         ts,

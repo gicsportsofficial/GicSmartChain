@@ -1,8 +1,8 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.*
-import com.wavesplatform.transaction.lease.*
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.*
+import com.gicsports.transaction.lease.*
 
 object LeaseTransactionsDiff {
   def lease(blockchain: Blockchain)(tx: LeaseTransaction): Either[ValidationError, Diff] =

@@ -1,8 +1,8 @@
-package com.wavesplatform.mining
+package com.gicsports.mining
 
 import cats.data.NonEmptyList
-import com.wavesplatform.state.{Blockchain, Diff}
-import com.wavesplatform.transaction.Transaction
+import com.gicsports.state.{Blockchain, Diff}
+import com.gicsports.transaction.Transaction
 
 trait MiningConstraint {
   def isFull: Boolean

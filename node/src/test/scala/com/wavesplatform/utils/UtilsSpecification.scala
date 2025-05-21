@@ -1,17 +1,17 @@
-package com.wavesplatform.utils
+package com.gicsports.utils
 
 import cats.Id
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.V3
-import com.wavesplatform.lang.utils._
-import com.wavesplatform.lang.v1.compiler.Terms.{FUNCTION_CALL, TRUE}
-import com.wavesplatform.lang.v1.compiler.Types.BOOLEAN
-import com.wavesplatform.lang.v1.evaluator.ctx.{EvaluationContext, UserFunction}
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.state.diffs.smart.predef.chainId
-import com.wavesplatform.test.FreeSpec
-import com.wavesplatform.transaction.smart.WavesEnvironment
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.V3
+import com.gicsports.lang.utils._
+import com.gicsports.lang.v1.compiler.Terms.{FUNCTION_CALL, TRUE}
+import com.gicsports.lang.v1.compiler.Types.BOOLEAN
+import com.gicsports.lang.v1.evaluator.ctx.{EvaluationContext, UserFunction}
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.state.diffs.smart.predef.chainId
+import com.gicsports.test.FreeSpec
+import com.gicsports.transaction.smart.WavesEnvironment
 import monix.eval.Coeval
 
 class UtilsSpecification extends FreeSpec {

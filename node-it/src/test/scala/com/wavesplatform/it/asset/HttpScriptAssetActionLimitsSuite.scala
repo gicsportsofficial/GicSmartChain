@@ -1,17 +1,17 @@
-package com.wavesplatform.it.asset
+package com.gicsports.it.asset
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.it.sync.{issueFee, minFee, smartMinFee}
-import com.wavesplatform.lang.directives.values.{V4, V5, V6}
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_BYTESTR
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.account.KeyPair
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.it.sync.{issueFee, minFee, smartMinFee}
+import com.gicsports.lang.directives.values.{V4, V5, V6}
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.compiler.Terms.CONST_BYTESTR
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.test.*
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
 
 class HttpScriptAssetActionLimitsSuite extends ScriptAssetActionLimitsSuite {
 

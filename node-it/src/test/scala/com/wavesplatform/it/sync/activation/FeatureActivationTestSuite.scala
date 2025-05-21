@@ -1,10 +1,10 @@
-package com.wavesplatform.it.sync.activation
+package com.gicsports.it.sync.activation
 
 import com.typesafe.config.Config
-import com.wavesplatform.features.api.NodeFeatureStatus
-import com.wavesplatform.features.{BlockchainFeatureStatus, BlockchainFeatures}
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.{BaseFreeSpec, NodeConfigs, ReportingTestName}
+import com.gicsports.features.api.NodeFeatureStatus
+import com.gicsports.features.{BlockchainFeatureStatus, BlockchainFeatures}
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.{BaseFreeSpec, NodeConfigs, ReportingTestName}
 
 class FeatureActivationTestSuite extends BaseFreeSpec with ActivationStatusRequest with ReportingTestName {
 
@@ -15,7 +15,7 @@ class FeatureActivationTestSuite extends BaseFreeSpec with ActivationStatusReque
 
   override protected def nodeConfigs: Seq[Config] = {
     NodeConfigs.newBuilder
-      .overrideBase(_.raw(s"""CARDIUM {
+      .overrideBase(_.raw(s"""GIC {
                                |  blockchain.custom.functionality {
                                |    pre-activated-features = {}
                                |    feature-check-blocks-period = $votingInterval

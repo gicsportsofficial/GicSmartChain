@@ -1,20 +1,20 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
 import cats.instances.either.*
 import cats.syntax.flatMap.*
 import cats.syntax.ior.*
 import com.google.common.base.Utf8
 import com.google.protobuf.ByteString
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.EstimatorProvider.*
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.traits.domain.{Burn, Reissue, SponsorFee}
-import com.wavesplatform.state.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.assets.*
-import com.wavesplatform.transaction.{Asset, ERC20Address}
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.EstimatorProvider.*
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.traits.domain.{Burn, Reissue, SponsorFee}
+import com.gicsports.state.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.assets.*
+import com.gicsports.transaction.{Asset, ERC20Address}
 
 object AssetTransactionsDiff {
   def issue(blockchain: Blockchain)(tx: IssueTransaction): Either[ValidationError, Diff] = { // TODO: unify with InvokeScript action diff?

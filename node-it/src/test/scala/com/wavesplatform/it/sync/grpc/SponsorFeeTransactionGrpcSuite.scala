@@ -1,12 +1,12 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.it.api.SyncGrpcApi.*
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.protobuf.Amount
-import com.wavesplatform.protobuf.transaction.{PBTransactions, Recipient}
-import com.wavesplatform.state.diffs.FeeValidation
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.it.api.SyncGrpcApi.*
+import com.gicsports.it.sync.*
+import com.gicsports.protobuf.Amount
+import com.gicsports.protobuf.transaction.{PBTransactions, Recipient}
+import com.gicsports.state.diffs.FeeValidation
 import io.grpc.Status.Code
 
 class SponsorFeeTransactionGrpcSuite extends GrpcBaseTransactionSuite {
@@ -172,7 +172,7 @@ class SponsorFeeTransactionGrpcSuite extends GrpcBaseTransactionSuite {
           feeAssetId = sponsoredAssetId,
           waitForTx = true
         ),
-        s"does not exceed minimal value of $minFee CARDIUM or $largeFee $sponsoredAssetId",
+        s"does not exceed minimal value of $minFee GIC or $largeFee $sponsoredAssetId",
         Code.INVALID_ARGUMENT
       )
       val aliceWavesBalance   = sender.wavesBalance(aliceAddress)

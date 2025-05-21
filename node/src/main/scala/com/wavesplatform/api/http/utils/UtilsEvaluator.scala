@@ -1,31 +1,31 @@
-package com.wavesplatform.api.http.utils
+package com.gicsports.api.http.utils
 
 import cats.Id
 import cats.syntax.either.*
-import com.wavesplatform.account.{Address, AddressOrAlias, AddressScheme, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.features.EstimatorProvider.*
-import com.wavesplatform.features.EvaluatorFixProvider.*
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.{DApp as DAppType, *}
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.Terms.{EVALUATED, EXPR}
-import com.wavesplatform.lang.v1.compiler.{ContractScriptCompactor, ExpressionCompiler, Terms}
-import com.wavesplatform.lang.v1.evaluator.ContractEvaluator.{Invocation, LogExtraInfo}
-import com.wavesplatform.lang.v1.evaluator.{ContractEvaluator, EvaluatorV2, Log}
-import com.wavesplatform.lang.v1.traits.Environment.Tthis
-import com.wavesplatform.lang.v1.traits.domain.Recipient
-import com.wavesplatform.lang.v1.{ContractLimits, FunctionHeader}
-import com.wavesplatform.lang.{ValidationError, utils}
-import com.wavesplatform.state.diffs.invoke.InvokeScriptTransactionLike
-import com.wavesplatform.state.{Blockchain, Diff}
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TransactionType.TransactionType
-import com.wavesplatform.transaction.TxValidationError.{GenericError, InvokeRejectError}
-import com.wavesplatform.transaction.smart.*
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.{Asset, TransactionType}
+import com.gicsports.account.{Address, AddressOrAlias, AddressScheme, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.features.EstimatorProvider.*
+import com.gicsports.features.EvaluatorFixProvider.*
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.{DApp as DAppType, *}
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.Terms.{EVALUATED, EXPR}
+import com.gicsports.lang.v1.compiler.{ContractScriptCompactor, ExpressionCompiler, Terms}
+import com.gicsports.lang.v1.evaluator.ContractEvaluator.{Invocation, LogExtraInfo}
+import com.gicsports.lang.v1.evaluator.{ContractEvaluator, EvaluatorV2, Log}
+import com.gicsports.lang.v1.traits.Environment.Tthis
+import com.gicsports.lang.v1.traits.domain.Recipient
+import com.gicsports.lang.v1.{ContractLimits, FunctionHeader}
+import com.gicsports.lang.{ValidationError, utils}
+import com.gicsports.state.diffs.invoke.InvokeScriptTransactionLike
+import com.gicsports.state.{Blockchain, Diff}
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TransactionType.TransactionType
+import com.gicsports.transaction.TxValidationError.{GenericError, InvokeRejectError}
+import com.gicsports.transaction.smart.*
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.{Asset, TransactionType}
 import monix.eval.Coeval
 import shapeless.Coproduct
 

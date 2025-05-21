@@ -1,9 +1,9 @@
-package com.wavesplatform.crypto
+package com.gicsports.crypto
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
-import com.wavesplatform.test.PropSpec
+import com.gicsports.account.KeyPair
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
+import com.gicsports.test.PropSpec
 
 class SigningFunctionsSpecification extends PropSpec {
 

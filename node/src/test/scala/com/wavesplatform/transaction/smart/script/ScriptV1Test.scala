@@ -1,16 +1,16 @@
-package com.wavesplatform.transaction.smart.script
+package com.gicsports.transaction.smart.script
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms._
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.lang.v1.evaluator.FunctionIds._
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext
-import com.wavesplatform.lang.v1.testing.TypedScriptGen
-import com.wavesplatform.test._
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms._
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.lang.v1.evaluator.FunctionIds._
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext
+import com.gicsports.lang.v1.testing.TypedScriptGen
+import com.gicsports.test._
 
 class ScriptV1Test extends PropSpec with TypedScriptGen {
 
@@ -70,7 +70,7 @@ class ScriptV1Test extends PropSpec with TypedScriptGen {
       FUNCTION_CALL(FunctionHeader.Native(SUM_LONG), List(CONST_LONG(1), acc))
     }
 
-    com.wavesplatform.lang.v1.compiler.containsBlockV2(expr) shouldBe false
+    com.gicsports.lang.v1.compiler.containsBlockV2(expr) shouldBe false
   }
 
 }

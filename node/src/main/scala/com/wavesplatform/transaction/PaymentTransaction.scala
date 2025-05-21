@@ -1,14 +1,14 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import scala.util.Try
 
-import com.wavesplatform.account.{Address, KeyPair, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.serialization.impl.PaymentTxSerializer
-import com.wavesplatform.transaction.validation.TxValidator
-import com.wavesplatform.transaction.validation.impl.PaymentTxValidator
+import com.gicsports.account.{Address, KeyPair, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.serialization.impl.PaymentTxSerializer
+import com.gicsports.transaction.validation.TxValidator
+import com.gicsports.transaction.validation.impl.PaymentTxValidator
 import monix.eval.Coeval
 import play.api.libs.json.JsObject
 
@@ -63,7 +63,7 @@ object PaymentTransaction extends TransactionParser {
   ): Either[ValidationError, PaymentTransaction] =
     for {
       fee    <- TxPositiveAmount(fee)(TxValidationError.InsufficientFee)
-      amount <- TxPositiveAmount(amount)(TxValidationError.NonPositiveAmount(amount, "CARDIUM"))
+      amount <- TxPositiveAmount(amount)(TxValidationError.NonPositiveAmount(amount, "GIC"))
       tx     <- PaymentTransaction(sender, recipient, amount, fee, timestamp, signature, recipient.chainId).validatedEither
     } yield tx
 }

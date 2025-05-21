@@ -1,13 +1,13 @@
-package com.wavesplatform.block
+package com.gicsports.block
 
-import com.wavesplatform.account.{KeyPair, PublicKey}
-import com.wavesplatform.block.Block.BlockId
-import com.wavesplatform.block.serialization.MicroBlockSerializer
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.*
-import com.wavesplatform.transaction.*
+import com.gicsports.account.{KeyPair, PublicKey}
+import com.gicsports.block.Block.BlockId
+import com.gicsports.block.serialization.MicroBlockSerializer
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.*
+import com.gicsports.transaction.*
 import monix.eval.Coeval
 
 import scala.util.Try

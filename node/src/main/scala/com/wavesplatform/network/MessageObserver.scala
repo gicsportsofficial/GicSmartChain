@@ -1,8 +1,8 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
-import com.wavesplatform.block.Block
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.utils.{Schedulers, ScorexLogging}
+import com.gicsports.block.Block
+import com.gicsports.transaction.Transaction
+import com.gicsports.utils.{Schedulers, ScorexLogging}
 import io.netty.channel.ChannelHandler.Sharable
 import io.netty.channel.{Channel, ChannelHandlerContext, ChannelInboundHandlerAdapter}
 import monix.execution.schedulers.SchedulerService

@@ -1,6 +1,6 @@
-package com.wavesplatform.transaction.serialization.impl
+package com.gicsports.transaction.serialization.impl
 
-import com.wavesplatform.transaction.{PBSince, ProvenTransaction, SigProofsSwitch, Transaction, VersionedTransaction}
+import com.gicsports.transaction.{PBSince, ProvenTransaction, SigProofsSwitch, Transaction, VersionedTransaction}
 import play.api.libs.json.{JsArray, JsObject, JsString, Json}
 
 object BaseTxJson {

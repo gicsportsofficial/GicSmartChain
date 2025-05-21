@@ -1,16 +1,16 @@
-package com.wavesplatform.settings
+package com.gicsports.settings
 
 import java.io.File
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.test.FlatSpec
+import com.gicsports.test.FlatSpec
 
 class WavesSettingsSpecification extends FlatSpec {
 
   private def config(configName: String) = {
     WavesSettings.fromRootConfig(
-      com.wavesplatform.settings.loadConfig(
-        ConfigFactory.parseFile(new File(s"cardium-$configName.conf"))
+      com.gicsports.settings.loadConfig(
+        ConfigFactory.parseFile(new File(s"gic-$configName.conf"))
       )
     )
   }
@@ -20,10 +20,10 @@ class WavesSettingsSpecification extends FlatSpec {
       val settings = config(configName)
 
       val expected = ConfigFactory
-        .parseString(s"CARDIUM.directory = ${com.wavesplatform.settings.defaultDirectory(settings.config)}")
+        .parseString(s"GIC.directory = ${com.gicsports.settings.defaultDirectory(settings.config)}")
         .withFallback(ConfigFactory.load())
         .resolve()
-        .getString("CARDIUM.directory")
+        .getString("GIC.directory")
 
       settings.directory should be(expected)
       settings.networkSettings should not be null
@@ -42,7 +42,7 @@ class WavesSettingsSpecification extends FlatSpec {
   testConfig("devnet")()
 
   "TNSettings" should "resolve folders correctly" in {
-    val config = loadConfig(ConfigFactory.parseString(s"""CARDIUM {
+    val config = loadConfig(ConfigFactory.parseString(s"""GIC {
          |  directory = "/xxx"
          |  data-directory = "/xxx/data"
          |  ntp-server = "example.com"

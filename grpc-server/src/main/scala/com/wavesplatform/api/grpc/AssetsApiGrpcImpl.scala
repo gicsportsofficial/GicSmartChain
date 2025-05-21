@@ -1,12 +1,12 @@
-package com.wavesplatform.api.grpc
+package com.gicsports.api.grpc
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.api.common.{CommonAccountsApi, CommonAssetsApi}
-import com.wavesplatform.api.http.ApiError.TransactionDoesNotExist
-import com.wavesplatform.protobuf._
-import com.wavesplatform.protobuf.transaction.PBTransactions
-import com.wavesplatform.state.{AssetDescription, AssetScriptInfo}
-import com.wavesplatform.transaction.Asset.IssuedAsset
+import com.gicsports.account.Address
+import com.gicsports.api.common.{CommonAccountsApi, CommonAssetsApi}
+import com.gicsports.api.http.ApiError.TransactionDoesNotExist
+import com.gicsports.protobuf._
+import com.gicsports.protobuf.transaction.PBTransactions
+import com.gicsports.state.{AssetDescription, AssetScriptInfo}
+import com.gicsports.transaction.Asset.IssuedAsset
 import io.grpc.stub.StreamObserver
 import monix.execution.Scheduler
 import monix.reactive.Observable

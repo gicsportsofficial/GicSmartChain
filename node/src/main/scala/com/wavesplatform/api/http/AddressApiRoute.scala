@@ -1,4 +1,4 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import akka.NotUsed
 import akka.http.scaladsl.marshalling.{ToResponseMarshallable, ToResponseMarshaller}
@@ -7,28 +7,28 @@ import akka.http.scaladsl.server.{Directive0, Route}
 import akka.stream.scaladsl.Source
 import cats.instances.option.*
 import cats.syntax.traverse.*
-import com.wavesplatform.account.{Address, PublicKey}
-import com.wavesplatform.api.common.CommonAccountsApi
-import com.wavesplatform.api.http.ApiError.*
-import com.wavesplatform.api.http.requests.DataRequest
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, Base64}
-import com.wavesplatform.crypto
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.EstimatorProvider.*
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.contract.meta.FunctionSignatures
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.{Global, ValidationError}
-import com.wavesplatform.network.TransactionPublisher
-import com.wavesplatform.settings.RestAPISettings
-import com.wavesplatform.state.diffs.FeeValidation
-import com.wavesplatform.state.{Blockchain, DataEntry}
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.{Asset, TransactionFactory}
-import com.wavesplatform.utils.{Time, *}
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.account.{Address, PublicKey}
+import com.gicsports.api.common.CommonAccountsApi
+import com.gicsports.api.http.ApiError.*
+import com.gicsports.api.http.requests.DataRequest
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, Base64}
+import com.gicsports.crypto
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.EstimatorProvider.*
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.contract.meta.FunctionSignatures
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.{Global, ValidationError}
+import com.gicsports.network.TransactionPublisher
+import com.gicsports.settings.RestAPISettings
+import com.gicsports.state.diffs.FeeValidation
+import com.gicsports.state.{Blockchain, DataEntry}
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.{Asset, TransactionFactory}
+import com.gicsports.utils.{Time, *}
+import com.gicsports.wallet.Wallet
 import monix.execution.Scheduler
 import play.api.libs.json.*
 

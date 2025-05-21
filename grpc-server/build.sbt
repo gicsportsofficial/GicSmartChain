@@ -1,12 +1,12 @@
 import sbt.nio.file.FileAttributes
 
-name := "cardium-grpc-server"
+name := "gic-grpc-server"
 
 libraryDependencies ++= Dependencies.grpc
 
 extensionClasses ++= Seq(
-  "com.wavesplatform.api.grpc.GRPCServerExtension",
-  "com.wavesplatform.events.BlockchainUpdates"
+  "com.gicsports.api.grpc.GRPCServerExtension",
+  "com.gicsports.events.BlockchainUpdates"
 )
 
 inConfig(Compile)(

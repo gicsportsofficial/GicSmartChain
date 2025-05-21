@@ -1,19 +1,19 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
 import com.typesafe.config.Config
-import com.wavesplatform.api.http.ApiError.{CustomValidationError, StateCheckFailed}
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.it.sync.smartcontract.exchangeTx
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.it.{NTPTime, NodeConfigs}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.assets.exchange.*
-import com.wavesplatform.transaction.{TxExchangeAmount, TxExchangePrice, TxVersion}
+import com.gicsports.api.http.ApiError.{CustomValidationError, StateCheckFailed}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.it.sync.*
+import com.gicsports.it.sync.smartcontract.exchangeTx
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.it.{NTPTime, NodeConfigs}
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.assets.exchange.*
+import com.gicsports.transaction.{TxExchangeAmount, TxExchangePrice, TxVersion}
 import play.api.libs.json.{JsNumber, JsObject, JsString, Json}
 
 class ExchangeTransactionSuite extends BaseTransactionSuite with NTPTime {
@@ -63,7 +63,7 @@ class ExchangeTransactionSuite extends BaseTransactionSuite with NTPTime {
       val sellAmount = 1
       val amount     = 1
 
-      val pair = AssetPair.createAssetPair("CARDIUM", assetId).get
+      val pair = AssetPair.createAssetPair("GIC", assetId).get
       val buy  = Order.buy(buyVersion, buyer, matcher.publicKey, pair, buyAmount, buyPrice, ts, expirationTimestamp, matcherFee).explicitGet()
       val sell = Order.sell(sellVersion, seller, matcher.publicKey, pair, sellAmount, sellPrice, ts, expirationTimestamp, matcherFee).explicitGet()
 
@@ -140,7 +140,7 @@ class ExchangeTransactionSuite extends BaseTransactionSuite with NTPTime {
 
   test("negative - check orders v2 and v3 with exchange tx v1") {
     if (sender.findTransactionInfo(exchAsset.id().toString).isEmpty) sender.postJson("/transactions/broadcast", exchAsset.json())
-    val pair = AssetPair.createAssetPair("CARDIUM", exchAsset.id().toString).get
+    val pair = AssetPair.createAssetPair("GIC", exchAsset.id().toString).get
 
     for (
       (o1ver, o2ver) <- Seq(
@@ -209,7 +209,7 @@ class ExchangeTransactionSuite extends BaseTransactionSuite with NTPTime {
       val sellPrice  = 500000
       val buyAmount  = 40000000
       val sellAmount = 40000000
-      val assetPair  = AssetPair.createAssetPair("CARDIUM", assetId.toString).get
+      val assetPair  = AssetPair.createAssetPair("GIC", assetId.toString).get
       val buy = Order
         .buy(o1ver, buyer, matcher.publicKey, assetPair, buyAmount, buyPrice, ts, expirationTimestamp, matcherFee, matcherFeeOrder1)
         .explicitGet()
@@ -288,7 +288,7 @@ class ExchangeTransactionSuite extends BaseTransactionSuite with NTPTime {
     val nftWavesPrice       = 1000 * math.pow(10, 8).toLong
     val nftForAssetPrice    = 1 * math.pow(10, 8).toLong
 
-    val nftWavesPair      = AssetPair.createAssetPair(nftAsset, "CARDIUM").get
+    val nftWavesPair      = AssetPair.createAssetPair(nftAsset, "GIC").get
     val nftOtherAssetPair = AssetPair.createAssetPair(nftAsset, dec6AssetId).get
 
     val sellNftForWaves =

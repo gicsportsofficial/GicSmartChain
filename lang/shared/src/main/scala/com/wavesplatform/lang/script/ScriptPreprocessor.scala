@@ -1,4 +1,4 @@
-package com.wavesplatform.lang.script
+package com.gicsports.lang.script
 
 import cats.data.NonEmptyChain
 import cats.instances.either.*
@@ -9,8 +9,8 @@ import cats.syntax.foldable.*
 import cats.syntax.option.*
 import cats.syntax.traverse.*
 import cats.syntax.unorderedTraverse.*
-import com.wavesplatform.lang.directives.values.{Imports, Library}
-import com.wavesplatform.lang.directives.{Directive, DirectiveKey, DirectiveParser}
+import com.gicsports.lang.directives.values.{Imports, Library}
+import com.gicsports.lang.directives.{Directive, DirectiveKey, DirectiveParser}
 
 object ScriptPreprocessor {
   def apply(

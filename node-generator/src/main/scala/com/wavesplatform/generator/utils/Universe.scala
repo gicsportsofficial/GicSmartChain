@@ -1,8 +1,8 @@
-package com.wavesplatform.generator.utils
+package com.gicsports.generator.utils
 
-import com.wavesplatform.generator.Preconditions.CreatedAccount
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.lease.LeaseTransaction
+import com.gicsports.generator.Preconditions.CreatedAccount
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.lease.LeaseTransaction
 
 object Universe {
   @volatile var Accounts: List[CreatedAccount]       = Nil

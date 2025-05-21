@@ -1,23 +1,23 @@
-package com.wavesplatform.http
+package com.gicsports.http
 
 import akka.http.scaladsl.model.StatusCodes
-import com.wavesplatform.RequestGen
-import com.wavesplatform.api.common.{CommonAccountsApi, CommonAssetsApi}
-import com.wavesplatform.api.http.ApiError.*
-import com.wavesplatform.api.http.RouteTimeout
-import com.wavesplatform.api.http.assets.*
-import com.wavesplatform.api.http.requests.{SignedTransferV1Request, SignedTransferV2Request}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.state.diffs.TransactionDiffer.TransactionValidationError
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.transaction.{Asset, Proofs, Transaction, TxPositiveAmount}
-import com.wavesplatform.utils.{Time, *}
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.RequestGen
+import com.gicsports.api.common.{CommonAccountsApi, CommonAssetsApi}
+import com.gicsports.api.http.ApiError.*
+import com.gicsports.api.http.RouteTimeout
+import com.gicsports.api.http.assets.*
+import com.gicsports.api.http.requests.{SignedTransferV1Request, SignedTransferV2Request}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.state.Blockchain
+import com.gicsports.state.diffs.TransactionDiffer.TransactionValidationError
+import com.gicsports.test.*
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.transfer.*
+import com.gicsports.transaction.{Asset, Proofs, Transaction, TxPositiveAmount}
+import com.gicsports.utils.{Time, *}
+import com.gicsports.wallet.Wallet
 import org.scalacheck.Gen as G
 import org.scalamock.scalatest.PathMockFactory
 import play.api.libs.json.*
@@ -145,7 +145,7 @@ class AssetsBroadcastRouteSpec extends RouteSpec("/assets/broadcast/") with Requ
         def posting[A: Writes](v: A): RouteTestResult = Post(routePath("transfer"), v) ~> route
 
         forAll(nonPositiveLong) { q =>
-          posting(tr.copy(amount = q)) should produce(NonPositiveAmount(s"$q of ${tr.assetId.getOrElse("CARDIUM")}"))
+          posting(tr.copy(amount = q)) should produce(NonPositiveAmount(s"$q of ${tr.assetId.getOrElse("GIC")}"))
         }
         forAll(invalidBase58) { pk =>
           posting(tr.copy(senderPublicKey = pk)) should produce(InvalidAddress)

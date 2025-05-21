@@ -1,17 +1,17 @@
-package com.wavesplatform.state.diffs.ci.sync
+package com.gicsports.state.diffs.ci.sync
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.FunctionHeader.User
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_BOOLEAN, FUNCTION_CALL}
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.settings.FunctionalitySettings
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{TxHelpers, TxVersion}
+import com.gicsports.account.Address
+import com.gicsports.db.WithDomain
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.FunctionHeader.User
+import com.gicsports.lang.v1.compiler.Terms.{CONST_BOOLEAN, FUNCTION_CALL}
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.settings.FunctionalitySettings
+import com.gicsports.test.*
+import com.gicsports.transaction.{TxHelpers, TxVersion}
 
 class SyncDAppRecursionTest extends PropSpec with WithDomain {
   import DomainPresets.*

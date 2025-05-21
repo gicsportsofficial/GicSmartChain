@@ -1,4 +1,4 @@
-package com.wavesplatform
+package com.gicsports
 
 import java.io.{FileOutputStream, PrintWriter}
 import java.time.LocalDate
@@ -8,13 +8,13 @@ import scala.collection.mutable
 import scala.concurrent.duration.Duration
 import scala.util.Try
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.metrics.Metrics
-import com.wavesplatform.transaction.{AuthorizedTransaction, Transaction, TxValidationError}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.account.Address
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.metrics.Metrics
+import com.gicsports.transaction.{AuthorizedTransaction, Transaction, TxValidationError}
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.utils.ScorexLogging
 import org.influxdb.dto.Point
 
 private class ResponsivenessLogs(csvPrefix: String, metricName: String) extends ScorexLogging {
@@ -151,7 +151,7 @@ private class ResponsivenessLogs(csvPrefix: String, metricName: String) extends 
         def escape(s: String): String = s.replaceAll("\\r", "\\\\r").replaceAll("\\n", "\\\\n")
 
         val date       = LocalDate.now().format(DateTimeFormatter.ISO_LOCAL_DATE)
-        val fileStream = new FileOutputStream(s"${sys.props("CARDIUM.directory")}/$prefix-events-$date.csv", true)
+        val fileStream = new FileOutputStream(s"${sys.props("GIC.directory")}/$prefix-events-$date.csv", true)
         val pw         = new PrintWriter(fileStream)
         val reasonEscaped = reason match {
           case Some(see: TxValidationError.ScriptExecutionError)        => s"ScriptExecutionError(${escape(see.message)})"

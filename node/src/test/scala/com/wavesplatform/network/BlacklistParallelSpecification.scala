@@ -1,22 +1,22 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
 import java.net.{InetAddress, InetSocketAddress}
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.settings.{NetworkSettings, loadConfig}
-import com.wavesplatform.test.FeatureSpec
+import com.gicsports.settings.{NetworkSettings, loadConfig}
+import com.gicsports.test.FeatureSpec
 import net.ceedubs.ficus.Ficus._
 import org.scalatest.{GivenWhenThen, ParallelTestExecution}
 
 class BlacklistParallelSpecification extends FeatureSpec with GivenWhenThen with ParallelTestExecution {
 
-  private val config = loadConfig(ConfigFactory.parseString("""CARDIUM.network {
+  private val config = loadConfig(ConfigFactory.parseString("""GIC.network {
       |  known-peers = []
       |  file = null
       |  black-list-residence-time: 1s
       |}""".stripMargin))
 
-  private val networkSettings = config.as[NetworkSettings]("CARDIUM.network")
+  private val networkSettings = config.as[NetworkSettings]("GIC.network")
 
   info("As a Peer")
   info("I want to blacklist other peers for certain time")

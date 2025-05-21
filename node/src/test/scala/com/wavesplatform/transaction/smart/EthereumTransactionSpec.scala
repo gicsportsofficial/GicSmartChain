@@ -1,20 +1,20 @@
-package com.wavesplatform.transaction.smart
+package com.gicsports.transaction.smart
 
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.state.Portfolio
-import com.wavesplatform.state.diffs.produceRejectOrFailedDiff
-import com.wavesplatform.test.{FlatSpec, TestTime, produce}
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.utils.EthConverters.*
-import com.wavesplatform.transaction.utils.EthTxGenerator
-import com.wavesplatform.transaction.utils.EthTxGenerator.Arg
-import com.wavesplatform.transaction.{ERC20Address, EthereumTransaction, TxHelpers}
-import com.wavesplatform.utils.{DiffMatchers, EthEncoding, EthHelpers, JsonMatchers}
-import com.wavesplatform.{BlockchainStubHelpers, TestValues}
+import com.gicsports.account.AddressScheme
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.*
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.state.Portfolio
+import com.gicsports.state.diffs.produceRejectOrFailedDiff
+import com.gicsports.test.{FlatSpec, TestTime, produce}
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.utils.EthConverters.*
+import com.gicsports.transaction.utils.EthTxGenerator
+import com.gicsports.transaction.utils.EthTxGenerator.Arg
+import com.gicsports.transaction.{ERC20Address, EthereumTransaction, TxHelpers}
+import com.gicsports.utils.{DiffMatchers, EthEncoding, EthHelpers, JsonMatchers}
+import com.gicsports.{BlockchainStubHelpers, TestValues}
 import org.scalamock.scalatest.PathMockFactory
 import org.scalatest.{BeforeAndAfterAll, Inside}
 import org.web3j.crypto.{Bip32ECKeyPair, RawTransaction, Sign, SignedRawTransaction, TransactionEncoder}
@@ -218,7 +218,7 @@ class EthereumTransactionSpec
       )
     )
     intercept[RuntimeException](differ(transaction)).toString should include(
-      "Fee for EthereumTransaction (99999 in CARDIUM) does not exceed minimal value of 2000000 CARDIUM"
+      "Fee for EthereumTransaction (99999 in GIC) does not exceed minimal value of 2000000 GIC"
     )
   }
 
@@ -521,7 +521,7 @@ class EthereumTransactionSpec
       dAppAccount.toAddress,
       "deposit",
       Seq(),
-      (1 to com.wavesplatform.lang.v1.ContractLimits.MaxAttachedPaymentAmountV5 + 1).map(InvokeScriptTransaction.Payment(_, Waves))
+      (1 to com.gicsports.lang.v1.ContractLimits.MaxAttachedPaymentAmountV5 + 1).map(InvokeScriptTransaction.Payment(_, Waves))
     )
     differ(transaction).resultE should produceRejectOrFailedDiff("Script payment amount=11 should not exceed 10")
   }
@@ -673,7 +673,7 @@ class EthereumTransactionSpec
     )
 
     intercept[RuntimeException](differ(transaction).resultE.explicitGet()).toString should include(
-      "Fee in CARDIUM for InvokeScriptTransaction (499999 in CARDIUM) does not exceed minimal value of 6000000 CARDIUM"
+      "Fee in GIC for InvokeScriptTransaction (499999 in GIC) does not exceed minimal value of 6000000 GIC"
     )
   }
 }

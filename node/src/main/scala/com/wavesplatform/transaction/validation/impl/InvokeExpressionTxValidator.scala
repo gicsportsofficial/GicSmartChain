@@ -1,10 +1,10 @@
-package com.wavesplatform.transaction.validation.impl
+package com.gicsports.transaction.validation.impl
 
 import cats.syntax.either.*
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.smart.InvokeExpressionTransaction
-import com.wavesplatform.transaction.validation.{TxValidator, ValidatedV}
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.smart.InvokeExpressionTransaction
+import com.gicsports.transaction.validation.{TxValidator, ValidatedV}
 
 object InvokeExpressionTxValidator extends TxValidator[InvokeExpressionTransaction] {
   override def validate(tx: InvokeExpressionTransaction): ValidatedV[InvokeExpressionTransaction] = {

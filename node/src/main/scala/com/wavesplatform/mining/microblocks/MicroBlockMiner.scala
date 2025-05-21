@@ -1,12 +1,12 @@
-package com.wavesplatform.mining.microblocks
+package com.gicsports.mining.microblocks
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.block.Block
-import com.wavesplatform.mining.{MinerDebugInfo, MiningConstraint}
-import com.wavesplatform.settings.MinerSettings
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.transaction.BlockchainUpdater
-import com.wavesplatform.utx.UtxPoolImpl
+import com.gicsports.account.KeyPair
+import com.gicsports.block.Block
+import com.gicsports.mining.{MinerDebugInfo, MiningConstraint}
+import com.gicsports.settings.MinerSettings
+import com.gicsports.state.Blockchain
+import com.gicsports.transaction.BlockchainUpdater
+import com.gicsports.utx.UtxPoolImpl
 import io.netty.channel.group.ChannelGroup
 import monix.eval.Task
 import monix.execution.schedulers.SchedulerService

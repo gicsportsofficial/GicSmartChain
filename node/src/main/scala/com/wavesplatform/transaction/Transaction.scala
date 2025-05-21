@@ -1,9 +1,9 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.protobuf.transaction.PBTransactions
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.transaction.Asset.IssuedAsset
+import com.gicsports.common.state.ByteStr
+import com.gicsports.protobuf.transaction.PBTransactions
+import com.gicsports.state.Blockchain
+import com.gicsports.transaction.Asset.IssuedAsset
 import monix.eval.Coeval
 import play.api.libs.json.JsObject
 

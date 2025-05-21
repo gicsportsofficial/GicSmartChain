@@ -1,4 +1,4 @@
-package com.wavesplatform.lang.contract.meta
+package com.gicsports.lang.contract.meta
 
 sealed trait MetaVersion {
   type Self <: MetaVersion

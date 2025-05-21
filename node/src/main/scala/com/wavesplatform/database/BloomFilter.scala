@@ -1,10 +1,10 @@
-package com.wavesplatform.database
+package com.gicsports.database
 
 import java.io._
 
 import com.google.common.hash.{Funnels, HashFunction, Hashing, HashingInputStream, HashingOutputStream, BloomFilter => GBloomFilter}
 import com.google.common.primitives.Ints
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.utils.ScorexLogging
 import org.iq80.leveldb.DB
 
 import scala.util.Try
@@ -23,7 +23,7 @@ private[database] class Wrapper(underlying: GBloomFilter[Array[Byte]]) extends B
 private[database] class BloomFilterImpl(underlying: GBloomFilter[Array[Byte]], directory: String, filterName: String, db: DB)
     extends Wrapper(underlying)
     with ScorexLogging {
-  import com.wavesplatform.database.BloomFilter._
+  import com.gicsports.database.BloomFilter._
   def save(height: Int): Unit = {
     val file = filterFile(directory, filterName)
     log.info(s"Saving bloom filter to ${file.getAbsolutePath}")

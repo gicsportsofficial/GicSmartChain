@@ -1,14 +1,14 @@
-package com.wavesplatform.transaction.serialization.impl
+package com.gicsports.transaction.serialization.impl
 
 import java.nio.ByteBuffer
 
 import com.google.common.primitives.{Bytes, Longs}
-import com.wavesplatform.protobuf.transaction.PBOrders
-import com.wavesplatform.protobuf.utils.PBUtils
-import com.wavesplatform.serialization.ByteBufferOps
-import com.wavesplatform.transaction.assets.exchange.*
-import com.wavesplatform.transaction.{Proofs, TxExchangeAmount, TxMatcherFee, TxOrderPrice}
-import com.wavesplatform.utils.EthEncoding
+import com.gicsports.protobuf.transaction.PBOrders
+import com.gicsports.protobuf.utils.PBUtils
+import com.gicsports.serialization.ByteBufferOps
+import com.gicsports.transaction.assets.exchange.*
+import com.gicsports.transaction.{Proofs, TxExchangeAmount, TxMatcherFee, TxOrderPrice}
+import com.gicsports.utils.EthEncoding
 import play.api.libs.json.{JsObject, Json}
 
 import scala.util.Try

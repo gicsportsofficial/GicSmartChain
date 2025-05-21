@@ -1,4 +1,4 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 package object diffs {
   val ENOUGH_AMT: Long = Long.MaxValue / 3

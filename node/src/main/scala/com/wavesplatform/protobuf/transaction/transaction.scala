@@ -1,21 +1,21 @@
-package com.wavesplatform.protobuf
+package com.gicsports.protobuf
 
 //noinspection TypeAnnotation
 package object transaction {
-  type PBOrder = com.wavesplatform.protobuf.order.Order
-  val PBOrder = com.wavesplatform.protobuf.order.Order
+  type PBOrder = com.gicsports.protobuf.order.Order
+  val PBOrder = com.gicsports.protobuf.order.Order
 
-  type VanillaOrder = com.wavesplatform.transaction.assets.exchange.Order
-  val VanillaOrder = com.wavesplatform.transaction.assets.exchange.Order
+  type VanillaOrder = com.gicsports.transaction.assets.exchange.Order
+  val VanillaOrder = com.gicsports.transaction.assets.exchange.Order
 
-  type PBTransaction = com.wavesplatform.protobuf.transaction.Transaction
-  val PBTransaction = com.wavesplatform.protobuf.transaction.Transaction
+  type PBTransaction = com.gicsports.protobuf.transaction.Transaction
+  val PBTransaction = com.gicsports.protobuf.transaction.Transaction
 
-  type PBSignedTransaction = com.wavesplatform.protobuf.transaction.SignedTransaction
-  val PBSignedTransaction = com.wavesplatform.protobuf.transaction.SignedTransaction
+  type PBSignedTransaction = com.gicsports.protobuf.transaction.SignedTransaction
+  val PBSignedTransaction = com.gicsports.protobuf.transaction.SignedTransaction
 
-  type VanillaTransaction = com.wavesplatform.transaction.Transaction
-  val VanillaTransaction = com.wavesplatform.transaction.Transaction
+  type VanillaTransaction = com.gicsports.transaction.Transaction
+  val VanillaTransaction = com.gicsports.transaction.Transaction
 
-  type VanillaAssetId = com.wavesplatform.transaction.Asset
+  type VanillaAssetId = com.gicsports.transaction.Asset
 }

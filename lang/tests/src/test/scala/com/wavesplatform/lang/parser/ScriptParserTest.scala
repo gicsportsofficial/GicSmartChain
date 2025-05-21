@@ -1,15 +1,15 @@
-package com.wavesplatform.lang.parser
+package com.gicsports.lang.parser
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.lang.hacks.Global.MaxLiteralLength
-import com.wavesplatform.lang.v1.parser.BinaryOperation.*
-import com.wavesplatform.lang.v1.parser.Expressions.*
-import com.wavesplatform.lang.v1.parser.Expressions.Pos.AnyPos
-import com.wavesplatform.lang.v1.parser.Parser.GenericMethod
-import com.wavesplatform.lang.v1.parser.{BinaryOperation, Expressions, Parser}
-import com.wavesplatform.lang.v1.testing.ScriptGenParser
-import com.wavesplatform.test.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.Base58
+import com.gicsports.lang.hacks.Global.MaxLiteralLength
+import com.gicsports.lang.v1.parser.BinaryOperation.*
+import com.gicsports.lang.v1.parser.Expressions.*
+import com.gicsports.lang.v1.parser.Expressions.Pos.AnyPos
+import com.gicsports.lang.v1.parser.Parser.GenericMethod
+import com.gicsports.lang.v1.parser.{BinaryOperation, Expressions, Parser}
+import com.gicsports.lang.v1.testing.ScriptGenParser
+import com.gicsports.test.*
 import fastparse.Parsed.{Failure, Success}
 import org.scalacheck.Gen
 import org.scalatest.exceptions.TestFailedException

@@ -1,12 +1,12 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithState
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.settings.{FunctionalitySettings, TestFunctionalitySettings}
-import com.wavesplatform.state.*
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{GenesisTransaction, PaymentTransaction, TxHelpers}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithState
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.settings.{FunctionalitySettings, TestFunctionalitySettings}
+import com.gicsports.state.*
+import com.gicsports.test.*
+import com.gicsports.transaction.{GenesisTransaction, PaymentTransaction, TxHelpers}
 
 class PaymentTransactionDiffTest extends PropSpec with WithState {
 

@@ -1,12 +1,12 @@
-package com.wavesplatform.database
+package com.gicsports.database
 
 import com.google.common.hash.{Funnels, BloomFilter => GBloomFilter}
-import com.wavesplatform.account.Address
-import com.wavesplatform.events.BlockchainUpdateTriggers
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.state.BlockchainUpdaterImpl
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.utils.Time
+import com.gicsports.account.Address
+import com.gicsports.events.BlockchainUpdateTriggers
+import com.gicsports.settings.WavesSettings
+import com.gicsports.state.BlockchainUpdaterImpl
+import com.gicsports.transaction.Asset
+import com.gicsports.utils.Time
 import monix.reactive.Observer
 import org.iq80.leveldb.DB
 

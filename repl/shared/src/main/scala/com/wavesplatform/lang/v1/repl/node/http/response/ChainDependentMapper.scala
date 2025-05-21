@@ -1,15 +1,15 @@
-package com.wavesplatform.lang.v1.repl.node.http.response
+package com.gicsports.lang.v1.repl.node.http.response
 
 import java.nio.ByteBuffer
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.EnvironmentFunctions.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.lang.v1.repl.global
-import com.wavesplatform.lang.v1.repl.node.http.response.ChainDependentMapper.*
-import com.wavesplatform.lang.v1.repl.node.http.response.model.*
-import com.wavesplatform.lang.v1.traits.domain.Recipient.Address
-import com.wavesplatform.lang.v1.traits.domain.Tx.{Header, Proven, Transfer}
-import com.wavesplatform.lang.v1.traits.domain.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.EnvironmentFunctions.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.Base58
+import com.gicsports.lang.v1.repl.global
+import com.gicsports.lang.v1.repl.node.http.response.ChainDependentMapper.*
+import com.gicsports.lang.v1.repl.node.http.response.model.*
+import com.gicsports.lang.v1.traits.domain.Recipient.Address
+import com.gicsports.lang.v1.traits.domain.Tx.{Header, Proven, Transfer}
+import com.gicsports.lang.v1.traits.domain.*
 
 import java.util
 

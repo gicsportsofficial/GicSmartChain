@@ -1,4 +1,4 @@
-package com.wavesplatform.transaction.validation
+package com.gicsports.transaction.validation
 
 import scala.annotation.implicitNotFound
 

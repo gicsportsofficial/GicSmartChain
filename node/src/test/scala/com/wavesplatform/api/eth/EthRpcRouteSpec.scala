@@ -1,23 +1,23 @@
-package com.wavesplatform.api.eth
+package com.gicsports.api.eth
 
-import com.wavesplatform.api.http.eth.EthRpcRoute
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.{DefaultWavesSettings, Domain, settingsWithFeatures}
-import com.wavesplatform.http.RouteSpec
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.BinaryDataEntry
-import com.wavesplatform.test.*
-import com.wavesplatform.test.node.{randomAddress, randomKeyPair}
-import com.wavesplatform.transaction.TxHelpers.issue
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.utils.EthConverters.*
-import com.wavesplatform.transaction.utils.{EthTxGenerator, Signed}
-import com.wavesplatform.transaction.{Asset, GenesisTransaction, TxHelpers}
-import com.wavesplatform.utils.EthEncoding.toHexString
-import com.wavesplatform.utils.{EthEncoding, EthHelpers}
+import com.gicsports.api.http.eth.EthRpcRoute
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.{DefaultWavesSettings, Domain, settingsWithFeatures}
+import com.gicsports.http.RouteSpec
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.BinaryDataEntry
+import com.gicsports.test.*
+import com.gicsports.test.node.{randomAddress, randomKeyPair}
+import com.gicsports.transaction.TxHelpers.issue
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.utils.EthConverters.*
+import com.gicsports.transaction.utils.{EthTxGenerator, Signed}
+import com.gicsports.transaction.{Asset, GenesisTransaction, TxHelpers}
+import com.gicsports.utils.EthEncoding.toHexString
+import com.gicsports.utils.{EthEncoding, EthHelpers}
 import play.api.libs.json.*
 import play.api.libs.json.Json.JsValueWrapper
 

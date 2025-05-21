@@ -1,4 +1,4 @@
-package com.wavesplatform.serialization
+package com.gicsports.serialization
 
 import java.nio.ByteBuffer
 

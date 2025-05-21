@@ -1,11 +1,11 @@
-package com.wavesplatform.lang.estimator
+package com.gicsports.lang.estimator
 
-import com.wavesplatform.lang.v1.FunctionHeader.Native
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.estimator.ScriptEstimatorV1
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.lang.v1.evaluator.FunctionIds.SUM_LONG
+import com.gicsports.lang.v1.FunctionHeader.Native
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.estimator.ScriptEstimatorV1
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.lang.v1.evaluator.FunctionIds.SUM_LONG
 
 class CommonScriptEstimatorTest
     extends ScriptEstimatorTestBase(

@@ -1,4 +1,4 @@
-package com.wavesplatform.lang
+package com.gicsports.lang
 
 trait ValidationError
 

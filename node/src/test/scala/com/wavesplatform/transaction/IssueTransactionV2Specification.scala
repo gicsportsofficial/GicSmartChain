@@ -1,24 +1,24 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import cats.kernel.Monoid
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{AddressScheme, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base64, EitherExt2}
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.ContractScript
-import com.wavesplatform.lang.v1.compiler
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.WavesContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.{Global, utils}
-import com.wavesplatform.state.HistoryTest
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.serialization.impl.IssueTxSerializer
-import com.wavesplatform.{WithDB, crypto}
+import com.gicsports.account.{AddressScheme, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base64, EitherExt2}
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.ContractScript
+import com.gicsports.lang.v1.compiler
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.WavesContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.{Global, utils}
+import com.gicsports.state.HistoryTest
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.serialization.impl.IssueTxSerializer
+import com.gicsports.{WithDB, crypto}
 import org.scalatest.EitherValues
 import play.api.libs.json.Json
 

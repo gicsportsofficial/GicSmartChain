@@ -1,19 +1,19 @@
-package com.wavesplatform.lang.v1.evaluator
+package com.gicsports.lang.v1.evaluator
 
 import cats.Id
 import cats.syntax.either.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.contract.DApp.VerifierFunction
-import com.wavesplatform.lang.directives.values.StdLibVersion
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.evaluator.ctx.EvaluationContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.Bindings
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.v1.traits.domain.Recipient.Address
-import com.wavesplatform.lang.v1.traits.domain.{AttachedPayments, Recipient}
-import com.wavesplatform.lang.{CommonError, ExecutionError}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.contract.DApp.VerifierFunction
+import com.gicsports.lang.directives.values.StdLibVersion
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.evaluator.ctx.EvaluationContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.Bindings
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.v1.traits.domain.Recipient.Address
+import com.gicsports.lang.v1.traits.domain.{AttachedPayments, Recipient}
+import com.gicsports.lang.{CommonError, ExecutionError}
 import monix.eval.Coeval
 
 object ContractEvaluator {

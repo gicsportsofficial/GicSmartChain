@@ -1,13 +1,13 @@
-package com.wavesplatform.serialization.protobuf
+package com.gicsports.serialization.protobuf
 
 import java.util.concurrent.TimeUnit
 
-import com.wavesplatform.account.{AddressScheme, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.serialization.protobuf.SmartNoSmartBenchmark.ExchangeTransactionSt
-import com.wavesplatform.transaction.assets.exchange.*
-import com.wavesplatform.transaction.{Proofs, TxExchangeAmount, TxExchangePrice, TxMatcherFee, TxOrderPrice, TxPositiveAmount, TxVersion}
+import com.gicsports.account.{AddressScheme, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.*
+import com.gicsports.serialization.protobuf.SmartNoSmartBenchmark.ExchangeTransactionSt
+import com.gicsports.transaction.assets.exchange.*
+import com.gicsports.transaction.{Proofs, TxExchangeAmount, TxExchangePrice, TxMatcherFee, TxOrderPrice, TxPositiveAmount, TxVersion}
 import org.openjdk.jmh.annotations.*
 import org.openjdk.jmh.infra.Blackhole
 
@@ -56,7 +56,7 @@ object SmartNoSmartBenchmark {
         Proofs(Seq(ByteStr.decodeBase58("2bkuGwECMFGyFqgoHV4q7GRRWBqYmBFWpYRkzgYANR4nN2twgrNaouRiZBqiK2RJzuo9NooB9iRiuZ4hypBbUQs").get))
       ),
       PublicKey.fromBase58String("Fvk5DXmfyWVZqQVBowUBMwYtRAHDtdyZNNeRrwSjt6KP").explicitGet(),
-      AssetPair.createAssetPair("CARDIUM", "9ZDWzK53XT5bixkmMwTJi2YzgxCqn5dUajXFcT2HcFDy").get,
+      AssetPair.createAssetPair("GIC", "9ZDWzK53XT5bixkmMwTJi2YzgxCqn5dUajXFcT2HcFDy").get,
       OrderType.BUY,
       TxExchangeAmount.unsafeFrom(2),
       TxOrderPrice.unsafeFrom(6000000000L),
@@ -72,7 +72,7 @@ object SmartNoSmartBenchmark {
         Proofs(ByteStr.decodeBase58("2R6JfmNjEnbXAA6nt8YuCzSf1effDS4Wkz8owpCD9BdCNn864SnambTuwgLRYzzeP5CAsKHEviYKAJ2157vdr5Zq").get)
       ),
       PublicKey.fromBase58String("Fvk5DXmfyWVZqQVBowUBMwYtRAHDtdyZNNeRrwSjt6KP").explicitGet(),
-      AssetPair.createAssetPair("CARDIUM", "9ZDWzK53XT5bixkmMwTJi2YzgxCqn5dUajXFcT2HcFDy").get,
+      AssetPair.createAssetPair("GIC", "9ZDWzK53XT5bixkmMwTJi2YzgxCqn5dUajXFcT2HcFDy").get,
       OrderType.SELL,
       TxExchangeAmount.unsafeFrom(3),
       TxOrderPrice.unsafeFrom(5000000000L),

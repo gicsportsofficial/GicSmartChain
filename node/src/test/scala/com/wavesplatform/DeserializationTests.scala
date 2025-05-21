@@ -1,7 +1,7 @@
-package com.wavesplatform
+package com.gicsports
 
-import com.wavesplatform.serialization.Deser
-import com.wavesplatform.test.FreeSpec
+import com.gicsports.serialization.Deser
+import com.gicsports.test.FreeSpec
 
 class DeserializationTests extends FreeSpec {
 

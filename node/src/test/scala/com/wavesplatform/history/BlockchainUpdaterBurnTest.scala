@@ -1,15 +1,15 @@
-package com.wavesplatform.history
+package com.gicsports.history
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.Domain.BlockchainUpdaterExt
-import com.wavesplatform.settings.{BlockchainSettings, WavesSettings}
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.assets.{BurnTransaction, IssueTransaction, ReissueTransaction}
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{Asset, GenesisTransaction, TxVersion}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.Domain.BlockchainUpdaterExt
+import com.gicsports.settings.{BlockchainSettings, WavesSettings}
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.test._
+import com.gicsports.transaction.assets.{BurnTransaction, IssueTransaction, ReissueTransaction}
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{Asset, GenesisTransaction, TxVersion}
 import org.scalacheck.Gen
 
 class BlockchainUpdaterBurnTest extends PropSpec with DomainScenarioDrivenPropertyCheck {

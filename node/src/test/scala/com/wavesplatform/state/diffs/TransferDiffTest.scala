@@ -1,19 +1,19 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithState
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_BOOLEAN
-import com.wavesplatform.settings.TestFunctionalitySettings
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.assets.*
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.transaction.{Asset, GenesisTransaction, TxHelpers, TxValidationError, TxVersion}
+import com.gicsports.account.Address
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithState
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.Terms.CONST_BOOLEAN
+import com.gicsports.settings.TestFunctionalitySettings
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.assets.*
+import com.gicsports.transaction.transfer.*
+import com.gicsports.transaction.{Asset, GenesisTransaction, TxHelpers, TxValidationError, TxVersion}
 
 class TransferDiffTest extends PropSpec with WithState {
 

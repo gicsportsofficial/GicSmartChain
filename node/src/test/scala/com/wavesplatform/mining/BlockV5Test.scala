@@ -1,30 +1,30 @@
-package com.wavesplatform.mining
+package com.gicsports.mining
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.account.{AddressOrAlias, KeyPair}
-import com.wavesplatform.block.serialization.{BlockHeaderSerializer, BlockSerializer}
-import com.wavesplatform.block.validation.Validators
-import com.wavesplatform.block.{Block, BlockHeader, SignedBlockHeader}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.consensus.PoSSelector
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.{chainBaseAndMicro, defaultSigner}
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.protobuf.block.PBBlocks
-import com.wavesplatform.settings.{Constants, FunctionalitySettings, TestFunctionalitySettings, WalletSettings, WavesSettings}
-import com.wavesplatform.state.appender.BlockAppender
-import com.wavesplatform.state.{Blockchain, BlockchainUpdaterImpl, NG, diffs}
-import com.wavesplatform.test.{FlatSpec, *}
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{BlockchainUpdater, GenesisTransaction, Transaction, TxHelpers, TxVersion}
-import com.wavesplatform.utils.Time
-import com.wavesplatform.utx.UtxPoolImpl
-import com.wavesplatform.wallet.Wallet
-import com.wavesplatform.{BlocksTransactionsHelpers, crypto, protobuf}
+import com.gicsports.account.{AddressOrAlias, KeyPair}
+import com.gicsports.block.serialization.{BlockHeaderSerializer, BlockSerializer}
+import com.gicsports.block.validation.Validators
+import com.gicsports.block.{Block, BlockHeader, SignedBlockHeader}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.consensus.PoSSelector
+import com.gicsports.db.WithDomain
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.{chainBaseAndMicro, defaultSigner}
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.ValidationError
+import com.gicsports.protobuf.block.PBBlocks
+import com.gicsports.settings.{Constants, FunctionalitySettings, TestFunctionalitySettings, WalletSettings, WavesSettings}
+import com.gicsports.state.appender.BlockAppender
+import com.gicsports.state.{Blockchain, BlockchainUpdaterImpl, NG, diffs}
+import com.gicsports.test.{FlatSpec, *}
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{BlockchainUpdater, GenesisTransaction, Transaction, TxHelpers, TxVersion}
+import com.gicsports.utils.Time
+import com.gicsports.utx.UtxPoolImpl
+import com.gicsports.wallet.Wallet
+import com.gicsports.{BlocksTransactionsHelpers, crypto, protobuf}
 import io.netty.channel.group.DefaultChannelGroup
 import io.netty.util.concurrent.GlobalEventExecutor
 import monix.eval.Task

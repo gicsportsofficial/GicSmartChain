@@ -1,11 +1,11 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncGrpcApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.protobuf.transaction.PBTransactions
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncGrpcApi._
+import com.gicsports.it.sync._
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.protobuf.transaction.PBTransactions
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import io.grpc.Status.Code
 
 import scala.concurrent.duration._
@@ -84,7 +84,7 @@ class SetAssetScriptGrpcSuite extends GrpcBaseTransactionSuite {
     )
   }
 
-  test("sender's CARDIUM balance is decreased by fee") {
+  test("sender's GIC balance is decreased by fee") {
     val script2 = ScriptCompiler(
       s"""
          |match tx {

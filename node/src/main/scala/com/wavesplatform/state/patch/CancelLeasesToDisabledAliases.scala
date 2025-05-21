@@ -1,11 +1,11 @@
-package com.wavesplatform.state.patch
+package com.gicsports.state.patch
 
-import com.wavesplatform.account.{Address, Alias, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.state.reader.LeaseDetails
-import com.wavesplatform.state.{Blockchain, Diff, LeaseBalance, Portfolio}
+import com.gicsports.account.{Address, Alias, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.state.reader.LeaseDetails
+import com.gicsports.state.{Blockchain, Diff, LeaseBalance, Portfolio}
 import play.api.libs.json.{Json, Reads}
 
 case object CancelLeasesToDisabledAliases extends PatchOnFeature(BlockchainFeatures.SynchronousCalls, Set('W')) {

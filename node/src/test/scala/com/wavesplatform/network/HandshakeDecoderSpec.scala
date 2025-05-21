@@ -1,9 +1,9 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
 import java.nio.charset.StandardCharsets
 
 import com.google.common.primitives.{Ints, Longs}
-import com.wavesplatform.test.FreeSpec
+import com.gicsports.test.FreeSpec
 import io.netty.buffer.Unpooled
 import io.netty.channel.embedded.EmbeddedChannel
 import io.netty.channel.{ChannelHandlerContext, ChannelInboundHandlerAdapter}

@@ -1,21 +1,21 @@
-package com.wavesplatform.transaction.smart
+package com.gicsports.transaction.smart
 
 import cats.syntax.either.*
-import com.wavesplatform.account.{Address, AddressOrAlias, Alias}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.directives.values.StdLibVersion
-import com.wavesplatform.lang.v1.compiler.Terms.EVALUATED
-import com.wavesplatform.lang.v1.traits.domain.Tx.{Header, Proven}
-import com.wavesplatform.lang.v1.traits.domain.{Recipient as RideRecipient, *}
-import com.wavesplatform.protobuf.ByteStringExt
-import com.wavesplatform.state.*
-import com.wavesplatform.state.diffs.invoke.InvokeScriptTransactionLike
-import com.wavesplatform.transaction.assets.*
-import com.wavesplatform.transaction.assets.exchange.OrderType.{BUY, SELL}
-import com.wavesplatform.transaction.assets.exchange.{AssetPair, ExchangeTransaction, Order}
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.transaction.{EthereumTransaction, *}
+import com.gicsports.account.{Address, AddressOrAlias, Alias}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.directives.values.StdLibVersion
+import com.gicsports.lang.v1.compiler.Terms.EVALUATED
+import com.gicsports.lang.v1.traits.domain.Tx.{Header, Proven}
+import com.gicsports.lang.v1.traits.domain.{Recipient as RideRecipient, *}
+import com.gicsports.protobuf.ByteStringExt
+import com.gicsports.state.*
+import com.gicsports.state.diffs.invoke.InvokeScriptTransactionLike
+import com.gicsports.transaction.assets.*
+import com.gicsports.transaction.assets.exchange.OrderType.{BUY, SELL}
+import com.gicsports.transaction.assets.exchange.{AssetPair, ExchangeTransaction, Order}
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.transfer.*
+import com.gicsports.transaction.{EthereumTransaction, *}
 
 object RealTransactionWrapper {
   private def header(tx: Transaction, txIdOpt: Option[ByteStr] = None): Header = {
@@ -94,7 +94,7 @@ object RealTransactionWrapper {
             assetId = ms.assetId.compatId,
             transferCount = ms.transfers.length,
             totalAmount = ms.transfers.map(_.amount.value).sum,
-            transfers = ms.transfers.map(r => com.wavesplatform.lang.v1.traits.domain.Tx.TransferItem(toRide(r.address), r.amount.value)).toIndexedSeq,
+            transfers = ms.transfers.map(r => com.gicsports.lang.v1.traits.domain.Tx.TransferItem(toRide(r.address), r.amount.value)).toIndexedSeq,
             attachment = ms.attachment
           )
           .asRight

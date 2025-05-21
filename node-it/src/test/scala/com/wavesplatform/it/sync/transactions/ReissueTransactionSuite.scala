@@ -1,15 +1,15 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
 import com.typesafe.config.Config
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.api.http.ApiError.StateCheckFailed
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.api.TransactionInfo
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.assets.ReissueTransaction
+import com.gicsports.account.AddressScheme
+import com.gicsports.api.http.ApiError.StateCheckFailed
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.api.TransactionInfo
+import com.gicsports.it.sync._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.test._
+import com.gicsports.transaction.assets.ReissueTransaction
 
 class ReissueTransactionSuite extends BaseTransactionSuite {
 
@@ -66,7 +66,7 @@ class ReissueTransactionSuite extends BaseTransactionSuite {
         error =>
           error.id shouldBe StateCheckFailed.Id
           error.message should include(
-            s"Fee for ReissueTransaction (${reissueReducedFee - 1} in CARDIUM) does not exceed minimal value of $reissueReducedFee CARDIUM."
+            s"Fee for ReissueTransaction (${reissueReducedFee - 1} in GIC) does not exceed minimal value of $reissueReducedFee GIC."
           )
       }
     }

@@ -1,6 +1,6 @@
-package com.wavesplatform.account
+package com.gicsports.account
 
-import com.wavesplatform.test.PropSpec
+import com.gicsports.test.PropSpec
 
 class AliasSpecification extends PropSpec {
 

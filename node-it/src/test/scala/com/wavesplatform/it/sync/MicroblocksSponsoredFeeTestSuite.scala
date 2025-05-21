@@ -1,11 +1,11 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
 import com.typesafe.config.Config
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.{BaseFreeSpec, NodeConfigs}
-import com.wavesplatform.state.Sponsorship
-import com.wavesplatform.state.diffs.FeeValidation
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.{BaseFreeSpec, NodeConfigs}
+import com.gicsports.state.Sponsorship
+import com.gicsports.state.diffs.FeeValidation
+import com.gicsports.utils.ScorexLogging
 
 class MicroblocksSponsoredFeeTestSuite extends BaseFreeSpec with ScorexLogging {
 
@@ -67,8 +67,8 @@ class MicroblocksSponsoredFeeTestSuite extends BaseFreeSpec with ScorexLogging {
   override def nodeConfigs: Seq[Config] =
     NodeConfigs.newBuilder
       .overrideBase(_.quorum(0))
-      .overrideBase(_.raw("CARDIUM.blockchain.custom.functionality.blocks-for-feature-activation=1"))
-      .overrideBase(_.raw("CARDIUM.blockchain.custom.functionality.feature-check-blocks-period=1"))
+      .overrideBase(_.raw("GIC.blockchain.custom.functionality.blocks-for-feature-activation=1"))
+      .overrideBase(_.raw("GIC.blockchain.custom.functionality.feature-check-blocks-period=1"))
       .overrideBase(_.preactivatedFeatures((14, 1000000)))
       .withDefault(1)
       .withSpecial(2, _.nonMiner)

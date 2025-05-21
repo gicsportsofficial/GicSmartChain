@@ -1,21 +1,21 @@
-package com.wavesplatform.db
+package com.gicsports.db
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.settings.{TestFunctionalitySettings, WavesSettings, loadConfig}
-import com.wavesplatform.state.utils.TestLevelDB
-import com.wavesplatform.state.{BlockchainUpdaterImpl, _}
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.{BlockchainUpdater, GenesisTransaction}
-import com.wavesplatform.utils.Time
-import com.wavesplatform.WithDB
-import com.wavesplatform.test.FreeSpec
+import com.gicsports.account.KeyPair
+import com.gicsports.block.Block
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.settings.{TestFunctionalitySettings, WavesSettings, loadConfig}
+import com.gicsports.state.utils.TestLevelDB
+import com.gicsports.state.{BlockchainUpdaterImpl, _}
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.{BlockchainUpdater, GenesisTransaction}
+import com.gicsports.utils.Time
+import com.gicsports.WithDB
+import com.gicsports.test.FreeSpec
 import org.scalacheck.Gen
 
 class ScriptCacheTest extends FreeSpec with WithDB {

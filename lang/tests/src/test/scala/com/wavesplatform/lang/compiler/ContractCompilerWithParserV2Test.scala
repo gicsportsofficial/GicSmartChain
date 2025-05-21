@@ -1,12 +1,12 @@
-package com.wavesplatform.lang.compiler
+package com.gicsports.lang.compiler
 
 import cats.implicits.toBifunctorOps
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.directives.{Directive, DirectiveParser}
-import com.wavesplatform.lang.utils
-import com.wavesplatform.lang.v1.compiler.{CompilationError, ContractCompiler}
-import com.wavesplatform.lang.v1.parser.Expressions
-import com.wavesplatform.test.PropSpec
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.directives.{Directive, DirectiveParser}
+import com.gicsports.lang.utils
+import com.gicsports.lang.v1.compiler.{CompilationError, ContractCompiler}
+import com.gicsports.lang.v1.parser.Expressions
+import com.gicsports.test.PropSpec
 
 class ContractCompilerWithParserV2Test extends PropSpec {
 

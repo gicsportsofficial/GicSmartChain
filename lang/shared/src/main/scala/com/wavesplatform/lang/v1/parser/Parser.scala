@@ -1,18 +1,18 @@
-package com.wavesplatform.lang.v1.parser
+package com.gicsports.lang.v1.parser
 
 import cats.instances.either.*
 import cats.instances.list.*
 import cats.syntax.either.*
 import cats.syntax.traverse.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext.MaxListLengthV4
-import com.wavesplatform.lang.v1.parser.BinaryOperation.*
-import com.wavesplatform.lang.v1.parser.Expressions.*
-import com.wavesplatform.lang.v1.parser.Expressions.PART.VALID
-import com.wavesplatform.lang.v1.parser.Expressions.Pos.AnyPos
-import com.wavesplatform.lang.v1.parser.Parser.*
-import com.wavesplatform.lang.v1.parser.UnaryOperation.*
-import com.wavesplatform.lang.v1.{ContractLimits, compiler}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext.MaxListLengthV4
+import com.gicsports.lang.v1.parser.BinaryOperation.*
+import com.gicsports.lang.v1.parser.Expressions.*
+import com.gicsports.lang.v1.parser.Expressions.PART.VALID
+import com.gicsports.lang.v1.parser.Expressions.Pos.AnyPos
+import com.gicsports.lang.v1.parser.Parser.*
+import com.gicsports.lang.v1.parser.UnaryOperation.*
+import com.gicsports.lang.v1.{ContractLimits, compiler}
 import fastparse.*
 import fastparse.MultiLineWhitespace.*
 import fastparse.Parsed.Failure
@@ -21,7 +21,7 @@ import scala.annotation.tailrec
 
 class Parser(implicit offset: Int) {
 
-  private val Global                                        = com.wavesplatform.lang.hacks.Global // Hack for IDEA
+  private val Global                                        = com.gicsports.lang.hacks.Global // Hack for IDEA
   implicit def hack(p: fastparse.P[Any]): fastparse.P[Unit] = p.map(_ => ())
 
   val keywords = Set("let", "strict", "base58", "base64", "true", "false", "if", "then", "else", "match", "case", "func")

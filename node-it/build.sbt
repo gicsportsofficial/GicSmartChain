@@ -5,7 +5,7 @@ libraryDependencies ++= Dependencies.it
 
 inTask(docker)(
   Seq(
-    imageNames   := Seq(ImageName("cardiumnetwork/node-it")),
+    imageNames   := Seq(ImageName("GicSmartChain/node-it")),
     dockerfile   := NativeDockerfile(baseDirectory.value.getParentFile / "docker" / "Dockerfile"),
     buildOptions := BuildOptions()
   )

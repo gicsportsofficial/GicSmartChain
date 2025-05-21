@@ -1,4 +1,4 @@
-package com.wavesplatform.it
+package com.gicsports.it
 
 import com.typesafe.config.{Config, ConfigFactory}
 
@@ -62,17 +62,17 @@ object NodeConfigs {
 
   object Templates {
     def raw(x: String): String = x
-    def quorum(n: Int): String = s"CARDIUM.miner.quorum = $n"
+    def quorum(n: Int): String = s"GIC.miner.quorum = $n"
     def preactivatedFeatures(f: (Int, Int)*): String = {
       s"""
-         |CARDIUM.blockchain.custom.functionality.pre-activated-features {
+         |GIC.blockchain.custom.functionality.pre-activated-features {
          ${f.map { case (id, height) => s"|  $id = $height" }.mkString("\n")}
          |}""".stripMargin
     }
     def minAssetInfoUpdateInterval(blocks: Int): String =
-      s"CARDIUM.blockchain.custom.functionality.min-asset-info-update-interval = $blocks"
+      s"GIC.blockchain.custom.functionality.min-asset-info-update-interval = $blocks"
 
-    val nonMiner: String = "CARDIUM.miner.enable = no"
+    val nonMiner: String = "GIC.miner.enable = no"
   }
 
 }

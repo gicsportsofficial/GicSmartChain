@@ -1,3 +1,3 @@
-package com.wavesplatform.settings
+package com.gicsports.settings
 
 case class RewardsVotingSettings(desired: Option[Long])

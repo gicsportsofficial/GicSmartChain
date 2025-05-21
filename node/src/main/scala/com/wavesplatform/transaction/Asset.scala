@@ -1,9 +1,9 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import com.google.common.collect.Interners
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.transaction.assets.exchange.AssetPair
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.Base58
+import com.gicsports.transaction.assets.exchange.AssetPair
 import net.ceedubs.ficus.readers.ValueReader
 import play.api.libs.json.*
 

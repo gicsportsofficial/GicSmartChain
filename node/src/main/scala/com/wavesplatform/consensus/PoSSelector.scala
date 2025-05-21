@@ -1,19 +1,19 @@
-package com.wavesplatform.consensus
+package com.gicsports.consensus
 
 import scala.concurrent.duration.FiniteDuration
 
 import cats.syntax.either._
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.block.{Block, BlockHeader}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.consensus.nxt.NxtLikeConsensusBlockData
-import com.wavesplatform.crypto
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.utils.{forceStopApplication, BaseTargetReachedMaximum, ScorexLogging}
+import com.gicsports.account.KeyPair
+import com.gicsports.block.{Block, BlockHeader}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.Base58
+import com.gicsports.consensus.nxt.NxtLikeConsensusBlockData
+import com.gicsports.crypto
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.Blockchain
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.utils.{forceStopApplication, BaseTargetReachedMaximum, ScorexLogging}
 
 case class PoSSelector(blockchain: Blockchain, maxBaseTarget: Option[Long]) extends ScorexLogging {
   import PoSCalculator._

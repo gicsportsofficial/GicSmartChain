@@ -1,11 +1,11 @@
-package com.wavesplatform.api
+package com.gicsports.api
 
 import com.google.common.primitives.Longs
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.database.{AddressId, DBExt, Keys}
-import com.wavesplatform.state.{Diff, Height, Portfolio, TxMeta}
-import com.wavesplatform.transaction.{CreateAliasTransaction, Transaction, TransactionType}
+import com.gicsports.account.Address
+import com.gicsports.common.state.ByteStr
+import com.gicsports.database.{AddressId, DBExt, Keys}
+import com.gicsports.state.{Diff, Height, Portfolio, TxMeta}
+import com.gicsports.transaction.{CreateAliasTransaction, Transaction, TransactionType}
 import monix.eval.Task
 import monix.reactive.Observable
 import org.iq80.leveldb.DB

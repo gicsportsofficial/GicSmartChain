@@ -1,5 +1,5 @@
-package com.wavesplatform.lang.directives.values
-import com.wavesplatform.lang.directives.DirectiveDictionary
+package com.gicsports.lang.directives.values
+import com.gicsports.lang.directives.DirectiveDictionary
 
 //noinspection TypeAnnotation
 sealed abstract class ScriptType(text: String, id: Int) extends DirectiveValue(text, id) {

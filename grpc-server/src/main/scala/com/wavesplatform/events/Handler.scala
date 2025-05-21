@@ -1,6 +1,6 @@
-package com.wavesplatform.events
-import com.wavesplatform.events.repo.LiquidState
-import com.wavesplatform.utils.ScorexLogging
+package com.gicsports.events
+import com.gicsports.events.repo.LiquidState
+import com.gicsports.utils.ScorexLogging
 import monix.execution.{Ack, Scheduler}
 import monix.reactive.subjects.PublishToOneSubject
 

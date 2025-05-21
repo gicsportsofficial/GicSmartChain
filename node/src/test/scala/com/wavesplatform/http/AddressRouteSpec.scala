@@ -1,4 +1,4 @@
-package com.wavesplatform.http
+package com.gicsports.http
 
 import akka.http.scaladsl.model.HttpEntity.{Chunk, LastChunk}
 import akka.http.scaladsl.model.{ContentTypes, FormData, HttpEntity, HttpHeader, MediaTypes, StatusCodes, TransferEncodings}
@@ -7,31 +7,31 @@ import akka.http.scaladsl.testkit.RouteTestTimeout
 import akka.stream.scaladsl.Source
 import com.google.common.primitives.Longs
 import com.google.protobuf.ByteString
-import com.wavesplatform.crypto
-import com.wavesplatform.account.Address
-import com.wavesplatform.api.common.CommonAccountsApi
-import com.wavesplatform.api.http.{AddressApiRoute, RouteTimeout}
-import com.wavesplatform.api.http.ApiError.{ApiKeyNotValid, DataKeysNotSpecified, TooBigArrayAllocation}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, Base64, EitherExt2}
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.contract.DApp.{CallableAnnotation, CallableFunction, VerifierAnnotation, VerifierFunction}
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.directives.values.V3
-import com.wavesplatform.lang.script.ContractScript
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.protobuf.dapp.DAppMeta.CallableFuncSignature
-import com.wavesplatform.settings.WalletSettings
-import com.wavesplatform.state.diffs.FeeValidation
-import com.wavesplatform.state.{AccountScriptInfo, Blockchain}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.utils.Schedulers
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.crypto
+import com.gicsports.account.Address
+import com.gicsports.api.common.CommonAccountsApi
+import com.gicsports.api.http.{AddressApiRoute, RouteTimeout}
+import com.gicsports.api.http.ApiError.{ApiKeyNotValid, DataKeysNotSpecified, TooBigArrayAllocation}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, Base64, EitherExt2}
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.contract.DApp.{CallableAnnotation, CallableFunction, VerifierAnnotation, VerifierFunction}
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.directives.values.V3
+import com.gicsports.lang.script.ContractScript
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.protobuf.dapp.DAppMeta.CallableFuncSignature
+import com.gicsports.settings.WalletSettings
+import com.gicsports.state.diffs.FeeValidation
+import com.gicsports.state.{AccountScriptInfo, Blockchain}
+import com.gicsports.test.*
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.utils.Schedulers
+import com.gicsports.wallet.Wallet
 import io.netty.util.HashedWheelTimer
 import org.scalacheck.Gen
 import org.scalamock.scalatest.PathMockFactory

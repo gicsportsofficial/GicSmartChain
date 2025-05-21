@@ -1,22 +1,22 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
 import cats.instances.list.*
 import cats.syntax.either.*
 import cats.syntax.traverse.*
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.BlockchainFeatures.RideV6
-import com.wavesplatform.features.ComplexityCheckPolicyProvider.*
-import com.wavesplatform.features.EstimatorProvider.*
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.directives.values.StdLibVersion
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.script.{ContractScript, Script}
-import com.wavesplatform.lang.v1.estimator.ScriptEstimator
-import com.wavesplatform.state.{AccountScriptInfo, Blockchain, Diff, Portfolio}
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.smart.SetScriptTransaction
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.BlockchainFeatures.RideV6
+import com.gicsports.features.ComplexityCheckPolicyProvider.*
+import com.gicsports.features.EstimatorProvider.*
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.directives.values.StdLibVersion
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.script.{ContractScript, Script}
+import com.gicsports.lang.v1.estimator.ScriptEstimator
+import com.gicsports.state.{AccountScriptInfo, Blockchain, Diff, Portfolio}
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.smart.SetScriptTransaction
 
 object SetScriptTransactionDiff {
   def apply(blockchain: Blockchain)(tx: SetScriptTransaction): Either[ValidationError, Diff] =
@@ -24,7 +24,7 @@ object SetScriptTransactionDiff {
       // Validate script size limit
       _ <- tx.script match {
         case Some(script) =>
-          import com.wavesplatform.lang.v1.ContractLimits.{MaxContractSizeInBytes, MaxContractSizeInBytesV6, MaxExprSizeInBytes}
+          import com.gicsports.lang.v1.ContractLimits.{MaxContractSizeInBytes, MaxContractSizeInBytesV6, MaxExprSizeInBytes}
           if (script.isInstanceOf[ExprScript]) scriptSizeValidation(script, MaxExprSizeInBytes)
           else if (blockchain.isFeatureActivated(BlockchainFeatures.RideV6)) scriptSizeValidation(script, MaxContractSizeInBytesV6)
           else scriptSizeValidation(script, MaxContractSizeInBytes)

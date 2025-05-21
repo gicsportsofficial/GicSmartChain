@@ -1,8 +1,8 @@
-package com.wavesplatform.lang.parser.error
+package com.gicsports.lang.parser.error
 
-import com.wavesplatform.lang.directives.values.V6
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.PropSpec
+import com.gicsports.lang.directives.values.V6
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.PropSpec
 import org.scalatest.Assertion
 
 abstract class ParseErrorTest extends PropSpec {

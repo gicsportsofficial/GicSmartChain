@@ -1,6 +1,6 @@
-package com.wavesplatform.features
+package com.gicsports.features
 
-import com.wavesplatform.state.Blockchain
+import com.gicsports.state.Blockchain
 
 object ScriptTransferValidationProvider {
   implicit class PassCorrectAssetIdExt(b: Blockchain) {

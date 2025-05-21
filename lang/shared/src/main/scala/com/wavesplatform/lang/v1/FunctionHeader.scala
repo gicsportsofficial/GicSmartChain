@@ -1,4 +1,4 @@
-package com.wavesplatform.lang.v1
+package com.gicsports.lang.v1
 
 sealed abstract class FunctionHeader(val funcName: String)
 object FunctionHeader {

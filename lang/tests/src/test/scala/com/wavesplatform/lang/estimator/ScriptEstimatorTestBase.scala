@@ -1,23 +1,23 @@
-package com.wavesplatform.lang.estimator
+package com.gicsports.lang.estimator
 
 import cats.kernel.Monoid
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.utils.functionCosts
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.estimator.ScriptEstimator
-import com.wavesplatform.lang.v1.evaluator.Contextful.NoContext
-import com.wavesplatform.lang.v1.evaluator.ContextfulVal
-import com.wavesplatform.lang.v1.evaluator.FunctionIds.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.{Types, WavesContext}
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.v1.{CTX, FunctionHeader}
-import com.wavesplatform.lang.{Common, Global, utils}
-import com.wavesplatform.test.*
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.utils.functionCosts
+import com.gicsports.lang.v1.compiler.ExpressionCompiler
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.estimator.ScriptEstimator
+import com.gicsports.lang.v1.evaluator.Contextful.NoContext
+import com.gicsports.lang.v1.evaluator.ContextfulVal
+import com.gicsports.lang.v1.evaluator.FunctionIds.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.{Types, WavesContext}
+import com.gicsports.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.v1.{CTX, FunctionHeader}
+import com.gicsports.lang.{Common, Global, utils}
+import com.gicsports.test.*
 import monix.eval.Coeval
 
 class ScriptEstimatorTestBase(estimators: ScriptEstimator*) extends PropSpec {

@@ -1,18 +1,18 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
 import com.typesafe.config.Config
-import com.wavesplatform.account.{KeyPair, PublicKey}
-import com.wavesplatform.api.http.DebugMessage
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.consensus.FairPoSCalculator
-import com.wavesplatform.consensus.nxt.NxtLikeConsensusBlockData
-import com.wavesplatform.crypto
-import com.wavesplatform.it.api.AsyncNetworkApi.NodeAsyncNetworkApi
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.{BaseFunSuite, NodeConfigs, WaitForHeight2}
-import com.wavesplatform.network.RawBytes
+import com.gicsports.account.{KeyPair, PublicKey}
+import com.gicsports.api.http.DebugMessage
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.consensus.FairPoSCalculator
+import com.gicsports.consensus.nxt.NxtLikeConsensusBlockData
+import com.gicsports.crypto
+import com.gicsports.it.api.AsyncNetworkApi.NodeAsyncNetworkApi
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.{BaseFunSuite, NodeConfigs, WaitForHeight2}
+import com.gicsports.network.RawBytes
 import play.api.libs.json.{JsSuccess, Json, Reads}
 
 import scala.util.Random
@@ -285,7 +285,7 @@ class PoSSuite extends BaseFunSuite with WaitForHeight2 {
       .overrideBase(
         _.raw(
           s"""
-          |CARDIUM {
+          |GIC {
           |  blockchain {
           |    custom {
           |      functionality {
@@ -308,7 +308,7 @@ class PoSSuite extends BaseFunSuite with WaitForHeight2 {
       )
       .overrideBase(_.nonMiner)
       .withDefault(3)
-      .withSpecial(_.raw("CARDIUM.miner.enable = yes"))
+      .withSpecial(_.raw("GIC.miner.enable = yes"))
       .buildNonConflicting()
 
   private def generatorSignature(signature: Array[Byte], publicKey: PublicKey): Array[Byte] = {

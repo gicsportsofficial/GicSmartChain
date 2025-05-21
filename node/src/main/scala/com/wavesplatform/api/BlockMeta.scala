@@ -1,9 +1,9 @@
-package com.wavesplatform.api
+package com.gicsports.api
 
-import com.wavesplatform.block.Block.protoHeaderHash
-import com.wavesplatform.block.serialization.BlockHeaderSerializer
-import com.wavesplatform.block.{Block, BlockHeader, SignedBlockHeader}
-import com.wavesplatform.common.state.ByteStr
+import com.gicsports.block.Block.protoHeaderHash
+import com.gicsports.block.serialization.BlockHeaderSerializer
+import com.gicsports.block.{Block, BlockHeader, SignedBlockHeader}
+import com.gicsports.common.state.ByteStr
 import monix.eval.Coeval
 import play.api.libs.json.{JsObject, Json}
 

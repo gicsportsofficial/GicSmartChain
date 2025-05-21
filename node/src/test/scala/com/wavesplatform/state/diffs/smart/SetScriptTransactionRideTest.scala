@@ -1,14 +1,14 @@
-package com.wavesplatform.state.diffs.smart
+package com.gicsports.state.diffs.smart
 
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures.ConsensusImprovements
-import com.wavesplatform.lang.directives.values.V6
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.DomainPresets.WavesSettingsOps
-import com.wavesplatform.test.{NumericExt, PropSpec, produce}
-import com.wavesplatform.transaction.TxHelpers.{defaultSigner, secondSigner, setScript}
-import com.wavesplatform.transaction.TxVersion
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures.ConsensusImprovements
+import com.gicsports.lang.directives.values.V6
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.DomainPresets.WavesSettingsOps
+import com.gicsports.test.{NumericExt, PropSpec, produce}
+import com.gicsports.transaction.TxHelpers.{defaultSigner, secondSigner, setScript}
+import com.gicsports.transaction.TxVersion
 
 class SetScriptTransactionRideTest extends PropSpec with WithDomain {
   property(s"correct mapping SetScriptTransaction with > 32 KB script from $ConsensusImprovements") {

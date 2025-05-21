@@ -1,13 +1,13 @@
-package com.wavesplatform
+package com.gicsports
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.crypto._
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.transfer._
+import com.gicsports.account.KeyPair
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.crypto._
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.transfer._
 import monix.execution.schedulers.SchedulerService
 import monix.execution.{Ack, Scheduler}
 import monix.reactive.Observer

@@ -1,15 +1,15 @@
-package com.wavesplatform
+package com.gicsports
 
 import java.nio.ByteBuffer
 import com.google.common.primitives.Shorts
-import com.wavesplatform.account._
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils._
-import com.wavesplatform.crypto.{KeyLength, SignatureLength}
-import com.wavesplatform.lang.script.{Script, ScriptReader}
-import com.wavesplatform.transaction.{Asset, Proofs}
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.assets.exchange.Order
+import com.gicsports.account._
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils._
+import com.gicsports.crypto.{KeyLength, SignatureLength}
+import com.gicsports.lang.script.{Script, ScriptReader}
+import com.gicsports.transaction.{Asset, Proofs}
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.assets.exchange.Order
 
 package object serialization {
   implicit class ByteBufferOps(private val buf: ByteBuffer) extends AnyVal {

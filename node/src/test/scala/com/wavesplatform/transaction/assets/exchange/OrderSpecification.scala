@@ -1,13 +1,13 @@
-package com.wavesplatform.transaction.assets.exchange
+package com.gicsports.transaction.assets.exchange
 
-import com.wavesplatform.NTPTime
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.exchange.OrderAuthentication.OrderProofs
-import com.wavesplatform.transaction.smart.Verifier
-import com.wavesplatform.transaction.{Asset, Proofs, TxExchangeAmount, TxHelpers, TxMatcherFee, TxOrderPrice, ValidationMatcher}
+import com.gicsports.NTPTime
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.exchange.OrderAuthentication.OrderProofs
+import com.gicsports.transaction.smart.Verifier
+import com.gicsports.transaction.{Asset, Proofs, TxExchangeAmount, TxHelpers, TxMatcherFee, TxOrderPrice, ValidationMatcher}
 import org.scalatest.*
 
 import scala.util.Random

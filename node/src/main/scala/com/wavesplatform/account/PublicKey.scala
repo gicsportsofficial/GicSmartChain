@@ -1,11 +1,11 @@
-package com.wavesplatform.account
+package com.gicsports.account
 
 import com.google.common.collect.Interners
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.crypto._
-import com.wavesplatform.transaction.TxValidationError.InvalidAddress
-import com.wavesplatform.utils.base58Length
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.Base58
+import com.gicsports.crypto._
+import com.gicsports.transaction.TxValidationError.InvalidAddress
+import com.gicsports.utils.base58Length
 import org.web3j.crypto.Keys
 import play.api.libs.json.{Format, Writes}
 import supertagged._
@@ -45,7 +45,7 @@ object PublicKey extends TaggedType[ByteStr] {
   }
 
   implicit lazy val jsonFormat: Format[PublicKey] = Format[PublicKey](
-    com.wavesplatform.utils.byteStrFormat.map(this.apply),
-    Writes(pk => com.wavesplatform.utils.byteStrFormat.writes(pk))
+    com.gicsports.utils.byteStrFormat.map(this.apply),
+    Writes(pk => com.gicsports.utils.byteStrFormat.writes(pk))
   )
 }

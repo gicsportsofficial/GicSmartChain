@@ -1,21 +1,21 @@
-package com.wavesplatform.lang.v1.evaluator
+package com.gicsports.lang.v1.evaluator
 
 import cats.Id
 import cats.instances.lazyList.*
 import cats.syntax.either.*
 import cats.syntax.foldable.*
-import com.wavesplatform.lang.directives.values.StdLibVersion
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.Types.CASETYPEREF
-import com.wavesplatform.lang.v1.evaluator.ContextfulNativeFunction.{Extended, Simple}
-import com.wavesplatform.lang.v1.evaluator.ContractEvaluator.LogExtraInfo
-import com.wavesplatform.lang.v1.evaluator.EvaluatorV2.logFunc
-import com.wavesplatform.lang.v1.evaluator.EvaluatorV2.LogKeys.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.Bindings
-import com.wavesplatform.lang.v1.evaluator.ctx.{EvaluationContext, LoggedEvaluationContext, NativeFunction, UserFunction}
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.{CommonError, ExecutionError}
+import com.gicsports.lang.directives.values.StdLibVersion
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.Types.CASETYPEREF
+import com.gicsports.lang.v1.evaluator.ContextfulNativeFunction.{Extended, Simple}
+import com.gicsports.lang.v1.evaluator.ContractEvaluator.LogExtraInfo
+import com.gicsports.lang.v1.evaluator.EvaluatorV2.logFunc
+import com.gicsports.lang.v1.evaluator.EvaluatorV2.LogKeys.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.Bindings
+import com.gicsports.lang.v1.evaluator.ctx.{EvaluationContext, LoggedEvaluationContext, NativeFunction, UserFunction}
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.{CommonError, ExecutionError}
 import monix.eval.Coeval
 import shapeless.syntax.std.tuple.*
 

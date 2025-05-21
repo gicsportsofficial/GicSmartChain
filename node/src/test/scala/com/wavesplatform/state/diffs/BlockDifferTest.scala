@@ -1,14 +1,14 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.block.Block
-import com.wavesplatform.db.WithState
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.settings.FunctionalitySettings
-import com.wavesplatform.state.{Blockchain, Diff}
-import com.wavesplatform.test.node.*
-import com.wavesplatform.transaction.{TxHelpers, TxVersion}
-import com.wavesplatform.test.FreeSpec
+import com.gicsports.account.KeyPair
+import com.gicsports.block.Block
+import com.gicsports.db.WithState
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.settings.FunctionalitySettings
+import com.gicsports.state.{Blockchain, Diff}
+import com.gicsports.test.node.*
+import com.gicsports.transaction.{TxHelpers, TxVersion}
+import com.gicsports.test.FreeSpec
 
 class BlockDifferTest extends FreeSpec with WithState {
   private val TransactionFee = 10

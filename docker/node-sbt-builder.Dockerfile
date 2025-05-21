@@ -12,6 +12,6 @@ RUN apt-get update && apt-get -y install git
 
 VOLUME /src
 
-RUN git clone --depth 1 -b v$WAVES_VERSION https://github.com/wavesplatform/Waves.git /src && \
+RUN git clone --depth 1 -b v$WAVES_VERSION https://github.com/gicsports/Waves.git /src && \
   cd /src && \
   sbt --batch --mem 2048 ";node/compile;grpc-server/compile"

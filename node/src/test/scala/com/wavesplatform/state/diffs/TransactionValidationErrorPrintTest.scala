@@ -1,19 +1,19 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.account.{Address, KeyPair}
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithState
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.values.{Expression, V6}
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.utils.compilerContext
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.state.diffs.TransactionDiffer.TransactionValidationError
-import com.wavesplatform.test.*
-import com.wavesplatform.test.DomainPresets.RideV6
-import com.wavesplatform.transaction.TxValidationError.ScriptExecutionError
-import com.wavesplatform.transaction.{ErrorWithLogPrinter, TxHelpers}
+import com.gicsports.account.{Address, KeyPair}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithState
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.values.{Expression, V6}
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.utils.compilerContext
+import com.gicsports.lang.v1.compiler.ExpressionCompiler
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.state.diffs.TransactionDiffer.TransactionValidationError
+import com.gicsports.test.*
+import com.gicsports.test.DomainPresets.RideV6
+import com.gicsports.transaction.TxValidationError.ScriptExecutionError
+import com.gicsports.transaction.{ErrorWithLogPrinter, TxHelpers}
 import org.scalatest.Inside
 
 class TransactionValidationErrorPrintTest extends PropSpec with Inside with WithState {

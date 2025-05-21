@@ -1,20 +1,20 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
-import com.wavesplatform.account.{AddressScheme, KeyPair}
-import com.wavesplatform.api.http.ApiError.{CustomValidationError, InvalidDecimals, InvalidName, NonPositiveAmount}
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.IssueTransactionInfo
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.TxVersion
+import com.gicsports.account.{AddressScheme, KeyPair}
+import com.gicsports.api.http.ApiError.{CustomValidationError, InvalidDecimals, InvalidName, NonPositiveAmount}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.IssueTransactionInfo
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.test._
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.TxVersion
 import org.scalatest.prop.TableDrivenPropertyChecks
 import play.api.libs.json.{JsNull, JsString, JsValue, Json}
 
 class IssueTransactionSuite extends BaseTransactionSuite with TableDrivenPropertyChecks {
-  test("asset issue changes issuer's asset balance; issuer's CARDIUM balance is decreased by fee") {
+  test("asset issue changes issuer's asset balance; issuer's GIC balance is decreased by fee") {
     for (v <- issueTxSupportedVersions) {
       val assetName        = "myasset"
       val assetDescription = "my asset description"

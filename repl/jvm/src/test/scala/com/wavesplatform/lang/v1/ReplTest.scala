@@ -1,12 +1,12 @@
-package com.wavesplatform.lang.v1
+package com.gicsports.lang.v1
 
 import cats.Functor
-import com.wavesplatform.lang.v1.repl.Repl
-import com.wavesplatform.lang.v1.repl.node.BlockchainUnavailableException
-import com.wavesplatform.lang.v1.repl.node.http.NodeClient.ResponseWrapper
-import com.wavesplatform.lang.v1.repl.node.http.response.model.HeightResponse
-import com.wavesplatform.lang.v1.repl.node.http.{NodeClient, NodeConnectionSettings}
-import com.wavesplatform.test.produce
+import com.gicsports.lang.v1.repl.Repl
+import com.gicsports.lang.v1.repl.node.BlockchainUnavailableException
+import com.gicsports.lang.v1.repl.node.http.NodeClient.ResponseWrapper
+import com.gicsports.lang.v1.repl.node.http.response.model.HeightResponse
+import com.gicsports.lang.v1.repl.node.http.{NodeClient, NodeConnectionSettings}
+import com.gicsports.test.produce
 import io.circe.Decoder
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.propspec.AnyPropSpec

@@ -1,7 +1,7 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
-import com.wavesplatform.common.utils.Base64
-import com.wavesplatform.test._
+import com.gicsports.common.utils.Base64
+import com.gicsports.test._
 
 class MicroBlockResponseSpec extends FreeSpec {
   private val microBlockBytes = Base64.decode(

@@ -1,19 +1,19 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.TestValues
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.directives.values.V1
-import com.wavesplatform.settings.RewardsVotingSettings
-import com.wavesplatform.state.{Diff, Portfolio}
-import com.wavesplatform.test.{NumericExt, PropSpec}
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.{TxHelpers, TxValidationError, TxVersion}
+import com.gicsports.TestValues
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.directives.values.V1
+import com.gicsports.settings.RewardsVotingSettings
+import com.gicsports.state.{Diff, Portfolio}
+import com.gicsports.test.{NumericExt, PropSpec}
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.{TxHelpers, TxValidationError, TxVersion}
 
 class TransferTransactionDiffTest extends PropSpec with WithDomain {
 
-  property("transfers assets to recipient preserving CARDIUM invariant") {
+  property("transfers assets to recipient preserving GIC invariant") {
     val sender    = TxHelpers.secondAddress
     val senderKp  = TxHelpers.secondSigner
     val recipient = TxHelpers.address(2)

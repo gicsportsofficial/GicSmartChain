@@ -1,13 +1,13 @@
-package com.wavesplatform.transaction.smart
+package com.gicsports.transaction.smart
 
-import com.wavesplatform.api.common.TransactionMeta
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.state.StringDataEntry
-import com.wavesplatform.test.FlatSpec
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.transaction.utils.EthTxGenerator
-import com.wavesplatform.utils.{EthHelpers, JsonMatchers}
+import com.gicsports.api.common.TransactionMeta
+import com.gicsports.db.WithDomain
+import com.gicsports.state.StringDataEntry
+import com.gicsports.test.FlatSpec
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.transaction.utils.EthTxGenerator
+import com.gicsports.utils.{EthHelpers, JsonMatchers}
 import play.api.libs.json.Json
 
 //noinspection NotImplementedCode

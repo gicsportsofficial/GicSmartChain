@@ -1,8 +1,8 @@
-package com.wavesplatform.events
+package com.gicsports.events
 
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.Diff
-import com.wavesplatform.transaction.Transaction
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.Diff
+import com.gicsports.transaction.Transaction
 
 sealed trait UtxEvent
 object UtxEvent {

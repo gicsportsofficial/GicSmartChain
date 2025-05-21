@@ -1,6 +1,6 @@
-package com.wavesplatform.common.merkle
+package com.gicsports.common.merkle
 
-import com.wavesplatform.common.merkle.ScryptoMerkleProof._
+import com.gicsports.common.merkle.ScryptoMerkleProof._
 
 import scala.util.Try
 

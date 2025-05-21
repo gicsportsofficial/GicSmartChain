@@ -1,14 +1,14 @@
-package com.wavesplatform.history
+package com.gicsports.history
 
-import com.wavesplatform._
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.history.Domain.BlockchainUpdaterExt
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.GenesisTransaction
-import com.wavesplatform.transaction.TxValidationError.GenericError
+import com.gicsports._
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.history.Domain.BlockchainUpdaterExt
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.GenesisTransaction
+import com.gicsports.transaction.TxValidationError.GenericError
 import org.scalacheck.Gen
 
 class BlockchainUpdaterLiquidBlockTest extends PropSpec with DomainScenarioDrivenPropertyCheck with BlocksTransactionsHelpers {

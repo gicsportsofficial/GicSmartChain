@@ -1,13 +1,13 @@
-package com.wavesplatform.lang.v1.evaluator.ctx
+package com.gicsports.lang.v1.evaluator.ctx
 
 import cats.*
 import cats.syntax.functor.*
-import com.wavesplatform.lang.ExecutionError
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.LET
-import com.wavesplatform.lang.v1.compiler.Types.FINAL
-import com.wavesplatform.lang.v1.evaluator.Contextful.NoContext
-import com.wavesplatform.lang.v1.evaluator.{Contextful, LetExecResult, LetLogCallback}
+import com.gicsports.lang.ExecutionError
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.LET
+import com.gicsports.lang.v1.compiler.Types.FINAL
+import com.gicsports.lang.v1.evaluator.Contextful.NoContext
+import com.gicsports.lang.v1.evaluator.{Contextful, LetExecResult, LetLogCallback}
 import shapeless.{Lens, lens}
 
 import java.util

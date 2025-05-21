@@ -1,15 +1,15 @@
-package com.wavesplatform.transaction.assets.exchange
+package com.gicsports.transaction.assets.exchange
 
-import com.wavesplatform.account.{Address, KeyPair, PrivateKey, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.assets.exchange.Order.Version
-import com.wavesplatform.transaction.assets.exchange.Validation.booleanOperators
-import com.wavesplatform.transaction.serialization.impl.OrderSerializer
+import com.gicsports.account.{Address, KeyPair, PrivateKey, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.*
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.assets.exchange.Order.Version
+import com.gicsports.transaction.assets.exchange.Validation.booleanOperators
+import com.gicsports.transaction.serialization.impl.OrderSerializer
 import monix.eval.Coeval
 import play.api.libs.json.{Format, JsObject}
 
@@ -68,7 +68,7 @@ case class Order(
     (timestamp > 0) :| "timestamp should be > 0" &&
     (expiration - atTime <= MaxLiveTime) :| "expiration should be earlier than 30 days" &&
     (expiration >= atTime) :| "expiration should be > currentTime" &&
-    (matcherFeeAssetId == Waves || version >= Order.V3) :| "matcherFeeAssetId should be CARDIUM" &&
+    (matcherFeeAssetId == Waves || version >= Order.V3) :| "matcherFeeAssetId should be GIC" &&
     (version > 0 && version < 5) :| "invalid version" &&
     (eip712Signature.isEmpty || version >= Order.V4) :| "eip712Signature available only in V4" &&
     eip712Signature.forall(es => es.size == 65 || es.size == 129) :| "eip712Signature should be of length 65 or 129" &&
@@ -108,7 +108,7 @@ case class Order(
   val json: Coeval[JsObject] = Coeval.evalOnce(OrderSerializer.toJson(this))
 
   override def toString: String = {
-    val matcherFeeAssetIdStr = if (version == 3) s" matcherFeeAssetId=${matcherFeeAssetId.fold("CARDIUM")(_.toString)}," else ""
+    val matcherFeeAssetIdStr = if (version == 3) s" matcherFeeAssetId=${matcherFeeAssetId.fold("GIC")(_.toString)}," else ""
     s"OrderV$version(id=${idStr()}, sender=$senderPublicKey, matcher=$matcherPublicKey, pair=$assetPair, type=$orderType, amount=$amount, " +
       s"price=$price, priceMode=$priceMode, ts=$timestamp, exp=$expiration, fee=$matcherFee,$matcherFeeAssetIdStr, eip712Signature=$eip712Signature, proofs=$proofs)"
   }
@@ -118,7 +118,7 @@ object Order {
   type Id      = ByteStr
   type Version = Byte
 
-  implicit lazy val jsonFormat: Format[Order] = com.wavesplatform.transaction.assets.exchange.OrderJson.orderFormat
+  implicit lazy val jsonFormat: Format[Order] = com.gicsports.transaction.assets.exchange.OrderJson.orderFormat
 
   val MaxLiveTime: Long = 30L * 24L * 60L * 60L * 1000L
   val PriceConstant     = 100000000L

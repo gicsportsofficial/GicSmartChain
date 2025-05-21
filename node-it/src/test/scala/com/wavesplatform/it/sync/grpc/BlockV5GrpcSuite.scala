@@ -1,14 +1,14 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
 import com.google.protobuf.ByteString
 import com.typesafe.config.Config
-import com.wavesplatform.api.grpc.BlockRangeRequest
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
-import com.wavesplatform.it.api.SyncGrpcApi._
-import com.wavesplatform.it.sync.activation.ActivationStatusRequest
-import com.wavesplatform.it.{GrpcIntegrationSuiteWithThreeAddress, NodeConfigs}
+import com.gicsports.api.grpc.BlockRangeRequest
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
+import com.gicsports.it.api.SyncGrpcApi._
+import com.gicsports.it.sync.activation.ActivationStatusRequest
+import com.gicsports.it.{GrpcIntegrationSuiteWithThreeAddress, NodeConfigs}
 import org.scalatest._
 
 import scala.concurrent.duration._

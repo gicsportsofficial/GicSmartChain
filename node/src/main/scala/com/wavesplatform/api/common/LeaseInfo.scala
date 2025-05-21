@@ -1,8 +1,8 @@
-package com.wavesplatform.api.common
+package com.gicsports.api.common
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.api.common.LeaseInfo.Status
-import com.wavesplatform.common.state.ByteStr
+import com.gicsports.account.Address
+import com.gicsports.api.common.LeaseInfo.Status
+import com.gicsports.common.state.ByteStr
 
 object LeaseInfo {
   type Status = Status.Value

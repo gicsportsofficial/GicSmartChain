@@ -1,28 +1,28 @@
-package com.wavesplatform.lang.compiler
+package com.gicsports.lang.compiler
 
 import cats.kernel.Monoid
 import cats.syntax.semigroup.*
 import com.google.protobuf.ByteString
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.Global
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.contract.DApp.*
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.{DApp as DAppType, *}
-import com.wavesplatform.lang.v1.FunctionHeader.{Native, User}
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.{CompilerContext, ScriptResultSource, Terms, TestCompiler}
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.lang.v1.evaluator.FunctionIds
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.{FieldNames, Types, WavesContext}
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.v1.{ContractLimits, compiler}
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.protobuf.dapp.DAppMeta.CallableFuncSignature
-import com.wavesplatform.test.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.Global
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.contract.DApp.*
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.{DApp as DAppType, *}
+import com.gicsports.lang.v1.FunctionHeader.{Native, User}
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.{CompilerContext, ScriptResultSource, Terms, TestCompiler}
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.lang.v1.evaluator.FunctionIds
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.{FieldNames, Types, WavesContext}
+import com.gicsports.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.v1.{ContractLimits, compiler}
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.protobuf.dapp.DAppMeta.CallableFuncSignature
+import com.gicsports.test.*
 import org.scalatest.Assertion
 
 class ContractCompilerTest extends PropSpec {
@@ -31,7 +31,7 @@ class ContractCompilerTest extends PropSpec {
       .combineAll(
         Seq(
           PureContext.build(version, useNewPowPrecision = true).withEnvironment[Environment],
-          CryptoContext.build(com.wavesplatform.lang.Global, version).withEnvironment[Environment],
+          CryptoContext.build(com.gicsports.lang.Global, version).withEnvironment[Environment],
           WavesContext.build(
             Global,
             DirectiveSet(version, Account, DAppType).explicitGet(),
@@ -265,7 +265,7 @@ class ContractCompilerTest extends PropSpec {
   }
 
   property("contract compiles fails when incorrect return type") {
-    import com.wavesplatform.lang.v1.evaluator.ctx.impl.*
+    import com.gicsports.lang.v1.evaluator.ctx.impl.*
 
     val ctx = compilerContext
     val expr = {
@@ -367,7 +367,7 @@ class ContractCompilerTest extends PropSpec {
       .combineAll(
         Seq(
           PureContext.build(V3, useNewPowPrecision = true).withEnvironment[Environment],
-          CryptoContext.build(com.wavesplatform.lang.Global, V3).withEnvironment[Environment],
+          CryptoContext.build(com.gicsports.lang.Global, V3).withEnvironment[Environment],
           WavesContext.build(
             Global,
             DirectiveSet(V3, Account, DAppType).explicitGet(),
@@ -383,7 +383,7 @@ class ContractCompilerTest extends PropSpec {
           |	@Callable(i)
           |	func deposit() = {
           |   let pmt = i.payment.value()
-          |   if (isDefined(pmt.assetId)) then throw("can hodl CARDIUM only at the moment")
+          |   if (isDefined(pmt.assetId)) then throw("can hodl GIC only at the moment")
           |   else {
           |	  	let currentKey = toBase58String(i.caller.bytes)
           |	  	let currentAmount = match getInteger(this, currentKey) {
@@ -495,7 +495,7 @@ class ContractCompilerTest extends PropSpec {
       .combineAll(
         Seq(
           PureContext.build(V3, useNewPowPrecision = true).withEnvironment[Environment],
-          CryptoContext.build(com.wavesplatform.lang.Global, V3).withEnvironment[Environment],
+          CryptoContext.build(com.gicsports.lang.Global, V3).withEnvironment[Environment],
           WavesContext.build(
             Global,
             DirectiveSet(V3, Account, DAppType).explicitGet(),
@@ -824,7 +824,7 @@ class ContractCompilerTest extends PropSpec {
       .combineAll(
         Seq(
           PureContext.build(V3, useNewPowPrecision = true).withEnvironment[Environment],
-          CryptoContext.build(com.wavesplatform.lang.Global, V3).withEnvironment[Environment],
+          CryptoContext.build(com.gicsports.lang.Global, V3).withEnvironment[Environment],
           WavesContext.build(
             Global,
             DirectiveSet(V3, Account, DAppType).explicitGet(),

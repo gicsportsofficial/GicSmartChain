@@ -1,22 +1,22 @@
-package com.wavesplatform.api.common
+package com.gicsports.api.common
 
-import com.wavesplatform.account.{Address, Alias}
-import com.wavesplatform.api.common.AddressPortfolio.{assetBalanceIterator, nftIterator}
-import com.wavesplatform.api.common.TransactionMeta.Ethereum
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.database
-import com.wavesplatform.database.{DBExt, KeyTags, Keys}
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.patch.CancelLeasesToDisabledAliases
-import com.wavesplatform.state.reader.LeaseDetails.Status
-import com.wavesplatform.state.{AccountScriptInfo, AssetDescription, Blockchain, DataEntry, Diff, Height, InvokeScriptResult}
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.EthereumTransaction.Invocation
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.lease.LeaseTransaction
-import com.wavesplatform.transaction.{EthereumTransaction, TransactionType}
+import com.gicsports.account.{Address, Alias}
+import com.gicsports.api.common.AddressPortfolio.{assetBalanceIterator, nftIterator}
+import com.gicsports.api.common.TransactionMeta.Ethereum
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.database
+import com.gicsports.database.{DBExt, KeyTags, Keys}
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.patch.CancelLeasesToDisabledAliases
+import com.gicsports.state.reader.LeaseDetails.Status
+import com.gicsports.state.{AccountScriptInfo, AssetDescription, Blockchain, DataEntry, Diff, Height, InvokeScriptResult}
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.EthereumTransaction.Invocation
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.lease.LeaseTransaction
+import com.gicsports.transaction.{EthereumTransaction, TransactionType}
 import monix.eval.Task
 import monix.reactive.Observable
 import org.iq80.leveldb.DB

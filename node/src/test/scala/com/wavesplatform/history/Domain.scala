@@ -1,30 +1,30 @@
-package com.wavesplatform.history
+package com.gicsports.history
 
-import com.wavesplatform.account.{Address, KeyPair}
-import com.wavesplatform.api.BlockMeta
-import com.wavesplatform.api.common.*
-import com.wavesplatform.block.Block.BlockId
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.consensus.nxt.NxtLikeConsensusBlockData
-import com.wavesplatform.consensus.{PoSCalculator, PoSSelector}
-import com.wavesplatform.database.{DBExt, Keys, LevelDBWriter}
-import com.wavesplatform.events.BlockchainUpdateTriggers
-import com.wavesplatform.features.BlockchainFeatures.{BlockV5, RideV6}
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.state.*
-import com.wavesplatform.state.diffs.TransactionDiffer
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.smart.script.trace.TracedResult
-import com.wavesplatform.transaction.{BlockchainUpdater, *}
-import com.wavesplatform.utils.{EthEncoding, SystemTime}
-import com.wavesplatform.utx.UtxPoolImpl
-import com.wavesplatform.wallet.Wallet
-import com.wavesplatform.{Application, TestValues, crypto, database}
+import com.gicsports.account.{Address, KeyPair}
+import com.gicsports.api.BlockMeta
+import com.gicsports.api.common.*
+import com.gicsports.block.Block.BlockId
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.consensus.nxt.NxtLikeConsensusBlockData
+import com.gicsports.consensus.{PoSCalculator, PoSSelector}
+import com.gicsports.database.{DBExt, Keys, LevelDBWriter}
+import com.gicsports.events.BlockchainUpdateTriggers
+import com.gicsports.features.BlockchainFeatures.{BlockV5, RideV6}
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.script.Script
+import com.gicsports.settings.WavesSettings
+import com.gicsports.state.*
+import com.gicsports.state.diffs.TransactionDiffer
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.smart.script.trace.TracedResult
+import com.gicsports.transaction.{BlockchainUpdater, *}
+import com.gicsports.utils.{EthEncoding, SystemTime}
+import com.gicsports.utx.UtxPoolImpl
+import com.gicsports.wallet.Wallet
+import com.gicsports.{Application, TestValues, crypto, database}
 import monix.execution.Scheduler.Implicits.global
 import org.iq80.leveldb.DB
 import org.scalatest.matchers.should.Matchers.*
@@ -61,7 +61,7 @@ case class Domain(db: DB, blockchainUpdater: BlockchainUpdaterImpl, levelDBWrite
     /** @return
       *   Tuple of (asset, feeInAsset, feeInWaves)
       * @see
-      *   [[com.wavesplatform.state.diffs.FeeValidation#getMinFee(com.wavesplatform.state.Blockchain, com.wavesplatform.transaction.Transaction)]]
+      *   [[com.gicsports.state.diffs.FeeValidation#getMinFee(com.gicsports.state.Blockchain, com.gicsports.transaction.Transaction)]]
       */
     def calculateFee(tx: Transaction): (Asset, Long, Long) =
       transactions.calculateFee(tx).explicitGet()
@@ -356,7 +356,7 @@ case class Domain(db: DB, blockchainUpdater: BlockchainUpdaterImpl, levelDBWrite
   // noinspection ScalaStyle
   object helpers {
     def creditWavesToDefaultSigner(amount: Long = 3000_0000_0000L): Unit = {
-      import com.wavesplatform.transaction.utils.EthConverters.*
+      import com.gicsports.transaction.utils.EthConverters.*
       appendBlock(TxHelpers.genesis(TxHelpers.defaultAddress, amount), TxHelpers.genesis(TxHelpers.defaultSigner.toEthWavesAddress, amount))
     }
 

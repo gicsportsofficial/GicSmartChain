@@ -1,14 +1,14 @@
-package com.wavesplatform.state.diffs.smart.scenarios
+package com.gicsports.state.diffs.smart.scenarios
 
-import com.wavesplatform.account.{AddressOrAlias, Alias}
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithState
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_BYTESTR, CaseObj}
-import com.wavesplatform.state.diffs.smart.predef.*
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.transaction.{CreateAliasTransaction, GenesisTransaction, TxHelpers}
+import com.gicsports.account.{AddressOrAlias, Alias}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithState
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.v1.compiler.Terms.{CONST_BYTESTR, CaseObj}
+import com.gicsports.state.diffs.smart.predef.*
+import com.gicsports.test.*
+import com.gicsports.transaction.transfer.*
+import com.gicsports.transaction.{CreateAliasTransaction, GenesisTransaction, TxHelpers}
 
 class AddressFromRecipientScenarioTest extends PropSpec with WithState {
 

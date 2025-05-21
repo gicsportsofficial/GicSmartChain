@@ -1,8 +1,8 @@
-package com.wavesplatform.common
+package com.gicsports.common
 
 import java.util.concurrent.TimeUnit
 
-import com.wavesplatform.common.ArrayCompareBenchmark.BytesSt
+import com.gicsports.common.ArrayCompareBenchmark.BytesSt
 import org.openjdk.jmh.annotations._
 import org.openjdk.jmh.infra.Blackhole
 

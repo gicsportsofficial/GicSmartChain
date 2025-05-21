@@ -1,17 +1,17 @@
-package com.wavesplatform.state.diffs.smart.predef
+package com.gicsports.state.diffs.smart.predef
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.Testing.*
-import com.wavesplatform.lang.directives.DirectiveDictionary
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V4}
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_BYTESTR, CaseObj}
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.unit
-import com.wavesplatform.state.diffs.smart.predef
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.transaction.TxValidationError.InvalidAddress
+import com.gicsports.account.Address
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.Testing.*
+import com.gicsports.lang.directives.DirectiveDictionary
+import com.gicsports.lang.directives.values.{StdLibVersion, V4}
+import com.gicsports.lang.v1.compiler.Terms.{CONST_BYTESTR, CaseObj}
+import com.gicsports.lang.v1.evaluator.ctx.impl.unit
+import com.gicsports.state.diffs.smart.predef
+import com.gicsports.test.*
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.transaction.TxValidationError.InvalidAddress
 
 class AddressTest extends PropSpec {
   property("should calculate address from public key") {

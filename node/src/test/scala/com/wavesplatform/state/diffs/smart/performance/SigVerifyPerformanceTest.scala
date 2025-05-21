@@ -1,18 +1,18 @@
-package com.wavesplatform.state.diffs.smart.performance
+package com.gicsports.state.diffs.smart.performance
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithState
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.utils.*
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.metrics.Instrumented
-import com.wavesplatform.state.diffs.smart.*
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{TxHelpers, TxVersion}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithState
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.utils.*
+import com.gicsports.lang.v1.compiler.ExpressionCompiler
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.metrics.Instrumented
+import com.gicsports.state.diffs.smart.*
+import com.gicsports.test.*
+import com.gicsports.transaction.{TxHelpers, TxVersion}
 
 class SigVerifyPerformanceTest extends PropSpec with WithState {
 

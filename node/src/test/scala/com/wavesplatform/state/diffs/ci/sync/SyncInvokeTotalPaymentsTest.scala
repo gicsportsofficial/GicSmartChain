@@ -1,17 +1,17 @@
-package com.wavesplatform.state.diffs.ci.sync
+package com.gicsports.state.diffs.ci.sync
 
-import com.wavesplatform.TestValues
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.test.{PropSpec, produce}
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.transaction.TxHelpers.*
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.smart.SetScriptTransaction
+import com.gicsports.TestValues
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.settings.WavesSettings
+import com.gicsports.test.{PropSpec, produce}
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.Transaction
+import com.gicsports.transaction.TxHelpers.*
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.smart.SetScriptTransaction
 
 class SyncInvokeTotalPaymentsTest extends PropSpec with WithDomain {
   import DomainPresets.*

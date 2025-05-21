@@ -1,4 +1,4 @@
-package com.wavesplatform.lang.v1.task
+package com.gicsports.lang.v1.task
 
 import cats.Eval
 import monix.execution.atomic.{Atomic, _}

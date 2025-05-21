@@ -1,26 +1,26 @@
-package com.wavesplatform.it.sync.utils
+package com.gicsports.it.sync.utils
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{Address, AddressScheme, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.lang.v1.compiler.Terms.TRUE
-import com.wavesplatform.state.{BinaryDataEntry, BooleanDataEntry, IntegerDataEntry}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.*
-import com.wavesplatform.transaction.assets.exchange.*
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.Transfer
-import com.wavesplatform.transaction.transfer.{MassTransferTransaction, TransferTransaction}
-import com.wavesplatform.transaction.{
+import com.gicsports.account.{Address, AddressScheme, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.it.sync.*
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.lang.v1.compiler.Terms.TRUE
+import com.gicsports.state.{BinaryDataEntry, BooleanDataEntry, IntegerDataEntry}
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.*
+import com.gicsports.transaction.assets.exchange.*
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.transaction.transfer.MassTransferTransaction.Transfer
+import com.gicsports.transaction.transfer.{MassTransferTransaction, TransferTransaction}
+import com.gicsports.transaction.{
   CreateAliasTransaction,
   DataTransaction,
   Proofs,
@@ -45,7 +45,7 @@ class TransactionSerializeSuite extends BaseTransactionSuite with TableDrivenPro
     TxVersion.V2,
     OrderAuthentication(PublicKey.fromBase58String("BqeJY8CP3PeUDaByz57iRekVUGtLxoow4XxPvXfHynaZ").explicitGet()),
     PublicKey.fromBase58String("Fvk5DXmfyWVZqQVBowUBMwYtRAHDtdyZNNeRrwSjt6KP").explicitGet(),
-    AssetPair.createAssetPair("CARDIUM", "9ZDWzK53XT5bixkmMwTJi2YzgxCqn5dUajXFcT2HcFDy").get,
+    AssetPair.createAssetPair("GIC", "9ZDWzK53XT5bixkmMwTJi2YzgxCqn5dUajXFcT2HcFDy").get,
     OrderType.BUY,
     TxExchangeAmount.unsafeFrom(2),
     TxOrderPrice.unsafeFrom(60.waves),
@@ -58,7 +58,7 @@ class TransactionSerializeSuite extends BaseTransactionSuite with TableDrivenPro
     TxVersion.V1,
     OrderAuthentication(PublicKey.fromBase58String("BqeJY8CP3PeUDaByz57iRekVUGtLxoow4XxPvXfHynaZ").explicitGet()),
     PublicKey.fromBase58String("Fvk5DXmfyWVZqQVBowUBMwYtRAHDtdyZNNeRrwSjt6KP").explicitGet(),
-    AssetPair.createAssetPair("CARDIUM", "9ZDWzK53XT5bixkmMwTJi2YzgxCqn5dUajXFcT2HcFDy").get,
+    AssetPair.createAssetPair("GIC", "9ZDWzK53XT5bixkmMwTJi2YzgxCqn5dUajXFcT2HcFDy").get,
     OrderType.BUY,
     TxExchangeAmount.unsafeFrom(2),
     TxOrderPrice.unsafeFrom(60.waves),
@@ -71,7 +71,7 @@ class TransactionSerializeSuite extends BaseTransactionSuite with TableDrivenPro
     TxVersion.V1,
     OrderAuthentication(PublicKey.fromBase58String("7E9Za8v8aT6EyU1sX91CVK7tWUeAetnNYDxzKZsyjyKV").explicitGet()),
     PublicKey.fromBase58String("Fvk5DXmfyWVZqQVBowUBMwYtRAHDtdyZNNeRrwSjt6KP").explicitGet(),
-    AssetPair.createAssetPair("CARDIUM", "9ZDWzK53XT5bixkmMwTJi2YzgxCqn5dUajXFcT2HcFDy").get,
+    AssetPair.createAssetPair("GIC", "9ZDWzK53XT5bixkmMwTJi2YzgxCqn5dUajXFcT2HcFDy").get,
     OrderType.SELL,
     TxExchangeAmount.unsafeFrom(3),
     TxOrderPrice.unsafeFrom(50.waves),

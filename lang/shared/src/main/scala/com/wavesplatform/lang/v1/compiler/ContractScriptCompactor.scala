@@ -1,8 +1,8 @@
-package com.wavesplatform.lang.v1.compiler
+package com.gicsports.lang.v1.compiler
 
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.v1.FunctionHeader.{Native, User}
-import com.wavesplatform.lang.v1.compiler.Terms.{BLOCK, DECLARATION, EXPR, FUNC, FUNCTION_CALL, GETTER, IF, LET, LET_BLOCK, REF}
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.v1.FunctionHeader.{Native, User}
+import com.gicsports.lang.v1.compiler.Terms.{BLOCK, DECLARATION, EXPR, FUNC, FUNCTION_CALL, GETTER, IF, LET, LET_BLOCK, REF}
 
 import scala.annotation.tailrec
 

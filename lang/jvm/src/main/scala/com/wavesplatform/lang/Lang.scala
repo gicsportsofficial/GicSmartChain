@@ -1,9 +1,9 @@
-package com.wavesplatform.lang
+package com.gicsports.lang
 
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.lang.v1.compiler.Terms.EXPR
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.lang.v1.serialization.SerdeV1
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.lang.v1.compiler.Terms.EXPR
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.lang.v1.serialization.SerdeV1
 
 import scala.jdk.CollectionConverters.*
 

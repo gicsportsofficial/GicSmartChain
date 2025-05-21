@@ -1,14 +1,14 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import com.google.common.primitives.Longs
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils._
-import com.wavesplatform.lang.v1.estimator.ScriptEstimatorV1
-import com.wavesplatform.state.StateHash.SectionId
-import com.wavesplatform.test.FreeSpec
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.account.Address
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils._
+import com.gicsports.lang.v1.estimator.ScriptEstimatorV1
+import com.gicsports.state.StateHash.SectionId
+import com.gicsports.test.FreeSpec
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.smart.script.ScriptCompiler
 
 class StateHashSpec extends FreeSpec {
   "state hash" - {
@@ -44,7 +44,7 @@ class StateHashSpec extends FreeSpec {
     stateHash.addWavesBalance(address, 1000)
     val result = stateHash.result()
 
-    def hash(bs: Array[Byte]*): ByteStr    = ByteStr(com.wavesplatform.crypto.fastHash(bs.reduce(_ ++ _)))
+    def hash(bs: Array[Byte]*): ByteStr    = ByteStr(com.gicsports.crypto.fastHash(bs.reduce(_ ++ _)))
     def sect(id: SectionId.Value): ByteStr = result.hashes(id)
     import SectionId._
 

@@ -1,32 +1,32 @@
-package com.wavesplatform.mining
+package com.gicsports.mining
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.Domain
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.settings.{WalletSettings, WavesSettings}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{TxHelpers, TxVersion}
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.utx.UtxPoolImpl
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.account.KeyPair
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.Domain
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.settings.{WalletSettings, WavesSettings}
+import com.gicsports.test.*
+import com.gicsports.transaction.{TxHelpers, TxVersion}
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.utx.UtxPoolImpl
+import com.gicsports.wallet.Wallet
 import io.netty.channel.group.DefaultChannelGroup
 import io.netty.util.concurrent.GlobalEventExecutor
 import monix.execution.Scheduler
 import monix.reactive.Observable
 import DomainPresets.*
-import com.wavesplatform.block.Block
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_STRING
-import com.wavesplatform.state.appender.BlockAppender
+import com.gicsports.block.Block
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.v1.compiler.Terms.CONST_STRING
+import com.gicsports.state.appender.BlockAppender
 import monix.eval.Task
 
 import scala.concurrent.duration.*

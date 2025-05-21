@@ -1,26 +1,26 @@
-package com.wavesplatform.history
+package com.gicsports.history
 
 import cats.syntax.option.*
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.api.http.RewardApiRoute
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.database.Keys
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.BlockchainFeatures.{BlockReward, ConsensusImprovements}
-import com.wavesplatform.history.Domain.BlockchainUpdaterExt
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.mining.MiningConstraint
-import com.wavesplatform.settings.{Constants, FunctionalitySettings, RewardsSettings}
-import com.wavesplatform.state.diffs.BlockDiffer
-import com.wavesplatform.state.{Blockchain, Height}
-import com.wavesplatform.test.DomainPresets.{RideV6, WavesSettingsOps}
-import com.wavesplatform.test.FreeSpec
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{GenesisTransaction, TxHelpers}
+import com.gicsports.account.KeyPair
+import com.gicsports.api.http.RewardApiRoute
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.database.Keys
+import com.gicsports.db.WithDomain
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.BlockchainFeatures.{BlockReward, ConsensusImprovements}
+import com.gicsports.history.Domain.BlockchainUpdaterExt
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.mining.MiningConstraint
+import com.gicsports.settings.{Constants, FunctionalitySettings, RewardsSettings}
+import com.gicsports.state.diffs.BlockDiffer
+import com.gicsports.state.{Blockchain, Height}
+import com.gicsports.test.DomainPresets.{RideV6, WavesSettingsOps}
+import com.gicsports.test.FreeSpec
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{GenesisTransaction, TxHelpers}
 import org.scalacheck.Gen
 
 class BlockRewardSpec extends FreeSpec with WithDomain {

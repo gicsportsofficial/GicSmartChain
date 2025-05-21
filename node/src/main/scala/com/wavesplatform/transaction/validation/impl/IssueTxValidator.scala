@@ -1,10 +1,10 @@
-package com.wavesplatform.transaction.validation.impl
+package com.gicsports.transaction.validation.impl
 
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.validation.{TxValidator, ValidatedV}
-import com.wavesplatform.transaction.TxVersion
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.validation.{TxValidator, ValidatedV}
+import com.gicsports.transaction.TxVersion
 
 object IssueTxValidator extends TxValidator[IssueTransaction] {
   override def validate(tx: IssueTransaction): ValidatedV[IssueTransaction] = {

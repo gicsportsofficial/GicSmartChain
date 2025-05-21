@@ -1,14 +1,14 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
 import cats.implicits.toBifunctorOps
-import com.wavesplatform.account.{Address, AddressOrAlias}
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{Asset, TxValidationError}
+import com.gicsports.account.{Address, AddressOrAlias}
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{Asset, TxValidationError}
 
 import scala.util.control.NonFatal
 

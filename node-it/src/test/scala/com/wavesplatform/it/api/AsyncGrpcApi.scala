@@ -1,4 +1,4 @@
-package com.wavesplatform.it.api
+package com.gicsports.it.api
 
 import com.google.common.primitives.{Bytes, Longs}
 
@@ -9,27 +9,27 @@ import scala.concurrent.duration.*
 
 import com.google.protobuf.ByteString
 import com.google.protobuf.empty.Empty
-import com.wavesplatform.account.{AddressScheme, Alias, KeyPair}
-import com.wavesplatform.api.grpc.{TransactionStatus as PBTransactionStatus, *}
-import com.wavesplatform.api.grpc.BalanceResponse.WavesBalances
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.crypto
-import com.wavesplatform.it.Node
-import com.wavesplatform.it.sync.invokeExpressionFee
-import com.wavesplatform.it.util.*
-import com.wavesplatform.it.util.GlobalTimer.instance as timer
-import com.wavesplatform.lang.script.Script as Scr
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.Terms.FUNCTION_CALL
-import com.wavesplatform.lang.v1.serialization.SerdeV1
-import com.wavesplatform.protobuf.Amount
-import com.wavesplatform.protobuf.block.PBBlocks
-import com.wavesplatform.protobuf.utils.PBUtils
-import com.wavesplatform.serialization.Deser
-import com.wavesplatform.transaction.{Asset, TxVersion}
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.assets.exchange.Order
+import com.gicsports.account.{AddressScheme, Alias, KeyPair}
+import com.gicsports.api.grpc.{TransactionStatus as PBTransactionStatus, *}
+import com.gicsports.api.grpc.BalanceResponse.WavesBalances
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.crypto
+import com.gicsports.it.Node
+import com.gicsports.it.sync.invokeExpressionFee
+import com.gicsports.it.util.*
+import com.gicsports.it.util.GlobalTimer.instance as timer
+import com.gicsports.lang.script.Script as Scr
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.Terms.FUNCTION_CALL
+import com.gicsports.lang.v1.serialization.SerdeV1
+import com.gicsports.protobuf.Amount
+import com.gicsports.protobuf.block.PBBlocks
+import com.gicsports.protobuf.utils.PBUtils
+import com.gicsports.serialization.Deser
+import com.gicsports.transaction.{Asset, TxVersion}
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.assets.exchange.Order
 import io.grpc.stub.StreamObserver
 import monix.eval.Task
 import monix.execution.Scheduler
@@ -39,7 +39,7 @@ import play.api.libs.json.Json
 object AsyncGrpcApi {
   implicit class NodeAsyncGrpcApi(val n: Node) {
 
-    import com.wavesplatform.protobuf.transaction.{Transaction as PBTransaction, *}
+    import com.gicsports.protobuf.transaction.{Transaction as PBTransaction, *}
     import monix.execution.Scheduler.Implicits.global
 
     private[this] lazy val assets       = AssetsApiGrpc.stub(n.grpcChannel)
@@ -57,11 +57,11 @@ object AsyncGrpcApi {
 
     def stateChanges(
         request: TransactionsRequest
-    ): Future[Seq[(com.wavesplatform.transaction.Transaction, StateChangesDetails)]] = {
+    ): Future[Seq[(com.gicsports.transaction.Transaction, StateChangesDetails)]] = {
       val (obs, result) = createCallObserver[TransactionResponse]
       transactions.getTransactions(request, obs)
       result.runToFuture.map { r =>
-        import com.wavesplatform.state.InvokeScriptResult as VISR
+        import com.gicsports.state.InvokeScriptResult as VISR
         r.map { r =>
           val tx = PBTransactions.vanillaUnsafe(r.getTransaction)
           assert(r.getInvokeScriptResult.transfers.forall(_.address.size() == 20))
@@ -74,7 +74,7 @@ object AsyncGrpcApi {
     def stateChanges(
         txIds: Seq[String] = Nil,
         address: ByteString = ByteString.EMPTY
-    ): Future[Seq[(com.wavesplatform.transaction.Transaction, StateChangesDetails)]] = {
+    ): Future[Seq[(com.gicsports.transaction.Transaction, StateChangesDetails)]] = {
       val ids = txIds.map(id => ByteString.copyFrom(Base58.decode(id)))
       stateChanges(TransactionsRequest().addTransactionIds(ids*).withSender(address))
     }
@@ -137,21 +137,21 @@ object AsyncGrpcApi {
         amount: Long,
         fee: Long,
         version: Int = 2,
-        assetId: String = "CARDIUM",
-        feeAssetId: String = "CARDIUM",
+        assetId: String = "GIC",
+        feeAssetId: String = "GIC",
         attachment: ByteString = ByteString.EMPTY,
         timestamp: Long = System.currentTimeMillis
     ): Future[PBSignedTransaction] = {
       val unsigned = PBTransaction(
         chainId,
         ByteString.copyFrom(source.publicKey.arr),
-        Some(Amount.of(if (feeAssetId == "CARDIUM") ByteString.EMPTY else ByteString.copyFrom(Base58.decode(feeAssetId)), fee)),
+        Some(Amount.of(if (feeAssetId == "GIC") ByteString.EMPTY else ByteString.copyFrom(Base58.decode(feeAssetId)), fee)),
         timestamp,
         version,
         PBTransaction.Data.Transfer(
           TransferTransactionData.of(
             Some(recipient),
-            Some(Amount.of(if (assetId == "CARDIUM") ByteString.EMPTY else ByteString.copyFrom(Base58.decode(assetId)), amount)),
+            Some(Amount.of(if (assetId == "GIC") ByteString.EMPTY else ByteString.copyFrom(Base58.decode(assetId)), amount)),
             attachment
           )
         )
@@ -244,13 +244,13 @@ object AsyncGrpcApi {
         fee: Long,
         timestamp: Long,
         version: Byte,
-        matcherFeeAssetId: String = "CARDIUM"
+        matcherFeeAssetId: String = "GIC"
     ): Future[PBSignedTransaction] = {
 
       val unsigned = PBTransaction(
         chainId,
         ByteString.copyFrom(matcher.publicKey.arr),
-        Some(Amount.of(if (matcherFeeAssetId == "CARDIUM") ByteString.EMPTY else ByteString.copyFrom(Base58.decode(matcherFeeAssetId)), fee)),
+        Some(Amount.of(if (matcherFeeAssetId == "GIC") ByteString.EMPTY else ByteString.copyFrom(Base58.decode(matcherFeeAssetId)), fee)),
         timestamp,
         version,
         PBTransaction.Data.Exchange(

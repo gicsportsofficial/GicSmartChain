@@ -1,8 +1,8 @@
-package com.wavesplatform.it.async
+package com.gicsports.it.async
 
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.it.api.AsyncHttpApi._
-import com.wavesplatform.it.{BaseFreeSpec, NodeConfigs, TransferSending}
+import com.gicsports.it.api.AsyncHttpApi._
+import com.gicsports.it.{BaseFreeSpec, NodeConfigs, TransferSending}
 
 import scala.concurrent.Await.result
 import scala.concurrent.duration._
@@ -36,7 +36,7 @@ class MicroblocksGenerationSuite extends BaseFreeSpec with TransferSending {
 object MicroblocksGenerationSuite {
   private val txsInMicroBlock = 200
   private val maxTxs          = 2000
-  private val ConfigOverrides = ConfigFactory.parseString(s"""CARDIUM {
+  private val ConfigOverrides = ConfigFactory.parseString(s"""GIC {
                                                              |    miner {
                                                              |      quorum = 0
                                                              |      minimal-block-generation-offset = 1m

@@ -1,4 +1,4 @@
-package com.wavesplatform.database.jna
+package com.gicsports.database.jna
 
 import java.io.File
 

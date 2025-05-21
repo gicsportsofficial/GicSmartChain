@@ -1,14 +1,14 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
 import com.typesafe.config.Config
-import com.wavesplatform.it._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.sync.activation.ActivationStatusRequest
+import com.gicsports.it._
+import com.gicsports.it.sync._
+import com.gicsports.it.sync.activation.ActivationStatusRequest
 
 class AssetsApiGrpcSuite extends BaseFreeSpec with ActivationStatusRequest with GrpcIntegrationSuiteWithThreeAddress {
 
   "nftList returns all NFT" in {
-    import com.wavesplatform.it.api.SyncGrpcApi._
+    import com.gicsports.it.api.SyncGrpcApi._
 
     val txs = Map(
       "non_nft_asset" -> sender.broadcastIssue(firstAcc, "non_nft_asset", 100, 8, reissuable = true, issueFee + smartFee),

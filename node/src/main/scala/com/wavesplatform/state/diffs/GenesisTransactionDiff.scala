@@ -1,9 +1,9 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.{Diff, Portfolio}
-import com.wavesplatform.transaction.GenesisTransaction
-import com.wavesplatform.transaction.TxValidationError.GenericError
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.{Diff, Portfolio}
+import com.gicsports.transaction.GenesisTransaction
+import com.gicsports.transaction.TxValidationError.GenericError
 
 import scala.util.{Left, Right}
 

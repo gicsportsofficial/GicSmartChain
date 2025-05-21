@@ -1,5 +1,5 @@
-package com.wavesplatform.transaction
-import com.wavesplatform.common.state.ByteStr
+package com.gicsports.transaction
+import com.gicsports.common.state.ByteStr
 import monix.eval.Coeval
 
 trait Proven extends Authorized {

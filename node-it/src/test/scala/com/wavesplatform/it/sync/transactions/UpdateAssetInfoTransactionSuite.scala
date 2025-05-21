@@ -1,23 +1,23 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
 import scala.concurrent.duration.*
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.api.http.ApiError.{InvalidName, StateCheckFailed, TooBigArrayAllocation}
-import com.wavesplatform.api.http.requests.UpdateAssetInfoRequest
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.NodeConfigs.{Miners, NotMiner}
-import com.wavesplatform.it.api.{Transaction, TransactionInfo}
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.transaction.assets.IssueTransaction.{MaxAssetDescriptionLength, MaxAssetNameLength, MinAssetNameLength}
-import com.wavesplatform.transaction.{TransactionType, TxVersion}
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.account.AddressScheme
+import com.gicsports.api.http.ApiError.{InvalidName, StateCheckFailed, TooBigArrayAllocation}
+import com.gicsports.api.http.requests.UpdateAssetInfoRequest
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.NodeConfigs.{Miners, NotMiner}
+import com.gicsports.it.api.{Transaction, TransactionInfo}
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.it.sync.*
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.transaction.assets.IssueTransaction.{MaxAssetDescriptionLength, MaxAssetNameLength, MinAssetNameLength}
+import com.gicsports.transaction.{TransactionType, TxVersion}
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import org.scalatest.CancelAfterFailure
 import org.scalatest.prop.TableDrivenPropertyChecks
 import play.api.libs.json.{JsObject, Json}
@@ -309,7 +309,7 @@ class UpdateAssetInfoTransactionSuite extends BaseTransactionSuite with CancelAf
   test("not able to update asset info without paying enough fee") {
     assertApiError(sender.updateAssetInfo(issuer, assetId, "updatedName", "updatedDescription", issueFee - 1)) { error =>
       error.id shouldBe StateCheckFailed.Id
-      error.message shouldBe s"State check failed. Reason: Fee for UpdateAssetInfoTransaction (${issueFee - 1} in CARDIUM) does not exceed minimal value of $issueFee CARDIUM."
+      error.message shouldBe s"State check failed. Reason: Fee for UpdateAssetInfoTransaction (${issueFee - 1} in GIC) does not exceed minimal value of $issueFee GIC."
     }
   }
 
@@ -376,14 +376,14 @@ class UpdateAssetInfoTransactionSuite extends BaseTransactionSuite with CancelAf
     assertApiError(sender.updateAssetInfo(issuer, smartAssetId, "updatedName", "updatedDescription", issueFee + smartFee - 1)) { error =>
       error.id shouldBe StateCheckFailed.Id
       error.message shouldBe s"State check failed. Reason: Transaction involves 1 scripted assets. Requires $smartFee extra fee." +
-        s" Fee for UpdateAssetInfoTransaction (${issueFee + smartFee - 1} in CARDIUM) does not exceed minimal value of ${issueFee + smartFee} CARDIUM."
+        s" Fee for UpdateAssetInfoTransaction (${issueFee + smartFee - 1} in GIC) does not exceed minimal value of ${issueFee + smartFee} GIC."
     }
     sender.setScript(issuer, Some(script), waitForTx = true)
     assertApiError(sender.updateAssetInfo(issuer, smartAssetId, "updatedName", "updatedDescription", issueFee + 2 * smartFee - 1)) { error =>
       error.id shouldBe StateCheckFailed.Id
       error.message shouldBe s"State check failed. Reason: Transaction sent from smart account. Requires $smartFee extra fee." +
         s" Transaction involves 1 scripted assets. Requires $smartFee extra fee." +
-        s" Fee for UpdateAssetInfoTransaction (${issueFee +2* smartFee - 1} in CARDIUM) does not exceed minimal value of ${issueFee +2* smartFee} CARDIUM."
+        s" Fee for UpdateAssetInfoTransaction (${issueFee +2* smartFee - 1} in GIC) does not exceed minimal value of ${issueFee +2* smartFee} GIC."
     }
 
     sender.updateAssetInfo(issuer, smartAssetId, "updatedName", "updatedDescription", issueFee + 2 * smartFee, waitForTx = true)
@@ -462,7 +462,7 @@ object UpdateAssetInfoTransactionSuite {
   private def configWithUpdateIntervalSetting(interval: Long) =
     ConfigFactory.parseString(
       s"""
-         |CARDIUM {
+         |GIC {
          |   blockchain.custom {
          |      functionality {
          |        min-asset-info-update-interval = $interval

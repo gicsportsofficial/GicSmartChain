@@ -1,10 +1,10 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.NTPTime
-import com.wavesplatform.it.api.SyncGrpcApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.protobuf.transaction.{PBTransactions, Recipient}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.NTPTime
+import com.gicsports.it.api.SyncGrpcApi._
+import com.gicsports.it.sync._
+import com.gicsports.protobuf.transaction.{PBTransactions, Recipient}
 import io.grpc.Status.Code
 
 import scala.concurrent.duration._
@@ -19,7 +19,7 @@ class TransferTransactionGrpcSuite extends GrpcBaseTransactionSuite with NTPTime
     issuedAssetId = PBTransactions.vanilla(issuedAsset, unsafe = false).explicitGet().id().toString
   }
 
-  test("asset transfer changes sender's and recipient's asset balance by transfer amount and CARDIUM by fee") {
+  test("asset transfer changes sender's and recipient's asset balance by transfer amount and GIC by fee") {
     for (v <- transferTxSupportedVersions) {
       val issuedAsset      = sender.broadcastIssue(firstAcc, "name", someAssetAmount, 8, true, issueFee, waitForTx = true)
       val issuedAssetId    = PBTransactions.vanilla(issuedAsset, unsafe = false).explicitGet().id().toString
@@ -48,7 +48,7 @@ class TransferTransactionGrpcSuite extends GrpcBaseTransactionSuite with NTPTime
     }
   }
 
-  test("CARDIUM transfer changes waves balances and eff.b. by transfer amount and fee") {
+  test("GIC transfer changes waves balances and eff.b. by transfer amount and fee") {
     for (v <- transferTxSupportedVersions) {
       val firstBalance     = sender.wavesBalance(firstAddress).available
       val firstEffBalance  = sender.wavesBalance(firstAddress).effective
@@ -64,7 +64,7 @@ class TransferTransactionGrpcSuite extends GrpcBaseTransactionSuite with NTPTime
     }
   }
 
-  test("invalid signed CARDIUM transfer should not be in UTX or blockchain") {
+  test("invalid signed GIC transfer should not be in UTX or blockchain") {
     val invalidTimestampFromFuture = ntpTime.correctedTime() + 91.minutes.toMillis
     val invalidTimestampFromPast   = ntpTime.correctedTime() - 121.minutes.toMillis
     for (v <- transferTxSupportedVersions) {
@@ -112,7 +112,7 @@ class TransferTransactionGrpcSuite extends GrpcBaseTransactionSuite with NTPTime
     }
   }
 
-  test("can not make transfer without having enough CARDIUM balance") {
+  test("can not make transfer without having enough GIC balance") {
     for (v <- transferTxSupportedVersions) {
       val firstBalance     = sender.wavesBalance(firstAddress).available
       val firstEffBalance  = sender.wavesBalance(firstAddress).effective

@@ -1,8 +1,8 @@
-package com.wavesplatform.common.utils
+package com.gicsports.common.utils
 import scala.util.control.NonFatal
 
 object Base58 extends BaseXXEncDec {
-  private[this] val useSlowBase58: Boolean = sys.props.get("CARDIUM.use-slow-base58").exists(s => s.toLowerCase == "true" || s == "1")
+  private[this] val useSlowBase58: Boolean = sys.props.get("GIC.use-slow-base58").exists(s => s.toLowerCase == "true" || s == "1")
   override val defaultDecodeLimit: Int     = 192
 
   override def encode(array: Array[Byte]): String = {

@@ -1,17 +1,17 @@
-package com.wavesplatform.lang.contract.serialization
+package com.gicsports.lang.contract.serialization
 
 import cats.instances.list.*
 import cats.syntax.either.*
 import cats.syntax.option.*
 import cats.syntax.traverse.*
 import com.google.protobuf.{CodedInputStream, CodedOutputStream}
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.contract.DApp.{CallableAnnotation, CallableFunction, VerifierAnnotation, VerifierFunction}
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.compiler.Terms.{DECLARATION, FUNC}
-import com.wavesplatform.lang.v1.serialization.Serde.DEC_FUNC
-import com.wavesplatform.lang.v1.serialization.SerdeV2
-import com.wavesplatform.protobuf.dapp.DAppMeta
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.contract.DApp.{CallableAnnotation, CallableFunction, VerifierAnnotation, VerifierFunction}
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.compiler.Terms.{DECLARATION, FUNC}
+import com.gicsports.lang.v1.serialization.Serde.DEC_FUNC
+import com.gicsports.lang.v1.serialization.SerdeV2
+import com.gicsports.protobuf.dapp.DAppMeta
 import monix.eval.Coeval
 
 import java.io.ByteArrayOutputStream

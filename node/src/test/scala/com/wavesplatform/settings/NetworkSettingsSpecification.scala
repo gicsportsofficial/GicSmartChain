@@ -1,9 +1,9 @@
-package com.wavesplatform.settings
+package com.gicsports.settings
 
 import java.net.InetSocketAddress
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.test.FlatSpec
+import com.gicsports.test.FlatSpec
 import net.ceedubs.ficus.Ficus._
 
 import scala.concurrent.duration._
@@ -11,7 +11,7 @@ import scala.concurrent.duration._
 class NetworkSettingsSpecification extends FlatSpec {
 
   "NetworkSpecification" should "read values from config" in {
-    val config          = loadConfig(ConfigFactory.parseString("""CARDIUM.network {
+    val config          = loadConfig(ConfigFactory.parseString("""GIC.network {
         |  bind-address: "127.0.0.1"
         |  port: 6868
         |  node-name: "default-node-name"
@@ -40,7 +40,7 @@ class NetworkSettingsSpecification extends FlatSpec {
         |    ignore-rx-messages = [23]
         |  }
         |}""".stripMargin))
-    val networkSettings = config.as[NetworkSettings]("CARDIUM.network")
+    val networkSettings = config.as[NetworkSettings]("GIC.network")
 
     networkSettings.bindAddress should be(new InetSocketAddress("127.0.0.1", 6868))
     networkSettings.nodeName should be("default-node-name")
@@ -65,14 +65,14 @@ class NetworkSettingsSpecification extends FlatSpec {
 
   it should "generate random nonce" in {
     val config          = loadConfig(ConfigFactory.empty())
-    val networkSettings = config.as[NetworkSettings]("CARDIUM.network")
+    val networkSettings = config.as[NetworkSettings]("GIC.network")
 
     networkSettings.nonce should not be 0
   }
 
   it should "build node name using nonce" in {
-    val config          = loadConfig(ConfigFactory.parseString("CARDIUM.network.nonce = 12345"))
-    val networkSettings = config.as[NetworkSettings]("CARDIUM.network")
+    val config          = loadConfig(ConfigFactory.parseString("GIC.network.nonce = 12345"))
+    val networkSettings = config.as[NetworkSettings]("GIC.network")
 
     networkSettings.nonce should be(12345)
     networkSettings.nodeName should be("Node-12345")
@@ -80,7 +80,7 @@ class NetworkSettingsSpecification extends FlatSpec {
 
   it should "build node name using random nonce" in {
     val config          = loadConfig(ConfigFactory.empty())
-    val networkSettings = config.as[NetworkSettings]("CARDIUM.network")
+    val networkSettings = config.as[NetworkSettings]("GIC.network")
 
     networkSettings.nonce should not be 0
     networkSettings.nodeName should be(s"Node-${networkSettings.nonce}")
@@ -89,11 +89,11 @@ class NetworkSettingsSpecification extends FlatSpec {
   it should "fail with IllegalArgumentException on too long node name" in {
     val config = loadConfig(
       ConfigFactory.parseString(
-        "CARDIUM.network.node-name = очень-длинное-название-в-многобайтной-кодировке-отличной-от-однобайтной-кодировки-американского-института-стандартов"
+        "GIC.network.node-name = очень-длинное-название-в-многобайтной-кодировке-отличной-от-однобайтной-кодировки-американского-института-стандартов"
       )
     )
     intercept[IllegalArgumentException] {
-      config.as[NetworkSettings]("CARDIUM.network")
+      config.as[NetworkSettings]("GIC.network")
     }
   }
 }

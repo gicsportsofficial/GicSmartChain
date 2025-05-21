@@ -1,12 +1,12 @@
-package com.wavesplatform
+package com.gicsports
 
 import java.io.IOException
 import java.nio.file.attribute.BasicFileAttributes
 import java.nio.file.{FileVisitResult, Files, Path, SimpleFileVisitor}
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.settings.{FunctionalitySettings, GenesisSettings, GenesisTransactionSettings, WavesSettings}
+import com.gicsports.account.Address
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.settings.{FunctionalitySettings, GenesisSettings, GenesisTransactionSettings, WavesSettings}
 
 import scala.concurrent.duration._
 

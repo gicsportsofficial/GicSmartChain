@@ -1,8 +1,8 @@
-package com.wavesplatform.it.async
+package com.gicsports.it.async
 
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.it._
-import com.wavesplatform.it.api.AsyncHttpApi._
+import com.gicsports.it._
+import com.gicsports.it.api.AsyncHttpApi._
 
 import scala.concurrent.Await.result
 import scala.concurrent.Future
@@ -48,7 +48,7 @@ object BlockSizeConstraintsSuite {
                                                              |  request-timeout = 60s
                                                              |}
                                                              |
-                                                             |CARDIUM {
+                                                             |GIC {
                                                              |  network.enable-peers-exchange = no
                                                              |
                                                              |  miner {

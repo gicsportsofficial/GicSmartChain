@@ -1,8 +1,8 @@
-package com.wavesplatform.lang.compiler
+package com.gicsports.lang.compiler
 
-import com.wavesplatform.lang.v1.compiler.TypeInferrer
-import com.wavesplatform.lang.v1.compiler.Types.*
-import com.wavesplatform.test.*
+import com.gicsports.lang.v1.compiler.TypeInferrer
+import com.gicsports.lang.v1.compiler.Types.*
+import com.gicsports.test.*
 
 class TypeInferrerTest extends FreeSpec {
 

@@ -1,13 +1,13 @@
-package com.wavesplatform.lang.evaluator.string
+package com.gicsports.lang.evaluator.string
 
-import com.wavesplatform.lang.directives.values.{V3, V4, V5, V6}
-import com.wavesplatform.lang.evaluator.EvaluatorSpec
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_BOOLEAN
-import com.wavesplatform.lang.v1.evaluator.Contextful.NoContext
-import com.wavesplatform.lang.v1.evaluator.ctx.BaseFunction
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext.MaxListLengthV4
-import com.wavesplatform.test.produce
+import com.gicsports.lang.directives.values.{V3, V4, V5, V6}
+import com.gicsports.lang.evaluator.EvaluatorSpec
+import com.gicsports.lang.v1.compiler.Terms.CONST_BOOLEAN
+import com.gicsports.lang.v1.evaluator.Contextful.NoContext
+import com.gicsports.lang.v1.evaluator.ctx.BaseFunction
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext.MaxListLengthV4
+import com.gicsports.test.produce
 
 class SplitFunctionTest extends EvaluatorSpec {
   private def assertSuccess(script: String => String): Unit =

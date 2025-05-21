@@ -1,12 +1,12 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{AddressScheme, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base64, EitherExt2}
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.crypto
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.serialization.impl.IssueTxSerializer
+import com.gicsports.account.{AddressScheme, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base64, EitherExt2}
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.crypto
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.serialization.impl.IssueTxSerializer
 import play.api.libs.json.Json
 
 class IssueTransactionV1Specification extends PropSpec {

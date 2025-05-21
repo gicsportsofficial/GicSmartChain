@@ -1,6 +1,6 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
-import com.wavesplatform.network.message.{Message => ScorexMessage}
+import com.gicsports.network.message.{Message => ScorexMessage}
 import io.netty.channel.ChannelHandler.Sharable
 import io.netty.channel.{ChannelDuplexHandler, ChannelHandlerContext, ChannelPromise}
 import kamon.Kamon

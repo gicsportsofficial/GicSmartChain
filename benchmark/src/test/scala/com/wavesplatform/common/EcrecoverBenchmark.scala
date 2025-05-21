@@ -1,11 +1,11 @@
-package com.wavesplatform.common
+package com.gicsports.common
 
 import java.util.concurrent.TimeUnit
 
 import com.google.common.io.BaseEncoding
-import com.wavesplatform.common.EcrecoverBenchmark.{EcrecoverSt1, EcrecoverSt2}
-import com.wavesplatform.crypto.Keccak256
-import com.wavesplatform.lang.Global
+import com.gicsports.common.EcrecoverBenchmark.{EcrecoverSt1, EcrecoverSt2}
+import com.gicsports.crypto.Keccak256
+import com.gicsports.lang.Global
 import org.openjdk.jmh.annotations._
 import org.openjdk.jmh.infra.Blackhole
 

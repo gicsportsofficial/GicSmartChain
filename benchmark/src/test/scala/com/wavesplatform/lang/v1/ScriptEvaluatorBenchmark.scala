@@ -1,24 +1,24 @@
-package com.wavesplatform.lang.v1
+package com.gicsports.lang.v1
 
 import java.util.concurrent.TimeUnit
 
 import cats.Id
 import cats.kernel.Monoid
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.crypto.Curve25519
-import com.wavesplatform.lang.Global
-import com.wavesplatform.lang.directives.values.{V1, V4}
-import com.wavesplatform.lang.v1.EnvironmentFunctionsBenchmark.{curve25519, randomBytes}
-import com.wavesplatform.lang.v1.FunctionHeader.Native
-import com.wavesplatform.lang.v1.ScriptEvaluatorBenchmark.*
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.evaluator.Contextful.NoContext
-import com.wavesplatform.lang.v1.evaluator.EvaluatorV1.*
-import com.wavesplatform.lang.v1.evaluator.FunctionIds.{FROMBASE58, SIGVERIFY, TOBASE58}
-import com.wavesplatform.lang.v1.evaluator.ctx.EvaluationContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
-import com.wavesplatform.lang.v1.evaluator.{EvaluatorV1, FunctionIds}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.crypto.Curve25519
+import com.gicsports.lang.Global
+import com.gicsports.lang.directives.values.{V1, V4}
+import com.gicsports.lang.v1.EnvironmentFunctionsBenchmark.{curve25519, randomBytes}
+import com.gicsports.lang.v1.FunctionHeader.Native
+import com.gicsports.lang.v1.ScriptEvaluatorBenchmark.*
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.evaluator.Contextful.NoContext
+import com.gicsports.lang.v1.evaluator.EvaluatorV1.*
+import com.gicsports.lang.v1.evaluator.FunctionIds.{FROMBASE58, SIGVERIFY, TOBASE58}
+import com.gicsports.lang.v1.evaluator.ctx.EvaluationContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
+import com.gicsports.lang.v1.evaluator.{EvaluatorV1, FunctionIds}
 import org.openjdk.jmh.annotations.*
 import org.openjdk.jmh.infra.Blackhole
 

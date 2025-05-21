@@ -1,12 +1,12 @@
-package com.wavesplatform.utils
+package com.gicsports.utils
 
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicLong
 
 import com.google.common.base.Ticker
 import com.google.common.cache.{CacheBuilder, CacheLoader, LoadingCache}
-import com.wavesplatform.test.FreeSpec
-import com.wavesplatform.utils.ObservedLoadingCacheSpecification.FakeTicker
+import com.gicsports.test.FreeSpec
+import com.gicsports.utils.ObservedLoadingCacheSpecification.FakeTicker
 import monix.execution.Ack
 import monix.reactive.Observer
 import org.scalamock.scalatest.MockFactory

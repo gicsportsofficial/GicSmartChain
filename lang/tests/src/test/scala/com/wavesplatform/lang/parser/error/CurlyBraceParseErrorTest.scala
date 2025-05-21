@@ -1,4 +1,4 @@
-package com.wavesplatform.lang.parser.error
+package com.gicsports.lang.parser.error
 
 class CurlyBraceParseErrorTest extends ParseErrorTest {
   property("missing closing curly brace of match block") {

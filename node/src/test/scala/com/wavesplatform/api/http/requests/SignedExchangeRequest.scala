@@ -1,12 +1,12 @@
-package com.wavesplatform.api.http.requests
+package com.gicsports.api.http.requests
 
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.Proofs
-import com.wavesplatform.transaction.assets.exchange.*
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.Proofs
+import com.gicsports.transaction.assets.exchange.*
 import play.api.libs.json.{Format, Json, Reads}
 
 object SignedExchangeRequest {
-  implicit val orderReads: Reads[Order]                                   = com.wavesplatform.transaction.assets.exchange.OrderJson.orderReads
+  implicit val orderReads: Reads[Order]                                   = com.gicsports.transaction.assets.exchange.OrderJson.orderReads
   implicit val signedExchangeRequestFormat: Format[SignedExchangeRequest] = Json.format
 }
 

@@ -1,8 +1,8 @@
-package com.wavesplatform.lang.v1.task
+package com.gicsports.lang.v1.task
 
 import cats.mtl.Stateful
 import cats.{Monad, MonadError, StackSafeMonad}
-import com.wavesplatform.lang.EvalF
+import com.gicsports.lang.EvalF
 
 trait TaskMTInstances {
 

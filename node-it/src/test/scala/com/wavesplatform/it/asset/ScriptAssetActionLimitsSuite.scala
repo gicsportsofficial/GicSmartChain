@@ -1,12 +1,12 @@
-package com.wavesplatform.it.asset
+package com.gicsports.it.asset
 
 import com.typesafe.config.Config
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.features.BlockchainFeatures.{RideV6, SynchronousCalls}
-import com.wavesplatform.it.{BaseFreeSpec, NodeConfigs}
-import com.wavesplatform.it.NodeConfigs.Default
-import com.wavesplatform.lang.directives.values.StdLibVersion
-import com.wavesplatform.test.*
+import com.gicsports.account.KeyPair
+import com.gicsports.features.BlockchainFeatures.{RideV6, SynchronousCalls}
+import com.gicsports.it.{BaseFreeSpec, NodeConfigs}
+import com.gicsports.it.NodeConfigs.Default
+import com.gicsports.lang.directives.values.StdLibVersion
+import com.gicsports.test.*
 
 trait ScriptAssetActionLimitsSuite extends BaseFreeSpec {
 

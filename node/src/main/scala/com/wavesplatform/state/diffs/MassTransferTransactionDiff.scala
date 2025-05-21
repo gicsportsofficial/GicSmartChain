@@ -1,15 +1,15 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
 import cats.implicits.{toBifunctorOps, toFoldableOps}
 import cats.instances.list.*
 import cats.syntax.traverse.*
-import com.wavesplatform.account.Address
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.{GenericError, Validation}
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.ParsedTransfer
+import com.gicsports.account.Address
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.{GenericError, Validation}
+import com.gicsports.transaction.transfer.*
+import com.gicsports.transaction.transfer.MassTransferTransaction.ParsedTransfer
 
 object MassTransferTransactionDiff {
 

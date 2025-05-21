@@ -1,18 +1,18 @@
-package com.wavesplatform.generator
+package com.gicsports.generator
 
 import cats.Show
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.generator.OracleTransactionGenerator.Settings
-import com.wavesplatform.generator.utils.Gen
-import com.wavesplatform.generator.utils.Implicits.DoubleExt
-import com.wavesplatform.lang.v1.estimator.ScriptEstimator
-import com.wavesplatform.state._
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{DataTransaction, Transaction}
+import com.gicsports.account.KeyPair
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.generator.OracleTransactionGenerator.Settings
+import com.gicsports.generator.utils.Gen
+import com.gicsports.generator.utils.Implicits.DoubleExt
+import com.gicsports.lang.v1.estimator.ScriptEstimator
+import com.gicsports.state._
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{DataTransaction, Transaction}
 
 class OracleTransactionGenerator(settings: Settings, val accounts: Seq[KeyPair], estimator: ScriptEstimator) extends TransactionGenerator {
   override def next(): Iterator[Transaction] = generate(settings).iterator

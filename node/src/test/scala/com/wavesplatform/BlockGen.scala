@@ -1,11 +1,11 @@
-package com.wavesplatform
+package com.gicsports
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.block.Block
-import com.wavesplatform.block.Block.{GenerationSignatureLength, GenerationVRFSignatureLength, ProtoBlockVersion}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.transaction.Transaction
+import com.gicsports.account.KeyPair
+import com.gicsports.block.Block
+import com.gicsports.block.Block.{GenerationSignatureLength, GenerationVRFSignatureLength, ProtoBlockVersion}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.transaction.Transaction
 import org.scalacheck.Gen
 import org.scalatest.Suite
 

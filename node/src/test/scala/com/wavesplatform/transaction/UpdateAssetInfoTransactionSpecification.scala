@@ -1,15 +1,15 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.TestValues
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto.DigestLength
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.TxValidationError.{InvalidName, TooBigArray}
-import com.wavesplatform.transaction.assets.IssueTransaction.{MaxAssetDescriptionLength, MaxAssetNameLength, MinAssetNameLength}
-import com.wavesplatform.transaction.assets.UpdateAssetInfoTransaction
+import com.gicsports.TestValues
+import com.gicsports.account.AddressScheme
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto.DigestLength
+import com.gicsports.lang.ValidationError
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.TxValidationError.{InvalidName, TooBigArray}
+import com.gicsports.transaction.assets.IssueTransaction.{MaxAssetDescriptionLength, MaxAssetNameLength, MinAssetNameLength}
+import com.gicsports.transaction.assets.UpdateAssetInfoTransaction
 
 class UpdateAssetInfoTransactionSpecification extends PropSpec {
 

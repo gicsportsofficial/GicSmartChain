@@ -1,18 +1,18 @@
-package com.wavesplatform.extensions
+package com.gicsports.extensions
 
 import akka.actor.ActorSystem
-import com.wavesplatform.account.Address
-import com.wavesplatform.api.common._
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.events.UtxEvent
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.transaction.smart.script.trace.TracedResult
-import com.wavesplatform.transaction.{Asset, DiscardedBlocks, Transaction}
-import com.wavesplatform.utils.Time
-import com.wavesplatform.utx.UtxPool
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.account.Address
+import com.gicsports.api.common._
+import com.gicsports.common.state.ByteStr
+import com.gicsports.events.UtxEvent
+import com.gicsports.lang.ValidationError
+import com.gicsports.settings.WavesSettings
+import com.gicsports.state.Blockchain
+import com.gicsports.transaction.smart.script.trace.TracedResult
+import com.gicsports.transaction.{Asset, DiscardedBlocks, Transaction}
+import com.gicsports.utils.Time
+import com.gicsports.utx.UtxPool
+import com.gicsports.wallet.Wallet
 import monix.eval.Task
 import monix.reactive.Observable
 

@@ -1,11 +1,11 @@
-package com.wavesplatform.transaction.assets.exchange
+package com.gicsports.transaction.assets.exchange
 
 import com.google.common.primitives.Bytes
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.serialization.Deser
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.exchange.Validation.booleanOperators
+import com.gicsports.common.state.ByteStr
+import com.gicsports.serialization.Deser
+import com.gicsports.transaction.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.exchange.Validation.booleanOperators
 import net.ceedubs.ficus.readers.ValueReader
 import play.api.libs.json.{JsObject, Json}
 
@@ -32,7 +32,7 @@ case class AssetPair(
 }
 
 object AssetPair {
-  val WavesName = "CARDIUM"
+  val WavesName = "GIC"
 
   implicit class AssetPairExt(val p: AssetPair) extends AnyVal {
     def checkedAssets: Seq[IssuedAsset] = Seq(p.priceAsset, p.amountAsset).collect { case ia: Asset.IssuedAsset => ia }

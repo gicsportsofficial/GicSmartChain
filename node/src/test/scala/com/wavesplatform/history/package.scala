@@ -1,14 +1,14 @@
-package com.wavesplatform
+package com.gicsports
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.{BlockchainFeature, BlockchainFeatures}
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.settings._
-import com.wavesplatform.transaction.Transaction
+import com.gicsports.account.KeyPair
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.{BlockchainFeature, BlockchainFeatures}
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.settings._
+import com.gicsports.transaction.Transaction
 
 package object history {
   val MaxTransactionsPerBlockDiff = 10

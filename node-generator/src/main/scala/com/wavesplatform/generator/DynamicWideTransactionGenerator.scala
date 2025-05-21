@@ -1,12 +1,12 @@
-package com.wavesplatform.generator
+package com.gicsports.generator
 
 import java.util.concurrent.atomic.AtomicReference
 
 import cats.Show
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.generator.DynamicWideTransactionGenerator.Settings
-import com.wavesplatform.generator.utils.Gen
-import com.wavesplatform.transaction.Transaction
+import com.gicsports.account.KeyPair
+import com.gicsports.generator.DynamicWideTransactionGenerator.Settings
+import com.gicsports.generator.utils.Gen
+import com.gicsports.transaction.Transaction
 
 class DynamicWideTransactionGenerator(settings: Settings, accounts: Seq[KeyPair]) extends TransactionGenerator {
   require(accounts.nonEmpty)

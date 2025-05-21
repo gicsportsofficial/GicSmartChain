@@ -1,6 +1,6 @@
-package com.wavesplatform.wallet
+package com.gicsports.wallet
 
-import com.wavesplatform.utils._
+import com.gicsports.utils._
 
 object PasswordProvider extends ScorexLogging {
 
@@ -10,7 +10,7 @@ object PasswordProvider extends ScorexLogging {
       case None =>
         log.error("CANNOT GET CONSOLE TO ASK WALLET PASSWORD")
         log.error(
-          "Probably, it happens because you trying to start CARDIUM node using supervisor service (like systemd) without specified wallet password."
+          "Probably, it happens because you trying to start GIC node using supervisor service (like systemd) without specified wallet password."
         )
         forceStopApplication(Misconfiguration)
         ""

@@ -1,10 +1,10 @@
-package com.wavesplatform.api.common
+package com.gicsports.api.common
 
 import com.google.common.collect.AbstractIterator
 import com.google.common.primitives.{Ints, Longs}
-import com.wavesplatform.account.Address
-import com.wavesplatform.database.{AddressId, DBResource, Keys}
-import com.wavesplatform.state.{Portfolio, safeSum}
+import com.gicsports.account.Address
+import com.gicsports.database.{AddressId, DBResource, Keys}
+import com.gicsports.state.{Portfolio, safeSum}
 
 import scala.annotation.tailrec
 

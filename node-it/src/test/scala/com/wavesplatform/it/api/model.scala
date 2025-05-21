@@ -1,10 +1,10 @@
-package com.wavesplatform.it.api
+package com.gicsports.it.api
 
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.state.DataEntry
-import com.wavesplatform.transaction.assets.exchange.AssetPair
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.Transfer
+import com.gicsports.account.PublicKey
+import com.gicsports.common.state.ByteStr
+import com.gicsports.state.DataEntry
+import com.gicsports.transaction.assets.exchange.AssetPair
+import com.gicsports.transaction.transfer.MassTransferTransaction.Transfer
 import io.grpc.{Metadata, Status => GrpcStatus}
 import play.api.libs.json._
 

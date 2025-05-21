@@ -1,4 +1,4 @@
-package com.wavesplatform.events.settings
+package com.gicsports.events.settings
 
 import scala.concurrent.duration.FiniteDuration
 import net.ceedubs.ficus.Ficus._

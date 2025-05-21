@@ -1,12 +1,12 @@
-package com.wavesplatform.block.serialization
+package com.gicsports.block.serialization
 
 import java.nio.ByteBuffer
 
 import com.google.common.primitives.{Bytes, Ints}
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto.SignatureLength
-import com.wavesplatform.serialization.ByteBufferOps
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto.SignatureLength
+import com.gicsports.serialization.ByteBufferOps
 
 import scala.util.Try
 

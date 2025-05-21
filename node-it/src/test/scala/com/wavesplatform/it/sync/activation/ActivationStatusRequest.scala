@@ -1,7 +1,7 @@
-package com.wavesplatform.it.sync.activation
+package com.gicsports.it.sync.activation
 
-import com.wavesplatform.features.BlockchainFeatureStatus
-import com.wavesplatform.features.api.{FeatureActivationStatus, NodeFeatureStatus}
+import com.gicsports.features.BlockchainFeatureStatus
+import com.gicsports.features.api.{FeatureActivationStatus, NodeFeatureStatus}
 import org.scalactic.source.Position
 import org.scalatest.matchers.should.Matchers
 

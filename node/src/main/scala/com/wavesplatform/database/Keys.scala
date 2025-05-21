@@ -1,17 +1,17 @@
-package com.wavesplatform.database
+package com.gicsports.database
 
 import com.google.common.primitives.{Ints, Longs}
-import com.wavesplatform.account.{Address, Alias}
-import com.wavesplatform.api.BlockMeta
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.database.protobuf.{EthereumTransactionMeta, TransactionMeta}
-import com.wavesplatform.protobuf.transaction.PBRecipients
-import com.wavesplatform.state.*
-import com.wavesplatform.state.reader.LeaseDetails
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.utils.*
+import com.gicsports.account.{Address, Alias}
+import com.gicsports.api.BlockMeta
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.database.protobuf.{EthereumTransactionMeta, TransactionMeta}
+import com.gicsports.protobuf.transaction.PBRecipients
+import com.gicsports.state.*
+import com.gicsports.state.reader.LeaseDetails
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.Transaction
+import com.gicsports.utils.*
 
 object Keys {
   import KeyHelpers.*

@@ -1,4 +1,4 @@
-package com.wavesplatform.features
+package com.gicsports.features
 
 sealed trait BlockchainFeatureStatus
 

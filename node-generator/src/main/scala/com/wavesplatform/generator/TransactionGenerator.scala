@@ -1,6 +1,6 @@
-package com.wavesplatform.generator
+package com.gicsports.generator
 
-import com.wavesplatform.transaction.Transaction
+import com.gicsports.transaction.Transaction
 
 trait TransactionGenerator extends Iterator[Iterator[Transaction]] {
   override val hasNext          = true

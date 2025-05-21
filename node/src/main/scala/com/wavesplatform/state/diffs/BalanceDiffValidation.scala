@@ -1,12 +1,12 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
 import cats.implicits.*
-import com.wavesplatform.account.{Address, AddressScheme}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.state
-import com.wavesplatform.state.{Blockchain, Diff, LeaseBalance, Portfolio}
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.TxValidationError.AccountBalanceError
+import com.gicsports.account.{Address, AddressScheme}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.state
+import com.gicsports.state.{Blockchain, Diff, LeaseBalance, Portfolio}
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.TxValidationError.AccountBalanceError
 
 import scala.util.{Left, Right}
 
@@ -28,7 +28,7 @@ object BalanceDiffValidation {
       def negativeBalanceCheck(newLease: LeaseBalance, newWaves: Long): Either[(Address, String), Unit] =
         if (balance < 0) {
           if (newWaves < 0&& !(b.height< wrongBLocksUntil && scheme.chainId==wrongNetworkChainId)) {
-            Left(acc -> s"negative CARDIUM balance: $acc, old: $oldWaves, new: $newWaves")
+            Left(acc -> s"negative GIC balance: $acc, old: $oldWaves, new: $newWaves")
           } else if (newWaves < newLease.out && b.height > b.settings.functionalitySettings.allowLeasedBalanceTransferUntilHeight&& !(b.height< wrongBLocksUntil && scheme.chainId==wrongNetworkChainId)) {
             Left(acc -> (if (newWaves + newLease.in - newLease.out < 0) {
                            s"negative effective balance: $acc, old: ${(oldWaves, oldLease)}, new: ${(newWaves, newLease)}"
@@ -55,7 +55,7 @@ object BalanceDiffValidation {
 
       for {
         newLease <- oldLease.combineF[Either[String, *]](portfolio.lease).leftMap((acc, _))
-        newWaves <- state.safeSum(oldWaves, balance, "CARDIUM balance").leftMap((acc, _))
+        newWaves <- state.safeSum(oldWaves, balance, "GIC balance").leftMap((acc, _))
         _        <- negativeBalanceCheck(newLease, newWaves)
         _        <- assetsCheck
       } yield ()

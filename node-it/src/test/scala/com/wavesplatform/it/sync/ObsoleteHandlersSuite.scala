@@ -1,19 +1,19 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
 import com.typesafe.config.Config
-import com.wavesplatform.api.http.requests._
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.api.Transaction
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.state.{BinaryDataEntry, BooleanDataEntry, IntegerDataEntry, StringDataEntry}
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.Transfer
-import com.wavesplatform.transaction.transfer.TransferTransaction
+import com.gicsports.api.http.requests._
+import com.gicsports.common.state.ByteStr
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.api.Transaction
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.state.{BinaryDataEntry, BooleanDataEntry, IntegerDataEntry, StringDataEntry}
+import com.gicsports.test._
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.transfer.MassTransferTransaction.Transfer
+import com.gicsports.transaction.transfer.TransferTransaction
 import org.scalatest.BeforeAndAfterAll
 import play.api.libs.json.{Json, Writes}
 

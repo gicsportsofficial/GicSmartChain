@@ -1,14 +1,14 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.features.BlockchainFeatureStatus
-import com.wavesplatform.history
-import com.wavesplatform.history.Domain.BlockchainUpdaterExt
-import com.wavesplatform.state.*
-import com.wavesplatform.test.DomainPresets.RideV6
-import com.wavesplatform.test.FreeSpec
+import com.gicsports.block.Block
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.features.BlockchainFeatureStatus
+import com.gicsports.history
+import com.gicsports.history.Domain.BlockchainUpdaterExt
+import com.gicsports.state.*
+import com.gicsports.test.DomainPresets.RideV6
+import com.gicsports.test.FreeSpec
 
 import java.security.Permission
 import java.util.concurrent.{Semaphore, TimeUnit}

@@ -1,17 +1,17 @@
-package com.wavesplatform.state.diffs.smart
+package com.gicsports.state.diffs.smart
 
-import com.wavesplatform.TestValues.invokeFee
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.Domain
-import com.wavesplatform.lang.directives.values.V4
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.settings.TestFunctionalitySettings
-import com.wavesplatform.state.EmptyDataEntry
-import com.wavesplatform.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
-import com.wavesplatform.test.{PropSpec, produce}
-import com.wavesplatform.transaction.{Transaction, TransactionType, TxHelpers, TxWithFee}
+import com.gicsports.TestValues.invokeFee
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.Domain
+import com.gicsports.lang.directives.values.V4
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.settings.TestFunctionalitySettings
+import com.gicsports.state.EmptyDataEntry
+import com.gicsports.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
+import com.gicsports.test.{PropSpec, produce}
+import com.gicsports.transaction.{Transaction, TransactionType, TxHelpers, TxWithFee}
 
 class SmartAccountFeeTest extends PropSpec with WithDomain {
 
@@ -117,8 +117,8 @@ class SmartAccountFeeTest extends PropSpec with WithDomain {
     d.appendBlockE(tx) should produce(
       "TransactionValidationError(cause = GenericError(Transaction sent from smart account. " +
         s"Requires $ScriptExtraFee extra fee. " +
-        s"Fee for ${tx.tpe.transactionName} (${tx.fee} in CARDIUM) " +
-        s"does not exceed minimal value of ${FeeConstants(tx.tpe) * FeeUnit + ScriptExtraFee} CARDIUM.)"
+        s"Fee for ${tx.tpe.transactionName} (${tx.fee} in GIC) " +
+        s"does not exceed minimal value of ${FeeConstants(tx.tpe) * FeeUnit + ScriptExtraFee} GIC.)"
     )
   }
 

@@ -1,10 +1,10 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.db.WithState
-import com.wavesplatform.settings.TestFunctionalitySettings.Enabled
-import com.wavesplatform.state.*
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.TxHelpers
+import com.gicsports.db.WithState
+import com.gicsports.settings.TestFunctionalitySettings.Enabled
+import com.gicsports.state.*
+import com.gicsports.test.*
+import com.gicsports.transaction.TxHelpers
 
 class CommonValidationTimeTest extends PropSpec with WithState {
 

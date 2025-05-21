@@ -1,11 +1,11 @@
-package com.wavesplatform.api.http.requests
+package com.gicsports.api.http.requests
 
 import cats.instances.list._
 import cats.syntax.traverse._
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.Proofs
-import com.wavesplatform.transaction.assets.ReissueTransaction
+import com.gicsports.account.PublicKey
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.Proofs
+import com.gicsports.transaction.assets.ReissueTransaction
 import play.api.libs.functional.syntax._
 import play.api.libs.json.{JsPath, Reads}
 

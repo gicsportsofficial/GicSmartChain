@@ -1,4 +1,4 @@
-package com.wavesplatform.lang.v1.compiler
+package com.gicsports.lang.v1.compiler
 
 import cats.instances.list.*
 import cats.instances.option.*
@@ -7,24 +7,24 @@ import cats.syntax.applicative.*
 import cats.syntax.either.*
 import cats.syntax.traverse.*
 import cats.{Id, Show}
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.contract.DApp.*
-import com.wavesplatform.lang.contract.meta.{MetaMapper, V1 as MetaV1, V2 as MetaV2}
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V3, V6}
-import com.wavesplatform.lang.v1.compiler.CompilationError.{AlreadyDefined, Generic, UnionNotAllowedForCallableArgs, WrongArgumentType}
-import com.wavesplatform.lang.v1.compiler.CompilerContext.{VariableInfo, vars}
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler.*
-import com.wavesplatform.lang.v1.compiler.ScriptResultSource.FreeCall
-import com.wavesplatform.lang.v1.compiler.Terms.EXPR
-import com.wavesplatform.lang.v1.compiler.Types.{BOOLEAN, BYTESTR, LONG, STRING}
-import com.wavesplatform.lang.v1.evaluator.ctx.FunctionTypeSignature
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.Types.*
-import com.wavesplatform.lang.v1.parser.Expressions.Pos.AnyPos
-import com.wavesplatform.lang.v1.parser.Expressions.{FUNC, PART, Type}
-import com.wavesplatform.lang.v1.parser.{Expressions, Parser}
-import com.wavesplatform.lang.v1.task.imports.*
-import com.wavesplatform.lang.v1.{ContractLimits, FunctionHeader, compiler}
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.contract.DApp.*
+import com.gicsports.lang.contract.meta.{MetaMapper, V1 as MetaV1, V2 as MetaV2}
+import com.gicsports.lang.directives.values.{StdLibVersion, V3, V6}
+import com.gicsports.lang.v1.compiler.CompilationError.{AlreadyDefined, Generic, UnionNotAllowedForCallableArgs, WrongArgumentType}
+import com.gicsports.lang.v1.compiler.CompilerContext.{VariableInfo, vars}
+import com.gicsports.lang.v1.compiler.ExpressionCompiler.*
+import com.gicsports.lang.v1.compiler.ScriptResultSource.FreeCall
+import com.gicsports.lang.v1.compiler.Terms.EXPR
+import com.gicsports.lang.v1.compiler.Types.{BOOLEAN, BYTESTR, LONG, STRING}
+import com.gicsports.lang.v1.evaluator.ctx.FunctionTypeSignature
+import com.gicsports.lang.v1.evaluator.ctx.impl.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.Types.*
+import com.gicsports.lang.v1.parser.Expressions.Pos.AnyPos
+import com.gicsports.lang.v1.parser.Expressions.{FUNC, PART, Type}
+import com.gicsports.lang.v1.parser.{Expressions, Parser}
+import com.gicsports.lang.v1.task.imports.*
+import com.gicsports.lang.v1.{ContractLimits, FunctionHeader, compiler}
 
 import scala.annotation.tailrec
 

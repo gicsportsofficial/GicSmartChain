@@ -1,17 +1,17 @@
-package com.wavesplatform.state.diffs.smart.predef
+package com.gicsports.state.diffs.smart.predef
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.lang.directives.DirectiveDictionary
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V3, V4}
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.state.diffs.ci.ciFee
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.GenesisTransaction
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.utils.Signed
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.lang.directives.DirectiveDictionary
+import com.gicsports.lang.directives.values.{StdLibVersion, V3, V4}
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.state.diffs.ci.ciFee
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.GenesisTransaction
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.utils.Signed
 import org.scalatest.EitherValues
 
 class GenericRideActivationTest extends PropSpec with WithDomain with EitherValues {

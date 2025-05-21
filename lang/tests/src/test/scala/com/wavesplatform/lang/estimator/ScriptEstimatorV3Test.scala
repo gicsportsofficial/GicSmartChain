@@ -1,14 +1,14 @@
-package com.wavesplatform.lang.estimator
+package com.gicsports.lang.estimator
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.utils.functionCosts
-import com.wavesplatform.lang.v1.FunctionHeader.Native
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.Types.CASETYPEREF
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.lang.v1.evaluator.FunctionIds
-import com.wavesplatform.test.*
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.utils.functionCosts
+import com.gicsports.lang.v1.FunctionHeader.Native
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.Types.CASETYPEREF
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.lang.v1.evaluator.FunctionIds
+import com.gicsports.test.*
 
 import scala.collection.immutable.ArraySeq
 

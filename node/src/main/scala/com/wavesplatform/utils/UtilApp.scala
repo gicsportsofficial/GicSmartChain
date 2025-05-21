@@ -1,20 +1,20 @@
-package com.wavesplatform.utils
+package com.gicsports.utils
 
 import java.io.{ByteArrayInputStream, File, FileInputStream, FileOutputStream}
 import java.nio.charset.StandardCharsets
 import java.nio.file.{Files, Paths}
 
 import com.google.common.io.ByteStreams
-import com.wavesplatform.account.{KeyPair, PrivateKey, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, Base64, FastBase58}
-import com.wavesplatform.features.EstimatorProvider.*
-import com.wavesplatform.lang.script.{Script, ScriptReader}
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.transaction.TransactionFactory
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.wallet.Wallet
-import com.wavesplatform.{Application, Version}
+import com.gicsports.account.{KeyPair, PrivateKey, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, Base64, FastBase58}
+import com.gicsports.features.EstimatorProvider.*
+import com.gicsports.lang.script.{Script, ScriptReader}
+import com.gicsports.settings.WavesSettings
+import com.gicsports.transaction.TransactionFactory
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.wallet.Wallet
+import com.gicsports.{Application, Version}
 import play.api.libs.json.{JsObject, Json}
 import scopt.OParser
 
@@ -95,8 +95,8 @@ object UtilApp {
     import builder.*
 
     OParser.sequence(
-      programName("CARDIUM util"),
-      head("CARDIUM Util", Version.VersionString),
+      programName("GIC util"),
+      head("GIC Util", Version.VersionString),
       OParser.sequence(
         opt[String](name = "input-str")
           .abbr("is")
@@ -228,11 +228,11 @@ object UtilApp {
     }
 
     def doSign(c: Command, data: Array[Byte]): ActionResult =
-      Right(com.wavesplatform.crypto.sign(c.signOptions.privateKey, data).arr)
+      Right(com.gicsports.crypto.sign(c.signOptions.privateKey, data).arr)
 
     def doVerify(c: Command, data: Array[Byte]): ActionResult =
       Either.cond(
-        com.wavesplatform.crypto.verify(c.verifyOptions.signature, data, c.verifyOptions.publicKey, c.verifyOptions.checkWeakPk),
+        com.gicsports.crypto.verify(c.verifyOptions.signature, data, c.verifyOptions.publicKey, c.verifyOptions.checkWeakPk),
         data,
         "Invalid signature"
       )
@@ -245,8 +245,8 @@ object UtilApp {
         .map(kp => Json.toBytes(Json.toJson(kp)))
 
     def doHash(c: Command, data: Array[Byte]): ActionResult = c.hashOptions.mode match {
-      case "fast"   => Right(com.wavesplatform.crypto.fastHash(data))
-      case "secure" => Right(com.wavesplatform.crypto.secureHash(data))
+      case "fast"   => Right(com.gicsports.crypto.fastHash(data))
+      case "secure" => Right(com.gicsports.crypto.secureHash(data))
       case m        => Left(s"Invalid hashing mode: $m")
     }
 

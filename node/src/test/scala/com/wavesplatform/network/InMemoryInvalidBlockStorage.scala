@@ -1,8 +1,8 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.TxValidationError.GenericError
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.TxValidationError.GenericError
 
 class InMemoryInvalidBlockStorage extends InvalidBlockStorage {
 

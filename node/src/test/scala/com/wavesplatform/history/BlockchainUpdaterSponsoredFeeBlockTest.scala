@@ -1,17 +1,17 @@
-package com.wavesplatform.history
+package com.gicsports.history
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.Domain.BlockchainUpdaterExt
-import com.wavesplatform.settings.{BlockchainSettings, WavesSettings}
-import com.wavesplatform.state.*
-import com.wavesplatform.state.diffs.*
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.assets.{IssueTransaction, SponsorFeeTransaction}
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.transaction.{Asset, GenesisTransaction}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.Domain.BlockchainUpdaterExt
+import com.gicsports.settings.{BlockchainSettings, WavesSettings}
+import com.gicsports.state.*
+import com.gicsports.state.diffs.*
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.assets.{IssueTransaction, SponsorFeeTransaction}
+import com.gicsports.transaction.transfer.*
+import com.gicsports.transaction.{Asset, GenesisTransaction}
 import org.scalacheck.Gen
 
 class BlockchainUpdaterSponsoredFeeBlockTest extends PropSpec with DomainScenarioDrivenPropertyCheck {
@@ -102,7 +102,7 @@ class BlockchainUpdaterSponsoredFeeBlockTest extends PropSpec with DomainScenari
 
   val SponsoredActivatedAt0WavesSettings: WavesSettings = settings.copy(blockchainSettings = SponsoredFeeActivatedAt0BlockchainSettings)
 
-  property("not enough CARDIUM to sponsor sponsored tx") {
+  property("not enough GIC to sponsor sponsored tx") {
     scenario(sponsorPreconditions, SponsoredActivatedAt0WavesSettings) {
       case (d, (genesis, masterToAlice, feeAsset, sponsor, aliceToBob, bobToMaster, bobToMaster2)) =>
         d.appendBlock(genesis)
@@ -111,7 +111,7 @@ class BlockchainUpdaterSponsoredFeeBlockTest extends PropSpec with DomainScenari
         d.appendMicroBlock(feeAsset)
         d.appendMicroBlock(sponsor)
         d.appendBlock(aliceToBob, bobToMaster)
-        d.appendBlockE(bobToMaster2) should produce("negative CARDIUM balance" /*"unavailable funds"*/ )
+        d.appendBlockE(bobToMaster2) should produce("negative GIC balance" /*"unavailable funds"*/ )
     }
   }
 

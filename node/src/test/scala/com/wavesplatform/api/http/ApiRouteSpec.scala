@@ -1,10 +1,10 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import akka.http.scaladsl.marshalling.ToResponseMarshallable
 import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.server.Route
-import com.wavesplatform.http.{RestAPISettingsHelper, RouteSpec}
-import com.wavesplatform.settings.RestAPISettings
+import com.gicsports.http.{RestAPISettingsHelper, RouteSpec}
+import com.gicsports.settings.RestAPISettings
 import monix.eval.{Coeval, Task}
 import monix.execution.Scheduler
 import play.api.libs.json.JsObject

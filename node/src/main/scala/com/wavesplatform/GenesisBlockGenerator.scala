@@ -1,18 +1,18 @@
-package com.wavesplatform
+package com.gicsports
 
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.account.{Address, AddressScheme, KeyPair}
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.consensus.PoSCalculator.{generationSignature, hit}
-import com.wavesplatform.consensus.{FairPoSCalculator, NxtPoSCalculator}
-import com.wavesplatform.crypto.*
-import com.wavesplatform.features.{BlockchainFeature, BlockchainFeatures}
-import com.wavesplatform.settings.{FunctionalitySettings, GenesisSettings, GenesisTransactionSettings}
-import com.wavesplatform.transaction.{GenesisTransaction, TxNonNegativeAmount}
-import com.wavesplatform.utils.*
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.account.{Address, AddressScheme, KeyPair}
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.consensus.PoSCalculator.{generationSignature, hit}
+import com.gicsports.consensus.{FairPoSCalculator, NxtPoSCalculator}
+import com.gicsports.crypto.*
+import com.gicsports.features.{BlockchainFeature, BlockchainFeatures}
+import com.gicsports.settings.{FunctionalitySettings, GenesisSettings, GenesisTransactionSettings}
+import com.gicsports.transaction.{GenesisTransaction, TxNonNegativeAmount}
+import com.gicsports.utils.*
+import com.gicsports.wallet.Wallet
 import net.ceedubs.ficus.Ficus.*
 import net.ceedubs.ficus.readers.ArbitraryTypeReader.*
 
@@ -141,7 +141,7 @@ object GenesisBlockGenerator {
       confBody
     }
 
-    com.wavesplatform.account.AddressScheme.current = new AddressScheme {
+    com.gicsports.account.AddressScheme.current = new AddressScheme {
       override val chainId: Byte = settings.chainId
     }
 

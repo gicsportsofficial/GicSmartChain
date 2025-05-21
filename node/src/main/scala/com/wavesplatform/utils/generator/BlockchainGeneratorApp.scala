@@ -1,4 +1,4 @@
-package com.wavesplatform.utils.generator
+package com.gicsports.utils.generator
 
 import java.io.{File, FileOutputStream, PrintWriter}
 import java.util.concurrent.TimeUnit
@@ -7,22 +7,22 @@ import scala.concurrent.duration.*
 import scala.language.reflectiveCalls
 import cats.implicits.*
 import com.typesafe.config.{ConfigFactory, ConfigParseOptions}
-import com.wavesplatform.{GenesisBlockGenerator, Version}
-import com.wavesplatform.account.{Address, KeyPair}
-import com.wavesplatform.block.Block
-import com.wavesplatform.consensus.PoSSelector
-import com.wavesplatform.database.openDB
-import com.wavesplatform.events.{BlockchainUpdateTriggers, UtxEvent}
-import com.wavesplatform.history.StorageFactory
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.mining.{Miner, MinerImpl}
-import com.wavesplatform.settings.*
-import com.wavesplatform.state.appender.BlockAppender
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.utils.{Schedulers, ScorexLogging, Time}
-import com.wavesplatform.utx.UtxPoolImpl
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.{GenesisBlockGenerator, Version}
+import com.gicsports.account.{Address, KeyPair}
+import com.gicsports.block.Block
+import com.gicsports.consensus.PoSSelector
+import com.gicsports.database.openDB
+import com.gicsports.events.{BlockchainUpdateTriggers, UtxEvent}
+import com.gicsports.history.StorageFactory
+import com.gicsports.lang.ValidationError
+import com.gicsports.mining.{Miner, MinerImpl}
+import com.gicsports.settings.*
+import com.gicsports.state.appender.BlockAppender
+import com.gicsports.transaction.Asset
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.utils.{Schedulers, ScorexLogging, Time}
+import com.gicsports.utx.UtxPoolImpl
+import com.gicsports.wallet.Wallet
 import io.netty.channel.group.DefaultChannelGroup
 import monix.reactive.subjects.ConcurrentSubject
 import net.ceedubs.ficus.Ficus.*
@@ -120,7 +120,7 @@ object BlockchainGeneratorApp extends ScorexLogging {
       val db = openDB(wavesSettings.dbSettings.directory, recreate = true)
       val (blockchainUpdater, leveldb) =
         StorageFactory(wavesSettings, db, fakeTime, spendableBalance, BlockchainUpdateTriggers.noop)
-      com.wavesplatform.checkGenesis(wavesSettings, blockchainUpdater, Miner.Disabled)
+      com.gicsports.checkGenesis(wavesSettings, blockchainUpdater, Miner.Disabled)
       sys.addShutdownHook(synchronized {
         blockchainUpdater.shutdown()
         leveldb.close()

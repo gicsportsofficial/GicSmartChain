@@ -1,5 +1,5 @@
-package com.wavesplatform.lang.v1.traits.domain
-import com.wavesplatform.common.state.ByteStr
+package com.gicsports.lang.v1.traits.domain
+import com.gicsports.common.state.ByteStr
 
 case class BlockInfo(timestamp: Long,
                      height: Int,

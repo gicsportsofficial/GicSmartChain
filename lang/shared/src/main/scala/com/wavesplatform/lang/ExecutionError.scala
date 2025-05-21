@@ -1,4 +1,4 @@
-package com.wavesplatform.lang
+package com.gicsports.lang
 
 sealed trait ExecutionError {
   def message: String

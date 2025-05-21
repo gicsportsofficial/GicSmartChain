@@ -1,4 +1,4 @@
-package com.wavesplatform.crypto
+package com.gicsports.crypto
 
 import org.bouncycastle.crypto.digests.KeccakDigest
 

@@ -1,14 +1,14 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
 import scala.util.{Random, Try}
 
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.NTPTime
-import com.wavesplatform.it.api.SyncGrpcApi._
-import com.wavesplatform.it.sync.{aliasTxSupportedVersions, minFee, transferAmount, aliasFeeAmount}
-import com.wavesplatform.protobuf.transaction.{PBRecipients, Recipient}
-import com.wavesplatform.test._
+import com.gicsports.account.AddressScheme
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.NTPTime
+import com.gicsports.it.api.SyncGrpcApi._
+import com.gicsports.it.sync.{aliasTxSupportedVersions, minFee, transferAmount, aliasFeeAmount}
+import com.gicsports.protobuf.transaction.{PBRecipients, Recipient}
+import com.gicsports.test._
 import io.grpc.Status.Code
 import org.scalatest.prop.TableDrivenPropertyChecks
 

@@ -1,11 +1,11 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import akka.http.scaladsl.marshalling.{ToResponseMarshallable, ToResponseMarshaller}
 import akka.http.scaladsl.server.{Directive1, Route}
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.network.TransactionPublisher
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.transaction.smart.script.trace.TracedResult
+import com.gicsports.lang.ValidationError
+import com.gicsports.network.TransactionPublisher
+import com.gicsports.transaction.Transaction
+import com.gicsports.transaction.smart.script.trace.TracedResult
 import play.api.libs.json._
 
 import scala.concurrent.Future

@@ -1,6 +1,6 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
-import com.wavesplatform.block.Block.BlockId
-import com.wavesplatform.common.state.ByteStr
+import com.gicsports.block.Block.BlockId
+import com.gicsports.common.state.ByteStr
 
 case class BlockMinerInfo(baseTarget: Long, generationSignature: ByteStr, timestamp: Long, blockId: BlockId)

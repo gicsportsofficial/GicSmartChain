@@ -1,6 +1,6 @@
-package com.wavesplatform.generator.cli
+package com.gicsports.generator.cli
 
-import com.wavesplatform.generator.Mode
+import com.gicsports.generator.Mode
 import scopt.Read
 
 import scala.concurrent.duration.FiniteDuration

@@ -1,11 +1,11 @@
-package com.wavesplatform.settings.utils
+package com.gicsports.settings.utils
 
 import cats.data.{NonEmptyList, Validated, ValidatedNel}
 import cats.instances.list._
 import cats.syntax.foldable._
 import cats.syntax.traverse._
 import com.typesafe.config.{Config, ConfigException}
-import com.wavesplatform.transaction.assets.exchange.AssetPair
+import com.gicsports.transaction.assets.exchange.AssetPair
 import net.ceedubs.ficus.Ficus._
 import net.ceedubs.ficus.readers.ValueReader
 

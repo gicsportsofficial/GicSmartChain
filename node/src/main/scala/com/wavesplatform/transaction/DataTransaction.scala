@@ -1,15 +1,15 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import scala.util.Try
 
-import com.wavesplatform.account.{AddressScheme, KeyPair, PrivateKey, PublicKey}
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.protobuf.transaction.PBTransactions
-import com.wavesplatform.state._
-import com.wavesplatform.transaction.serialization.impl.DataTxSerializer
-import com.wavesplatform.transaction.validation.TxValidator
-import com.wavesplatform.transaction.validation.impl.DataTxValidator
+import com.gicsports.account.{AddressScheme, KeyPair, PrivateKey, PublicKey}
+import com.gicsports.crypto
+import com.gicsports.lang.ValidationError
+import com.gicsports.protobuf.transaction.PBTransactions
+import com.gicsports.state._
+import com.gicsports.transaction.serialization.impl.DataTxSerializer
+import com.gicsports.transaction.validation.TxValidator
+import com.gicsports.transaction.validation.impl.DataTxValidator
 import monix.eval.Coeval
 import play.api.libs.json._
 
@@ -32,7 +32,7 @@ case class DataTransaction(
   override val bytes: Coeval[Array[Byte]]     = Coeval.evalOnce(DataTxSerializer.toBytes(this))
   override val json: Coeval[JsObject]         = Coeval.evalOnce(DataTxSerializer.toJson(this))
 
-  private[wavesplatform] lazy val protoDataPayload = PBTransactions.protobuf(this).getWavesTransaction.getDataTransaction.toByteArray
+  private[gicsports] lazy val protoDataPayload = PBTransactions.protobuf(this).getWavesTransaction.getDataTransaction.toByteArray
 }
 
 object DataTransaction extends TransactionParser {

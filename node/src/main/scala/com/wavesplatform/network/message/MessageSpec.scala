@@ -1,4 +1,4 @@
-package com.wavesplatform.network.message
+package com.gicsports.network.message
 
 import scala.reflect.ClassTag
 import scala.util.Try

@@ -1,5 +1,5 @@
-package com.wavesplatform.lang.directives.values
-import com.wavesplatform.lang.directives.DirectiveDictionary
+package com.gicsports.lang.directives.values
+import com.gicsports.lang.directives.DirectiveDictionary
 
 sealed abstract class StdLibVersion(id: Int) extends DirectiveValue(id.toString, id) with Product with Serializable with Ordered[StdLibVersion] {
   override val value: Any = id

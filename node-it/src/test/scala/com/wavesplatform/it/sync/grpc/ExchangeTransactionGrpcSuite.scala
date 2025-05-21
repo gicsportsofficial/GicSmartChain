@@ -1,16 +1,16 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
-import com.wavesplatform.common.utils.{Base64, EitherExt2}
-import com.wavesplatform.it.NTPTime
-import com.wavesplatform.it.api.SyncGrpcApi._
-import com.wavesplatform.it.sync.{matcherFee, minFee, someAssetAmount}
-import com.wavesplatform.test._
-import com.wavesplatform.protobuf.transaction.{PBTransactions, Recipient}
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.assets.exchange.{AssetPair, Order}
-import com.wavesplatform.utils._
+import com.gicsports.common.utils.{Base64, EitherExt2}
+import com.gicsports.it.NTPTime
+import com.gicsports.it.api.SyncGrpcApi._
+import com.gicsports.it.sync.{matcherFee, minFee, someAssetAmount}
+import com.gicsports.test._
+import com.gicsports.protobuf.transaction.{PBTransactions, Recipient}
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.assets.exchange.{AssetPair, Order}
+import com.gicsports.utils._
 import io.grpc.Status.Code
 
 import scala.collection.immutable
@@ -37,7 +37,7 @@ class ExchangeTransactionGrpcSuite extends GrpcBaseTransactionSuite with NTPTime
     val price              = 500000L
     val amount             = 40000000L
     val priceAssetSpending = amount * price / 100000000L
-    val pair               = AssetPair.createAssetPair("CARDIUM", exchAssetId).get
+    val pair               = AssetPair.createAssetPair("GIC", exchAssetId).get
     for ((o1ver, o2ver, tver) <- versions) {
       val ts                       = ntpTime.correctedTime()
       val expirationTimestamp      = ts + Order.MaxLiveTime
@@ -99,7 +99,7 @@ class ExchangeTransactionGrpcSuite extends GrpcBaseTransactionSuite with NTPTime
 
       val ts                  = ntpTime.correctedTime()
       val expirationTimestamp = ts + Order.MaxLiveTime
-      val assetPair           = AssetPair.createAssetPair("CARDIUM", feeAssetId.toString).get
+      val assetPair           = AssetPair.createAssetPair("GIC", feeAssetId.toString).get
       val buy =
         Order.buy(o1ver, buyer, matcher.publicKey, assetPair, amount, price, ts, expirationTimestamp, matcherFee, matcherFeeOrder1).explicitGet()
       val sell =
@@ -136,7 +136,7 @@ class ExchangeTransactionGrpcSuite extends GrpcBaseTransactionSuite with NTPTime
       val expirationTimestamp = ts + Order.MaxLiveTime
       val price               = 2 * Order.PriceConstant
       val amount              = 1
-      val pair                = AssetPair.createAssetPair("CARDIUM", assetId).get
+      val pair                = AssetPair.createAssetPair("GIC", assetId).get
       val buy                 = Order.buy(o1ver, buyer, matcher.publicKey, pair, amount, price, ts, expirationTimestamp, matcherFee).explicitGet()
       val sell                = Order.sell(o2ver, seller, matcher.publicKey, pair, amount, price, ts, expirationTimestamp, matcherFee).explicitGet()
 

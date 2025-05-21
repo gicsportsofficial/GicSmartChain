@@ -1,10 +1,10 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
 import cats.syntax.either.*
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.*
-import com.wavesplatform.transaction.DataTransaction
-import com.wavesplatform.transaction.validation.impl.DataTxValidator
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.*
+import com.gicsports.transaction.DataTransaction
+import com.gicsports.transaction.validation.impl.DataTxValidator
 
 object DataTransactionDiff {
   def apply(blockchain: Blockchain)(tx: DataTransaction): Either[ValidationError, Diff] = {

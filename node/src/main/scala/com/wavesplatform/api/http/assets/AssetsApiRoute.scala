@@ -1,4 +1,4 @@
-package com.wavesplatform.api.http.assets
+package com.gicsports.api.http.assets
 
 import java.util.concurrent.*
 import akka.NotUsed
@@ -12,26 +12,26 @@ import cats.instances.list.*
 import cats.syntax.alternative.*
 import cats.syntax.either.*
 import cats.syntax.traverse.*
-import com.wavesplatform.account.Address
-import com.wavesplatform.api.common.{CommonAccountsApi, CommonAssetsApi}
-import com.wavesplatform.api.http.ApiError.*
-import com.wavesplatform.api.http.*
-import com.wavesplatform.api.http.assets.AssetsApiRoute.DistributionParams
-import com.wavesplatform.api.http.requests.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.network.TransactionPublisher
-import com.wavesplatform.settings.RestAPISettings
-import com.wavesplatform.state.{AssetDescription, AssetScriptInfo, Blockchain}
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.EthereumTransaction.Invocation
-import com.wavesplatform.transaction.{EthereumTransaction, TransactionFactory}
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.assets.exchange.Order
-import com.wavesplatform.transaction.smart.{InvokeExpressionTransaction, InvokeScriptTransaction}
-import com.wavesplatform.utils.Time
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.account.Address
+import com.gicsports.api.common.{CommonAccountsApi, CommonAssetsApi}
+import com.gicsports.api.http.ApiError.*
+import com.gicsports.api.http.*
+import com.gicsports.api.http.assets.AssetsApiRoute.DistributionParams
+import com.gicsports.api.http.requests.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.network.TransactionPublisher
+import com.gicsports.settings.RestAPISettings
+import com.gicsports.state.{AssetDescription, AssetScriptInfo, Blockchain}
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.EthereumTransaction.Invocation
+import com.gicsports.transaction.{EthereumTransaction, TransactionFactory}
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.assets.exchange.Order
+import com.gicsports.transaction.smart.{InvokeExpressionTransaction, InvokeScriptTransaction}
+import com.gicsports.utils.Time
+import com.gicsports.wallet.Wallet
 import io.netty.util.concurrent.DefaultThreadFactory
 import monix.eval.Task
 import monix.execution.Scheduler

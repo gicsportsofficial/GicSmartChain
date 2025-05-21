@@ -1,18 +1,18 @@
-package com.wavesplatform.lang.v1.compiler
+package com.gicsports.lang.v1.compiler
 
 import cats.syntax.semigroup.*
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.Global
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.{Account, Asset, Expression, StdLibVersion, DApp as DAppType}
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.script.{ContractScript, Script}
-import com.wavesplatform.lang.v1.CTX
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.WavesContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
-import com.wavesplatform.lang.v1.traits.Environment
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.Global
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.{Account, Asset, Expression, StdLibVersion, DApp as DAppType}
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.script.{ContractScript, Script}
+import com.gicsports.lang.v1.CTX
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.WavesContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
+import com.gicsports.lang.v1.traits.Environment
 
 import scala.collection.mutable
 

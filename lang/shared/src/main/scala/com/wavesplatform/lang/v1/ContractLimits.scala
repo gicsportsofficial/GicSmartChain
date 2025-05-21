@@ -1,7 +1,7 @@
-package com.wavesplatform.lang.v1
+package com.gicsports.lang.v1
 
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.v1.compiler.Terms
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.v1.compiler.Terms
 
 object ContractLimits {
   val MaxComplexityByVersion: StdLibVersion => Int = {

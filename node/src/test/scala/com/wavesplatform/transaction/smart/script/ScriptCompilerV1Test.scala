@@ -1,15 +1,15 @@
-package com.wavesplatform.transaction.smart.script
+package com.gicsports.transaction.smart.script
 
 import cats.syntax.option._
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms._
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.lang.v1.evaluator.FunctionIds._
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext
-import com.wavesplatform.test._
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.directives.values._
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms._
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.lang.v1.evaluator.FunctionIds._
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext
+import com.gicsports.test._
 import org.scalatest.{EitherValues, Inside}
 
 class ScriptCompilerV1Test extends PropSpec with EitherValues with Inside {

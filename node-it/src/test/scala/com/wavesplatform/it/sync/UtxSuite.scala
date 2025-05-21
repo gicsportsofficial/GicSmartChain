@@ -1,19 +1,19 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
 import scala.util.{Random, Try}
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.{BaseFunSuite, Node}
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.it.api.{AsyncHttpApi, TransactionInfo}
-import com.wavesplatform.lang.v1.estimator.ScriptEstimatorV1
-import com.wavesplatform.transaction.{TxVersion, utils}
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.transfer.TransferTransaction
+import com.gicsports.account.KeyPair
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.{BaseFunSuite, Node}
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.it.api.{AsyncHttpApi, TransactionInfo}
+import com.gicsports.lang.v1.estimator.ScriptEstimatorV1
+import com.gicsports.transaction.{TxVersion, utils}
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.transfer.TransferTransaction
 
 class UtxSuite extends BaseFunSuite {
   private var whitelistedAccount: KeyPair     = _
@@ -175,7 +175,7 @@ class UtxSuite extends BaseFunSuite {
 
   override protected def nodeConfigs: Seq[Config] = {
     import UtxSuite._
-    import com.wavesplatform.it.NodeConfigs._
+    import com.gicsports.it.NodeConfigs._
 
     whitelistedAccount = createAccount
     whitelistedDAppAccount = createAccount
@@ -201,7 +201,7 @@ object UtxSuite {
 
   private def minerConfigPredef(whitelist: Seq[String]) =
     s"""
-       |CARDIUM {
+       |GIC {
        |  synchronization.synchronization-timeout = 10s
        |  utx {
        |    max-size = 5000
@@ -217,7 +217,7 @@ object UtxSuite {
 
   private def notMinerConfigPredef(whitelist: Seq[String]) =
     s"""
-       |CARDIUM {
+       |GIC {
        |  synchronization.synchronization-timeout = 10s
        |  utx {
        |    max-size = 5000

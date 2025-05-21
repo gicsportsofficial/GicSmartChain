@@ -1,18 +1,18 @@
-package com.wavesplatform.state.appender
+package com.gicsports.state.appender
 
 import java.time.Instant
 
 import cats.data.EitherT
-import com.wavesplatform.block.Block
-import com.wavesplatform.consensus.PoSSelector
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.metrics.*
-import com.wavesplatform.network.*
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.transaction.BlockchainUpdater
-import com.wavesplatform.transaction.TxValidationError.{BlockAppendError, GenericError, InvalidSignature}
-import com.wavesplatform.utils.{ScorexLogging, Time}
-import com.wavesplatform.utx.UtxPoolImpl
+import com.gicsports.block.Block
+import com.gicsports.consensus.PoSSelector
+import com.gicsports.lang.ValidationError
+import com.gicsports.metrics.*
+import com.gicsports.network.*
+import com.gicsports.state.Blockchain
+import com.gicsports.transaction.BlockchainUpdater
+import com.gicsports.transaction.TxValidationError.{BlockAppendError, GenericError, InvalidSignature}
+import com.gicsports.utils.{ScorexLogging, Time}
+import com.gicsports.utx.UtxPoolImpl
 import io.netty.channel.Channel
 import io.netty.channel.group.ChannelGroup
 import kamon.Kamon

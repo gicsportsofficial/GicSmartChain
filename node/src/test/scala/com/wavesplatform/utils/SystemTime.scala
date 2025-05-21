@@ -1,4 +1,4 @@
-package com.wavesplatform.utils
+package com.gicsports.utils
 
 object SystemTime extends Time {
   def correctedTime(): Long = System.currentTimeMillis()

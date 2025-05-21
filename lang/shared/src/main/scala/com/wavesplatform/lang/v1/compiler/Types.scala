@@ -1,4 +1,4 @@
-package com.wavesplatform.lang.v1.compiler
+package com.gicsports.lang.v1.compiler
 
 import cats.syntax.traverse.*
 import cats.instances.list.*

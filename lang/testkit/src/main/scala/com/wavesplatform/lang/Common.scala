@@ -1,21 +1,21 @@
-package com.wavesplatform.lang
+package com.gicsports.lang
 
 import cats.Id
 import cats.kernel.Monoid
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.CTX
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.Types.*
-import com.wavesplatform.lang.v1.evaluator.Contextful.NoContext
-import com.wavesplatform.lang.v1.evaluator.{EvaluatorV1, Log}
-import com.wavesplatform.lang.v1.evaluator.EvaluatorV1.*
-import com.wavesplatform.lang.v1.evaluator.ctx.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{EnvironmentFunctions, PureContext, *}
-import com.wavesplatform.lang.v1.traits.domain.Recipient.Address
-import com.wavesplatform.lang.v1.traits.domain.{BlockInfo, Recipient, ScriptAssetInfo, Tx}
-import com.wavesplatform.lang.v1.traits.{DataType, Environment}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.CTX
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.Types.*
+import com.gicsports.lang.v1.evaluator.Contextful.NoContext
+import com.gicsports.lang.v1.evaluator.{EvaluatorV1, Log}
+import com.gicsports.lang.v1.evaluator.EvaluatorV1.*
+import com.gicsports.lang.v1.evaluator.ctx.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.{EnvironmentFunctions, PureContext, *}
+import com.gicsports.lang.v1.traits.domain.Recipient.Address
+import com.gicsports.lang.v1.traits.domain.{BlockInfo, Recipient, ScriptAssetInfo, Tx}
+import com.gicsports.lang.v1.traits.{DataType, Environment}
 import monix.eval.Coeval
 import shapeless.Coproduct
 
@@ -23,7 +23,7 @@ import scala.annotation.tailrec
 import scala.util.{Left, Right, Try}
 
 object Common {
-  import com.wavesplatform.lang.v1.evaluator.ctx.impl.converters._
+  import com.gicsports.lang.v1.evaluator.ctx.impl.converters._
 
   private val dataEntryValueType = UNION(LONG, BOOLEAN, BYTESTR, STRING)
   val dataEntryType              = CASETYPEREF("DataEntry", List("key" -> STRING, "value" -> dataEntryValueType))

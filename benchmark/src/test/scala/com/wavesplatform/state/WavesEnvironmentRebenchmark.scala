@@ -1,16 +1,16 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import java.util.concurrent.TimeUnit
 
-import com.wavesplatform.account.{Address, Alias}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.database.{DBExt, KeyTags, Keys}
-import com.wavesplatform.lang.v1.traits.DataType
-import com.wavesplatform.lang.v1.traits.DataType.{Boolean, ByteArray, Long}
-import com.wavesplatform.lang.v1.traits.domain.Recipient
-import com.wavesplatform.transaction.DataTransaction
-import com.wavesplatform.transaction.transfer.TransferTransaction
+import com.gicsports.account.{Address, Alias}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.database.{DBExt, KeyTags, Keys}
+import com.gicsports.lang.v1.traits.DataType
+import com.gicsports.lang.v1.traits.DataType.{Boolean, ByteArray, Long}
+import com.gicsports.lang.v1.traits.domain.Recipient
+import com.gicsports.transaction.DataTransaction
+import com.gicsports.transaction.transfer.TransferTransaction
 import org.openjdk.jmh.annotations._
 import org.openjdk.jmh.infra.Blackhole
 

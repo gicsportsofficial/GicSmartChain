@@ -1,10 +1,10 @@
-package com.wavesplatform.lang.parser
+package com.gicsports.lang.parser
 
-import com.wavesplatform.lang.v1.parser.Expressions.*
-import com.wavesplatform.lang.v1.parser.Expressions.Pos.AnyPos
-import com.wavesplatform.lang.v1.parser.{Expressions, Parser}
-import com.wavesplatform.lang.v1.testing.ScriptGenParser
-import com.wavesplatform.test.*
+import com.gicsports.lang.v1.parser.Expressions.*
+import com.gicsports.lang.v1.parser.Expressions.Pos.AnyPos
+import com.gicsports.lang.v1.parser.{Expressions, Parser}
+import com.gicsports.lang.v1.testing.ScriptGenParser
+import com.gicsports.test.*
 import fastparse.Parsed.{Failure, Success}
 import org.scalatest.exceptions.TestFailedException
 

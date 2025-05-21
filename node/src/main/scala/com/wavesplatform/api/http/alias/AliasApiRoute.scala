@@ -1,18 +1,18 @@
-package com.wavesplatform.api.http.alias
+package com.gicsports.api.http.alias
 
 import akka.http.scaladsl.common.{EntityStreamingSupport, JsonEntityStreamingSupport}
 import akka.http.scaladsl.server.Route
 import cats.syntax.either.*
-import com.wavesplatform.account.Alias
-import com.wavesplatform.api.common.CommonTransactionsApi
-import com.wavesplatform.api.http.requests.CreateAliasRequest
-import com.wavesplatform.api.http.{BroadcastRoute, *}
-import com.wavesplatform.network.TransactionPublisher
-import com.wavesplatform.settings.RestAPISettings
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.transaction.*
-import com.wavesplatform.utils.Time
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.account.Alias
+import com.gicsports.api.common.CommonTransactionsApi
+import com.gicsports.api.http.requests.CreateAliasRequest
+import com.gicsports.api.http.{BroadcastRoute, *}
+import com.gicsports.network.TransactionPublisher
+import com.gicsports.settings.RestAPISettings
+import com.gicsports.state.Blockchain
+import com.gicsports.transaction.*
+import com.gicsports.utils.Time
+import com.gicsports.wallet.Wallet
 import play.api.libs.json.{JsString, Json}
 
 case class AliasApiRoute(

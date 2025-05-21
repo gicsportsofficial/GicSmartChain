@@ -1,8 +1,8 @@
-package com.wavesplatform.protobuf.utils
+package com.gicsports.protobuf.utils
 
 import cats.syntax.applicativeError._
 import com.google.protobuf.CodedOutputStream
-import com.wavesplatform.common.state.ByteStr
+import com.gicsports.common.state.ByteStr
 import scalapb.{GeneratedMessage, GeneratedMessageCompanion}
 
 import scala.util.control.NonFatal

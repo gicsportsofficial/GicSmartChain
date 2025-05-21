@@ -1,13 +1,13 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithState
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.settings.TestFunctionalitySettings
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.{GenesisTransaction, TxHelpers, TxVersion}
-import com.wavesplatform.transaction.lease.LeaseTransaction
-import com.wavesplatform.transaction.transfer.*
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithState
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.settings.TestFunctionalitySettings
+import com.gicsports.test.*
+import com.gicsports.transaction.{GenesisTransaction, TxHelpers, TxVersion}
+import com.gicsports.transaction.lease.LeaseTransaction
+import com.gicsports.transaction.transfer.*
 
 class BalanceDiffValidationTest extends PropSpec with WithState {
   val ownLessThatLeaseOut: (GenesisTransaction, TransferTransaction, LeaseTransaction, LeaseTransaction, TransferTransaction) = {

@@ -1,20 +1,20 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
-import com.wavesplatform.account.{Address, AddressOrAlias, KeyPair}
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.{InterferableDB, WithDomain}
-import com.wavesplatform.history.Domain
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.settings.{Constants, GenesisSettings, GenesisTransactionSettings}
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{GenesisTransaction, Transaction, TransactionType, TxHelpers, TxVersion}
-import com.wavesplatform.BlockGen
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.test.DomainPresets.RideV5
-import com.wavesplatform.test.FreeSpec
-import com.wavesplatform.transaction.TxHelpers.{defaultAddress, issue, secondSigner}
+import com.gicsports.account.{Address, AddressOrAlias, KeyPair}
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.{InterferableDB, WithDomain}
+import com.gicsports.history.Domain
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.settings.{Constants, GenesisSettings, GenesisTransactionSettings}
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{GenesisTransaction, Transaction, TransactionType, TxHelpers, TxVersion}
+import com.gicsports.BlockGen
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.test.DomainPresets.RideV5
+import com.gicsports.test.FreeSpec
+import com.gicsports.transaction.TxHelpers.{defaultAddress, issue, secondSigner}
 import org.scalactic.source.Position
 
 import java.util.concurrent.locks.ReentrantLock

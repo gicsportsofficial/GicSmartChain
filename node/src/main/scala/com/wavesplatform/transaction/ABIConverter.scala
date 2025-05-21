@@ -1,4 +1,4 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import cats.instances.either.*
 import cats.instances.vector.*
@@ -6,16 +6,16 @@ import cats.syntax.either.*
 import cats.syntax.traverse.*
 import com.esaulpaugh.headlong.abi.{Function, Tuple}
 import com.esaulpaugh.headlong.util.FastHex
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.{EVALUATED, FUNCTION_CALL}
-import com.wavesplatform.lang.v1.compiler.Types.TypeExt
-import com.wavesplatform.lang.v1.compiler.{Terms, Types}
-import com.wavesplatform.lang.{Global, ValidationError}
-import com.wavesplatform.transaction.ABIConverter.WavesByteRepr
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.{EVALUATED, FUNCTION_CALL}
+import com.gicsports.lang.v1.compiler.Types.TypeExt
+import com.gicsports.lang.v1.compiler.{Terms, Types}
+import com.gicsports.lang.{Global, ValidationError}
+import com.gicsports.transaction.ABIConverter.WavesByteRepr
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.smart.InvokeScriptTransaction
 import org.web3j.abi.TypeReference
 import org.web3j.abi.datatypes.Type
 import play.api.libs.json.{JsArray, JsObject, JsString, Json}

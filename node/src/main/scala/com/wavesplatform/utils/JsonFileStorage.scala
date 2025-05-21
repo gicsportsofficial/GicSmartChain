@@ -1,4 +1,4 @@
-package com.wavesplatform.utils
+package com.gicsports.utils
 
 import java.io.{File, PrintWriter}
 

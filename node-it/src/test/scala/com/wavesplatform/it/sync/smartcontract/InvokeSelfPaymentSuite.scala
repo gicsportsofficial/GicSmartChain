@@ -1,17 +1,17 @@
-package com.wavesplatform.it.sync.smartcontract
+package com.gicsports.it.sync.smartcontract
 
-import com.wavesplatform.api.http.ApiError.ScriptExecutionError
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_STRING
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.Transfer
+import com.gicsports.api.http.ApiError.ScriptExecutionError
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.compiler.Terms.CONST_STRING
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.transfer.MassTransferTransaction.Transfer
 import org.scalatest.CancelAfterFailure
 
 class InvokeSelfPaymentSuite extends BaseTransactionSuite with CancelAfterFailure {
@@ -39,7 +39,7 @@ class InvokeSelfPaymentSuite extends BaseTransactionSuite with CancelAfterFailur
         |
         |@Callable(inv)
         |func paySelf(asset: String) = {
-        |  let id = if asset == "CARDIUM" then unit else fromBase58String(asset)
+        |  let id = if asset == "GIC" then unit else fromBase58String(asset)
         |  [ ScriptTransfer(this, 1, id) ]
         |}
       """.stripMargin
@@ -56,7 +56,7 @@ class InvokeSelfPaymentSuite extends BaseTransactionSuite with CancelAfterFailur
         |
         |@Callable(inv)
         |func paySelf(asset: String) = {
-        |  let id = if asset == "CARDIUM" then unit else fromBase58String(asset)
+        |  let id = if asset == "GIC" then unit else fromBase58String(asset)
         |  TransferSet([ ScriptTransfer(this, 1, id) ])
         |}
       """.stripMargin
@@ -91,7 +91,7 @@ class InvokeSelfPaymentSuite extends BaseTransactionSuite with CancelAfterFailur
 
   test("V4: can't send tokens to itself from a script") {
     for (args <- List(
-           List(CONST_STRING("CARDIUM").explicitGet()),
+           List(CONST_STRING("GIC").explicitGet()),
            List(CONST_STRING(asset1Id).explicitGet())
          )) {
       assertApiError(
@@ -120,7 +120,7 @@ class InvokeSelfPaymentSuite extends BaseTransactionSuite with CancelAfterFailur
   }
 
   test("V3: still can pay itself") {
-    sender.invokeScript(caller, dAppV3Address, Some("paySelf"), List(CONST_STRING("CARDIUM").explicitGet()), waitForTx = true)
+    sender.invokeScript(caller, dAppV3Address, Some("paySelf"), List(CONST_STRING("GIC").explicitGet()), waitForTx = true)
     sender.invokeScript(caller, dAppV3Address, Some("paySelf"), List(CONST_STRING(asset1Id).explicitGet()), waitForTx = true)
   }
 

@@ -1,11 +1,11 @@
-package com.wavesplatform.transaction.assets
+package com.gicsports.transaction.assets
 
-import com.wavesplatform.test.FreeSpec
-import com.wavesplatform.BlockchainStubHelpers
-import com.wavesplatform.lang.v1.traits.domain.Issue
-import com.wavesplatform.state.diffs.produceRejectOrFailedDiff
-import com.wavesplatform.transaction.{ERC20Address, TxHelpers}
-import com.wavesplatform.transaction.Asset.IssuedAsset
+import com.gicsports.test.FreeSpec
+import com.gicsports.BlockchainStubHelpers
+import com.gicsports.lang.v1.traits.domain.Issue
+import com.gicsports.state.diffs.produceRejectOrFailedDiff
+import com.gicsports.transaction.{ERC20Address, TxHelpers}
+import com.gicsports.transaction.Asset.IssuedAsset
 import org.scalamock.scalatest.PathMockFactory
 import org.scalatest.matchers.should.Matchers
 

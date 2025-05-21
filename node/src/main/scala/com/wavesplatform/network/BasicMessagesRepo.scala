@@ -1,4 +1,4 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
 import java.net.{InetAddress, InetSocketAddress}
 import java.util
@@ -6,19 +6,19 @@ import java.util
 import scala.util.Try
 
 import com.google.common.primitives.{Bytes, Ints}
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.block.serialization.MicroBlockSerializer
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
-import com.wavesplatform.crypto._
-import com.wavesplatform.mining.Miner.MaxTransactionsPerMicroblock
-import com.wavesplatform.mining.MiningConstraints
-import com.wavesplatform.network.message._
-import com.wavesplatform.network.message.Message._
-import com.wavesplatform.protobuf.block.{PBBlock, PBBlocks, PBMicroBlocks, SignedMicroBlock}
-import com.wavesplatform.protobuf.transaction.{PBSignedTransaction, PBTransactions}
-import com.wavesplatform.transaction.{DataTransaction, EthereumTransaction, Transaction, TransactionParsers}
+import com.gicsports.account.PublicKey
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.block.serialization.MicroBlockSerializer
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
+import com.gicsports.crypto._
+import com.gicsports.mining.Miner.MaxTransactionsPerMicroblock
+import com.gicsports.mining.MiningConstraints
+import com.gicsports.network.message._
+import com.gicsports.network.message.Message._
+import com.gicsports.protobuf.block.{PBBlock, PBBlocks, PBMicroBlocks, SignedMicroBlock}
+import com.gicsports.protobuf.transaction.{PBSignedTransaction, PBTransactions}
+import com.gicsports.transaction.{DataTransaction, EthereumTransaction, Transaction, TransactionParsers}
 
 object GetPeersSpec extends MessageSpec[GetPeers.type] {
   override val messageCode: Message.MessageCode = 1: Byte
@@ -204,7 +204,7 @@ object ScoreSpec extends MessageSpec[BigInt] {
 object TransactionSpec extends MessageSpec[Transaction] {
   override val messageCode: MessageCode = 25: Byte
 
-  // Modeled after Data Transaction https://wavesplatform.atlassian.net/wiki/spaces/MAIN/pages/119734321/Data+Transaction
+  // Modeled after Data Transaction https://gicsports.io/.atlassian.net/wiki/spaces/MAIN/pages/119734321/Data+Transaction
   override val maxLength: Int = (DataTransaction.MaxBytes * 1.2).toInt // 150 * 1024
 
   override def deserializeData(bytes: Array[Byte]): Try[Transaction] =

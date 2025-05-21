@@ -1,6 +1,6 @@
-package com.wavesplatform.lang
+package com.gicsports.lang
 
-import com.wavesplatform.lang.contract.DApp
+import com.gicsports.lang.contract.DApp
 
 import scala.beans.BeanProperty
 

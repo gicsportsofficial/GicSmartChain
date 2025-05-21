@@ -1,21 +1,21 @@
-package com.wavesplatform.api.common
+package com.gicsports.api.common
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.traits.domain.{Lease, Recipient}
-import com.wavesplatform.settings.TestFunctionalitySettings
-import com.wavesplatform.state.{DataEntry, Diff, EmptyDataEntry, StringDataEntry, diffs}
-import com.wavesplatform.test.DomainPresets.RideV4
-import com.wavesplatform.test.FreeSpec
-import com.wavesplatform.transaction.TxHelpers.data
-import com.wavesplatform.transaction.TxVersion.V2
-import com.wavesplatform.transaction.{DataTransaction, GenesisTransaction, TxHelpers}
-import com.wavesplatform.{BlocksTransactionsHelpers, history}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.*
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.traits.domain.{Lease, Recipient}
+import com.gicsports.settings.TestFunctionalitySettings
+import com.gicsports.state.{DataEntry, Diff, EmptyDataEntry, StringDataEntry, diffs}
+import com.gicsports.test.DomainPresets.RideV4
+import com.gicsports.test.FreeSpec
+import com.gicsports.transaction.TxHelpers.data
+import com.gicsports.transaction.TxVersion.V2
+import com.gicsports.transaction.{DataTransaction, GenesisTransaction, TxHelpers}
+import com.gicsports.{BlocksTransactionsHelpers, history}
 import monix.execution.Scheduler.Implicits.global
 
 class CommonAccountApiSpec extends FreeSpec with WithDomain with BlocksTransactionsHelpers {

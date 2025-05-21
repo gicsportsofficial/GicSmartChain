@@ -1,8 +1,8 @@
-package com.wavesplatform.account
+package com.gicsports.account
 
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.crypto
-import com.wavesplatform.test.PropSpec
+import com.gicsports.common.utils.Base58
+import com.gicsports.crypto
+import com.gicsports.test.PropSpec
 
 class AccountSpecification extends PropSpec {
 

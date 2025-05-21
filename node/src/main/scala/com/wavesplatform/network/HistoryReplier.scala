@@ -1,10 +1,10 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
-import com.wavesplatform.block.Block
-import com.wavesplatform.history.History
-import com.wavesplatform.network.HistoryReplier._
-import com.wavesplatform.settings.SynchronizationSettings
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.block.Block
+import com.gicsports.history.History
+import com.gicsports.network.HistoryReplier._
+import com.gicsports.settings.SynchronizationSettings
+import com.gicsports.utils.ScorexLogging
 import io.netty.channel.ChannelHandler.Sharable
 import io.netty.channel.{ChannelHandlerContext, ChannelInboundHandlerAdapter}
 

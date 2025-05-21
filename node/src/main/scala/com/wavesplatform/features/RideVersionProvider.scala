@@ -1,9 +1,9 @@
-package com.wavesplatform.features
+package com.gicsports.features
 
-import com.wavesplatform.features.BlockchainFeatures.{BlockV5, Ride4DApps, RideV6, SynchronousCalls}
-import com.wavesplatform.lang.directives.DirectiveDictionary
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.state.Blockchain
+import com.gicsports.features.BlockchainFeatures.{BlockV5, Ride4DApps, RideV6, SynchronousCalls}
+import com.gicsports.lang.directives.DirectiveDictionary
+import com.gicsports.lang.directives.values._
+import com.gicsports.state.Blockchain
 
 object RideVersionProvider {
   val actualVersionByFeature =

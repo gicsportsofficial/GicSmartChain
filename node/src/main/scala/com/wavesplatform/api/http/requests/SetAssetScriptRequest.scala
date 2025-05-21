@@ -1,6 +1,6 @@
-package com.wavesplatform.api.http.requests
+package com.gicsports.api.http.requests
 
-import com.wavesplatform.transaction.assets.SetAssetScriptTransaction
+import com.gicsports.transaction.assets.SetAssetScriptTransaction
 import play.api.libs.json.{Format, JsNumber, JsObject, Json}
 
 case class SetAssetScriptRequest(

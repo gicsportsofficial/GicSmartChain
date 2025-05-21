@@ -1,21 +1,21 @@
-package com.wavesplatform.state.diffs.ci.sync
+package com.gicsports.state.diffs.ci.sync
 
-import com.wavesplatform.TransactionGenBase
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.state.diffs.ci.ciFee
-import com.wavesplatform.test.*
-import com.wavesplatform.test.DomainPresets.*
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.utils.Signed
-import com.wavesplatform.transaction.{GenesisTransaction, TxVersion}
+import com.gicsports.TransactionGenBase
+import com.gicsports.account.Address
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.state.diffs.ci.ciFee
+import com.gicsports.test.*
+import com.gicsports.test.DomainPresets.*
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.utils.Signed
+import com.gicsports.transaction.{GenesisTransaction, TxVersion}
 
 class SyncDAppBalanceCheckTest extends PropSpec with WithDomain with TransactionGenBase {
 
@@ -69,7 +69,7 @@ class SyncDAppBalanceCheckTest extends PropSpec with WithDomain with Transaction
       d.appendBlock(preparingTxs*)
 
       val invoke1 = invoke()
-      d.appendAndCatchError(invoke1).toString should include("Negative CARDIUM balance")
+      d.appendAndCatchError(invoke1).toString should include("Negative GIC balance")
     }
   }
 }

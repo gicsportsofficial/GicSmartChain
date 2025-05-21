@@ -1,15 +1,15 @@
-package com.wavesplatform.lang.script
+package com.gicsports.lang.script
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.Base64
-import com.wavesplatform.lang.ValidationError.ScriptParseError
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.directives.values.{DApp as DAppType, *}
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.utils.*
-import com.wavesplatform.lang.v1.compiler.Decompiler
-import com.wavesplatform.lang.v1.estimator.ScriptEstimator
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.Base64
+import com.gicsports.lang.ValidationError.ScriptParseError
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.directives.values.{DApp as DAppType, *}
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.utils.*
+import com.gicsports.lang.v1.compiler.Decompiler
+import com.gicsports.lang.v1.estimator.ScriptEstimator
 import monix.eval.Coeval
 
 trait Script {

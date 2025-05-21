@@ -1,14 +1,14 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
 import com.typesafe.config.Config
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.crypto
-import com.wavesplatform.crypto.Blake2b256
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync.activation.ActivationStatusRequest
-import com.wavesplatform.it.{BaseFreeSpec, NodeConfigs}
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.Base58
+import com.gicsports.crypto
+import com.gicsports.crypto.Blake2b256
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync.activation.ActivationStatusRequest
+import com.gicsports.it.{BaseFreeSpec, NodeConfigs}
 import org.scalatest._
 
 import scala.concurrent.duration._

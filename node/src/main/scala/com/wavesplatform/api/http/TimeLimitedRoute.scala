@@ -1,9 +1,9 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import akka.http.scaladsl.marshalling.ToResponseMarshallable
 import akka.http.scaladsl.server.{Directive1, ExceptionHandler, Route}
 import com.google.common.util.concurrent.{ExecutionError, UncheckedExecutionException}
-import com.wavesplatform.utils.Schedulers.ExecutorExt
+import com.gicsports.utils.Schedulers.ExecutorExt
 import monix.execution.Scheduler
 
 import scala.concurrent.ExecutionException

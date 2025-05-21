@@ -1,5 +1,5 @@
-package com.wavesplatform.lang.directives
-import com.wavesplatform.lang.directives.values.DirectiveValue
+package com.gicsports.lang.directives
+import com.gicsports.lang.directives.values.DirectiveValue
 
 trait DirectiveDictionary[V <: DirectiveValue] {
   val default:      V

@@ -1,14 +1,14 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.NodeConfigs.Miners
-import com.wavesplatform.it.api.SyncGrpcApi.*
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.protobuf.transaction.PBTransactions
-import com.wavesplatform.transaction.assets.IssueTransaction.{MaxAssetDescriptionLength, MaxAssetNameLength, MinAssetNameLength}
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.NodeConfigs.Miners
+import com.gicsports.it.api.SyncGrpcApi.*
+import com.gicsports.it.sync.*
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.protobuf.transaction.PBTransactions
+import com.gicsports.transaction.assets.IssueTransaction.{MaxAssetDescriptionLength, MaxAssetNameLength, MinAssetNameLength}
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import io.grpc.Status.Code
 import org.scalatest.prop.TableDrivenPropertyChecks
 
@@ -128,7 +128,7 @@ class UpdateAssetInfoTransactionGrpcSuite extends GrpcBaseTransactionSuite with 
   test("not able to update asset info without paying enough fee") {
     assertGrpcError(
       sender.updateAssetInfo(issuer, assetId, "updatedName", "updatedDescription", issueFee - 1),
-      s"does not exceed minimal value of $issueFee CARDIUM",
+      s"does not exceed minimal value of $issueFee GIC",
       Code.INVALID_ARGUMENT
     )
   }
@@ -193,7 +193,7 @@ class UpdateAssetInfoTransactionGrpcSuite extends GrpcBaseTransactionSuite with 
 object UpdateAssetInfoTransactionGrpcSuite {
   private def configWithUpdateIntervalSetting(interval: Long) =
     ConfigFactory.parseString(
-      s"""CARDIUM {
+      s"""GIC {
          |  blockchain.custom.functionality.min-asset-info-update-interval = $interval
          |  miner.quorum = 0
          |}""".stripMargin

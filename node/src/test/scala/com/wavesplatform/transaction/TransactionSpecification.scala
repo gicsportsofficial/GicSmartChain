@@ -1,9 +1,9 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.transfer._
+import com.gicsports.account.KeyPair
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.transfer._
 
 class TransactionSpecification extends PropSpec {
 

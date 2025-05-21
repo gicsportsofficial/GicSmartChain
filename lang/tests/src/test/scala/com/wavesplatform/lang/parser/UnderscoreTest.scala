@@ -1,13 +1,13 @@
-package com.wavesplatform.lang.parser
+package com.gicsports.lang.parser
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.directives.values.{Expression, V3, V5}
-import com.wavesplatform.lang.utils.*
-import com.wavesplatform.lang.v1.FunctionHeader.{Native, User}
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.{Decompiler, ExpressionCompiler}
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext
-import com.wavesplatform.test.{PropSpec, *}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.directives.values.{Expression, V3, V5}
+import com.gicsports.lang.utils.*
+import com.gicsports.lang.v1.FunctionHeader.{Native, User}
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.{Decompiler, ExpressionCompiler}
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext
+import com.gicsports.test.{PropSpec, *}
 
 class UnderscoreTest extends PropSpec {
   private def compile(script: String): Either[String, EXPR] =

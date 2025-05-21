@@ -1,5 +1,5 @@
-package com.wavesplatform.lang.contract.meta
-import com.wavesplatform.lang.v1.compiler.Types.FINAL
+package com.gicsports.lang.contract.meta
+import com.gicsports.lang.v1.compiler.Types.FINAL
 
 case class ParsedMeta(
     version: Int,

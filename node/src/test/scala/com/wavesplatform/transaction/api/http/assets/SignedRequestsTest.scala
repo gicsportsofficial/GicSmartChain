@@ -1,11 +1,11 @@
-package com.wavesplatform.transaction.api.http.assets
+package com.gicsports.transaction.api.http.assets
 
-import com.wavesplatform.api.http.requests.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.test.FunSuite
-import com.wavesplatform.transaction.Proofs
+import com.gicsports.api.http.requests.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.script.Script
+import com.gicsports.test.FunSuite
+import com.gicsports.transaction.Proofs
 import play.api.libs.json.Json
 
 class SignedRequestsTest extends FunSuite {
@@ -164,7 +164,7 @@ class SignedRequestsTest extends FunSuite {
   }
 
   test("SponsorFeeRequest json parsing works") {
-    import com.wavesplatform.api.http.requests.SponsorFeeRequest._
+    import com.gicsports.api.http.requests.SponsorFeeRequest._
 
     val One = 100000000L
     val js1 = s"""{

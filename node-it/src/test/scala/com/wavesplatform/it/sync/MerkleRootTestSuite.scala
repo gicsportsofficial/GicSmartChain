@@ -1,14 +1,14 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.api.http.ApiError.{CustomValidationError, InvalidIds}
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.crypto.Blake2b256
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.it.BaseFreeSpec
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.it.sync.activation.ActivationStatusRequest
+import com.gicsports.api.http.ApiError.{CustomValidationError, InvalidIds}
+import com.gicsports.block.Block
+import com.gicsports.common.utils.Base58
+import com.gicsports.crypto.Blake2b256
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.it.BaseFreeSpec
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.it.sync.activation.ActivationStatusRequest
 import org.scalatest.*
 
 import scala.concurrent.duration.*
@@ -109,7 +109,7 @@ class MerkleRootTestSuite extends BaseFreeSpec with ActivationStatusRequest with
 
 object MerkleRootTestSuite {
 
-  import com.wavesplatform.it.NodeConfigs.Default
+  import com.gicsports.it.NodeConfigs.Default
 
   val MicroblockActivationHeight = 0
   val FairPosActivationHeight    = 0
@@ -117,7 +117,7 @@ object MerkleRootTestSuite {
 
   val Config: Config = ConfigFactory.parseString(
     s"""
-       |CARDIUM {
+       |GIC {
        |   blockchain.custom {
        |      functionality {
        |        pre-activated-features {

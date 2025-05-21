@@ -1,26 +1,26 @@
-package com.wavesplatform.it.sync.activation
+package com.gicsports.it.sync.activation
 
 import scala.concurrent.duration.*
 
 import com.typesafe.config.Config
-import com.wavesplatform.api.http.ApiError.StateCheckFailed
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.it.{NodeConfigs, NTPTime}
-import com.wavesplatform.it.NodeConfigs.Default
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.it.api.TransactionStatus
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.it.sync.transactions.OverflowBlock
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.{TxExchangePrice, TxVersion}
-import com.wavesplatform.transaction.assets.exchange.{AssetPair, Order}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.api.http.ApiError.StateCheckFailed
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.it.{NodeConfigs, NTPTime}
+import com.gicsports.it.NodeConfigs.Default
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.it.api.TransactionStatus
+import com.gicsports.it.sync.*
+import com.gicsports.it.sync.transactions.OverflowBlock
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.{TxExchangePrice, TxVersion}
+import com.gicsports.transaction.assets.exchange.{AssetPair, Order}
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import play.api.libs.json.JsObject
 
 class AcceptFailedScriptActivationSuite extends BaseTransactionSuite with NTPTime with OverflowBlock {
@@ -288,7 +288,7 @@ class AcceptFailedScriptActivationSuite extends BaseTransactionSuite with NTPTim
 
     sender.balance(otherCaller).balance shouldBe 0L
 
-    val assetPair = AssetPair.createAssetPair("CARDIUM", tradeAsset)
+    val assetPair = AssetPair.createAssetPair("GIC", tradeAsset)
 
     val ts = ntpTime.getTimestamp()
     val buyOrder = Order
@@ -362,7 +362,7 @@ class AcceptFailedScriptActivationSuite extends BaseTransactionSuite with NTPTim
       100.millis
     )
 
-    val assetPair = AssetPair.createAssetPair("CARDIUM", tradeAsset).get
+    val assetPair = AssetPair.createAssetPair("GIC", tradeAsset).get
 
     def orders: (Order, Order) = {
       val ts = ntpTime.getTimestamp()
@@ -492,7 +492,7 @@ object AcceptFailedScriptActivationSuite {
           (BlockchainFeatures.BlockV5.id, if (activate) 0 else 9999)
         )
       )
-      .overrideBase(_.raw(s"CARDIUM.blockchain.custom.functionality.min-asset-info-update-interval = $UpdateInterval"))
-      .overrideBase(_.raw(s"CARDIUM.miner.max-transactions-in-micro-block = $MaxTxsInMicroBlock"))
+      .overrideBase(_.raw(s"GIC.blockchain.custom.functionality.min-asset-info-update-interval = $UpdateInterval"))
+      .overrideBase(_.raw(s"GIC.miner.max-transactions-in-micro-block = $MaxTxsInMicroBlock"))
       .buildNonConflicting()
 }

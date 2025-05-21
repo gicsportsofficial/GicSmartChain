@@ -1,25 +1,25 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import cats.kernel.Monoid
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{Address, AddressOrAlias, AddressScheme, Alias}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.{Terms, Types}
-import com.wavesplatform.lang.v1.evaluator.{IncompleteResult, ScriptResult, ScriptResultV3, ScriptResultV4}
-import com.wavesplatform.lang.v1.serialization.SerdeV1
-import com.wavesplatform.lang.v1.traits.domain.*
-import com.wavesplatform.protobuf.transaction.InvokeScriptResult.Call.Argument
-import com.wavesplatform.protobuf.transaction.InvokeScriptResult.Call.Argument.Value
-import com.wavesplatform.protobuf.transaction.{PBAmounts, PBRecipients, PBTransactions, InvokeScriptResult as PBInvokeScriptResult}
-import com.wavesplatform.protobuf.utils.PBUtils
-import com.wavesplatform.protobuf.{Amount, *}
-import com.wavesplatform.state.InvokeScriptResult as R
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.utils.*
+import com.gicsports.account.{Address, AddressOrAlias, AddressScheme, Alias}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.*
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.{Terms, Types}
+import com.gicsports.lang.v1.evaluator.{IncompleteResult, ScriptResult, ScriptResultV3, ScriptResultV4}
+import com.gicsports.lang.v1.serialization.SerdeV1
+import com.gicsports.lang.v1.traits.domain.*
+import com.gicsports.protobuf.transaction.InvokeScriptResult.Call.Argument
+import com.gicsports.protobuf.transaction.InvokeScriptResult.Call.Argument.Value
+import com.gicsports.protobuf.transaction.{PBAmounts, PBRecipients, PBTransactions, InvokeScriptResult as PBInvokeScriptResult}
+import com.gicsports.protobuf.utils.PBUtils
+import com.gicsports.protobuf.{Amount, *}
+import com.gicsports.state.InvokeScriptResult as R
+import com.gicsports.transaction.Asset
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.utils.*
 import play.api.libs.json.*
 
 final case class InvokeScriptResult(
@@ -37,12 +37,12 @@ final case class InvokeScriptResult(
 
 //noinspection TypeAnnotation
 object InvokeScriptResult {
-  type LeaseCancel = com.wavesplatform.lang.v1.traits.domain.LeaseCancel
-  type SponsorFee  = com.wavesplatform.lang.v1.traits.domain.SponsorFee
-  type Issue       = com.wavesplatform.lang.v1.traits.domain.Issue
-  type Reissue     = com.wavesplatform.lang.v1.traits.domain.Reissue
-  type Burn        = com.wavesplatform.lang.v1.traits.domain.Burn
-  type DataEntry   = com.wavesplatform.state.DataEntry[_]
+  type LeaseCancel = com.gicsports.lang.v1.traits.domain.LeaseCancel
+  type SponsorFee  = com.gicsports.lang.v1.traits.domain.SponsorFee
+  type Issue       = com.gicsports.lang.v1.traits.domain.Issue
+  type Reissue     = com.gicsports.lang.v1.traits.domain.Reissue
+  type Burn        = com.gicsports.lang.v1.traits.domain.Burn
+  type DataEntry   = com.gicsports.state.DataEntry[_]
 
   val empty = InvokeScriptResult()
 
@@ -169,7 +169,7 @@ object InvokeScriptResult {
   }
 
   def fromLangResult(invokeId: ByteStr, result: ScriptResult): InvokeScriptResult = {
-    import com.wavesplatform.lang.v1.traits.domain as lang
+    import com.gicsports.lang.v1.traits.domain as lang
 
     def langAddressToAddress(a: lang.Recipient.Address): Address =
       Address.fromBytes(a.bytes.arr).explicitGet()
@@ -213,7 +213,7 @@ object InvokeScriptResult {
     }
   }
 
-  import com.wavesplatform.protobuf.transaction.InvokeScriptResult as PBISR
+  import com.gicsports.protobuf.transaction.InvokeScriptResult as PBISR
 
   def rideExprToPB(arg: Terms.EXPR): PBISR.Call.Argument.Value = {
     import PBISR.Call.Argument.Value
@@ -276,7 +276,7 @@ object InvokeScriptResult {
     PBInvokeScriptResult.ErrorMessage(em.code, em.text)
 
   private def toVanillaCall(i: PBInvokeScriptResult.Call): Call = {
-    import com.wavesplatform.lang.v1.compiler.Terms
+    import com.gicsports.lang.v1.compiler.Terms
 
     def toVanillaTerm(v: Argument.Value): Terms.EVALUATED =
       v match {

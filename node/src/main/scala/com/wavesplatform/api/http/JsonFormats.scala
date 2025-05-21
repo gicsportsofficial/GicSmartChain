@@ -1,9 +1,9 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.lang.contract.meta.FunctionSignatures
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.transaction.smart.script.trace.TraceStep
+import com.gicsports.account.Address
+import com.gicsports.lang.contract.meta.FunctionSignatures
+import com.gicsports.transaction.Transaction
+import com.gicsports.transaction.smart.script.trace.TraceStep
 import play.api.libs.json.Json.JsValueWrapper
 import play.api.libs.json.*
 

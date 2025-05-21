@@ -1,7 +1,7 @@
-package com.wavesplatform.settings
+package com.gicsports.settings
 
 import com.typesafe.config.Config
-import com.wavesplatform.common.state.ByteStr
+import com.gicsports.common.state.ByteStr
 import net.ceedubs.ficus.Ficus.*
 import net.ceedubs.ficus.readers.ArbitraryTypeReader.*
 import net.ceedubs.ficus.readers.ValueReader
@@ -138,7 +138,7 @@ object FunctionalitySettings {
     ethInvokePaymentsCheckHeight = 1311110
   )
 
-  val configPath = "CARDIUM.blockchain.custom.functionality"
+  val configPath = "GIC.blockchain.custom.functionality"
 }
 
 case class GenesisTransactionSettings(recipient: String, amount: Long)
@@ -218,7 +218,7 @@ object BlockchainSettings {
     (cfg: Config, path: String) => fromConfig(cfg.getConfig(path))
 
   // @deprecated("Use config.as[BlockchainSettings]", "0.17.0")
-  def fromRootConfig(config: Config): BlockchainSettings = config.as[BlockchainSettings]("CARDIUM.blockchain")
+  def fromRootConfig(config: Config): BlockchainSettings = config.as[BlockchainSettings]("GIC.blockchain")
 
   private[this] def fromConfig(config: Config): BlockchainSettings = {
     val blockchainType = config.as[String]("type").toUpperCase

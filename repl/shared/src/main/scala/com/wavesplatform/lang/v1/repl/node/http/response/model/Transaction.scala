@@ -1,7 +1,7 @@
-package com.wavesplatform.lang.v1.repl.node.http.response.model
+package com.gicsports.lang.v1.repl.node.http.response.model
 
-import com.wavesplatform.lang.v1.traits.domain.Recipient
-import com.wavesplatform.lang.v1.traits.domain.Recipient.{Address, Alias}
+import com.gicsports.lang.v1.traits.domain.Recipient
+import com.gicsports.lang.v1.traits.domain.Recipient.{Address, Alias}
 import io.circe.{Decoder, HCursor}
 
 private[node] case class TransferTransaction(

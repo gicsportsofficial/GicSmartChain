@@ -1,8 +1,8 @@
-package com.wavesplatform.it.sync.debug
+package com.gicsports.it.sync.debug
 
 import com.typesafe.config.Config
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.{BaseFunSuite, NodeConfigs}
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.{BaseFunSuite, NodeConfigs}
 
 class DebugConfigInfo extends BaseFunSuite {
 

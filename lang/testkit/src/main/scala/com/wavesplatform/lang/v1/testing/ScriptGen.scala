@@ -1,12 +1,12 @@
-package com.wavesplatform.lang.v1.testing
+package com.gicsports.lang.v1.testing
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.lang.v1.parser.BinaryOperation
-import com.wavesplatform.lang.v1.parser.BinaryOperation._
-import com.wavesplatform.lang.v1.parser.Expressions.Pos.AnyPos
-import com.wavesplatform.lang.v1.parser.Expressions._
-import com.wavesplatform.lang.v1.parser.Parser.keywords
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.Base58
+import com.gicsports.lang.v1.parser.BinaryOperation
+import com.gicsports.lang.v1.parser.BinaryOperation._
+import com.gicsports.lang.v1.parser.Expressions.Pos.AnyPos
+import com.gicsports.lang.v1.parser.Expressions._
+import com.gicsports.lang.v1.parser.Parser.keywords
 import org.scalacheck._
 
 import scala.reflect.ClassTag

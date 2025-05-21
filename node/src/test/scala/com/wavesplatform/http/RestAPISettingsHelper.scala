@@ -1,10 +1,10 @@
-package com.wavesplatform.http
+package com.gicsports.http
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.api.http.`X-Api-Key`
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.crypto
-import com.wavesplatform.settings._
+import com.gicsports.api.http.`X-Api-Key`
+import com.gicsports.common.utils.Base58
+import com.gicsports.crypto
+import com.gicsports.settings._
 import net.ceedubs.ficus.Ficus._
 import net.ceedubs.ficus.readers.ArbitraryTypeReader._
 
@@ -22,7 +22,7 @@ trait RestAPISettingsHelper {
     val keyHash = Base58.encode(crypto.secureHash(apiKey.getBytes("UTF-8")))
     ConfigFactory
       .parseString(
-        s"""CARDIUM.rest-api {
+        s"""GIC.rest-api {
            |  api-key-hash = $keyHash
            |  transactions-by-address-limit = $MaxTransactionsPerRequest
            |  distribution-address-limit = $MaxAddressesPerRequest
@@ -32,6 +32,6 @@ trait RestAPISettingsHelper {
          """.stripMargin
       )
       .withFallback(ConfigFactory.load())
-      .as[RestAPISettings]("CARDIUM.rest-api")
+      .as[RestAPISettings]("GIC.rest-api")
   }
 }

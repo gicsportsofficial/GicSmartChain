@@ -1,15 +1,15 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import java.nio.charset.StandardCharsets
 
 import com.google.common.primitives.Longs
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.state.StateHash.SectionId
-import com.wavesplatform.state.StateHashBuilder.Result
-import com.wavesplatform.transaction.Asset.IssuedAsset
+import com.gicsports.account.Address
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
+import com.gicsports.lang.script.Script
+import com.gicsports.state.StateHash.SectionId
+import com.gicsports.state.StateHashBuilder.Result
+import com.gicsports.transaction.Asset.IssuedAsset
 import org.bouncycastle.crypto.digests.Blake2bDigest
 
 import scala.collection.mutable

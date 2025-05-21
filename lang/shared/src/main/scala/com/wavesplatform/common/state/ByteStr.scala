@@ -1,9 +1,9 @@
-package com.wavesplatform.common.state
+package com.gicsports.common.state
 
 import scala.util.Try
 
-import com.wavesplatform.common._
-import com.wavesplatform.common.utils.{Base58, Base64}
+import com.gicsports.common._
+import com.gicsports.common.utils.{Base58, Base64}
 
 case class ByteStr(arr: Array[Byte]) {
   private[this] lazy val base58: String = Base58.encode(arr)

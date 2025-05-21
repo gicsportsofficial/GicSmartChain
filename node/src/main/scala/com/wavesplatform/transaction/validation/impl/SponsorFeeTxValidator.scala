@@ -1,9 +1,9 @@
-package com.wavesplatform.transaction.validation.impl
+package com.gicsports.transaction.validation.impl
 
 import cats.syntax.validated._
-import com.wavesplatform.transaction.TxValidationError.NegativeMinFee
-import com.wavesplatform.transaction.assets.SponsorFeeTransaction
-import com.wavesplatform.transaction.validation.{TxValidator, ValidatedV}
+import com.gicsports.transaction.TxValidationError.NegativeMinFee
+import com.gicsports.transaction.assets.SponsorFeeTransaction
+import com.gicsports.transaction.validation.{TxValidator, ValidatedV}
 
 object SponsorFeeTxValidator extends TxValidator[SponsorFeeTransaction] {
   override def validate(tx: SponsorFeeTransaction): ValidatedV[SponsorFeeTransaction] = tx.validNel

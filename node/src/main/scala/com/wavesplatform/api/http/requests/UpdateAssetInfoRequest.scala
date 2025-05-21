@@ -1,12 +1,12 @@
-package com.wavesplatform.api.http.requests
+package com.gicsports.api.http.requests
 
 import cats.instances.option._
 import cats.syntax.traverse._
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.UpdateAssetInfoTransaction
-import com.wavesplatform.transaction.{AssetIdStringLength, Proofs, TxTimestamp, TxVersion}
+import com.gicsports.account.PublicKey
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.UpdateAssetInfoTransaction
+import com.gicsports.transaction.{AssetIdStringLength, Proofs, TxTimestamp, TxVersion}
 import play.api.libs.json.Json
 
 case class UpdateAssetInfoRequest(

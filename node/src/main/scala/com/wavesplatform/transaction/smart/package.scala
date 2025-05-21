@@ -1,13 +1,13 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import cats.syntax.either._
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.{Account, Expression, Asset => AssetType, DApp => DAppType}
-import com.wavesplatform.lang.v1.traits.Environment.{InputEntity, Tthis}
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.transaction.smart.script.ScriptRunner.TxOrd
-import com.wavesplatform.transaction.smart.{DApp => DAppTarget}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.{Account, Expression, Asset => AssetType, DApp => DAppType}
+import com.gicsports.lang.v1.traits.Environment.{InputEntity, Tthis}
+import com.gicsports.state.Blockchain
+import com.gicsports.transaction.smart.script.ScriptRunner.TxOrd
+import com.gicsports.transaction.smart.{DApp => DAppTarget}
 import shapeless._
 
 package object smart {

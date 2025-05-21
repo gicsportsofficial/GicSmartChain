@@ -1,13 +1,13 @@
-package com.wavesplatform.network.peer
+package com.gicsports.network.peer
 
 import java.io.File
 import java.net.InetSocketAddress
 import java.nio.file.Files
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.network.{PeerDatabase, PeerDatabaseImpl}
-import com.wavesplatform.settings.NetworkSettings
-import com.wavesplatform.test.FreeSpec
+import com.gicsports.network.{PeerDatabase, PeerDatabaseImpl}
+import com.gicsports.settings.NetworkSettings
+import com.gicsports.test.FreeSpec
 import net.ceedubs.ficus.Ficus._
 
 class PeerDatabaseImplSpecification extends FreeSpec {
@@ -17,27 +17,27 @@ class PeerDatabaseImplSpecification extends FreeSpec {
   val address1 = new InetSocketAddress(host1, 1)
   val address2 = new InetSocketAddress(host2, 2)
 
-  private val config1   = ConfigFactory.parseString("""CARDIUM.network {
+  private val config1   = ConfigFactory.parseString("""GIC.network {
       |  file = null
       |  known-peers = []
       |  peers-data-residence-time: 2s
       |}""".stripMargin).withFallback(ConfigFactory.load()).resolve()
-  private val settings1 = config1.as[NetworkSettings]("CARDIUM.network")
+  private val settings1 = config1.as[NetworkSettings]("GIC.network")
 
-  private val config2   = ConfigFactory.parseString("""CARDIUM.network {
+  private val config2   = ConfigFactory.parseString("""GIC.network {
       |  file = null
       |  known-peers = []
       |  peers-data-residence-time = 10s
       |}""".stripMargin).withFallback(ConfigFactory.load()).resolve()
-  private val settings2 = config2.as[NetworkSettings]("CARDIUM.network")
+  private val settings2 = config2.as[NetworkSettings]("GIC.network")
 
-  private val config3   = ConfigFactory.parseString(s"""CARDIUM.network {
+  private val config3   = ConfigFactory.parseString(s"""GIC.network {
                                                       |  file = null
                                                       |  known-peers = ["$host1:1"]
                                                       |  peers-data-residence-time = 2s
                                                       |  enable-peers-exchange = no
                                                       |}""".stripMargin).withFallback(ConfigFactory.load()).resolve()
-  private val settings3 = config3.as[NetworkSettings]("CARDIUM.network")
+  private val settings3 = config3.as[NetworkSettings]("GIC.network")
 
   private def withDatabase(settings: NetworkSettings)(f: PeerDatabase => Unit): Unit = {
     val pdb = new PeerDatabaseImpl(settings)
@@ -130,38 +130,38 @@ class PeerDatabaseImplSpecification extends FreeSpec {
 
     "if blacklisting is disabled" - {
       "should clear blacklist at start" in {
-        val databaseFile = Files.createTempFile("CARDIUM-tests", "PeerDatabaseImplSpecification-blacklisting-clear").toAbsolutePath.toString
+        val databaseFile = Files.createTempFile("GIC-tests", "PeerDatabaseImplSpecification-blacklisting-clear").toAbsolutePath.toString
         val path         = if (File.separatorChar == '\\') databaseFile.replace('\\', '/') else databaseFile
-        val prevConfig   = ConfigFactory.parseString(s"""CARDIUM.network {
+        val prevConfig   = ConfigFactory.parseString(s"""GIC.network {
              |  file = "$path"
              |  known-peers = []
              |  peers-data-residence-time = 100s
              |}""".stripMargin).withFallback(ConfigFactory.load()).resolve()
-        val prevSettings = prevConfig.as[NetworkSettings]("CARDIUM.network")
+        val prevSettings = prevConfig.as[NetworkSettings]("GIC.network")
         val prevDatabase = new PeerDatabaseImpl(prevSettings)
         prevDatabase.blacklist(address1.getAddress, "I don't like it")
         prevDatabase.close()
 
-        val config   = ConfigFactory.parseString(s"""CARDIUM.network {
+        val config   = ConfigFactory.parseString(s"""GIC.network {
              |  file = "$path"
              |  known-peers = []
              |  peers-data-residence-time = 100s
              |  enable-blacklisting = no
              |}""".stripMargin).withFallback(ConfigFactory.load()).resolve()
-        val settings = config.as[NetworkSettings]("CARDIUM.network")
+        val settings = config.as[NetworkSettings]("GIC.network")
         val database = new PeerDatabaseImpl(settings)
 
         database.blacklistedHosts shouldBe empty
       }
 
       "should not add nodes to the blacklist" in {
-        val config   = ConfigFactory.parseString(s"""CARDIUM.network {
+        val config   = ConfigFactory.parseString(s"""GIC.network {
              |  file = null
              |  known-peers = []
              |  peers-data-residence-time = 100s
              |  enable-blacklisting = no
              |}""".stripMargin).withFallback(ConfigFactory.load()).resolve()
-        val settings = config.as[NetworkSettings]("CARDIUM.network")
+        val settings = config.as[NetworkSettings]("GIC.network")
         val database = new PeerDatabaseImpl(settings)
         database.blacklist(address1.getAddress, "I don't like it")
 

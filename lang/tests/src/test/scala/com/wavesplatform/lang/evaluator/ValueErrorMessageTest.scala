@@ -1,6 +1,6 @@
-package com.wavesplatform.lang.evaluator
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V4, V5}
-import com.wavesplatform.test.produce
+package com.gicsports.lang.evaluator
+import com.gicsports.lang.directives.values.{StdLibVersion, V4, V5}
+import com.gicsports.test.produce
 
 class ValueErrorMessageTest extends EvaluatorSpec {
   implicit val startVersion: StdLibVersion = V4

@@ -1,10 +1,10 @@
-package com.wavesplatform.consensus
+package com.gicsports.consensus
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.block.Block
-import com.wavesplatform.block.Block.BlockId
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.state.Blockchain
+import com.gicsports.account.Address
+import com.gicsports.block.Block
+import com.gicsports.block.Block.BlockId
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.state.Blockchain
 
 object GeneratingBalanceProvider {
   private val MinimalEffectiveBalanceForGenerator1: Long = 1000000000000L

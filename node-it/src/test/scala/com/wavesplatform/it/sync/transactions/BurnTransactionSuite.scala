@@ -1,23 +1,23 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
 import cats.syntax.option._
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils._
-import com.wavesplatform.it.api.BurnTransactionInfo
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync.{issueAmount, issueFee, _}
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.assets.BurnTransaction
+import com.gicsports.account.AddressScheme
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils._
+import com.gicsports.it.api.BurnTransactionInfo
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync.{issueAmount, issueFee, _}
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.assets.BurnTransaction
 import play.api.libs.json.Json
 
 class BurnTransactionSuite extends BaseTransactionSuite {
 
   private val decimals: Byte = 2
 
-  test("burning assets changes issuer's asset balance; issuer's CARDIUM balance is decreased by fee") {
+  test("burning assets changes issuer's asset balance; issuer's GIC balance is decreased by fee") {
     for (v <- burnTxSupportedVersions) {
       val (balance, effectiveBalance) = miner.accountBalances(firstAddress)
       val issuedAssetId =

@@ -1,4 +1,4 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 trait SigProofsSwitch extends ProvenTransaction { self: Transaction with VersionedTransaction =>
   def usesLegacySignature: Boolean =

@@ -1,24 +1,24 @@
-package com.wavesplatform.api.grpc.test
+package com.gicsports.api.grpc.test
 
 import scala.concurrent.{Await, Future}
 import scala.concurrent.duration.Duration
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.test.{FlatSpec, TestTime}
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.BlockchainStubHelpers
-import com.wavesplatform.api.common.{CommonTransactionsApi, TransactionMeta}
-import com.wavesplatform.api.grpc.TransactionsApiGrpcImpl
-import com.wavesplatform.block.Block
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.protobuf.transaction.PBTransactions
-import com.wavesplatform.state.{Blockchain, Height}
-import com.wavesplatform.transaction.{Asset, CreateAliasTransaction, Transaction, TxHelpers, TxVersion}
-import com.wavesplatform.transaction.smart.script.trace.TracedResult
-import com.wavesplatform.transaction.TransactionType.TransactionType
-import com.wavesplatform.transaction.utils.EthTxGenerator
-import com.wavesplatform.utils.{DiffMatchers, EthHelpers}
+import com.gicsports.account.Address
+import com.gicsports.common.state.ByteStr
+import com.gicsports.test.{FlatSpec, TestTime}
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.BlockchainStubHelpers
+import com.gicsports.api.common.{CommonTransactionsApi, TransactionMeta}
+import com.gicsports.api.grpc.TransactionsApiGrpcImpl
+import com.gicsports.block.Block
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.ValidationError
+import com.gicsports.protobuf.transaction.PBTransactions
+import com.gicsports.state.{Blockchain, Height}
+import com.gicsports.transaction.{Asset, CreateAliasTransaction, Transaction, TxHelpers, TxVersion}
+import com.gicsports.transaction.smart.script.trace.TracedResult
+import com.gicsports.transaction.TransactionType.TransactionType
+import com.gicsports.transaction.utils.EthTxGenerator
+import com.gicsports.utils.{DiffMatchers, EthHelpers}
 import io.grpc.StatusException
 import monix.execution.Scheduler
 import monix.reactive.Observable
@@ -36,7 +36,7 @@ class GRPCBroadcastSpec
   val FakeTime: TestTime = TestTime(100)
 
   "GRPC broadcast" should "accept Exchange with ETH orders" in {
-    import com.wavesplatform.transaction.assets.exchange.EthOrderSpec.{ethBuyOrder, ethSellOrder}
+    import com.gicsports.transaction.assets.exchange.EthOrderSpec.{ethBuyOrder, ethSellOrder}
 
     val blockchain = createBlockchainStub { blockchain =>
       val sh = StubHelpers(blockchain)

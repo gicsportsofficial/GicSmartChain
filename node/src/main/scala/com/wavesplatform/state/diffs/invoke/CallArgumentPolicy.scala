@@ -1,7 +1,7 @@
-package com.wavesplatform.state.diffs.invoke
+package com.gicsports.state.diffs.invoke
 
-import com.wavesplatform.lang.v1.compiler.ContractCompiler
-import com.wavesplatform.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.ContractCompiler
+import com.gicsports.lang.v1.compiler.Terms.*
 
 trait CallArgumentPolicy {
   def check(e: EXPR): Boolean

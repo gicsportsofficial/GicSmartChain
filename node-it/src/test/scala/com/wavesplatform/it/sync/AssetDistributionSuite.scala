@@ -1,11 +1,11 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.it.Node
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.state.AssetDistributionPage
-import com.wavesplatform.transaction.transfer.MassTransferTransaction
+import com.gicsports.account.KeyPair
+import com.gicsports.it.Node
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.state.AssetDistributionPage
+import com.gicsports.transaction.transfer.MassTransferTransaction
 import org.scalatest.CancelAfterFailure
 
 import scala.concurrent.duration._

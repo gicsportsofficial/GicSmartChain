@@ -1,6 +1,6 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
-import com.wavesplatform.test.FreeSpec
+import com.gicsports.test.FreeSpec
 import io.netty.channel.embedded.EmbeddedChannel
 import org.scalamock.scalatest.MockFactory
 

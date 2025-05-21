@@ -1,12 +1,12 @@
-package com.wavesplatform.lang.v1
+package com.gicsports.lang.v1
 
 import java.util.concurrent.TimeUnit
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.v1.CalculateAssetLeaseIdBenchmark._
-import com.wavesplatform.lang.v1.EnvironmentFunctionsBenchmark.{randomAddress, randomBytes}
-import com.wavesplatform.lang.v1.traits.domain.Recipient.{Address, Alias}
-import com.wavesplatform.lang.v1.traits.domain.{Issue, Lease}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.v1.CalculateAssetLeaseIdBenchmark._
+import com.gicsports.lang.v1.EnvironmentFunctionsBenchmark.{randomAddress, randomBytes}
+import com.gicsports.lang.v1.traits.domain.Recipient.{Address, Alias}
+import com.gicsports.lang.v1.traits.domain.{Issue, Lease}
 import org.openjdk.jmh.annotations._
 import org.openjdk.jmh.infra.Blackhole
 

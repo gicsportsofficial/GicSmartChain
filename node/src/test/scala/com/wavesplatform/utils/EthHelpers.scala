@@ -1,11 +1,11 @@
-package com.wavesplatform.utils
+package com.gicsports.utils
 
 import java.math.BigInteger
-import com.wavesplatform.account.{Address, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.transaction.{EthereumTransaction, TxHelpers}
-import com.wavesplatform.transaction.assets.exchange.OrderAuthentication
-import com.wavesplatform.transaction.utils.EthTxGenerator
+import com.gicsports.account.{Address, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.transaction.{EthereumTransaction, TxHelpers}
+import com.gicsports.transaction.assets.exchange.OrderAuthentication
+import com.gicsports.transaction.utils.EthTxGenerator
 import org.web3j.crypto.{Bip32ECKeyPair, RawTransaction, SignedRawTransaction}
 import org.web3j.crypto.Sign.SignatureData
 
@@ -38,7 +38,7 @@ trait EthHelpers {
   }
 
   implicit class TxHelpersEthExt(helpers: TxHelpers.type) {
-    import com.wavesplatform.transaction.utils.EthConverters.*
+    import com.gicsports.transaction.utils.EthConverters.*
     def defaultEthSigner: Bip32ECKeyPair = helpers.defaultSigner.toEthKeyPair
     def defaultEthAddress: Address       = helpers.defaultSigner.toEthWavesAddress
   }

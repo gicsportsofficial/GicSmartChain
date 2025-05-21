@@ -1,16 +1,16 @@
-package com.wavesplatform.lang.doc
+package com.gicsports.lang.doc
 
 import cats.syntax.semigroup.*
-import com.wavesplatform.DocSource
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.Global
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.v1.CTX
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.WavesContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.test.*
+import com.gicsports.DocSource
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.Global
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.v1.CTX
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.WavesContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.test.*
 
 class VarsDocTest extends PropSpec {
   def buildFullContext(ds: DirectiveSet): CTX[Environment] = {

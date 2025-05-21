@@ -1,15 +1,15 @@
-package com.wavesplatform.transaction.serialization.impl
+package com.gicsports.transaction.serialization.impl
 
 import java.nio.ByteBuffer
 import java.nio.charset.StandardCharsets.UTF_8
 import com.google.common.primitives.{Bytes, Longs, Shorts}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.serialization._
-import com.wavesplatform.state.DataEntry.Type
-import com.wavesplatform.state.{BinaryDataEntry, BooleanDataEntry, DataEntry, IntegerDataEntry, StringDataEntry}
-import com.wavesplatform.transaction.{DataTransaction, TxPositiveAmount, TxVersion}
-import com.wavesplatform.utils.StringBytes
+import com.gicsports.common.state.ByteStr
+import com.gicsports.account.AddressScheme
+import com.gicsports.serialization._
+import com.gicsports.state.DataEntry.Type
+import com.gicsports.state.{BinaryDataEntry, BooleanDataEntry, DataEntry, IntegerDataEntry, StringDataEntry}
+import com.gicsports.transaction.{DataTransaction, TxPositiveAmount, TxVersion}
+import com.gicsports.utils.StringBytes
 import play.api.libs.json.{JsObject, Json}
 
 import scala.util.Try

@@ -1,19 +1,19 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import cats.Id
 import cats.syntax.either.*
-import com.wavesplatform.account
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.{CommonError, ExecutionError}
-import com.wavesplatform.lang.v1.compiler.Terms.{ARR, CONST_BOOLEAN, CONST_BYTESTR, CONST_LONG, CONST_STRING, CaseObj, EVALUATED}
-import com.wavesplatform.lang.v1.compiler.Types.{CASETYPEREF, UNIT}
-import com.wavesplatform.lang.v1.evaluator.Log
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.{Bindings, Types}
-import com.wavesplatform.lang.v1.evaluator.EvaluatorV2.LogKeys.*
-import com.wavesplatform.lang.v1.traits.domain.Recipient
-import com.wavesplatform.lang.v1.traits.domain.Recipient.Address
-import com.wavesplatform.state.{BinaryDataEntry, BooleanDataEntry, Diff, EmptyDataEntry, IntegerDataEntry, InvokeScriptResult, StringDataEntry}
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.account
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.{CommonError, ExecutionError}
+import com.gicsports.lang.v1.compiler.Terms.{ARR, CONST_BOOLEAN, CONST_BYTESTR, CONST_LONG, CONST_STRING, CaseObj, EVALUATED}
+import com.gicsports.lang.v1.compiler.Types.{CASETYPEREF, UNIT}
+import com.gicsports.lang.v1.evaluator.Log
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.{Bindings, Types}
+import com.gicsports.lang.v1.evaluator.EvaluatorV2.LogKeys.*
+import com.gicsports.lang.v1.traits.domain.Recipient
+import com.gicsports.lang.v1.traits.domain.Recipient.Address
+import com.gicsports.state.{BinaryDataEntry, BooleanDataEntry, Diff, EmptyDataEntry, IntegerDataEntry, InvokeScriptResult, StringDataEntry}
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
 
 object DiffToLogConverter {
 

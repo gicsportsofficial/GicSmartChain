@@ -1,17 +1,17 @@
-package com.wavesplatform.lang.doc
+package com.gicsports.lang.doc
 
-import com.wavesplatform.DocSource
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.API
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.directives.{DirectiveDictionary, DirectiveSet}
-import com.wavesplatform.lang.utils.*
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_STRING, FUNCTION_CALL}
-import com.wavesplatform.lang.v1.compiler.UtilityFunctionPrefix
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.lang.v1.evaluator.ctx.BaseFunction
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.test.PropSpec
+import com.gicsports.DocSource
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.API
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.directives.{DirectiveDictionary, DirectiveSet}
+import com.gicsports.lang.utils.*
+import com.gicsports.lang.v1.compiler.Terms.{CONST_STRING, FUNCTION_CALL}
+import com.gicsports.lang.v1.compiler.UtilityFunctionPrefix
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.lang.v1.evaluator.ctx.BaseFunction
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.test.PropSpec
 import org.scalatest.exceptions.TestFailedException
 
 class FunctionComplexityDocTest extends PropSpec {

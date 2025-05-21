@@ -1,9 +1,9 @@
-package com.wavesplatform.it.sync.smartcontract
+package com.gicsports.it.sync.smartcontract
 
-import com.wavesplatform.api.http.ApiError.ScriptCompilerError
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.api.{CompiledScript, DecompiledScript, EstimatedScript}
-import com.wavesplatform.it.transactions.BaseTransactionSuite
+import com.gicsports.api.http.ApiError.ScriptCompilerError
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.api.{CompiledScript, DecompiledScript, EstimatedScript}
+import com.gicsports.it.transactions.BaseTransactionSuite
 import org.scalatest.CancelAfterFailure
 
 class RideFunctionFamilySuite extends BaseTransactionSuite with CancelAfterFailure {

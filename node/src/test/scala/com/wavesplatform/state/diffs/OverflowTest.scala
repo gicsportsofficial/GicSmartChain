@@ -1,17 +1,17 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.TestValues
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxHelpers.issue
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.ParsedTransfer
-import com.wavesplatform.transaction.{TransactionType, TxHelpers, TxNonNegativeAmount}
+import com.gicsports.TestValues
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxHelpers.issue
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.transfer.MassTransferTransaction.ParsedTransfer
+import com.gicsports.transaction.{TransactionType, TxHelpers, TxNonNegativeAmount}
 
 class OverflowTest extends PropSpec with WithDomain {
   import DomainPresets.*
@@ -34,7 +34,7 @@ class OverflowTest extends PropSpec with WithDomain {
     numPairs(transferFee).foreach { case (recipientBalance, transferAmount) =>
       val balances = Seq(AddrWithBalance(sender.toAddress, Long.MaxValue), AddrWithBalance(recipient, recipientBalance))
       withDomain(RideV5, balances) { d =>
-        d.appendBlockE(TxHelpers.transfer(sender, recipient, transferAmount)) should produce("CARDIUM balance sum overflow")
+        d.appendBlockE(TxHelpers.transfer(sender, recipient, transferAmount)) should produce("GIC balance sum overflow")
       }
     }
   }
@@ -44,7 +44,7 @@ class OverflowTest extends PropSpec with WithDomain {
       val balances = Seq(AddrWithBalance(sender.toAddress, Long.MaxValue), AddrWithBalance(recipient, recipientBalance))
       withDomain(RideV5, balances) { d =>
         d.appendBlockE(TxHelpers.massTransfer(sender, Seq(ParsedTransfer(recipient, TxNonNegativeAmount.unsafeFrom(transferAmount))), fee = massTransferFee)) should produce(
-          "CARDIUM balance sum overflow"
+          "GIC balance sum overflow"
         )
       }
     }
@@ -78,7 +78,7 @@ class OverflowTest extends PropSpec with WithDomain {
       withDomain(RideV5, balances) { d =>
         d.appendBlock(TxHelpers.setScript(recipientKp, dApp))
         d.appendBlockE(TxHelpers.invoke(recipient, invoker = sender, payments = Seq(Payment(paymentAmount, Waves)))) should produce(
-          "CARDIUM balance sum overflow"
+          "GIC balance sum overflow"
         )
       }
     }
@@ -99,7 +99,7 @@ class OverflowTest extends PropSpec with WithDomain {
       val balances = Seq(AddrWithBalance(sender.toAddress, invokerBalance), AddrWithBalance(recipient, Long.MaxValue))
       withDomain(RideV5, balances) { d =>
         d.appendBlock(TxHelpers.setScript(recipientKp, dApp(transferAmount)))
-        d.appendBlockE(TxHelpers.invoke(recipient, invoker = sender)) should produce("CARDIUM balance sum overflow")
+        d.appendBlockE(TxHelpers.invoke(recipient, invoker = sender)) should produce("GIC balance sum overflow")
       }
     }
   }

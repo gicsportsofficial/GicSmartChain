@@ -1,40 +1,40 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
 import cats.Order as _
-import com.wavesplatform.account.{Address, AddressScheme, KeyPair, PrivateKey}
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.{BlockchainFeature, BlockchainFeatures}
-import com.wavesplatform.history.{Domain, defaultSigner}
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.FunctionHeader.Native
-import com.wavesplatform.lang.v1.compiler.Terms.FUNCTION_CALL
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.lang.v1.evaluator.FunctionIds.THROW
-import com.wavesplatform.mining.MiningConstraint
-import com.wavesplatform.settings.{Constants, FunctionalitySettings, TestFunctionalitySettings, WavesSettings}
-import com.wavesplatform.state.*
-import com.wavesplatform.state.diffs.ExchangeTransactionDiff.getOrderFeePortfolio
-import com.wavesplatform.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
-import com.wavesplatform.state.diffs.TransactionDiffer.TransactionValidationError
-import com.wavesplatform.test.*
-import com.wavesplatform.test.DomainPresets.*
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.{AccountBalanceError, GenericError}
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.assets.exchange.*
-import com.wavesplatform.transaction.assets.exchange.OrderPriceMode.{AssetDecimals, FixedDecimals, Default as DefaultPriceMode}
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.ParsedTransfer
-import com.wavesplatform.transaction.transfer.{MassTransferTransaction, TransferTransaction}
-import com.wavesplatform.transaction.utils.EthConverters.*
-import com.wavesplatform.utils.{EthEncoding, EthHelpers}
-import com.wavesplatform.{TestValues, TestWallet, crypto}
+import com.gicsports.account.{Address, AddressScheme, KeyPair, PrivateKey}
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.{BlockchainFeature, BlockchainFeatures}
+import com.gicsports.history.{Domain, defaultSigner}
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.FunctionHeader.Native
+import com.gicsports.lang.v1.compiler.Terms.FUNCTION_CALL
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.lang.v1.evaluator.FunctionIds.THROW
+import com.gicsports.mining.MiningConstraint
+import com.gicsports.settings.{Constants, FunctionalitySettings, TestFunctionalitySettings, WavesSettings}
+import com.gicsports.state.*
+import com.gicsports.state.diffs.ExchangeTransactionDiff.getOrderFeePortfolio
+import com.gicsports.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
+import com.gicsports.state.diffs.TransactionDiffer.TransactionValidationError
+import com.gicsports.test.*
+import com.gicsports.test.DomainPresets.*
+import com.gicsports.transaction.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.{AccountBalanceError, GenericError}
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.assets.exchange.*
+import com.gicsports.transaction.assets.exchange.OrderPriceMode.{AssetDecimals, FixedDecimals, Default as DefaultPriceMode}
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.transfer.MassTransferTransaction.ParsedTransfer
+import com.gicsports.transaction.transfer.{MassTransferTransaction, TransferTransaction}
+import com.gicsports.transaction.utils.EthConverters.*
+import com.gicsports.utils.{EthEncoding, EthHelpers}
+import com.gicsports.{TestValues, TestWallet, crypto}
 import org.scalatest.{EitherValues, Inside}
 import org.web3j.crypto.Bip32ECKeyPair
 
@@ -227,7 +227,7 @@ class ExchangeTransactionDiffTest extends PropSpec with Inside with WithDomain w
     }
   }
 
-  property("Preserves CARDIUM invariant, stores match info, rewards matcher") {
+  property("Preserves GIC invariant, stores match info, rewards matcher") {
 
     val preconditionsAndExchange: Seq[(Seq[GenesisTransaction], IssueTransaction, IssueTransaction, ExchangeTransaction)] = {
       val buyer   = TxHelpers.signer(1)
@@ -342,7 +342,7 @@ class ExchangeTransactionDiffTest extends PropSpec with Inside with WithDomain w
     }
   }
 
-  property("Preserves assets invariant (matcher's fee in one of the assets of the pair or in CARDIUM), stores match info, rewards matcher") {
+  property("Preserves assets invariant (matcher's fee in one of the assets of the pair or in GIC), stores match info, rewards matcher") {
 
     val preconditionsAndExchange: Seq[(Seq[GenesisTransaction], IssueTransaction, IssueTransaction, ExchangeTransaction)] = {
       val buyer   = TxHelpers.signer(1)

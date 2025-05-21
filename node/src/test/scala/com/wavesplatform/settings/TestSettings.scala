@@ -1,7 +1,7 @@
-package com.wavesplatform.settings
+package com.gicsports.settings
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.features.BlockchainFeatures
+import com.gicsports.features.BlockchainFeatures
 
 object TestSettings {
   val Default: WavesSettings = WavesSettings.fromRootConfig(ConfigFactory.load())

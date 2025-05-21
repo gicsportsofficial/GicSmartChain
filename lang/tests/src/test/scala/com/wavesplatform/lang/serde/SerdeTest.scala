@@ -1,17 +1,17 @@
-package com.wavesplatform.lang.serde
+package com.gicsports.lang.serde
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.Types.CASETYPEREF
-import com.wavesplatform.lang.v1.compiler.{ExpressionCompiler, Terms}
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext
-import com.wavesplatform.lang.v1.parser.Expressions
-import com.wavesplatform.lang.v1.serialization.{SerdeV1, SerdeV2}
-import com.wavesplatform.test.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.Types.CASETYPEREF
+import com.gicsports.lang.v1.compiler.{ExpressionCompiler, Terms}
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext
+import com.gicsports.lang.v1.parser.Expressions
+import com.gicsports.lang.v1.serialization.{SerdeV1, SerdeV2}
+import com.gicsports.test.*
 import org.scalacheck.{Arbitrary, Gen}
 
 import java.nio.charset.StandardCharsets

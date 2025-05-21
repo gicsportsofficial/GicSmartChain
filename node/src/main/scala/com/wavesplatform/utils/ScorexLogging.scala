@@ -1,4 +1,4 @@
-package com.wavesplatform.utils
+package com.gicsports.utils
 
 import monix.eval.Task
 import monix.execution.{CancelableFuture, Scheduler}

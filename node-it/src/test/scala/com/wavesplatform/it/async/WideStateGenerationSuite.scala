@@ -1,11 +1,11 @@
-package com.wavesplatform.it.async
+package com.gicsports.it.async
 
 import java.util.concurrent.TimeoutException
 
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.it._
-import com.wavesplatform.it.api.AsyncHttpApi._
-import com.wavesplatform.it.util._
+import com.gicsports.it._
+import com.gicsports.it.api.AsyncHttpApi._
+import com.gicsports.it.util._
 
 import scala.concurrent.Future.traverse
 import scala.concurrent.duration._
@@ -21,7 +21,7 @@ class WideStateGenerationSuite extends BaseFreeSpec with WaitForHeight2 with Tra
         |  request-timeout = 60s
         |}
         |
-        |CARDIUM {
+        |GIC {
         |  network.traffic-logger {
         |    ignore-tx-messages = [1, 2, 23, 25]
         |    ignore-rx-messages = [1, 2, 25]

@@ -1,18 +1,18 @@
-package com.wavesplatform.block
+package com.gicsports.block
 
-import com.wavesplatform.account.{Address, KeyPair, PublicKey}
-import com.wavesplatform.block.serialization.BlockSerializer
-import com.wavesplatform.common.merkle.Merkle.{hash, mkProofs, verify}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
-import com.wavesplatform.crypto.*
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.protobuf.block.PBBlocks
-import com.wavesplatform.protobuf.transaction.PBTransactions
-import com.wavesplatform.settings.GenesisSettings
-import com.wavesplatform.state.*
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.TxValidationError.GenericError
+import com.gicsports.account.{Address, KeyPair, PublicKey}
+import com.gicsports.block.serialization.BlockSerializer
+import com.gicsports.common.merkle.Merkle.{hash, mkProofs, verify}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
+import com.gicsports.crypto.*
+import com.gicsports.lang.ValidationError
+import com.gicsports.protobuf.block.PBBlocks
+import com.gicsports.protobuf.transaction.PBTransactions
+import com.gicsports.settings.GenesisSettings
+import com.gicsports.state.*
+import com.gicsports.transaction.*
+import com.gicsports.transaction.TxValidationError.GenericError
 import monix.eval.Coeval
 import play.api.libs.json.*
 

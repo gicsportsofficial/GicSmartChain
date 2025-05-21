@@ -1,30 +1,30 @@
-package com.wavesplatform.api.http.utils
+package com.gicsports.api.http.utils
 import akka.http.scaladsl.server.{PathMatcher1, Route}
 import cats.syntax.either.*
-import com.wavesplatform.account.Address
-import com.wavesplatform.api.http.*
-import com.wavesplatform.api.http.ApiError.{ConflictingRequestStructure, CustomValidationError, ScriptCompilerError, TooBigArrayAllocation, WrongJson}
-import com.wavesplatform.api.http.requests.{ScriptWithImportsRequest, byteStrFormat}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.crypto
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.BlockchainFeatures.{RideV6, SynchronousCalls}
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.script.Script.ComplexityInfo
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.estimator.ScriptEstimator
-import com.wavesplatform.lang.v1.serialization.SerdeV1
-import com.wavesplatform.lang.{API, CompileResult}
-import com.wavesplatform.serialization.ScriptValuesJson
-import com.wavesplatform.settings.RestAPISettings
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.state.diffs.FeeValidation
-import com.wavesplatform.transaction.TxValidationError.{GenericError, InvokeRejectError}
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.smart.script.trace.TraceStep
-import com.wavesplatform.utils.Time
+import com.gicsports.account.Address
+import com.gicsports.api.http.*
+import com.gicsports.api.http.ApiError.{ConflictingRequestStructure, CustomValidationError, ScriptCompilerError, TooBigArrayAllocation, WrongJson}
+import com.gicsports.api.http.requests.{ScriptWithImportsRequest, byteStrFormat}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.*
+import com.gicsports.crypto
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.BlockchainFeatures.{RideV6, SynchronousCalls}
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.script.Script.ComplexityInfo
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.estimator.ScriptEstimator
+import com.gicsports.lang.v1.serialization.SerdeV1
+import com.gicsports.lang.{API, CompileResult}
+import com.gicsports.serialization.ScriptValuesJson
+import com.gicsports.settings.RestAPISettings
+import com.gicsports.state.Blockchain
+import com.gicsports.state.diffs.FeeValidation
+import com.gicsports.transaction.TxValidationError.{GenericError, InvokeRejectError}
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.smart.script.trace.TraceStep
+import com.gicsports.utils.Time
 import monix.execution.Scheduler
 import play.api.libs.json.*
 

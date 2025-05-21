@@ -1,25 +1,25 @@
-package com.wavesplatform.state.diffs.ci
+package com.gicsports.state.diffs.ci
 
-import com.wavesplatform.account.{Address, KeyPair}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.values.V4
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.diffs.*
-import com.wavesplatform.state.diffs.FeeValidation.FeeConstants
-import com.wavesplatform.state.diffs.TransactionDiffer.TransactionValidationError
-import com.wavesplatform.state.{EmptyDataEntry, SponsorshipValue}
-import com.wavesplatform.test.*
-import com.wavesplatform.test.DomainPresets.{RideV4, RideV6}
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.smart.script.trace.{AssetVerifierTrace, InvokeScriptTrace}
-import com.wavesplatform.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.{GenesisTransaction, TransactionType, TxHelpers}
+import com.gicsports.account.{Address, KeyPair}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.values.V4
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.diffs.*
+import com.gicsports.state.diffs.FeeValidation.FeeConstants
+import com.gicsports.state.diffs.TransactionDiffer.TransactionValidationError
+import com.gicsports.state.{EmptyDataEntry, SponsorshipValue}
+import com.gicsports.test.*
+import com.gicsports.test.DomainPresets.{RideV4, RideV6}
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.smart.script.trace.{AssetVerifierTrace, InvokeScriptTrace}
+import com.gicsports.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.transaction.{GenesisTransaction, TransactionType, TxHelpers}
 import org.scalatest.EitherValues
 
 class CallableV4DiffTest extends PropSpec with WithDomain with EitherValues {
@@ -85,7 +85,7 @@ class CallableV4DiffTest extends PropSpec with WithDomain with EitherValues {
       Seq(TestBlock.create(genesis :+ setScript :+ issue)),
       TestBlock.create(Seq(invoke)),
       RideV4.blockchainSettings.functionalitySettings
-    )(_ should produceRejectOrFailedDiff(s" with 6 total scripts invoked does not exceed minimal value of $minimalFee CARDIUM"))
+    )(_ should produceRejectOrFailedDiff(s" with 6 total scripts invoked does not exceed minimal value of $minimalFee GIC"))
   }
 
   ignore("trace") {

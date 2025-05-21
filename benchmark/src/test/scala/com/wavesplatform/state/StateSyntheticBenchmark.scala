@@ -1,21 +1,21 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import java.util.concurrent.TimeUnit
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.utils._
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.settings.FunctionalitySettings
-import com.wavesplatform.state.StateSyntheticBenchmark._
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.transfer._
+import com.gicsports.account.KeyPair
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.directives.values._
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.utils._
+import com.gicsports.lang.v1.compiler.ExpressionCompiler
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.settings.FunctionalitySettings
+import com.gicsports.state.StateSyntheticBenchmark._
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.Transaction
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.transfer._
 import org.openjdk.jmh.annotations._
 import org.scalacheck.Gen
 
@@ -41,7 +41,7 @@ object StateSyntheticBenchmark {
   class St extends BaseState {
     protected override def txGenP(sender: KeyPair, ts: Long): Gen[Transaction] =
       for {
-        amount    <- Gen.choose(1, CARDIUM(1))
+        amount    <- Gen.choose(1, GIC(1))
         recipient <- accountGen
       } yield TransferTransaction.selfSigned(1.toByte, sender, recipient.toAddress, Waves, amount, Waves, 100000, ByteStr.empty, ts).explicitGet()
   }
@@ -56,7 +56,7 @@ object StateSyntheticBenchmark {
     protected override def txGenP(sender: KeyPair, ts: Long): Gen[Transaction] =
       for {
         recipient: KeyPair <- accountGen
-        amount             <- Gen.choose(1, CARDIUM(1))
+        amount             <- Gen.choose(1, GIC(1))
       } yield TransferTransaction
         .selfSigned(2.toByte, sender, recipient.toAddress, Waves, amount, Waves, 1000000, ByteStr.empty, ts)
         .explicitGet()

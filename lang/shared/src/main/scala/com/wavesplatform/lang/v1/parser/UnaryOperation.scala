@@ -1,6 +1,6 @@
-package com.wavesplatform.lang.v1.parser
+package com.gicsports.lang.v1.parser
 
-import com.wavesplatform.lang.v1.parser.Expressions.*
+import com.gicsports.lang.v1.parser.Expressions.*
 import fastparse.*
 
 sealed abstract class UnaryOperation {

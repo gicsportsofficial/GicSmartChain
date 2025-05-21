@@ -1,6 +1,6 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.protobuf.transaction.PBTransactions
+import com.gicsports.protobuf.transaction.PBTransactions
 
 trait PBSince { self: Transaction with VersionedTransaction =>
   def protobufVersion: TxVersion

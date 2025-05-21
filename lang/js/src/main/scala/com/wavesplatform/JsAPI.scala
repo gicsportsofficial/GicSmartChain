@@ -1,12 +1,12 @@
-package com.wavesplatform
+package com.gicsports
 
 import JsApiUtils.*
-import com.wavesplatform.DocSource
-import com.wavesplatform.lang.*
-import com.wavesplatform.lang.directives.Directive.extractDirectives
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.directives.{DirectiveDictionary, DirectiveParser, DirectiveSet}
-import com.wavesplatform.lang.v1.ContractLimits
+import com.gicsports.DocSource
+import com.gicsports.lang.*
+import com.gicsports.lang.directives.Directive.extractDirectives
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.directives.{DirectiveDictionary, DirectiveParser, DirectiveSet}
+import com.gicsports.lang.v1.ContractLimits
 
 import scala.scalajs.js
 import scala.scalajs.js.Dynamic.literal as jObj

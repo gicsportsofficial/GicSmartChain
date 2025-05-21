@@ -1,23 +1,23 @@
-package com.wavesplatform.state.diffs.ci
+package com.gicsports.state.diffs.ci
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.db.WithState
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.contract.DApp.{CallableAnnotation, CallableFunction}
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V3, V4}
-import com.wavesplatform.lang.script.{ContractScript, Script}
-import com.wavesplatform.lang.v1.FunctionHeader.{Native, User}
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.evaluator.FunctionIds
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.settings.TestFunctionalitySettings
-import com.wavesplatform.test.{PropSpec, produce}
-import com.wavesplatform.transaction.{GenesisTransaction, TxHelpers, TxVersion}
-import com.wavesplatform.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.account.Address
+import com.gicsports.common.utils.*
+import com.gicsports.db.WithState
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.contract.DApp.{CallableAnnotation, CallableFunction}
+import com.gicsports.lang.directives.values.{StdLibVersion, V3, V4}
+import com.gicsports.lang.script.{ContractScript, Script}
+import com.gicsports.lang.v1.FunctionHeader.{Native, User}
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.evaluator.FunctionIds
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.settings.TestFunctionalitySettings
+import com.gicsports.test.{PropSpec, produce}
+import com.gicsports.transaction.{GenesisTransaction, TxHelpers, TxVersion}
+import com.gicsports.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
 import org.scalatest.Inside
 
 class ListParamInvokeTest extends PropSpec with WithState with Inside {

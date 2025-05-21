@@ -1,12 +1,12 @@
-package com.wavesplatform.state.diffs.ci
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.v1.ExprScript.ExprScriptImpl
-import com.wavesplatform.lang.v1.compiler.{Terms, TestCompiler}
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TxHelpers.{defaultSigner, invoke, issue, secondSigner, setScript}
+package com.gicsports.state.diffs.ci
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.v1.ExprScript.ExprScriptImpl
+import com.gicsports.lang.v1.compiler.{Terms, TestCompiler}
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TxHelpers.{defaultSigner, invoke, issue, secondSigner, setScript}
 
 class InvokeSponsorFeeTest extends PropSpec with WithDomain {
   import DomainPresets.*

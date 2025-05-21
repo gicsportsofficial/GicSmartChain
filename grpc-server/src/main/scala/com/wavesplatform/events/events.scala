@@ -1,30 +1,30 @@
-package com.wavesplatform.events
+package com.gicsports.events
 
 import cats.Monoid
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{Address, AddressOrAlias, Alias, PublicKey}
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.events.StateUpdate.LeaseUpdate.LeaseStatus
-import com.wavesplatform.events.StateUpdate.{AssetStateUpdate, BalanceUpdate, DataEntryUpdate, LeaseUpdate, LeasingBalanceUpdate}
-import com.wavesplatform.events.protobuf.TransactionMetadata
-import com.wavesplatform.events.protobuf.TransactionMetadata.EthereumMetadata
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.protobuf.*
-import com.wavesplatform.protobuf.transaction.InvokeScriptResult.Call.Argument
-import com.wavesplatform.protobuf.transaction.{PBAmounts, PBTransactions, InvokeScriptResult as PBInvokeScriptResult}
-import com.wavesplatform.state.*
-import com.wavesplatform.state.DiffToStateApplier.PortfolioUpdates
-import com.wavesplatform.state.diffs.BlockDiffer.DetailedDiff
-import com.wavesplatform.state.diffs.invoke.InvokeScriptTransactionLike
-import com.wavesplatform.state.reader.CompositeBlockchain
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.exchange.ExchangeTransaction
-import com.wavesplatform.transaction.lease.LeaseTransaction
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.transfer.{MassTransferTransaction, TransferTransaction}
-import com.wavesplatform.transaction.{Asset, Authorized, EthereumTransaction}
+import com.gicsports.account.{Address, AddressOrAlias, Alias, PublicKey}
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.*
+import com.gicsports.events.StateUpdate.LeaseUpdate.LeaseStatus
+import com.gicsports.events.StateUpdate.{AssetStateUpdate, BalanceUpdate, DataEntryUpdate, LeaseUpdate, LeasingBalanceUpdate}
+import com.gicsports.events.protobuf.TransactionMetadata
+import com.gicsports.events.protobuf.TransactionMetadata.EthereumMetadata
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.protobuf.*
+import com.gicsports.protobuf.transaction.InvokeScriptResult.Call.Argument
+import com.gicsports.protobuf.transaction.{PBAmounts, PBTransactions, InvokeScriptResult as PBInvokeScriptResult}
+import com.gicsports.state.*
+import com.gicsports.state.DiffToStateApplier.PortfolioUpdates
+import com.gicsports.state.diffs.BlockDiffer.DetailedDiff
+import com.gicsports.state.diffs.invoke.InvokeScriptTransactionLike
+import com.gicsports.state.reader.CompositeBlockchain
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.exchange.ExchangeTransaction
+import com.gicsports.transaction.lease.LeaseTransaction
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.transfer.{MassTransferTransaction, TransferTransaction}
+import com.gicsports.transaction.{Asset, Authorized, EthereumTransaction}
 
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
@@ -53,7 +53,7 @@ object StateUpdate {
   }
 
   object BalanceUpdate {
-    import com.wavesplatform.events.protobuf.StateUpdate.BalanceUpdate as PBBalanceUpdate
+    import com.gicsports.events.protobuf.StateUpdate.BalanceUpdate as PBBalanceUpdate
 
     def fromPB(v: PBBalanceUpdate): BalanceUpdate = {
       val (asset, after) = PBAmounts.toAssetAndAmount(v.getAmountAfter)
@@ -75,7 +75,7 @@ object StateUpdate {
   }
 
   object DataEntryUpdate {
-    import com.wavesplatform.events.protobuf.StateUpdate.DataEntryUpdate as PBDataEntryUpdate
+    import com.gicsports.events.protobuf.StateUpdate.DataEntryUpdate as PBDataEntryUpdate
 
     def fromPB(v: PBDataEntryUpdate): DataEntryUpdate = {
       DataEntryUpdate(
@@ -99,7 +99,7 @@ object StateUpdate {
   }
 
   object LeasingBalanceUpdate {
-    import com.wavesplatform.events.protobuf.StateUpdate.LeasingUpdate as PBLeasingUpdate
+    import com.gicsports.events.protobuf.StateUpdate.LeasingUpdate as PBLeasingUpdate
 
     def fromPB(v: PBLeasingUpdate): LeasingBalanceUpdate = {
       LeasingBalanceUpdate(
@@ -142,8 +142,8 @@ object StateUpdate {
       case object Inactive extends LeaseStatus
     }
 
-    import com.wavesplatform.events.protobuf.StateUpdate.LeaseUpdate as PBLeaseUpdate
-    import com.wavesplatform.events.protobuf.StateUpdate.LeaseUpdate.LeaseStatus as PBLeaseStatus
+    import com.gicsports.events.protobuf.StateUpdate.LeaseUpdate as PBLeaseUpdate
+    import com.gicsports.events.protobuf.StateUpdate.LeaseUpdate.LeaseStatus as PBLeaseStatus
 
     def fromPB(v: PBLeaseUpdate): LeaseUpdate = {
       LeaseUpdate(
@@ -187,8 +187,8 @@ object StateUpdate {
   object AssetStateUpdate {
     final case class AssetDetails(assetId: ByteStr, desc: AssetDescription)
 
-    import com.wavesplatform.events.protobuf.StateUpdate.AssetDetails.AssetScriptInfo as PBAssetScriptInfo
-    import com.wavesplatform.events.protobuf.StateUpdate.{AssetDetails as PBAssetDetails, AssetStateUpdate as PBAssetStateUpdate}
+    import com.gicsports.events.protobuf.StateUpdate.AssetDetails.AssetScriptInfo as PBAssetScriptInfo
+    import com.gicsports.events.protobuf.StateUpdate.{AssetDetails as PBAssetDetails, AssetStateUpdate as PBAssetStateUpdate}
 
     def fromPB(self: PBAssetStateUpdate): AssetStateUpdate = {
 
@@ -256,7 +256,7 @@ object StateUpdate {
 
   final case class AssetInfo(id: ByteStr, decimals: Int, name: String)
   object AssetInfo {
-    import com.wavesplatform.events.protobuf.StateUpdate.AssetInfo as PBAssetInfo
+    import com.gicsports.events.protobuf.StateUpdate.AssetInfo as PBAssetInfo
 
     def toPB(ai: AssetInfo): PBAssetInfo = PBAssetInfo(
       ai.id.toByteString,
@@ -272,7 +272,7 @@ object StateUpdate {
       )
   }
 
-  import com.wavesplatform.events.protobuf.StateUpdate as PBStateUpdate
+  import com.gicsports.events.protobuf.StateUpdate as PBStateUpdate
 
   def fromPB(v: PBStateUpdate): StateUpdate = {
     StateUpdate(

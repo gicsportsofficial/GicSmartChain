@@ -1,15 +1,15 @@
-package com.wavesplatform.transaction.smart
+package com.gicsports.transaction.smart
 
-import com.wavesplatform.account.*
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.v1.compiler.Terms.FUNCTION_CALL
-import com.wavesplatform.state.diffs.invoke.{InvokeScriptLike, InvokeScriptTransactionLike}
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.serialization.impl.InvokeScriptTxSerializer
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.validation.TxValidator
-import com.wavesplatform.transaction.validation.impl.InvokeScriptTxValidator
+import com.gicsports.account.*
+import com.gicsports.crypto
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.v1.compiler.Terms.FUNCTION_CALL
+import com.gicsports.state.diffs.invoke.{InvokeScriptLike, InvokeScriptTransactionLike}
+import com.gicsports.transaction.*
+import com.gicsports.transaction.serialization.impl.InvokeScriptTxSerializer
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.validation.TxValidator
+import com.gicsports.transaction.validation.impl.InvokeScriptTxValidator
 import monix.eval.Coeval
 import play.api.libs.json.*
 

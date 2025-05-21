@@ -1,16 +1,16 @@
-package com.wavesplatform.http
+package com.gicsports.http
 
-import com.wavesplatform.RequestGen
-import com.wavesplatform.api.common.CommonTransactionsApi
-import com.wavesplatform.api.http.ApiError.*
-import com.wavesplatform.api.http.RouteTimeout
-import com.wavesplatform.api.http.alias.AliasApiRoute
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.state.diffs.TransactionDiffer.TransactionValidationError
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.utils.{Schedulers, Time}
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.RequestGen
+import com.gicsports.api.common.CommonTransactionsApi
+import com.gicsports.api.http.ApiError.*
+import com.gicsports.api.http.RouteTimeout
+import com.gicsports.api.http.alias.AliasApiRoute
+import com.gicsports.state.Blockchain
+import com.gicsports.state.diffs.TransactionDiffer.TransactionValidationError
+import com.gicsports.transaction.Transaction
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.utils.{Schedulers, Time}
+import com.gicsports.wallet.Wallet
 import org.scalamock.scalatest.PathMockFactory
 import play.api.libs.json.*
 import play.api.libs.json.Json.*
@@ -44,7 +44,7 @@ class AliasBroadcastRouteSpec extends RouteSpec("/alias/broadcast/") with Reques
   "returns appropriate error code when validation fails for" - {
 
     "create alias transaction" in forAll(createAliasReq) { req =>
-      import com.wavesplatform.api.http.requests.SignedCreateAliasV1Request.jsonFormat
+      import com.gicsports.api.http.requests.SignedCreateAliasV1Request.jsonFormat
 
       def posting(v: JsValue): RouteTestResult = Post(routePath("create"), v) ~> route
 

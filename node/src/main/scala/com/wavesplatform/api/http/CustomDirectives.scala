@@ -1,11 +1,11 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import akka.http.scaladsl.server.*
 import cats.data.{Validated, ValidatedNel}
 import cats.instances.vector.*
 import cats.syntax.traverse.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.utils.{EthEncoding, ScorexLogging}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.utils.{EthEncoding, ScorexLogging}
 import play.api.libs.json.JsObject
 
 import scala.concurrent.duration.DurationInt

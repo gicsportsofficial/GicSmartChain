@@ -1,9 +1,9 @@
-package com.wavesplatform.test
+package com.gicsports.test
 
 import java.util.concurrent.ThreadLocalRandom
 
-import com.wavesplatform.account.{Address, KeyPair}
-import com.wavesplatform.crypto.KeyLength
+import com.gicsports.account.{Address, KeyPair}
+import com.gicsports.crypto.KeyLength
 
 package object node {
   def randomKeyPair(): KeyPair = {

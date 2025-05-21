@@ -1,16 +1,16 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.database.protobuf.EthereumTransactionMeta
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.v1.serialization.SerdeV1
-import com.wavesplatform.protobuf.transaction.{PBAmounts, PBRecipients}
-import com.wavesplatform.state.diffs.invoke.InvokeScriptTransactionDiff
-import com.wavesplatform.state.{Blockchain, Diff}
-import com.wavesplatform.transaction.EthereumTransaction
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.smart.script.trace.TracedResult
+import com.gicsports.database.protobuf.EthereumTransactionMeta
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.v1.serialization.SerdeV1
+import com.gicsports.protobuf.transaction.{PBAmounts, PBRecipients}
+import com.gicsports.state.diffs.invoke.InvokeScriptTransactionDiff
+import com.gicsports.state.{Blockchain, Diff}
+import com.gicsports.transaction.EthereumTransaction
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.smart.script.trace.TracedResult
 
 object EthereumTransactionDiff {
   def meta(blockchain: Blockchain)(e: EthereumTransaction): Diff = {

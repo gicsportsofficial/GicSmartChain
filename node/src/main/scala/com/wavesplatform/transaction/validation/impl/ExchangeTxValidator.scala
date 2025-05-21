@@ -1,11 +1,11 @@
-package com.wavesplatform.transaction.validation.impl
+package com.gicsports.transaction.validation.impl
 
 import cats.data.ValidatedNel
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.TxValidationError.{GenericError, OrderValidationError}
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.assets.exchange.{ExchangeTransaction, Order, OrderType}
-import com.wavesplatform.transaction.validation.TxValidator
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.TxValidationError.{GenericError, OrderValidationError}
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.assets.exchange.{ExchangeTransaction, Order, OrderType}
+import com.gicsports.transaction.validation.TxValidator
 
 object ExchangeTxValidator extends TxValidator[ExchangeTransaction] {
   override def validate(tx: ExchangeTransaction): ValidatedNel[ValidationError, ExchangeTransaction] = {

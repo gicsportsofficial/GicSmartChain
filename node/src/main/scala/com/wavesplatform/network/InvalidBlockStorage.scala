@@ -1,9 +1,9 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
 import com.google.common.cache.CacheBuilder
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.network.InvalidBlockStorageImpl._
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.network.InvalidBlockStorageImpl._
 
 import scala.concurrent.duration.FiniteDuration
 

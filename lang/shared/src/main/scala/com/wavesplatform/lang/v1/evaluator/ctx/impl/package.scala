@@ -1,16 +1,16 @@
-package com.wavesplatform.lang.v1.evaluator.ctx
+package com.gicsports.lang.v1.evaluator.ctx
 
 import cats.Monad
 import cats.syntax.applicative.*
 import cats.syntax.either.*
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.FunctionHeader.{Native, User}
-import com.wavesplatform.lang.v1.compiler.ScriptResultSource
-import com.wavesplatform.lang.v1.compiler.Terms.CaseObj
-import com.wavesplatform.lang.v1.compiler.Types.UNIT
-import com.wavesplatform.lang.v1.evaluator.FunctionIds.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.Functions.*
-import com.wavesplatform.lang.{CommonError, ExecutionError}
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.FunctionHeader.{Native, User}
+import com.gicsports.lang.v1.compiler.ScriptResultSource
+import com.gicsports.lang.v1.compiler.Terms.CaseObj
+import com.gicsports.lang.v1.compiler.Types.UNIT
+import com.gicsports.lang.v1.evaluator.FunctionIds.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.Functions.*
+import com.gicsports.lang.{CommonError, ExecutionError}
 
 package object impl {
   def notImplemented[F[_]: Monad, R](funcName: String, args: List[Any]): F[Either[ExecutionError, R]] =

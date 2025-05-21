@@ -1,6 +1,6 @@
-package com.wavesplatform.metrics
+package com.gicsports.metrics
 
-import com.wavesplatform.database.Key
+import com.gicsports.database.Key
 import kamon.Kamon
 import kamon.metric.{MeasurementUnit, Metric}
 

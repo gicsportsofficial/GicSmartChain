@@ -1,21 +1,21 @@
-package com.wavesplatform.state.diffs.ci.sync
+package com.gicsports.state.diffs.ci.sync
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.Portfolio
-import com.wavesplatform.state.diffs.{ENOUGH_AMT, produceRejectOrFailedDiff}
-import com.wavesplatform.test.*
-import com.wavesplatform.test.DomainPresets.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.{Asset, Transaction, TxHelpers}
+import com.gicsports.account.Address
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.Portfolio
+import com.gicsports.state.diffs.{ENOUGH_AMT, produceRejectOrFailedDiff}
+import com.gicsports.test.*
+import com.gicsports.test.DomainPresets.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.{Asset, Transaction, TxHelpers}
 
 class SyncDAppPaymentTest extends PropSpec with WithDomain {
 
@@ -41,7 +41,7 @@ class SyncDAppPaymentTest extends PropSpec with WithDomain {
           if (customAsset)
             s"DApp $dApp1 invoked DApp $dApp2 with attached token $asset amount = -1"
           else
-            s"DApp $dApp1 invoked DApp $dApp2 with attached CARDIUM amount = -1"
+            s"DApp $dApp1 invoked DApp $dApp2 with attached GIC amount = -1"
         }
       }
     }
@@ -62,7 +62,7 @@ class SyncDAppPaymentTest extends PropSpec with WithDomain {
           if (customAsset)
             s"DApp $dApp1 invoked DApp $dApp2 with attached token $asset amount = -1"
           else
-            s"DApp $dApp1 invoked DApp $dApp2 with attached CARDIUM amount = -1"
+            s"DApp $dApp1 invoked DApp $dApp2 with attached GIC amount = -1"
 
         d.appendBlock(preparingTxs*)
 
@@ -133,7 +133,7 @@ class SyncDAppPaymentTest extends PropSpec with WithDomain {
 
       d.balance(masterDApp.toAddress) < paymentAmount shouldBe true
 
-      d.appendBlockE(invoke) should produce(s"${masterDApp.toAddress} -> negative CARDIUM balance")
+      d.appendBlockE(invoke) should produce(s"${masterDApp.toAddress} -> negative GIC balance")
     }
   }
 
@@ -159,7 +159,7 @@ class SyncDAppPaymentTest extends PropSpec with WithDomain {
         d.appendBlock(preparingTxs*)
 
         if (!bigComplexityDApp1 && !bigComplexityDApp2) {
-          d.appendAndCatchError(invoke).toString should include("negative CARDIUM balance")
+          d.appendAndCatchError(invoke).toString should include("negative GIC balance")
         } else {
           d.appendAndAssertFailed(invoke)
         }
@@ -187,7 +187,7 @@ class SyncDAppPaymentTest extends PropSpec with WithDomain {
       balanceDetails.leaseIn shouldBe paymentAmount
       balanceDetails.available < paymentAmount shouldBe true
 
-      d.appendBlockE(invoke) should produce(s"${masterDApp.toAddress} -> negative CARDIUM balance")
+      d.appendBlockE(invoke) should produce(s"${masterDApp.toAddress} -> negative GIC balance")
     }
   }
 
@@ -256,7 +256,7 @@ class SyncDAppPaymentTest extends PropSpec with WithDomain {
 
       Long.MaxValue - d.balance(serviceDApp.toAddress) < paymentAmount
 
-      d.appendBlockE(invoke) should produce(s"${serviceDApp.toAddress} -> CARDIUM balance sum overflow")
+      d.appendBlockE(invoke) should produce(s"${serviceDApp.toAddress} -> GIC balance sum overflow")
     }
   }
 

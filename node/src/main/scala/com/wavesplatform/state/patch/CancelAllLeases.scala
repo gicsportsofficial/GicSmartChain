@@ -1,10 +1,10 @@
-package com.wavesplatform.state.patch
+package com.gicsports.state.patch
 
-import com.wavesplatform.account.{Address, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils._
-import com.wavesplatform.state.{Blockchain, Diff, LeaseBalance, Portfolio}
-import com.wavesplatform.state.reader.LeaseDetails
+import com.gicsports.account.{Address, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils._
+import com.gicsports.state.{Blockchain, Diff, LeaseBalance, Portfolio}
+import com.gicsports.state.reader.LeaseDetails
 import play.api.libs.json.{Json, OFormat}
 
 case object CancelAllLeases extends PatchAtHeight('W' -> 462000, 'T' -> 51500) {

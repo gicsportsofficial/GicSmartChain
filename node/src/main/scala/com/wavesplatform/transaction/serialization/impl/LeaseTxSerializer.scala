@@ -1,11 +1,11 @@
-package com.wavesplatform.transaction.serialization.impl
+package com.gicsports.transaction.serialization.impl
 
 import java.nio.ByteBuffer
 import com.google.common.primitives.{Bytes, Longs}
-import com.wavesplatform.serialization.ByteBufferOps
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.lease.LeaseTransaction
-import com.wavesplatform.transaction.{Proofs, TxPositiveAmount, TxVersion}
+import com.gicsports.serialization.ByteBufferOps
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.lease.LeaseTransaction
+import com.gicsports.transaction.{Proofs, TxPositiveAmount, TxVersion}
 import play.api.libs.json.{JsObject, Json}
 
 import scala.util.Try

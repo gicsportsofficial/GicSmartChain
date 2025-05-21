@@ -1,24 +1,24 @@
-package com.wavesplatform.features
+package com.gicsports.features
 
-import com.wavesplatform.account.{Address, AddressScheme}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, Base64}
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.history.Domain
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.utils.EthConverters.*
-import com.wavesplatform.transaction.utils.EthTxGenerator
-import com.wavesplatform.transaction.{EthereumTransaction, Transaction, TxHelpers, TxVersion}
+import com.gicsports.account.{Address, AddressScheme}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, Base64}
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.history.Domain
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.utils.EthConverters.*
+import com.gicsports.transaction.utils.EthTxGenerator
+import com.gicsports.transaction.{EthereumTransaction, Transaction, TxHelpers, TxVersion}
 import org.scalatest.{EitherValues, OptionValues}
 
 import java.nio.charset.StandardCharsets
@@ -416,7 +416,7 @@ class RideV6FailRejectTest extends FreeSpec with WithDomain with OptionValues wi
         ),
         Case(
           "NODE-556 If an invoke leads to a Waves overflow with a ScriptTransfer (initial balances)",
-          "CARDIUM balance sum overflow",
+          "GIC balance sum overflow",
           { targetComplexity =>
             // 1 for strict, 1 for Address, 1 for list, 1 for ScriptTransfer, 10 for wavesBalance,
             //   1 for Address(alice) and 1 for "-"
@@ -437,7 +437,7 @@ class RideV6FailRejectTest extends FreeSpec with WithDomain with OptionValues wi
         ),
         Case(
           "NODE-556 If an invoke leads to a Waves overflow with a ScriptTransfer (multiple transfers)",
-          "negative CARDIUM balance",
+          "negative GIC balance",
           { targetComplexity =>
             // 1 for strict, 1 for Address, 1 for ScriptTransfer, 10 for wavesBalance, 1 for Address(alice), 1 for "-",
             // 2 for list
@@ -606,7 +606,7 @@ class RideV6FailRejectTest extends FreeSpec with WithDomain with OptionValues wi
         )
       } ++ Seq(
         ("negative", -1, "Negative lease amount = -1"),
-        ("zero", 0, "NonPositiveAmount(0,CARDIUM)")
+        ("zero", 0, "NonPositiveAmount(0,GIC)")
       ).map { case (tpe, leaseAmount, rejectError) =>
         Case(
           s"NODE-584 If an invoke leases $tpe amount",
@@ -723,8 +723,8 @@ class RideV6FailRejectTest extends FreeSpec with WithDomain with OptionValues wi
         )
       } ++ Seq(
         Case.withInnerPayment(
-          "NODE-606 If an inner invoke contains a negative CARDIUM payment",
-          "with attached CARDIUM amount = -1",
+          "NODE-606 If an inner invoke contains a negative GIC payment",
+          "with attached GIC amount = -1",
           "AttachedPayment(unit, -1)"
         ),
         Case.withInnerPayment(
@@ -765,7 +765,7 @@ class RideV6FailRejectTest extends FreeSpec with WithDomain with OptionValues wi
         ),
         Case(
           "NODE-620 If a negative balance happens during the invoke",
-          "negative CARDIUM balance",
+          "negative GIC balance",
           { targetComplexity =>
             // 1+1 for strict, 75 for invoke, 1 for Address, 1 for list, 500 for bob.foo() body
             val baseComplexity = 1 + 1 + 75 + 1 + 1 + 500

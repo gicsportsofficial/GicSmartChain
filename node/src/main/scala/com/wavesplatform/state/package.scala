@@ -1,11 +1,11 @@
-package com.wavesplatform
+package com.gicsports
 
 import cats.Id
 import cats.implicits.*
 import cats.kernel.Monoid
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.utils.Paged
+import com.gicsports.account.Address
+import com.gicsports.common.state.ByteStr
+import com.gicsports.utils.Paged
 import play.api.libs.json.*
 import supertagged.TaggedType
 

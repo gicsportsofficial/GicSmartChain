@@ -1,20 +1,20 @@
-package com.wavesplatform.it.asset
+package com.gicsports.it.asset
 
 import com.typesafe.config.Config
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.NodeConfigs.Default
-import com.wavesplatform.it.api.LeaseInfo
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_BYTESTR
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.lang.v1.traits.domain.{Lease, Recipient}
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.NodeConfigs.Default
+import com.gicsports.it.api.LeaseInfo
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.compiler.Terms.CONST_BYTESTR
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.lang.v1.traits.domain.{Lease, Recipient}
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.smart.script.ScriptCompiler
 
 class LeaseActionSuite extends BaseTransactionSuite {
   override protected def nodeConfigs: Seq[Config] =

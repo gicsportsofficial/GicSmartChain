@@ -1,15 +1,15 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.it.api.{Transaction, TransactionInfo}
-import com.wavesplatform.it.sync.transactions.OverflowBlock
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.state.IntegerDataEntry
-import com.wavesplatform.transaction.assets.exchange.{AssetPair, Order}
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.Transfer
-import com.wavesplatform.transaction.{CreateAliasTransaction, TxExchangeAmount, TxExchangePrice, TxVersion}
+import com.gicsports.account.KeyPair
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.it.api.{Transaction, TransactionInfo}
+import com.gicsports.it.sync.transactions.OverflowBlock
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.state.IntegerDataEntry
+import com.gicsports.transaction.assets.exchange.{AssetPair, Order}
+import com.gicsports.transaction.transfer.MassTransferTransaction.Transfer
+import com.gicsports.transaction.{CreateAliasTransaction, TxExchangeAmount, TxExchangePrice, TxVersion}
 import org.asynchttpclient.Response
 import org.scalatest
 import org.scalatest.Assertion
@@ -78,7 +78,7 @@ class AmountAsStringSuite extends BaseTransactionSuite with OverflowBlock {
         version = TxVersion.V2,
         exchanger,
         exchanger.publicKey,
-        AssetPair.createAssetPair("CARDIUM", exchAssetId).get,
+        AssetPair.createAssetPair("GIC", exchAssetId).get,
         amount,
         price,
         ts,
@@ -91,7 +91,7 @@ class AmountAsStringSuite extends BaseTransactionSuite with OverflowBlock {
         version = TxVersion.V2,
         exchanger,
         exchanger.publicKey,
-        AssetPair.createAssetPair("CARDIUM", exchAssetId).get,
+        AssetPair.createAssetPair("GIC", exchAssetId).get,
         amount,
         price,
         ts,
@@ -280,10 +280,10 @@ class AmountAsStringSuite extends BaseTransactionSuite with OverflowBlock {
     val rewardsAsInteger = sender.rewardStatus()
     val rewards          = sender.rewardStatus(amountsAsStrings = true)
     val rewardsByHeight  = sender.rewardStatus(Some(currentHeight), amountsAsStrings = true)
-    rewards.totalCardiumAmount shouldBe rewardsAsInteger.totalCardiumAmount
+    rewards.totalGicAmount shouldBe rewardsAsInteger.totalGicAmount
     rewards.currentReward shouldBe rewardsAsInteger.currentReward
     rewards.minIncrement shouldBe rewardsAsInteger.minIncrement
-    rewardsByHeight.totalCardiumAmount shouldBe rewardsAsInteger.totalCardiumAmount
+    rewardsByHeight.totalGicAmount shouldBe rewardsAsInteger.totalGicAmount
     rewardsByHeight.currentReward shouldBe rewardsAsInteger.currentReward
     rewardsByHeight.minIncrement shouldBe rewardsAsInteger.minIncrement
   }
@@ -293,12 +293,12 @@ class AmountAsStringSuite extends BaseTransactionSuite with OverflowBlock {
 
     sender.debugBalanceHistory(firstAddress, amountsAsStrings = true).head.balance shouldBe firstBalance
 
-    val stateCardiumOnHeight = sender.getWithCustomHeader(
+    val stateGicOnHeight = sender.getWithCustomHeader(
       s"/debug/stateTN/${sender.height}",
       headerValue = "application/json;large-significand-format=string",
       withApiKey = true
     )
-    (parseResponse(stateCardiumOnHeight) \ firstAddress).get shouldBe JsString(firstBalance.toString)
+    (parseResponse(stateGicOnHeight) \ firstAddress).get shouldBe JsString(firstBalance.toString)
   }
 
   private def parseResponse(response: Response): JsValue = Json.parse(response.getResponseBody)

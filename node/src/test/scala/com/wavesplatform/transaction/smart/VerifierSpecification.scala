@@ -1,22 +1,22 @@
-package com.wavesplatform.transaction.smart
+package com.gicsports.transaction.smart
 
-import com.wavesplatform.NTPTime
-import com.wavesplatform.account.{KeyPair, PublicKey}
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.Domain._
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.test.DomainPresets.*
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.exchange._
-import com.wavesplatform.transaction.assets.{IssueTransaction, SetAssetScriptTransaction}
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.NTPTime
+import com.gicsports.account.{KeyPair, PublicKey}
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.Domain._
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.test.DomainPresets.*
+import com.gicsports.test._
+import com.gicsports.transaction.Asset
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.exchange._
+import com.gicsports.transaction.assets.{IssueTransaction, SetAssetScriptTransaction}
+import com.gicsports.transaction.smart.script.ScriptCompiler
 
 class VerifierSpecification extends PropSpec with NTPTime with WithDomain {
   private def mkIssue(issuer: KeyPair, name: String, script: Option[Script] = None) =

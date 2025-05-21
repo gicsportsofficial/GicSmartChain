@@ -1,9 +1,9 @@
-package com.wavesplatform.api.common
+package com.gicsports.api.common
 
-import com.wavesplatform.database.protobuf.EthereumTransactionMeta
-import com.wavesplatform.state.{Height, InvokeScriptResult}
-import com.wavesplatform.transaction.{EthereumTransaction, Transaction}
-import com.wavesplatform.transaction.smart.InvokeTransaction
+import com.gicsports.database.protobuf.EthereumTransactionMeta
+import com.gicsports.state.{Height, InvokeScriptResult}
+import com.gicsports.transaction.{EthereumTransaction, Transaction}
+import com.gicsports.transaction.smart.InvokeTransaction
 
 sealed trait TransactionMeta {
   def height: Height

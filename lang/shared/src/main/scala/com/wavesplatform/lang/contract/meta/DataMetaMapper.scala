@@ -1,11 +1,11 @@
-package com.wavesplatform.lang.contract.meta
+package com.gicsports.lang.contract.meta
 
 import cats.implicits._
 import com.google.protobuf.ByteString
-import com.wavesplatform.lang.v1.compiler.Types.FINAL
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.protobuf.dapp.DAppMeta.CallableFuncSignature
-import com.wavesplatform.protobuf.dapp.DAppMeta.CompactNameAndOriginalNamePair
+import com.gicsports.lang.v1.compiler.Types.FINAL
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.protobuf.dapp.DAppMeta.CallableFuncSignature
+import com.gicsports.protobuf.dapp.DAppMeta.CompactNameAndOriginalNamePair
 
 class DataMetaMapper(mapper: TypeBitMapper, version: MetaVersion) {
   def toProto(funcTypes: List[List[FINAL]], compactNameToOriginalNameMap: Map[String, String] = Map.empty): Either[String, DAppMeta] = {

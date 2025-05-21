@@ -1,6 +1,6 @@
-package com.wavesplatform.lang
+package com.gicsports.lang
 
-import com.wavesplatform.lang.v1.repl.node.http.response.model.NodeResponse
+import com.gicsports.lang.v1.repl.node.http.response.model.NodeResponse
 import sttp.client3.*
 
 import scala.concurrent.ExecutionContext.Implicits.global

@@ -1,13 +1,13 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import akka.http.scaladsl.model.{StatusCode, StatusCodes}
-import com.wavesplatform.account.{Address, Alias}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.diffs.TransactionDiffer.TransactionValidationError
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.assets.exchange.Order
-import com.wavesplatform.transaction.{Transaction, *}
+import com.gicsports.account.{Address, Alias}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.diffs.TransactionDiffer.TransactionValidationError
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.assets.exchange.Order
+import com.gicsports.transaction.{Transaction, *}
 import play.api.libs.json.*
 
 case class ApiErrorResponse(error: Int, message: String)

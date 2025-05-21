@@ -1,13 +1,13 @@
-package com.wavesplatform.transaction.validation.impl
+package com.gicsports.transaction.validation.impl
 
 import cats.data.ValidatedNel
 import cats.syntax.either._
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.lease.LeaseCancelTransaction
-import com.wavesplatform.transaction.validation.TxValidator
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.lease.LeaseCancelTransaction
+import com.gicsports.transaction.validation.TxValidator
 
 object LeaseCancelTxValidator extends TxValidator[LeaseCancelTransaction] {
   override def validate(tx: LeaseCancelTransaction): ValidatedNel[ValidationError, LeaseCancelTransaction] = {

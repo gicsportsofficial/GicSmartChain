@@ -1,10 +1,10 @@
-package com.wavesplatform.events
+package com.gicsports.events
 
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.state.diffs.BlockDiffer
-import com.wavesplatform.state.diffs.BlockDiffer.DetailedDiff
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.state.Blockchain
+import com.gicsports.state.diffs.BlockDiffer
+import com.gicsports.state.diffs.BlockDiffer.DetailedDiff
 
 trait BlockchainUpdateTriggers {
   def onProcessBlock(block: Block, diff: DetailedDiff, minerReward: Option[Long], blockchainBeforeWithMinerReward: Blockchain): Unit

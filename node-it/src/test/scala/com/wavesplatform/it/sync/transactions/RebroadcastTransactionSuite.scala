@@ -1,18 +1,18 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
 import com.typesafe.config.Config
 import com.typesafe.config.ConfigFactory.parseString
-import com.wavesplatform.account.Address
-import com.wavesplatform.api.http.ApiError.CustomValidationError
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.Node
-import com.wavesplatform.it.NodeConfigs._
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.transactions.{BaseTransactionSuite, NodesFromDocker}
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.transfer.TransferTransaction
+import com.gicsports.account.Address
+import com.gicsports.api.http.ApiError.CustomValidationError
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.Node
+import com.gicsports.it.NodeConfigs._
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.transactions.{BaseTransactionSuite, NodesFromDocker}
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.transfer.TransferTransaction
 
 class RebroadcastTransactionSuite extends BaseTransactionSuite with NodesFromDocker {
 
@@ -111,11 +111,11 @@ class RebroadcastTransactionSuite extends BaseTransactionSuite with NodesFromDoc
 }
 object RebroadcastTransactionSuite {
   private val configWithRebroadcastAllowed =
-    parseString("CARDIUM.synchronization.utx-synchronizer.allow-tx-rebroadcasting = true")
+    parseString("GIC.synchronization.utx-synchronizer.allow-tx-rebroadcasting = true")
 
   private val configWithRebroadcastNotAllowed =
-    parseString("CARDIUM.synchronization.utx-synchronizer.allow-tx-rebroadcasting = false")
+    parseString("GIC.synchronization.utx-synchronizer.allow-tx-rebroadcasting = false")
 
   private def configWithMinimumPeers(n: Int) =
-    parseString(s"CARDIUM.rest-api.minimum-peers = $n")
+    parseString(s"GIC.rest-api.minimum-peers = $n")
 }

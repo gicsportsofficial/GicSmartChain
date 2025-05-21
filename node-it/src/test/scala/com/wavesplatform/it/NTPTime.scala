@@ -1,6 +1,6 @@
-package com.wavesplatform.it
+package com.gicsports.it
 
-import com.wavesplatform.utils.NTP
+import com.gicsports.utils.NTP
 import org.scalatest.{BeforeAndAfterAll, Suite}
 
 trait NTPTime extends BeforeAndAfterAll { _: Suite =>

@@ -1,37 +1,37 @@
-package com.wavesplatform.it.api
+package com.gicsports.it.api
 
 import java.io.IOException
 import java.net.{InetSocketAddress, URLEncoder}
 import java.util.concurrent.TimeoutException
 import java.util.{NoSuchElementException, UUID}
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{AddressOrAlias, AddressScheme, KeyPair}
-import com.wavesplatform.api.http.DebugMessage.*
-import com.wavesplatform.api.http.RewardApiRoute.RewardStatus
-import com.wavesplatform.api.http.requests.{IssueRequest, TransferRequest}
-import com.wavesplatform.api.http.{ConnectReq, DebugMessage, RollbackParams, `X-Api-Key`}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, Base64, EitherExt2}
-import com.wavesplatform.features.api.ActivationStatus
-import com.wavesplatform.it.Node
-import com.wavesplatform.it.sync.invokeExpressionFee
-import com.wavesplatform.it.util.*
-import com.wavesplatform.it.util.GlobalTimer.instance as timer
-import com.wavesplatform.lang.script.ScriptReader
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.lang.v1.compiler.Terms.FUNCTION_CALL
-import com.wavesplatform.state.DataEntry.Format
-import com.wavesplatform.state.{AssetDistribution, AssetDistributionPage, DataEntry, EmptyDataEntry, LeaseBalance, Portfolio}
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.assets.*
-import com.wavesplatform.transaction.assets.exchange.{Order, ExchangeTransaction as ExchangeTx}
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.smart.{InvokeExpressionTransaction, InvokeScriptTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.{ParsedTransfer, Transfer}
-import com.wavesplatform.transaction.{
+import com.gicsports.account.{AddressOrAlias, AddressScheme, KeyPair}
+import com.gicsports.api.http.DebugMessage.*
+import com.gicsports.api.http.RewardApiRoute.RewardStatus
+import com.gicsports.api.http.requests.{IssueRequest, TransferRequest}
+import com.gicsports.api.http.{ConnectReq, DebugMessage, RollbackParams, `X-Api-Key`}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, Base64, EitherExt2}
+import com.gicsports.features.api.ActivationStatus
+import com.gicsports.it.Node
+import com.gicsports.it.sync.invokeExpressionFee
+import com.gicsports.it.util.*
+import com.gicsports.it.util.GlobalTimer.instance as timer
+import com.gicsports.lang.script.ScriptReader
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.lang.v1.compiler.Terms.FUNCTION_CALL
+import com.gicsports.state.DataEntry.Format
+import com.gicsports.state.{AssetDistribution, AssetDistributionPage, DataEntry, EmptyDataEntry, LeaseBalance, Portfolio}
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.assets.*
+import com.gicsports.transaction.assets.exchange.{Order, ExchangeTransaction as ExchangeTx}
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.smart.{InvokeExpressionTransaction, InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.transaction.transfer.*
+import com.gicsports.transaction.transfer.MassTransferTransaction.{ParsedTransfer, Transfer}
+import com.gicsports.transaction.{
   Asset,
   CreateAliasTransaction,
   DataTransaction,
@@ -375,7 +375,7 @@ object AsyncHttpApi extends Assertions {
       )
 
     def payment(sourceAddress: String, recipient: String, amount: Long, fee: Long): Future[Transaction] =
-      postJson("/cardium/payment", PaymentRequest(amount, fee, sourceAddress, recipient)).as[Transaction]
+      postJson("/gic/payment", PaymentRequest(amount, fee, sourceAddress, recipient)).as[Transaction]
 
     def lease(sender: KeyPair, recipient: String, amount: Long, fee: Long, version: TxVersion = TxVersion.V2): Future[Transaction] =
       signedBroadcast(

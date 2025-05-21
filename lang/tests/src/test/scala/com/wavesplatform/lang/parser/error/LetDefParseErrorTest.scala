@@ -1,4 +1,4 @@
-package com.wavesplatform.lang.parser.error
+package com.gicsports.lang.parser.error
 
 class LetDefParseErrorTest extends ParseErrorTest {
   property("missing '=' of let definition") {

@@ -1,10 +1,10 @@
-package com.wavesplatform.transaction.validation.impl
+package com.gicsports.transaction.validation.impl
 
-import com.wavesplatform.account.{Address, Alias}
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.transfer.MassTransferTransaction
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.MaxTransferCount
-import com.wavesplatform.transaction.validation.{TxValidator, ValidatedV}
+import com.gicsports.account.{Address, Alias}
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.transfer.MassTransferTransaction
+import com.gicsports.transaction.transfer.MassTransferTransaction.MaxTransferCount
+import com.gicsports.transaction.validation.{TxValidator, ValidatedV}
 
 object MassTransferTxValidator extends TxValidator[MassTransferTransaction] {
   override def validate(tx: MassTransferTransaction): ValidatedV[MassTransferTransaction] = {

@@ -6,7 +6,7 @@ import sbt.{Def, _}
 object Dependencies {
   // Node protobuf schemas
   private[this] val protoSchemasLib =
-    "com.wavesplatform" % "protobuf-schemas" % "1.4.3" classifier "protobuf-src" intransitive ()
+    "com.gicsports" % "protobuf-schemas" % "1.4.3" classifier "protobuf-src" intransitive ()
 
   def akkaModule(module: String): ModuleID = "com.typesafe.akka" %% s"akka-$module" % "2.6.20"
 
@@ -32,7 +32,7 @@ object Dependencies {
   val logback            = "ch.qos.logback"      % "logback-classic"   % "1.3.5" // 1.4.x and later is built for Java 11
   val janino             = "org.codehaus.janino" % "janino"            % "3.1.9"
   val asyncHttpClient    = "org.asynchttpclient" % "async-http-client" % "2.12.3"
-  val curve25519         = "com.wavesplatform"   % "curve25519-java"   % "0.6.4"
+  val curve25519         = "com.gicsports"   % "curve25519-java"   % "0.6.4"
   val nettyHandler       = "io.netty"            % "netty-handler"     % "4.1.85.Final"
 
   val catsCore   = catsModule("core", "2.9.0")
@@ -66,8 +66,8 @@ object Dependencies {
       "ch.obermuhlner"  % "big-math"      % "2.3.2",
       curve25519,
       bouncyCastleProvider,
-      "com.wavesplatform" % "zwaves"       % "0.1.0-SNAPSHOT",
-      "com.wavesplatform" % "zwaves-bn256" % "0.1.5-SNAPSHOT",
+      "com.gicsports" % "zwaves"       % "0.1.0-SNAPSHOT",
+      "com.gicsports" % "zwaves-bn256" % "0.1.5-SNAPSHOT",
       web3jModule("crypto")
     ) ++ langCompilerPlugins.value ++ scalapbRuntime.value ++ protobuf.value
   )
@@ -98,8 +98,8 @@ object Dependencies {
   private[this] val levelDBJNA = {
     val levelDbVersion = "1.23.1"
     Seq(
-      "com.wavesplatform.leveldb-jna" % "leveldb-jna-core"   % levelDbVersion,
-      "com.wavesplatform.leveldb-jna" % "leveldb-jna-native" % levelDbVersion,
+      "com.gicsports.leveldb-jna" % "leveldb-jna-core"   % levelDbVersion,
+      "com.gicsports.leveldb-jna" % "leveldb-jna-native" % levelDbVersion,
       leveldbJava("api")
     )
   }

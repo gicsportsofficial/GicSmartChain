@@ -1,11 +1,11 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
-import com.wavesplatform.block.Block
-import com.wavesplatform.block.serialization.BlockHeaderSerializer
-import com.wavesplatform.network.BasicMessagesRepo.specsByCodes
-import com.wavesplatform.network.message.{Message => ScorexMessage}
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.block.Block
+import com.gicsports.block.serialization.BlockHeaderSerializer
+import com.gicsports.network.BasicMessagesRepo.specsByCodes
+import com.gicsports.network.message.{Message => ScorexMessage}
+import com.gicsports.transaction.Transaction
+import com.gicsports.utils.ScorexLogging
 import io.netty.channel.ChannelHandler.Sharable
 import io.netty.channel.{ChannelDuplexHandler, ChannelHandlerContext, ChannelPromise}
 

@@ -1,4 +1,4 @@
-package com.wavesplatform.utils
+package com.gicsports.utils
 
 import com.google.common.cache.{ForwardingLoadingCache, LoadingCache}
 import monix.reactive.Observer

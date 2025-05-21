@@ -1,4 +1,4 @@
-package com.wavesplatform.transaction.assets.exchange
+package com.gicsports.transaction.assets.exchange
 
 import play.api.libs.json._
 

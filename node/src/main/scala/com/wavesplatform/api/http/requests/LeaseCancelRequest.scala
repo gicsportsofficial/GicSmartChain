@@ -1,10 +1,10 @@
-package com.wavesplatform.api.http.requests
+package com.gicsports.api.http.requests
 
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.Proofs
-import com.wavesplatform.transaction.lease.LeaseCancelTransaction
+import com.gicsports.account.PublicKey
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.Proofs
+import com.gicsports.transaction.lease.LeaseCancelTransaction
 import play.api.libs.functional.syntax._
 import play.api.libs.json._
 
@@ -34,7 +34,7 @@ case class LeaseCancelRequest(
 }
 
 object LeaseCancelRequest {
-  import com.wavesplatform.utils.byteStrFormat
+  import com.gicsports.utils.byteStrFormat
   implicit val jsonFormat: Format[LeaseCancelRequest] = Format(
     ((JsPath \ "version").readNullable[Byte] and
       (JsPath \ "sender").readNullable[String] and

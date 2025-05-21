@@ -1,8 +1,8 @@
-package com.wavesplatform.database
+package com.gicsports.database
 
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.state.Diff
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.state.Diff
 
 trait Storage {
   def append(diff: Diff, carryFee: Long, totalFee: Long, reward: Option[Long], hitSource: ByteStr, block: Block): Unit

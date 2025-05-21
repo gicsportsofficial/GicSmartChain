@@ -1,10 +1,10 @@
-package com.wavesplatform.lang.doc
+package com.gicsports.lang.doc
 
-import com.wavesplatform.DocSource
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.utils.*
-import com.wavesplatform.lang.v1.compiler.Types.CASETYPEREF
-import com.wavesplatform.test.*
+import com.gicsports.DocSource
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.utils.*
+import com.gicsports.lang.v1.compiler.Types.CASETYPEREF
+import com.gicsports.test.*
 import org.scalatest.exceptions.TestFailedException
 
 class ObjectTypesDocTest extends PropSpec {

@@ -1,15 +1,15 @@
-package com.wavesplatform
+package com.gicsports
 
 import scala.util.Try
 import cats.syntax.either._
-import com.wavesplatform.account.PrivateKey
-import com.wavesplatform.block.Block.{TransactionProof, TransactionsMerkleTree}
-import com.wavesplatform.block.validation.Validators._
-import com.wavesplatform.common.merkle.Merkle._
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.protobuf.transaction.PBTransactions
-import com.wavesplatform.settings.GenesisSettings
-import com.wavesplatform.transaction.Transaction
+import com.gicsports.account.PrivateKey
+import com.gicsports.block.Block.{TransactionProof, TransactionsMerkleTree}
+import com.gicsports.block.validation.Validators._
+import com.gicsports.common.merkle.Merkle._
+import com.gicsports.common.state.ByteStr
+import com.gicsports.protobuf.transaction.PBTransactions
+import com.gicsports.settings.GenesisSettings
+import com.gicsports.transaction.Transaction
 
 package object block {
 

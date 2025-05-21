@@ -1,22 +1,22 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
 import com.google.protobuf.ByteString
 import com.typesafe.config.Config
-import com.wavesplatform.account.{Address, KeyPair}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.it.api.SyncGrpcApi.*
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.it.sync.transactions.FailedTransactionSuiteLike
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.FUNCTION_CALL
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.protobuf.Amount
-import com.wavesplatform.protobuf.transaction.DataTransactionData.DataEntry
-import com.wavesplatform.protobuf.transaction.{PBRecipients, PBSignedTransaction, PBTransactions, Recipient}
-import com.wavesplatform.state.{BinaryDataEntry, StringDataEntry}
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.account.{Address, KeyPair}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.it.api.SyncGrpcApi.*
+import com.gicsports.it.sync.*
+import com.gicsports.it.sync.transactions.FailedTransactionSuiteLike
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.FUNCTION_CALL
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.protobuf.Amount
+import com.gicsports.protobuf.transaction.DataTransactionData.DataEntry
+import com.gicsports.protobuf.transaction.{PBRecipients, PBSignedTransaction, PBTransactions, Recipient}
+import com.gicsports.state.{BinaryDataEntry, StringDataEntry}
+import com.gicsports.test.*
+import com.gicsports.transaction.smart.script.ScriptCompiler
 
 class FailedTransactionGrpcSuite extends GrpcBaseTransactionSuite with FailedTransactionSuiteLike[PBSignedTransaction] {
   import FailedTransactionSuiteLike.*

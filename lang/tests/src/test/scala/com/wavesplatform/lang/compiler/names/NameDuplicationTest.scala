@@ -1,9 +1,9 @@
-package com.wavesplatform.lang.compiler.names
+package com.gicsports.lang.compiler.names
 
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.*
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.*
 import org.scalacheck.Gen
 
 class NameDuplicationTest extends FreeSpec {

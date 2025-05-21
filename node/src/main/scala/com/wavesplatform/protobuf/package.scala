@@ -1,9 +1,9 @@
-package com.wavesplatform
+package com.gicsports
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{Address, AddressScheme, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.protobuf.transaction.PBRecipients
+import com.gicsports.account.{Address, AddressScheme, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.protobuf.transaction.PBRecipients
 
 package object protobuf {
   implicit class ByteStrExt(val bs: ByteStr) extends AnyVal {

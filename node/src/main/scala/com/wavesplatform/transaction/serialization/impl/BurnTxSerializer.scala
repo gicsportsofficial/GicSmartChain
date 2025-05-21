@@ -1,11 +1,11 @@
-package com.wavesplatform.transaction.serialization.impl
+package com.gicsports.transaction.serialization.impl
 
 import java.nio.ByteBuffer
 import com.google.common.primitives.{Bytes, Longs}
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.serialization._
-import com.wavesplatform.transaction.assets.BurnTransaction
-import com.wavesplatform.transaction.{Proofs, TxPositiveAmount, TxNonNegativeAmount, TxVersion}
+import com.gicsports.account.AddressScheme
+import com.gicsports.serialization._
+import com.gicsports.transaction.assets.BurnTransaction
+import com.gicsports.transaction.{Proofs, TxPositiveAmount, TxNonNegativeAmount, TxVersion}
 import monix.eval.Coeval
 import play.api.libs.json.{JsObject, Json}
 

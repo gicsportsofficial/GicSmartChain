@@ -1,8 +1,8 @@
-package com.wavesplatform.it
+package com.gicsports.it
 
-import com.wavesplatform.account.{Address, AddressOrAlias, Alias}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.v1.traits.domain.Recipient
+import com.gicsports.account.{Address, AddressOrAlias, Alias}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.v1.traits.domain.Recipient
 
 package object util {
   implicit class AddressOrAliasExt(val a: AddressOrAlias) extends AnyVal {

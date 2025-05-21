@@ -1,15 +1,15 @@
-package com.wavesplatform.api.grpc
+package com.gicsports.api.grpc
 
 import com.google.protobuf.empty.Empty
-import com.wavesplatform.api.BlockMeta
-import com.wavesplatform.api.common.CommonBlocksApi
-import com.wavesplatform.api.grpc.BlockRangeRequest.Filter
-import com.wavesplatform.api.grpc.BlockRequest.Request
-import com.wavesplatform.api.http.ApiError.BlockDoesNotExist
-import com.wavesplatform.protobuf._
-import com.wavesplatform.protobuf.block.PBBlock
-import com.wavesplatform.state.TxMeta
-import com.wavesplatform.transaction.Transaction
+import com.gicsports.api.BlockMeta
+import com.gicsports.api.common.CommonBlocksApi
+import com.gicsports.api.grpc.BlockRangeRequest.Filter
+import com.gicsports.api.grpc.BlockRequest.Request
+import com.gicsports.api.http.ApiError.BlockDoesNotExist
+import com.gicsports.protobuf._
+import com.gicsports.protobuf.block.PBBlock
+import com.gicsports.state.TxMeta
+import com.gicsports.transaction.Transaction
 import io.grpc.stub.StreamObserver
 import monix.execution.Scheduler
 

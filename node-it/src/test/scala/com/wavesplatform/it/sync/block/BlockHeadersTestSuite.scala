@@ -1,11 +1,11 @@
-package com.wavesplatform.it.sync.block
+package com.gicsports.it.sync.block
 
 import com.typesafe.config.Config
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.api._
-import com.wavesplatform.it.transactions.NodesFromDocker
-import com.wavesplatform.it.{Node, NodeConfigs, TransferSending}
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.api._
+import com.gicsports.it.transactions.NodesFromDocker
+import com.gicsports.it.{Node, NodeConfigs, TransferSending}
 import org.scalactic.source.Position
 import org.scalatest._
 
@@ -30,7 +30,7 @@ class BlockHeadersTestSuite
     NodeConfigs.newBuilder
       .overrideBase(
         _.raw(
-          s"""CARDIUM {
+          s"""GIC {
            |  blockchain.custom.functionality {
            |    pre-activated-features = {
            |      ${BlockchainFeatures.BlockReward.id} = $activationHeight

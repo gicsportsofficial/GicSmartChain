@@ -1,21 +1,21 @@
-package com.wavesplatform.transaction.smart.script.trace
+package com.gicsports.transaction.smart.script.trace
 
 import cats.Id
-import com.wavesplatform.account.{Address, AddressOrAlias}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.{CommonError, ValidationError}
-import com.wavesplatform.lang.v1.compiler.Terms.FUNCTION_CALL
-import com.wavesplatform.lang.v1.evaluator.EvaluatorV2.LogKeys
-import com.wavesplatform.lang.v1.evaluator.{Log, ScriptResult}
-import com.wavesplatform.serialization.ScriptValuesJson
-import com.wavesplatform.state.InvokeScriptResult
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TransactionBase
-import com.wavesplatform.transaction.TxValidationError.{FailedTransactionError, ScriptExecutionError, TransactionNotAllowedByScript}
-import com.wavesplatform.transaction.assets.*
-import com.wavesplatform.transaction.assets.exchange.ExchangeTransaction
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.transfer.{MassTransferTransaction, TransferTransaction}
+import com.gicsports.account.{Address, AddressOrAlias}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.{CommonError, ValidationError}
+import com.gicsports.lang.v1.compiler.Terms.FUNCTION_CALL
+import com.gicsports.lang.v1.evaluator.EvaluatorV2.LogKeys
+import com.gicsports.lang.v1.evaluator.{Log, ScriptResult}
+import com.gicsports.serialization.ScriptValuesJson
+import com.gicsports.state.InvokeScriptResult
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TransactionBase
+import com.gicsports.transaction.TxValidationError.{FailedTransactionError, ScriptExecutionError, TransactionNotAllowedByScript}
+import com.gicsports.transaction.assets.*
+import com.gicsports.transaction.assets.exchange.ExchangeTransaction
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.transfer.{MassTransferTransaction, TransferTransaction}
 import play.api.libs.json.Json.JsValueWrapper
 import play.api.libs.json.*
 

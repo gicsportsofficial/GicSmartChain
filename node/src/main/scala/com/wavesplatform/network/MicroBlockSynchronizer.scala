@@ -1,14 +1,14 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
 import java.util.concurrent.TimeUnit
 
 import com.google.common.cache.{Cache, CacheBuilder}
-import com.wavesplatform.block.Block.BlockId
-import com.wavesplatform.block.MicroBlock
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.metrics.BlockStats
-import com.wavesplatform.settings.SynchronizationSettings.MicroblockSynchronizerSettings
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.block.Block.BlockId
+import com.gicsports.block.MicroBlock
+import com.gicsports.common.state.ByteStr
+import com.gicsports.metrics.BlockStats
+import com.gicsports.settings.SynchronizationSettings.MicroblockSynchronizerSettings
+import com.gicsports.utils.ScorexLogging
 import io.netty.channel.*
 import monix.eval.{Coeval, Task}
 import monix.execution.CancelableFuture

@@ -1,4 +1,4 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import akka.NotUsed
 import akka.http.scaladsl.marshalling.{ToResponseMarshallable, ToResponseMarshaller}

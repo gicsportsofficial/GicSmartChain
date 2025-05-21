@@ -1,11 +1,11 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.account.{Address, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.lease.LeaseTransaction
-import com.wavesplatform.transaction.serialization.impl.LeaseTxSerializer
+import com.gicsports.account.{Address, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.lease.LeaseTransaction
+import com.gicsports.transaction.serialization.impl.LeaseTxSerializer
 import play.api.libs.json.Json
 
 class LeaseTransactionSpecification extends PropSpec {

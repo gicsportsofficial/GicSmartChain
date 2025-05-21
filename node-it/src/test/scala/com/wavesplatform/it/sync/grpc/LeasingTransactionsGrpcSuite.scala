@@ -1,20 +1,20 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.api.grpc.LeaseResponse
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncGrpcApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.protobuf.transaction.{PBRecipients, PBTransactions, Recipient}
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.transaction.lease.LeaseTransaction
+import com.gicsports.api.grpc.LeaseResponse
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncGrpcApi._
+import com.gicsports.it.sync._
+import com.gicsports.protobuf.transaction.{PBRecipients, PBTransactions, Recipient}
+import com.gicsports.test._
+import com.gicsports.transaction.Transaction
+import com.gicsports.transaction.lease.LeaseTransaction
 import io.grpc.Status.Code
 
 class LeasingTransactionsGrpcSuite extends GrpcBaseTransactionSuite {
   private val errorMessage = "Reason: Cannot lease more than own"
 
-  test("leasing CARDIUM decreases lessor's eff.b. and increases lessee's eff.b.; lessor pays fee") {
+  test("leasing GIC decreases lessor's eff.b. and increases lessee's eff.b.; lessor pays fee") {
     for (v <- leaseTxSupportedVersions) {
       val firstBalance  = sender.wavesBalance(firstAddress)
       val secondBalance = sender.wavesBalance(secondAddress)
@@ -37,7 +37,7 @@ class LeasingTransactionsGrpcSuite extends GrpcBaseTransactionSuite {
     }
   }
 
-  test("cannot lease non-own CARDIUM") {
+  test("cannot lease non-own GIC") {
     for (v <- leaseTxSupportedVersions) {
       val leaseTx   = sender.broadcastLease(firstAcc, PBRecipients.create(secondAcc.toAddress), leasingAmount, minFee, version = v, waitForTx = true)
       val vanillaTx = PBTransactions.vanilla(leaseTx, unsafe = false).explicitGet()

@@ -1,4 +1,4 @@
-package com.wavesplatform.generator
+package com.gicsports.generator
 
 import java.net.{InetSocketAddress, URL}
 import java.time.LocalDateTime
@@ -7,10 +7,10 @@ import java.time.temporal.ChronoUnit
 import cats.Show
 import cats.effect.concurrent.Ref
 import cats.syntax.flatMap.*
-import com.wavesplatform.generator.Worker.{EmptyState, Settings, SkipState, State}
-import com.wavesplatform.network.client.NetworkSender
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.generator.Worker.{EmptyState, Settings, SkipState, State}
+import com.gicsports.network.client.NetworkSender
+import com.gicsports.transaction.Transaction
+import com.gicsports.utils.ScorexLogging
 import io.netty.channel.Channel
 import monix.eval.Task
 import monix.execution.Scheduler

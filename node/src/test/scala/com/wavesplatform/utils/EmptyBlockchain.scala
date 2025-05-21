@@ -1,17 +1,17 @@
-package com.wavesplatform.utils
+package com.gicsports.utils
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.account.{Address, Alias}
-import com.wavesplatform.block.SignedBlockHeader
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.settings.BlockchainSettings
-import com.wavesplatform.state._
-import com.wavesplatform.state.reader.LeaseDetails
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.transfer.TransferTransactionLike
-import com.wavesplatform.transaction.{Asset, ERC20Address, Transaction}
+import com.gicsports.account.{Address, Alias}
+import com.gicsports.block.SignedBlockHeader
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.settings.BlockchainSettings
+import com.gicsports.state._
+import com.gicsports.state.reader.LeaseDetails
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.transfer.TransferTransactionLike
+import com.gicsports.transaction.{Asset, ERC20Address, Transaction}
 
 trait EmptyBlockchain extends Blockchain {
   override lazy val settings: BlockchainSettings = BlockchainSettings.fromRootConfig(ConfigFactory.load())

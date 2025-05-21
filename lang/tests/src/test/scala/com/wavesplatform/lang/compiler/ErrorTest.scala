@@ -1,18 +1,18 @@
-package com.wavesplatform.lang.compiler
+package com.gicsports.lang.compiler
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.Common.multiplierFunction
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.directives.values.V5
-import com.wavesplatform.lang.v1.compiler.{ExpressionCompiler, TestCompiler}
-import com.wavesplatform.lang.v1.parser.BinaryOperation.SUM_OP
-import com.wavesplatform.lang.v1.parser.Expressions
-import com.wavesplatform.lang.v1.parser.Expressions.Pos.AnyPos
-import com.wavesplatform.test._
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.Common.multiplierFunction
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.directives.values.V5
+import com.gicsports.lang.v1.compiler.{ExpressionCompiler, TestCompiler}
+import com.gicsports.lang.v1.parser.BinaryOperation.SUM_OP
+import com.gicsports.lang.v1.parser.Expressions
+import com.gicsports.lang.v1.parser.Expressions.Pos.AnyPos
+import com.gicsports.test._
 
 class ErrorTest extends PropSpec {
 
-  import com.wavesplatform.lang.v1.parser.Expressions._
+  import com.gicsports.lang.v1.parser.Expressions._
 
   errorTests(
     "can't define LET with the same name as predefined constant" -> "already defined in the scope" -> BLOCK(

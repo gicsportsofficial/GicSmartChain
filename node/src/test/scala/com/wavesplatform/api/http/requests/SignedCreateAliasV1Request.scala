@@ -1,8 +1,8 @@
-package com.wavesplatform.api.http.requests
+package com.gicsports.api.http.requests
 
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.{CreateAliasTransaction, Proofs}
+import com.gicsports.account.PublicKey
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.{CreateAliasTransaction, Proofs}
 import play.api.libs.json.{Format, Json}
 
 case class SignedCreateAliasV1Request(

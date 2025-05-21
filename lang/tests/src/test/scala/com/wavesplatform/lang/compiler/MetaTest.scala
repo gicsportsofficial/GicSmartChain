@@ -1,13 +1,13 @@
-package com.wavesplatform.lang.compiler
+package com.gicsports.lang.compiler
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.lang.contract.meta.{MetaMapper, ParsedMeta}
-import com.wavesplatform.lang.directives.values.{V3, V4}
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.compiler.Types.*
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.protobuf.dapp.DAppMeta.CallableFuncSignature
-import com.wavesplatform.test.*
+import com.gicsports.lang.contract.meta.{MetaMapper, ParsedMeta}
+import com.gicsports.lang.directives.values.{V3, V4}
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.compiler.Types.*
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.protobuf.dapp.DAppMeta.CallableFuncSignature
+import com.gicsports.test.*
 import org.scalatest.Inside
 
 class MetaTest extends PropSpec with Inside {

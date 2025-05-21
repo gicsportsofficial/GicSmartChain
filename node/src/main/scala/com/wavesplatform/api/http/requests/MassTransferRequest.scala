@@ -1,7 +1,7 @@
-package com.wavesplatform.api.http.requests
+package com.gicsports.api.http.requests
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.Transfer
+import com.gicsports.common.state.ByteStr
+import com.gicsports.transaction.transfer.MassTransferTransaction.Transfer
 import play.api.libs.json.Json
 
 case class MassTransferRequest(

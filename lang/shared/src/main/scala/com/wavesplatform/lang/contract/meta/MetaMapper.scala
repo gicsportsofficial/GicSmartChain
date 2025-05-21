@@ -1,10 +1,10 @@
-package com.wavesplatform.lang.contract.meta
+package com.gicsports.lang.contract.meta
 
 import cats.data.OptionT
 import cats.instances.either.*
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.v1.compiler.Types.FINAL
-import com.wavesplatform.protobuf.dapp.DAppMeta
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.v1.compiler.Types.FINAL
+import com.gicsports.protobuf.dapp.DAppMeta
 
 object MetaMapper {
   def toProto[V <: MetaVersion](version: V)(data: List[List[FINAL]], nameMap: Map[String, String] = Map.empty): Either[String, DAppMeta] =

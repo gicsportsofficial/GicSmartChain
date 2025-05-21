@@ -1,16 +1,16 @@
-package com.wavesplatform.state.diffs.ci
-import com.wavesplatform.TestValues.invokeFee
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.LeaseBalance
-import com.wavesplatform.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
-import com.wavesplatform.test.{PropSpec, produce}
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TransactionType
-import com.wavesplatform.transaction.TxHelpers.*
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
+package com.gicsports.state.diffs.ci
+import com.gicsports.TestValues.invokeFee
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.LeaseBalance
+import com.gicsports.state.diffs.FeeValidation.{FeeConstants, FeeUnit}
+import com.gicsports.test.{PropSpec, produce}
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TransactionType
+import com.gicsports.transaction.TxHelpers.*
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
 
 class InvokePaymentsTest extends PropSpec with WithDomain {
   import DomainPresets.*
@@ -91,9 +91,9 @@ class InvokePaymentsTest extends PropSpec with WithDomain {
       )
       d.appendAndAssertFailed(
         invoke(invoker = invoker, func = Some("complex"), payments = Seq(Payment(1, Waves))),
-        "negative CARDIUM balance"
+        "negative GIC balance"
       )
-      d.appendBlockE(invoke(invoker = invoker, payments = Seq(Payment(1, Waves)))) should produce(s"negative CARDIUM balance")
+      d.appendBlockE(invoke(invoker = invoker, payments = Seq(Payment(1, Waves)))) should produce(s"negative GIC balance")
     }
   }
 
@@ -109,7 +109,7 @@ class InvokePaymentsTest extends PropSpec with WithDomain {
       d.appendBlock(setScript(secondSigner, dApp))
       d.appendBlock(lease(recipient = invoker.toAddress, amount = 1))
       d.blockchain.leaseBalance(invoker.toAddress) shouldBe LeaseBalance(1, 0)
-      d.appendBlockE(invoke(invoker = invoker, payments = Seq(Payment(1, Waves)))) should produce(s"negative CARDIUM balance")
+      d.appendBlockE(invoke(invoker = invoker, payments = Seq(Payment(1, Waves)))) should produce(s"negative GIC balance")
     }
   }
 

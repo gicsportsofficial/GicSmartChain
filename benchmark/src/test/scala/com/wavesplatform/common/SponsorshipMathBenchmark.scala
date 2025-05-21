@@ -1,7 +1,7 @@
-package com.wavesplatform.common
+package com.gicsports.common
 import java.util.concurrent.TimeUnit
 
-import com.wavesplatform.state.diffs.FeeValidation
+import com.gicsports.state.diffs.FeeValidation
 import org.openjdk.jmh.annotations._
 import org.openjdk.jmh.infra.Blackhole
 

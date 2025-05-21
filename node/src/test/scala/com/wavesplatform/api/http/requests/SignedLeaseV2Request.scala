@@ -1,11 +1,11 @@
-package com.wavesplatform.api.http.requests
+package com.gicsports.api.http.requests
 
 import cats.instances.list._
 import cats.syntax.traverse._
-import com.wavesplatform.account.{AddressOrAlias, PublicKey}
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.Proofs
-import com.wavesplatform.transaction.lease.LeaseTransaction
+import com.gicsports.account.{AddressOrAlias, PublicKey}
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.Proofs
+import com.gicsports.transaction.lease.LeaseTransaction
 import play.api.libs.json.{Format, Json}
 
 case class SignedLeaseV2Request(senderPublicKey: String, amount: Long, fee: Long, recipient: String, timestamp: Long, proofs: List[String]) {

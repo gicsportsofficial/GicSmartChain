@@ -1,13 +1,13 @@
-package com.wavesplatform.transaction.smart
+package com.gicsports.transaction.smart
 
-import com.wavesplatform.account.*
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.serialization.impl.SetScriptTxSerializer
-import com.wavesplatform.transaction.validation.TxValidator
-import com.wavesplatform.transaction.validation.impl.SetScriptTxValidator
+import com.gicsports.account.*
+import com.gicsports.crypto
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.script.Script
+import com.gicsports.transaction.*
+import com.gicsports.transaction.serialization.impl.SetScriptTxSerializer
+import com.gicsports.transaction.validation.TxValidator
+import com.gicsports.transaction.validation.impl.SetScriptTxValidator
 import monix.eval.Coeval
 import play.api.libs.json.JsObject
 

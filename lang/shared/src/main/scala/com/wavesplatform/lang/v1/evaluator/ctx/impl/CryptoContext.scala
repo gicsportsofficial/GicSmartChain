@@ -1,20 +1,20 @@
-package com.wavesplatform.lang.v1.evaluator.ctx.impl
+package com.gicsports.lang.v1.evaluator.ctx.impl
 
 import cats.implicits._
 import cats.{Id, Monad}
-import com.wavesplatform.common.merkle.Merkle.createRoot
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.{ExecutionError, CommonError}
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V3, _}
-import com.wavesplatform.lang.v1.compiler.Terms._
-import com.wavesplatform.lang.v1.compiler.Types._
-import com.wavesplatform.lang.v1.compiler.{CompilerContext, Terms}
-import com.wavesplatform.lang.v1.evaluator.Contextful.NoContext
-import com.wavesplatform.lang.v1.evaluator.ContextfulVal
-import com.wavesplatform.lang.v1.evaluator.FunctionIds._
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.crypto.RSA.DigestAlgorithm
-import com.wavesplatform.lang.v1.evaluator.ctx.{BaseFunction, EvaluationContext, NativeFunction}
-import com.wavesplatform.lang.v1.{BaseGlobal, CTX}
+import com.gicsports.common.merkle.Merkle.createRoot
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.{ExecutionError, CommonError}
+import com.gicsports.lang.directives.values.{StdLibVersion, V3, _}
+import com.gicsports.lang.v1.compiler.Terms._
+import com.gicsports.lang.v1.compiler.Types._
+import com.gicsports.lang.v1.compiler.{CompilerContext, Terms}
+import com.gicsports.lang.v1.evaluator.Contextful.NoContext
+import com.gicsports.lang.v1.evaluator.ContextfulVal
+import com.gicsports.lang.v1.evaluator.FunctionIds._
+import com.gicsports.lang.v1.evaluator.ctx.impl.crypto.RSA.DigestAlgorithm
+import com.gicsports.lang.v1.evaluator.ctx.{BaseFunction, EvaluationContext, NativeFunction}
+import com.gicsports.lang.v1.{BaseGlobal, CTX}
 
 import scala.collection.mutable
 
@@ -30,7 +30,7 @@ object CryptoContext {
     UNION.create(rsaHashAlgs(v), if (v > V3 && v < V6) Some("RsaDigestAlgs") else None)
 
   private val rsaHashLib = {
-    import com.wavesplatform.lang.v1.evaluator.ctx.impl.crypto.RSA._
+    import com.gicsports.lang.v1.evaluator.ctx.impl.crypto.RSA._
     rsaTypeNames.zip(List(NONE, MD5, SHA1, SHA224, SHA256, SHA384, SHA512, SHA3224, SHA3256, SHA3384, SHA3512)).toMap
   }
 

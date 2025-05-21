@@ -1,12 +1,12 @@
-package com.wavesplatform.database
+package com.gicsports.database
 
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.utils.ScorexLogging
 import org.iq80.leveldb.DBFactory
 
 import scala.util.Try
 
 object LevelDBFactory extends ScorexLogging {
-  private[this] val jnaFactory  = "com.wavesplatform.database.jna.LevelDBJNADBFactory"
+  private[this] val jnaFactory  = "com.gicsports.database.jna.LevelDBJNADBFactory"
   private[this] val javaFactory = "org.iq80.leveldb.impl.Iq80DBFactory"
 
   lazy val factory: DBFactory = {

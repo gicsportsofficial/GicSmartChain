@@ -1,6 +1,6 @@
-package com.wavesplatform.lang.v1.repl.node.http.response.model
+package com.gicsports.lang.v1.repl.node.http.response.model
 
-import com.wavesplatform.lang.v1.traits.DataType
+import com.gicsports.lang.v1.traits.DataType
 import io.circe.{Decoder, DecodingFailure, HCursor}
 
 private[node] case class DataEntry(key: String, value: Any, `type`: DataType)

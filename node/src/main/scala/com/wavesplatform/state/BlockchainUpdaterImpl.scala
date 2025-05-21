@@ -1,28 +1,28 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import cats.syntax.either.*
 import cats.syntax.option.*
-import com.wavesplatform.account.{Address, Alias}
-import com.wavesplatform.api.BlockMeta
-import com.wavesplatform.block.Block.BlockId
-import com.wavesplatform.block.{Block, MicroBlock, SignedBlockHeader}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.database.Storage
-import com.wavesplatform.events.BlockchainUpdateTriggers
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.features.BlockchainFeatures.ConsensusImprovements
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.metrics.{TxsInBlockchainStats, *}
-import com.wavesplatform.mining.{Miner, MiningConstraint, MiningConstraints}
-import com.wavesplatform.settings.{BlockchainSettings, WavesSettings}
-import com.wavesplatform.state.diffs.BlockDiffer
-import com.wavesplatform.state.reader.{CompositeBlockchain, LeaseDetails}
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.{BlockAppendError, GenericError, MicroBlockAppendError}
-import com.wavesplatform.transaction.lease.*
-import com.wavesplatform.transaction.transfer.TransferTransactionLike
-import com.wavesplatform.utils.{ScorexLogging, Time, UnsupportedFeature, forceStopApplication}
+import com.gicsports.account.{Address, Alias}
+import com.gicsports.api.BlockMeta
+import com.gicsports.block.Block.BlockId
+import com.gicsports.block.{Block, MicroBlock, SignedBlockHeader}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.database.Storage
+import com.gicsports.events.BlockchainUpdateTriggers
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.features.BlockchainFeatures.ConsensusImprovements
+import com.gicsports.lang.ValidationError
+import com.gicsports.metrics.{TxsInBlockchainStats, *}
+import com.gicsports.mining.{Miner, MiningConstraint, MiningConstraints}
+import com.gicsports.settings.{BlockchainSettings, WavesSettings}
+import com.gicsports.state.diffs.BlockDiffer
+import com.gicsports.state.reader.{CompositeBlockchain, LeaseDetails}
+import com.gicsports.transaction.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.{BlockAppendError, GenericError, MicroBlockAppendError}
+import com.gicsports.transaction.lease.*
+import com.gicsports.transaction.transfer.TransferTransactionLike
+import com.gicsports.utils.{ScorexLogging, Time, UnsupportedFeature, forceStopApplication}
 import kamon.Kamon
 import monix.reactive.subjects.ReplaySubject
 import monix.reactive.{Observable, Observer}
@@ -42,7 +42,7 @@ class BlockchainUpdaterImpl(
     with NG
     with ScorexLogging {
 
-  import com.wavesplatform.state.BlockchainUpdaterImpl.*
+  import com.gicsports.state.BlockchainUpdaterImpl.*
   import wavesSettings.blockchainSettings.functionalitySettings
 
   private def inLock[R](l: Lock, f: => R): R = {

@@ -1,12 +1,12 @@
-package com.wavesplatform.api.common
+package com.gicsports.api.common
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.api.common.CommonAssetsApi.AssetInfo
-import com.wavesplatform.crypto
-import com.wavesplatform.database.{AddressId, KeyTags}
-import com.wavesplatform.state.{AssetDescription, Blockchain, Diff, Portfolio}
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.assets.IssueTransaction
+import com.gicsports.account.Address
+import com.gicsports.api.common.CommonAssetsApi.AssetInfo
+import com.gicsports.crypto
+import com.gicsports.database.{AddressId, KeyTags}
+import com.gicsports.state.{AssetDescription, Blockchain, Diff, Portfolio}
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.assets.IssueTransaction
 import monix.reactive.Observable
 import org.iq80.leveldb.DB
 

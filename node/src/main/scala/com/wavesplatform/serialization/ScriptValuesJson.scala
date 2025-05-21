@@ -1,7 +1,7 @@
-package com.wavesplatform.serialization
+package com.gicsports.serialization
 
-import com.wavesplatform.api.http.ApiError
-import com.wavesplatform.lang.v1.compiler.Terms._
+import com.gicsports.api.http.ApiError
+import com.gicsports.lang.v1.compiler.Terms._
 import play.api.libs.json.{JsObject, Json}
 
 object ScriptValuesJson {

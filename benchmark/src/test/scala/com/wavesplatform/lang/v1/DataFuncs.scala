@@ -1,10 +1,10 @@
-package com.wavesplatform.lang.v1
+package com.gicsports.lang.v1
 
 import java.util.concurrent.TimeUnit
 
-import com.wavesplatform.common.utils._
-import com.wavesplatform.lang.v1.DataFuncs._
-import com.wavesplatform.lang.v1.EnvironmentFunctionsBenchmark.randomBytes
+import com.gicsports.common.utils._
+import com.gicsports.lang.v1.DataFuncs._
+import com.gicsports.lang.v1.EnvironmentFunctionsBenchmark.randomBytes
 import org.openjdk.jmh.annotations._
 import org.openjdk.jmh.infra.Blackhole
 

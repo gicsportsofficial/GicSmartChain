@@ -1,13 +1,13 @@
-package com.wavesplatform.lagonaki.unit
+package com.gicsports.lagonaki.unit
 
 import java.io.File
 import java.nio.file.Files
 
 import cats.syntax.option._
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.settings.WalletSettings
-import com.wavesplatform.test.FunSuite
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.common.state.ByteStr
+import com.gicsports.settings.WalletSettings
+import com.gicsports.test.FunSuite
+import com.gicsports.wallet.Wallet
 
 class WalletSpecification extends FunSuite {
 

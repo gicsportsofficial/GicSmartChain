@@ -1,20 +1,20 @@
-package com.wavesplatform.it.sync.smartcontract
+package com.gicsports.it.sync.smartcontract
 
 import com.typesafe.config.Config
-import com.wavesplatform.api.http.ApiError._
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.NodeConfigs.Default
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.api.http.ApiError._
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.NodeConfigs.Default
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.transaction.Asset
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import org.scalatest.{Assertion, CancelAfterFailure}
 
 import scala.concurrent.duration._
@@ -141,7 +141,7 @@ class RideV4ActivationSuite extends BaseTransactionSuite with CancelAfterFailure
 
     assertApiError(sender.reissue(callerAcc, issuedAssetId, someAssetAmount, reissuable = true, fee = reissueReducedFee)) { error =>
       error.id shouldBe StateCheckFailed.Id
-      error.message should include(s"Fee for ReissueTransaction ($reissueReducedFee in CARDIUM) does not exceed minimal value of $reissueFee CARDIUM.")
+      error.message should include(s"Fee for ReissueTransaction ($reissueReducedFee in GIC) does not exceed minimal value of $reissueFee GIC.")
     }
   }
 
@@ -357,7 +357,7 @@ class RideV4ActivationSuite extends BaseTransactionSuite with CancelAfterFailure
     assertApiError(
       sender.invokeScript(callerAcc, smartAccV4.toAddress.toString, Some("payBack"), payment = Seq(Payment(balance + 1, Waves)))
     ) { error =>
-      error.message should include("Transaction application leads to negative CARDIUM balance")
+      error.message should include("Transaction application leads to negative GIC balance")
       error.id shouldBe StateCheckFailed.Id
       error.statusCode shouldBe 400
     }

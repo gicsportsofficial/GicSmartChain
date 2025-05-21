@@ -1,19 +1,19 @@
-package com.wavesplatform.it
+package com.gicsports.it
 
 import java.util.concurrent.ThreadLocalRandom
 
 import com.google.common.primitives.Ints
 import com.typesafe.config.Config
-import com.wavesplatform.account._
-import com.wavesplatform.api.http.requests.TransferRequest
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.it.TransferSending.Req
-import com.wavesplatform.it.api.AsyncHttpApi._
-import com.wavesplatform.it.api.Transaction
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.transfer._
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.account._
+import com.gicsports.api.http.requests.TransferRequest
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.it.TransferSending.Req
+import com.gicsports.it.api.AsyncHttpApi._
+import com.gicsports.it.api.Transaction
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.transfer._
+import com.gicsports.utils.ScorexLogging
 import org.scalatest.Suite
 import play.api.libs.json.Json.toJson
 import play.api.libs.json.{JsObject, Json}

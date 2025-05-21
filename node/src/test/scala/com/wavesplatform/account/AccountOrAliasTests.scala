@@ -1,7 +1,7 @@
-package com.wavesplatform.account
+package com.gicsports.account
 
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.test.PropSpec
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.test.PropSpec
 import org.scalatest.Inside
 
 class AccountOrAliasTests extends PropSpec with Inside {

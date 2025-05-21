@@ -1,19 +1,19 @@
-package com.wavesplatform.database
+package com.gicsports.database
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.directives.values.{V2, V5}
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_BOOLEAN
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.settings.{GenesisTransactionSettings, WavesSettings}
-import com.wavesplatform.test.*
-import com.wavesplatform.test.DomainPresets.*
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.transaction.TxValidationError.AliasDoesNotExist
-import com.wavesplatform.transaction.smart.SetScriptTransaction
+import com.gicsports.account.KeyPair
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.directives.values.{V2, V5}
+import com.gicsports.lang.v1.compiler.Terms.CONST_BOOLEAN
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.settings.{GenesisTransactionSettings, WavesSettings}
+import com.gicsports.test.*
+import com.gicsports.test.DomainPresets.*
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.transaction.TxValidationError.AliasDoesNotExist
+import com.gicsports.transaction.smart.SetScriptTransaction
 
 class LevelDBWriterSpec extends FreeSpec with WithDomain {
   "Slice" - {

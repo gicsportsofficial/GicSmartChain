@@ -1,8 +1,8 @@
-package com.wavesplatform.mining
+package com.gicsports.mining
 
-import com.wavesplatform.state.{Blockchain, Diff}
-import com.wavesplatform.test.FreeSpec
-import com.wavesplatform.transaction.Transaction
+import com.gicsports.state.{Blockchain, Diff}
+import com.gicsports.test.FreeSpec
+import com.gicsports.transaction.Transaction
 import org.scalacheck.Gen
 import org.scalamock.scalatest.PathMockFactory
 

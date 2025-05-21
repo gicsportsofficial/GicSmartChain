@@ -1,7 +1,7 @@
-package com.wavesplatform.lang
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.v1.compiler.Terms.*
+package com.gicsports.lang
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.v1.compiler.Terms.*
 
 object Testing {
 

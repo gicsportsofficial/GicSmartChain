@@ -1,9 +1,9 @@
-package com.wavesplatform.features
+package com.gicsports.features
 
-import com.wavesplatform.block.Block
-import com.wavesplatform.settings.{BlockchainSettings, FunctionalitySettings, GenesisSettings, RewardsSettings}
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.test.FlatSpec
+import com.gicsports.block.Block
+import com.gicsports.settings.{BlockchainSettings, FunctionalitySettings, GenesisSettings, RewardsSettings}
+import com.gicsports.state.Blockchain
+import com.gicsports.test.FlatSpec
 import org.scalacheck.Gen
 import org.scalamock.scalatest.MockFactory
 

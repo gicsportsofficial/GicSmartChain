@@ -1,11 +1,11 @@
-package com.wavesplatform.transaction.smart.script
+package com.gicsports.transaction.smart.script
 
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.ContractScript.ContractScriptImpl
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.script.v1.ExprScript.ExprScriptImpl
-import com.wavesplatform.lang.v1.estimator.ScriptEstimator
-import com.wavesplatform.lang.{API, CompileResult}
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.ContractScript.ContractScriptImpl
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.script.v1.ExprScript.ExprScriptImpl
+import com.gicsports.lang.v1.estimator.ScriptEstimator
+import com.gicsports.lang.{API, CompileResult}
 
 object ScriptCompiler {
   @Deprecated

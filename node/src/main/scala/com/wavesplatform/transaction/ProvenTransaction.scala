@@ -1,4 +1,4 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 trait ProvenTransaction extends Proven { this: Transaction =>
 

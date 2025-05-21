@@ -1,26 +1,26 @@
-package com.wavesplatform.lang.compiler
+package com.gicsports.lang.compiler
 
 import cats.kernel.Monoid
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.lang.Global
-import com.wavesplatform.lang.contract.DApp
-import com.wavesplatform.lang.contract.DApp.*
-import com.wavesplatform.lang.directives.{DirectiveDictionary, DirectiveSet}
-import com.wavesplatform.lang.directives.values.{DApp as DAppType, *}
-import com.wavesplatform.lang.v1.FunctionHeader.{Native, User}
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.Types.*
-import com.wavesplatform.lang.v1.compiler.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.WavesContext
-import com.wavesplatform.lang.v1.parser.BinaryOperation.NE_OP
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.v1.{FunctionHeader, compiler}
-import com.wavesplatform.lang.utils.getDecompilerContext
-import com.wavesplatform.protobuf.dapp.DAppMeta
-import com.wavesplatform.test.PropSpec
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.lang.Global
+import com.gicsports.lang.contract.DApp
+import com.gicsports.lang.contract.DApp.*
+import com.gicsports.lang.directives.{DirectiveDictionary, DirectiveSet}
+import com.gicsports.lang.directives.values.{DApp as DAppType, *}
+import com.gicsports.lang.v1.FunctionHeader.{Native, User}
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.Types.*
+import com.gicsports.lang.v1.compiler.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.WavesContext
+import com.gicsports.lang.v1.parser.BinaryOperation.NE_OP
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.v1.{FunctionHeader, compiler}
+import com.gicsports.lang.utils.getDecompilerContext
+import com.gicsports.protobuf.dapp.DAppMeta
+import com.gicsports.test.PropSpec
 import org.scalatest.Assertion
 
 class DecompilerTest extends PropSpec {

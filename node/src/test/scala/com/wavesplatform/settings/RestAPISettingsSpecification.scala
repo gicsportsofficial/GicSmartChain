@@ -1,8 +1,8 @@
-package com.wavesplatform.settings
+package com.gicsports.settings
 
 import akka.http.scaladsl.model.HttpMethods.*
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.test.FlatSpec
+import com.gicsports.test.FlatSpec
 import net.ceedubs.ficus.Ficus.*
 import net.ceedubs.ficus.readers.ArbitraryTypeReader.*
 
@@ -10,7 +10,7 @@ class RestAPISettingsSpecification extends FlatSpec {
   "RestAPISettings" should "read values" in {
     val config = ConfigFactory.parseString(
       """
-        |CARDIUM {
+        |GIC {
         |  rest-api {
         |    enable: yes
         |    bind-address: "127.0.0.1"
@@ -35,7 +35,7 @@ class RestAPISettingsSpecification extends FlatSpec {
         |}
       """.stripMargin
     )
-    val settings = config.as[RestAPISettings]("CARDIUM.rest-api")
+    val settings = config.as[RestAPISettings]("GIC.rest-api")
 
     settings.enable should be(true)
     settings.bindAddress should be("127.0.0.1")

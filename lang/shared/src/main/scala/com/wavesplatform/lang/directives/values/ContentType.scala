@@ -1,6 +1,6 @@
-package com.wavesplatform.lang.directives.values
+package com.gicsports.lang.directives.values
 
-import com.wavesplatform.lang.directives.DirectiveDictionary
+import com.gicsports.lang.directives.DirectiveDictionary
 
 sealed abstract class ContentType(text: String, id: Int) extends DirectiveValue(text, id) {
   override val value: Any = text

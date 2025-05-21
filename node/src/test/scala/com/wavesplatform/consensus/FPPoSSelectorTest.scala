@@ -1,24 +1,24 @@
-package com.wavesplatform.consensus
+package com.gicsports.consensus
 
 import java.nio.file.Files
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.database.LevelDBFactory
-import com.wavesplatform.db.DBCacheSettings
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.settings.{WavesSettings, _}
-import com.wavesplatform.state._
-import com.wavesplatform.state.diffs.ENOUGH_AMT
-import com.wavesplatform.state.utils.TestLevelDB
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.{BlockchainUpdater, GenesisTransaction}
-import com.wavesplatform.utils.Time
-import com.wavesplatform.{TestHelpers, WithDB, crypto}
+import com.gicsports.account.KeyPair
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.database.LevelDBFactory
+import com.gicsports.db.DBCacheSettings
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.settings.{WavesSettings, _}
+import com.gicsports.state._
+import com.gicsports.state.diffs.ENOUGH_AMT
+import com.gicsports.state.utils.TestLevelDB
+import com.gicsports.test._
+import com.gicsports.transaction.{BlockchainUpdater, GenesisTransaction}
+import com.gicsports.utils.Time
+import com.gicsports.{TestHelpers, WithDB, crypto}
 import org.iq80.leveldb.Options
 import org.scalacheck.{Arbitrary, Gen}
 

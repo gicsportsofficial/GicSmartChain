@@ -1,4 +1,4 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import akka.http.scaladsl.marshalling.ToResponseMarshallable
 import akka.http.scaladsl.server.Route
@@ -7,27 +7,27 @@ import cats.instances.list.*
 import cats.syntax.alternative.*
 import cats.syntax.either.*
 import cats.syntax.traverse.*
-import com.wavesplatform.account.{Address, Alias}
-import com.wavesplatform.api.common.{CommonTransactionsApi, TransactionMeta}
-import com.wavesplatform.api.http.ApiError.*
-import com.wavesplatform.block.Block
-import com.wavesplatform.block.Block.TransactionProof
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, *}
-import com.wavesplatform.database.protobuf.EthereumTransactionMeta.Payload
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.v1.serialization.SerdeV1
-import com.wavesplatform.network.TransactionPublisher
-import com.wavesplatform.protobuf.transaction.PBAmounts
-import com.wavesplatform.settings.RestAPISettings
-import com.wavesplatform.state.{Blockchain, InvokeScriptResult, TxMeta}
-import com.wavesplatform.state.reader.LeaseDetails
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.lease.*
-import com.wavesplatform.transaction.serialization.impl.InvokeScriptTxSerializer
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.utils.{EthEncoding, Time}
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.account.{Address, Alias}
+import com.gicsports.api.common.{CommonTransactionsApi, TransactionMeta}
+import com.gicsports.api.http.ApiError.*
+import com.gicsports.block.Block
+import com.gicsports.block.Block.TransactionProof
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, *}
+import com.gicsports.database.protobuf.EthereumTransactionMeta.Payload
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.v1.serialization.SerdeV1
+import com.gicsports.network.TransactionPublisher
+import com.gicsports.protobuf.transaction.PBAmounts
+import com.gicsports.settings.RestAPISettings
+import com.gicsports.state.{Blockchain, InvokeScriptResult, TxMeta}
+import com.gicsports.state.reader.LeaseDetails
+import com.gicsports.transaction.*
+import com.gicsports.transaction.lease.*
+import com.gicsports.transaction.serialization.impl.InvokeScriptTxSerializer
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.utils.{EthEncoding, Time}
+import com.gicsports.wallet.Wallet
 import monix.eval.Task
 import play.api.libs.json.*
 
@@ -208,7 +208,7 @@ case class TransactionsApiRoute(
     /** Produces compact representation for large transactions by stripping unnecessary data. Currently implemented for MassTransfer transaction only.
       */
     def compactJson(address: Address, meta: TransactionMeta): Task[JsObject] = {
-      import com.wavesplatform.transaction.transfer.*
+      import com.gicsports.transaction.transfer.*
       meta.transaction match {
         case mtt: MassTransferTransaction if mtt.sender.toAddress != address =>
           (if (
@@ -287,7 +287,7 @@ object TransactionsApiRoute {
     def transactionMetaJson(meta: TransactionMeta): JsObject = {
       val specificInfo = meta.transaction match {
         case lease: LeaseTransaction =>
-          import com.wavesplatform.api.http.TransactionsApiRoute.LeaseStatus._
+          import com.gicsports.api.http.TransactionsApiRoute.LeaseStatus._
           Json.obj("status" -> (if (blockchain.leaseDetails(lease.id()).exists(_.isActive)) active else canceled))
 
         case leaseCancel: LeaseCancelTransaction =>
@@ -402,7 +402,7 @@ object TransactionsApiRoute {
       cancelTransactionId: Option[ByteStr] = None
   )
   private[this] object LeaseRef {
-    import com.wavesplatform.utils.byteStrFormat
+    import com.gicsports.utils.byteStrFormat
     implicit val config                        = JsonConfiguration(optionHandlers = OptionHandlers.WritesNull)
     implicit val jsonWrites: OWrites[LeaseRef] = Json.writes[LeaseRef]
   }

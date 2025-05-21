@@ -1,8 +1,8 @@
-package com.wavesplatform.lang.v1.traits.domain
+package com.gicsports.lang.v1.traits.domain
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V4, V5}
-import com.wavesplatform.lang.v1.ContractLimits
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.directives.values.{StdLibVersion, V4, V5}
+import com.gicsports.lang.v1.ContractLimits
 
 sealed trait AttachedPayments {
   def payments: Seq[AttachedPayments.Payment]

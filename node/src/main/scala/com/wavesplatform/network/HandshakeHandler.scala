@@ -1,10 +1,10 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
 import java.util
 import java.util.concurrent.{ConcurrentMap, TimeUnit}
 
-import com.wavesplatform.network.Handshake.InvalidHandshakeException
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.network.Handshake.InvalidHandshakeException
+import com.gicsports.utils.ScorexLogging
 import io.netty.buffer.ByteBuf
 import io.netty.channel.ChannelHandler.Sharable
 import io.netty.channel._

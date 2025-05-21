@@ -1,4 +1,4 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import com.typesafe.config.Config
 import net.ceedubs.ficus.Ficus._
@@ -16,6 +16,6 @@ case class Settings(
 object Settings {
   def fromConfig(config: Config): Settings = {
     import net.ceedubs.ficus.readers.ArbitraryTypeReader._
-    config.as[Settings]("CARDIUM.benchmark.state")
+    config.as[Settings]("GIC.benchmark.state")
   }
 }

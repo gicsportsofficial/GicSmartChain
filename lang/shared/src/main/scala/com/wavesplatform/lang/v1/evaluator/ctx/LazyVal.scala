@@ -1,12 +1,12 @@
-package com.wavesplatform.lang.v1.evaluator.ctx
+package com.gicsports.lang.v1.evaluator.ctx
 
 import cats.instances.either._
 import cats.syntax.applicative._
 import cats.syntax.flatMap._
 import cats.{Eval, Monad, ~>}
-import com.wavesplatform.lang.v1.compiler.Terms.EVALUATED
-import com.wavesplatform.lang.v1.evaluator.LogCallback
-import com.wavesplatform.lang.{ExecutionError, TrampolinedExecResult}
+import com.gicsports.lang.v1.compiler.Terms.EVALUATED
+import com.gicsports.lang.v1.evaluator.LogCallback
+import com.gicsports.lang.{ExecutionError, TrampolinedExecResult}
 
 sealed trait LazyVal[F[_]] {
   val value: Eval[F[Either[ExecutionError, EVALUATED]]]

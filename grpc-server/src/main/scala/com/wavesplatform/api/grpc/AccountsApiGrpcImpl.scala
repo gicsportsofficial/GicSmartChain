@@ -1,13 +1,13 @@
-package com.wavesplatform.api.grpc
+package com.gicsports.api.grpc
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{Address, Alias}
-import com.wavesplatform.api.common.{CommonAccountsApi, LeaseInfo}
-import com.wavesplatform.api.http.ApiError.CustomValidationError
-import com.wavesplatform.protobuf._
-import com.wavesplatform.protobuf.transaction.{PBRecipients, PBTransactions}
-import com.wavesplatform.protobuf.utils.PBImplicitConversions.fromAssetIdAndAmount
-import com.wavesplatform.transaction.Asset
+import com.gicsports.account.{Address, Alias}
+import com.gicsports.api.common.{CommonAccountsApi, LeaseInfo}
+import com.gicsports.api.http.ApiError.CustomValidationError
+import com.gicsports.protobuf._
+import com.gicsports.protobuf.transaction.{PBRecipients, PBTransactions}
+import com.gicsports.protobuf.utils.PBImplicitConversions.fromAssetIdAndAmount
+import com.gicsports.transaction.Asset
 import io.grpc.stub.StreamObserver
 import monix.execution.Scheduler
 import monix.reactive.Observable

@@ -1,8 +1,8 @@
-package com.wavesplatform.code
+package com.gicsports.code
 
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.test._
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values._
+import com.gicsports.test._
 
 class DirectiveSetConstructingTest extends PropSpec {
   property("DirectiveSet should be successfully constructed with (V3, Account, Contract) params") {

@@ -1,32 +1,32 @@
-package com.wavesplatform.protobuf.transaction
+package com.gicsports.protobuf.transaction
 
 import cats.syntax.traverse.*
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{AddressOrAlias, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.script.ScriptReader
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.lang.v1.compiler.Terms.EXPR
-import com.wavesplatform.lang.v1.serialization.SerdeV1
-import com.wavesplatform.protobuf.*
-import com.wavesplatform.protobuf.transaction.Transaction.Data
-import com.wavesplatform.protobuf.utils.PBImplicitConversions.*
-import com.wavesplatform.serialization.Deser
-import com.wavesplatform.state.{BinaryDataEntry, BooleanDataEntry, EmptyDataEntry, IntegerDataEntry, StringDataEntry}
-import com.wavesplatform.transaction as vt
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.{GenericError, NegativeAmount}
-import com.wavesplatform.transaction.assets.UpdateAssetInfoTransaction
-import com.wavesplatform.transaction.serialization.impl.PBTransactionSerializer
-import com.wavesplatform.transaction.smart.InvokeExpressionTransaction
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.transfer.MassTransferTransaction
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.ParsedTransfer
-import com.wavesplatform.transaction.{EthereumTransaction, Proofs, TxDecimals, TxExchangeAmount, TxExchangePrice, TxNonNegativeAmount, TxPositiveAmount, TxValidationError}
-import com.wavesplatform.utils.StringBytes
+import com.gicsports.account.{AddressOrAlias, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.script.ScriptReader
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.lang.v1.compiler.Terms.EXPR
+import com.gicsports.lang.v1.serialization.SerdeV1
+import com.gicsports.protobuf.*
+import com.gicsports.protobuf.transaction.Transaction.Data
+import com.gicsports.protobuf.utils.PBImplicitConversions.*
+import com.gicsports.serialization.Deser
+import com.gicsports.state.{BinaryDataEntry, BooleanDataEntry, EmptyDataEntry, IntegerDataEntry, StringDataEntry}
+import com.gicsports.transaction as vt
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.{GenericError, NegativeAmount}
+import com.gicsports.transaction.assets.UpdateAssetInfoTransaction
+import com.gicsports.transaction.serialization.impl.PBTransactionSerializer
+import com.gicsports.transaction.smart.InvokeExpressionTransaction
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.transfer.MassTransferTransaction
+import com.gicsports.transaction.transfer.MassTransferTransaction.ParsedTransfer
+import com.gicsports.transaction.{EthereumTransaction, Proofs, TxDecimals, TxExchangeAmount, TxExchangePrice, TxNonNegativeAmount, TxPositiveAmount, TxValidationError}
+import com.gicsports.utils.StringBytes
 import scalapb.UnknownFieldSet.empty
 
 import scala.util.Try
@@ -40,14 +40,14 @@ object PBTransactions {
     )
 
   def create(
-      sender: com.wavesplatform.account.PublicKey,
+      sender: com.gicsports.account.PublicKey,
       chainId: Byte = 0,
       fee: Long = 0L,
       feeAssetId: VanillaAssetId = Waves,
       timestamp: Long = 0L,
       version: Int = 0,
-      proofsArray: Seq[com.wavesplatform.common.state.ByteStr] = Nil,
-      data: com.wavesplatform.protobuf.transaction.Transaction.Data = com.wavesplatform.protobuf.transaction.Transaction.Data.Empty
+      proofsArray: Seq[com.gicsports.common.state.ByteStr] = Nil,
+      data: com.gicsports.protobuf.transaction.Transaction.Data = com.gicsports.protobuf.transaction.Transaction.Data.Empty
   ): SignedTransaction =
     new SignedTransaction(
       SignedTransaction.Transaction
@@ -56,7 +56,7 @@ object PBTransactions {
     )
 
   def vanillaUnsafe(signedTx: PBSignedTransaction): VanillaTransaction = {
-    import com.wavesplatform.common.utils.*
+    import com.gicsports.common.utils.*
     vanilla(signedTx, unsafe = true).explicitGet()
   }
 
@@ -351,7 +351,7 @@ object PBTransactions {
       proofs: Proofs,
       data: PBTransaction.Data
   ): VanillaTransaction = {
-    import com.wavesplatform.common.utils.*
+    import com.gicsports.common.utils.*
 
     val signature = proofs.toSignature
     data match {
@@ -696,7 +696,7 @@ object PBTransactions {
     )
   }
 
-  def toVanillaDataEntry(de: DataTransactionData.DataEntry): com.wavesplatform.state.DataEntry[?] = {
+  def toVanillaDataEntry(de: DataTransactionData.DataEntry): com.gicsports.state.DataEntry[?] = {
     import DataTransactionData.DataEntry.Value as DEV
 
     de.value match {
@@ -708,7 +708,7 @@ object PBTransactions {
     }
   }
 
-  def toPBDataEntry(de: com.wavesplatform.state.DataEntry[?]): DataTransactionData.DataEntry = {
+  def toPBDataEntry(de: com.gicsports.state.DataEntry[?]): DataTransactionData.DataEntry = {
     DataTransactionData.DataEntry(
       de.key,
       de match {
@@ -721,12 +721,12 @@ object PBTransactions {
     )
   }
 
-  def toVanillaScript(script: ByteString): Option[com.wavesplatform.lang.script.Script] = {
-    import com.wavesplatform.common.utils.*
+  def toVanillaScript(script: ByteString): Option[com.gicsports.lang.script.Script] = {
+    import com.gicsports.common.utils.*
     if (script.isEmpty) None else Some(ScriptReader.fromBytes(script.toByteArray).explicitGet())
   }
 
-  def toPBScript(script: Option[com.wavesplatform.lang.script.Script]): ByteString = script match {
+  def toPBScript(script: Option[com.gicsports.lang.script.Script]): ByteString = script match {
     case Some(sc) => ByteString.copyFrom(sc.bytes().arr)
     case None     => ByteString.EMPTY
   }

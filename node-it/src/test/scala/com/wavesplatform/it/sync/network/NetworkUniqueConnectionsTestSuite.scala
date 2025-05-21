@@ -1,9 +1,9 @@
-package com.wavesplatform.it.sync.network
+package com.gicsports.it.sync.network
 
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.{DockerBased, Node, NodeConfigs, Nodes}
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.{DockerBased, Node, NodeConfigs, Nodes}
+import com.gicsports.utils.ScorexLogging
 import org.scalatest._
 
 import scala.concurrent._
@@ -24,7 +24,7 @@ class NetworkUniqueConnectionsTestSuite extends freespec.AnyFreeSpec with matche
     val secondNode = {
       // Helps to do an incoming connection: second -> first (1)
       val peersConfig = ConfigFactory.parseString(
-        s"""CARDIUM.network.known-peers = [
+        s"""GIC.network.known-peers = [
              |  "${firstNode.containerNetworkAddress.getHostName}:${firstNode.containerNetworkAddress.getPort}"
              |]""".stripMargin
       )

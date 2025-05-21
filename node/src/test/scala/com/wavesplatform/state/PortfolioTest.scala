@@ -1,11 +1,11 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import java.nio.charset.StandardCharsets
 
-import com.wavesplatform.TestValues
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.test.FunSuite
-import com.wavesplatform.transaction.Asset.IssuedAsset
+import com.gicsports.TestValues
+import com.gicsports.common.state.ByteStr
+import com.gicsports.test.FunSuite
+import com.gicsports.transaction.Asset.IssuedAsset
 
 class PortfolioTest extends FunSuite {
   test("pessimistic - should return only withdraws") {
@@ -45,7 +45,7 @@ class PortfolioTest extends FunSuite {
   }
 
   test("prevents overflow of Waves") {
-    Portfolio(Long.MaxValue - 1L).combine(Portfolio(Long.MaxValue - 2L)) shouldBe Left("CARDIUM balance sum overflow")
+    Portfolio(Long.MaxValue - 1L).combine(Portfolio(Long.MaxValue - 2L)) shouldBe Left("GIC balance sum overflow")
   }
 
   test("prevents overflow of assets") {

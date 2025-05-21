@@ -1,23 +1,23 @@
-package com.wavesplatform.state.diffs.ci
+package com.gicsports.state.diffs.ci
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.db.WithState
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.settings.{Constants, TestFunctionalitySettings}
-import com.wavesplatform.state.Diff
-import com.wavesplatform.state.diffs.*
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.{GenesisTransaction, TxHelpers, TxVersion}
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.account.KeyPair
+import com.gicsports.common.state.ByteStr
+import com.gicsports.db.WithState
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.settings.{Constants, TestFunctionalitySettings}
+import com.gicsports.state.Diff
+import com.gicsports.state.diffs.*
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.{GenesisTransaction, TxHelpers, TxVersion}
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
 
 class MultiPaymentInvokeDiffTest extends PropSpec with WithState {
   private val oldVersions = Seq(V1, V2, V3)
@@ -130,9 +130,9 @@ class MultiPaymentInvokeDiffTest extends PropSpec with WithState {
         ) {
           val expectedFee = (0.06 + 0.04 + 0.04 * (ContractLimits.MaxAttachedPaymentAmount - 1)) * Constants.UnitsInWave
           _ should produceRejectOrFailedDiff(
-            s"Fee in CARDIUM for InvokeScriptTransaction (${ci.fee} in CARDIUM) " +
+            s"Fee in GIC for InvokeScriptTransaction (${ci.fee} in GIC) " +
               s"with ${ContractLimits.MaxAttachedPaymentAmount} total scripts invoked " +
-              s"does not exceed minimal value of ${expectedFee.toLong} CARDIUM"
+              s"does not exceed minimal value of ${expectedFee.toLong} GIC"
           )
         }
     }

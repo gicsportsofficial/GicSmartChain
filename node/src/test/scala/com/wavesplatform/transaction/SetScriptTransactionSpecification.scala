@@ -1,9 +1,9 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.account.{KeyPair, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base64, EitherExt2}
-import com.wavesplatform.transaction.smart.SetScriptTransaction
+import com.gicsports.account.{KeyPair, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base64, EitherExt2}
+import com.gicsports.transaction.smart.SetScriptTransaction
 import org.scalacheck.Gen
 import play.api.libs.json.*
 
@@ -25,7 +25,7 @@ class SetScriptTransactionSpecification extends GenericTransactionSpecification[
     first.script shouldEqual second.script
   }
 
-  def generator: Gen[(Seq[com.wavesplatform.transaction.Transaction], SetScriptTransaction)] = setScriptTransactionGen.map(t => (Seq(), t))
+  def generator: Gen[(Seq[com.gicsports.transaction.Transaction], SetScriptTransaction)] = setScriptTransactionGen.map(t => (Seq(), t))
 
   def jsonRepr: Seq[(JsValue, SetScriptTransaction)] =
     Seq(

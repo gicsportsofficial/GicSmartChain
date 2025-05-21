@@ -1,9 +1,9 @@
-package com.wavesplatform.common
+package com.gicsports.common
 
 import java.util.concurrent.{ThreadLocalRandom, TimeUnit}
 
-import com.wavesplatform.common.Base58Benchmark.{Base58St, BytesSt}
-import com.wavesplatform.common.utils.{Base58, FastBase58, StdBase58}
+import com.gicsports.common.Base58Benchmark.{Base58St, BytesSt}
+import com.gicsports.common.utils.{Base58, FastBase58, StdBase58}
 import org.openjdk.jmh.annotations._
 import org.openjdk.jmh.infra.Blackhole
 

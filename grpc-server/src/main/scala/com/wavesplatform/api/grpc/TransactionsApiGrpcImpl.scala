@@ -1,15 +1,15 @@
-package com.wavesplatform.api.grpc
+package com.gicsports.api.grpc
 
 import scala.concurrent.Future
 
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.api.common.{CommonTransactionsApi, TransactionMeta}
-import com.wavesplatform.protobuf._
-import com.wavesplatform.protobuf.transaction._
-import com.wavesplatform.protobuf.utils.PBImplicitConversions.PBRecipientImplicitConversionOps
-import com.wavesplatform.state.{Blockchain, InvokeScriptResult => VISR}
-import com.wavesplatform.transaction.{Authorized, EthereumTransaction}
-import com.wavesplatform.transaction.TxValidationError.GenericError
+import com.gicsports.account.AddressScheme
+import com.gicsports.api.common.{CommonTransactionsApi, TransactionMeta}
+import com.gicsports.protobuf._
+import com.gicsports.protobuf.transaction._
+import com.gicsports.protobuf.utils.PBImplicitConversions.PBRecipientImplicitConversionOps
+import com.gicsports.state.{Blockchain, InvokeScriptResult => VISR}
+import com.gicsports.transaction.{Authorized, EthereumTransaction}
+import com.gicsports.transaction.TxValidationError.GenericError
 import io.grpc.{Status, StatusRuntimeException}
 import io.grpc.stub.StreamObserver
 import monix.execution.Scheduler

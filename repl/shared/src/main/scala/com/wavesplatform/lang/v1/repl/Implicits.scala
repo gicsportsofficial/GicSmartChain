@@ -1,8 +1,8 @@
-package com.wavesplatform.lang.v1.repl
+package com.gicsports.lang.v1.repl
 
 import cats.implicits._
 import cats.{Eval, Monad, StackSafeMonad}
-import com.wavesplatform.lang.{CoevalF, EvalF}
+import com.gicsports.lang.{CoevalF, EvalF}
 import monix.eval.Coeval
 
 object Implicits {

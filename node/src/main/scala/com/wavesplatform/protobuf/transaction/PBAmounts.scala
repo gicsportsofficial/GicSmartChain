@@ -1,9 +1,9 @@
-package com.wavesplatform.protobuf.transaction
+package com.gicsports.protobuf.transaction
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.protobuf._
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.protobuf._
+import com.gicsports.transaction.Asset
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
 
 object PBAmounts {
   def toPBAssetId(asset: Asset): ByteString = asset match {

@@ -1,11 +1,11 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
-import com.wavesplatform.Version
-import com.wavesplatform.metrics.Metrics
-import com.wavesplatform.network.MessageObserver.Messages
-import com.wavesplatform.settings.*
-import com.wavesplatform.transaction.*
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.Version
+import com.gicsports.metrics.Metrics
+import com.gicsports.network.MessageObserver.Messages
+import com.gicsports.settings.*
+import com.gicsports.transaction.*
+import com.gicsports.utils.ScorexLogging
 import io.netty.bootstrap.{Bootstrap, ServerBootstrap}
 import io.netty.channel.*
 import io.netty.channel.group.ChannelGroup

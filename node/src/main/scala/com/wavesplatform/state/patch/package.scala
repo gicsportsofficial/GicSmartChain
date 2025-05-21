@@ -1,4 +1,4 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import play.api.libs.json.{Json, OFormat}
 

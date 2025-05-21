@@ -1,11 +1,11 @@
-package com.wavesplatform.it.sync.activation
+package com.gicsports.it.sync.activation
 
 import com.typesafe.config.Config
-import com.wavesplatform.features.BlockchainFeatureStatus
-import com.wavesplatform.features.api.{FeatureActivationStatus, NodeFeatureStatus}
-import com.wavesplatform.it.api.BlockHeader
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.{BaseFreeSpec, NodeConfigs}
+import com.gicsports.features.BlockchainFeatureStatus
+import com.gicsports.features.api.{FeatureActivationStatus, NodeFeatureStatus}
+import com.gicsports.it.api.BlockHeader
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.{BaseFreeSpec, NodeConfigs}
 
 class NotActivateFeatureTestSuite extends BaseFreeSpec with ActivationStatusRequest {
 
@@ -18,7 +18,7 @@ class NotActivateFeatureTestSuite extends BaseFreeSpec with ActivationStatusRequ
     NodeConfigs.newBuilder
       .overrideBase(
         _.raw(
-          s"""CARDIUM {
+          s"""GIC {
          |  blockchain {
          |    custom {
          |      functionality {

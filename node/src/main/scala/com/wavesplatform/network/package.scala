@@ -1,13 +1,13 @@
-package com.wavesplatform
+package com.gicsports
 
 import java.net.{InetSocketAddress, SocketAddress, URI}
 import java.util.concurrent.Callable
 
 import cats.Eq
 import com.typesafe.scalalogging.Logger
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.transaction.Transaction
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.transaction.Transaction
 import io.netty.channel.group.{ChannelGroup, ChannelGroupFuture}
 import io.netty.channel.local.LocalAddress
 import io.netty.channel.socket.nio.NioSocketChannel

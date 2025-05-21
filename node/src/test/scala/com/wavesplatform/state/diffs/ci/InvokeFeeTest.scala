@@ -1,15 +1,15 @@
-package com.wavesplatform.state.diffs.ci
-import com.wavesplatform.TestValues.invokeFee
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.state.Portfolio
-import com.wavesplatform.state.diffs.FeeValidation.FeeUnit
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TxHelpers.*
+package com.gicsports.state.diffs.ci
+import com.gicsports.TestValues.invokeFee
+import com.gicsports.common.state.ByteStr
+import com.gicsports.db.WithDomain
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.state.Portfolio
+import com.gicsports.state.diffs.FeeValidation.FeeUnit
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TxHelpers.*
 
 class InvokeFeeTest extends PropSpec with WithDomain {
   import DomainPresets.*
@@ -25,7 +25,7 @@ class InvokeFeeTest extends PropSpec with WithDomain {
       d.appendBlock(setScript(secondSigner, dApp))
       d.appendBlock(invoke(fee = invokeFee))
       d.appendBlockE(invoke(fee = invokeFee - 1)) should produce(
-        "Fee for InvokeScriptTransaction (5999999 in CARDIUM) does not exceed minimal value of 6000000 CARDIUM"
+        "Fee for InvokeScriptTransaction (5999999 in GIC) does not exceed minimal value of 6000000 GIC"
       )
     }
   }
@@ -45,7 +45,7 @@ class InvokeFeeTest extends PropSpec with WithDomain {
       d.appendBlock(issueTx, sponsorTx)
       d.appendBlock(invoke(fee = invokeFee, feeAssetId = asset))
       d.appendBlockE(invoke(fee = invokeFee - 1, feeAssetId = asset)) should produce(
-        s"Fee for InvokeScriptTransaction (5999999 in $asset) does not exceed minimal value of 6000000 CARDIUM"
+        s"Fee for InvokeScriptTransaction (5999999 in $asset) does not exceed minimal value of 6000000 GIC"
       )
     }
   }
@@ -90,7 +90,7 @@ class InvokeFeeTest extends PropSpec with WithDomain {
       val sponsorTx = sponsor(asset, Some(FeeUnit), signer(9))
       d.appendBlock(setScript(secondSigner, dApp))
       d.appendBlock(issueTx, sponsorTx)
-      d.appendBlockE(invoke(feeAssetId = asset)) should produce(s"negative CARDIUM balance: ${signer(9).toAddress}, old: 0, new: -$invokeFee")
+      d.appendBlockE(invoke(feeAssetId = asset)) should produce(s"negative GIC balance: ${signer(9).toAddress}, old: 0, new: -$invokeFee")
     }
   }
 
@@ -109,7 +109,7 @@ class InvokeFeeTest extends PropSpec with WithDomain {
       d.appendBlock(invoke(fee = enoughFee))
       d.appendAndAssertFailed(
         invoke(fee = enoughFee - 1),
-        "Fee in CARDIUM for InvokeScriptTransaction (100005999999 in CARDIUM) with 1 assets issued does not exceed minimal value of 100006000000 CARDIUM"
+        "Fee in GIC for InvokeScriptTransaction (100005999999 in GIC) with 1 assets issued does not exceed minimal value of 100006000000 GIC"
       )
     }
   }

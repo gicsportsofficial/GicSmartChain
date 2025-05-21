@@ -1,4 +1,4 @@
-package com.wavesplatform.database
+package com.gicsports.database
 
 import java.util
 
@@ -7,18 +7,18 @@ import cats.syntax.monoid.*
 import cats.syntax.option.*
 import com.google.common.cache.*
 import com.google.common.collect.ArrayListMultimap
-import com.wavesplatform.account.{Address, Alias}
-import com.wavesplatform.block.{Block, SignedBlockHeader}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.database.protobuf.EthereumTransactionMeta
-import com.wavesplatform.metrics.LevelDBStats
-import com.wavesplatform.settings.DBSettings
-import com.wavesplatform.state.*
-import com.wavesplatform.state.DiffToStateApplier.PortfolioUpdates
-import com.wavesplatform.state.reader.LeaseDetails
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.{Asset, Transaction}
-import com.wavesplatform.utils.ObservedLoadingCache
+import com.gicsports.account.{Address, Alias}
+import com.gicsports.block.{Block, SignedBlockHeader}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.database.protobuf.EthereumTransactionMeta
+import com.gicsports.metrics.LevelDBStats
+import com.gicsports.settings.DBSettings
+import com.gicsports.state.*
+import com.gicsports.state.DiffToStateApplier.PortfolioUpdates
+import com.gicsports.state.reader.LeaseDetails
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.{Asset, Transaction}
+import com.gicsports.utils.ObservedLoadingCache
 import monix.reactive.Observer
 
 import scala.concurrent.duration.*

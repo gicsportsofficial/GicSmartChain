@@ -1,18 +1,18 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
 import java.io.File
 import java.nio.file.Files
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.database.{LevelDBFactory, LevelDBWriter}
-import com.wavesplatform.lagonaki.mocks.TestBlock
-import com.wavesplatform.mining.MiningConstraint
-import com.wavesplatform.settings.FunctionalitySettings
-import com.wavesplatform.state.diffs.BlockDiffer
-import com.wavesplatform.state.utils.TestLevelDB
-import com.wavesplatform.transaction.{GenesisTransaction, Transaction}
+import com.gicsports.account.KeyPair
+import com.gicsports.block.Block
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.database.{LevelDBFactory, LevelDBWriter}
+import com.gicsports.lagonaki.mocks.TestBlock
+import com.gicsports.mining.MiningConstraint
+import com.gicsports.settings.FunctionalitySettings
+import com.gicsports.state.diffs.BlockDiffer
+import com.gicsports.state.utils.TestLevelDB
+import com.gicsports.transaction.{GenesisTransaction, Transaction}
 import monix.execution.UncaughtExceptionReporter
 import monix.reactive.Observer
 import org.iq80.leveldb.{DB, Options}
@@ -38,7 +38,7 @@ trait BaseState {
 
   private var _lastBlock: Block = _
   def lastBlock: Block          = _lastBlock
-  protected def CARDIUM(n: Float): Long = (n * 100000000L).toLong
+  protected def GIC(n: Float): Long = (n * 100000000L).toLong
   protected val accountGen: Gen[KeyPair] =
     Gen.containerOfN[Array, Byte](32, Arbitrary.arbitrary[Byte]).map(seed => KeyPair(seed))
 
@@ -61,7 +61,7 @@ trait BaseState {
   private val initGen: Gen[(KeyPair, Block)] = for {
     rich <- accountGen
   } yield {
-    val genesisTx = GenesisTransaction.create(rich.toAddress, CARDIUM(100000000L), System.currentTimeMillis() - 10000).explicitGet()
+    val genesisTx = GenesisTransaction.create(rich.toAddress, GIC(100000000L), System.currentTimeMillis() - 10000).explicitGet()
     (rich, TestBlock.create(time = genesisTx.timestamp, Seq(genesisTx)))
   }
 

@@ -1,16 +1,16 @@
-package com.wavesplatform.it.sync.smartcontract
+package com.gicsports.it.sync.smartcontract
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.crypto
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync.{minFee, setScriptFee, transferAmount}
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.Proofs
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.crypto
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync.{minFee, setScriptFee, transferAmount}
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.test._
+import com.gicsports.transaction.Proofs
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.smart.script.ScriptCompiler
 import org.scalatest.CancelAfterFailure
 
 class LeaseSmartContractsTestSuite extends BaseTransactionSuite with CancelAfterFailure {

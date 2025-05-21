@@ -1,16 +1,16 @@
-package com.wavesplatform.events
+package com.gicsports.events
 
 import com.google.common.primitives.Ints
-import com.wavesplatform.api.common.CommonBlocksApi
-import com.wavesplatform.api.grpc._
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.database.{DBExt, DBResource}
-import com.wavesplatform.events.protobuf.BlockchainUpdated.Append.Body
-import com.wavesplatform.events.protobuf.{BlockchainUpdated => PBBlockchainUpdated}
-import com.wavesplatform.protobuf._
-import com.wavesplatform.protobuf.block.PBBlock
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.api.common.CommonBlocksApi
+import com.gicsports.api.grpc._
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.Base58
+import com.gicsports.database.{DBExt, DBResource}
+import com.gicsports.events.protobuf.BlockchainUpdated.Append.Body
+import com.gicsports.events.protobuf.{BlockchainUpdated => PBBlockchainUpdated}
+import com.gicsports.protobuf._
+import com.gicsports.protobuf.block.PBBlock
+import com.gicsports.utils.ScorexLogging
 import monix.reactive.Observable
 import org.iq80.leveldb.DB
 

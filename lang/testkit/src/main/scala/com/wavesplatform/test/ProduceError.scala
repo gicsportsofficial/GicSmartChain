@@ -1,4 +1,4 @@
-package com.wavesplatform.test
+package com.gicsports.test
 
 import org.scalatest.matchers.{MatchResult, Matcher}
 

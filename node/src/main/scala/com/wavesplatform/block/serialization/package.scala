@@ -1,14 +1,14 @@
-package com.wavesplatform.block
+package com.gicsports.block
 
 import java.nio.ByteBuffer
 
 import com.google.common.primitives.{Bytes, Ints, Longs}
-import com.wavesplatform.block.Block.{PlainBlockVersion, ProtoBlockVersion}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.protobuf.transaction.PBTransactions
-import com.wavesplatform.protobuf.utils.PBUtils
-import com.wavesplatform.serialization.ByteBufferOps
-import com.wavesplatform.transaction.{EthereumTransaction, Transaction, TransactionParsers}
+import com.gicsports.block.Block.{PlainBlockVersion, ProtoBlockVersion}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.protobuf.transaction.PBTransactions
+import com.gicsports.protobuf.utils.PBUtils
+import com.gicsports.serialization.ByteBufferOps
+import com.gicsports.transaction.{EthereumTransaction, Transaction, TransactionParsers}
 
 package object serialization {
   private[block] def writeTransactionData(version: Byte, txs: Seq[Transaction]): Array[Byte] = {

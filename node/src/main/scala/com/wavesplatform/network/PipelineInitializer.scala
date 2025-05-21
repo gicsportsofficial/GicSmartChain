@@ -1,4 +1,4 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
 import io.netty.channel.{Channel, ChannelHandler, ChannelInitializer}
 

@@ -1,8 +1,8 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto.*
-import com.wavesplatform.test.FreeSpec
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto.*
+import com.gicsports.test.FreeSpec
 import org.scalacheck.Gen
 
 class MicroBlockInvSpecSpec extends FreeSpec {

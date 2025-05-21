@@ -1,4 +1,4 @@
-package com.wavesplatform.events
+package com.gicsports.events
 
 import java.util.Map
 import java.util.concurrent.locks.ReentrantLock

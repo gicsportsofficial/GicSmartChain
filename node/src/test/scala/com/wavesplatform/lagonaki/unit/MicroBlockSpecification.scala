@@ -1,15 +1,15 @@
-package com.wavesplatform.lagonaki.unit
+package com.gicsports.lagonaki.unit
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.block.serialization.MicroBlockSerializer
-import com.wavesplatform.block.{Block, MicroBlock}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.mining.Miner
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction._
-import com.wavesplatform.transaction.transfer._
+import com.gicsports.account.KeyPair
+import com.gicsports.block.serialization.MicroBlockSerializer
+import com.gicsports.block.{Block, MicroBlock}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.mining.Miner
+import com.gicsports.test._
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction._
+import com.gicsports.transaction.transfer._
 import org.scalamock.scalatest.MockFactory
 
 import scala.util.Random

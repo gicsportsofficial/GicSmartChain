@@ -1,8 +1,8 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.it.BaseFunSuite
-import com.wavesplatform.it.api.SyncHttpApi._
+import com.gicsports.it.BaseFunSuite
+import com.gicsports.it.api.SyncHttpApi._
 
 import scala.concurrent.duration._
 
@@ -24,14 +24,14 @@ class FairPoSTestSuite extends BaseFunSuite {
 }
 
 object FairPoSTestSuite {
-  import com.wavesplatform.it.NodeConfigs._
+  import com.gicsports.it.NodeConfigs._
   private val microblockActivationHeight = 0
   private val fairPoSActivationHeight    = 10
   private val vrfActivationHeight        = 14
 
   private val config =
     ConfigFactory.parseString(s"""
-    |CARDIUM {
+    |GIC {
     |   blockchain.custom {
     |      functionality {
     |        pre-activated-features {1 = $microblockActivationHeight, 8 = $fairPoSActivationHeight, 17 = $vrfActivationHeight}

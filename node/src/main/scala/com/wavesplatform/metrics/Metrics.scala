@@ -1,4 +1,4 @@
-package com.wavesplatform.metrics
+package com.gicsports.metrics
 
 import java.net.URI
 import java.util.concurrent.TimeUnit
@@ -7,8 +7,8 @@ import scala.concurrent.duration.FiniteDuration
 import scala.util.Try
 import scala.util.control.NonFatal
 
-import com.wavesplatform.ResponsivenessLogs
-import com.wavesplatform.utils.{Schedulers, ScorexLogging, Time}
+import com.gicsports.ResponsivenessLogs
+import com.gicsports.utils.{Schedulers, ScorexLogging, Time}
 import monix.eval.Task
 import monix.execution.schedulers.SchedulerService
 import org.influxdb.{InfluxDB, InfluxDBFactory}

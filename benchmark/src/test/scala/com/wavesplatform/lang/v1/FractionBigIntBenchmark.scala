@@ -1,15 +1,15 @@
-package com.wavesplatform.lang.v1
+package com.gicsports.lang.v1
 
 import java.util.concurrent.TimeUnit
 
-import com.wavesplatform.lang.Common
-import com.wavesplatform.lang.directives.DirectiveSet
-import com.wavesplatform.lang.directives.values.{Account, Expression, V5}
-import com.wavesplatform.lang.utils.lazyContexts
-import com.wavesplatform.lang.v1.FunctionHeader.Native
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_BIGINT, FUNCTION_CALL}
-import com.wavesplatform.lang.v1.evaluator.FunctionIds.{FRACTION_BIGINT, FRACTION_BIGINT_ROUNDS}
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{PureContext, Rounding}
+import com.gicsports.lang.Common
+import com.gicsports.lang.directives.DirectiveSet
+import com.gicsports.lang.directives.values.{Account, Expression, V5}
+import com.gicsports.lang.utils.lazyContexts
+import com.gicsports.lang.v1.FunctionHeader.Native
+import com.gicsports.lang.v1.compiler.Terms.{CONST_BIGINT, FUNCTION_CALL}
+import com.gicsports.lang.v1.evaluator.FunctionIds.{FRACTION_BIGINT, FRACTION_BIGINT_ROUNDS}
+import com.gicsports.lang.v1.evaluator.ctx.impl.{PureContext, Rounding}
 import org.openjdk.jmh.annotations.*
 import org.openjdk.jmh.infra.Blackhole
 

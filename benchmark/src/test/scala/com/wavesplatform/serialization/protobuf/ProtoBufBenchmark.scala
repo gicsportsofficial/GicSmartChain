@@ -1,17 +1,17 @@
-package com.wavesplatform.serialization.protobuf
+package com.gicsports.serialization.protobuf
 
 import java.util.concurrent.TimeUnit
 
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.protobuf.transaction.PBTransactions
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.Proofs
-import com.wavesplatform.transaction.transfer.MassTransferTransaction
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.Transfer
+import com.gicsports.account.PublicKey
+import com.gicsports.common.state.ByteStr
+import com.gicsports.protobuf.transaction.PBTransactions
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.Proofs
+import com.gicsports.transaction.transfer.MassTransferTransaction
+import com.gicsports.transaction.transfer.MassTransferTransaction.Transfer
 import org.openjdk.jmh.annotations._
 import org.openjdk.jmh.infra.Blackhole
-import com.wavesplatform.common.utils.EitherExt2
+import com.gicsports.common.utils.EitherExt2
 
 //noinspection ScalaStyle
 @OutputTimeUnit(TimeUnit.NANOSECONDS)

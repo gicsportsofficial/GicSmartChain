@@ -1,13 +1,13 @@
-package com.wavesplatform.it.sync.smartcontract
+package com.gicsports.it.sync.smartcontract
 
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.{BaseFreeSpec, WaitForHeight2}
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.test._
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.{BaseFreeSpec, WaitForHeight2}
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.test._
+import com.gicsports.transaction.smart.script.ScriptCompiler
 
 class UTXAllowance extends BaseFreeSpec with WaitForHeight2 {
   import UTXAllowance._
@@ -63,9 +63,9 @@ class UTXAllowance extends BaseFreeSpec with WaitForHeight2 {
 }
 
 object UTXAllowance {
-  import com.wavesplatform.it.NodeConfigs._
+  import com.gicsports.it.NodeConfigs._
   private val FirstNode = ConfigFactory.parseString(s"""
-                                                         |CARDIUM {
+                                                         |GIC {
                                                          |  utx.allow-transactions-from-smart-accounts = false
                                                          |  miner {
                                                          |      quorum = 0
@@ -74,7 +74,7 @@ object UTXAllowance {
                                                          |}""".stripMargin)
 
   private val SecondNode = ConfigFactory.parseString(s"""
-                                                          |CARDIUM {
+                                                          |GIC {
                                                           |  utx.allow-transactions-from-smart-accounts = true
                                                           |  miner {
                                                           |      enable = no

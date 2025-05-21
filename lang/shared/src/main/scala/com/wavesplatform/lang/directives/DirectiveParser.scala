@@ -1,4 +1,4 @@
-package com.wavesplatform.lang.directives
+package com.gicsports.lang.directives
 
 import cats.syntax.either.*
 import fastparse.MultiLineWhitespace.*

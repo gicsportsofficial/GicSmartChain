@@ -1,15 +1,15 @@
-package com.wavesplatform.lagonaki.unit
+package com.gicsports.lagonaki.unit
 
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.metrics.Instrumented
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction._
-import com.wavesplatform.transaction.transfer._
-import com.wavesplatform.crypto
-import com.wavesplatform.test._
+import com.gicsports.account.PublicKey
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.metrics.Instrumented
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction._
+import com.gicsports.transaction.transfer._
+import com.gicsports.crypto
+import com.gicsports.test._
 import org.scalacheck.Arbitrary.arbitrary
 import org.scalacheck.Gen
 

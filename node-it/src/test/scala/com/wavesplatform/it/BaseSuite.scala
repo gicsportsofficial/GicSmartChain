@@ -1,10 +1,10 @@
-package com.wavesplatform.it
+package com.gicsports.it
 
 import java.io.File
 
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.it.transactions.NodesFromDocker
+import com.gicsports.account.AddressScheme
+import com.gicsports.it.transactions.NodesFromDocker
 import monix.eval.Coeval
 import org.scalatest.*
 
@@ -36,7 +36,7 @@ trait BaseSuite
   // protected because https://github.com/sbt/zinc/issues/292
   protected val theNodes: Coeval[Seq[Node]] = Coeval.evalOnce {
     require(isRunning, "Do not attempt to access node instances from suite constructors")
-    Option(System.getProperty("CARDIUM.it.config.file")) match {
+    Option(System.getProperty("GIC.it.config.file")) match {
       case None =>
         AddressScheme.current = new AddressScheme {
           override val chainId: Byte = 'I'

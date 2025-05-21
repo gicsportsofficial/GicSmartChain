@@ -1,15 +1,15 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
-import com.wavesplatform.account.{AddressScheme, Alias, KeyPair, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base64, EitherExt2}
-import com.wavesplatform.crypto
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.serialization.impl.{MassTransferTxSerializer, PBTransactionSerializer}
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.{MaxTransferCount, ParsedTransfer, Transfer}
+import com.gicsports.account.{AddressScheme, Alias, KeyPair, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base64, EitherExt2}
+import com.gicsports.crypto
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.serialization.impl.{MassTransferTxSerializer, PBTransactionSerializer}
+import com.gicsports.transaction.transfer.*
+import com.gicsports.transaction.transfer.MassTransferTransaction.{MaxTransferCount, ParsedTransfer, Transfer}
 import play.api.libs.json.Json
 
 import java.nio.charset.StandardCharsets

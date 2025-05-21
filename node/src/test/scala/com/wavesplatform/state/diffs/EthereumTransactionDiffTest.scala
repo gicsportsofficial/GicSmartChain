@@ -1,18 +1,18 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.db.WithState.AddrWithBalance
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.directives.values.V6
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.test.*
-import com.wavesplatform.test.DomainPresets.*
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.TxValidationError.GenericError
-import com.wavesplatform.transaction.utils.EthTxGenerator
-import com.wavesplatform.transaction.TxHelpers
-import com.wavesplatform.transaction.utils.EthConverters.*
-import com.wavesplatform.utils.EthEncoding
+import com.gicsports.db.WithState.AddrWithBalance
+import com.gicsports.db.WithDomain
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.directives.values.V6
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.test.*
+import com.gicsports.test.DomainPresets.*
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.TxValidationError.GenericError
+import com.gicsports.transaction.utils.EthTxGenerator
+import com.gicsports.transaction.TxHelpers
+import com.gicsports.transaction.utils.EthConverters.*
+import com.gicsports.utils.EthEncoding
 import org.web3j.crypto.Bip32ECKeyPair
 
 class EthereumTransactionDiffTest extends PropSpec with WithDomain {

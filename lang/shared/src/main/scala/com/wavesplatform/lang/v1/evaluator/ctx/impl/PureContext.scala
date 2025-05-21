@@ -1,27 +1,27 @@
-package com.wavesplatform.lang.v1.evaluator.ctx.impl
+package com.gicsports.lang.v1.evaluator.ctx.impl
 
 import cats.implicits.*
 import cats.{Id, Monad}
 import com.google.common.annotations.VisibleForTesting
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.*
-import com.wavesplatform.lang.directives.DirectiveDictionary
-import com.wavesplatform.lang.directives.values.*
-import com.wavesplatform.lang.utils.getDecompilerContext
-import com.wavesplatform.lang.v1.ContractLimits.*
-import com.wavesplatform.lang.v1.FunctionHeader.{Native, User}
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_BYTESTR.NoLimit
-import com.wavesplatform.lang.v1.compiler.Types.*
-import com.wavesplatform.lang.v1.evaluator.Contextful.NoContext
-import com.wavesplatform.lang.v1.evaluator.FunctionIds.*
-import com.wavesplatform.lang.v1.evaluator.ctx.*
-import com.wavesplatform.lang.v1.evaluator.{ContextfulUserFunction, ContextfulVal}
-import com.wavesplatform.lang.v1.parser.BinaryOperation
-import com.wavesplatform.lang.v1.parser.BinaryOperation.*
-import com.wavesplatform.lang.v1.{BaseGlobal, CTX, FunctionHeader, compiler}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.*
+import com.gicsports.lang.directives.DirectiveDictionary
+import com.gicsports.lang.directives.values.*
+import com.gicsports.lang.utils.getDecompilerContext
+import com.gicsports.lang.v1.ContractLimits.*
+import com.gicsports.lang.v1.FunctionHeader.{Native, User}
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.Terms.CONST_BYTESTR.NoLimit
+import com.gicsports.lang.v1.compiler.Types.*
+import com.gicsports.lang.v1.evaluator.Contextful.NoContext
+import com.gicsports.lang.v1.evaluator.FunctionIds.*
+import com.gicsports.lang.v1.evaluator.ctx.*
+import com.gicsports.lang.v1.evaluator.{ContextfulUserFunction, ContextfulVal}
+import com.gicsports.lang.v1.parser.BinaryOperation
+import com.gicsports.lang.v1.parser.BinaryOperation.*
+import com.gicsports.lang.v1.{BaseGlobal, CTX, FunctionHeader, compiler}
 
 import java.nio.charset.StandardCharsets.UTF_8
 import java.nio.charset.{MalformedInputException, StandardCharsets}
@@ -31,7 +31,7 @@ import scala.collection.mutable.ArrayBuffer
 import scala.util.{Success, Try}
 
 object PureContext {
-  private val global: BaseGlobal = com.wavesplatform.lang.Global
+  private val global: BaseGlobal = com.gicsports.lang.Global
 
   implicit def intToLong(num: Int): Long  = num.toLong
   private def trimLongToInt(x: Long): Int = Math.toIntExact(Math.max(Math.min(x, Int.MaxValue), Int.MinValue))

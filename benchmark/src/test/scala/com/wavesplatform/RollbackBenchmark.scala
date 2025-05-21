@@ -1,20 +1,20 @@
-package com.wavesplatform
+package com.gicsports
 
 import java.io.File
 
 import com.google.common.primitives.Ints
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.{Address, AddressScheme, KeyPair}
-import com.wavesplatform.block.Block
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.database.{LevelDBWriter, openDB}
-import com.wavesplatform.protobuf.transaction.PBRecipients
-import com.wavesplatform.state.{Diff, Portfolio}
-import com.wavesplatform.transaction.{GenesisTransaction, Proofs, TxDecimals, TxPositiveAmount}
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.utils.{NTP, ScorexLogging}
+import com.gicsports.account.{Address, AddressScheme, KeyPair}
+import com.gicsports.block.Block
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.*
+import com.gicsports.database.{LevelDBWriter, openDB}
+import com.gicsports.protobuf.transaction.PBRecipients
+import com.gicsports.state.{Diff, Portfolio}
+import com.gicsports.transaction.{GenesisTransaction, Proofs, TxDecimals, TxPositiveAmount}
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.utils.{NTP, ScorexLogging}
 import monix.reactive.Observer
 
 object RollbackBenchmark extends ScorexLogging {

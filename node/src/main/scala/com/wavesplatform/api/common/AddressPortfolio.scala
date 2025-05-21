@@ -1,14 +1,14 @@
-package com.wavesplatform.api.common
+package com.gicsports.api.common
 
 import cats.syntax.semigroup.*
 import com.google.common.collect.AbstractIterator
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto
-import com.wavesplatform.database.{AddressId, DBResource, KeyTags, Keys, readIntSeq}
-import com.wavesplatform.state.{AssetDescription, Diff, Portfolio}
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.utils.ScorexLogging
+import com.gicsports.account.Address
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto
+import com.gicsports.database.{AddressId, DBResource, KeyTags, Keys, readIntSeq}
+import com.gicsports.state.{AssetDescription, Diff, Portfolio}
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.utils.ScorexLogging
 
 import scala.annotation.tailrec
 import scala.jdk.CollectionConverters.*

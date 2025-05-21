@@ -1,9 +1,9 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import cats.instances.either.*
 import cats.instances.lazyList.*
 import cats.syntax.traverse.*
-import com.wavesplatform.transaction.TxValidationError.InvalidSignature
+import com.gicsports.transaction.TxValidationError.InvalidSignature
 import monix.eval.Coeval
 
 trait Signed extends Authorized {

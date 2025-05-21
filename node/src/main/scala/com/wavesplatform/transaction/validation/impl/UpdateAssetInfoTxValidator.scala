@@ -1,10 +1,10 @@
-package com.wavesplatform.transaction.validation.impl
+package com.gicsports.transaction.validation.impl
 
-import com.wavesplatform.transaction.Asset
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.assets.UpdateAssetInfoTransaction
-import com.wavesplatform.transaction.validation.{TxValidator, ValidatedV}
-import com.wavesplatform.utils.StringBytes
+import com.gicsports.transaction.Asset
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.assets.UpdateAssetInfoTransaction
+import com.gicsports.transaction.validation.{TxValidator, ValidatedV}
+import com.gicsports.utils.StringBytes
 
 object UpdateAssetInfoTxValidator extends TxValidator[UpdateAssetInfoTransaction] {
   override def validate(tx: UpdateAssetInfoTransaction): ValidatedV[UpdateAssetInfoTransaction] =

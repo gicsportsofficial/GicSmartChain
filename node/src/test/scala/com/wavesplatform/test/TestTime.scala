@@ -1,6 +1,6 @@
-package com.wavesplatform.test
+package com.gicsports.test
 
-import com.wavesplatform.utils.Time
+import com.gicsports.utils.Time
 
 import scala.concurrent.duration.FiniteDuration
 

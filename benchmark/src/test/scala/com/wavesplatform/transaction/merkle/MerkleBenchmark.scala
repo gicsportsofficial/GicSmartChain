@@ -1,8 +1,8 @@
-package com.wavesplatform.transaction.merkle
+package com.gicsports.transaction.merkle
 
 import java.util.concurrent.TimeUnit
 
-import com.wavesplatform.common.merkle.Merkle
+import com.gicsports.common.merkle.Merkle
 import org.openjdk.jmh.annotations._
 import org.openjdk.jmh.infra.Blackhole
 

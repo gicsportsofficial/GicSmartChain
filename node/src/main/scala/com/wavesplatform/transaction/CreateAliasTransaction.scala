@@ -1,13 +1,13 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 import com.google.common.primitives.Bytes
-import com.wavesplatform.account.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.transaction.serialization.impl.CreateAliasTxSerializer
-import com.wavesplatform.transaction.validation.impl.CreateAliasTxValidator
+import com.gicsports.account.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.crypto
+import com.gicsports.lang.ValidationError
+import com.gicsports.transaction.serialization.impl.CreateAliasTxSerializer
+import com.gicsports.transaction.validation.impl.CreateAliasTxValidator
 import monix.eval.Coeval
 import play.api.libs.json.JsObject
 

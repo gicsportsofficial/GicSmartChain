@@ -1,16 +1,16 @@
-package com.wavesplatform.mining
+package com.gicsports.mining
 
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.utils._
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.state.diffs.TransactionDiffer
-import com.wavesplatform.state.{AccountScriptInfo, Blockchain, LeaseBalance}
-import com.wavesplatform.test.FlatSpec
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.{DataTransaction, Transaction, TxVersion}
+import com.gicsports.account.KeyPair
+import com.gicsports.common.utils._
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.settings.WavesSettings
+import com.gicsports.state.diffs.TransactionDiffer
+import com.gicsports.state.{AccountScriptInfo, Blockchain, LeaseBalance}
+import com.gicsports.test.FlatSpec
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.{DataTransaction, Transaction, TxVersion}
 import org.scalacheck.Gen
 import org.scalamock.scalatest.PathMockFactory
 

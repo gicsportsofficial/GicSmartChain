@@ -1,15 +1,15 @@
-package com.wavesplatform.api.http.requests
+package com.gicsports.api.http.requests
 
 import cats.instances.list.*
 import cats.syntax.either.*
 import cats.syntax.traverse.*
-import com.wavesplatform.account.*
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.v1.FunctionHeader
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.transaction.Proofs
-import com.wavesplatform.transaction.smart.{InvokeScriptTransaction, InvokeTransaction}
+import com.gicsports.account.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.v1.FunctionHeader
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.transaction.Proofs
+import com.gicsports.transaction.smart.{InvokeScriptTransaction, InvokeTransaction}
 import play.api.libs.json.*
 
 object InvokeScriptRequest {

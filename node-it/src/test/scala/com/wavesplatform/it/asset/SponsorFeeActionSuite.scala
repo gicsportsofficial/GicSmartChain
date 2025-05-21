@@ -1,16 +1,16 @@
-package com.wavesplatform.it.asset
+package com.gicsports.it.asset
 
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.BaseFreeSpec
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.it.api.{IssueInfoResponse, SponsorFeeResponse, StateChangesDetails}
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.state.Sponsorship
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.account.KeyPair
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.BaseFreeSpec
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.it.api.{IssueInfoResponse, SponsorFeeResponse, StateChangesDetails}
+import com.gicsports.it.sync.*
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.state.Sponsorship
+import com.gicsports.test.*
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.smart.script.ScriptCompiler
 
 class SponsorFeeActionSuite extends BaseFreeSpec {
   private val initialWavesBalance = 2100.waves

@@ -1,6 +1,6 @@
-package com.wavesplatform.database
+package com.gicsports.database
 
-import com.wavesplatform.common.state.ByteStr
+import com.gicsports.common.state.ByteStr
 import org.iq80.leveldb.WriteBatch
 
 import scala.collection.mutable

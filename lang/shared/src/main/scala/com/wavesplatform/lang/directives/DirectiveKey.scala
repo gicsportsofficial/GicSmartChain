@@ -1,6 +1,6 @@
-package com.wavesplatform.lang.directives
+package com.gicsports.lang.directives
 
-import com.wavesplatform.lang.directives.values._
+import com.gicsports.lang.directives.values._
 
 sealed trait DirectiveKey {
   type Value <: DirectiveValue

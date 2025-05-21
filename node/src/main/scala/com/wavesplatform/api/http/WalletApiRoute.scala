@@ -1,9 +1,9 @@
-package com.wavesplatform.api.http
+package com.gicsports.api.http
 
 import akka.http.scaladsl.server.Route
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.settings.RestAPISettings
-import com.wavesplatform.wallet.Wallet
+import com.gicsports.common.utils.Base58
+import com.gicsports.settings.RestAPISettings
+import com.gicsports.wallet.Wallet
 import play.api.libs.json.Json
 
 case class WalletApiRoute(settings: RestAPISettings, wallet: Wallet) extends ApiRoute with AuthRoute {

@@ -1,15 +1,15 @@
-package com.wavesplatform.it.sync.smartcontract
-import com.wavesplatform.api.http.ApiError.ScriptExecutionError
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync.{setScriptFee, _}
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_BOOLEAN
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.state.BinaryDataEntry
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+package com.gicsports.it.sync.smartcontract
+import com.gicsports.api.http.ApiError.ScriptExecutionError
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync.{setScriptFee, _}
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.compiler.Terms.CONST_BOOLEAN
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.state.BinaryDataEntry
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.smart.script.ScriptCompiler
 
 // because of SC-655 bug
 class InvokeSmartAssetFailSuite extends BaseTransactionSuite {

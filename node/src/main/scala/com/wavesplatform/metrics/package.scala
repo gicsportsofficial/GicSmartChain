@@ -1,4 +1,4 @@
-package com.wavesplatform
+package com.gicsports
 
 import kamon.metric.Timer
 

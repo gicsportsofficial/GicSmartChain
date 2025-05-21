@@ -1,25 +1,25 @@
-package com.wavesplatform.it.asset
+package com.gicsports.it.asset
 
 import com.google.protobuf.ByteString
 import com.typesafe.config.Config
-import com.wavesplatform.api.grpc.LeaseResponse
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.NodeConfigs.Default
-import com.wavesplatform.it.api.SyncGrpcApi._
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.sync.grpc.GrpcBaseTransactionSuite
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.FunctionHeader.User
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_BYTESTR, FUNCTION_CALL}
-import com.wavesplatform.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.wavesplatform.lang.v1.traits.domain.Lease
-import com.wavesplatform.lang.v1.traits.domain.Recipient.Address
-import com.wavesplatform.protobuf.transaction.Recipient
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.api.grpc.LeaseResponse
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.NodeConfigs.Default
+import com.gicsports.it.api.SyncGrpcApi._
+import com.gicsports.it.sync._
+import com.gicsports.it.sync.grpc.GrpcBaseTransactionSuite
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.FunctionHeader.User
+import com.gicsports.lang.v1.compiler.Terms.{CONST_BYTESTR, FUNCTION_CALL}
+import com.gicsports.lang.v1.estimator.v3.ScriptEstimatorV3
+import com.gicsports.lang.v1.traits.domain.Lease
+import com.gicsports.lang.v1.traits.domain.Recipient.Address
+import com.gicsports.protobuf.transaction.Recipient
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.smart.script.ScriptCompiler
 
 class LeaseActionGrpcSuite extends GrpcBaseTransactionSuite {
   override protected def nodeConfigs: Seq[Config] =

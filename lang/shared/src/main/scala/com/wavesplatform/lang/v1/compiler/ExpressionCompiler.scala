@@ -1,27 +1,27 @@
-package com.wavesplatform.lang.v1.compiler
+package com.gicsports.lang.v1.compiler
 
 import cats.implicits.*
 import cats.{Id, Show}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.lang.CommonError
-import com.wavesplatform.lang.v1.compiler.CompilationError.*
-import com.wavesplatform.lang.v1.compiler.CompilerContext.*
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.Types.*
-import com.wavesplatform.lang.v1.evaluator.EvaluatorV1.*
-import com.wavesplatform.lang.v1.evaluator.ctx.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext
-import com.wavesplatform.lang.v1.parser.BinaryOperation.*
-import com.wavesplatform.lang.v1.parser.Expressions.{BINARY_OP, CompositePattern, ConstsPat, MATCH_CASE, ObjPat, PART, Pos, Single, TuplePat, Type, TypedVar}
-import com.wavesplatform.lang.v1.parser.{BinaryOperation, Expressions, Parser}
-import com.wavesplatform.lang.v1.task.imports.*
-import com.wavesplatform.lang.v1.{BaseGlobal, ContractLimits, FunctionHeader}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.lang.CommonError
+import com.gicsports.lang.v1.compiler.CompilationError.*
+import com.gicsports.lang.v1.compiler.CompilerContext.*
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.Types.*
+import com.gicsports.lang.v1.evaluator.EvaluatorV1.*
+import com.gicsports.lang.v1.evaluator.ctx.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext
+import com.gicsports.lang.v1.parser.BinaryOperation.*
+import com.gicsports.lang.v1.parser.Expressions.{BINARY_OP, CompositePattern, ConstsPat, MATCH_CASE, ObjPat, PART, Pos, Single, TuplePat, Type, TypedVar}
+import com.gicsports.lang.v1.parser.{BinaryOperation, Expressions, Parser}
+import com.gicsports.lang.v1.task.imports.*
+import com.gicsports.lang.v1.{BaseGlobal, ContractLimits, FunctionHeader}
 
 import java.nio.charset.StandardCharsets
 import scala.util.Try
 
 object ExpressionCompiler {
-  private val global: BaseGlobal = com.wavesplatform.lang.Global
+  private val global: BaseGlobal = com.gicsports.lang.Global
 
   case class CompilationStepResultExpr(
       ctx: CompilerContext,

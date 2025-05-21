@@ -1,12 +1,12 @@
-package com.wavesplatform.it.sync
+package com.gicsports.it.sync
 
 import com.typesafe.config.{Config, ConfigFactory}
-import com.wavesplatform.api.http.ApiError.CustomValidationError
-import com.wavesplatform.features.{BlockchainFeatureStatus, BlockchainFeatures}
-import com.wavesplatform.it.BaseFreeSpec
-import com.wavesplatform.it.NodeConfigs.Default
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync.activation.ActivationStatusRequest
+import com.gicsports.api.http.ApiError.CustomValidationError
+import com.gicsports.features.{BlockchainFeatureStatus, BlockchainFeatures}
+import com.gicsports.it.BaseFreeSpec
+import com.gicsports.it.NodeConfigs.Default
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync.activation.ActivationStatusRequest
 import org.scalatest.OptionValues
 
 import scala.concurrent.duration._
@@ -42,7 +42,7 @@ class RewardsTestSuite extends BaseFreeSpec with ActivationStatusRequest with Op
       rewardAtActivation.votingThreshold shouldBe votingInterval / 2 + 1
       rewardAtActivation.votes.increase shouldBe 0
       rewardAtActivation.votes.decrease shouldBe 0
-      rewardAtActivation.totalCardiumAmount shouldBe InitialAmount + initial
+      rewardAtActivation.totalGicAmount shouldBe InitialAmount + initial
 
       miner.waitForHeight(activationHeight + 1) // 5
       miner.balanceAtHeight(miner.address, activationHeight + 1) shouldBe minerBalanceAtActivationHeight + miner.rewardStatus().currentReward
@@ -58,7 +58,7 @@ class RewardsTestSuite extends BaseFreeSpec with ActivationStatusRequest with Op
       rewardAfterFirstVote.votingThreshold shouldBe votingInterval / 2 + 1
       rewardAfterFirstVote.votes.increase shouldBe 1
       rewardAfterFirstVote.votes.decrease shouldBe 0
-      rewardAfterFirstVote.totalCardiumAmount shouldBe InitialAmount + BigInt(initial) * BigInt(votingStartHeight - activationHeight + 1)
+      rewardAfterFirstVote.totalGicAmount shouldBe InitialAmount + BigInt(initial) * BigInt(votingStartHeight - activationHeight + 1)
 
       val termEndHeight   = activationHeight + term
       val newReward       = initial + minIncrement
@@ -80,7 +80,7 @@ class RewardsTestSuite extends BaseFreeSpec with ActivationStatusRequest with Op
       rewardAtTermEnd.votingThreshold shouldBe votingInterval / 2 + 1
       rewardAtTermEnd.votes.increase shouldBe 0
       rewardAtTermEnd.votes.decrease shouldBe 0
-      rewardAtTermEnd.totalCardiumAmount shouldBe amountAfterTerm
+      rewardAtTermEnd.totalGicAmount shouldBe amountAfterTerm
       val minerBalanceAtTermEndHeight = miner.balanceAtHeight(miner.address, termEndHeight)
       minerBalanceAtTermEndHeight shouldBe minerBalanceBeforeTermEnd + miner.rewardStatus().currentReward
 
@@ -100,7 +100,7 @@ class RewardsTestSuite extends BaseFreeSpec with ActivationStatusRequest with Op
       rewardSecVoting.votingThreshold shouldBe votingInterval / 2 + 1
       rewardSecVoting.votes.increase shouldBe 3
       rewardSecVoting.votes.decrease shouldBe 0
-      rewardSecVoting.totalCardiumAmount shouldBe amountAfterTerm + newReward * BigInt(secondVotingStartHeightPlusTwo - termEndHeight)
+      rewardSecVoting.totalGicAmount shouldBe amountAfterTerm + newReward * BigInt(secondVotingStartHeightPlusTwo - termEndHeight)
     }
     "when miner votes for decrease" in {
       docker.restartNode(dockerNodes().head, configWithDecreasedDesired)
@@ -119,7 +119,7 @@ class RewardsTestSuite extends BaseFreeSpec with ActivationStatusRequest with Op
       rewardAtActivation.votingThreshold shouldBe votingInterval / 2 + 1
       rewardAtActivation.votes.increase shouldBe 0
       rewardAtActivation.votes.decrease shouldBe 0
-      rewardAtActivation.totalCardiumAmount shouldBe InitialAmount + initial
+      rewardAtActivation.totalGicAmount shouldBe InitialAmount + initial
 
       val termEndHeight   = activationHeight + term
       val newReward       = initial - minIncrement
@@ -139,7 +139,7 @@ class RewardsTestSuite extends BaseFreeSpec with ActivationStatusRequest with Op
       rewardAtTermEnd.votingThreshold shouldBe votingInterval / 2 + 1
       rewardAtTermEnd.votes.increase shouldBe 0
       rewardAtTermEnd.votes.decrease shouldBe 0
-      rewardAtTermEnd.totalCardiumAmount shouldBe amountAfterTerm
+      rewardAtTermEnd.totalGicAmount shouldBe amountAfterTerm
       val minerBalanceAtTermEnd = miner.balanceAtHeight(miner.address, termEndHeight)
       minerBalanceAtTermEnd shouldBe minerBalanceBeforeTermEnd + miner.rewardStatus().currentReward
 
@@ -158,7 +158,7 @@ class RewardsTestSuite extends BaseFreeSpec with ActivationStatusRequest with Op
       rewardSecVoting.votingThreshold shouldBe votingInterval / 2 + 1
       rewardSecVoting.votes.increase shouldBe 0
       rewardSecVoting.votes.decrease shouldBe 3
-      rewardSecVoting.totalCardiumAmount shouldBe amountAfterTerm + newReward * BigInt(secondVotingStartHeightPlusTwo - termEndHeight)
+      rewardSecVoting.totalGicAmount shouldBe amountAfterTerm + newReward * BigInt(secondVotingStartHeightPlusTwo - termEndHeight)
     }
   }
 }
@@ -173,7 +173,7 @@ object RewardsTestSuite {
   private val votingInterval   = 4
 
   val configWithIncreasedDesired: Config = ConfigFactory.parseString(
-    s"""CARDIUM {
+    s"""GIC {
        |  blockchain.custom.functionality {
        |    pre-activated-features = {
        |      ${BlockchainFeatures.BlockReward.id} = $activationHeight
@@ -191,7 +191,7 @@ object RewardsTestSuite {
   )
 
   val configWithDecreasedDesired: Config = ConfigFactory.parseString(
-    s"""CARDIUM {
+    s"""GIC {
        |  blockchain.custom.functionality {
        |    pre-activated-features = {
        |      ${BlockchainFeatures.BlockReward.id} = $activationHeight

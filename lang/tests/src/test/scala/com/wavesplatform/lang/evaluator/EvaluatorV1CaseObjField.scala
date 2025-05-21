@@ -1,17 +1,17 @@
-package com.wavesplatform.lang.evaluator
+package com.gicsports.lang.evaluator
 
 import cats.Id
 import cats.kernel.Monoid
-import com.wavesplatform.lang.Common.*
-import com.wavesplatform.lang.Testing.*
-import com.wavesplatform.lang.directives.values.V1
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.evaluator.Contextful.NoContext
-import com.wavesplatform.lang.v1.evaluator.ctx.*
-import com.wavesplatform.lang.v1.evaluator.ctx.EvaluationContext.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext.*
-import com.wavesplatform.test.PropSpec
+import com.gicsports.lang.Common.*
+import com.gicsports.lang.Testing.*
+import com.gicsports.lang.directives.values.V1
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.evaluator.Contextful.NoContext
+import com.gicsports.lang.v1.evaluator.ctx.*
+import com.gicsports.lang.v1.evaluator.ctx.EvaluationContext.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext.*
+import com.gicsports.test.PropSpec
 
 class EvaluatorV1CaseObjField extends PropSpec {
 

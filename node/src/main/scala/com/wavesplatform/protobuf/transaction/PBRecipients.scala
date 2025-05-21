@@ -1,12 +1,12 @@
-package com.wavesplatform.protobuf.transaction
+package com.gicsports.protobuf.transaction
 
 import com.google.common.primitives.Bytes
 import com.google.protobuf.ByteString
-import com.wavesplatform.account._
-import com.wavesplatform.crypto
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.protobuf.transaction.{Recipient => PBRecipient}
-import com.wavesplatform.transaction.TxValidationError.GenericError
+import com.gicsports.account._
+import com.gicsports.crypto
+import com.gicsports.lang.ValidationError
+import com.gicsports.protobuf.transaction.{Recipient => PBRecipient}
+import com.gicsports.transaction.TxValidationError.GenericError
 
 object PBRecipients {
   def create(recipient: AddressOrAlias): PBRecipient = recipient match {

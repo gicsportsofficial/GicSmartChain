@@ -1,14 +1,14 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
 import com.typesafe.config.Config
-import com.wavesplatform.features.{BlockchainFeatureStatus, BlockchainFeatures}
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.sync.{issueFee, scriptBase64, setAssetScriptFee, someAssetAmount}
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.common.utils._
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
+import com.gicsports.features.{BlockchainFeatureStatus, BlockchainFeatures}
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.sync.{issueFee, scriptBase64, setAssetScriptFee, someAssetAmount}
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.common.utils._
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.transaction.smart.script.ScriptCompiler
 
 class SetAssetScriptTxFeatureSuite extends BaseTransactionSuite {
 
@@ -19,7 +19,7 @@ class SetAssetScriptTxFeatureSuite extends BaseTransactionSuite {
   override def nodeConfigs: Seq[Config] =
     NodeConfigs.newBuilder
       .overrideBase(_.quorum(0))
-      .overrideBase(_.raw(s"""CARDIUM {
+      .overrideBase(_.raw(s"""GIC {
                              |  blockchain.custom.functionality {
                              |    pre-activated-features = {
                              |      ${BlockchainFeatures.SmartAssets.id} = $featureActivationHeight

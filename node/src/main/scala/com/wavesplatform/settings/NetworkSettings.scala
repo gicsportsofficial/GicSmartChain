@@ -1,11 +1,11 @@
-package com.wavesplatform.settings
+package com.gicsports.settings
 
 import java.io.File
 import java.net.{InetSocketAddress, URI}
 
 import com.typesafe.config.Config
-import com.wavesplatform.network.TrafficLogger
-import com.wavesplatform.utils._
+import com.gicsports.network.TrafficLogger
+import com.gicsports.utils._
 import net.ceedubs.ficus.Ficus._
 import net.ceedubs.ficus.readers.ArbitraryTypeReader._
 import net.ceedubs.ficus.readers.ValueReader

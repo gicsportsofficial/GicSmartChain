@@ -1,22 +1,22 @@
-package com.wavesplatform.it.sync.smartcontract
+package com.gicsports.it.sync.smartcontract
 
 import java.nio.charset.StandardCharsets
 
 import com.typesafe.config.Config
-import com.wavesplatform.account.Alias
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.it.NodeConfigs
-import com.wavesplatform.it.api.SyncHttpApi._
-import com.wavesplatform.it.api.TransferTransactionInfo
-import com.wavesplatform.it.sync._
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.lang.v1.repl.Repl
-import com.wavesplatform.lang.v1.repl.node.http.NodeConnectionSettings
-import com.wavesplatform.state.{BinaryDataEntry, BooleanDataEntry, IntegerDataEntry, StringDataEntry}
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.transfer.TransferTransaction
+import com.gicsports.account.Alias
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.it.NodeConfigs
+import com.gicsports.it.api.SyncHttpApi._
+import com.gicsports.it.api.TransferTransactionInfo
+import com.gicsports.it.sync._
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.lang.v1.repl.Repl
+import com.gicsports.lang.v1.repl.node.http.NodeConnectionSettings
+import com.gicsports.state.{BinaryDataEntry, BooleanDataEntry, IntegerDataEntry, StringDataEntry}
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.transfer.TransferTransaction
 import org.scalatest.Assertion
 import org.scalatest.EitherValues._
 

@@ -1,9 +1,9 @@
-package com.wavesplatform.transaction.validation.impl
+package com.gicsports.transaction.validation.impl
 
 import cats.data.Validated
-import com.wavesplatform.account.Alias
-import com.wavesplatform.transaction.CreateAliasTransaction
-import com.wavesplatform.transaction.validation.{TxValidator, ValidatedV}
+import com.gicsports.account.Alias
+import com.gicsports.transaction.CreateAliasTransaction
+import com.gicsports.transaction.validation.{TxValidator, ValidatedV}
 
 object CreateAliasTxValidator extends TxValidator[CreateAliasTransaction] {
   override def validate(tx: CreateAliasTransaction): ValidatedV[CreateAliasTransaction] = {

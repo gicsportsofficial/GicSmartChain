@@ -1,12 +1,12 @@
-package com.wavesplatform.lang.v1.compiler
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.lang.v1.compiler.CompilationError.{GenericFunctionNotFound, TypeCastAllowedOnlyForGenericList}
-import com.wavesplatform.lang.v1.compiler.ExpressionCompiler.CompilationStepResultExpr
-import com.wavesplatform.lang.v1.compiler.Terms.*
-import com.wavesplatform.lang.v1.compiler.Types.*
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.PureContext.*
-import com.wavesplatform.lang.v1.parser.Expressions.Pos
-import com.wavesplatform.lang.v1.parser.Parser.GenericMethod.{As, ExactAs}
+package com.gicsports.lang.v1.compiler
+import com.gicsports.common.utils.*
+import com.gicsports.lang.v1.compiler.CompilationError.{GenericFunctionNotFound, TypeCastAllowedOnlyForGenericList}
+import com.gicsports.lang.v1.compiler.ExpressionCompiler.CompilationStepResultExpr
+import com.gicsports.lang.v1.compiler.Terms.*
+import com.gicsports.lang.v1.compiler.Types.*
+import com.gicsports.lang.v1.evaluator.ctx.impl.PureContext.*
+import com.gicsports.lang.v1.parser.Expressions.Pos
+import com.gicsports.lang.v1.parser.Parser.GenericMethod.{As, ExactAs}
 
 object TypeCast {
 

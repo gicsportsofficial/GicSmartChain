@@ -1,28 +1,28 @@
-package com.wavesplatform.transaction.smart.script.estimator
+package com.gicsports.transaction.smart.script.estimator
 
 import cats.kernel.Monoid
-import com.wavesplatform.account.{Address, PublicKey}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.directives.values._
-import com.wavesplatform.lang.directives.{DirectiveDictionary, DirectiveSet}
-import com.wavesplatform.lang.v1.compiler.{ExpressionCompiler, _}
-import com.wavesplatform.lang.v1.estimator.ScriptEstimator
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.waves.WavesContext
-import com.wavesplatform.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
-import com.wavesplatform.lang.v1.parser.Expressions.EXPR
-import com.wavesplatform.lang.v1.parser.Parser
-import com.wavesplatform.lang.v1.traits.Environment
-import com.wavesplatform.lang.v1.{CTX, FunctionHeader}
-import com.wavesplatform.lang.{Global, utils}
-import com.wavesplatform.state.diffs.smart.predef.{chainId, scriptWithAllV1Functions}
-import com.wavesplatform.state.{BinaryDataEntry, BooleanDataEntry, IntegerDataEntry, StringDataEntry}
-import com.wavesplatform.test.PropSpec
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.smart.WavesEnvironment
-import com.wavesplatform.transaction.transfer.TransferTransaction
-import com.wavesplatform.transaction.{DataTransaction, Proofs, TxPositiveAmount}
-import com.wavesplatform.utils.EmptyBlockchain
+import com.gicsports.account.{Address, PublicKey}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.directives.values._
+import com.gicsports.lang.directives.{DirectiveDictionary, DirectiveSet}
+import com.gicsports.lang.v1.compiler.{ExpressionCompiler, _}
+import com.gicsports.lang.v1.estimator.ScriptEstimator
+import com.gicsports.lang.v1.evaluator.ctx.impl.waves.WavesContext
+import com.gicsports.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
+import com.gicsports.lang.v1.parser.Expressions.EXPR
+import com.gicsports.lang.v1.parser.Parser
+import com.gicsports.lang.v1.traits.Environment
+import com.gicsports.lang.v1.{CTX, FunctionHeader}
+import com.gicsports.lang.{Global, utils}
+import com.gicsports.state.diffs.smart.predef.{chainId, scriptWithAllV1Functions}
+import com.gicsports.state.{BinaryDataEntry, BooleanDataEntry, IntegerDataEntry, StringDataEntry}
+import com.gicsports.test.PropSpec
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.smart.WavesEnvironment
+import com.gicsports.transaction.transfer.TransferTransaction
+import com.gicsports.transaction.{DataTransaction, Proofs, TxPositiveAmount}
+import com.gicsports.utils.EmptyBlockchain
 import monix.eval.Coeval
 
 class FunctionComplexityTest(estimator: ScriptEstimator) extends PropSpec {

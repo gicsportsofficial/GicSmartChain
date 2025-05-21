@@ -1,4 +1,4 @@
-package com.wavesplatform.utils
+package com.gicsports.utils
 
 import org.scalatest.matchers.{Matcher, MatchResult}
 import play.api.libs.json.{Json, JsValue}

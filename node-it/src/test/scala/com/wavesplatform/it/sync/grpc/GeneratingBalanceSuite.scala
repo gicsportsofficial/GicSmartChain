@@ -1,10 +1,10 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.it.api.SyncGrpcApi._
-import com.wavesplatform.it.sync.minFee
-import com.wavesplatform.protobuf.transaction.Recipient
+import com.gicsports.account.KeyPair
+import com.gicsports.it.api.SyncGrpcApi._
+import com.gicsports.it.sync.minFee
+import com.gicsports.protobuf.transaction.Recipient
 
 class GeneratingBalanceSuite extends GrpcBaseTransactionSuite {
 

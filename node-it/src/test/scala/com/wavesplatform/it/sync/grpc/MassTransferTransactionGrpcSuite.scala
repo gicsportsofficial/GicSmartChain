@@ -1,18 +1,18 @@
-package com.wavesplatform.it.sync.grpc
+package com.gicsports.it.sync.grpc
 
 import com.google.protobuf.ByteString
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncGrpcApi.*
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.protobuf.transaction.MassTransferTransactionData.Transfer
-import com.wavesplatform.protobuf.transaction.{PBTransactions, Recipient}
-import com.wavesplatform.transaction.transfer.MassTransferTransaction.MaxTransferCount
-import com.wavesplatform.transaction.transfer.TransferTransaction.MaxAttachmentSize
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncGrpcApi.*
+import com.gicsports.it.sync.*
+import com.gicsports.protobuf.transaction.MassTransferTransactionData.Transfer
+import com.gicsports.protobuf.transaction.{PBTransactions, Recipient}
+import com.gicsports.transaction.transfer.MassTransferTransaction.MaxTransferCount
+import com.gicsports.transaction.transfer.TransferTransaction.MaxAttachmentSize
 import io.grpc.Status.Code
 
 class MassTransferTransactionGrpcSuite extends GrpcBaseTransactionSuite {
 
-  test("asset mass transfer changes asset balances and sender's.CARDIUM balance is decreased by fee.") {
+  test("asset mass transfer changes asset balances and sender's.GIC balance is decreased by fee.") {
     for (v <- massTransferTxSupportedVersions) {
       val firstBalance  = sender.wavesBalance(firstAddress)
       val secondBalance = sender.wavesBalance(secondAddress)
@@ -95,7 +95,7 @@ class MassTransferTransactionGrpcSuite extends GrpcBaseTransactionSuite {
 
     assertGrpcError(
       sender.broadcastMassTransfer(firstAcc, transfers = transfers, fee = massTransferTransactionFee - 1),
-      s"does not exceed minimal value of $massTransferTransactionFee CARDIUM",
+      s"does not exceed minimal value of $massTransferTransactionFee GIC",
       Code.INVALID_ARGUMENT
     )
 

@@ -1,17 +1,17 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
 import cats.implicits.toFoldableOps
 import cats.syntax.either.*
-import com.wavesplatform.account.Address
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.TxValidationError.{GenericError, OrderValidationError}
-import com.wavesplatform.transaction.assets.exchange.OrderAuthentication.Eip712Signature
-import com.wavesplatform.transaction.assets.exchange.OrderPriceMode.AssetDecimals
-import com.wavesplatform.transaction.assets.exchange.{EthOrders, ExchangeTransaction, Order, OrderPriceMode, OrderType}
-import com.wavesplatform.transaction.{Asset, TxVersion}
+import com.gicsports.account.Address
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.TxValidationError.{GenericError, OrderValidationError}
+import com.gicsports.transaction.assets.exchange.OrderAuthentication.Eip712Signature
+import com.gicsports.transaction.assets.exchange.OrderPriceMode.AssetDecimals
+import com.gicsports.transaction.assets.exchange.{EthOrders, ExchangeTransaction, Order, OrderPriceMode, OrderType}
+import com.gicsports.transaction.{Asset, TxVersion}
 
 import java.text.{DecimalFormat, DecimalFormatSymbols}
 import scala.util.{Right, Try}

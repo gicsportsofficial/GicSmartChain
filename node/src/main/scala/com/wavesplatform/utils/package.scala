@@ -1,13 +1,13 @@
-package com.wavesplatform
+package com.gicsports
 
 import java.security.SecureRandom
 
 import com.google.common.base.Charsets
 import com.google.protobuf.ByteString
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.state.ByteStr.*
-import com.wavesplatform.common.utils.Base58
-import com.wavesplatform.lang.v1.compiler.Terms.*
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.state.ByteStr.*
+import com.gicsports.common.utils.Base58
+import com.gicsports.lang.v1.compiler.Terms.*
 import org.apache.commons.lang3.time.DurationFormatUtils
 import play.api.libs.json.*
 
@@ -81,7 +81,7 @@ package object utils {
     def toByteString: ByteString = ByteString.copyFromUtf8(s)
   }
 
-  import com.wavesplatform.api.http.ApiError
+  import com.gicsports.api.http.ApiError
 
   implicit val evaluatedWrites: Writes[EVALUATED] = (o: EVALUATED) =>
     (o: @unchecked) match {

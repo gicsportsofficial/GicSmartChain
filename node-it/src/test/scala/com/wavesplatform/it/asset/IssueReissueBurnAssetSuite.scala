@@ -1,27 +1,27 @@
-package com.wavesplatform.it.asset
+package com.gicsports.it.asset
 
 import com.typesafe.config.Config
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.api.http.ApiError.{AssetDoesNotExist, TransactionDoesNotExist}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.BaseFreeSpec
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.it.api.{AssetInfo, BurnInfoResponse, IssueInfoResponse, ReissueInfoResponse, StateChangesDetails, Transaction}
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.lang.v1.compiler.Terms.{CONST_BOOLEAN, CONST_BYTESTR, CONST_LONG}
-import com.wavesplatform.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.TxVersion
-import com.wavesplatform.transaction.smart.script.ScriptCompiler
-import com.wavesplatform.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.account.KeyPair
+import com.gicsports.api.http.ApiError.{AssetDoesNotExist, TransactionDoesNotExist}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.BaseFreeSpec
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.it.api.{AssetInfo, BurnInfoResponse, IssueInfoResponse, ReissueInfoResponse, StateChangesDetails, Transaction}
+import com.gicsports.it.sync.*
+import com.gicsports.lang.v1.compiler.Terms.{CONST_BOOLEAN, CONST_BYTESTR, CONST_LONG}
+import com.gicsports.lang.v1.estimator.v2.ScriptEstimatorV2
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.TxVersion
+import com.gicsports.transaction.smart.script.ScriptCompiler
+import com.gicsports.transaction.smart.{InvokeScriptTransaction, SetScriptTransaction}
 
 import scala.concurrent.duration.*
 
 class IssueReissueBurnAssetSuite extends BaseFreeSpec {
   override val nodeConfigs: Seq[Config] =
-    com.wavesplatform.it.NodeConfigs.newBuilder
+    com.gicsports.it.NodeConfigs.newBuilder
       .overrideBase(_.quorum(0))
       .withDefault(1)
       .buildNonConflicting()

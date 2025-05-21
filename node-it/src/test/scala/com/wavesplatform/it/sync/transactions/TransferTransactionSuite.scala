@@ -1,17 +1,17 @@
-package com.wavesplatform.it.sync.transactions
+package com.gicsports.it.sync.transactions
 
-import com.wavesplatform.account.{AddressOrAlias, AddressScheme}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.it.api.SyncHttpApi.*
-import com.wavesplatform.it.api.TransferTransactionInfo
-import com.wavesplatform.it.sync.*
-import com.wavesplatform.it.transactions.BaseTransactionSuite
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.transaction.transfer.TransferTransaction.MaxAttachmentSize
-import com.wavesplatform.transaction.{Proofs, TxPositiveAmount, TxVersion}
+import com.gicsports.account.{AddressOrAlias, AddressScheme}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.it.api.SyncHttpApi.*
+import com.gicsports.it.api.TransferTransactionInfo
+import com.gicsports.it.sync.*
+import com.gicsports.it.transactions.BaseTransactionSuite
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.transfer.*
+import com.gicsports.transaction.transfer.TransferTransaction.MaxAttachmentSize
+import com.gicsports.transaction.{Proofs, TxPositiveAmount, TxVersion}
 import org.scalatest.CancelAfterFailure
 import play.api.libs.json.Json
 
@@ -53,7 +53,7 @@ class TransferTransactionSuite extends BaseTransactionSuite with CancelAfterFail
     }
   }
 
-  test("CARDIUM transfer changes CARDIUM balances and eff.b.") {
+  test("GIC transfer changes GIC balances and eff.b.") {
     for (v <- transferTxSupportedVersions) {
       val (firstBalance, firstEffBalance)   = miner.accountBalances(firstAddress)
       val (secondBalance, secondEffBalance) = miner.accountBalances(secondAddress)

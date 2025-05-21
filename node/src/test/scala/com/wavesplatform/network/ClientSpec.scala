@@ -1,9 +1,9 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
 import java.util.concurrent.ConcurrentHashMap
 
-import com.wavesplatform.Version
-import com.wavesplatform.test.FreeSpec
+import com.gicsports.Version
+import com.gicsports.test.FreeSpec
 import io.netty.buffer.{ByteBuf, Unpooled}
 import io.netty.channel.Channel
 import io.netty.channel.embedded.EmbeddedChannel

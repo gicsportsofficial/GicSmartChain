@@ -1,21 +1,21 @@
-package com.wavesplatform.lang.v1.repl.node.http
+package com.gicsports.lang.v1.repl.node.http
 
 import cats.implicits.*
 import cats.{Functor, Id}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.{Base58, EitherExt2}
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.v1.compiler.Terms.EVALUATED
-import com.wavesplatform.lang.v1.evaluator.Log
-import com.wavesplatform.lang.v1.repl.node.http.NodeClient.*
-import com.wavesplatform.lang.v1.repl.node.http.response.ImplicitMappings
-import com.wavesplatform.lang.v1.repl.node.http.response.model.*
-import com.wavesplatform.lang.v1.repl.node.http.response.model.Transaction.*
-import com.wavesplatform.lang.v1.traits.Environment.{BalanceDetails, InputEntity}
-import com.wavesplatform.lang.v1.traits.domain.Recipient.{Address, Alias}
-import com.wavesplatform.lang.v1.traits.domain.{BlockInfo, Recipient, ScriptAssetInfo, Tx}
-import com.wavesplatform.lang.v1.traits.{DataType, Environment}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.{Base58, EitherExt2}
+import com.gicsports.lang.ValidationError
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.v1.compiler.Terms.EVALUATED
+import com.gicsports.lang.v1.evaluator.Log
+import com.gicsports.lang.v1.repl.node.http.NodeClient.*
+import com.gicsports.lang.v1.repl.node.http.response.ImplicitMappings
+import com.gicsports.lang.v1.repl.node.http.response.model.*
+import com.gicsports.lang.v1.repl.node.http.response.model.Transaction.*
+import com.gicsports.lang.v1.traits.Environment.{BalanceDetails, InputEntity}
+import com.gicsports.lang.v1.traits.domain.Recipient.{Address, Alias}
+import com.gicsports.lang.v1.traits.domain.{BlockInfo, Recipient, ScriptAssetInfo, Tx}
+import com.gicsports.lang.v1.traits.{DataType, Environment}
 import io.circe.{Decoder, HCursor}
 import monix.eval.Coeval
 import shapeless.Coproduct
@@ -157,7 +157,7 @@ private[repl] case class WebEnvironment(settings: NodeConnectionSettings, client
 }
 
 object WebEnvironment {
-  implicit val executionContext: ExecutionContext = com.wavesplatform.lang.v1.repl.JsCompat.executionContext
+  implicit val executionContext: ExecutionContext = com.gicsports.lang.v1.repl.JsCompat.executionContext
 
   implicit val BalanceDetailsDecoder: Decoder[BalanceDetails] = (c: HCursor) =>
     for {

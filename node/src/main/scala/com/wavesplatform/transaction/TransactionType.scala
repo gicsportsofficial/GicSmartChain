@@ -1,4 +1,4 @@
-package com.wavesplatform.transaction
+package com.gicsports.transaction
 
 object TransactionType extends Enumeration(1) {
   type TransactionType = Value

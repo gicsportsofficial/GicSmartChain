@@ -1,37 +1,37 @@
-package com.wavesplatform.http
+package com.gicsports.http
 
 import akka.http.scaladsl.model.{ContentTypes, FormData, HttpEntity, StatusCodes}
 import akka.http.scaladsl.server.Route
 import com.google.protobuf.ByteString
-import com.wavesplatform.TestWallet
-import com.wavesplatform.account.KeyPair
-import com.wavesplatform.api.http.ApiError.{AssetIdNotSpecified, AssetsDoesNotExist, InvalidIds, TooBigArrayAllocation}
-import com.wavesplatform.api.http.RouteTimeout
-import com.wavesplatform.api.http.assets.AssetsApiRoute
-import com.wavesplatform.api.http.requests.{TransferV1Request, TransferV2Request}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.db.WithDomain
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.history.{Domain, defaultSigner}
-import com.wavesplatform.lang.directives.values.V6
-import com.wavesplatform.lang.script.Script
-import com.wavesplatform.lang.script.v1.ExprScript
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_BOOLEAN
-import com.wavesplatform.lang.v1.compiler.TestCompiler
-import com.wavesplatform.lang.v1.estimator.ScriptEstimatorV1
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.state.{AssetDescription, AssetScriptInfo, BinaryDataEntry, Height}
-import com.wavesplatform.test.DomainPresets.*
-import com.wavesplatform.test.*
-import com.wavesplatform.transaction.Asset.IssuedAsset
-import com.wavesplatform.transaction.assets.IssueTransaction
-import com.wavesplatform.transaction.smart.SetScriptTransaction
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.transaction.utils.EthTxGenerator
-import com.wavesplatform.transaction.utils.EthTxGenerator.Arg
-import com.wavesplatform.transaction.{AssetIdLength, GenesisTransaction, Transaction, TxHelpers, TxNonNegativeAmount, TxVersion}
-import com.wavesplatform.utils.Schedulers
+import com.gicsports.TestWallet
+import com.gicsports.account.KeyPair
+import com.gicsports.api.http.ApiError.{AssetIdNotSpecified, AssetsDoesNotExist, InvalidIds, TooBigArrayAllocation}
+import com.gicsports.api.http.RouteTimeout
+import com.gicsports.api.http.assets.AssetsApiRoute
+import com.gicsports.api.http.requests.{TransferV1Request, TransferV2Request}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.db.WithDomain
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.history.{Domain, defaultSigner}
+import com.gicsports.lang.directives.values.V6
+import com.gicsports.lang.script.Script
+import com.gicsports.lang.script.v1.ExprScript
+import com.gicsports.lang.v1.compiler.Terms.CONST_BOOLEAN
+import com.gicsports.lang.v1.compiler.TestCompiler
+import com.gicsports.lang.v1.estimator.ScriptEstimatorV1
+import com.gicsports.settings.WavesSettings
+import com.gicsports.state.{AssetDescription, AssetScriptInfo, BinaryDataEntry, Height}
+import com.gicsports.test.DomainPresets.*
+import com.gicsports.test.*
+import com.gicsports.transaction.Asset.IssuedAsset
+import com.gicsports.transaction.assets.IssueTransaction
+import com.gicsports.transaction.smart.SetScriptTransaction
+import com.gicsports.transaction.transfer.*
+import com.gicsports.transaction.utils.EthTxGenerator
+import com.gicsports.transaction.utils.EthTxGenerator.Arg
+import com.gicsports.transaction.{AssetIdLength, GenesisTransaction, Transaction, TxHelpers, TxNonNegativeAmount, TxVersion}
+import com.gicsports.utils.Schedulers
 import org.scalatest.concurrent.Eventually
 import play.api.libs.json.Json.JsValueWrapper
 import play.api.libs.json.{JsArray, JsObject, JsValue, Json, Writes}

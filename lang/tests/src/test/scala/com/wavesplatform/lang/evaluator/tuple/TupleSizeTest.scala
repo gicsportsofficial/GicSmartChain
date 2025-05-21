@@ -1,9 +1,9 @@
-package com.wavesplatform.lang.evaluator.tuple
+package com.gicsports.lang.evaluator.tuple
 
-import com.wavesplatform.lang.directives.values.{StdLibVersion, V6}
-import com.wavesplatform.lang.evaluator.EvaluatorSpec
-import com.wavesplatform.lang.v1.ContractLimits
-import com.wavesplatform.lang.v1.compiler.Terms.CONST_LONG
+import com.gicsports.lang.directives.values.{StdLibVersion, V6}
+import com.gicsports.lang.evaluator.EvaluatorSpec
+import com.gicsports.lang.v1.ContractLimits
+import com.gicsports.lang.v1.compiler.Terms.CONST_LONG
 
 class TupleSizeTest extends EvaluatorSpec {
   implicit val startVersion: StdLibVersion = V6

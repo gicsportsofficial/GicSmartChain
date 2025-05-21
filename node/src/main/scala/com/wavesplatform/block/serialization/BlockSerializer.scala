@@ -1,19 +1,19 @@
-package com.wavesplatform.block.serialization
+package com.gicsports.block.serialization
 
 import java.nio.ByteBuffer
 
 import com.google.common.io.ByteStreams.newDataOutput
 import com.google.common.primitives.{Bytes, Ints, Longs, Shorts}
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.block.Block.{NgBlockVersion, ProtoBlockVersion, RewardBlockVersion}
-import com.wavesplatform.block.{Block, BlockHeader}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.crypto.SignatureLength
-import com.wavesplatform.protobuf.block.PBBlocks
-import com.wavesplatform.protobuf.utils.PBUtils
-import com.wavesplatform.serialization.ByteBufferOps
-import com.wavesplatform.transaction.Asset.Waves
-import com.wavesplatform.transaction.Transaction
+import com.gicsports.account.PublicKey
+import com.gicsports.block.Block.{NgBlockVersion, ProtoBlockVersion, RewardBlockVersion}
+import com.gicsports.block.{Block, BlockHeader}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.crypto.SignatureLength
+import com.gicsports.protobuf.block.PBBlocks
+import com.gicsports.protobuf.utils.PBUtils
+import com.gicsports.serialization.ByteBufferOps
+import com.gicsports.transaction.Asset.Waves
+import com.gicsports.transaction.Transaction
 import play.api.libs.json.{JsArray, JsNumber, JsObject, Json}
 
 import scala.util.Try

@@ -1,10 +1,10 @@
-package com.wavesplatform.state.diffs
+package com.gicsports.state.diffs
 
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.state.{Blockchain, Diff, Portfolio}
-import com.wavesplatform.transaction.CreateAliasTransaction
-import com.wavesplatform.transaction.TxValidationError.GenericError
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.ValidationError
+import com.gicsports.state.{Blockchain, Diff, Portfolio}
+import com.gicsports.transaction.CreateAliasTransaction
+import com.gicsports.transaction.TxValidationError.GenericError
 
 object CreateAliasTransactionDiff {
   def apply(blockchain: Blockchain)(tx: CreateAliasTransaction): Either[ValidationError, Diff] =

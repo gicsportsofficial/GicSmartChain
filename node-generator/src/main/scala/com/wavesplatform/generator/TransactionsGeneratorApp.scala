@@ -1,4 +1,4 @@
-package com.wavesplatform.generator
+package com.gicsports.generator
 
 import java.io.File
 import java.net.InetSocketAddress
@@ -10,17 +10,17 @@ import scala.util.{Failure, Random, Success}
 
 import cats.implicits.showInterpolator
 import com.typesafe.config.ConfigFactory
-import com.wavesplatform.account.AddressScheme
-import com.wavesplatform.features.EstimatorProvider._
-import com.wavesplatform.generator.GeneratorSettings.NodeAddress
-import com.wavesplatform.generator.Preconditions.{PGenSettings, UniverseHolder}
-import com.wavesplatform.generator.cli.ScoptImplicits
-import com.wavesplatform.generator.config.FicusImplicits
-import com.wavesplatform.generator.utils.Universe
-import com.wavesplatform.network.client.NetworkSender
-import com.wavesplatform.transaction.Transaction
-import com.wavesplatform.utils.{LoggerFacade, NTP}
-import com.wavesplatform.Application
+import com.gicsports.account.AddressScheme
+import com.gicsports.features.EstimatorProvider._
+import com.gicsports.generator.GeneratorSettings.NodeAddress
+import com.gicsports.generator.Preconditions.{PGenSettings, UniverseHolder}
+import com.gicsports.generator.cli.ScoptImplicits
+import com.gicsports.generator.config.FicusImplicits
+import com.gicsports.generator.utils.Universe
+import com.gicsports.network.client.NetworkSender
+import com.gicsports.transaction.Transaction
+import com.gicsports.utils.{LoggerFacade, NTP}
+import com.gicsports.Application
 import monix.execution.Scheduler
 import net.ceedubs.ficus.Ficus._
 import net.ceedubs.ficus.readers.{EnumerationReader, NameMapper, ValueReader}
@@ -33,7 +33,7 @@ import scopt.OptionParser
 object TransactionsGeneratorApp extends App with ScoptImplicits with FicusImplicits with EnumerationReader {
 
   // IDEA bugs
-  implicit val inetSocketAddressReader: ValueReader[InetSocketAddress] = com.wavesplatform.settings.inetSocketAddressReader
+  implicit val inetSocketAddressReader: ValueReader[InetSocketAddress] = com.gicsports.settings.inetSocketAddressReader
   implicit val readConfigInHyphen: NameMapper                          = net.ceedubs.ficus.readers.namemappers.implicits.hyphenCase
   implicit val httpClient: AsyncHttpClient                             = asyncHttpClient()
 

@@ -1,18 +1,18 @@
 openapi: 3.0.1
 info:
   version: '{{version}}'
-  title: CardiumNetwork Full Node ({{chainId}})
+  title: GicSmartChain Full Node ({{chainId}})
   description: >-
-    The CardiumNetwork node REST API is the main interface for interacting with the
+    The GicSmartChain node REST API is the main interface for interacting with the
     blockchain. See
-    [documentation](https://docs.cardium.network/en/cardium-node/node-api/) for more
-    info. If this API lacks data you need, check the [CARDIUM Data Services
-    API](https://docs.cardium.network/en/building-apps/cardium-api-and-sdk/cardium-data-service-api).
-    [Data service](https://data-service.cardium.network/v0/)
+    [documentation](https://docs.gic.network/en/gic-node/node-api/) for more
+    info. If this API lacks data you need, check the [GIC Data Services
+    API](https://docs.gic.network/en/building-apps/gic-api-and-sdk/gic-data-service-api).
+    [Data service](https://data-service.gic.network/v0/)
   termsOfService: ''
   license:
     name: MIT License
-    url: 'https://github.com/cardiumcoin/CardiumNetwork/blob/version-1.3.x/LICENSE'
+    url: 'https://github.com/gicsportsofficial/GicSmartChain/blob/version-1.3.x/LICENSE'
 servers:
   - url: /
 tags:
@@ -37,7 +37,7 @@ paths:
       summary: Wallet addresses
       description: >-
         Get a list of account addresses in the [node
-        wallet](https://docs.cardium.network/en/cardium-node/how-to-work-with-node-wallet)
+        wallet](https://docs.gic.network/en/gic-node/how-to-work-with-node-wallet)
       operationId: getWalletAddresses
       responses:
         '200':
@@ -54,7 +54,7 @@ paths:
       summary: Create wallet address
       description: >-
         Generate a new account address in the [node
-        wallet](https://docs.cardium.network/en/cardium-node/how-to-work-with-node-wallet)
+        wallet](https://docs.gic.network/en/gic-node/how-to-work-with-node-wallet)
       operationId: createWalletAddress
       responses:
         '200':
@@ -79,7 +79,7 @@ paths:
       summary: Wallet addresses by range
       description: >-
         Get a list addresses in the [node
-        wallet](https://docs.cardium.network/en/cardium-node/how-to-work-with-node-wallet)
+        wallet](https://docs.gic.network/en/gic-node/how-to-work-with-node-wallet)
         by a given range of indices. Max range {from}-{to} is 1000 addresses.
       operationId: getWalletAddressesRange
       parameters:
@@ -163,7 +163,7 @@ paths:
       tags:
         - addresses
       summary: Regular balance
-      description: Get the regular balance in CARDIUM at a given address
+      description: Get the regular balance in GIC at a given address
       operationId: getRegularBalance
       parameters:
         - $ref: '#/components/parameters/address'
@@ -208,7 +208,7 @@ paths:
         - name: asset
           in: query
           description: >-
-            Base58 encoded asset ID. Not defined for CARDIUM asset
+            Base58 encoded asset ID. Not defined for GIC asset
           schema:
             $ref: '#/components/schemas/AssetId'
       responses:
@@ -228,7 +228,7 @@ paths:
       summary: Multiple accounts balances
       description: >-
         Get regular balances for multiple addresses. Max number of addresses is
-        set by `cardium.rest-api.transactions-by-address-limit`, 1000 by default
+        set by `gic.rest-api.transactions-by-address-limit`, 1000 by default
       operationId: getMultipleBalancesViaPost
       requestBody:
         content:
@@ -256,7 +256,7 @@ paths:
                 asset:
                   allOf:
                     - $ref: '#/components/schemas/AssetId'
-                  description: Base58 encoded asset ID. Not defined for CARDIUM asset
+                  description: Base58 encoded asset ID. Not defined for GIC asset
       responses:
         '200':
           description: successful operation
@@ -271,7 +271,7 @@ paths:
       tags:
         - addresses
       summary: Effective balance
-      description: Get the effective balance in CARDIUM at a given address
+      description: Get the effective balance in GIC at a given address
       operationId: getEffectiveBalance
       parameters:
         - $ref: '#/components/parameters/address'
@@ -446,7 +446,7 @@ paths:
                     type: integer
                     format: int64
                     description: >-
-                      [Complexity](https://docs.cardium.network/en/ride/base-concepts/complexity)
+                      [Complexity](https://docs.gic.network/en/ride/base-concepts/complexity)
                       of an account script or the verifier function of the dApp
                       script
                   callableComplexities:
@@ -489,11 +489,11 @@ paths:
     get:
       tags:
         - addresses
-      summary: All types of balances in CARDIUM
+      summary: All types of balances in GIC
       description: >-
         Get the available, regular, generating, and effective balance, see
-        [definitions](https://docs.cardium.network/en/blockchain/account/account-balance#account-balance-in-cardium)
-      operationId: getCardiumBalances
+        [definitions](https://docs.gic.network/en/blockchain/account/account-balance#account-balance-in-gic)
+      operationId: getGicBalances
       parameters:
         - $ref: '#/components/parameters/address'
       responses:
@@ -528,11 +528,11 @@ paths:
     get:
       tags:
         - addresses
-      summary: Confirmed regular balance in CARDIUM
+      summary: Confirmed regular balance in GIC
       description: >-
         Get the minimum regular balance at a given address for {confirmations}
         blocks back from the current height. Max number of confirmations is set
-        by `CARDIUM.db.max-rollback-depth`, 2000 by default
+        by `GIC.db.max-rollback-depth`, 2000 by default
       operationId: getConfirmedRegularBalance
       parameters:
         - $ref: '#/components/parameters/address'
@@ -553,11 +553,11 @@ paths:
     get:
       tags:
         - addresses
-      summary: Confirmed effective balance in CARDIUM
+      summary: Confirmed effective balance in GIC
       description: >-
         Get the minimum effective balance at a given address for {confirmations}
         blocks from the current height. Max number of confirmations is set by
-        `cardium.db.max-rollback-depth`, 2000 by default
+        `gic.db.max-rollback-depth`, 2000 by default
       operationId: getConfirmedEffectiveBalance
       parameters:
         - $ref: '#/components/parameters/address'
@@ -1142,7 +1142,7 @@ paths:
       summary: Transaction statuses
       description: >-
         Get transaction statuses by their ID. Max number of transactions is set
-        by `CARDIUM.rest-api.transactions-by-address-limit`, 1000 by
+        by `GIC.rest-api.transactions-by-address-limit`, 1000 by
         default.<br>Transactions in the response are in the same order as in the
         request.
       operationId: getTxStatusesViaPost
@@ -1229,7 +1229,7 @@ paths:
       summary: Transactions info
       description: >-
         Get transactions by IDs. Max number of transactions is set
-        by `cardium.rest-api.transactions-by-address-limit`, 1000 by
+        by `gic.rest-api.transactions-by-address-limit`, 1000 by
         default.<br>Transactions in the response are in the same order as in the
         request.
       operationId: getTxsViaPost
@@ -1274,14 +1274,14 @@ paths:
       description: >-
         Sign a transaction with the private key corresponding to the `sender`.
         Sender must exist in the [node's
-        wallet](https://docs.cardium.network/en/cardium-node/how-to-work-with-node-wallet)
+        wallet](https://docs.gic.network/en/gic-node/how-to-work-with-node-wallet)
       operationId: signTx
       requestBody:
         description: >-
           Transaction [data in
-          JSON](https://docs.cardium.network/en/blockchain/transaction/#json-representation)
+          JSON](https://docs.gic.network/en/blockchain/transaction/#json-representation)
           including
-          [`type`](https://docs.cardium.network/en/blockchain/transaction-type/) and
+          [`type`](https://docs.gic.network/en/blockchain/transaction-type/) and
           `sender`. If `timestamp` is omitted, current node's time is used.
           `senderPublicKey` is ignored.
         content:
@@ -1325,7 +1325,7 @@ paths:
       description: >-
         Get a list of the latest transactions involving a given address. Max
         number of transactions is set by
-        `CARDIUM.rest-api.transactions-by-address-limit`, 1000 by default. For
+        `GIC.rest-api.transactions-by-address-limit`, 1000 by default. For
         pagination, use the field {after}
       operationId: getTxsByAddress
       parameters:
@@ -1398,9 +1398,9 @@ paths:
       requestBody:
         description: >-
           Transaction [data in
-          JSON](https://docs.cardium.network/en/blockchain/transaction/#json-representation)
+          JSON](https://docs.gic.network/en/blockchain/transaction/#json-representation)
           including
-          [`type`](https://docs.cardium.network/en/blockchain/transaction-type/) and
+          [`type`](https://docs.gic.network/en/blockchain/transaction-type/) and
           `senderPublicKey`. To calculate a sponsored fee, specify `feeAssetId`.
           `fee` and `sender` are ignored.
         content:
@@ -1433,7 +1433,7 @@ paths:
       description: >-
         Sign a transaction with the private key corresponding to a given
         address. The address must exist in the [node's
-        wallet](https://docs.cardium.network/en/cardium-node/how-to-work-with-node-wallet)
+        wallet](https://docs.gic.network/en/gic-node/how-to-work-with-node-wallet)
       operationId: signTxWithAddress
       parameters:
         - name: signerAddress
@@ -1446,9 +1446,9 @@ paths:
       requestBody:
         description: >-
           Transaction [data in
-          JSON](https://docs.cardium.network/en/blockchain/transaction/#json-representation)
+          JSON](https://docs.gic.network/en/blockchain/transaction/#json-representation)
           including
-          [`type`](https://docs.cardium.network/en/blockchain/transaction-type/) and
+          [`type`](https://docs.gic.network/en/blockchain/transaction-type/) and
           `sender`. If `timestamp` is omitted, current node's time is used.
           `senderPublicKey` is ignored.
         content:
@@ -1473,7 +1473,7 @@ paths:
       tags:
         - transactions
       summary: Broadcast transaction
-      description: Broadcast a signed transaction.<br>Check out [how to use this endpoint](https://docs.cardium.network/en/cardium-node/node-api/transactions#step-4-broadcast-transaction)
+      description: Broadcast a signed transaction.<br>Check out [how to use this endpoint](https://docs.gic.network/en/gic-node/node-api/transactions#step-4-broadcast-transaction)
       operationId: broadcastSignedTx
       parameters:
         - name: trace
@@ -1485,9 +1485,9 @@ paths:
       requestBody:
         description: >-
           Transaction [data in
-          JSON](https://docs.cardium.network/en/blockchain/transaction/#json-representation)
+          JSON](https://docs.gic.network/en/blockchain/transaction/#json-representation)
           including
-          [`type`](https://docs.cardium.network/en/blockchain/transaction-type/) and
+          [`type`](https://docs.gic.network/en/blockchain/transaction-type/) and
           `signature`/`proofs`
         content:
           application/json:
@@ -1509,7 +1509,7 @@ paths:
       summary: Merkle proofs
       description: >-
         Get [merkle
-        proofs](https://docs.cardium.network/en/blockchain/block/merkle-root#proof-of-transaction-in-block)
+        proofs](https://docs.gic.network/en/blockchain/block/merkle-root#proof-of-transaction-in-block)
         for given transactions. For dozens of transactions, better use the POST
         method. Limited by `rest-api.transactions-by-address-limit`, 1000 by default.
       operationId: getMerkleProofs
@@ -1537,7 +1537,7 @@ paths:
       summary: Merkle proofs
       description: >-
         Get [merkle
-        proofs](https://docs.cardium.network/en/blockchain/block/merkle-root#proof-of-transaction-in-block)
+        proofs](https://docs.gic.network/en/blockchain/block/merkle-root#proof-of-transaction-in-block)
         for given transactions. Limited by `rest-api.transactions-by-address-limit`, 1000 by default.
       operationId: getMerkleProofsViaPost
       requestBody:
@@ -1763,7 +1763,7 @@ paths:
                     type: integer
                     format: int64
                     description: >-
-                      [Complexity](https://docs.cardium.network/en/ride/base-concepts/complexity)
+                      [Complexity](https://docs.gic.network/en/ride/base-concepts/complexity)
                       of the account or asset script or the verifier function of
                       the dApp script
                   callableComplexities:
@@ -1944,9 +1944,9 @@ paths:
       requestBody:
         description: >-
           Transaction [data in
-          JSON](https://docs.cardium.network/en/blockchain/transaction/#json-representation)
+          JSON](https://docs.gic.network/en/blockchain/transaction/#json-representation)
           including
-          [`type`](https://docs.cardium.network/en/blockchain/transaction-type/)
+          [`type`](https://docs.gic.network/en/blockchain/transaction-type/)
         content:
           application/json:
             schema:
@@ -2043,7 +2043,7 @@ paths:
         - assets
       summary: Asset balances
       description: >-
-        Get account balances in all or specified assets (excluding CARDIUM) at a given address.<br>
+        Get account balances in all or specified assets (excluding GIC) at a given address.<br>
         Note: Full portfolio also excludes NFTs.
       operationId: getAssetBalances
       parameters:
@@ -2071,7 +2071,7 @@ paths:
         - assets
       summary: Asset balances
       description: >-
-        Get account balances in specified assets (excluding CARDIUM) at a given address
+        Get account balances in specified assets (excluding GIC) at a given address
       operationId: getAssetBalancesViaPost
       parameters:
         - $ref: '#/components/parameters/address'
@@ -2113,7 +2113,7 @@ paths:
       summary: Information about asset
       description: >-
         Get detailed information about a given asset. See [fields
-        descriptions](https://docs.cardium.network/en/blockchain/token/#custom-token-parameters)
+        descriptions](https://docs.gic.network/en/blockchain/token/#custom-token-parameters)
       operationId: getAssetDetails
       parameters:
         - $ref: '#/components/parameters/assetId'
@@ -2136,7 +2136,7 @@ paths:
       summary: Information about multiple assets
       description: >-
         Get detailed information about given assets. See [fields
-        descriptions](https://docs.cardium.network/en/blockchain/token/#custom-token-parameters).
+        descriptions](https://docs.gic.network/en/blockchain/token/#custom-token-parameters).
         For dozens of assets, better use the POST method.
         Limited by `rest-api.asset-details-limit`, 100 by default.
       operationId: getMultipleAssetDetails
@@ -2171,7 +2171,7 @@ paths:
       summary: Information about multiple assets
       description: >-
         Get detailed information about given assets. See [fields
-        descriptions](https://docs.cardium.network/en/blockchain/token/#custom-token-parameters).
+        descriptions](https://docs.gic.network/en/blockchain/token/#custom-token-parameters).
         Limited by `rest-api.asset-details-limit`, 100 by default.
       operationId: getMultipleAssetDetailsViaPost
       parameters:
@@ -2268,7 +2268,7 @@ paths:
       description: >-
         Get asset balance distribution by addresses at a given height. Max
         number of addresses is set by
-        `CARDIUM.rest-api.distribution-address-limit`, 1000 by default. For
+        `GIC.rest-api.distribution-address-limit`, 1000 by default. For
         pagination, use the field {after}
       operationId: getAssetDistribution
       parameters:
@@ -2277,7 +2277,7 @@ paths:
           in: path
           description: >-
             For balance at height requests. Max number of blocks back from the
-              current height is set by `CARDIUM.rest-api.distribution-address-limit`, 1000 by
+              current height is set by `GIC.rest-api.distribution-address-limit`, 1000 by
             default
           required: true
           schema:
@@ -2307,12 +2307,12 @@ paths:
       summary: Account NFTs
       description: >-
         Get a list of [non-fungible
-        tokens](https://docs.cardium.network/en/blockchain/token/non-fungible-token)
+        tokens](https://docs.gic.network/en/blockchain/token/non-fungible-token)
         at a given address. Max for 1000 tokens. For pagination, use the field
         {after}. See [fields
-        descriptions](https://docs.cardium.network/en/blockchain/token/#custom-token-parameters).<br>Since
+        descriptions](https://docs.gic.network/en/blockchain/token/#custom-token-parameters).<br>Since
         activation of [feature
-        #15](https://docs.cardium.network/en/cardium-node/features/) this method
+        #15](https://docs.gic.network/en/gic-node/features/) this method
         returns only tokens that are issued as NFT (amount: 1, decimal places:
         0, reissuable: false) after activation of feature #13. Before activation
         of feature #15 the method returned all the assets that are issued as
@@ -2459,7 +2459,7 @@ paths:
       summary: Feature activation status
       description: >-
         Activation statuses of [blockchain
-        features](https://docs.cardium.network/en/cardium-node/features/)
+        features](https://docs.gic.network/en/gic-node/features/)
       operationId: getFeatureStatuses
       responses:
         '200':
@@ -2561,7 +2561,7 @@ paths:
         - debug
       summary: Regular address balance
       description: Regular address balance at the current height
-      operationId: getCardiumDistribution
+      operationId: getGicDistribution
       responses:
         '200':
           description: successful operation
@@ -2674,7 +2674,7 @@ paths:
       summary: State hash
       description: >-
         Get state hash at height. Available only if node configuration contains
-        `CARDIUM.db.store-state-hashes = true` option
+        `GIC.db.store-state-hashes = true` option
       operationId: getStateHash
       parameters:
         - name: height
@@ -2720,7 +2720,7 @@ paths:
       summary: Last block state hash
       description: >-
         Get state hash of the last block. Available only if node configuration contains
-        `CARDIUM.db.store-state-hashes = true` option
+        `GIC.db.store-state-hashes = true` option
       operationId: getStateHashLast
       responses:
         '200':
@@ -2732,7 +2732,7 @@ paths:
                 properties:
                   blockId:
                     type: string
-                  cardiumBalanceHash:
+                  gicBalanceHash:
                     type: string
                   assetsBalanceHash:
                     type: string
@@ -2759,7 +2759,7 @@ paths:
       summary: Ban peer
       description: >-
         Move a given peer to the ban list for the time specified in
-        `CARDIUM.network.black-list-residence-time`, 15 min by default. The
+        `GIC.network.black-list-residence-time`, 15 min by default. The
         connection to the peer is immediately closed (if it was open)
       operationId: banPeer
       requestBody:
@@ -2851,7 +2851,7 @@ paths:
       summary: History of regular balance
       description: >-
         Get history of the regular balance at a given address. Max depth is set
-        by `CARDIUM.db.max-rollback-depth`, 2000 by default
+        by `GIC.db.max-rollback-depth`, 2000 by default
       operationId: getBalanceHistory
       parameters:
         - $ref: '#/components/parameters/address'
@@ -2873,16 +2873,16 @@ paths:
                     balance:
                       type: integer
                       format: int64
-  '/debug/stateCardium/{height}':
+  '/debug/stateGic/{height}':
     get:
       tags:
         - debug
       summary: Regular address balance at the height
       description: >-
         Regular address balance at the height. Max number of blocks back from
-        the current height is set by `CARDIUM.db.max-rollback-depth`, 2000 by
+        the current height is set by `GIC.db.max-rollback-depth`, 2000 by
         default
-      operationId: getCardiumDistributionAtHeight
+      operationId: getGicDistributionAtHeight
       parameters:
         - name: height
           in: path
@@ -2915,7 +2915,7 @@ paths:
       summary: Rollback to height
       description: >-
         Removes all blocks after a given height. Max number of blocks back from
-        the current height is set by `CARDIUM.db.max-rollback-depth`, 2000 by
+        the current height is set by `GIC.db.max-rollback-depth`, 2000 by
         default
       operationId: rollbackToHeight
       requestBody:
@@ -3060,7 +3060,7 @@ paths:
       tags:
         - node
       summary: Version
-      description: Get Cardium node version
+      description: Get Gic node version
       operationId: getNodeVersion
       responses:
         '200':
@@ -3301,16 +3301,16 @@ components:
           nullable: true
           description: >-
             For [sponsored
-            asset](https://docs.cardium.network/en/blockchain/cardium-protocol/sponsored-fee)
-            only: the equivalent of 0.02 CARDIUM
+            asset](https://docs.gic.network/en/blockchain/gic-protocol/sponsored-fee)
+            only: the equivalent of 0.02 GIC
         sponsorBalance:
           type: integer
           format: int64
           nullable: true
           description: >-
             For [sponsored
-            asset](https://docs.cardium.network/en/blockchain/cardium-protocol/sponsored-fee)
-            only: the sponsor balance in CARDIUM
+            asset](https://docs.gic.network/en/blockchain/gic-protocol/sponsored-fee)
+            only: the sponsor balance in GIC
         quantity:
           type: integer
           format: int64
@@ -3447,7 +3447,7 @@ components:
           type: integer
           format: int64
           description: >-
-            [Complexity](https://docs.cardium.network/en/ride/base-concepts/complexity)
+            [Complexity](https://docs.gic.network/en/ride/base-concepts/complexity)
             of an account or asset script or the verifier function of the dApp
             script
         callableComplexities:
@@ -3636,7 +3636,7 @@ components:
         - minIncrement
         - nextCheck
         - term
-        - totalCardiumAmount
+        - totalGicAmount
         - votes
         - votingInterval
         - votingIntervalStart
@@ -3645,7 +3645,7 @@ components:
       properties:
         height:
           $ref: '#/components/schemas/Height'
-        totalCardiumAmount:
+        totalGicAmount:
           $ref: '#/components/schemas/Amount'
         currentReward:
           $ref: '#/components/schemas/Amount'
@@ -3718,7 +3718,7 @@ components:
         * `succeeded`: transaction is successful
         * `script_execution_failed`: the dApp script or the asset script failed
 
-        See [Transaction Validation](https://docs.cardium.network/en/blockchain/transaction/transaction-validation) for details.
+        See [Transaction Validation](https://docs.gic.network/en/blockchain/transaction/transaction-validation) for details.
     LeaseStatus:
       type: string
       enum:
@@ -3755,7 +3755,7 @@ components:
         amount:
           type: integer
           format: int32
-          description: Leased Cardium amount
+          description: Leased Gic amount
           allOf:
             - $ref: '#/components/schemas/Amount'
         height:

@@ -1,7 +1,7 @@
-package com.wavesplatform.transaction.smart.script.trace
+package com.gicsports.transaction.smart.script.trace
 import scala.util.Right
 
-import com.wavesplatform.lang.ValidationError
+import com.gicsports.lang.ValidationError
 import monix.eval.Coeval
 
 case class CoevalR[+A](v: Coeval[TracedResult[ValidationError, A]]) extends AnyVal {

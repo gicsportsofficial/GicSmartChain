@@ -1,10 +1,10 @@
-package com.wavesplatform.common
+package com.gicsports.common
 
 import java.util.concurrent.TimeUnit
 
-import com.wavesplatform.common.SigVerifyBenchmark._
-import com.wavesplatform.crypto.Curve25519
-import com.wavesplatform.lang.v1.EnvironmentFunctionsBenchmark.{curve25519, randomBytes}
+import com.gicsports.common.SigVerifyBenchmark._
+import com.gicsports.crypto.Curve25519
+import com.gicsports.lang.v1.EnvironmentFunctionsBenchmark.{curve25519, randomBytes}
 import org.openjdk.jmh.annotations._
 import org.openjdk.jmh.infra.Blackhole
 

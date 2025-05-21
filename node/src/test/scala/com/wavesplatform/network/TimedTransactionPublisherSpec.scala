@@ -1,13 +1,13 @@
-package com.wavesplatform.network
+package com.gicsports.network
 import java.util.concurrent.CountDownLatch
 
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.test.FreeSpec
-import com.wavesplatform.transaction.smart.script.trace.TracedResult
-import com.wavesplatform.transaction.{GenesisTransaction, Transaction}
-import com.wavesplatform.utils.Schedulers
+import com.gicsports.account.PublicKey
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.lang.ValidationError
+import com.gicsports.test.FreeSpec
+import com.gicsports.transaction.smart.script.trace.TracedResult
+import com.gicsports.transaction.{GenesisTransaction, Transaction}
+import com.gicsports.utils.Schedulers
 import io.netty.channel.embedded.EmbeddedChannel
 import io.netty.util.HashedWheelTimer
 import monix.execution.atomic.AtomicInt

@@ -1,4 +1,4 @@
-name := "cardium"
+name := "gic"
 
 enablePlugins(
   RunApplicationSettings,
@@ -37,7 +37,7 @@ inConfig(Compile)(
 inTask(assembly)(
   Seq(
     test            := {},
-    assemblyJarName := s"cardium-all-${version.value}.jar",
+    assemblyJarName := s"gic-all-${version.value}.jar",
     assemblyMergeStrategy := {
       case p
           if p.endsWith(".proto") ||
@@ -95,7 +95,7 @@ linuxScriptReplacements += ("network" -> network.value.toString)
 
 inConfig(Universal)(
   Seq(
-    mappings += (baseDirectory.value / s"cardium-sample.conf" -> "doc/cardium.conf.sample"),
+    mappings += (baseDirectory.value / s"gic-sample.conf" -> "doc/gic.conf.sample"),
     javaOptions ++= Seq(
       // -J prefix is required by the bash script
       "-J-server",
@@ -112,8 +112,8 @@ inConfig(Universal)(
 
 inConfig(Linux)(
   Seq(
-    packageSummary     := "cardium node",
-    packageDescription := "cardium node",
+    packageSummary     := "gic node",
+    packageDescription := "gic node",
     name               := s"${name.value}${network.value.packageSuffix}",
     normalizedName     := name.value,
     packageName        := normalizedName.value
@@ -152,7 +152,7 @@ linuxPackageSymlinks := linuxPackageSymlinks.value.map { lsl =>
 
 inConfig(Debian)(
   Seq(
-    maintainer               := "com.wavesplatform",
+    maintainer               := "com.gicsports",
     packageSource            := sourceDirectory.value / "package",
     linuxStartScriptTemplate := (packageSource.value / "systemd.service").toURI.toURL,
     debianPackageDependencies += "java8-runtime-headless",
@@ -160,4 +160,4 @@ inConfig(Debian)(
   )
 )
 
-V.scalaPackage := "com.wavesplatform"
+V.scalaPackage := "com.gicsports"

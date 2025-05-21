@@ -3,17 +3,17 @@ package com
 import java.time.Instant
 
 import com.typesafe.scalalogging.Logger
-import com.wavesplatform.block.Block
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.mining.Miner
-import com.wavesplatform.settings.WavesSettings
-import com.wavesplatform.state.Blockchain
-import com.wavesplatform.transaction.BlockchainUpdater
-import com.wavesplatform.transaction.TxValidationError.GenericError
+import com.gicsports.block.Block
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.ValidationError
+import com.gicsports.mining.Miner
+import com.gicsports.settings.WavesSettings
+import com.gicsports.state.Blockchain
+import com.gicsports.transaction.BlockchainUpdater
+import com.gicsports.transaction.TxValidationError.GenericError
 import org.slf4j.LoggerFactory
 
-package object wavesplatform {
+package object gicsports {
   private lazy val logger: Logger =
     Logger(LoggerFactory.getLogger(getClass.getName))
   private def checkOrAppend(block: Block, blockchainUpdater: Blockchain & BlockchainUpdater, miner: Miner): Either[ValidationError, Unit] =
@@ -44,7 +44,7 @@ package object wavesplatform {
       .foreach { e =>
         logger.error("INCORRECT NODE CONFIGURATION!!! NODE STOPPED BECAUSE OF THE FOLLOWING ERROR:")
         logger.error(e.toString)
-        com.wavesplatform.utils.forceStopApplication()
+        com.gicsports.utils.forceStopApplication()
       }
   }
 }

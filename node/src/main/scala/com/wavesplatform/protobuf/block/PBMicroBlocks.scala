@@ -1,13 +1,13 @@
-package com.wavesplatform.protobuf.block
+package com.gicsports.protobuf.block
 
 import scala.util.Try
 
-import com.wavesplatform.account.PublicKey
-import com.wavesplatform.block.Block.BlockId
-import com.wavesplatform.common.utils.EitherExt2
-import com.wavesplatform.network.MicroBlockResponse
-import com.wavesplatform.protobuf._
-import com.wavesplatform.protobuf.transaction.PBTransactions
+import com.gicsports.account.PublicKey
+import com.gicsports.block.Block.BlockId
+import com.gicsports.common.utils.EitherExt2
+import com.gicsports.network.MicroBlockResponse
+import com.gicsports.protobuf._
+import com.gicsports.protobuf.transaction.PBTransactions
 
 object PBMicroBlocks {
 

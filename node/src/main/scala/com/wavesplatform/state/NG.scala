@@ -1,8 +1,8 @@
-package com.wavesplatform.state
+package com.gicsports.state
 
-import com.wavesplatform.block.Block.BlockId
-import com.wavesplatform.block.MicroBlock
-import com.wavesplatform.common.state.ByteStr
+import com.gicsports.block.Block.BlockId
+import com.gicsports.block.MicroBlock
+import com.gicsports.common.state.ByteStr
 
 trait NG {
   def microBlock(id: ByteStr): Option[MicroBlock]

@@ -1,17 +1,17 @@
-package com.wavesplatform.transaction.serialization.impl
+package com.gicsports.transaction.serialization.impl
 
 import java.nio.ByteBuffer
 
 import com.google.common.primitives.{Bytes, Longs}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.lang.v1.compiler.Terms
-import com.wavesplatform.lang.v1.compiler.Terms.EXPR
-import com.wavesplatform.lang.v1.serialization.SerdeV1
-import com.wavesplatform.serialization.*
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction
-import com.wavesplatform.transaction.smart.InvokeScriptTransaction.Payment
-import com.wavesplatform.transaction.{Asset, TxPositiveAmount, TxVersion}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.*
+import com.gicsports.lang.v1.compiler.Terms
+import com.gicsports.lang.v1.compiler.Terms.EXPR
+import com.gicsports.lang.v1.serialization.SerdeV1
+import com.gicsports.serialization.*
+import com.gicsports.transaction.smart.InvokeScriptTransaction
+import com.gicsports.transaction.smart.InvokeScriptTransaction.Payment
+import com.gicsports.transaction.{Asset, TxPositiveAmount, TxVersion}
 import play.api.libs.json.{JsArray, JsObject, JsString, Json}
 
 import scala.util.Try

@@ -1,4 +1,4 @@
-package com.wavesplatform.database
+package com.gicsports.database
 
 import java.util
 
@@ -8,31 +8,31 @@ import cats.syntax.semigroup.*
 import com.google.common.cache.CacheBuilder
 import com.google.common.collect.MultimapBuilder
 import com.google.common.primitives.{Bytes, Ints}
-import com.wavesplatform.account.{Address, Alias}
-import com.wavesplatform.api.BlockMeta
-import com.wavesplatform.block.Block.BlockId
-import com.wavesplatform.block.{Block, SignedBlockHeader}
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.common.utils.*
-import com.wavesplatform.database
-import com.wavesplatform.database.patch.DisableHijackedAliases
-import com.wavesplatform.database.protobuf.{EthereumTransactionMeta, TransactionMeta}
-import com.wavesplatform.features.BlockchainFeatures
-import com.wavesplatform.lang.ValidationError
-import com.wavesplatform.protobuf.transaction.PBAmounts
-import com.wavesplatform.settings.{BlockchainSettings, DBSettings, WavesSettings}
-import com.wavesplatform.state.reader.LeaseDetails
-import com.wavesplatform.state.{TxNum, *}
-import com.wavesplatform.transaction.*
-import com.wavesplatform.transaction.Asset.{IssuedAsset, Waves}
-import com.wavesplatform.transaction.EthereumTransaction.Transfer
-import com.wavesplatform.transaction.TxValidationError.{AliasDoesNotExist, AliasIsDisabled}
-import com.wavesplatform.transaction.assets.*
-import com.wavesplatform.transaction.assets.exchange.ExchangeTransaction
-import com.wavesplatform.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
-import com.wavesplatform.transaction.smart.{InvokeExpressionTransaction, InvokeScriptTransaction, SetScriptTransaction}
-import com.wavesplatform.transaction.transfer.*
-import com.wavesplatform.utils.{LoggerFacade, ScorexLogging}
+import com.gicsports.account.{Address, Alias}
+import com.gicsports.api.BlockMeta
+import com.gicsports.block.Block.BlockId
+import com.gicsports.block.{Block, SignedBlockHeader}
+import com.gicsports.common.state.ByteStr
+import com.gicsports.common.utils.*
+import com.gicsports.database
+import com.gicsports.database.patch.DisableHijackedAliases
+import com.gicsports.database.protobuf.{EthereumTransactionMeta, TransactionMeta}
+import com.gicsports.features.BlockchainFeatures
+import com.gicsports.lang.ValidationError
+import com.gicsports.protobuf.transaction.PBAmounts
+import com.gicsports.settings.{BlockchainSettings, DBSettings, WavesSettings}
+import com.gicsports.state.reader.LeaseDetails
+import com.gicsports.state.{TxNum, *}
+import com.gicsports.transaction.*
+import com.gicsports.transaction.Asset.{IssuedAsset, Waves}
+import com.gicsports.transaction.EthereumTransaction.Transfer
+import com.gicsports.transaction.TxValidationError.{AliasDoesNotExist, AliasIsDisabled}
+import com.gicsports.transaction.assets.*
+import com.gicsports.transaction.assets.exchange.ExchangeTransaction
+import com.gicsports.transaction.lease.{LeaseCancelTransaction, LeaseTransaction}
+import com.gicsports.transaction.smart.{InvokeExpressionTransaction, InvokeScriptTransaction, SetScriptTransaction}
+import com.gicsports.transaction.transfer.*
+import com.gicsports.utils.{LoggerFacade, ScorexLogging}
 import monix.reactive.Observer
 import org.iq80.leveldb.DB
 import org.slf4j.LoggerFactory

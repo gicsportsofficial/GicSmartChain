@@ -1,11 +1,11 @@
-package com.wavesplatform.api.common
+package com.gicsports.api.common
 
-import com.wavesplatform.account.Address
-import com.wavesplatform.common.state.ByteStr
-import com.wavesplatform.database.protobuf.EthereumTransactionMeta
-import com.wavesplatform.database.{DBExt, DBResource, Keys}
-import com.wavesplatform.state.{Diff, Height, InvokeScriptResult, TransactionId, TxMeta, TxNum}
-import com.wavesplatform.transaction.{Authorized, EthereumTransaction, GenesisTransaction, Transaction, TransactionType}
+import com.gicsports.account.Address
+import com.gicsports.common.state.ByteStr
+import com.gicsports.database.protobuf.EthereumTransactionMeta
+import com.gicsports.database.{DBExt, DBResource, Keys}
+import com.gicsports.state.{Diff, Height, InvokeScriptResult, TransactionId, TxMeta, TxNum}
+import com.gicsports.transaction.{Authorized, EthereumTransaction, GenesisTransaction, Transaction, TransactionType}
 import org.iq80.leveldb.DB
 
 object AddressTransactions {

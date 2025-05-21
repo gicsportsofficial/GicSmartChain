@@ -1,10 +1,10 @@
-package com.wavesplatform.network
+package com.gicsports.network
 
 import java.net.{InetAddress, InetSocketAddress}
 
 import com.google.common.base.Charsets
 import io.netty.buffer.ByteBuf
-import com.wavesplatform.utils._
+import com.gicsports.utils._
 
 case class Handshake(
     applicationName: String,
