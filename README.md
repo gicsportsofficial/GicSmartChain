@@ -1,22 +1,5 @@
 # Gic
 
-The Gic Coin Blockchain is redefining the blockchain landscape with an infrastructure designed to set new standards for speed and scalability. With a current capacity of 1,000 transactions per second (tx/s) and block generation every 10 seconds, Gic already delivers a level of performance that few can match. However, with the release of Gic 2.0, we are set to elevate this network to unprecedented processing power: a capacity of 100,000 tx/s with block generation in just 1 second. This is not merely a promise but a reality in progress.
-
-Our commitment extends beyond the immediate upgrade. The Gic Coin Blockchain is built with a modular and adaptive architecture, structured to scale progressively up to 4,000,000 tx/s, meeting the demands of even the most intensive projects. To achieve this benchmark, we are implementing a suite of cutting-edge technologies carefully engineered to maximize network efficiency and resilience:
-
-Dynamic and Intelligent Sharding: Gic adopts a dynamic sharding system that distributes the transactional load across multiple independent clusters, with intelligent and adaptive allocation to balance performance in real time, preserving both network efficiency and security.
-
-Parallel Transaction Execution and Multilayered Infrastructure: We utilize a multi-layered architecture that enables parallel transaction processing, eliminating traditional bottlenecks and dramatically boosting throughput. The network can handle complex transaction flows across multiple simultaneous layers, ensuring data consistency and integrity.
-
-Low-Latency Hybrid Consensus Protocol: We have developed an innovative, real-time adjustable consensus protocol that minimizes latency and optimizes confirmation times without sacrificing security. This hybrid protocol integrates multiple consensus approaches, dynamically adapting to real-time transactional demand.
-
-Data Compression and Transaction Aggregation: Our network leverages data compression and aggregation algorithms that allow for optimal block density. This technology enables massive data processing without a significant increase in block size, maximizing storage efficiency and confirmation speed.
-
-Every technical detail of Gic has been engineered for agile, secure, and highly efficient implementation, ensuring that the network maintains consistent performance and is ready for the exponential demand that Web3 and blockchain technologies demand. The Gic Coin Blockchain not only surpasses the current industry limits; it sets a new standard for the next generation of decentralized infrastructure.
-
-By choosing Gic, you are investing in technology poised to transform entire markets and industries. Our robust and scalable infrastructure creates opportunities for an ecosystem of innovation that extends beyond what was previously possible, positioning Gic as the definitive platform for any application requiring superior performance, unmatched security, and unprecedented scalability.
-
-
 # Installation
 
 Please read [repo wiki article](https://docs.gicsports.io/nodes/how-to-setup-a-new-node.html).
