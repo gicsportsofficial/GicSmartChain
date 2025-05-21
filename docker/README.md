@@ -1,7 +1,7 @@
 # Gic Node in Docker
 
 ## About Gic
-Gic is a decentralized platform that allows any user to issue, transfer, swap and trade custom blockchain tokens on an integrated peer-to-peer exchange. You can find more information about Gic at [gic.network](https://gic.network/) and in the official [documentation](https://docs.gic.network).
+Gic is a decentralized platform that allows any user to issue, transfer, swap and trade custom blockchain tokens on an integrated peer-to-peer exchange. You can find more information about Gic at [gicsports.io](https://gicsports.io/) and in the official [documentation](https://docs.gicsports.io).
 
 
 ## About the image
@@ -12,7 +12,7 @@ If you need to run node in private network, see [Gic private node](https://githu
 GitHub repository: https://github.com/gicsportsofficial/GicSmartChain/tree/master/docker
 
 ## Prerequisites
-It is highly recommended to read more about [Gic Node configuration](https://docs.gic.network/en/gic-node/node-configuration) before running the container.
+It is highly recommended to read more about [Gic Node configuration](https://docs.gicsports.io/en/gic-node/node-configuration) before running the container.
 
 ## Building Docker image
 `./build-with-docker.sh && docker build -t gicsportsofficial/gic docker` (from the repository root) - builds an image with the current local repository
@@ -48,7 +48,7 @@ docker run -v /docker/gic/gic-data:/var/lib/gic -v /docker/gic/gic-config:/etc/g
 |-----------------------------------|--------------|
 | `WAVES_WALLET_SEED`        		| Base58 encoded seed. Overrides `-Dwaves.wallet.seed` JVM config option. |
 | `WAVES_WALLET_PASSWORD`           | Password for the wallet file. Overrides `-Dwaves.wallet.password` JVM config option. |
-| `WAVES_LOG_LEVEL`                 | Node logging level. Available values: `OFF`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`. More details about logging are available [here](https://docs.gic.network/en/gic-node/logging-configuration).|
+| `WAVES_LOG_LEVEL`                 | Node logging level. Available values: `OFF`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`. More details about logging are available [here](https://docs.gicsports.io/en/gic-node/logging-configuration).|
 | `WAVES_HEAP_SIZE`                 | Default Java Heap Size limit in -X Command-line Options notation (`-Xms=[your value]`). More details [here](https://docs.oracle.com/cd/E13150_01/jrockit_jvm/jrockit/jrdocs/refman/optionX.html). |
 |`WAVES_NETWORK`                    | Gic Blockchain network. Available values are `mainnet`, `testnet`, `stagenet`.|
 |`JAVA_OPTS`                        | Additional Gic Node JVM configuration options. 	|
@@ -114,9 +114,9 @@ docker run -v /docker/gic/gic-data:/var/lib/gic gicsportsofficial/Node -e WAVES_
 
 ### Network Ports
 
-1. REST-API interaction with Node. Details are available [here](https://docs.gic.network/en/gic-node/node-configuration#rest-api-settings).
+1. REST-API interaction with Node. Details are available [here](https://docs.gicsports.io/en/gic-node/node-configuration#rest-api-settings).
 
-2. Gic Node communication port for incoming connections. Details are available [here](https://docs.gic.network/en/gic-node/node-configuration#network-settings).
+2. Gic Node communication port for incoming connections. Details are available [here](https://docs.gicsports.io/en/gic-node/node-configuration#network-settings).
 
 
 **Example:**

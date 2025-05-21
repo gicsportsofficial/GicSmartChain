@@ -19,7 +19,7 @@ By choosing Gic, you are investing in technology poised to transform entire mark
 
 # Installation
 
-Please read [repo wiki article](https://docs.gic.network/nodes/how-to-setup-a-new-node.html).
+Please read [repo wiki article](https://docs.gicsports.io/nodes/how-to-setup-a-new-node.html).
 
 
 ## 👨‍💻 Development
